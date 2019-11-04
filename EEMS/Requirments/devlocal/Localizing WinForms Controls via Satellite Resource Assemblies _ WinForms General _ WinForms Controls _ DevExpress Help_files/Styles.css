@@ -1,0 +1,360 @@
+﻿html, body, form {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    font-family: 'Segoe UI',Helvetica,Verdana,sans-serif!important;
+}
+.TreeList, .Document {
+    -moz-transition: opacity linear 0.2s;
+    -o-transition: opacity linear 0.2s;
+    -webkit-transition: opacity linear 0.2s;
+    transition: opacity linear 0.2s;
+    opacity: 1;
+}
+.TreeList.Updating {
+    opacity: 0.3;
+}
+.Document.Updating {
+    opacity: 0.3;
+}
+.dxtlNode .dxtl, 
+.dxtlNode .dxtl .dxeHyperlink,
+.dxtlFocusedNode td.dxtl 
+{
+    font-family: 'Segoe UI',Helvetica,Verdana,sans-serif!important;
+} 
+.dxtlNode td.dxtl {
+	white-space: normal!important;
+	padding-left: 2px!important;
+	padding-top: 2px!important;
+	padding-bottom: 3px!important;
+}
+.dxtlIndent {
+	padding: 0px 8px!important;
+}
+.dxtlIndentWithButton {
+	padding: 5px 0px 6px 0px!important;
+}
+div.FakeSplitter {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: White;
+    z-index: 5;
+}
+/*div.dx-main {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+div.dx-footer {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+.dx-logo  {
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}*/
+*:first-child+html .dxsplHSeparator div {
+    margin-bottom: -1px;
+}
+.dxtlControl {
+	font-size: 14px!important;
+	margin-left: 5px;
+}
+.dxtlControl td.dxtl {
+	background-color: White!important;
+	border: none!important;
+}
+.dxtlControl a {
+    color: #0D45B7!important;
+    text-decoration: none;
+}
+.dxtlControl a:hover {
+    color: #5494EA!important;
+}
+.dxtlFocusedNode a, .dxtlControl a.active {
+    font-weight: bold;
+    color: #252525!important;
+}
+
+/* From Common.css */
+
+/* Site Header Styles */
+a.Logo {
+	float: left;
+	margin: 21px 0px 0px 39px;
+	width: 165px;
+	height: 49px;
+	overflow: hidden;
+	background-image: url('App_Themes/DX/Common/logo.gif');
+	background-repeat: no-repeat;
+}
+table.MainMenuContainer {
+    float: right;
+    height: 85px;
+    margin: 0px;
+    padding: 0px;
+    margin-right: 16px;
+    clear: right;
+    border: none;
+    border-collapse: collapse;
+}
+td.SearchPanel {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: top;
+}
+td.MainMenu {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: bottom;
+}
+td.SearchLabel {
+	color: #748698;
+	font-size: 12px;
+}
+a.AdvancedSearch {
+    font-size: smaller;
+}
+a.SiteMap {
+    width: 11px;
+    height: 11px;
+    display: block;
+    overflow: hidden;
+    background-image: url('App_Themes/DX/Common/sitemap.gif');
+    background-repeat: no-repeat;
+}
+div.SPSeparator {
+    width: 1px;
+    height: 17px;
+    overflow: hidden;
+    background-color: #a8b9ca;
+}
+.dxeTextBox_SS {
+	width: 200px;
+	height: 19px;
+	padding: 0px 4px 0px 4px;
+}
+.dxeEditArea_SS {
+    background-color: White!important;
+    font-family: Tahoma;
+    font-size: 12px;
+    color: #303440;
+	border: 0px!important;
+}
+/* Root Tables Styles */
+table#Root
+{
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	border-collapse: collapse;
+	width: 100%;
+	height: 100%;
+}
+td#RootLeft, td#RootRight 
+{
+	background-repeat: repeat-y;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	width: 50%;
+}
+td#RootLeft 
+{
+	background-image: url('App_Themes/DX/Common/rootBgLeft.gif');
+	/*background-image: url('rootBgLeftx.gif'); xmas */
+	background-position: right top;
+	border-right: solid 1px #35619d;
+}
+td#RootRight 
+{
+	background-image: url('App_Themes/DX/Common/rootBgRight.gif');
+	/*background-image: url('rootBgRightx.gif');  xmas */
+	background-position: left top;
+	border-left: solid 1px #35619d;
+
+}
+td#RootCenter
+{
+	background-color: White;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	background-image: url('App_Themes/DX/Common/topBg.gif');
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+div#CenterSpacer {
+	width: 1022px;
+	height: 1px;
+	overflow: hidden;
+}
+div#RootTopLeft, div#RootTopRight
+{
+	border: 0px;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 520px;
+}
+div#RootTopLeft
+{
+	border-collapse: collapse;
+	background-image: url('App_Themes/DX/Common/rootBgTopLeft.gif');
+	/*background-image: url('rootBgTopLeftx.gif'); xmas */
+	background-position: right top;
+}
+div#RootTopRight
+{
+	background-image: url('App_Themes/DX/Common/rootBgTopRight.gif');
+	/*background-image: url('rootBgTopRightx.gif'); xmas */
+	background-position: left top;
+}
+div#Main 
+{
+	padding: 0px;
+	margin: 7px 16px 9px 16px;
+	clear: both;
+}
+
+div#Footer {
+	padding: 91px 32px 27px 32px;
+	margin-bottom: 27px;
+	color: #a6acb7;
+	font-size: 12px;
+	
+}
+div#FooterLogo {
+	width: 138px;
+	height: 31px;
+	overflow: hidden;
+	background-image: url('App_Themes/DX/Common/footer_logo.gif');
+	background-repeat: no-repeat;
+}
+div#Copyright {
+	font-size: 10px;
+}
+div#FooterSeparator {
+	margin: 0px 20px 0px 14px;
+	height: 43px;
+	width: 1px;
+	overflow: hidden;
+	background-color: #d2d5db;
+}
+
+/*.dx-tabs .dx-tabs-inner {
+    border: 0px; 
+    margin: 0px;
+    width: 100%;
+}*/
+
+/* B156373 */
+/*
+table.dx-tabs {
+    width: 100%!important;
+    border-collapse: collapse!important;
+    border: 0px!important; 
+}
+table.dx-tabs tr:first-child td {
+    width: 1px;
+    overflow: hidden!important;
+}
+table.dx-tabs tr:first-child td.dx-tabs-sep {
+    width: 1px!important;
+    overflow: hidden!important;
+}
+table.dx-tabs tr:first-child td.dx-tabs-filler {
+    width: 100%!important;
+    overflow: hidden!important;
+}
+table.dx-tabs tr:first-child td.dx-tabs-header {
+    width: auto!important;
+    overflow: hidden!important;
+}
+table.dx-tabs pre {
+    display: block!important;
+    border: 0px!important; 
+    white-space: normal!important;
+}
+*/
+/* for Google Chrome and Safari */
+/*
+@media all and (-webkit-min-device-pixel-ratio:0) {
+table.dx-tabs tr:first-child td.dx-tabs-header {
+    width: 1px!important;
+    overflow: hidden!important;
+}
+}
+*/
+
+/* B156804 */
+/*.dx-regiontitle {
+    float: none!important;
+}*/
+/*
+div.dxsplLCC div.dx-main table.dxtable {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+*/
+/* B181616 */
+.dx-alert2 td p 
+{
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+/* B183245 */
+/*div.dx-titleContainer td.dx-title 
+{
+    padding-left: 0px!important;   
+}*/
+
+
+/* overrides */
+h1.dx-title, .stl-dx h1.dx-title {
+    margin: 0!important;
+    margin-top: 60px!important;
+    padding-top: 0!important;
+}
+.search-tile { /* hide search block */
+	display: none!important;
+}
+
+div.Content {
+	padding: 0px 20px;
+	width: auto;
+}
+
+div.TopBar div.Content {
+	width: auto;
+}
+
+div.TopBar div.SearchContainer {
+	margin-top: 3px;
+}
+
+div.TopBar .v-searchbutton {
+	float: right;
+	margin-left: 3px;
+	display: none;
+}
+div.TopBar .v-searchbox {
+	float: right;
+}
+
+.stl-dxvcl > * {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+div.NewDocInfo {
+    margin: 70px 10px -50px 10px;
+    padding: 9px 10px;
+    background-color: #FBEDE2;
+    font-size: 16px;
+    color: #222;
+    font-family: 'Segoe UI',Helvetica,Verdana,sans-serif!important;
+}

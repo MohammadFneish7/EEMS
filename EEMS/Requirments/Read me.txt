@@ -1,0 +1,9 @@
+1. Install SQL Server and SQL Management studio 
+2. Install Crystal Report Runtime
+3. Install MSCharts and SQL ServerCompact Runtime
+4. Copy 'SLA.dll' and 'SLA.sdf' and 'SecureLoginAPI_ar.dll' and 'SQLConnection.config' files to application folder
+5. Change connection string inside 'SQLConnection.config' to a valid one
+6. Open SQL Server Management studio and execute 'Database Build Query.sql'
+7. In Server Management studio Change the collation of the newly created database to 'Arabic'
+8. Go to windows services search for "Sql Sever" then select properties -> log On and select local system account then restart the service
+9. Open the applicaiton and enter the license u purchased

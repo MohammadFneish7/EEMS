@@ -1,0 +1,830 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0151)https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style><script type="text/javascript" async="" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/ec.js.download"></script><script type="text/javascript" async="" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/linkid.js.download"></script><script type="text/javascript" async="" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/analytics.js.download"></script><script async="" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/gtm.js.download"></script><script type="text/javascript">
+            var AppPath = '/';
+            var HomePage = 'https://www.devexpress.com/Support/Documentation/';
+            if(document.location.hash == '') {
+                if(document.location.pathname == AppPath || document.location.pathname.length < AppPath.length) {
+                    if(window.stop) {
+                        window.stop();
+                    } else {
+                        document.execCommand('Stop');
+                    }
+                    document.location = HomePage;
+                }
+            }
+        </script>
+    
+<link rel="stylesheet" type="text/css" href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR.axd"><script type="text/javascript">
+// <![CDATA[
+var IsLoggedIn = false; var IsEmployee = false; var IsPostback = false; var PreferredLanguage = 'en-US'
+// ]]>
+</script>
+        <script type="text/javascript">
+        // <![CDATA[
+        var _wsData = {"Settings":{"TrackingEnabled":true},"UserInfo":{"IsEmployee":false,"IsLoggedIn":false}};
+        //]]>
+        </script>
+        
+    <script type="text/javascript">
+        dataLayer = [ {
+            'appName': 'Documentation'
+        }];
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TP4P4KW');</script>
+    <!-- End Google Tag Manager -->
+    
+        <script type="text/javascript">
+            var userId = "";
+            var ApiUrl = "https://documentation.devexpress.com/api/";
+        </script>
+    <link href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource.ashx" type="text/css" rel="stylesheet" media="all"><link href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(1).ashx" type="text/css" rel="stylesheet" media="all">
+		<link href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/Styles.css" type="text/css" rel="stylesheet" media="all">
+		<link href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/Print.css" type="text/css" rel="stylesheet" media="print">
+		<link href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/satisfaction.css" type="text/css" rel="stylesheet" media="screen">
+		<script type="text/javascript" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/help.js.download"></script>
+		<script type="text/javascript" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/satisfaction.js.download"></script>
+	<script src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(2).ashx" type="text/javascript"></script><script src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(3).ashx" type="text/javascript"></script>
+        <script type="text/javascript" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/jquery.cookie-1.4.1.min.js.download"></script>
+    	
+<!--	
+<PageMap>
+		<DataObject type="document">
+			<Attribute name="keywords">net</Attribute>
+			<Attribute name="keywords">winforms</Attribute>
+		</DataObject>
+</PageMap>
+-->
+<link rel="shortcut icon" type="image/x-icon" href="https://documentation.devexpress.com/favicon.ico"><link rel="icon" type="image/x-icon" href="https://documentation.devexpress.com/favicon.ico">
+	<script type="text/javascript">
+		if (typeof DX != 'undefined') {
+			if (typeof DX.Core != 'undefined') {
+				DX.Core.getCookie = function (name) {
+					name = escape(name);
+					var c = document.cookie;
+					var start = c.indexOf(name + "=");
+					if (start < 0) return null;
+					start = c.indexOf('=', start) + 1;
+					var end = c.indexOf(';', start);
+					if (end < 0) end = c.length;
+					return unescape(c.substring(start, end));
+				}
+			}
+			if (typeof DX.Groups != 'undefined') {
+				DX.Groups.GetMainElement = function () {
+					return $('#dxspMain_mainPaneDiv');
+				}
+			}
+		}
+	</script>
+<meta name="tags" content="net" class="swiftype" data-type="string"><meta name="tags" content="winforms" class="swiftype" data-type="string"><meta name="keywords" content="net, winforms"><link href="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(1).axd" type="text/css" rel="stylesheet"><title>
+	Localizing WinForms Controls via Satellite Resource Assemblies | WinForms General | WinForms Controls | DevExpress Help
+</title><style></style></head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP4P4KW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+	<script id="dxis_487596922" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(2).axd" type="text/javascript"></script><div class="FakeSplitter" id="pFakeSplitter" style="display: none;">
+	&nbsp;
+</div><script id="dxss_1588045147" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientPanel('pFakeSplitter');
+window['pFakeSplitter'] = dxo;
+dxo.InlineInitialize();
+
+//-->
+</script>
+	<form name="form1" method="post" action="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VSTATE" id="__VSTATE" value="/wEPGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYDBQhkeHNwTWFpbgUSZHhzcE1haW4kY3RsMTMkYkdvBQp0SGFzaENoZWNrDwUKMTY4MzE5NTU3OWQ=">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(3).axd" type="text/javascript"></script>
+	<div id="MainDiv" style="height: 100%">
+		<input type="hidden" id="dxspMain_CS" name="dxspMain_CS" value="[{&quot;st&quot;:&quot;px&quot;,&quot;s&quot;:25,&quot;c&quot;:0,&quot;spt&quot;:0,&quot;spl&quot;:0},{&quot;st&quot;:&quot;%&quot;,&quot;s&quot;:100,&quot;i&quot;:[{&quot;st&quot;:&quot;px&quot;,&quot;s&quot;:300,&quot;c&quot;:0,&quot;spt&quot;:0,&quot;spl&quot;:0},{&quot;st&quot;:&quot;%&quot;,&quot;s&quot;:100,&quot;c&quot;:0,&quot;spt&quot;:2900,&quot;spl&quot;:0}],&quot;c&quot;:0}]"><table class="dxsplControl" cellpadding="0" cellspacing="0" id="dxspMain" border="0" style="width: 100%; height: 100%;">
+	<tbody><tr>
+		<td id="dxspMain_0" class="dxsplPane" valign="top" style="border-width: 0px; width: 1536px; height: 25px;"><div id="dxspMain_0_CC" class="dxsplLCC" style="height: 25px; width: 1536px; padding: 0px; margin-right: 0px;">
+			
+							<div id="SiteHeaderBar1" class="TOCv3">
+				<div class="TopBar GreyBar">
+					<div class="Content">
+						<a class="p-f-right" id="dxspMain_TOCSignIn" href="https://www.devexpress.com/MyAccount/?returnUrl=https%3a%2f%2fdocumentation.devexpress.com%2fWindowsForms%2f5755%2fBuild-an-Application%2fLocalization%2fLocalizing-WinForms-Controls-via-Satellite-Resource-Assemblies">Log In</a><div class="ItemSeparator p-f-right">
+
+						</div><div class="SearchContainer p-f-right" id="dxspMain_ctl13" onkeypress="return aspxFireDefaultButton(event, &#39;dxspMain_ctl13_bGo&#39;);">
+							<table class="h-hand v-searchbutton" cellspacing="0" cellpadding="0" id="dxspMain_ctl13_bGo" border="0" style="border-collapse:collapse;border-collapse:separate;-khtml-user-select:none;">
+								<tbody><tr>
+									<td id="dxspMain_ctl13_bGo_B" align="center"><div style="border-width:0;width:0;height:0;opacity:0;padding:0;margin:0;overflow:hidden;">
+										<input value="" onfocus="aspxBGotFocus(&#39;dxspMain_ctl13_bGo&#39;)" type="button" name="dxspMain$ctl13$bGo" readonly="readonly" style="border-width:0px;height:0px;width:0px;padding:0;border-width:0;width:1px;height:1px;opacity:0;margin:0;position:relative;">
+									</div><div id="dxspMain_ctl13_bGo_CD" class="dxb">
+										<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;border-collapse:separate;">
+											<tbody><tr>
+												<td><img id="dxspMain_ctl13_bGo_BImg" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(4).axd" alt="" style="height:19px;width:51px;"></td>
+											</tr>
+										</tbody></table>
+									</div></td>
+								</tr>
+							</tbody></table><script id="dxss_618178289" type="text/javascript">
+<!--
+aspxAddDisabledItems('dxspMain_ctl13_bGo',[[[''],['color:#808080;'],['B'],['','TC'],[['']],['Img']]]);
+
+var dxo = new ASPxClientButton('dxspMain_ctl13_bGo');
+window['dxspMain_ctl13_bGo'] = dxo;
+dxo.autoPostBack = true;
+dxo.uniqueID = 'dxspMain$ctl13$bGo';
+dxo.Click.AddHandler(function(s, o) { o.processOnServer = false; var sString = tbss.GetValue(); var isValid = (typeof sString != 'undefined' && sString != null && sString != ''); if(isValid) { document.location = 'https://search.devexpress.com/?q=' + escape(sString) + '&m=Documentation'; } });
+aspxAddSelectedItems('dxspMain_ctl13_bGo',[[['dxbf'],[''],['CD']]]);
+dxo.autoPostBackFunction = function(postBackArg) { __doPostBack("dxspMain$ctl13$bGo", postBackArg); };
+dxo.useSubmitBehavior = false;
+dxo.isTextEmpty = true;
+dxo.causesValidation = false;
+dxo.InlineInitialize();
+
+//-->
+</script><input type="hidden" id="dxspMain_ctl13_ss_Raw" name="dxspMain_ctl13_ss_Raw" value=""><table class="dxeTextBoxSys dxeTextBox v-searchbox dxeNullText dxh0" cellspacing="0" cellpadding="0" id="dxspMain_ctl13_ss" border="0" style="border-color:#1E2D52;border-width:1px;border-style:Solid;height:19px;width:170px;border-collapse:collapse;">
+								<tbody><tr>
+									<td class="dxic" style="width:100%;padding-top:2px;padding-bottom:2px;padding-left:2px;padding-right:2px;"><input class="dxeEditArea dxeEditAreaSys dxh0" name="dxspMain$ctl13$ss" onkeyup="aspxEKeyUp(&#39;dxspMain_ctl13_ss&#39;, event)" value="Search" id="dxspMain_ctl13_ss_I" onchange="aspxEValueChanged(&#39;dxspMain_ctl13_ss&#39;)" onblur="aspxELostFocus(&#39;dxspMain_ctl13_ss&#39;)" onfocus="aspxEGotFocus(&#39;dxspMain_ctl13_ss&#39;)" type="text" onkeydown="aspxEKeyDown(&#39;dxspMain_ctl13_ss&#39;, event)" style="height:100%;" autocomplete="off"></td>
+								</tr>
+							</tbody></table><script id="dxss_1264399925" type="text/javascript">
+<!--
+aspxAddDisabledItems('dxspMain_ctl13_ss',[[['dxeDisabled'],[''],['','I']]]);
+document.getElementById("dxspMain_ctl13_ss_I").setAttribute("autocomplete", "off");
+
+var dxo = new ASPxClientTextBox('dxspMain_ctl13_ss');
+window['tbss'] = dxo;
+dxo.uniqueID = 'dxspMain$ctl13$ss';
+dxo.validationGroup = "GlobalSearch";
+dxo.RequireStyleDecoration();
+dxo.styleDecoration.AddStyle('F','dxeFocused','');
+dxo.styleDecoration.AddStyle('N','dxeNullText','');
+dxo.nullText = 'Search';
+dxo.InlineInitialize();
+
+//-->
+</script>
+						</div><a class="p-f-left" href="https://www.devexpress.com/">Home</a><div class="ItemSeparator p-f-left">
+
+						</div><a class="p-f-left" href="https://www.devexpress.com/Support/Center/">Support</a><div class="ItemSeparator p-f-left">
+
+						</div><a class="p-f-left" href="https://www.devexpress.com/Support/Demos/">Demos</a><div class="ItemSeparator p-f-left">
+
+						</div><a class="p-f-left" href="https://documentation.devexpress.com/">Documentation</a><div class="ItemSeparator p-f-left">
+
+						</div><a class="p-f-left" href="https://community.devexpress.com/Blogs/">Blogs</a><div class="ItemSeparator p-f-left">
+
+						</div><a class="p-f-left" href="https://www.devexpress.com/Home/Training/">Training</a><div class="ItemSeparator p-f-left">
+
+						</div><a class="p-f-left" href="https://www.devexpress.com/Support/Webinars/">Webinars</a>
+					</div>
+				</div>
+			</div>
+						
+		</div></td>
+	</tr><tr>
+		<td id="dxspMain_1_S" class="dxsplHSeparator" align="center" style="background-color: rgb(194, 194, 194); height: 1px;"><div class="dxsplS" style="height: 1px;">
+
+		</div></td>
+	</tr><tr>
+		<td id="dxspMain_1" valign="top" class="" style="width: 1536px; height: 685px;"><div id="dxspMain_1_CC" class="dxsplCC" style="width: 1536px; height: 685px; margin-right: 0px;">
+			<table id="dxspMain_1_T" class="dxsplP" cellpadding="0" cellspacing="0" border="0">
+				<tbody><tr>
+					<td id="dxspMain_1i0" class="dxsplPane" valign="top" style="border-width: 0px 1px 0px 0px; width: 300px; height: 685px;"><div id="dxspMain_1i0_CC" class="dxsplLCC" style="height: 669px; width: 284px; overflow: auto; margin-right: 0px;">
+						
+									<div id="TreeTopics">
+										<table cellspacing="0" cellpadding="0" id="dxspMain_lpTree" border="0" style="border-collapse:collapse;position:absolute;left:0px;top:0px;z-index:30000;display:none;">
+							<tbody><tr>
+								<td class="dx"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/ajax-loader.gif" alt="Loading..." align="middle" style="height:19px;width:220px;"></td>
+							</tr>
+						</tbody></table><script id="dxss_1126665912" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientLoadingPanel('dxspMain_lpTree');
+window['lpTree'] = dxo;
+dxo.uniqueID = 'dxspMain$lpTree';
+dxo.isTextEmpty = true;
+dxo.InlineInitialize();
+
+//-->
+</script>
+										<table class="dxtlControl TreeList" cellpadding="0" id="dxspMain_treeList" cellspacing="0" border="0" style="width:100%;">
+							<tbody><tr>
+								<td id="dxspMain_treeList_U" valign="top"><table id="dxspMain_treeList_D" onclick="aspxTLClick(&#39;dxspMain_treeList&#39;,event)" cellspacing="0" border="0" style="width:100%;">
+									<tbody><tr id="dxspMain_treeList_R-741caa94_45_ff48_45_48bd_45_bd66_45_21951895ddde" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_741caa94_45_ff48_45_48bd_45_bd66_45_21951895ddde_hl" title="General Information" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;GeneralInformation/2216/General-Information&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/GeneralInformation/2216/General-Information">General Information</a></td>
+									</tr><tr id="dxspMain_treeList_R-243a018e_45_b01a_45_413c_45_acc5_45_1f06d800f14b" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Collapse" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/expanded.png" alt="[Collapse]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_243a018e_45_b01a_45_413c_45_acc5_45_1f06d800f14b_hl" title="WinForms Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/7874/WinForms-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/7874/WinForms-Controls">WinForms Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-58a4452d_45_5742_45_49fa_45_83d6_45_f31ef7cece2b" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0" colspan="3"><a id="dxspMain_treeList_tDC0_58a4452d_45_5742_45_49fa_45_83d6_45_f31ef7cece2b_hl" title="Prerequisites" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/8092/Prerequisites&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/8092/Prerequisites">Prerequisites</a></td>
+									</tr><tr id="dxspMain_treeList_R-722a9a3b_45_7391_45_466a_45_b2d5_45_82763ff38fd4" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="3" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_722a9a3b_45_7391_45_466a_45_b2d5_45_82763ff38fd4_hl" title="What&#39;s Installed" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/7889/What-s-Installed&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/7889/What-s-Installed">What's Installed</a></td>
+									</tr><tr id="dxspMain_treeList_R-0aec5d99_45_cf9d_45_478b_45_b18c_45_f3fba0a882c2" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Collapse" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/expanded.png" alt="[Collapse]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="3" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_0aec5d99_45_cf9d_45_478b_45_b18c_45_f3fba0a882c2_hl" title="Build an Application" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/114441/Build-an-Application&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/114441/Build-an-Application">Build an Application</a></td>
+									</tr><tr id="dxspMain_treeList_R-93bfbfe6_45_8b77_45_4a2c_45_abd1_45_63e8053f5ff7" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="2" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_93bfbfe6_45_8b77_45_4a2c_45_abd1_45_63e8053f5ff7_hl" title="Choose Application UI" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/12179/Build-an-Application/Choose-Application-UI&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/12179/Build-an-Application/Choose-Application-UI">Choose Application UI</a></td>
+									</tr><tr id="dxspMain_treeList_R-c8a613e9_45_d646_45_4172_45_bf9c_45_6f6134db51e8" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0" colspan="2"><a id="dxspMain_treeList_tDC0_c8a613e9_45_d646_45_4172_45_bf9c_45_6f6134db51e8_hl" title="Data Management Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/117020/Build-an-Application/Data-Management-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/117020/Build-an-Application/Data-Management-Controls">Data Management Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-a03aa1bc_45_2eec_45_4bd8_45_ae88_45_24b7ccb5bf24" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="2" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_a03aa1bc_45_2eec_45_4bd8_45_ae88_45_24b7ccb5bf24_hl" title="Printing and Exporting" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/2403/Build-an-Application/Printing-and-Exporting&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/2403/Build-an-Application/Printing-and-Exporting">Printing and Exporting</a></td>
+									</tr><tr id="dxspMain_treeList_R-3839c81b_45_ffee_45_424f_45_bef0_45_076a2a383b14" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="2" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_3839c81b_45_ffee_45_424f_45_bef0_45_076a2a383b14_hl" title="WinForms MVVM" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/113955/Build-an-Application/WinForms-MVVM&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/113955/Build-an-Application/WinForms-MVVM">WinForms MVVM</a></td>
+									</tr><tr id="dxspMain_treeList_R-6a032e32_45_6e2f_45_4232_45_97f4_45_b79addac4b31" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="2" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_6a032e32_45_6e2f_45_4232_45_97f4_45_b79addac4b31_hl" title="Skins" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/2399/Build-an-Application/Application-Skins/Skins&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/2399/Build-an-Application/Application-Skins/Skins">Skins</a></td>
+									</tr><tr id="dxspMain_treeList_R-991b9f7d_45_93c8_45_4710_45_821e_45_adc960ad2f55" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Collapse" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/expanded.png" alt="[Collapse]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="2" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_991b9f7d_45_93c8_45_4710_45_821e_45_adc960ad2f55_hl" title="Localization" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/2405/Build-an-Application/Localization&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/2405/Build-an-Application/Localization">Localization</a></td>
+									</tr><tr id="dxspMain_treeList_R-d57cddf0_45_d0e0_45_44c0_45_ae43_45_510824c1b051" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0"><a id="dxspMain_treeList_tDC0_d57cddf0_45_d0e0_45_44c0_45_ae43_45_510824c1b051_hl" title="Localizing WinForms Controls via Satellite Resource Assemblies" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies" class="active">Localizing WinForms Controls via Satellite Resource Assemblies</a></td>
+									</tr><tr id="dxspMain_treeList_R-e4b0b88e_45_3ff4_45_4429_45_87d8_45_0679760c248f" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0"><a id="dxspMain_treeList_tDC0_e4b0b88e_45_3ff4_45_4429_45_87d8_45_0679760c248f_hl" title="Localizing WinForms Controls via Localizer Objects" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/1866/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Localizer-Objects&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/1866/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Localizer-Objects">Localizing WinForms Controls via Localizer Objects</a></td>
+									</tr><tr id="dxspMain_treeList_R-6b6ce2a9_45_0c3e_45_4347_45_8e06_45_1f4f906da6c5" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="2" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_6b6ce2a9_45_0c3e_45_4347_45_8e06_45_1f4f906da6c5_hl" title="Right-to-Left Layout" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/115808/Build-an-Application/Right-to-Left-Layout&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/115808/Build-an-Application/Right-to-Left-Layout">Right-to-Left Layout</a></td>
+									</tr><tr id="dxspMain_treeList_R-3e9a2051_45_9aba_45_49f1_45_977a_45_7c57a1dd1446" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0" colspan="2"><a id="dxspMain_treeList_tDC0_3e9a2051_45_9aba_45_49f1_45_977a_45_7c57a1dd1446_hl" title="Redistribution and Deployment" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/15031/Build-an-Application/Redistribution-and-Deployment&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/15031/Build-an-Application/Redistribution-and-Deployment">Redistribution and Deployment</a></td>
+									</tr><tr id="dxspMain_treeList_R-c7b6b48d_45_ef2c_45_4d6f_45_871f_45_d71908b044ae" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="3" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_c7b6b48d_45_ef2c_45_4d6f_45_871f_45_d71908b044ae_hl" title="Controls and Libraries" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/7891/Controls-and-Libraries&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/7891/Controls-and-Libraries">Controls and Libraries</a></td>
+									</tr><tr id="dxspMain_treeList_R-91be5b65_45_9646_45_43b6_45_ad12_45_b5aacc33a60b" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="3" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_91be5b65_45_9646_45_43b6_45_ad12_45_b5aacc33a60b_hl" title="Common Features" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/6804/Common-Features&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/6804/Common-Features">Common Features</a></td>
+									</tr><tr id="dxspMain_treeList_R-c4382b87_45_9fa9_45_48a1_45_a66d_45_bdcad9334aa5" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0" colspan="3"><a id="dxspMain_treeList_tDC0_c4382b87_45_9fa9_45_48a1_45_a66d_45_bdcad9334aa5_hl" title="Get More Help" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WindowsForms/7894/Get-More-Help&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WindowsForms/7894/Get-More-Help">Get More Help</a></td>
+									</tr><tr id="dxspMain_treeList_R-3b000955_45_ddbf_45_4239_45_bce0_45_249b562213e0" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="3" style="cursor:pointer;">API Reference</td>
+									</tr><tr id="dxspMain_treeList_R-ab833f09_45_a5ad_45_498b_45_90b5_45_8031a943489b" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_ab833f09_45_a5ad_45_498b_45_90b5_45_8031a943489b_hl" title="ASP.NET Controls and MVC Extensions" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;AspNet/7873/ASP-NET-Controls-and-MVC-Extensions&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/AspNet/7873/ASP-NET-Controls-and-MVC-Extensions">ASP.NET Controls and MVC Extensions</a></td>
+									</tr><tr id="dxspMain_treeList_R-a903c114_45_a596_45_4973_45_abc8_45_ab946c096e31" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_a903c114_45_a596_45_4973_45_abc8_45_ab946c096e31_hl" title="ASP.NET Bootstrap Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;AspNetBootstrap/117864/ASP-NET-Bootstrap-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/AspNetBootstrap/117864/ASP-NET-Bootstrap-Controls">ASP.NET Bootstrap Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-aa85753c_45_8a2c_45_47a3_45_a673_45_d6677336f1e1" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_aa85753c_45_8a2c_45_47a3_45_a673_45_d6677336f1e1_hl" title="ASP.NET Core Bootstrap Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;AspNetCoreBootstrap/119456/ASP-NET-Core-Bootstrap-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/AspNetCoreBootstrap/119456/ASP-NET-Core-Bootstrap-Controls">ASP.NET Core Bootstrap Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-a3f4313d_45_6eaa_45_4863_45_9102_45_ec0194c58e7b" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_a3f4313d_45_6eaa_45_4863_45_9102_45_ec0194c58e7b_hl" title="WPF Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;WPF/7875/WPF-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/WPF/7875/WPF-Controls">WPF Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-dd4fa050_45_cda1_45_43ea_45_8521_45_8981fb6281a7" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_dd4fa050_45_cda1_45_43ea_45_8521_45_8981fb6281a7_hl" title="Xamarin Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;Xamarin/12275/Xamarin-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/Xamarin/12275/Xamarin-Controls">Xamarin Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-f6e4cbf8_45_f586_45_49b3_45_bc2b_45_635e2b3e5755" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_f6e4cbf8_45_f586_45_49b3_45_bc2b_45_635e2b3e5755_hl" title="Windows 10 App Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;Win10Apps/12019/Windows-10-App-Controls&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/Win10Apps/12019/Windows-10-App-Controls">Windows 10 App Controls</a></td>
+									</tr><tr id="dxspMain_treeList_R-a8788941_45_b5e8_45_4ec1_45_bf64_45_2a5dabe63743" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_a8788941_45_b5e8_45_4ec1_45_bf64_45_2a5dabe63743_hl" title="Office File API" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;OfficeFileAPI/14911/Office-File-API&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/OfficeFileAPI/14911/Office-File-API">Office File API</a></td>
+									</tr><tr id="dxspMain_treeList_R-6d3c053b_45_c321_45_46a5_45_9110_45_8e16269ebaeb" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_6d3c053b_45_c321_45_46a5_45_9110_45_8e16269ebaeb_hl" title="Reporting" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;XtraReports/2162/Reporting&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/XtraReports/2162/Reporting">Reporting</a></td>
+									</tr><tr id="dxspMain_treeList_R-b39cf3b8_45_e2f9_45_4a55_45_a4f5_45_df6f7348a269" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_b39cf3b8_45_e2f9_45_4a55_45_a4f5_45_df6f7348a269_hl" title="Report and Dashboard Server" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;ReportServer/12432/Report-and-Dashboard-Server&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/ReportServer/12432/Report-and-Dashboard-Server">Report and Dashboard Server</a></td>
+									</tr><tr id="dxspMain_treeList_R-f6a5788b_45_3019_45_4c90_45_99dc_45_dad1b79668f7" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_f6a5788b_45_3019_45_4c90_45_99dc_45_dad1b79668f7_hl" title="Dashboard" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;Dashboard/12049/Dashboard&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/Dashboard/12049/Dashboard">Dashboard</a></td>
+									</tr><tr id="dxspMain_treeList_R-9b76444b_45_2428_45_4b0a_45_8539_45_52dd75a43166" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_9b76444b_45_2428_45_4b0a_45_8539_45_52dd75a43166_hl" title="eXpressApp Framework" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;eXpressAppFramework/112670/eXpressApp-Framework&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/eXpressAppFramework/112670/eXpressApp-Framework">eXpressApp Framework</a></td>
+									</tr><tr id="dxspMain_treeList_R-84719516_45_b360_45_43f7_45_8995_45_070de9782030" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_84719516_45_b360_45_43f7_45_8995_45_070de9782030_hl" title="CodeRush" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;CodeRushForRoslyn/115802/CodeRush&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/CodeRushForRoslyn/115802/CodeRush">CodeRush</a></td>
+									</tr><tr id="dxspMain_treeList_R-b0fb48f1_45_c769_45_48f5_45_a304_45_843630400229" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_b0fb48f1_45_c769_45_48f5_45_a304_45_843630400229_hl" title="CodeRush Classic" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;CodeRush/3519/CodeRush-Classic&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/CodeRush/3519/CodeRush-Classic">CodeRush Classic</a></td>
+									</tr><tr id="dxspMain_treeList_R-501b72b1_45_cf36_45_4066_45_9cac_45_e3992ef4fa22" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;"><a id="dxspMain_treeList_tDC0_501b72b1_45_cf36_45_4066_45_9cac_45_e3992ef4fa22_hl" title="Cross-Platform Core Libraries" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;CoreLibraries/2407/Cross-Platform-Core-Libraries&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/CoreLibraries/2407/Cross-Platform-Core-Libraries">Cross-Platform Core Libraries</a></td>
+									</tr><tr id="dxspMain_treeList_R-ab97fac7_45_32b1_45_4d17_45_b1ef_45_feb80ae2944a" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndentWithButton dxtl__IM"><img class="dxtl__Expand" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/collapsed.png" alt="[Expand]" style="height:12px;width:12px;"></td><td class="dxtl dxtl__B0" colspan="4" style="cursor:pointer;">Tools and Utilities</td>
+									</tr><tr id="dxspMain_treeList_R-7d3a578a_45_e0dd_45_4113_45_a60c_45_ca78914275b7" class="dxtlNode" style="background-color:White;white-space:normal;">
+										<td class="dxtlIndent dxtl__IM">&nbsp;</td><td class="dxtl dxtl__B0" colspan="4"><a id="dxspMain_treeList_tDC0_7d3a578a_45_e0dd_45_4113_45_a60c_45_ca78914275b7_hl" title="End-User Documentation" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { event.cancelBubble = true; ChangeHashPageType(&#39;EndUser/5917/End-User-Documentation&#39;); TreeListItemClicked(); hfOldHash.Set(&#39;clickedFromTreeList&#39;, &#39;true&#39;); return false; }" href="https://documentation.devexpress.com/EndUser/5917/End-User-Documentation">End-User Documentation</a></td>
+									</tr>
+								</tbody></table></td>
+							</tr>
+						</tbody></table><input type="hidden" name="dxspMain$treeList$STATE" id="dxspMain_treeList_STATE" value="xVpbjxxHFbbbCQMWEaBAQIlQmmQVO1JOpm5dF0UJsjfZxMKOLV+SvNbVO3h2ZunuTWIQDyDxwF/hB/A7eOUBHkDAA0iRuAiJB8zpnsv2rNeb3Yie2Wt3dU9/X32n6tQ5p3pwYXAuO4+/j9qvzx5l57/06NHg3OB8dg4PHmvOjm9+avAy/r2YbYVC+RASgUAiASE8ARsFh4ISzYSnjhT0HN6fbTHBLaE6giPUgqDcg/W+AJqIDJqQRIXLtoiNvgjGgE8mgFDagaPaQ+LJWWK1Zp5lW8ZQZ5IKYLjXeBcloBmNYIM3ktjAUlGcjlvTl+zpu6N6HAfZxWvVjn0Q35+GeDG7cK8cD7LBzcn2eOQfDLDDT7Vty6b5x7qfys5lW0pQb60RkJJAbtoFcEFKYNQUVJsiBLzvPNqg+c5eG74bJ7G042uTNC33bD2aToaMUbloh86FQfbZ+VG6/L34cZzUr/u6HP8gPsxfeSWft1S7o1TPm2Yt7qCup5P8zTdz8mr+k3mjtxMfx1cPnBvH/M28Lg/iG/n2rp3cj+/ZaveWvR/vPtyPly+dgdqlV9/I75YxXh9V9bU67rUKxXAZm3fTzXFoHvz6nVhfvuRnV3bK6d7iA5deyy81LJqHlLE+KCd5suMKWf10kD07R8s7aBcboU81oGZCXxhkW8MPR5Mw/aTawYdUQ6WVaFraM9ieTupyOq4G2V/WKvApKPUn7DcWWPkCq5W10FaIggUolGAgTLKgeZA4A2lMykcfmcsaH5KhF0Bh81VhNTFseKuMZfzRwaga1RFF/ePmRH2cTn+CPrOC04qpGLPGcgeKGwpCSguOhQK9lZI8Ja5TEO0YnYv58tFRqs3ww11bQ4WTrarteBzDIPvzJgfpMYz6k/TrDdSlKl9CtaqeapHoqPrqqqqUCiHo8OrBaBzATuDK/j7SmnvYv21O2xN49afwN1u43E7yDlyrsuEuuRQlaKcUCMvQv7pAQfKoScFTkZJqVb6AKrc6v3VEZ0aVObY7w+3d6bSK3Sa4d22Q/SzbnPhnJNufRb41w+vaI793rTWJ11ZSHg0EKSQueYqBS8aDTNgsgito1K1vXprk6tGhrwgjx3fzbVtbuGEnqM8e6thZFH+xQbN8AcL9meY7DWR+CLm6clrCraXOA4vRg3BBY7ypNTDhlPeucImJEycME4Qf39Vb5WhSjyb3sT3AO5/uT8vmbKMT5qxk+7PKcwtA9GIhXwK2NuGaG6+pw2g8RhBMJHARUwKipGUWrzp6xCbq6IzhpiiO7+gyWLvxwQc3Btl/Nrl0nJJlj9HPMpxscFrxJc4IFjkDGVlC8fHIqCTAKWNDsF44TlfF//6RCcHNE3xy1xnfeTCaVMP27yD7+QZnxFnZ9meMp9vnz5bx0+TKK0YQj3mlJ4ys61Nvx6MfzyOnf29u+J+OYn9yf7UL06p+mtpDu1I/Nf9G3atV3Qv1pBndRVucNP72seQRPh5ZuGPrOB5jSgK3YzU9KD2GMlUV99x41CRnv97chFlLD/uz+luHxPLHcukcieVLYvmCWH5IrB0nUTjitI6A2aDAccIMaIWBA5HKKEk8EzqtjJNskN0/skJpKf8fKs5viCXcdD+Mvsax8asNBn599aq/8cA+dzwsyeRzMrNl0kkfmTVAPMcYhQsFOhIJNIlkiAxW+uLkRIsWmujj1bo9ur9bQz2F6zHVcN0+nB7Um020zki2x9R3BS6fwc2ixmgsQw8Nxjrb1MDwSCkLyhfK0hAwUZedPAvn5M4RixSEH5/JD2/HgMTKEUrahANNjPx23B9PHzYJxSD75QYt8wVJ92eh767itvH9Ie4sJVZOOqEDxMQw6QoyoQOlCYKihmhHhLDxhFqQ0oYOlw6j6df1kStt2S6NG6wFncCrx0Rq6awaoZeAszCSulg4WYBpSw/cSYwgKQNXWOs951YS19X5pVWdpSYC+7O3h6NnJ1oEbgT+0+YEPo5Qf8p+bYaUL5BmQ1dwzZxWYBI6f6EtBStls13kbTCcC2uLEyrtOETE8N1Yw41pGeG9ON7faKX9cTo95pqIkzc4eYMzc9mOEII5MITg2lzTgPMYejNhXCEZozyS5fhEh/3MipiD7DcbU65Hma7cuoaRZ4plRF4Xsftb1mnOEzFgCxtwZdMODHEFaHT91mDsoU1n04wMr1T778e62Zviwyt3bsH779yFFbd044NteOfTOk4qdNCo4z/WquMZ6fUn9cuI/jqi5ysuFNHzQ/RZkdAQ7ikVaACDftQoDtZhYm6dEdITI+O8JtIagM0NcHU6rXEdtPtNQVRLsezs8kKnXPuvDZjgDAT7M8LzCyMsQY8UaK3GlJN70M1mhlAWtZdogCClUpzLRGNH+zfm2m+jn+l2z4hCdgYbOrvjjPDfDRjhizDtzxovHk4JdNRPMglPglMeQEaLkbaWHAwlDKInSN8XOqqOP3pu+OGtnWa2F81BR+3frtd7H0eix+oSwqyqFoJIlhQEfMCgQfBoQReMgjaaJieZplYdqvbi8CO7h5HcZEgZQ9bzs458f1irfCez6XEzeQ61qmWSUXiXNKRCNw7ZcQwcmAPJi8gcj02R6lDLy03YQAnmRs2WIY7RRRgBlDQZU0fUv647ojgNrf7U/fYcMaek2bo8Ms118+KAoJguRA0iejxKUgCzRbAuSq4E776rczOlkY87o3HEEGZIhaF03gZNI2Drut/VOQWlHvOHGVLeIOWINKsbBe5JwR14zpqXSywmZ7Qp70cqmTTR2djxnS8MP0L3ezs2u2PVkOEtw9lJu5H4+/V6gCcy6U/CrywxWvEcNz5xpyGyhMmXxczBioTpQ5JJYRhsUcFD8YZzhndi+XEscYoJviA9K4YgLTe1ZYDZHYPs72sV9Gzs+hP5hRnqrFCzQM1nqHNvawt0BQ44OikQ3hAwJngINlCnjJQ6dVau54fLhzRuTZjD80H2u7Uq/EQiPY7YJcasAuOUFEI4TGkZ+lBHmkUf09yChaAKi2GUlN3ULX60X8aqQl+8U9q9+Mm0fIAxIZOqewmW19adup2RXo9l4EO4fAnXKq6Fal7aleC4JBhmJYURlimAKBKiUZoRTg4Vf2m4PQ3x9kG1i2n97Wk1fjiZFbvZ8sK6K16fS6g/Vb+8gJh5W5Kc0ImCV7IpdaGjtZwI0IJL/E8IY6YbsC4+POQFxjKLM9ge26oa+XUHrCez6TFgXUDlc6jZC7oEPSVzqGXiGLASKcF46yFyY1hMmBkwdqhlU0Uu47KW22yVq+F2Oa0quDW2dfNK9Sw17NS9/7lmdc/Gr8fthlXcWeK6Wga3zqhkvQLeWEAEqsDRmCBFp4mNzAhhD8U/1/48e3e6KAjdq0fjUd0+7Hy2pQJvVkMLkYQAgtKmHkE8eNuU/wVmR061BeCmaolR8TuTcK/CBb4wVDUn0JzB21N/0GyHzF/DWG9UfApKPe5XLADzFUA01P8A"><input type="hidden" name="dxspMain$treeList$EV" id="dxspMain_treeList_EV"><img id="dxspMain_treeList_DAD" class="dxTreeList_DragAndDropArrowDown" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(5).axd" alt="|" style="visibility:hidden;position:absolute;z-index:30000;top:-100px;"><img id="dxspMain_treeList_DAU" class="dxTreeList_DragAndDropArrowUp" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(5).axd" alt="|" style="visibility:hidden;position:absolute;z-index:30000;top:-100px;"><img id="dxspMain_treeList_DH" class="dxTreeList_DragAndDropHide" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(5).axd" alt="Hide" style="visibility:hidden;position:absolute;z-index:30000;top:-100px;"><script id="dxss_1635899325" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientTreeList('dxspMain_treeList');
+window['treeList'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('dxspMain$treeList',arg,aspxCallback,'dxspMain_treeList',aspxCallbackError,true); };
+dxo.uniqueID = 'dxspMain$treeList';
+dxo.BeginCallback.AddHandler(treeList_BeginCallback);
+dxo.EndCallback.AddHandler(treeList_EndCallback);
+dxo.maxVisibleLevel = 4;
+dxo.visibleColumnCount = 1;
+dxo.rowCount = 35;
+dxo.focusOnExpandCollapse = false;
+dxo.lpDisable = true;
+dxo.CreateColumn(0,'','Title',true,true);
+dxo.CreateColumn(1,'','Url',true,true);
+dxo.CreateColumn(2,'','OnClick',true,true);
+dxo.expandCollapseAction = 1;
+dxo.confirmDeleteMsg = 'Confirm Delete?';
+dxo.showRoot = true;
+dxo.InlineInitialize();
+
+//-->
+</script>
+									</div>
+								
+					</div></td><td id="dxspMain_1i1_S" class="dxsplVSeparator" align="center" style="background-color:White;width:6px;"><div class="dxsplS" style="width: 6px;">
+						<table cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+							<tbody><tr style="">
+								<td id="dxspMain_1i1_S_CB" class="dxsplVSeparatorButton"><img id="dxspMain_1i1_S_CB_Img" class="dxWeb_splVCollapseBackwardButton" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(5).axd" alt=""></td>
+							</tr><tr style="display: none;">
+								<td id="dxspMain_1i1_S_CF" class="dxsplVSeparatorButton"><img id="dxspMain_1i1_S_CF_Img" class="dxWeb_splVCollapseForwardButton" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/DXR(5).axd" alt=""></td>
+							</tr>
+						</tbody></table>
+					</div></td><td id="dxspMain_1i1" class="dxsplPane DocumentContentPane" valign="top" style="background-color: white; border-width: 0px 0px 0px 1px; width: 1230px; height: 685px;"><div id="dxspMain_1i1_CC" class="dxsplLCC" style="height: 685px; width: 1229px; padding: 0px; overflow: auto; margin-right: 0px;">
+						
+									<table cellspacing="0" cellpadding="0" id="dxspMain_lpMain" border="0" style="border-collapse:collapse;position:absolute;left:0px;top:0px;z-index:30000;display:none;">
+							<tbody><tr>
+								<td class="dx"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/ajax-loader.gif" alt="Loading..." align="middle" style="height:19px;width:220px;"></td>
+							</tr>
+						</tbody></table><script id="dxss_65928985" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientLoadingPanel('dxspMain_lpMain');
+window['lpMain'] = dxo;
+dxo.uniqueID = 'dxspMain$lpMain';
+dxo.isTextEmpty = true;
+dxo.InlineInitialize();
+
+//-->
+</script>
+									<div id="dxspMain_mainPaneDiv">
+							
+												<div class="Document" data-swiftype-index="true" id="dxspMain_mainPaneDiv_mainCallbackPanel">
+								
+															<div id="dxspMain_mainPaneDiv_mainCallbackPanel_contentHolder" class="stl-dx"> 
+	<script id="dxss_81ae8ba2bea44ff8bb63d46111ed6c34">$(window).load(function () { DX.Groups.initGroups(); });</script>
+	<div class="dx-breadcrumbs-outer">
+        <div class="dx-breadcrumbs" data-swiftype-index="false" style="top: 26px;">
+            <a href="https://documentation.devexpress.com/WindowsForms/7874/WinForms-Controls" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;WindowsForms/7874/WinForms-Controls&#39;); return false; }">WinForms Controls</a> &gt; <a href="https://documentation.devexpress.com/WindowsForms/114441/Build-an-Application" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;WindowsForms/114441/Build-an-Application&#39;); return false; }">Build an Application</a> &gt; <a href="https://documentation.devexpress.com/WindowsForms/2405/Build-an-Application/Localization" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;WindowsForms/2405/Build-an-Application/Localization&#39;); return false; }">Localization</a> &gt; <a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies&#39;); return false; }">Localizing WinForms Controls via Satellite Resource Assemblies</a>
+        </div>
+	</div>
+        <h1 class="dx-title" style="padding-top: 50px;">Localizing WinForms Controls via Satellite Resource Assemblies</h1>
+            <div class="dx-main" id="WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies/dx-top" name="WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies/dx-top">
+                <div>
+                    <p></p><p>This document demonstrates the most common approach to localizing a .NET application using Satellite Resource Assemblies (libraries that contain translated resources). These assemblies are the standard localization mechanism provided by the .NET Framework, to build multi-language applications. Refer to the <a href="http://msdn.microsoft.com/en-us/library/z68135h5.aspx">Localizing Applications</a> topic in MSDN to learn more about localization.</p>
+
+
+
+<div class="dx-notes dx-note"><span class="dx-notes-title dx-note-title">Note</span><p><b>Important</b>: You can also localize applications using <a href="https://documentation.devexpress.com/WindowsForms/1866/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Localizer-Objects" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;WindowsForms/1866/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Localizer-Objects&#39;); return false; }">custom localizers</a>, but some controls contain form resources (e.g., the XtraReports Search dialog), which must be translated via satellite assemblies. Thus, localization via resources is recommended.</p></div>
+
+<p>This document consists of the following sections.</p>
+
+<ul type="disc">
+<li>
+<a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies#Obtain">Obtaining Satellite Assemblies</a>
+</li>
+
+<li>
+<a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies#Choose">Choosing Cultures to Localize</a>
+</li>
+
+<li>
+<a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies#Embed">Adding Satellite Assemblies to Your Application</a>
+</li>
+
+<li>
+<a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies#Select">Selecting a Culture Different from the System Culture</a>
+</li>
+
+<li>
+<a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies#Trouble">Troubleshooting</a>
+</li>
+</ul>
+
+
+<div class="dx-clear"></div><h2 class="dx-regiontitle" onclick="DX.Groups.collapse($(this))" title="Click to collapse. Double-click to collapse all."><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(4).ashx" alt="Expanded" class="expanded"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(5).ashx" alt="Collapsed" class="collapsed"> 
+<a name="Obtain"></a>
+Obtaining Satellite Assemblies
+</h2><div class="dx-clear"></div><div class="dx-groupContent"><p>
+
+</p><p>In most cases, it is not necessary to manually translate all language-specific resources, because DevExpress ships with satellite assemblies for a variety of languages and cultures.</p>
+
+<p>The <a href="https://documentation.devexpress.com/GeneralInformation/15661/Installation" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;GeneralInformation/15661/Installation&#39;); return false; }">.NET Products Installer</a> provides resource assemblies for many popular languages. It registers these assemblies into the GAC (Global Assembly Cache) of your development machine, and also places them in the installation folder ("<em>C:\Program Files (x86)\DevExpress 18.1\Components\Bin\Framework\</em>", by default).</p>
+
+<p>This folder contains a subfolder with translated libraries. Each subfolder is named by its common culture abbreviation:</p>
+
+<ul type="disc">
+<li>
+<b>de</b> - German;
+</li>
+
+<li>
+<b>es</b> - Spanish;
+</li>
+
+<li>
+<b>ja</b> - Japanese;
+</li>
+
+<li>
+<b>ru</b> - Russian.
+</li>
+</ul>
+
+<div class="dx-notes dx-note"><span class="dx-notes-title dx-note-title">Note</span><p>For a full list of available culture names, refer to the <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd318693(v=vs.85).aspx">Language Identifier Constants and Strings</a> topic in MSDN.</p></div>
+
+<p>If these folders do not contain assemblies for the language you require, or you wish to provide custom translations for specific UI elements, you can use the <a href="http://localization.devexpress.com/">DevExpress Localization Service</a>. This service allows you to download and modify the satellite assemblies required to localize applications created with DevExpress .NET controls.</p>
+
+<p><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(6).ashx"></p>
+
+<p>For more information on preparing and downloading resource assemblies, refer to the <a href="https://documentation.devexpress.com/LocalizationService/16235/Localization-Service" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;LocalizationService/16235/Localization-Service&#39;); return false; }">Localization Service</a> documentation, or watch the <a href="http://www.youtube.com/watch?v=iQI5cw8nAEk&amp;feature=youtu.be">training video on YouTube</a>.</p>
+
+
+
+<p></p></div>
+
+
+<div class="dx-clear"></div><h2 class="dx-regiontitle" onclick="DX.Groups.collapse($(this))" title="Click to collapse. Double-click to collapse all."><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(4).ashx" alt="Expanded" class="expanded"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(5).ashx" alt="Collapsed" class="collapsed"> 
+<a name="Choose"></a>
+Choosing Cultures to Localize
+</h2><div class="dx-clear"></div><div class="dx-groupContent"><p>
+
+</p><p>There are three ways to localize an application.</p>
+
+<ol>
+<li>
+<p><b>Localize an application for a single culture.</b><br>
+Copy the required satellite assemblies to the directory where the application's EXE file is located. After it is deployed on an end-user's machine, the program will automatically determine the operating system's culture.</p>
+
+<p>Unpack the downloaded archive, locate the folder by its abbreviated culture name (e.g., <b>de</b> for the German culture) and copy it to the application's EXE file directory.</p>
+
+<div class="dx-notes dx-note"><span class="dx-notes-title dx-note-title">Note</span><p>No code has to be written in this case, and you can omit the remaining steps of this tutorial.</p></div>
+</li>
+
+<li>
+<p><b>Localize an application for numerous cultures, based on the locale of the operating system.</b><br>
+This is the most common approach to localization. It is similar to the one described above, with one exception: multiple folders are created within the application's directory, each containing satellite assemblies for a single culture. The program will automatically determine the operating system's culture, and load the appropriate assemblies, so it is not necessary to write additional code.</p>
+</li>
+
+<li>
+<p><b>Localize an application for a specific culture, regardless of the locale of the operating system.</b><br>
+See the <a href="https://documentation.devexpress.com/WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies#Select">Select a Culture Different from the System Culture</a> article for details on how to achieve this.</p>
+</li>
+
+</ol>
+
+
+
+<p></p></div>
+
+
+<div class="dx-clear"></div><h2 class="dx-regiontitle" onclick="DX.Groups.collapse($(this))" title="Click to expand. Double-click to expand all."><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(4).ashx" alt="Expanded" class="expanded" style="display: none;"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(5).ashx" alt="Collapsed" class="collapsed" style="display: inline;"> 
+<a name="Embed"></a>
+Adding Satellite Assemblies to Your Application
+</h2><div class="dx-clear"></div><div class="dx-groupContent" style="display: none;"><p>
+
+</p><p>To add localized resources to your application, copy satellite assemblies from the unpacked archive to the corresponding subfolders of your application's directory. The subfolder's name is the culture's abbreviation.</p>
+
+<p>For example, to include German assemblies,  copy the folder named <b>de</b> from the <b>\Bin\Framework\</b> directory to the directory where your application's EXE file is located; most commonly, it is the <b>bin\Debug\</b> subdirectory of an application. You can, however, select another location by changing your project's <b>Output path</b> defined in its general settings, as shown in the following image.</p>
+
+<p><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(7).ashx"></p>
+
+<p>The following diagram illustrates where satellite assemblies should be placed within your application's directory.</p>
+
+
+<p><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(8).ashx"></p>
+
+<div class="dx-notes dx-note"><span class="dx-notes-title dx-note-title">Note</span><p>Instead of copying satellite assemblies into the application's folder, it is also possible to install them to the GAC. Note that if there are different resource assemblies with the same name - one located near the application EXE file and another installed in the GAC - the assembly from the GAC will have a higher priority.
+</p></div>
+
+<p>After the application is deployed on an end-user's machine, the program will automatically determine the operating system's culture.</p>
+
+
+
+<p>The following images demonstrate <a href="https://documentation.devexpress.com/WindowsForms/105/Controls-and-Libraries/Printing-Exporting/Concepts/Print-Preview/Document-Viewer" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;WindowsForms/105/Controls-and-Libraries/Printing-Exporting/Concepts/Print-Preview/Document-Viewer&#39;); return false; }">Print Preview</a> and <a href="https://documentation.devexpress.com/XtraReports/4256/Visual-Studio-Report-Designer" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;XtraReports/4256/Visual-Studio-Report-Designer&#39;); return false; }">Report Designer</a> forms localized into German. It is possible to localize all DevExpress components in a similar manner.</p>
+
+<p><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(9).ashx"></p>
+
+<p><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(10).ashx"></p>
+
+<p></p></div>
+
+
+<div class="dx-clear"></div><h2 class="dx-regiontitle" onclick="DX.Groups.collapse($(this))" title="Click to collapse. Double-click to collapse all."><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(4).ashx" alt="Expanded" class="expanded"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(5).ashx" alt="Collapsed" class="collapsed"> 
+<a name="Select"></a>
+Selecting a Culture Different from the System Culture
+</h2><div class="dx-clear"></div><div class="dx-groupContent"><p>
+
+</p><p>Assign the required culture's abbreviation to the <b>CurrentThread.CurrentUICulture</b> and <b>CurrentThread.CurrentCulture</b> properties to manually specify the culture for an application (regardless of the target operating system).</p>
+
+<p>Note that while you can use a short culture abbreviation (a neutral culture) for the <b>CurrentUICulture</b> property (e.g., "de"),  the <b>CurrentCulture</b> property needs to be set a specific culture (e.g., "de-DE").</p>
+
+<p>The following sample code sets German regional settings for an application.</p>
+
+
+
+
+<table class="dx-tabs" id="dxTab2">
+   <tbody><tr>
+     <td>
+       <table id="dxTab2_tabs" class="dx-tabs-inner">
+	<tbody><tr>
+		<td class="dx-tabs-header"><div>C#</div></td><td class="dx-tabs-header dx-active"><div>VB</div></td><td class="dx-tabs-filler"><div></div></td>
+	</tr>
+       </tbody></table>
+     </td>
+   </tr>
+   <tr>
+     <td><div class="dx-tabs-contents" style="display: none;"><pre><span class="cr-cs-keyword">using</span> System.Globalization;
+<span class="cr-cs-keyword">using</span> System.Threading;
+<span class="cr-cs-comment">// ...</span>&nbsp;
+
+<span class="cr-cs-keyword">static</span>&nbsp;<span class="cr-cs-keyword">void</span> Main() {
+    <span class="cr-cs-comment">// Create a new object, representing the German culture. </span>&nbsp;
+    CultureInfo culture = CultureInfo.CreateSpecificCulture(<span class="cr-cs-string">"de-DE"</span>);
+
+    <span class="cr-cs-comment">// The following line provides localization for the application's user interface. </span>&nbsp;
+    Thread.CurrentThread.CurrentUICulture = culture;
+
+    <span class="cr-cs-comment">// The following line provides localization for data formats. </span>&nbsp;
+    Thread.CurrentThread.CurrentCulture = culture;
+
+    <span class="cr-cs-comment">// Set this culture as the default culture for all threads in this application. </span>&nbsp;
+    <span class="cr-cs-comment">// Note: The following properties are supported in the .NET Framework 4.5+</span>&nbsp;
+    CultureInfo.DefaultThreadCurrentCulture = culture;
+    CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+
+    <span class="cr-cs-comment">// Note that the above code should be added BEFORE calling the Run() method.</span>&nbsp;
+    Application.Run(<span class="cr-cs-keyword">new</span> Form1());
+}
+</pre></div><div class="dx-tabs-contents" style="display: block;"><pre><span class="cr-vb-keyword">Imports</span> System.Globalization
+<span class="cr-vb-keyword">Imports</span> System.Threading
+<span class="cr-vb-comment">' ...</span>&nbsp;
+
+<span class="cr-vb-keyword">Shared</span>&nbsp;<span class="cr-vb-keyword">Sub</span> Main()
+    <span class="cr-vb-comment">' Create a new object, representing the German culture. </span>&nbsp;
+    <span class="cr-vb-keyword">Dim</span> Culture = CultureInfo.CreateSpecificCulture(<span class="cr-vb-string">"de-DE"</span>)
+
+    <span class="cr-vb-comment">' The following line provides localization for the application's user interface.</span>&nbsp;
+    Thread.CurrentThread.CurrentUICulture = Culture
+
+    <span class="cr-vb-comment">' The following line provides localization for data formats.</span>&nbsp;
+    Thread.CurrentThread.CurrentCulture = Culture
+
+    <span class="cr-vb-comment">' Set this culture as the default culture for all threads in this application. </span>&nbsp;
+    <span class="cr-vb-comment">' Note: The following properties are supported in the .NET Framework 4.5+</span>&nbsp;
+    CultureInfo.DefaultThreadCurrentCulture = Culture
+    CultureInfo.DefaultThreadCurrentUICulture = Culture
+
+
+    <span class="cr-vb-comment">' Note that the above code should be added BEFORE calling the Run() method.</span>&nbsp;
+    Application.Run(<span class="cr-vb-keyword">New</span> Form1())
+<span class="cr-vb-keyword">End</span>&nbsp;<span class="cr-vb-keyword">Sub</span>&nbsp;
+</pre></div></td>
+   </tr>
+</tbody></table>
+<table id="dxTab2_data" style="display:none">
+	<tbody><tr>
+		<td>C#</td>
+		<td><pre><span class="cr-cs-keyword">using</span> System.Globalization;
+<span class="cr-cs-keyword">using</span> System.Threading;
+<span class="cr-cs-comment">// ...</span>&nbsp;
+
+<span class="cr-cs-keyword">static</span>&nbsp;<span class="cr-cs-keyword">void</span> Main() {
+    <span class="cr-cs-comment">// Create a new object, representing the German culture. </span>&nbsp;
+    CultureInfo culture = CultureInfo.CreateSpecificCulture(<span class="cr-cs-string">"de-DE"</span>);
+
+    <span class="cr-cs-comment">// The following line provides localization for the application's user interface. </span>&nbsp;
+    Thread.CurrentThread.CurrentUICulture = culture;
+
+    <span class="cr-cs-comment">// The following line provides localization for data formats. </span>&nbsp;
+    Thread.CurrentThread.CurrentCulture = culture;
+
+    <span class="cr-cs-comment">// Set this culture as the default culture for all threads in this application. </span>&nbsp;
+    <span class="cr-cs-comment">// Note: The following properties are supported in the .NET Framework 4.5+</span>&nbsp;
+    CultureInfo.DefaultThreadCurrentCulture = culture;
+    CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+
+    <span class="cr-cs-comment">// Note that the above code should be added BEFORE calling the Run() method.</span>&nbsp;
+    Application.Run(<span class="cr-cs-keyword">new</span> Form1());
+}
+</pre></td>
+	</tr>
+	<tr>
+		<td>VB</td>
+		<td><pre><span class="cr-vb-keyword">Imports</span> System.Globalization
+<span class="cr-vb-keyword">Imports</span> System.Threading
+<span class="cr-vb-comment">' ...</span>&nbsp;
+
+<span class="cr-vb-keyword">Shared</span>&nbsp;<span class="cr-vb-keyword">Sub</span> Main()
+    <span class="cr-vb-comment">' Create a new object, representing the German culture. </span>&nbsp;
+    <span class="cr-vb-keyword">Dim</span> Culture = CultureInfo.CreateSpecificCulture(<span class="cr-vb-string">"de-DE"</span>)
+
+    <span class="cr-vb-comment">' The following line provides localization for the application's user interface.</span>&nbsp;
+    Thread.CurrentThread.CurrentUICulture = Culture
+
+    <span class="cr-vb-comment">' The following line provides localization for data formats.</span>&nbsp;
+    Thread.CurrentThread.CurrentCulture = Culture
+
+    <span class="cr-vb-comment">' Set this culture as the default culture for all threads in this application. </span>&nbsp;
+    <span class="cr-vb-comment">' Note: The following properties are supported in the .NET Framework 4.5+</span>&nbsp;
+    CultureInfo.DefaultThreadCurrentCulture = Culture
+    CultureInfo.DefaultThreadCurrentUICulture = Culture
+
+
+    <span class="cr-vb-comment">' Note that the above code should be added BEFORE calling the Run() method.</span>&nbsp;
+    Application.Run(<span class="cr-vb-keyword">New</span> Form1())
+<span class="cr-vb-keyword">End</span>&nbsp;<span class="cr-vb-keyword">Sub</span>&nbsp;
+</pre></td>
+</tr>
+</tbody></table>
+<script id="dxss_81ae8ba2bea44ff8bb63d46111ed6c34">
+	DX.Tabs.init('dxTab2');
+</script>
+
+<p></p><div class="dx-notes dx-note"><span class="dx-notes-title dx-note-title">Note</span><p>If you intend to allow end-users to select from multiple predefined cultures, execute this code <em>before</em> the form is loaded.  Although it is possible to assign the <b>CurrentCulture</b> and <b>CurrentUICulture</b> properties on the fly, there is no common method to reload <em>all</em> resources.</p></div><p></p>
+
+
+
+
+<p></p></div>
+
+
+<div class="dx-clear"></div><h2 class="dx-regiontitle" onclick="DX.Groups.collapse($(this))" title="Click to collapse. Double-click to collapse all."><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(4).ashx" alt="Expanded" class="expanded"><img src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/HelpResource(5).ashx" alt="Collapsed" class="collapsed"> 
+<a name="Trouble"></a>
+Troubleshooting
+</h2><div class="dx-clear"></div><div class="dx-groupContent"><p>
+
+</p><p><b>My application is not localized.</b><br>
+To use satellite resource assemblies, place them in the appropriate locations, so that they can easily be found by the Common Language Runtime (CLR). In some cases, the application may not be able to locate the satellite assemblies. If this is the case, you can check to see where it looks for assemblies using the standard .NET <b>Fuslogvw.exe</b> utility. Refer to the <a href="http://msdn.microsoft.com/en-us/library/e74a18c4.aspx">Assembly Binding Log Viewer (Fuslogvw.exe)</a> topic in MSDN for more information.</p>
+<br>
+
+<p><b>Some items in my application are not localized.</b><br>
+This may occur because satellite assemblies for a particular culture are not complete. You can translate the missing strings via the <a href="http://localization.devexpress.com/">DevExpress Localization Service</a>. Refer to the <a href="https://documentation.devexpress.com/LocalizationService/16235/Localization-Service" onclick="if(!event.ctrlKey &amp;&amp; !event.shiftKey &amp;&amp; event.button == 0) { ChangeHashPageType(&#39;LocalizationService/16235/Localization-Service&#39;); return false; }">Localization Service</a> documentation to learn more.</p>
+<br>
+
+<p><b>My security permissions prohibit running the application.</b><br>
+<b>SecurityPermission</b> must be set to <b>ControlThread</b> to change the culture of <b>Thread.CurrentThread</b>. Note that manipulating threads, however, is dangerous, because of the security state associated with threads. Therefore, permission should only be given to trustworthy code, and only when necessary. The application cannot change the thread culture in semi-trusted code (see the <a href="https://msdn.microsoft.com/en-us/library/s2x52wh6.aspx">CultureInfo.CurrentCulture</a> property description in MSDN for details).</p>
+
+
+
+<p></p></div>
+
+
+
+
+
+<p></p>
+                </div>  
+        </div>
+	<div class="dx-clear"></div>
+	
+<div id="apprise-holder" style="height: auto;"></div><div class="apprise-container Fixed" data-swiftype-index="false" style="position: static; top: 3378px;">
+	<input id="currentAppraiseMark" type="hidden" value="">
+	<div class="smiles">
+		<div style="display: inline-block">
+			<span class="text">Is this topic helpful?​​​​​​​</span>
+		</div>
+		<div class="images color-version">
+			<a id="apprise-negative" class="negative-color-version"></a><a id="apprise-middle" class="middle-color-version"></a><a id="apprise-positive" class="positive-color-version">
+				</a>
+		</div>
+		<div class="link">
+			<span id="details-link" class="leave-cmnts-text" style="display: none;">Additional Feedback</span>
+			<span id="cancel-btn" class="leave-cmnts-text" style="display: none;">Close</span>
+		</div>
+	</div>
+	<div id="feedback" class="feedback" style="display: none;">
+		<div>
+			<label>Please tell us how you’d like us to improve this topic.</label>
+		</div>
+		<div>
+			<textarea id="apprise-message"></textarea>
+		</div>
+		<div class="btns">
+			<div id="apprise-message-btn" class="btn btn-default">
+				Send</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" id="dxss_apprise">
+	if(typeof initAppriseSupport != 'undefined') {
+		initAppriseSupport();
+	}
+</script>
+<div class="dx-footer" data-swiftype-index="false">
+<div>Copyright (c) 1998-2018 Developer Express Inc. All rights reserved.</div>
+</div>
+<script type="text/javacript" id="dxss_iniggroups">
+if(typeof DX != 'undefined' && typeof(DX.Groups) != 'undefined') {
+    DX.Groups.initGroups();
+}
+</script></div>
+															<input type="hidden" name="dxspMain$mainPaneDiv$mainCallbackPanel$hfGate$I" id="dxspMain_mainPaneDiv_mainCallbackPanel_hfGate_I"><script id="dxss_425259849" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientHiddenField('dxspMain_mainPaneDiv_mainCallbackPanel_hfGate');
+window['hfGate'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('dxspMain$mainPaneDiv$mainCallbackPanel$hfGate',arg,aspxCallback,'dxspMain_mainPaneDiv_mainCallbackPanel_hfGate',aspxCallbackError,true); };
+dxo.uniqueID = 'dxspMain$mainPaneDiv$mainCallbackPanel$hfGate';
+dxo.properties = {'dxptitle':'Localizing WinForms Controls via Satellite Resource Assemblies | WinForms General | WinForms Controls | DevExpress Help','dxptopicId':'d57cddf0_d0e0_44c0_ae43_510824c1b051'};
+dxo.InlineInitialize();
+
+//-->
+</script>
+															
+														
+							</div><script id="dxss_1128064602" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientCallbackPanel('dxspMain_mainPaneDiv_mainCallbackPanel');
+window['mainCallbackPanel'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('dxspMain$mainPaneDiv$mainCallbackPanel',arg,aspxCallback,'dxspMain_mainPaneDiv_mainCallbackPanel',aspxCallbackError,true); };
+dxo.uniqueID = 'dxspMain$mainPaneDiv$mainCallbackPanel';
+dxo.BeginCallback.AddHandler(mainCallbackPanel_BeginCallback);
+dxo.EndCallback.AddHandler(MainCallbackPanel_EndCallback);
+dxo.hideContentOnCallback=false;
+dxo.InlineInitialize();
+
+//-->
+</script>
+											
+						</div><script id="dxss_396050105" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientPanel('dxspMain_mainPaneDiv');
+window['mainPaneDiv'] = dxo;
+dxo.uniqueID = 'dxspMain$mainPaneDiv';
+dxo.InlineInitialize();
+
+//-->
+</script>
+								
+					</div></td>
+				</tr>
+			</tbody></table>
+		</div></td>
+	</tr>
+</tbody></table><div id="dxspMain_RP" class="dxsplResizingPointer" style="z-index:29999;display:none;position:absolute;">
+
+</div><script id="dxss_478060832" type="text/javascript">
+<!--
+aspxAddHoverItems('dxspMain',[[['dxsplHSeparatorHover'],[''],['1_S']],[['dxsplVSeparatorHover'],[''],['1i1_S'],,[[{'spriteCssClass':'dxWeb_splVSeparatorHover'},{'spriteCssClass':'dxWeb_splVCollapseBackwardButtonHover'},{'spriteCssClass':'dxWeb_splVCollapseForwardButtonHover'}]],['_CS_Img','_CB_Img','_CF_Img']],[['dxsplVSeparatorButtonHover'],[''],['1i1_S_CB','1i1_S_CF'],,[[{'spriteCssClass':'dxWeb_splVCollapseBackwardButtonHover'}],[{'spriteCssClass':'dxWeb_splVCollapseForwardButtonHover'}]],['_Img']]]);
+aspxAddSelectedItems('dxspMain',[[['dxsplPaneCollapsed'],[''],['0','1','1i0','1i1']],[['dxsplHSeparatorCollapsed'],[''],['0_S','1_S']],[['dxsplVSeparatorCollapsed'],[''],['1i0_S','1i1_S']]]);
+
+var dxo = new ASPxClientSplitter('dxspMain');
+window['dxspMain'] = dxo;
+dxo.cookieName = 'dxDocVisualState';
+dxo.Init.AddHandler(dxspMain_Init);
+dxo.height = '100%';
+dxo.showSeparatorImage = true;
+dxo.defaultMinSize = 40;
+dxo.CreatePanes([{'s':25,'nar':0,'smin':25,'v':1,'st':'px'},{'s':100,'v':1,'n':'tree','i':[{'s':300,'v':1,'n':'treeList','st':'px'},{'st':'%','scbb':1,'s':100,'v':1,'n':'main','spt':4148}],'st':'%'}]);
+dxo.InlineInitialize();
+
+//-->
+</script>
+	</div>
+	<input type="hidden" name="hfOldHash$I" id="hfOldHash_I"><script id="dxss_1986648774" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientHiddenField('hfOldHash');
+window['hfOldHash'] = dxo;
+dxo.callBack = function(arg) { WebForm_DoCallback('hfOldHash',arg,aspxCallback,'hfOldHash',aspxCallbackError,true); };
+dxo.properties = {'dxpoldHash':'WindowsForms/5755/Build-an-Application/Localization/Localizing-WinForms-Controls-via-Satellite-Resource-Assemblies'};
+dxo.InlineInitialize();
+
+//-->
+</script>
+	<input type="hidden" id="tHashCheckS" name="tHashCheckS" value="1;100"><script id="dxss_65858490" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientTimer('tHashCheck');
+window['tHashCheck'] = dxo;
+dxo.Tick.AddHandler(CheckHash);
+dxo.interval = 100;
+dxo.InlineInitialize();
+
+//-->
+</script>
+	
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=84p-GtgwjLIDRt0Y-7-IGt4iHWtD4ocCTP5llznxOaSiN97KVFiawUX40UWqQ3T20H4dQQF3jAH0NRHbDc6gjUNCEiw1&t=636465359042282285';
+WebForm_InitCallback();//]]>
+</script>
+<input type="hidden" name="DXScript" value="1_44,1_76,1_66,1_75,2_27,2_34,2_41,1_59,1_54,6_13,1_43,1_58,1_78"></form>
+
+
+<div style="display: none; visibility: hidden;"><script type="text/javascript" src="./Localizing WinForms Controls via Satellite Resource Assemblies _ WinForms General _ WinForms Controls _ DevExpress Help_files/dx-analytics.js.download" async="null"></script>
+<script>(function(){var a=setInterval(function(){window.dxa&&(clearInterval(a),window.analytics=new window.dxa.Analytic,window.analytics.addCookieToSave("DXVisitor"),window.analytics.pageVisited())},300)})();</script></div></body></html>

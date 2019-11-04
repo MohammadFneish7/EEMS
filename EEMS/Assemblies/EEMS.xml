@@ -1,0 +1,516 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EEMS
+</name>
+</assembly>
+<members>
+<member name="P:EEMS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.accountingbook">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Action_Navigation_History_Back">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Action_New">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Action_Totals_Row">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.add16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.add32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.adde">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.addred16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.android_developer">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.backyp16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.BO_Invoice">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.BO_Opportunity">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.BO_Sale_v92">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.BO_Security_Permission_Model">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.BO_User">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.border">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Business_Man_Blue">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.car">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.chart">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.clientoptimala">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.clock">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.close">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.computer">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.done">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.emergency">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.excell">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.filter">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.hierarchicalstructure">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.ico001team">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.ico002key">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__1_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__10_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__11_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__12_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__13_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__14_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__15_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__16_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__17_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__18_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__19_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__2_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__20_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__21_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__22_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__23_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__24_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__25_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__26_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__27_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__28_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__29_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__3_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__30_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__31_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__32_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__33_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__34_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__35_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__36_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__37_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__38_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__39_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__4_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__40_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__41_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__42_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__5_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__6_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__7_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__8_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon__9_">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon_16_39">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.icon001team">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.iconrefresh">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.IDE_32x32">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Info_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.keyboard">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.lightbulb">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.man">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.MDev">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.notification">
+	<summary>
+  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.othrtech">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.payment">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.Pencil16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.printer">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.printer16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.removedelete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.scale">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.settingsIcon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.settingsIcon16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.State_ItemVisibility_Show">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.State_Validation_Information">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.State_Validation_Valid">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.trafficlight_16">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.UpgradeReport_Success">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.UpgradeReportError">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.userIdentity">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.xls">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:EEMS.My.Resources.Resources.ZoomIn">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:EEMS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.invoicesdtDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.registrationdtDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.creditdtDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.paymentdtDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.clientdtDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.generalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.creditsdtDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.invoicesdtRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.registrationdtRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.creditdtRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.paymentdtRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.clientdtRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.generalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.creditsdtRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.invoicesdtRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.registrationdtRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.creditdtRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.paymentdtRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.clientdtRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.generalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices.creditsdtRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:EEMS.DataSetInvoices">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+</members>
+</doc>
