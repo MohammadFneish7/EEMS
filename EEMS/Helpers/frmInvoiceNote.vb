@@ -8,6 +8,6 @@
         If chkverbose.Checked Then
             verbose = True
         End If
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
     End Sub
 End Class

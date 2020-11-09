@@ -17,11 +17,11 @@ Public Class frmRegistrationEditor
         If add = False Then
             If rid < 0 Then
                 MsgBox("خطأ في رقم الملف.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult =DialogResult.Ignore
             End If
             If cid < 0 Then
                 MsgBox("خطأ في رقم المشترك.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult =DialogResult.Ignore
             End If
         Else
             btnMoveInsurance.Enabled = False
@@ -105,7 +105,7 @@ Public Class frmRegistrationEditor
             Else
                 If Not txtcurrentcounterval.Text.Trim.Equals("0") Then
                     Dim dlg As New CustomMsgDialog("إنتبه", "العداد الذي قمت بإختياره مستعمل ولذلك قيمة الحاليّة أكبر من صفر مما يعني أن المشترك الجديد سيتابع استخدامه من القيمة القديمة." & vbNewLine & vbNewLine & "إنقر على ’كلا‘ للعودة وتعديل القيمة يدوياً أو على ’نعم‘ للمتابعة.", 10)
-                    If dlg.ShowDialog <> Windows.Forms.DialogResult.Yes Then
+                    If dlg.ShowDialog <>DialogResult.Yes Then
                         Return
                     End If
                 End If
@@ -150,7 +150,7 @@ Public Class frmRegistrationEditor
         End If
 
 
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
     End Sub
 
     Private Sub loadData()
@@ -193,7 +193,7 @@ Public Class frmRegistrationEditor
             End If
         Catch ex As Exception
             MsgBox("خطأ اثناء محاولة تحميل البيانات.")
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult =DialogResult.Ignore
         End Try
     End Sub
 
@@ -205,12 +205,12 @@ Public Class frmRegistrationEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult =DialogResult.Ignore
     End Sub
 
     Private Sub txtcounterid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtCounterid.DoubleClick
         Dim frm1 As New frmChooser(COUNTER_NOT_ACTIVE_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() =DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtCounterid.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtcounterserial.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString
@@ -238,7 +238,7 @@ Public Class frmRegistrationEditor
 
     Private Sub txtpackid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtpackid.DoubleClick
         Dim frm1 As New frmChooser(PACKAGE_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() =DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtpackid.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtpackampere.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString
@@ -257,7 +257,7 @@ Public Class frmRegistrationEditor
 
     Private Sub txtClientid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtClientid.MouseDoubleClick
         Dim frm1 As New frmChooser(CLIENT_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() =DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 'Dim count As Integer = a.ExecuteScalar("select count(r.ID) from Registration r,Client c where r.clientid = c.ID and r.active=1 and c.ID = " & frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString)
                 'If count = 0 Then
@@ -327,11 +327,11 @@ Public Class frmRegistrationEditor
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnEndReg.Click
         Dim dr As DialogResult = MessageBox.Show("في حال الغاء الاشتراك الحالي لن تتمكّن من اعادة تفعيله." & vbNewLine & "هل انت متأكّد من انك تريد المتابعة؟", "انتبه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-        If dr = Windows.Forms.DialogResult.Yes Then
+        If dr =DialogResult.Yes Then
             a.Execute("Update Client Set clientname='" & txtname.Text.Trim & "',clientnickname='" & txtnickname.Text.Trim & "',clientmothername='" & txtmothername.Text.Trim & "',caddress='" & txtaddress.Text.Trim & "',phone='" & txtphone.Text.Trim & "',mobile='" & txtmobile.Text.Trim & "' Where ID=" & clientid)
             a.Execute("update Registration set active=0,notes='" & txtnotes.Text.Trim & "',enddate='" & Date.Today & "' where ID=" & regid)
             a.Execute("update ECounter set active = 0 where ID=" & counterid)
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult =DialogResult.OK
         End If
     End Sub
 
@@ -380,7 +380,7 @@ Public Class frmRegistrationEditor
             txtpaidinsurance.BackColor = Color.FromArgb(224, 224, 224)
             btnUpdateInsurance.Enabled = False
             paidInsurenceAmount = txtpaidinsurance.Text.Trim
-            'Me.DialogResult = Windows.Forms.DialogResult.Cancel
+            'Me.DialogResult =DialogResult.Cancel
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
         End Try
@@ -412,7 +412,7 @@ Public Class frmRegistrationEditor
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles btnMoveInsurance.Click
         If paidInsurenceAmount > 0 Then
             Dim frm As New frmChooser(SharedModule.REGISTRATION_CHOOSER)
-            If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
+            If frm.ShowDialog() =DialogResult.OK Then
                 If frm.dgvData.SelectedRows.Count > 0 Then
                     Try
                         Dim inToMoveID As Integer = frm.dgvData.SelectedRows(0).Cells(0).Value.ToString

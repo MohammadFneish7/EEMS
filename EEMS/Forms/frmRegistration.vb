@@ -38,7 +38,7 @@ Public Class frmRegistration
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim frm As New frmRegistrationEditor(0, 0, True)
         Dim dr As DialogResult = frm.ShowDialog()
-        If dr = Windows.Forms.DialogResult.OK Then
+        If dr =DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -54,7 +54,7 @@ Public Class frmRegistration
         If GridView1.GetSelectedRows.Count > 0 Then
             Dim frm As New frmRegistrationEditor(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2)), False)
             Dim dr As DialogResult = frm.ShowDialog
-            If dr = Windows.Forms.DialogResult.OK Then
+            If dr =DialogResult.OK Then
                 loadData()
             End If
         End If
@@ -66,7 +66,7 @@ Public Class frmRegistration
         Dim queries As New List(Of String)
         Try
             Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If dr = Windows.Forms.DialogResult.Yes Then
+            If dr =DialogResult.Yes Then
                 Dim listToRemove As Integer() = GridView1.GetSelectedRows
                 For Each row As Integer In listToRemove
                     undoIfError = False

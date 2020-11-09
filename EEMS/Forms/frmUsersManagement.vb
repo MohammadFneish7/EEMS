@@ -20,7 +20,7 @@
         Dim ended As Boolean = False
         While Not ended
             Dim d As DialogResult = ml.ShowDialog()
-            If d = Windows.Forms.DialogResult.OK Then
+            If d =DialogResult.OK Then
                 If ml.PasswordTextBox.Text.Trim.Length > 4 Then
                     Dim found As Int16 = a.ExecuteScalar("select count(*) from users where username='" & ml.PasswordTextBox.Text.Trim.ToLower & "'")
                     If found > 0 Then
@@ -44,7 +44,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If DataGridView1.SelectedRows.Count > 0 Then
             Dim d As DialogResult = MessageBox.Show("هل انت متأكد من حذف المستخدم؟", "انتبه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If d = Windows.Forms.DialogResult.Yes Then
+            If d =DialogResult.Yes Then
                 a.Execute("delete from userroles where username='" & DataGridView1.SelectedRows(0).Cells(0).Value.ToString.Trim.ToLower & "'")
                 a.Execute("delete from notes where username='" & DataGridView1.SelectedRows(0).Cells(0).Value.ToString.Trim.ToLower & "'")
                 a.Execute("delete from users where username='" & DataGridView1.SelectedRows(0).Cells(0).Value.ToString.Trim.ToLower & "'")
@@ -59,7 +59,7 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If DataGridView1.SelectedRows.Count > 0 Then
             Dim d As DialogResult = MessageBox.Show("هل انت متأكد من تصفير كلمة المرور؟" & vbNewLine & "كلمة المرور عند التصفير: 123456789", "انتبه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If d = Windows.Forms.DialogResult.Yes Then
+            If d =DialogResult.Yes Then
                 a.Execute("update users set pass='" & cryptMaker.GetHash("123456789") & "' where username='" & DataGridView1.SelectedRows(0).Cells(0).Value.ToString.Trim.ToLower & "'")
                 MsgBox("تمت العمليّة بنجاح.")
                 loaddata()

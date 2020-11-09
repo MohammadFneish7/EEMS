@@ -78,7 +78,7 @@ Public Class frmExpenditure
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim frm As New frmExpenditureEditor(True)
         Dim dr As DialogResult = frm.ShowDialog
-        If dr = Windows.Forms.DialogResult.OK Then
+        If dr =DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -104,7 +104,7 @@ Public Class frmExpenditure
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim frm As New frmExpenditureEditor(False)
         Dim dr As DialogResult = frm.ShowDialog
-        If dr = Windows.Forms.DialogResult.OK Then
+        If dr =DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -139,7 +139,7 @@ Public Class frmExpenditure
         If e.KeyCode = 46 Then
 
             Dim tok As New frmTokenizer
-            If tok.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If tok.ShowDialog =DialogResult.OK Then
                 If Not tok.tokenAccepted Then
                     Return
                 End If
@@ -149,7 +149,7 @@ Public Class frmExpenditure
 
             Try
                 Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                If dr = Windows.Forms.DialogResult.Yes Then
+                If dr =DialogResult.Yes Then
                     Dim todeleteIds As String = "("
                     For Each row As Integer In GridView1.GetSelectedRows
                         todeleteIds = todeleteIds & GridView1.GetRowCellValue(row, GridView1.Columns(0)).ToString & ","

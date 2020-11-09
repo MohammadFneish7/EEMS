@@ -27,7 +27,7 @@ Public Class frmItemsPurchaseEditor
         a.ds = New DataSet
         Dim purid As Integer = a.Execute("insert into Purchases(indate,itemid,location,quantity,pricetotal,partyname,partyPhone,notes) values('" & txtOutDate.Value & "'," & txtItemID.Text.Trim & ",'" & txtlocation.Text.Trim & "'," & txtQuantity.Text.Trim & "," & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & txtPartyPhone.Text.Trim & "','" & txtNotes.Text.Trim & "')")
         a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & txtOutDate.Value.ToShortDateString & "','شراء أصناف',-" & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & "شراء " & txtQuantity.Text.Trim & " " & txtRemUnit.Text.Trim & " " & txtItemName.Text.Trim & "','ip" & purid & "')")
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
     End Sub
 
 
@@ -39,12 +39,12 @@ Public Class frmItemsPurchaseEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
     End Sub
 
     Private Sub txtItemID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtItemID.MouseDoubleClick
         Dim frm1 As New frmChooser(ITEM_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtItemID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtItemName.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString

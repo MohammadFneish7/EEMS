@@ -108,16 +108,16 @@ Public Class frmChooser
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
     End Sub
 
     Private Sub DataGridView1_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvData.CellMouseDoubleClick
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
     End Sub
 
     Private Sub DataGridView1_KeyDown(sender As Object, e As KeyPressEventArgs) Handles dgvData.KeyPress
         If AscW(e.KeyChar) = 13 Then
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult =DialogResult.OK
         End If
     End Sub
 

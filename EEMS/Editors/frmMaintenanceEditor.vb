@@ -23,7 +23,7 @@ Public Class frmMaintenanceEditor
         a.ds = New DataSet
         Dim repairid As Integer = a.Execute("insert into Maintenance(indate,mainaction,engineid,actiondetails,bycontract,pricetotal,partyname,partyPhone,notes) values('" & txtOutDate.Value & "','" & cmbActionType.SelectedItem.ToString.Trim & "'," & txtengineid.Text.Trim & ",'" & txtActionDetails.Text.Trim & "'," & getBit(chkByContract.Checked) & "," & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & txtPartyPhone.Text.Trim & "','" & txtNotes.Text.Trim & "')")
         a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & txtOutDate.Value.ToShortDateString & "','صيانة',-" & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & cmbActionType.SelectedItem.ToString.Trim & " مولّد " & txtenginename.Text.Trim & "','mc" & repairid & "')")
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
     End Sub
 
 
@@ -35,7 +35,7 @@ Public Class frmMaintenanceEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult =DialogResult.Ignore
     End Sub
 
     Private Sub txtQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpricetotal.KeyPress
@@ -55,7 +55,7 @@ Public Class frmMaintenanceEditor
 
     Private Sub txtEngineID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtengineid.MouseDoubleClick
         Dim frm1 As New frmChooser(ENGINE_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() =DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtEngineID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtenginename.Text = frm1.dgvData.SelectedRows(0).Cells(2).Value.ToString

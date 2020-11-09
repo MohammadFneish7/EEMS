@@ -34,7 +34,7 @@ Public Class frmFuelPurchaseEditor
         a.ds = New DataSet
         Dim purid As Integer = a.Execute("insert into FuelPurchases(indate,brand,tankid,quantity,pricetotal,partyname,partyPhone,notes) values('" & txtOutDate.Value & "','" & txtBrand.Text.Trim & "'," & txtTankID.Text.Trim & "," & txtQuantity.Text.Trim & "," & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & txtPartyPhone.Text.Trim & "','" & txtNotes.Text.Trim & "')")
         a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & txtOutDate.Value.ToShortDateString & "','شراء محروقات',-" & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & "شراء " & txtQuantity.Text.Trim & " لتر محروقات " & txtBrand.Text.Trim & "','fp" & purid & "')")
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
     End Sub
 
 
@@ -46,12 +46,12 @@ Public Class frmFuelPurchaseEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
     End Sub
 
     Private Sub txtItemID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtTankID.MouseDoubleClick
         Dim frm1 As New frmChooser(TANK_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtTankID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtTankName.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString

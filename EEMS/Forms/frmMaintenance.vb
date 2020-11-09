@@ -35,7 +35,7 @@ Public Class frmMaintenance
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim frm As New frmMaintenanceEditor
         Dim dr As DialogResult = frm.ShowDialog
-        If dr = Windows.Forms.DialogResult.OK Then
+        If dr =DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -54,7 +54,7 @@ Public Class frmMaintenance
         End If
         Try
             Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If dr = Windows.Forms.DialogResult.Yes Then
+            If dr =DialogResult.Yes Then
                 Dim todeleteIds As String = "("
                 Dim todeleteIdsstr As String = "('"
                 For Each row As Integer In GridView1.GetSelectedRows

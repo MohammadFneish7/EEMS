@@ -18,7 +18,7 @@ Public Class frmECounterEditor
         If add = False Then
             If id < 0 Then
                 MsgBox("خطأ في رقم الملف.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult = DialogResult.Ignore
             End If
         End If
     End Sub
@@ -57,7 +57,7 @@ Public Class frmECounterEditor
             Dim iid As Integer = a.Execute("insert into ECounter(serial,code,boxid,active,currentvalue,notes) values('" & txtserial.Text.Trim & "','" & cmbcode.SelectedItem & "'," & txtBoxID.Text.Trim & "," & getBit(chkactive.Checked) & "," & txtcurrentval.Text.Trim & ",'" & txtnotes.Text.Trim & "')")
         End If
 
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
 
     End Sub
 
@@ -76,7 +76,7 @@ Public Class frmECounterEditor
             txtnotes.Text = a.ds.Tables(0).Rows(0).Item(6).ToString
         Catch ex As Exception
             MsgBox("خطأ اثناء محاولة تحميل البيانات.")
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
 
         End Try
     End Sub
@@ -89,14 +89,14 @@ Public Class frmECounterEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
 
     End Sub
 
 
     Private Sub txtBoxID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtBoxID.DoubleClick
         Dim frm1 As New frmChooser(BOX_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtBoxID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtBoxCode.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString
@@ -165,7 +165,7 @@ Public Class frmECounterEditor
 
     Private Sub btneditval_Click(sender As Object, e As EventArgs) Handles btneditval.Click
         Dim tok As New frmTokenizer
-        If tok.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If tok.ShowDialog = DialogResult.OK Then
             If tok.tokenAccepted Then
                 txtcurrentval.Enabled = True
                 btneditval.Enabled = False

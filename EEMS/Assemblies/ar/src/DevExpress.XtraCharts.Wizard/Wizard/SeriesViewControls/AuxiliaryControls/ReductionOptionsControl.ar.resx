@@ -123,14 +123,14 @@
   <data name="chVisible.Properties.Caption" xml:space="preserve">
     <value>مرئية</value>
   </data>
-  <assembly alias="DevExpress.Utils.v17.1" name="DevExpress.Utils.v17.1, Culture=neutral"></assembly>
+  <assembly alias="DevExpress.Utils.v20.1" name="DevExpress.Utils.v20.1, Culture=neutral"></assembly>
   <data name="cbLevel.Properties.Items2" xml:space="preserve">
     <value>فتح</value>
   </data>
   <data name="cbLevel.Properties.Items3" xml:space="preserve">
     <value>إغلاق</value>
   </data>
-  <assembly alias="DevExpress.XtraEditors.v17.1" name="DevExpress.XtraEditors.v17.1, Culture=neutral"></assembly>
+  <assembly alias="DevExpress.XtraEditors.v20.1" name="DevExpress.XtraEditors.v20.1, Culture=neutral"></assembly>
   <data name="chartLabelControl3.Text" xml:space="preserve">
     <value>اللون:</value>
   </data>

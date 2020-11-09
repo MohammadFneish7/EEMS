@@ -84,7 +84,7 @@ Public Class frmExpenditureEditor
             a.Execute("insert into Expenditure(expdate,title,amount,party,detail) values('" & txtdate.Value & "','" & txttitle.Text.Trim & "',-" & txtvalue.Text.Trim & ",'" & txtparty.Text.Trim & "','" & txtdetails.Text.Trim & "')")
         End If
 
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
 
     End Sub
 
@@ -96,7 +96,7 @@ Public Class frmExpenditureEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
 
     End Sub
 

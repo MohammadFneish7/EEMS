@@ -42,7 +42,7 @@ Public Class frmNotes
                 Else
                     a.Execute("update Notes set ExpiryDate='" & DateTimePicker1.Value & "',ExpiryTime='" & time & "',nstatus='" & ComboBox1.SelectedItem & "',NoteDetail='" & TextBox1.Text & "' where ID = " & noteID)
                 End If
-                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.DialogResult =DialogResult.OK
             Catch ex As Exception
                 MsgBox("فشلت العمليّة" & vbNewLine & "تفصيل المذكّرة لا يمكن ان يحتوي على رموز خاصّة.")
             End Try

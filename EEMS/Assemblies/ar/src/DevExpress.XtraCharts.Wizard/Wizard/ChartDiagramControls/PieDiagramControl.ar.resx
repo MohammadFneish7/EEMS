@@ -123,14 +123,14 @@
   <data name="groupMargin.Text" xml:space="preserve">
     <value>هوامش</value>
   </data>
-  <assembly alias="DevExpress.Utils.v17.1" name="DevExpress.Utils.v17.1, Culture=neutral"></assembly>
+  <assembly alias="DevExpress.Utils.v20.1" name="DevExpress.Utils.v20.1, Culture=neutral"></assembly>
   <data name="cbDirection.Properties.Items" xml:space="preserve">
     <value>عرضي</value>
   </data>
   <data name="cbDirection.Properties.Items1" xml:space="preserve">
     <value>عمودي</value>
   </data>
-  <assembly alias="DevExpress.XtraEditors.v17.1" name="DevExpress.XtraEditors.v17.1, Culture=neutral"></assembly>
+  <assembly alias="DevExpress.XtraEditors.v20.1" name="DevExpress.XtraEditors.v20.1, Culture=neutral"></assembly>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

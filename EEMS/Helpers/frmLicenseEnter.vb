@@ -15,7 +15,7 @@ Public Class frmLicenseEnter
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If lcs = TextBox2.Text.Trim Then
             a.writeLicense(lcs)
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult =DialogResult.OK
         Else
             MsgBox("الرخصة غير صالحة الرجاء التواصل مع مع المنتج لشراء رخصة جديدة." & vbNewLine & "للتواصل والاستفسار: 70434962")
         End If

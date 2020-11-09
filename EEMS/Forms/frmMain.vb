@@ -312,7 +312,7 @@ Public Class frmMain
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
         If ListView1.SelectedItems.Count > 0 Then
             Dim frm As New frmNotes(ListView1.SelectedItems(0).SubItems(1).Text)
-            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If frm.ShowDialog =DialogResult.OK Then
                 readNotes()
             End If
         End If
@@ -379,7 +379,7 @@ Public Class frmMain
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         Dim frm As New frmNotes(-1)
-        If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm.ShowDialog() =DialogResult.OK Then
             readNotes()
         End If
     End Sub
@@ -490,7 +490,7 @@ Public Class frmMain
             Return
         End If
         Dim dlg As New FolderBrowserDialog
-        If dlg.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If dlg.ShowDialog =DialogResult.OK Then
 
             Dim backupQuery As String = "DECLARE @name VARCHAR(50) " & _
                                    " DECLARE @path VARCHAR(256) " & _
@@ -609,7 +609,7 @@ Public Class frmMain
 
     Private Sub SQLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SQLToolStripMenuItem.Click
         Dim tok As New frmTokenizer
-        If tok.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If tok.ShowDialog =DialogResult.OK Then
             If tok.tokenAccepted Then
                 Dim frm As New frmSqlExecuter
                 frm.ShowDialog()
@@ -639,7 +639,7 @@ Public Class frmMain
             Return
         End If
         Dim frm1 As New frmChooser(CLIENT_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() =DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 Dim frm As New frmClientReport(frm1.dgvData.SelectedRows(0).Cells(0).Value, frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString)
                 frm.ShowDialog()
@@ -663,7 +663,7 @@ Public Class frmMain
             Return
         End If
         Dim frmdtp As New frmDateSelector
-        If frmdtp.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If frmdtp.ShowDialog =DialogResult.OK Then
             Dim frmInvoicenote As New frmInvoiceNote
             Dim Month As Integer = frmdtp.dtp.Value.Month
             Dim Year As Integer = frmdtp.dtp.Value.Year
@@ -714,7 +714,7 @@ Public Class frmMain
 
     Private Sub تجديدالخدمةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تجديدالخدمةToolStripMenuItem.Click
         Dim tok As New frmTokenizer
-        If tok.ShowDialog = Windows.Forms.DialogResult.OK Then
+        If tok.ShowDialog =DialogResult.OK Then
             If tok.tokenAccepted Then
                 Dim frm As New frmValidityRenual
                 frm.ShowDialog()

@@ -21,7 +21,7 @@ Public Class frmDiscount
                 Return
             End If
 
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult = DialogResult.OK
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
         End Try

@@ -11,8 +11,8 @@ Public Class frmInsuranceReport
 
         ' Add any initialization after the InitializeComponent() call.
         a.ds = New DataSet
-        a.GetData("select convert(varchar(50),p.ampere) as [امبير],count(p.ampere) as [عدد],sum(r.insurance) as [قيمة] from Package p join Registration r on r.packageid = p.ID  where r.insurance<>0  group by p.ampere  union select 'اجمالي',count(p.ampere),sum(r.insurance) from Package p join Registration r on r.packageid = p.ID where r.insurance<>0", "dt1")
-        a.GetData("select convert(varchar(50),p.ampere) as [امبير],count(p.ampere) as [عدد],sum(p.insurance) as [قيمة] from Package p join Registration r on r.packageid = p.ID  where r.active=1 and r.insurance=0 group by p.ampere union select 'اجمالي',count(p.ampere),sum(p.insurance) from Package p join Registration r on r.packageid = p.ID  where r.active=1 and r.insurance=0", "dt2")
+        a.GetData("select convert(varchar(50),p.title) as [امبير],count(p.title) as [عدد],sum(r.insurance) as [قيمة] from Package p join Registration r on r.packageid = p.ID  where r.insurance<>0  group by p.title  union select 'اجمالي',count(p.title),sum(r.insurance) from Package p join Registration r on r.packageid = p.ID where r.insurance<>0", "dt1")
+        a.GetData("select convert(varchar(50),p.title) as [امبير],count(p.title) as [عدد],sum(p.insurance) as [قيمة] from Package p join Registration r on r.packageid = p.ID  where r.active=1 and r.insurance=0 group by p.title union select 'اجمالي',count(p.title),sum(p.insurance) from Package p join Registration r on r.packageid = p.ID  where r.active=1 and r.insurance=0", "dt2")
         bs1.DataSource = a.ds.Tables("dt1")
         bs2.DataSource = a.ds.Tables("dt2")
         dgv1.DataSource = bs1

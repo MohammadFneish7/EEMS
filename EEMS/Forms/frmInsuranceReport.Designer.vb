@@ -63,12 +63,12 @@ Partial Class frmInsuranceReport
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(599, 30)
+        Me.Label1.Location = New System.Drawing.Point(579, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(97, 13)
+        Me.Label1.Size = New System.Drawing.Size(117, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "كشف قبض التأمين:"
+        Me.Label1.Text = "كشف مقبوضات التأمين:"
         '
         'Label2
         '

@@ -27,7 +27,7 @@ Public Class frmPaymentEditor
 
         If chid_ < 0 Then
             MsgBox("خطأ في رقم الملف.")
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult =DialogResult.Ignore
         End If
     End Sub
 
@@ -42,13 +42,13 @@ Public Class frmPaymentEditor
             maxPay = leftPayments
             If leftPayments = 0 Then
                 MsgBox("تم تسديد كامل حساب الشهر الحالي لهذا الاشتراك.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult =DialogResult.Ignore
             End If
             txtleftp.Text = leftPayments.ToString("N0")
             txtpayment.SelectAll()
         Catch ex As Exception
             MessageBox.Show("فشل اثناء محاولة تحميل البيانات." & vbNewLine & "تم الغاء العمليّة." & vbNewLine & ex.Message, "فشل", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult =DialogResult.Ignore
         End Try
 
     End Sub
@@ -66,7 +66,7 @@ Public Class frmPaymentEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs)
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult =DialogResult.Ignore
 
     End Sub
 
@@ -145,10 +145,10 @@ Public Class frmPaymentEditor
                 frm.ShowDialog()
             End If
 
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult =DialogResult.OK
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult =DialogResult.Ignore
         End Try
     End Sub
 End Class

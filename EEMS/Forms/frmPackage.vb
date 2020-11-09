@@ -23,7 +23,7 @@ Public Class frmPackage
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim frm As New frmPackageEditor(0, True)
         Dim dr As DialogResult = frm.ShowDialog
-        If dr = Windows.Forms.DialogResult.OK Then
+        If dr =DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -40,7 +40,7 @@ Public Class frmPackage
             If dgvData.SelectedRows.Count > 0 Then
                 Dim frm As New frmPackageEditor(dgvData.SelectedRows(0).Cells(1).Value)
                 Dim dr As DialogResult = frm.ShowDialog
-                If dr = Windows.Forms.DialogResult.OK Then
+                If dr =DialogResult.OK Then
                     loadData()
                 End If
             End If
@@ -50,7 +50,7 @@ Public Class frmPackage
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
         Try
             Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If dr = Windows.Forms.DialogResult.Yes Then
+            If dr =DialogResult.Yes Then
                 Dim listToRemove As DataGridViewSelectedRowCollection = dgvData.SelectedRows
                 For Each row As DataGridViewRow In dgvData.SelectedRows
                     a.Execute("DELETE FROM Package Where ID=" & row.Cells(1).Value.ToString)

@@ -19,7 +19,7 @@ Public Class frmDiscountHandler
         End If
         'addCheckBoxToGridView(dgvData1, GridView1, "اضافة دفعة", 0, 50, AddressOf itemCheckSelected)
 
-        'Me.RightToLeft = Windows.Forms.RightToLeft.Yes
+        'Me.RightToLeft =RightToLeft.Yes
         'Me.RightToLeftLayout = True
         ' Add any initialization after the InitializeComponent() call.
 
@@ -89,7 +89,7 @@ Public Class frmDiscountHandler
 
         Dim ml As New frmGeneralPerposeInput("اختر اسم لللائحة", "الاسم")
         Dim d As DialogResult = ml.ShowDialog()
-        If d = Windows.Forms.DialogResult.OK Then
+        If d =DialogResult.OK Then
             If ml.PasswordTextBox.Text.Trim.Length > 0 Then
                 a.ds = New DataSet
                 Dim countFound As Int16 = a.ExecuteScalar("select count(*) from DefinedKeys where reference='" & selectionKeyReference.ToLower & "' and title ='" & ml.PasswordTextBox.Text.Trim.ToLower & "'")
@@ -113,7 +113,7 @@ Public Class frmDiscountHandler
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             Dim frm As New frmChooser(BULK_DISCOUNT_CHOOSER)
-            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If frm.ShowDialog =DialogResult.OK Then
                 If frm.dgvData.SelectedRows.Count > 0 Then
 
                     Dim title As String = frm.dgvData.SelectedRows(0).Cells(0).Value.ToString.Trim().ToLower
@@ -143,7 +143,7 @@ Public Class frmDiscountHandler
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Try
             Dim frm As New frmChooser(BULK_DISCOUNT_CHOOSER)
-            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If frm.ShowDialog =DialogResult.OK Then
                 If frm.dgvData.SelectedRows.Count > 0 Then
                     Dim title As String = frm.dgvData.SelectedRows(0).Cells(0).Value.ToString.Trim().ToLower
                     a.ExecuteNoReturn("delete from DefinedKeys where reference='" & selectionKeyReference.ToLower & "' and title ='" & title & "'")
@@ -169,7 +169,7 @@ Public Class frmDiscountHandler
             End If
 
             Dim dr As DialogResult = MessageBox.Show("تنبيه: أنت تقوم بإضافة حسم كلي لأكثر من زبون." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If dr <> Windows.Forms.DialogResult.Yes Then
+            If dr <>DialogResult.Yes Then
                 Return
             End If
 
@@ -238,7 +238,7 @@ Public Class frmDiscountHandler
 
             Dim ml As New frmGeneralPerposeInput("ادخل قيمة الحسم", "القيمة", True)
             Dim d As DialogResult = ml.ShowDialog()
-            If d = Windows.Forms.DialogResult.OK Then
+            If d =DialogResult.OK Then
                 If ml.PasswordTextBox.Text.Trim.Length > 0 Then
                     discount = ml.PasswordTextBox.Text.Trim
                 Else

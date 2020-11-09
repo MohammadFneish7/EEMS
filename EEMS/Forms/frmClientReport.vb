@@ -17,7 +17,7 @@ Public Class frmClientReport
         Me.cid = cid
         If cid < 0 Then
             MsgBox("خطأ في رقم المشترك.")
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult =DialogResult.Ignore
         End If
         txtName.Text = clientname_
 
@@ -30,21 +30,21 @@ Public Class frmClientReport
         regbs.DataSource = a.ds.Tables("dt1")
         dgvRegistration.DataSource = regbs
 
-        a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك],(ch.currentvalue-ch.previousvalue) as [فرق عداد],ch.kilowattprice as [سعر الكيلو],((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue as [مطلوب كيلو],total+discount as [المجموع],ch.discount as [حسم],total as [مطلوب], ISNULL(SUM(p.pvalue),0) as [مدفوع], total-ISNULL(SUM(p.pvalue),0) as [باقي] " & _
-                    " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID where r.clientid=" & cid & _
+        a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك ل.ل],(ch.currentvalue-ch.previousvalue) as [فرق عداد (كيلو)],ch.kilowattprice as [سعر الكيلو ل.ل],((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue as [مطلوب كيلو ل.ل],total+discount as [المجموع ل.ل],ch.discount as [حسم ل.ل],total as [مطلوب ل.ل], ISNULL(SUM(p.pvalue),0) as [مدفوع ل.ل], total-ISNULL(SUM(p.pvalue),0) as [باقي ل.ل] " &
+                    " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID where r.clientid=" & cid &
                     " group by ch.ID,r.ID,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.kilowattprice,((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue,total+discount,ch.discount,ch.total", "dt2")
         credbs.DataSource = a.ds.Tables("dt2")
 
         dgvCredits.DataSource = credbs
-        dgvCredits.Columns("رسم اشتراك").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("فرق عداد").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("سعر الكيلو").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("مطلوب كيلو").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("المجموع").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("حسم").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("مطلوب").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("مدفوع").DefaultCellStyle.Format = "N0"
-        dgvCredits.Columns("باقي").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("رسم اشتراك ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("فرق عداد (كيلو)").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("سعر الكيلو ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("مطلوب كيلو ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("المجموع ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("حسم ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("مطلوب ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("مدفوع ل.ل").DefaultCellStyle.Format = "N0"
+        dgvCredits.Columns("باقي ل.ل").DefaultCellStyle.Format = "N0"
 
         'sumrequired = 0
         'sumpayed = 0
@@ -62,10 +62,10 @@ Public Class frmClientReport
             ri.remaining = ri.sumcredit - ri.sumpayed
         Next
 
-        a.GetData("SELECT r.ID as [معرّف الاشتراك],p.ID as [معرّف الدفعة],p.counterhistoryid as [معرّف القيمة],p.pdate as [تاريخ الدفعة],p.pvalue as [قيمة الدفعة],p.notes as [ملاحظات] FROM Payment p,CounterHistory ch,Registration r WHERE p.counterhistoryid=ch.ID and ch.regid=r.ID and r.clientid=" & cid, "dt3")
+        a.GetData("SELECT r.ID as [معرّف الاشتراك],p.ID as [معرّف الدفعة],p.counterhistoryid as [معرّف القيمة],p.pdate as [تاريخ الدفعة],p.pvalue as [قيمة الدفعة ل.ل],p.notes as [ملاحظات] FROM Payment p,CounterHistory ch,Registration r WHERE p.counterhistoryid=ch.ID and ch.regid=r.ID and r.clientid=" & cid, "dt3")
         paybs.DataSource = a.ds.Tables("dt3")
         dgvPayments.DataSource = paybs
-        dgvPayments.Columns("قيمة الدفعة").DefaultCellStyle.Format = "N0"
+        dgvPayments.Columns("قيمة الدفعة ل.ل").DefaultCellStyle.Format = "N0"
 
 
         For Each row As DataRow In a.ds.Tables("dt3").Rows
@@ -140,7 +140,7 @@ Public Class frmClientReport
             lblhrem.Text = "باقي" & vbNewLine & sumremainstr & " ل.ل"
 
             'lbl1.Text = "اجمالي المطلوب = " & ri.sumcredit.ToString("N0") & " | اجمالي المدفوع = " & ri.sumpayed.ToString("N0") & " | الباقي = " & ri.remaining.ToString("N0")
-            lbl2.Text = "المجموع = " & ri.sumcredit.ToString("N0")
+            lbl2.Text = "المجموع = " & ri.sumcredit.ToString("N0") & " ل.ل"
         Else
             btnPrint.Enabled = False
         End If
@@ -156,7 +156,7 @@ Public Class frmClientReport
                 Catch ex As Exception
                 End Try
             Next
-            lbl3.Text = "المجموع = " & sumpayed.ToString("N0")
+            lbl3.Text = "المجموع = " & sumpayed.ToString("N0") & " ل.ل"
         End If
     End Sub
 
@@ -258,7 +258,7 @@ Public Class frmClientReport
             End If
             'Dim ml As New MasterLogin
             'Dim d As DialogResult = ml.ShowDialog()
-            'If d = Windows.Forms.DialogResult.OK Then
+            'If d =DialogResult.OK Then
             '    If Not ml.PasswordTextBox.Text.Trim.ToUpper.Equals("ADMINUNLOCK") Then
             '        MsgBox("invalid password")
             '        Return
@@ -268,7 +268,7 @@ Public Class frmClientReport
             'End If
             Try
                 Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                If dr = Windows.Forms.DialogResult.Yes Then
+                If dr =DialogResult.Yes Then
                     If MsgBox("ملاحظة: سوف يتم حذف الدفعة من حساب المؤسّسة ايضاً." & vbNewLine & "هل تريد المتابعة؟", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
                         Return
                     End If
@@ -310,7 +310,7 @@ Public Class frmClientReport
 
     Private Sub txtName_DoubleClick(sender As Object, e As EventArgs) Handles txtName.DoubleClick
         Dim frm1 As New frmChooser(CLIENT_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() =DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 cid = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 clientname = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString
@@ -329,7 +329,7 @@ Public Class frmClientReport
 
     Private Sub dgvCredits_RowPrePaint(sender As Object, e As DataGridViewRowPrePaintEventArgs) Handles dgvCredits.RowPrePaint
         Dim dgvrow As DataGridViewRow = dgvCredits.Rows(e.RowIndex)
-        If dgvrow.Cells("باقي").Value > 0 Then
+        If dgvrow.Cells("باقي ل.ل").Value > 0 Then
             dgvrow.DefaultCellStyle.BackColor = Color.LightPink
         Else
             dgvrow.DefaultCellStyle.BackColor = Color.GreenYellow

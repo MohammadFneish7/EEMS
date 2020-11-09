@@ -47,7 +47,7 @@ Public NotInheritable Class frmSplashScreen
         Else
             Dim frm As New frmLicenseEnter(license, serial)
 
-            If frm.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If frm.ShowDialog =DialogResult.OK Then
                 frmLogin.Show()
                 Me.Close()
             Else

@@ -11,7 +11,7 @@ Public Class frmCollectorEditor
         If add = False Then
             If id < 0 Then
                 MsgBox("خطأ في رقم الملف.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult = DialogResult.Ignore
             End If
         End If
     End Sub
@@ -38,7 +38,7 @@ Public Class frmCollectorEditor
             a.Execute("insert into Collector(fullname,caddress,phone,mobile,notes) values('" & txtname.Text.Trim & "','" & txtaddress.Text.Trim & "','" & txtphone.Text.Trim & "','" & txtmobile.Text.Trim & "','" & txtnotes.Text.Trim & "')")
         End If
 
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
 
     End Sub
 
@@ -53,7 +53,7 @@ Public Class frmCollectorEditor
             txtnotes.Text = a.ds.Tables(0).Rows(0).Item(4).ToString
         Catch ex As Exception
             MsgBox("خطأ اثناء محاولة تحميل البيانات.")
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
 
         End Try
     End Sub
@@ -66,7 +66,7 @@ Public Class frmCollectorEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
 
     End Sub
 

@@ -26,7 +26,7 @@ Public Class frmItemsConsumptionEditor
         End If
         a.ds = New DataSet
         Dim cid As Integer = a.Execute("insert into Consumption(outdate,itemid,quantity,detioration,partyname,partyPhone,notes) values('" & txtOutDate.Value & "'," & txtItemID.Text.Trim & "," & txtQuantity.Text.Trim & "," & getBit(chkdetioration.checked) & ",'" & txtParty.Text.Trim & "','" & txtPartyPhone.Text.Trim & "','" & txtNotes.Text.Trim & "')")
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
     End Sub
 
 
@@ -38,12 +38,12 @@ Public Class frmItemsConsumptionEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
     End Sub
 
     Private Sub txtItemID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtItemID.MouseDoubleClick
         Dim frm1 As New frmChooser(ITEM_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtItemID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtItemName.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString

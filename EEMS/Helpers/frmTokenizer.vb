@@ -6,7 +6,7 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox1.Text.Trim.ToUpper.Equals(token.Trim.ToUpper) Then
             tokenAccepted = True
-            Me.DialogResult = Windows.Forms.DialogResult.OK
+            Me.DialogResult =DialogResult.OK
         Else
             MsgBox("تذكرة غير صحيحة")
         End If

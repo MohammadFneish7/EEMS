@@ -34,7 +34,7 @@
     End Sub
 
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
         Me.Close()
     End Sub
 

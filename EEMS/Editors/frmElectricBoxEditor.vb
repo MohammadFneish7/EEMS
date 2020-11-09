@@ -21,7 +21,7 @@ Public Class frmElectricBoxEditor
             txtcode.Enabled = False
             If id < 0 Then
                 MsgBox("خطأ في رقم الملف.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult = DialogResult.Ignore
             End If
         End If
     End Sub
@@ -99,7 +99,7 @@ Public Class frmElectricBoxEditor
             a.Execute("insert into ElectricBox(code,location,collectorid,engineid,notes) values('" & txtEngine.Text.Trim & "-" & txtcode.Text.Trim & "','" & txtaddress.Text.Trim & "','" & txtcollectorid.Text.Trim & "','" & txtengineid.Text.Trim & "','" & txtnotes.Text.Trim & "')")
         End If
 
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
 
     End Sub
 
@@ -119,7 +119,7 @@ Public Class frmElectricBoxEditor
         Catch ex As Exception
             MsgBox("خطأ اثناء محاولة تحميل البيانات.")
             ErrorDialog.showDlg(ex)
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
 
         End Try
     End Sub
@@ -132,14 +132,14 @@ Public Class frmElectricBoxEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
 
     End Sub
 
 
     Private Sub txtcollectorid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtcollectorid.MouseDoubleClick
         Dim frm1 As New frmChooser(COLLECTOR_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtcollectorid.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtcollectorname.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString
@@ -150,7 +150,7 @@ Public Class frmElectricBoxEditor
 
     Private Sub txtengineid_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtengineid.MouseDoubleClick
         Dim frm1 As New frmChooser(ENGINE_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtengineid.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtEngine.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString

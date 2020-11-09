@@ -12,7 +12,7 @@ Public Class frmPackageEditor
         If add = False Then
             If id < 0 Then
                 MsgBox("خطأ في رقم الملف.")
-                Me.DialogResult = Windows.Forms.DialogResult.Ignore
+                Me.DialogResult =DialogResult.Ignore
             End If
         End If
     End Sub
@@ -43,7 +43,7 @@ Public Class frmPackageEditor
             a.Execute("insert into Package(title,ampere,fee,insurance,kilowattprice,notes) values('" & txttitle.Text.Trim & "'," & txtampere.Text.Trim & "," & txtfee.Text.Trim & "," & txtinsurance.Text.Trim & "," & txtkiloprice.Text.Trim & ",'" & txtnotes.Text.Trim & "')")
         End If
 
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
 
     End Sub
 
@@ -59,7 +59,7 @@ Public Class frmPackageEditor
             txtnotes.Text = a.ds.Tables(0).Rows(0).Item(5).ToString
         Catch ex As Exception
             MsgBox("خطأ اثناء محاولة تحميل البيانات.")
-            Me.DialogResult = Windows.Forms.DialogResult.Ignore
+            Me.DialogResult =DialogResult.Ignore
 
         End Try
     End Sub
@@ -72,7 +72,7 @@ Public Class frmPackageEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult =DialogResult.Ignore
     End Sub
 
 

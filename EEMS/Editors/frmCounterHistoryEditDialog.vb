@@ -16,7 +16,7 @@ Public Class frmCounterHistoryEditDialog
             If Integer.Parse(txtNew.Text) - Integer.Parse(txtOld.Text) < 0 Then
                 MsgBox("لا يمكن ان تكون قيمة العداد الحاليّة اقل من القيمة السابقة.")
             Else
-                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.DialogResult = DialogResult.OK
             End If
         Catch ex As Exception
             ErrorDialog.showDlg(ex)

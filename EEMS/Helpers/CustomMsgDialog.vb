@@ -25,17 +25,17 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnYes.Click
         optionselected = True
-        Me.DialogResult = Windows.Forms.DialogResult.Yes
+        Me.DialogResult =DialogResult.Yes
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnNo.Click
         optionselected = True
-        Me.DialogResult = Windows.Forms.DialogResult.No
+        Me.DialogResult =DialogResult.No
     End Sub
 
     Private Sub CustomMsgDialog_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If Not optionselected Then
-            Me.DialogResult = Windows.Forms.DialogResult.Cancel
+            Me.DialogResult =DialogResult.Cancel
         End If
     End Sub
 

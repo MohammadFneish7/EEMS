@@ -81,7 +81,7 @@ Public Class frmCustomExportHandler
                 End If
             Next
             If ExcelExporter.ExportXtraGridToXlsx(gridview) Then
-                Me.DialogResult = Windows.Forms.DialogResult.OK
+                Me.DialogResult =DialogResult.OK
             End If
         Catch ex As Exception
             ErrorDialog.showDlg(ex)

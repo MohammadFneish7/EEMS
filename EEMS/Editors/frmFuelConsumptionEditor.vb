@@ -26,7 +26,7 @@ Public Class frmFuelConsumptionEditor
         End If
         a.ds = New DataSet
         Dim cid As Integer = a.Execute("insert into FuelConsumption(outdate,tankid,quantity,detioration,engineid,partyname,partyPhone,notes) values('" & txtOutDate.Value & "'," & txtTankID.Text.Trim & "," & txtQuantity.Text.Trim & "," & getBit(chkdetioration.Checked) & "," & txtEngineID.Text.Trim & ",'" & txtParty.Text.Trim & "','" & txtPartyPhone.Text.Trim & "','" & txtNotes.Text.Trim & "')")
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult = DialogResult.OK
     End Sub
 
 
@@ -38,12 +38,12 @@ Public Class frmFuelConsumptionEditor
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult = Windows.Forms.DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
     End Sub
 
     Private Sub txtItemID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtTankID.MouseDoubleClick
         Dim frm1 As New frmChooser(TANK_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtTankID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtTankName.Text = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString
@@ -65,7 +65,7 @@ Public Class frmFuelConsumptionEditor
 
     Private Sub txtEngineID_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtEngineID.MouseDoubleClick
         Dim frm1 As New frmChooser(ENGINE_CHOOSER)
-        If frm1.ShowDialog() = Windows.Forms.DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 txtEngineID.Text = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 txtEngineName.Text = frm1.dgvData.SelectedRows(0).Cells(2).Value.ToString

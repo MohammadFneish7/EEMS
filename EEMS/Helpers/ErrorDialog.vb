@@ -13,6 +13,6 @@
     End Sub
 
     Private Sub btnYes_Click(sender As Object, e As EventArgs) Handles btnYes.Click
-        Me.DialogResult = Windows.Forms.DialogResult.OK
+        Me.DialogResult =DialogResult.OK
     End Sub
 End Class
