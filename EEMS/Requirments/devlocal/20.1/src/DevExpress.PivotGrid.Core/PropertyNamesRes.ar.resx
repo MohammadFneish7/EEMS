@@ -1,0 +1,1641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DevExpress.XtraPivotGrid.Data.OLAPDataProvider.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldUnboundExpressionMode.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortBySummaryOrder.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Options" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.Margins" xml:space="preserve">
+    <value>هوامش</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateDay" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearanceObject.Font" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Max" xml:space="preserve">
+    <value>ماكس</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Min" xml:space="preserve">
+    <value>الأدنى:</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.Default" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Count" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.Count" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Sum" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTopValueType.Sum" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.Format" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotal.Appearance" xml:space="preserve">
+    <value>مظهر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Appearance" xml:space="preserve">
+    <value>مظهر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Visible" xml:space="preserve">
+    <value>مرئية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.Enabled" xml:space="preserve">
+    <value>تمكين</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OLAPDataProvider.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.TopValueMode.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.UnboundExpressionMode.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotOLAPFilterUsingWhereClause.Auto" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortBySummaryOrder.Descending" xml:space="preserve">
+    <value>تنازلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortOrder.Descending" xml:space="preserve">
+    <value>تنازلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTopValueType.Percent" xml:space="preserve">
+    <value>في المائة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Numeric" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Area" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Area" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Average" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Second" xml:space="preserve">
+    <value>الثانية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.Landscape" xml:space="preserve">
+    <value>المناظر الطبيعية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Weight" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.UnboundExpressionMode.DataSource" xml:space="preserve">
+    <value>مصدر البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortBySummaryOrder.Ascending" xml:space="preserve">
+    <value>ترتيب تصاعدي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortOrder.Ascending" xml:space="preserve">
+    <value>ترتيب تصاعدي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth" xml:space="preserve">
+    <value>في الشهر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Default" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Hour" xml:space="preserve">
+    <value>ساعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Minute" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateQuarter" xml:space="preserve">
+    <value>الربع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.FormatRuleFieldIntersectionSettings.Column" xml:space="preserve">
+    <value>عمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.FormatRuleFieldIntersectionSettings.Row" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DifferenceTarget.Next" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DifferenceTarget.Previous" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DifferenceTarget.Last" xml:space="preserve">
+    <value>الماضي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.FixedFieldValueCondition.Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.AbsoluteVariation" xml:space="preserve">
+    <value>مطلقة</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.Index" xml:space="preserve">
+    <value>تباينات</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfColumn" xml:space="preserve">
+    <value>في المئة من العمود</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfColumnGrandTotal" xml:space="preserve">
+    <value>في المئة من عمود المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfGrandTotal" xml:space="preserve">
+    <value>في المئة من المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfRow" xml:space="preserve">
+    <value>في المئة من الصف</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentOfRowGrandTotal" xml:space="preserve">
+    <value>بالمئة من صف المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.PercentVariation" xml:space="preserve">
+    <value>نسبة تغير التباينات</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.RankInColumnLargestToSmallest" xml:space="preserve">
+    <value>رتبة في العمود من الأكبر إلى الأصغر</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.RankInColumnSmallestToLargest" xml:space="preserve">
+    <value>رتبة في العمود من الأصغر إلى الأكبر</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.RankInRowLargestToSmallest" xml:space="preserve">
+    <value>رتبة في صف من الأكبر إلى الأصغر</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryDisplayType.RankInRowSmallestToLargest" xml:space="preserve">
+    <value>رتبة في صف من الأصغر إلى الأكبر</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.CountDistinct" xml:space="preserve">
+    <value>عد متميزة</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Median" xml:space="preserve">
+    <value>الوسيط</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Mode" xml:space="preserve">
+    <value>وضع</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.StdDev" xml:space="preserve">
+    <value>الانحراف المعياري</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.StdDevp" xml:space="preserve">
+    <value>الانحراف المعياري لجميع السكان</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Var" xml:space="preserve">
+    <value>تباين</value>
+  </data>
+  <data name="DevExpress.Data.PivotGrid.PivotSummaryType.Varp" xml:space="preserve">
+    <value>الاختلاف لجميع السكان</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.CalculationBindingBase.AddressingFieldNames" xml:space="preserve">
+    <value>عنوان حقول</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.CalculationBindingBase.PartitioningCriteria" xml:space="preserve">
+    <value>تقسيم معايير</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.CalculationBindingBase.PartitioningMode" xml:space="preserve">
+    <value>التقسيم</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.CalculationBindingBase.Source" xml:space="preserve">
+    <value>المصدر</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.ColumnName" xml:space="preserve">
+    <value>اسم الحقل</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.GroupInterval" xml:space="preserve">
+    <value>الفاصل الزمني للمجموعة</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.DataSourceColumnBindingBase.GroupIntervalNumericRange" xml:space="preserve">
+    <value>لفاصل المجموعة القيم</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.DifferenceBindingBase.DifferenceType" xml:space="preserve">
+    <value>نوع الاختلاف</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.DifferenceBindingBase.Target" xml:space="preserve">
+    <value>الهدف</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.DirectedCalculationBindingBase.Direction" xml:space="preserve">
+    <value>الاتجاه</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.ExpressionBindingBase.Expression" xml:space="preserve">
+    <value>التعبير</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.MovingCalculationBindingBase.NextValuesCount" xml:space="preserve">
+    <value>عدد</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.MovingCalculationBindingBase.PreviousValuesCount" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.MovingCalculationBindingBase.SummaryType" xml:space="preserve">
+    <value>اكتب الملخص</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.RankBindingBase.Order" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.RankBindingBase.RankType" xml:space="preserve">
+    <value>تصنيف نوع</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.RunningTotalBindingBase.SummaryType" xml:space="preserve">
+    <value>اكتب الملخص</value>
+  </data>
+  <data name="DevExpress.PivotGrid.DataBinding.WindowExpressionBindingBase.Expression" xml:space="preserve">
+    <value>التعبير</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.Cell" xml:space="preserve">
+    <value>الخلية</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.CustomTotalCell" xml:space="preserve">
+    <value>كوستومتوتالسيل</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.FieldHeader" xml:space="preserve">
+    <value>فيلدهيدير</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.FieldValue" xml:space="preserve">
+    <value>FieldValue</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.FieldValueGrandTotal" xml:space="preserve">
+    <value>فيلدفالويجراندتوتال</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.FieldValueTotal" xml:space="preserve">
+    <value>فيلدفالويتوتال</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.GrandTotalCell" xml:space="preserve">
+    <value>جراندتوتالسيل</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.Lines" xml:space="preserve">
+    <value>خطوط</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearance.TotalCell" xml:space="preserve">
+    <value>توتالسيل</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearanceObject.BackColor" xml:space="preserve">
+    <value>BackColor</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearanceObject.BorderColor" xml:space="preserve">
+    <value>_ الحدود</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearanceObject.BorderWidth" xml:space="preserve">
+    <value>عرض الحدود</value>
+  </data>
+  <data name="DevExpress.PivotGrid.Printing.PrintAppearanceObject.ForeColor" xml:space="preserve">
+    <value>ForeColor</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.AllowHideFieldsType.Always" xml:space="preserve">
+    <value>دائماً</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.AllowHideFieldsType.Never" xml:space="preserve">
+    <value>ابدأ</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.AllowHideFieldsType.WhenCustomizationFormVisible" xml:space="preserve">
+    <value>عند تخصيص النموذج مرئية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationDirection.AcrossThenDown" xml:space="preserve">
+    <value>عبر ثم أسفل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationDirection.DownThenAcross" xml:space="preserve">
+    <value>أسفل ثم عبر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.ColumnValue" xml:space="preserve">
+    <value>قيمة العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.ColumnValueAndRowParentValue" xml:space="preserve">
+    <value>وقيمة العمود الأصل الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.RowAndColumnParentValues" xml:space="preserve">
+    <value>وقيمة العمود الأصل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.RowValue" xml:space="preserve">
+    <value>الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CalculationPartitioningCriteria.RowValueAndColumnParentValue" xml:space="preserve">
+    <value>وقيمة الصف وقيمة العمود الأصل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CopyCollapsedValuesMode.DuplicateCollapsedValues" xml:space="preserve">
+    <value>تكرار انهيار القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CopyCollapsedValuesMode.PreserveCollapsedLevels" xml:space="preserve">
+    <value>الحفاظ على مستويات مطوية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.CopyCollapsedValuesMode.RemoveCollapsedLevels" xml:space="preserve">
+    <value>إزالة مستويات مطوية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.AutoTransposeChart" xml:space="preserve">
+    <value>تلقائياً نقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ChartDataVertical" xml:space="preserve">
+    <value>مخطط البيانات عمودي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.DataProvideMode" xml:space="preserve">
+    <value>توفير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.DataProvidePriority" xml:space="preserve">
+    <value>وضع بيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ExportEmptyCells" xml:space="preserve">
+    <value>تصدير الخلايا الفارغة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.FieldValuesProvideMode" xml:space="preserve">
+    <value>المجاميع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.MaxAllowedPointCountInSeries" xml:space="preserve">
+    <value>السلسلة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.MaxAllowedSeriesCount" xml:space="preserve">
+    <value>الحد الأقصى المسموح به سلسلة العد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.MaxPointCountBySeries" xml:space="preserve">
+    <value>الكونت ماكس نقطة بسلسلة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.MaxSeriesCount" xml:space="preserve">
+    <value>ماكس سلسلة العد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideColumnCustomTotals" xml:space="preserve">
+    <value>المخصصة للعمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideColumnGrandTotals" xml:space="preserve">
+    <value>إجماليات الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideColumnTotals" xml:space="preserve">
+    <value>إجماليات الأعمدة توفير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideDataByColumns" xml:space="preserve">
+    <value>بيانات بواسطة الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideDataFieldsOnSeries" xml:space="preserve">
+    <value>على سلسلة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideEmptyCells" xml:space="preserve">
+    <value>الخلايا الفارغة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideRowCustomTotals" xml:space="preserve">
+    <value>الإجماليات الصف المخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideRowGrandTotals" xml:space="preserve">
+    <value>إجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ProvideRowTotals" xml:space="preserve">
+    <value>الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowColumnCustomTotals" xml:space="preserve">
+    <value>إظهار إجماليات الأعمدة المخصصة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowColumnGrandTotals" xml:space="preserve">
+    <value>إظهار عمود الإجماليات الكلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowColumnTotals" xml:space="preserve">
+    <value>إظهار إجماليات الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowRowCustomTotals" xml:space="preserve">
+    <value>إظهار صف الإجماليات مخصصة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowRowGrandTotals" xml:space="preserve">
+    <value>إظهار صف الإجماليات الكلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsChartDataSourceBase.ShowRowTotals" xml:space="preserve">
+    <value>إظهار صف الإجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.ColumnFieldValueSeparator" xml:space="preserve">
+    <value>فاصل قيمة حقل عمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.ColumnHeaderPaddingBottom" xml:space="preserve">
+    <value>أسفل الحشو رأس العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.FilterSeparatorBarPadding" xml:space="preserve">
+    <value>شريط فاصل تصفية الحشو</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.MergeColumnFieldValues" xml:space="preserve">
+    <value>دمج قيم حقل عمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.MergeRowFieldValues" xml:space="preserve">
+    <value>قيم حقل صف دمج</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PageSettings" xml:space="preserve">
+    <value>إعدادات الصفحة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintColumnAreaOnEveryPage" xml:space="preserve">
+    <value>عمود الطباعة على كل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintColumnFieldValues" xml:space="preserve">
+    <value>طباعة العمود فيلدفالويس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintColumnHeaders" xml:space="preserve">
+    <value>طباعة رؤوس الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintDataHeaders" xml:space="preserve">
+    <value>طباعة رؤوس البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintFilterHeaders" xml:space="preserve">
+    <value>طباعة رؤوس تصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintHeadersOnEveryPage" xml:space="preserve">
+    <value>طباعة رؤوس في كل صفحة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintHorzLines" xml:space="preserve">
+    <value>طباعة خطوط أفقية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintRowAreaOnEveryPage" xml:space="preserve">
+    <value>الصفحة:</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintRowFieldValues" xml:space="preserve">
+    <value>فيلدفالويس صف الطباعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintRowHeaders" xml:space="preserve">
+    <value>رؤوس طباعة الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintUnusedFilterFields" xml:space="preserve">
+    <value>الطباعة غير مستخدمة تصفية الحقول</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.PrintVertLines" xml:space="preserve">
+    <value>طباعة خطوط عمودية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.RowFieldValueSeparator" xml:space="preserve">
+    <value>فاصل قيمة حقل صف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.UsePrintAppearance" xml:space="preserve">
+    <value>استخدام مظهر الطباعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsPrint.VerticalContentSplitting" xml:space="preserve">
+    <value>تقسيم المحتوى العمودي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ColumnTotalsLocation" xml:space="preserve">
+    <value>موقع عمود الإجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.DrawFocusedCellRect" xml:space="preserve">
+    <value>رسم المستطيل التركيز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.HeaderHeightOffset" xml:space="preserve">
+    <value>يعوض ارتفاع رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.HeaderWidthOffset" xml:space="preserve">
+    <value>إزاحة العرض رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.RowTotalsLocation" xml:space="preserve">
+    <value>موقع صف الإجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnGrandTotalHeader" xml:space="preserve">
+    <value>إظهار رأس العمود المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnGrandTotals" xml:space="preserve">
+    <value>إظهار عمود الإجماليات الكلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnHeaders" xml:space="preserve">
+    <value>إظهار رؤوس الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowColumnTotals" xml:space="preserve">
+    <value>إظهار إجماليات الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowCustomTotalsForSingleValues" xml:space="preserve">
+    <value>إظهار إجماليات مخصصة لقيم مفردة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowDataHeaders" xml:space="preserve">
+    <value>إظهار رؤوس البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowFilterHeaders" xml:space="preserve">
+    <value>إظهار رؤوس تصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowFilterSeparatorBar" xml:space="preserve">
+    <value>إظهار شريط فاصل التصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowGrandTotalsForSingleValues" xml:space="preserve">
+    <value>إظهار الإجماليات الكلية لقيم مفردة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowHorzLines" xml:space="preserve">
+    <value>إظهار خطوط أفقية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowGrandTotalHeader" xml:space="preserve">
+    <value>رأس الصف إظهار المجموع الكبير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowGrandTotals" xml:space="preserve">
+    <value>إظهار صف الإجماليات الكلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowHeaders" xml:space="preserve">
+    <value>إظهار صف الرؤوس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowRowTotals" xml:space="preserve">
+    <value>إظهار صف الإجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowTotalsForSingleValues" xml:space="preserve">
+    <value>إظهار الإجماليات لقيم مفردة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.ShowVertLines" xml:space="preserve">
+    <value>إظهار خطوط عمودي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridOptionsViewBase.TotalsLocation" xml:space="preserve">
+    <value>موقع المجاميع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperHeight" xml:space="preserve">
+    <value>ارتفاع الورق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperKind" xml:space="preserve">
+    <value>نوع الورق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Data.PivotGridPageSettings.PaperWidth" xml:space="preserve">
+    <value>عرض الورقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldNaming.FieldName" xml:space="preserve">
+    <value>اسم الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DataFieldUnboundExpressionMode.UseSummaryValues" xml:space="preserve">
+    <value>استخدام قيم الملخص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DifferenceTarget.First" xml:space="preserve">
+    <value>الأولى</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DifferenceType.Absolute" xml:space="preserve">
+    <value>المطلقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.DifferenceType.Percentage" xml:space="preserve">
+    <value>النسبة المئوية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.FixedFieldValue.Conditions" xml:space="preserve">
+    <value>الشروط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.FixedFieldValue.CustomTotalType" xml:space="preserve">
+    <value>مخصص إجمالي نوع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.FixedFieldValueCondition.OLAPUniqueMemberName" xml:space="preserve">
+    <value>اسم العضو الفريد OLAP</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OLAPDataProvider.Adomd" xml:space="preserve">
+    <value>موفر البيانات Adomd</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OLAPDataProvider.OleDb" xml:space="preserve">
+    <value>OleDb</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OLAPDataProvider.Xmla" xml:space="preserve">
+    <value>XMLA</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OptionsLayoutPivotGrid.AddNewGroups" xml:space="preserve">
+    <value>إضافة مجموعات جديدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OptionsLayoutPivotGrid.ResetOptions" xml:space="preserve">
+    <value>إعادة تعيين الخيارات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.OptionsLayoutPivotGrid.StoreLayoutOptions" xml:space="preserve">
+    <value>خيارات تخطيط مخزن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.ColumnArea" xml:space="preserve">
+    <value>ناحية العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.DataArea" xml:space="preserve">
+    <value>ناحية البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.FilterArea" xml:space="preserve">
+    <value>ناحية التصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotArea.RowArea" xml:space="preserve">
+    <value>ناحية الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.ColumnArea" xml:space="preserve">
+    <value>ناحية العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataArea.RowArea" xml:space="preserve">
+    <value>ناحية الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Fast" xml:space="preserve">
+    <value>سريع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Legacy" xml:space="preserve">
+    <value>إرث</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataProcessingEngine.LegacyOptimized" xml:space="preserve">
+    <value>تحسين وراثي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotDataProcessingEngine.Optimized" xml:space="preserve">
+    <value>المحسن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.All" xml:space="preserve">
+    <value>جميع المناطق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.ColumnArea" xml:space="preserve">
+    <value>ناحية العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.DataArea" xml:space="preserve">
+    <value>ناحية البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.FilterArea" xml:space="preserve">
+    <value>ناحية التصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAllowedAreas.RowArea" xml:space="preserve">
+    <value>ناحية الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.ColumnHeaderArea" xml:space="preserve">
+    <value>منطقة رأس العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.CustomizationFormHint" xml:space="preserve">
+    <value>Customization Form Hint</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.DataHeaderArea" xml:space="preserve">
+    <value>بيانات رأس المنطقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.Empty" xml:space="preserve">
+    <value>فارغة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.ExpandButton" xml:space="preserve">
+    <value>الزر توسيع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.FilterHeaderArea" xml:space="preserve">
+    <value>تصفية منطقة رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.FixedLine" xml:space="preserve">
+    <value>الخط الثابت</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.FocusedCell" xml:space="preserve">
+    <value>وركزت الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderArea" xml:space="preserve">
+    <value>منطقة رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderFilterButton" xml:space="preserve">
+    <value>تصفية رأس زر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.HeaderFilterButtonActive" xml:space="preserve">
+    <value>تصفية رأس زر نشط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.PrefilterPanel" xml:space="preserve">
+    <value>بريفيلتيربانيل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.RowHeaderArea" xml:space="preserve">
+    <value>منطقة رأس الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.SelectedCell" xml:space="preserve">
+    <value>تحديد الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearances.SortByColumnIndicatorImage" xml:space="preserve">
+    <value>الفرز حسب عمود صورة مؤشر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.Cell" xml:space="preserve">
+    <value>الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.CustomTotalCell" xml:space="preserve">
+    <value>خلية الإجمالي المخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldHeader" xml:space="preserve">
+    <value>حقل رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldValue" xml:space="preserve">
+    <value>قيمة الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldValueGrandTotal" xml:space="preserve">
+    <value>حقل قيمة المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FieldValueTotal" xml:space="preserve">
+    <value>إجمالي قيمة الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.FilterSeparator" xml:space="preserve">
+    <value>تصفية فاصل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.GrandTotalCell" xml:space="preserve">
+    <value>خلية المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.HeaderGroupLine" xml:space="preserve">
+    <value>سطر رأس المجموعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.Lines" xml:space="preserve">
+    <value>خطوط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridAppearancesBase.TotalCell" xml:space="preserve">
+    <value>خلية الإجمالي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.ColumnCount" xml:space="preserve">
+    <value>عدد الأعمدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.FocusedCell" xml:space="preserve">
+    <value>وركزت الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.MultiSelection" xml:space="preserve">
+    <value>اختيار متعدد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.RowCount" xml:space="preserve">
+    <value>عدد الصفوف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCells.Selection" xml:space="preserve">
+    <value>التحديد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.CellFormat" xml:space="preserve">
+    <value>تنسيق الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.SummaryType" xml:space="preserve">
+    <value>اكتب الملخص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridCustomTotalBase.Tag" xml:space="preserve">
+    <value>العلامة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ColumnValueLineCount" xml:space="preserve">
+    <value>العمود قيمة عدد الخط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.FieldEdit" xml:space="preserve">
+    <value>محرر الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ImageIndex" xml:space="preserve">
+    <value>فهرس الصور</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.AllowEdit" xml:space="preserve">
+    <value>السماح بتحرير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.ReadOnly" xml:space="preserve">
+    <value>للقراءة فقط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.ShowButtonMode" xml:space="preserve">
+    <value>إظهار زر الوضع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.ShowInExpressionEditor" xml:space="preserve">
+    <value>وتظهر في محرر التعبير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.Options.ShowUnboundExpressionMenu" xml:space="preserve">
+    <value>إظهار القائمة التعبير غير منضم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.OptionsFilter" xml:space="preserve">
+    <value>Options Filter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.RowValueLineCount" xml:space="preserve">
+    <value>عدد الصفوف قيمة الخط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridField.ToolTips" xml:space="preserve">
+    <value>تلميحات الأدوات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.AllowedAreas" xml:space="preserve">
+    <value>السماح للمناطق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.AreaIndex" xml:space="preserve">
+    <value>فهرس المنطقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.AutoPopulatedProperties" xml:space="preserve">
+    <value>السيارات ملء خصائص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.CalculateHiddenSummaries" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Calculations" xml:space="preserve">
+    <value>العمليات الحسابية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Caption" xml:space="preserve">
+    <value>التسمية التوضيحية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.CellFormat" xml:space="preserve">
+    <value>تنسيق الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.CustomTotals" xml:space="preserve">
+    <value>إجماليات مخصصة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.DataBinding" xml:space="preserve">
+    <value>ربط البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.DisplayFolder" xml:space="preserve">
+    <value>عرض المجلد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.EmptyCellText" xml:space="preserve">
+    <value>النص في خلية فارغة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.EmptyValueText" xml:space="preserve">
+    <value>نص القيمة فارغة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.ExpandedInFieldsGroup" xml:space="preserve">
+    <value>التوسع في مجموعة الحقول</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.FieldName" xml:space="preserve">
+    <value>اسم عمود البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.FilterColumnName" xml:space="preserve">
+    <value>Filter Column Name</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GrandTotalCellFormat" xml:space="preserve">
+    <value>تنسيق خلية المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GrandTotalText" xml:space="preserve">
+    <value>نص المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GroupInterval" xml:space="preserve">
+    <value>الفاصل الزمني للتجميع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.GroupIntervalNumericRange" xml:space="preserve">
+    <value>مجموعة الفاصل الزمني مجموعة رقمية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.KPIGraphic" xml:space="preserve">
+    <value>رسم KPI</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.MinWidth" xml:space="preserve">
+    <value>عرض دقيقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.OLAPDimensionCaption" xml:space="preserve">
+    <value>OLAP Dimension Caption</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.OLAPExpression" xml:space="preserve">
+    <value>OLAPE xpression</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.PrefilterColumnName" xml:space="preserve">
+    <value>تصفية اسم العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.RunningTotal" xml:space="preserve">
+    <value>تشغيل إجمالي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.ShowNewValues" xml:space="preserve">
+    <value>إظهار القيم الجديدة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortByAttribute" xml:space="preserve">
+    <value>فرز حسب السمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortBySummaryInfo" xml:space="preserve">
+    <value>فرز حسب المعلومات التلخيصية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortMode" xml:space="preserve">
+    <value>وضع الفرز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SortOrder" xml:space="preserve">
+    <value>ترتيب الفرز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SummaryDisplayType" xml:space="preserve">
+    <value>ملخص عرض نوع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.SummaryType" xml:space="preserve">
+    <value>اكتب الملخص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.Tag" xml:space="preserve">
+    <value>العلامة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueCount" xml:space="preserve">
+    <value>أعلى قيمة العد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueMode" xml:space="preserve">
+    <value>وضع القيمة العليا</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueShowOthers" xml:space="preserve">
+    <value>تظهر القيمة العليا الآخرين</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueType" xml:space="preserve">
+    <value>اكتب قيمة أعلى</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TotalCellFormat" xml:space="preserve">
+    <value>تنسيق خلية الإجمالي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TotalsVisibility" xml:space="preserve">
+    <value>إبراز إجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.TotalValueFormat" xml:space="preserve">
+    <value>تنسيق القيمة الإجمالية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UnboundExpression" xml:space="preserve">
+    <value>التعبير غير منضم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UnboundExpressionMode" xml:space="preserve">
+    <value>وضع تعبير غير منضم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UnboundFieldName" xml:space="preserve">
+    <value>اسم حقل غير منضم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UnboundType" xml:space="preserve">
+    <value>نوع غير منضم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.UseNativeFormat" xml:space="preserve">
+    <value>تصدير كأرقام في Excel</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldBase.ValueFormat" xml:space="preserve">
+    <value>تنسيق القيمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowDrag" xml:space="preserve">
+    <value>السماح بسحب</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowDragInCustomizationForm" xml:space="preserve">
+    <value>السماح بسحب استمارة التخصيص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowExpand" xml:space="preserve">
+    <value>السماح بتوسيع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowFilter" xml:space="preserve">
+    <value>يسمح عامل التصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowFilterBySummary" xml:space="preserve">
+    <value>يسمح عامل التصفية بموجز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowRunTimeSummaryChange" xml:space="preserve">
+    <value>السماح بتغيير وقت التشغيل موجزة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowSort" xml:space="preserve">
+    <value>السماح للفرز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowSortBySummary" xml:space="preserve">
+    <value>السماح للفرز حسب الملخص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.AllowTopNDrillDown" xml:space="preserve">
+    <value>السماح بالكشف توبن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.GroupFilterMode" xml:space="preserve">
+    <value>وضع تصفية المجموعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.HideEmptyVariationItems" xml:space="preserve">
+    <value>إخفاء عناصر الاختلاف فارغة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.OLAPFilterByUniqueName" xml:space="preserve">
+    <value>تصفية OLAP قبل أونيكوينامي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.OLAPFilterUsingWhereClause" xml:space="preserve">
+    <value>OLAP عامل تصفية باستخدام أين شرط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.OLAPUseNonEmpty" xml:space="preserve">
+    <value>نونيمبتي استخدام OLAP</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowCustomTotals" xml:space="preserve">
+    <value>إظهار إجماليات مخصصة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowFilter" xml:space="preserve">
+    <value>Show In Filter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowGrandTotal" xml:space="preserve">
+    <value>إظهار الإجمالي الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowGroupIntervalName" xml:space="preserve">
+    <value>فاصل مجموعة العرض</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowInCustomizationForm" xml:space="preserve">
+    <value>إظهار في نموذج التخصيص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowInExpressionEditor" xml:space="preserve">
+    <value>وتظهر في محرر التعبير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowInFilter" xml:space="preserve">
+    <value>Show In Filter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowInPrefilter" xml:space="preserve">
+    <value>وتظهر في Prefilter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowSummaryTypeName" xml:space="preserve">
+    <value>إظهار اسم نوع التلخيص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowTotals" xml:space="preserve">
+    <value>إظهار الإجماليات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.ShowValues" xml:space="preserve">
+    <value>إظهار القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldOptions.SortByCustomFieldValueDisplayText" xml:space="preserve">
+    <value>فرز حسب كوستومفيلدفالويديسبلايتيكست</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.Conditions" xml:space="preserve">
+    <value>الشروط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.CustomTotalSummaryType" xml:space="preserve">
+    <value>نوع ملخص إجمالي مخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.Field" xml:space="preserve">
+    <value>حقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.FieldName" xml:space="preserve">
+    <value>اسم الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortBySummaryInfo.SummaryType" xml:space="preserve">
+    <value>اكتب الملخص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.Field" xml:space="preserve">
+    <value>حقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldSortCondition.OLAPUniqueMemberName" xml:space="preserve">
+    <value>اسم العضو الفريد OLAP</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldToolTips.HeaderText" xml:space="preserve">
+    <value>نص رأس الصفحة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldToolTips.ValueFormat" xml:space="preserve">
+    <value>تنسيق القيمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFieldToolTips.ValueText" xml:space="preserve">
+    <value>قيمة النص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridFormatRule.Measure" xml:space="preserve">
+    <value>التدبير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.Caption" xml:space="preserve">
+    <value>التسمية التوضيحية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.FilterValues" xml:space="preserve">
+    <value>تصفية القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridGroup.VisibleCount" xml:space="preserve">
+    <value>عد مرئية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.ApplyBestFitOnFieldDragging" xml:space="preserve">
+    <value>تطبيق الاحتواء الأفضل عن طريق سحب الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.ClipboardCopyCollapsedValuesMode" xml:space="preserve">
+    <value>نسخ قيم الحقل للسلوك الحافظة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.ClipboardCopyMultiSelectionMode" xml:space="preserve">
+    <value>الحافظة نسخ الوضع مولتيسيليكشن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.CopyToClipboardWithFieldValues" xml:space="preserve">
+    <value>نسخ إلى الحافظة مع قيم الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehavior.HorizontalScrolling" xml:space="preserve">
+    <value>التمرير الأفقي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehaviorBase.LoadingPanelDelay" xml:space="preserve">
+    <value>تحميل تأخير الفريق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsBehaviorBase.UseAsyncMode" xml:space="preserve">
+    <value>استخدام وضع عدم التزامن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsChartDataSource.SelectionOnly" xml:space="preserve">
+    <value>التحديد فقط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsChartDataSource.UpdateDelay" xml:space="preserve">
+    <value>تحديث تأخير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowCustomizationForm" xml:space="preserve">
+    <value>يسمح نموذج التخصيص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowDrag" xml:space="preserve">
+    <value>السماح بسحب</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowDragInCustomizationForm" xml:space="preserve">
+    <value>السماح بسحب استمارة التخصيص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowExpand" xml:space="preserve">
+    <value>السماح بتوسيع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowFilter" xml:space="preserve">
+    <value>يسمح عامل التصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowFilterBySummary" xml:space="preserve">
+    <value>يسمح عامل التصفية بموجز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowHideFields" xml:space="preserve">
+    <value>السماح لإخفاء الحقول</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowSort" xml:space="preserve">
+    <value>السماح للفرز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomization.AllowSortBySummary" xml:space="preserve">
+    <value>السماح للفرز حسب الملخص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomizationEx.AllowFilterPanel" xml:space="preserve">
+    <value>السماح بلوحة التصفية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsCustomizationEx.AllowPrefilter" xml:space="preserve">
+    <value>السماح Prefilter</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.AllowCrossGroupVariation" xml:space="preserve">
+    <value>السماح بالاختلاف عبر المجموعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.AutoExpandGroups" xml:space="preserve">
+    <value>توسيع مجموعات من السيارات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.CaseSensitive" xml:space="preserve">
+    <value>القضية الحساسة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.DataFieldUnboundExpressionMode" xml:space="preserve">
+    <value>حقل البيانات وضع التعبير غير منضم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.DataProcessingEngine" xml:space="preserve">
+    <value>محرك معالجة البيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.DirectDataAccessInClientMode" xml:space="preserve">
+    <value>الوصول المباشر إلى البيانات في وضع العميل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.DrillDownMaxRowCount" xml:space="preserve">
+    <value>التنقل لأسفل عدد الصفوف ماكس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.FilterByVisibleFieldsOnly" xml:space="preserve">
+    <value>تصفية حسب الحقول مرئية فقط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.OptimizeSummaryTypeCalculation" xml:space="preserve">
+    <value>تحسين نوع ملخص الحساب</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsData.RetrieveNestedFields" xml:space="preserve">
+    <value>استرداد حقول متداخلة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.AreaIndex" xml:space="preserve">
+    <value>فهرس المنطقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.Caption" xml:space="preserve">
+    <value>التسمية التوضيحية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.FieldNaming" xml:space="preserve">
+    <value>تسمية الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataField.RowHeaderWidth" xml:space="preserve">
+    <value>عرض صف رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataFieldEx.ColumnValueLineCount" xml:space="preserve">
+    <value>العمود قيمة عدد الخط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsDataFieldEx.RowValueLineCount" xml:space="preserve">
+    <value>عدد الصفوف قيمة الخط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsHint.ShowCellHints" xml:space="preserve">
+    <value>إظهار تلميحات الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsHint.ShowHeaderHints" xml:space="preserve">
+    <value>إظهار تلميحات رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsHint.ShowValueHints" xml:space="preserve">
+    <value>إظهار تلميحات قيمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsMenu.EnableFieldValueMenu" xml:space="preserve">
+    <value>تمكين قائمة قيمة الحقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsMenu.EnableHeaderAreaMenu" xml:space="preserve">
+    <value>تمكين قائمة منطقة رأس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsMenu.EnableHeaderMenu" xml:space="preserve">
+    <value>تمكين رأس القائمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.AllowDuplicatedMeasures" xml:space="preserve">
+    <value>Allow Duplicated Measures</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.AllowTopNDrillDown" xml:space="preserve">
+    <value>السماح بالكشف توبن</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.DefaultMembersBehavior" xml:space="preserve">
+    <value>الافتراضي سلوك أعضاء</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.FilterByUniqueName" xml:space="preserve">
+    <value>تصفية حسب أونيكوينامي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.ModificationCheckInterval" xml:space="preserve">
+    <value>Modification Check Interval</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.ServerDefinedDrillDownColumns" xml:space="preserve">
+    <value>Server Defined Drill Down Columns</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.ShowColumnsWithNoData" xml:space="preserve">
+    <value>إظهار الأعمدة بدون بيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.ShowRowsWithNoData" xml:space="preserve">
+    <value>إظهار الصفوف بدون بيانات</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.SortByCustomFieldValueDisplayText" xml:space="preserve">
+    <value>فرز حسب كوستومفيلدفالويديسبلايتيكست</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.SortUsingDiscoverXmlMetadata" xml:space="preserve">
+    <value>Sort Using Discover Xml Metadata</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsOLAP.UseAggregateForSingleFilterValue" xml:space="preserve">
+    <value>استخدام التجميع لقيمة تصفية واحد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.CellSelection" xml:space="preserve">
+    <value>تحديد الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.EnableAppearanceFocusedCell" xml:space="preserve">
+    <value>تمكين مظهر خلية مركزة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.MaxHeight" xml:space="preserve">
+    <value>الحد الأقصى للارتفاع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.MaxWidth" xml:space="preserve">
+    <value>الحد الأقصى للعرض</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsSelection.MultiSelect" xml:space="preserve">
+    <value>تحديد متعدد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.AllowGlyphSkinning" xml:space="preserve">
+    <value>تسمح الصورة الرمزية السلخ</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.AllowHtmlDrawFieldValues" xml:space="preserve">
+    <value>السماح بقيم حقل رسم Html</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.AllowHtmlDrawHeaders" xml:space="preserve">
+    <value>Allow Html Draw Headers</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.FilterSeparatorBarPadding" xml:space="preserve">
+    <value>شريط فاصل تصفية الحشو</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.GroupFieldsInCustomizationWindow" xml:space="preserve">
+    <value>حقول المجموعة في إطار التخصيص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.HeaderFilterButtonShowMode" xml:space="preserve">
+    <value>إظهار زر رأس عامل تصفية وضع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsView.ShowButtonMode" xml:space="preserve">
+    <value>إظهار زر الوضع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.RowTreeOffset" xml:space="preserve">
+    <value>إزاحة صف شجرة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridOptionsViewBase.RowTreeWidth" xml:space="preserve">
+    <value>عرض شجرة الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridScrolling.CellsArea" xml:space="preserve">
+    <value>سيلساريا</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridScrolling.Control" xml:space="preserve">
+    <value>عنصر التحكم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToCell" xml:space="preserve">
+    <value>تطبيق على الخلية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToCustomTotalCell" xml:space="preserve">
+    <value>تطبيق على الخلية إجمالي المخصص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToGrandTotalCell" xml:space="preserve">
+    <value>تنطبق على خلية المجموع الكلي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.ApplyToTotalCell" xml:space="preserve">
+    <value>تطبيق على الخلية إجمالي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGridStyleFormatCondition.Field" xml:space="preserve">
+    <value>حقل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupFilterMode.List" xml:space="preserve">
+    <value>قائمة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupFilterMode.Tree" xml:space="preserve">
+    <value>شجرة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Alphabetical" xml:space="preserve">
+    <value>أبجدي</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.Date" xml:space="preserve">
+    <value>تاريخ</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateDayOfWeek" xml:space="preserve">
+    <value>من أيام الأسبوع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateDayOfYear" xml:space="preserve">
+    <value>أسبوع السنة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateHour" xml:space="preserve">
+    <value>تاريخ ساعة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateHourMinute" xml:space="preserve">
+    <value>تاريخ-ساعة-دقيقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateHourMinuteSecond" xml:space="preserve">
+    <value>تاريخ-ساعة-دقيقة-ثانية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonthYear" xml:space="preserve">
+    <value>الشهر-السنة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateQuarterYear" xml:space="preserve">
+    <value>ربع السنة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateWeekOfMonth" xml:space="preserve">
+    <value>من شهر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateWeekOfYear" xml:space="preserve">
+    <value>الأسبوع من السنة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DateWeekYear" xml:space="preserve">
+    <value>السنة الأسبوعية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.DayAge" xml:space="preserve">
+    <value>عصر اليوم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.MonthAge" xml:space="preserve">
+    <value>العمر شهر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.WeekAge" xml:space="preserve">
+    <value>العمر الأسبوع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotGroupInterval.YearAge" xml:space="preserve">
+    <value>العمر سنة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Cylinder" xml:space="preserve">
+    <value>اسطوانة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Faces" xml:space="preserve">
+    <value>ويواجه</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Gauge" xml:space="preserve">
+    <value>قياس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedCylinder" xml:space="preserve">
+    <value>عكس الاسطوانة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedGauge" xml:space="preserve">
+    <value>عكس قياس</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedStatusArrow" xml:space="preserve">
+    <value>عكس حالة السهم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ReversedThermometer" xml:space="preserve">
+    <value>عكس الحرارة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.RoadSigns" xml:space="preserve">
+    <value>علامات وإشارات الطرق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.ServerDefined" xml:space="preserve">
+    <value>تعريف الملقم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Shapes" xml:space="preserve">
+    <value>الأشكال</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.StandardArrow" xml:space="preserve">
+    <value>السهم القياسية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.StatusArrow" xml:space="preserve">
+    <value>حالة السهم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.Thermometer" xml:space="preserve">
+    <value>ميزان الحرارة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.TrafficLights" xml:space="preserve">
+    <value>إشارات المرور</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIGraphic.VarianceArrow" xml:space="preserve">
+    <value>السهم الفرق</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Goal" xml:space="preserve">
+    <value>الهدف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Status" xml:space="preserve">
+    <value>مركز</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotKPIType.Trend" xml:space="preserve">
+    <value>الاتجاه</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotOLAPFilterUsingWhereClause.Always" xml:space="preserve">
+    <value>دائماً</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotOLAPFilterUsingWhereClause.Never" xml:space="preserve">
+    <value>ابدأ</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotOLAPFilterUsingWhereClause.SingleValuesOnly" xml:space="preserve">
+    <value>قيم مفردة فقط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Far" xml:space="preserve">
+    <value>وبعد القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Near" xml:space="preserve">
+    <value>قبل القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotRowTotalsLocation.Tree" xml:space="preserve">
+    <value>شجرة مثل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.ShowAlways" xml:space="preserve">
+    <value>تظهر دائماً</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.ShowForFocusedCell" xml:space="preserve">
+    <value>إظهار الخلية مركزة فقط</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotShowButtonModeEnum.ShowOnlyInEditor" xml:space="preserve">
+    <value>تظهر عندما يكون نشطاً محرر</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.DimensionAttribute" xml:space="preserve">
+    <value>السمة البعد</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.DisplayText" xml:space="preserve">
+    <value>عرض النص</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.ID" xml:space="preserve">
+    <value>معرف OLAP</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.Key" xml:space="preserve">
+    <value>مفتاح OLAP</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSortMode.None" xml:space="preserve">
+    <value>OLAP بلا</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSummaryFilter.ColumnField" xml:space="preserve">
+    <value>حقل العمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotSummaryFilter.RowField" xml:space="preserve">
+    <value>حقل الصف</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTopValueType.Absolute" xml:space="preserve">
+    <value>المطلقة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsLocation.Far" xml:space="preserve">
+    <value>وبعد القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsLocation.Near" xml:space="preserve">
+    <value>قبل القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsVisibility.AutomaticTotals" xml:space="preserve">
+    <value>المجاميع التلقائية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsVisibility.CustomTotals" xml:space="preserve">
+    <value>إجماليات مخصصة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PivotTotalsVisibility.None" xml:space="preserve">
+    <value>لا المجاميع</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Prefilter.Criteria" xml:space="preserve">
+    <value>معايير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.Criteria" xml:space="preserve">
+    <value>معايير</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.CriteriaString" xml:space="preserve">
+    <value>معايير كسلسلة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.NonColumnCriteria" xml:space="preserve">
+    <value>معايير غير عمود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.PrefilterBase.NonColumnCriteriaString" xml:space="preserve">
+    <value>معايير غير عمود كسلسلة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Printing.ExportAppearanceObject.BorderStyle" xml:space="preserve">
+    <value>نمط الحدود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Printing.ExportAppearanceOptions.UseBorderStyle" xml:space="preserve">
+    <value>استخدام نمط الحدود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.Printing.ExportAppearanceOptions.UseBorderWidth" xml:space="preserve">
+    <value>استخدام عرض الحدود</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.RankType.Competition" xml:space="preserve">
+    <value>المنافسة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.RankType.Dense" xml:space="preserve">
+    <value>كثيفة</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.RankType.Modified" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.RankType.Percentile" xml:space="preserve">
+    <value>المئين:</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.RankType.Unique" xml:space="preserve">
+    <value>فريدة من نوعها</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.TopValueMode.AllValues" xml:space="preserve">
+    <value>كافة القيم</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.TopValueMode.ParentFieldValues" xml:space="preserve">
+    <value>قيم الحقل الأصل</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.UnboundExpressionMode.UseAggregateFunctions" xml:space="preserve">
+    <value>استخدام الدالات التجميعية</value>
+  </data>
+  <data name="DevExpress.XtraPivotGrid.UnboundExpressionMode.UseSummaryValues" xml:space="preserve">
+    <value>استخدام قيم الملخص</value>
+  </data>
+</root>

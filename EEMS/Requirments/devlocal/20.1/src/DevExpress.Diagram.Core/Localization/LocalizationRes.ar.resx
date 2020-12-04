@@ -1,0 +1,2238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DiagramControlStringId.SoftwareIcons_Add_Name" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Remove_Name" xml:space="preserve">
+    <value>إزالة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Appearance" xml:space="preserve">
+    <value>مظهر</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_TreeLayout" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="DiagramControlStringId.Tools_Text" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Cancel" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Close" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Options" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_NewFile" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowGrid" xml:space="preserve">
+    <value>الشبكة</value>
+  </data>
+  <data name="DiagramControlStringId.Ribbon_CanvasNoneAutoSize" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DiagramControlStringId.Ribbon_PageSize" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Collapse_Name" xml:space="preserve">
+    <value>انهيار</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Expand_Name" xml:space="preserve">
+    <value>قم بتوسيع</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Copy" xml:space="preserve">
+    <value>نسخة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Zoom" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_File" xml:space="preserve">
+    <value>الملف</value>
+  </data>
+  <data name="DiagramControlStringId.Font_Font" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Font" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontStrikethrough" xml:space="preserve">
+    <value>يتوسطه خط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontUnderline" xml:space="preserve">
+    <value>تسطير</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Tools" xml:space="preserve">
+    <value>أدوات</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Tools_Name" xml:space="preserve">
+    <value>أدوات</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontBold" xml:space="preserve">
+    <value>غامق</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontItalic" xml:space="preserve">
+    <value>مائل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SaveFile" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Save_Name" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="DiagramControlStringId.Ribbon_VerticalOrientation" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="DiagramControlStringId.PageSize_Height" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="DiagramControlStringId.ShapeInfo_Height" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="DiagramControlStringId.PageSize_Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="DiagramControlStringId.ShapeInfo_Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_Home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Cut" xml:space="preserve">
+    <value>قص</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Paste" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_PageSetup" xml:space="preserve">
+    <value>إعداد الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Paragraph" xml:space="preserve">
+    <value>الفقرة</value>
+  </data>
+  <data name="DiagramControlStringId.Font_FontSize" xml:space="preserve">
+    <value>حجم الخط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Redo" xml:space="preserve">
+    <value>الإعادة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Undo" xml:space="preserve">
+    <value>التراجع عن</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_View" xml:space="preserve">
+    <value>طريقة العرض</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_View" xml:space="preserve">
+    <value>طريقة العرض</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_BringToFront" xml:space="preserve">
+    <value>إحضار إلى الأمام</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SendToBack" xml:space="preserve">
+    <value>إرسال إلى الخلف</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ZoomIn" xml:space="preserve">
+    <value>التكبير</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ZoomOut" xml:space="preserve">
+    <value>التصغير</value>
+  </data>
+  <data name="DiagramControlStringId.PropertyGridOption_None" xml:space="preserve">
+    <value>(بلا)</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_Design" xml:space="preserve">
+    <value>التصميم</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Options" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="DiagramControlStringId.PageMargin_Bottom" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="DiagramControlStringId.PageMargin_Left" xml:space="preserve">
+    <value>اليسار</value>
+  </data>
+  <data name="DiagramControlStringId.PageMargin_Right" xml:space="preserve">
+    <value>حق</value>
+  </data>
+  <data name="DiagramControlStringId.PageMargin_Top" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="DiagramControlStringId.PageSize" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="DiagramControlStringId.StatusBarZoomEditor" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="DiagramControlStringId.FontFamily" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Layout" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="DiagramControlStringId.PageOrientation_Vertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="DiagramControlStringId.StatusBarHeight" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="DiagramControlStringId.StatusBarWidth" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Print" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="DiagramControlStringId.PrintMenu" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="DiagramControlStringId.ShowGrid" xml:space="preserve">
+    <value>الشبكة</value>
+  </data>
+  <data name="DiagramControlStringId.FontSize" xml:space="preserve">
+    <value>حجم الخط</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Appearance" xml:space="preserve">
+    <value>مظهر</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_Square" xml:space="preserve">
+    <value>ساحة</value>
+  </data>
+  <data name="DiagramControlStringId.PageOrientation_Horizontal" xml:space="preserve">
+    <value>المناظر الطبيعية</value>
+  </data>
+  <data name="DiagramControlStringId.Panel_Properties_Name" xml:space="preserve">
+    <value>خصائص</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Properties_Name" xml:space="preserve">
+    <value>خصائص</value>
+  </data>
+  <data name="DiagramControlStringId.PageOrientation" xml:space="preserve">
+    <value>التوجه</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Data_Name" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Document_Name" xml:space="preserve">
+    <value>الوثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.DefaultDocumentName" xml:space="preserve">
+    <value>الوثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Document" xml:space="preserve">
+    <value>الوثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Document_Name" xml:space="preserve">
+    <value>الوثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Document_Name" xml:space="preserve">
+    <value>الوثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetPageParameters_PageSize_Description" xml:space="preserve">
+    <value>اختيار حجم صفحة من القائمة، أو تعيين حجم مخصص.</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_Description" xml:space="preserve">
+    <value>ضبط حجم الصفحة في نقل عناصر خارج حدودها-</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_None_Description" xml:space="preserve">
+    <value>لم يتم تغيير حجم الصفحة في نقل عناصر خارج حدودها-</value>
+  </data>
+  <data name="DiagramControlStringId.PageSize_Description" xml:space="preserve">
+    <value>اختيار حجم صفحة.</value>
+  </data>
+  <data name="DiagramControlStringId.PageSizeSelectorName" xml:space="preserve">
+    <value>محدد حجم الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_BMP_Description" xml:space="preserve">
+    <value>حفظ الرسم التخطيطي كملف صورة نقطية الذي يأخذ المزيد من مساحة القرص لعدم وجود ضغط.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_GIF_Description" xml:space="preserve">
+    <value>حفظ المخطط كصورة GIF التي يتم الاتفاق ولكن جودة منخفضة إذا كان الرسم التخطيطي لأكثر من 256 لوناً-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_JPEG_Description" xml:space="preserve">
+    <value>حفظ المخطط كصورة JPEG الذي يحقق ضغط جيد مع القليل فقدان ملحوظ في جودة الصورة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_PNG_Description" xml:space="preserve">
+    <value>حفظ المخطط كصورة PNG عالية جودة وتأخذ مساحة صغيرة جداً إذا كان الرسم التخطيطي لمساحات كبيرة من لون موحد تماما.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FitToDrawing_Description" xml:space="preserve">
+    <value>اقتطاع الصفحة العرض والارتفاع حيث يطابق حجم الصفحة بحجم الرسم التخطيطي.</value>
+  </data>
+  <data name="DiagramControlStringId.ShowRulers_Description" xml:space="preserve">
+    <value>عرض المساطر المستخدمة لقياس الكائنات في المستند.</value>
+  </data>
+  <data name="DiagramControlStringId.FontFamily_Description" xml:space="preserve">
+    <value>اختيار خط جديد للنص الخاص بك-</value>
+  </data>
+  <data name="DiagramControlStringId.PageSizeHeader" xml:space="preserve">
+    <value>معرض حجم الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetPageParameters_PageSize" xml:space="preserve">
+    <value>المزيد من أحجام الصفحة...</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_FormatContainer" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsRotate" xml:space="preserve">
+    <value>تدوير</value>
+  </data>
+  <data name="DiagramControlStringId.ImageFlipMode_Vertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Navigation" xml:space="preserve">
+    <value>الملاحة</value>
+  </data>
+  <data name="DiagramControlStringId.ImageFlipMode_Horizontal" xml:space="preserve">
+    <value>أفقي</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Zoom" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Print" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_PrintPreview" xml:space="preserve">
+    <value>معاينة قبل الطباعة</value>
+  </data>
+  <data name="DiagramControlStringId.ImageFlipMode_None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Close" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_FormatImage" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Export" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="DiagramControlStringId.ImageStretchMode_Stretch" xml:space="preserve">
+    <value>وتمتد</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_ContainerSize" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Title" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Data" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPage_Insert" xml:space="preserve">
+    <value>إدراج</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetSelectedImagesStretchMode_Stretch" xml:space="preserve">
+    <value>وتمتد</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MindMapTreeLayout_Horizontal" xml:space="preserve">
+    <value>أفقي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MindMapTreeLayoutForSubordinates_Horizontal" xml:space="preserve">
+    <value>أفقي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MindMapTreeLayout_Vertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MindMapTreeLayoutForSubordinates_Vertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Back_Name" xml:space="preserve">
+    <value>مرة أخرى</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Start_Name" xml:space="preserve">
+    <value>بدء تشغيل</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale" xml:space="preserve">
+    <value>مقياس</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Dialog_Title" xml:space="preserve">
+    <value>مقياس</value>
+  </data>
+  <data name="DiagramControlStringId.Tool_Text" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Content" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Bottom" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Left" xml:space="preserve">
+    <value>اليسار</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Right" xml:space="preserve">
+    <value>حق</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Top" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Landscape" xml:space="preserve">
+    <value>المناظر الطبيعية</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Height" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Header" xml:space="preserve">
+    <value>نص رأس الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_StretchMode" xml:space="preserve">
+    <value>وتمتد</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_ClosedASMEArrow" xml:space="preserve">
+    <value>سهم ASME مغلقة</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_ClosedDiamond" xml:space="preserve">
+    <value>أغلقت الماس</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_ClosedDot" xml:space="preserve">
+    <value>أغلقت نقطة</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_ClosedDoubleArrow" xml:space="preserve">
+    <value>سهم مزدوج مغلق</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_Diamond" xml:space="preserve">
+    <value>الماس</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_Filled90" xml:space="preserve">
+    <value>سهم شغلها 90</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_FilledDiamond" xml:space="preserve">
+    <value>تعبئة الماس</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_FilledDot" xml:space="preserve">
+    <value>تعبئة دوت</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_FilledDoubleArrow" xml:space="preserve">
+    <value>سهم مزدوج تعبئة</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_FilledFletch" xml:space="preserve">
+    <value>تعبئة فليتش</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_FilledSquare" xml:space="preserve">
+    <value>تعبئة مربع</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_IndentedFilledArrow" xml:space="preserve">
+    <value>إيندينتيد شغل السهم</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_Open90" xml:space="preserve">
+    <value>السهم 90 مفتوحة</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_OpenFletch" xml:space="preserve">
+    <value>فتح فليتش</value>
+  </data>
+  <data name="DiagramControlStringId.Arrow_OutdentedFilledArrow" xml:space="preserve">
+    <value>أووتدينتيد شغل السهم</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_BentArrow_Name" xml:space="preserve">
+    <value>سهم منحنى</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_BlockArrow_Name" xml:space="preserve">
+    <value>كتلة الأسهم</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_CircularArrow_Name" xml:space="preserve">
+    <value>سهم دائري</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_CurvedLeftArrow_Name" xml:space="preserve">
+    <value>منحنى السهم لليسار</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_CurvedRightArrow_Name" xml:space="preserve">
+    <value>منحنى السهم لليمين</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_FlexibleArrow_Name" xml:space="preserve">
+    <value>سهم مرن</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_LeftRightArrowBlock_Name" xml:space="preserve">
+    <value>ترك كتلة السهم لليمين</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_LeftRightUpArrow_Name" xml:space="preserve">
+    <value>يسار يمين سهم لأعلى</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_ModernArrow_Name" xml:space="preserve">
+    <value>سهم الحديثة</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_Name" xml:space="preserve">
+    <value>أشكال الأسهم</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_NotchedArrow_Name" xml:space="preserve">
+    <value>حقق السهم</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_QuadArrow_Name" xml:space="preserve">
+    <value>سهم رباعي</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_QuadArrowBlock_Name" xml:space="preserve">
+    <value>كتلة سهم رباعي</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_SharpBentArrow_Name" xml:space="preserve">
+    <value>سهم منحنى حاد</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_SimpleArrow_Name" xml:space="preserve">
+    <value>سهم بسيط</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_SimpleDoubleArrow_Name" xml:space="preserve">
+    <value>سهم مزدوج بسيط</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_StripedArrow_Name" xml:space="preserve">
+    <value>سهم شريطية</value>
+  </data>
+  <data name="DiagramControlStringId.ArrowShapes_UTurnArrow_Name" xml:space="preserve">
+    <value>يو بدوره السهم</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize" xml:space="preserve">
+    <value>حجم السيارات</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_AutoSize" xml:space="preserve">
+    <value>حجم السيارات</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_AutoSize_Description" xml:space="preserve">
+    <value>تلقائياً تغيير حجم الصفحة.</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_Description2" xml:space="preserve">
+    <value>تلقائياً تغيير حجم الصفحة.</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_Fill" xml:space="preserve">
+    <value>ملء</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSize_Fill_Description" xml:space="preserve">
+    <value>يقوم بتعبئة المنطقة بأكملها مرئية</value>
+  </data>
+  <data name="DiagramControlStringId.AutoSizeSelector" xml:space="preserve">
+    <value>السيارات حجم محدد</value>
+  </data>
+  <data name="DiagramControlStringId.BackgroundColor" xml:space="preserve">
+    <value>معلومات أساسية</value>
+  </data>
+  <data name="DiagramControlStringId.BackgroundColor_Description" xml:space="preserve">
+    <value>تغير لون الخلفية-</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Custom1_Name" xml:space="preserve">
+    <value>Custom1</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Custom2_Name" xml:space="preserve">
+    <value>Custom2</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Custom3_Name" xml:space="preserve">
+    <value>Custom3</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Custom4_Name" xml:space="preserve">
+    <value>Custom4</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Database_Name" xml:space="preserve">
+    <value>قاعدة بيانات</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Decision_Name" xml:space="preserve">
+    <value>قرار</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_ExternalData_Name" xml:space="preserve">
+    <value>البيانات الخارجية</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Name" xml:space="preserve">
+    <value>أشكال المخطط الانسيابي الأساسي</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_OffPageReference_Name" xml:space="preserve">
+    <value>مرجع خارج الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_OnPageReference_Name" xml:space="preserve">
+    <value>مرجع في الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Process_Name" xml:space="preserve">
+    <value>عملية</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_StartEnd_Name" xml:space="preserve">
+    <value>بداية/نهاية</value>
+  </data>
+  <data name="DiagramControlStringId.BasicFlowchartShapes_Subprocess_Name" xml:space="preserve">
+    <value>عملية فرعية</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Can_Name" xml:space="preserve">
+    <value>يمكن</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Chevron_Name" xml:space="preserve">
+    <value>شركة شيفرون</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Cross_Name" xml:space="preserve">
+    <value>عبور</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Cube_Name" xml:space="preserve">
+    <value>مكعب</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Decagon_Name" xml:space="preserve">
+    <value>عشاري</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_DiagonalStripe_Name" xml:space="preserve">
+    <value>شريطية قطري</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Diamond_Name" xml:space="preserve">
+    <value>الماس</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Donut_Name" xml:space="preserve">
+    <value>دونات</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Ellipse_Name" xml:space="preserve">
+    <value>القطع الناقص</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Frame_Name" xml:space="preserve">
+    <value>الإطار</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_FrameCorner_Name" xml:space="preserve">
+    <value>ركن الإطار</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Heptagon_Name" xml:space="preserve">
+    <value>سباعي</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Hexagon_Name" xml:space="preserve">
+    <value>مسدس</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_LeftBrace_Name" xml:space="preserve">
+    <value>غادر قوس</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_LeftParenthesis_Name" xml:space="preserve">
+    <value>غادر قوس</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_LShape_Name" xml:space="preserve">
+    <value>شكل L</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Name" xml:space="preserve">
+    <value>الأشكال الأساسية</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_NoSymbol_Name" xml:space="preserve">
+    <value>نوسيمبول</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Octagon_Name" xml:space="preserve">
+    <value>مثمن</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Parallelogram_Name" xml:space="preserve">
+    <value>متوازي أضلاع</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Pentagon_Name" xml:space="preserve">
+    <value>البنتاجون</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Plaque_Name" xml:space="preserve">
+    <value>اللوحة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Rectangle_Name" xml:space="preserve">
+    <value>مستطيل</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RightBrace_Name" xml:space="preserve">
+    <value>قوس كبير أيمن</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RightParenthesis_Name" xml:space="preserve">
+    <value>قوس أيمن</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RightTriangle_Name" xml:space="preserve">
+    <value>مثلث قائم الزاوية</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RoundCornerRectangle_Name" xml:space="preserve">
+    <value>مستطيل ذو زوايا جولة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RoundDiagonalCornerRectangle_Name" xml:space="preserve">
+    <value>مستطيل ذو زوايا قطرية جولة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RoundedRectangle_Name" xml:space="preserve">
+    <value>تقريب المستطيل</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_RoundSameSideCornerRectangle_Name" xml:space="preserve">
+    <value>جولة مستطيل ذو زوايا الجانب نفسه</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SingleRoundCornerRectangle_Name" xml:space="preserve">
+    <value>مستطيل ذو زاوية جولة واحدة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SingleSnipCornerRectangle_Name" xml:space="preserve">
+    <value>مستطيل ذو زاوية واحدة مخدوشة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SnipAndRoundCornerRectangle_Name" xml:space="preserve">
+    <value>قص والزاوية جولة المستطيل</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SnipAndRoundSingleCornerRectangle_Name" xml:space="preserve">
+    <value>قص ومستطيل ذو زاوية واحدة جولة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SnipCornerRectangle_Name" xml:space="preserve">
+    <value>مستطيل ذو زاوية مخدوشة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SnipDiagonalCornerRectangle_Name" xml:space="preserve">
+    <value>مستطيل ذو زوايا قطرية مخدوشة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_SnipSameSideCornerRectangle_Name" xml:space="preserve">
+    <value>قص مستطيل ذو زوايا الجانب نفسه</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star16_Name" xml:space="preserve">
+    <value>نجم 16 نقطة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star24_Name" xml:space="preserve">
+    <value>ستار 24 نقطة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star32_Name" xml:space="preserve">
+    <value>النجم 32 نقطة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star4_Name" xml:space="preserve">
+    <value>نجمة ذات 4 نقاط</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star5_Name" xml:space="preserve">
+    <value>5-نجمة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star6_Name" xml:space="preserve">
+    <value>6-نجمة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Star7_Name" xml:space="preserve">
+    <value>7-نجمة</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Trapezoid_Name" xml:space="preserve">
+    <value>شبه منحرف</value>
+  </data>
+  <data name="DiagramControlStringId.BasicShapes_Triangle_Name" xml:space="preserve">
+    <value>المثلث</value>
+  </data>
+  <data name="DiagramControlStringId.BindingEditorDialogTitle" xml:space="preserve">
+    <value>محرر ربط بيانات العنصر</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Behavior" xml:space="preserve">
+    <value>السلوك</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Common" xml:space="preserve">
+    <value>المشتركة</value>
+  </data>
+  <data name="DiagramControlStringId.Category_DiagramDocument" xml:space="preserve">
+    <value>رسم تخطيطي للوثيقة</value>
+  </data>
+  <data name="DiagramControlStringId.Category_DiagramItems" xml:space="preserve">
+    <value>عناصر المخطط</value>
+  </data>
+  <data name="DiagramControlStringId.Category_DiagramPaint" xml:space="preserve">
+    <value>رسم تخطيطي للطلاء</value>
+  </data>
+  <data name="DiagramControlStringId.Category_DiagramPropertyChanged" xml:space="preserve">
+    <value>تغيير خاصية الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.Category_ExpandAndCollapse" xml:space="preserve">
+    <value>توسيع وطي</value>
+  </data>
+  <data name="DiagramControlStringId.Category_Protection" xml:space="preserve">
+    <value>حماية</value>
+  </data>
+  <data name="DiagramControlStringId.Category_SizeAndPosition" xml:space="preserve">
+    <value>الحجم والموضع</value>
+  </data>
+  <data name="DiagramControlStringId.ChangeConnectorType" xml:space="preserve">
+    <value>موصلات</value>
+  </data>
+  <data name="DiagramControlStringId.ChangeConnectorType_Description" xml:space="preserve">
+    <value>تغيير مظهر الموصلات في الرسم التخطيطي.</value>
+  </data>
+  <data name="DiagramControlStringId.ClipboardPasteErrorMessage" xml:space="preserve">
+    <value>لا يمكن لصق عناصر من الحافظة</value>
+  </data>
+  <data name="DiagramControlStringId.CollapseSelectedContainers" xml:space="preserve">
+    <value>طي الحاويات</value>
+  </data>
+  <data name="DiagramControlStringId.CollapseSelectedContainers_Description" xml:space="preserve">
+    <value>طي/توسيع الحاويات المحددة في الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.Container_Heading" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding" xml:space="preserve">
+    <value>رأس الحشو</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_Description" xml:space="preserve">
+    <value>تعيين الفجوة بين حدود رأس الحاوية ومحتواه.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P0" xml:space="preserve">
+    <value>0 مقصف-</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P12" xml:space="preserve">
+    <value>12 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P16" xml:space="preserve">
+    <value>16 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P24" xml:space="preserve">
+    <value>24 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P32" xml:space="preserve">
+    <value>32 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P4" xml:space="preserve">
+    <value>4 مقصف-</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerHeaderPadding_P8" xml:space="preserve">
+    <value>8 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding" xml:space="preserve">
+    <value>الحشو</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_Description" xml:space="preserve">
+    <value>تعيين الفجوة بين حدود الشكل الحاوية ومحتوياتها.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P0" xml:space="preserve">
+    <value>0 مقصف-</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P12" xml:space="preserve">
+    <value>12 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P16" xml:space="preserve">
+    <value>16 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P24" xml:space="preserve">
+    <value>24 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P32" xml:space="preserve">
+    <value>32 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P4" xml:space="preserve">
+    <value>4 مقصف-</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerPadding_P8" xml:space="preserve">
+    <value>8 px.</value>
+  </data>
+  <data name="DiagramControlStringId.ContainerStyles" xml:space="preserve">
+    <value>Container Styles</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Icons_And_Names" xml:space="preserve">
+    <value>الرموز والأسماء</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Icons_Only" xml:space="preserve">
+    <value>الرموز فقط</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Move_Down" xml:space="preserve">
+    <value>تحريك لأسفل</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Move_Up" xml:space="preserve">
+    <value>تحريك لأعلى</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Names_Only" xml:space="preserve">
+    <value>أسماء فقط</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Names_Under_Icons" xml:space="preserve">
+    <value>أسماء تحت الرموز</value>
+  </data>
+  <data name="DiagramControlStringId.ContextMenu_Order" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="DiagramControlStringId.CreateDockingDesignerActionListCommand" xml:space="preserve">
+    <value>إنشاء مربع الأدوات و PropertyGrid</value>
+  </data>
+  <data name="DiagramControlStringId.CreatePanAndZoomDesignerActionListCommand" xml:space="preserve">
+    <value>إنشاء لوحة التحريك والتكبير/التصغير</value>
+  </data>
+  <data name="DiagramControlStringId.CreateRibbonDesignerActionListCommand" xml:space="preserve">
+    <value>إنشاء شريط القوائم</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_Dash" xml:space="preserve">
+    <value>داش</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_DashDashDot" xml:space="preserve">
+    <value>شرطة ونقطة شرطة</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_DashDot" xml:space="preserve">
+    <value>Dash dot</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_DashDotDot" xml:space="preserve">
+    <value>Dash dot dot</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_Dot" xml:space="preserve">
+    <value>دوت</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_HalfDash" xml:space="preserve">
+    <value>نصف داش</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_HalfDot" xml:space="preserve">
+    <value>نصف نقطة</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_LongDashShortDash" xml:space="preserve">
+    <value>شرطة طويلة قصيرة داش</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_LongDashShortDashShortDash" xml:space="preserve">
+    <value>شرطة طويلة قصيرة قصيرة داش داش</value>
+  </data>
+  <data name="DiagramControlStringId.DashType_Solid" xml:space="preserve">
+    <value>الصلبة</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_Cloud_Name" xml:space="preserve">
+    <value>سحابة</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_DoubleWave_Name" xml:space="preserve">
+    <value>موجه مزدوجة</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_DownRibbon_Name" xml:space="preserve">
+    <value>أسفل الشريط</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_Heart_Name" xml:space="preserve">
+    <value>قلب</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_HorizontalScroll_Name" xml:space="preserve">
+    <value>التمرير الأفقي</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_LightningBolt_Name" xml:space="preserve">
+    <value>البرق الترباس</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_Moon_Name" xml:space="preserve">
+    <value>القمر</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_Name" xml:space="preserve">
+    <value>الأشكال الزخرفية</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_UpRibbon_Name" xml:space="preserve">
+    <value>أعلى الشريط</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_VerticalScroll_Name" xml:space="preserve">
+    <value>التمرير العمودي</value>
+  </data>
+  <data name="DiagramControlStringId.DecorativeShapes_Wave_Name" xml:space="preserve">
+    <value>موجه</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_BringForward" xml:space="preserve">
+    <value>إحضار إلى الأمام</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_BringForward_Description" xml:space="preserve">
+    <value>إحضار الكائن إلى الأمام مستوى واحد حتى أن كان مخفياً خلف كائنات أقل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_BringToFront_Description" xml:space="preserve">
+    <value>إحضار الكائن المحدد أمام كافة الكائنات الأخرى.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ChangeConnectorType_Curved" xml:space="preserve">
+    <value>منحنى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ChangeConnectorType_OrgChart" xml:space="preserve">
+    <value>المخطط الهيكلي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ChangeConnectorType_RightAngle" xml:space="preserve">
+    <value>الزاوية اليمنى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ChangeConnectorType_Straight" xml:space="preserve">
+    <value>مستقيم</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_CircularLayout" xml:space="preserve">
+    <value>التعميم</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Close_Description" xml:space="preserve">
+    <value>هذه الوثيقة التي أنت على وشك إغلاق تغييرات غير محفوظة. هل تريد حفظ {0}؟</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_CollapseSelectedContainers" xml:space="preserve">
+    <value>طي الحاويات</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_CollapseSelectedContainers_Description" xml:space="preserve">
+    <value>طي/توسيع الحاويات المحددة في الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Copy_Description" xml:space="preserve">
+    <value>وضع نسخة من التحديد في الحافظة حيث يمكنك لصقه في مكان آخر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Cut_Description" xml:space="preserve">
+    <value>إزالة التحديد ووضعه في الحافظة حيث يمكنك لصقه في مكان آخر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_DecreaseFontSize" xml:space="preserve">
+    <value>إنقاص حجم الخط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_DecreaseFontSize_Description" xml:space="preserve">
+    <value>تصغير النص الخاص بك قليلاً.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Edit" xml:space="preserve">
+    <value>Edit text</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Empty" xml:space="preserve">
+    <value>بلا</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_BMP" xml:space="preserve">
+    <value>صورة نقطية Windows</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_GIF" xml:space="preserve">
+    <value>تنسيق تبادل الرسومات</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_JPEG" xml:space="preserve">
+    <value>JPEG File interchange Format</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportDiagram_PNG" xml:space="preserve">
+    <value>رسومات الشبكة للأجهزة المحمولة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportToPdf" xml:space="preserve">
+    <value>تنسيق المستند المحمول</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ExportToPdf_Description" xml:space="preserve">
+    <value>حفظ الرسم التخطيطي كمستند PDF من صفحة واحدة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FitToDrawing" xml:space="preserve">
+    <value>يصلح للرسم</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FitToPage" xml:space="preserve">
+    <value>يصلح للنافذة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FitToPage_Description" xml:space="preserve">
+    <value>تكبير المستند حتى أن يلائم الصفحة بأكملها ويملأ الإطار.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FitToWidth" xml:space="preserve">
+    <value>عرض الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FitToWidth_Description" xml:space="preserve">
+    <value>تكبير المستند حتى لا يكون واسعة كما النافذة الصفحة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FlipImage_Horizontal" xml:space="preserve">
+    <value>انعكاس أفقي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FlipImage_Horizontal_Description" xml:space="preserve">
+    <value>انعكاس أفقي الصورة المحددة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FlipImage_Vertical" xml:space="preserve">
+    <value>انعكاس عمودي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FlipImage_Vertical_Description" xml:space="preserve">
+    <value>انعكاس عمودي الصورة المحددة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FocusNextControl" xml:space="preserve">
+    <value>التركيز عنصر التحكم التالي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_FocusPrevControl" xml:space="preserve">
+    <value>التركيز عنصر التحكم السابق</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_IncreaseFontSize" xml:space="preserve">
+    <value>زيادة حجم الخط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_IncreaseFontSize_Description" xml:space="preserve">
+    <value>جعل النص الخاص بك أكبر قليلاً.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_InsertImage" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_InsertImage_Description" xml:space="preserve">
+    <value>إدراج صورة من جهاز الكمبيوتر الخاص بك أو من أجهزة الكمبيوتر الأخرى التي كنت متصلاً ب.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_LoadImage" xml:space="preserve">
+    <value>تغيير صورة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_LoadImage_Description" xml:space="preserve">
+    <value>فتح ملف صورة ليتم عرضها ضمن العنصر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MoveSelection_Down" xml:space="preserve">
+    <value>نقل التحديد إلى الأسفل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MoveSelection_Left" xml:space="preserve">
+    <value>تحريك التحديد لليسار</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MoveSelection_Right" xml:space="preserve">
+    <value>تحريك التحديد لليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_MoveSelection_Up" xml:space="preserve">
+    <value>تحريك التحديد لأعلى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_NewFile_Description" xml:space="preserve">
+    <value>إنشاء رسم تخطيطي جديد</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_OpenFile" xml:space="preserve">
+    <value>فتح...</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_OpenFile_Description" xml:space="preserve">
+    <value>افتح ملف الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Paste_Description" xml:space="preserve">
+    <value>لصق محتويات "الحافظة".</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Print_Description" xml:space="preserve">
+    <value>حدد الطابعة وعدد النسخ وخيارات الطباعة الأخرى قبل الطباعة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_QuickPrint" xml:space="preserve">
+    <value>Quick print</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_QuickPrint_Description" xml:space="preserve">
+    <value>إرسال المستند مباشرة إلى الطابعة الافتراضية دون إجراء تغييرات.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Redo_Description" xml:space="preserve">
+    <value>إعادة العملية الأخيرة-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ResetSelectedImages" xml:space="preserve">
+    <value>إعادة تعيين الصورة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ResetSelectedImages_Description" xml:space="preserve">
+    <value>تغيير حجم العنصر بحيث يطابق حجم الصورة المصدر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Rotate_Left90" xml:space="preserve">
+    <value>استدارة إلى اليسار 90 °</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Rotate_Left90_Description" xml:space="preserve">
+    <value>غادر تدوير العناصر المحددة-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Rotate_Right90" xml:space="preserve">
+    <value>استدارة إلى اليمين 90 °</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Rotate_Right90_Description" xml:space="preserve">
+    <value>حق تدوير العناصر المحددة-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SaveFile_Description" xml:space="preserve">
+    <value>حفظ هذا المخطط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SaveFileAs" xml:space="preserve">
+    <value>حفظ as...</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SaveFileAs_Description" xml:space="preserve">
+    <value>حفظ هذا المخطط باسم مختلف</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectAll" xml:space="preserve">
+    <value>تحديد كافة العناصر</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectNextItem" xml:space="preserve">
+    <value>حدد العنصر التالي</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectPrevItem" xml:space="preserve">
+    <value>تحديد العنصر السابق</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool" xml:space="preserve">
+    <value>حدد أداة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_ConnectorTool" xml:space="preserve">
+    <value>موصل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_ConnectorTool_Description" xml:space="preserve">
+    <value>رسم الروابط بين الكائنات.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_EllipseTool" xml:space="preserve">
+    <value>القطع الناقص</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_EllipseTool_Description" xml:space="preserve">
+    <value>السحب رسم قطع ناقص-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_HexagonTool" xml:space="preserve">
+    <value>مسدس</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_HexagonTool_Description" xml:space="preserve">
+    <value>السحب رسم مسدس.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_PanTool" xml:space="preserve">
+    <value>أداة التدوير المحوري</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_PanTool_Description" xml:space="preserve">
+    <value>السحب عموم عبر اللوحة القماشية.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_PointerTool" xml:space="preserve">
+    <value>أداة المؤشر</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_PointerTool_Description" xml:space="preserve">
+    <value>تحديد وتحريك وتغيير حجم الكائنات.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_RectangleTool" xml:space="preserve">
+    <value>مستطيل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_RectangleTool_Description" xml:space="preserve">
+    <value>السحب لرسم مستطيل.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_RightTriangleTool" xml:space="preserve">
+    <value>مثلث قائم الزاوية</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_RightTriangleTool_Description" xml:space="preserve">
+    <value>السحب رسم مثلث قائم الزاوية.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_TextTool" xml:space="preserve">
+    <value>أداة النص</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SelectTool_TextTool_Description" xml:space="preserve">
+    <value>إضافة شكل نص أو حدد النص الموجود.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SendBackward" xml:space="preserve">
+    <value>إرسال إلى الخلف</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SendBackward_Description" xml:space="preserve">
+    <value>إرسال الكائن المحدد مستوى واحد إلى الوراء بحيث يكون مخفياً خلف كائنات أكثر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SendToBack_Description" xml:space="preserve">
+    <value>إرسال الكائن المحدد خلف كل الكائنات الأخرى.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Center" xml:space="preserve">
+    <value>محاذاة للوسط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Center_Description" xml:space="preserve">
+    <value>توسيط المحتوى الخاص بك-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Justify" xml:space="preserve">
+    <value>تبرير</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Justify_Description" xml:space="preserve">
+    <value>توزيع النص الخاص بك بشكل متساو بين الهوامش.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Left" xml:space="preserve">
+    <value>محاذاة إلى اليسار</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Left_Description" xml:space="preserve">
+    <value>محاذاة المحتوى الخاص بك إلى اليسار.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Right" xml:space="preserve">
+    <value>محاذاة إلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetHorizontalAlignment_Right_Description" xml:space="preserve">
+    <value>محاذاة المحتوى الخاص بك إلى اليمين.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetPageParameters_PageSize_Header" xml:space="preserve">
+    <value>Page setup</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetSelectedImagesStretchMode_Stretch_Description" xml:space="preserve">
+    <value>تمتد الصورة المصدر لملء عنصر الصورة الرسم التخطيطي.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetSelectedImagesStretchMode_Uniform" xml:space="preserve">
+    <value>موحدة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetSelectedImagesStretchMode_Uniform_Description" xml:space="preserve">
+    <value>المحافظة على نسبة العرض إلى الارتفاع للصورة المصدر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetSelectedImagesStretchMode_UniformToFill" xml:space="preserve">
+    <value>موحدة لملء</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetSelectedImagesStretchMode_UniformToFill_Description" xml:space="preserve">
+    <value>تعبئة الصورة مع المحافظة على نسبة العرض إلى الارتفاع الأصلي للصورة المصدر. يتم قص الصورة إذا كان به نسبة العرض إلى الارتفاع يختلف عنصر الصورة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetVerticalAlignment_Bottom" xml:space="preserve">
+    <value>محاذاة لأسفل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetVerticalAlignment_Bottom_Description" xml:space="preserve">
+    <value>محاذاة النص إلى أسفل كتلة النص.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetVerticalAlignment_Center" xml:space="preserve">
+    <value>محاذاة إلى الوسط</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetVerticalAlignment_Center_Description" xml:space="preserve">
+    <value>محاذاة النص بحيث يتم توسيطه بين أعلى وأسفل كتلة النص.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetVerticalAlignment_Top" xml:space="preserve">
+    <value>محاذاة إلى الأعلى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetVerticalAlignment_Top_Description" xml:space="preserve">
+    <value>محاذاة النص إلى أعلى كتلة النص.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SetZoom" xml:space="preserve">
+    <value>إعداد التكبير/التصغير</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowContainerHeader" xml:space="preserve">
+    <value>إظهار رأس</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowContainerHeader_Description" xml:space="preserve">
+    <value>إظهار/إخفاء رأس للحاوية</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowPopupMenu" xml:space="preserve">
+    <value>إظهار قائمة منبثقة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowPrintPreview" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowPrintPreview_Description" xml:space="preserve">
+    <value>معاينة وإجراء تغييرات قبل الطباعة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ShowPropertiesPanel" xml:space="preserve">
+    <value>إظهار خصائص العنصر</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_StartDragTool" xml:space="preserve">
+    <value>بدء تشغيل أداة السحب</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_StartDragToolAlternate" xml:space="preserve">
+    <value>بدء سحب أداة بديلة</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SugiyamaLayout_Down" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SugiyamaLayout_Left" xml:space="preserve">
+    <value>Right To Left</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SugiyamaLayout_Right" xml:space="preserve">
+    <value>اليسار إلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_SugiyamaLayout_Up" xml:space="preserve">
+    <value>السفلية إلى أعلى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TipOverTreeLayout_LeftToRight" xml:space="preserve">
+    <value>اليسار إلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TipOverTreeLayout_RightToLeft" xml:space="preserve">
+    <value>Right To Left</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TipOverTreeLayoutForSubordinates_LeftToRight" xml:space="preserve">
+    <value>اليسار إلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TipOverTreeLayoutForSubordinates_RightToLeft" xml:space="preserve">
+    <value>Right To Left</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontBold_Description" xml:space="preserve">
+    <value>جعل النص غامقاً.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontItalic_Description" xml:space="preserve">
+    <value>مائلة النص الخاص بك-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontStrikethrough_Description" xml:space="preserve">
+    <value>عبر شيء من رسم خط من خلال إجرائه.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ToggleFontUnderline_Description" xml:space="preserve">
+    <value>تسطير النص الخاص بك-</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayout_BufferSize" xml:space="preserve">
+    <value>حجم المخزن المؤقت</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayout_Down" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayout_Left" xml:space="preserve">
+    <value>Right To Left</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayout_Right" xml:space="preserve">
+    <value>اليسار إلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayout_Up" xml:space="preserve">
+    <value>السفلية إلى أعلى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayoutForSubordinates_BottomToTop" xml:space="preserve">
+    <value>السفلية إلى أعلى</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayoutForSubordinates_LeftToRight" xml:space="preserve">
+    <value>اليسار إلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayoutForSubordinates_RightToLeft" xml:space="preserve">
+    <value>Right To Left</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_TreeLayoutForSubordinates_TopToBottom" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_Undo_Description" xml:space="preserve">
+    <value>التراجع عن العملية الأخيرة.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ZoomIn_Description" xml:space="preserve">
+    <value>التكبير للحصول على عرض عن قرب للمستند.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramCommand_ZoomOut_Description" xml:space="preserve">
+    <value>التصغير لمشاهدة مساحة أكبر من الصفحة على حجم مصغر.</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramDesigner_SaveChangesConfirmation" xml:space="preserve">
+    <value>هل تريد تطبيق التغييرات؟</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramNotification_ApplyPageSettings" xml:space="preserve">
+    <value>التي تريد تطبيق إعدادات الصفحة الجديدة إلى الرسم التخطيطي؟</value>
+  </data>
+  <data name="DiagramControlStringId.DiagramNotification_DefaultCaption" xml:space="preserve">
+    <value>مصمم الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.DocumentDisplayFormat_Modified" xml:space="preserve">
+    <value>{0}*</value>
+  </data>
+  <data name="DiagramControlStringId.DocumentFormat_AllFiles" xml:space="preserve">
+    <value>الملفات</value>
+  </data>
+  <data name="DiagramControlStringId.DocumentFormat_XmlFiles" xml:space="preserve">
+    <value>ملفات Xml</value>
+  </data>
+  <data name="DiagramControlStringId.DocumentLoadErrorMessage" xml:space="preserve">
+    <value>لا يمكن تحميل الملف المحدد</value>
+  </data>
+  <data name="DiagramControlStringId.DocumentSaveErrorMessage" xml:space="preserve">
+    <value>لا يمكن حفظ الملف المحدد</value>
+  </data>
+  <data name="DiagramControlStringId.ExportAs" xml:space="preserve">
+    <value>تصدير as...</value>
+  </data>
+  <data name="DiagramControlStringId.ExportAs_Description" xml:space="preserve">
+    <value>تصدير الرسم التخطيطي لتنسيقات الملفات المختلفة مثل JPEG أو PNG</value>
+  </data>
+  <data name="DiagramControlStringId.ExportDiagram_ExportFailed" xml:space="preserve">
+    <value>فشل التصدير</value>
+  </data>
+  <data name="DiagramControlStringId.ExportDiagram_ExportFailed_UnsupportedFormat_Message" xml:space="preserve">
+    <value>تحاول حفظ الرسم التخطيطي للمحتوى باستخدام ملحق ملف غير معتمد.</value>
+  </data>
+  <data name="DiagramControlStringId.ExportDiagram_ExportFailedMessage" xml:space="preserve">
+    <value>تعذر تصدير الرسم التخطيطي للصورة الناتجة كبيرة جداً.</value>
+  </data>
+  <data name="DiagramControlStringId.FontSize_Description" xml:space="preserve">
+    <value>تغيير حجم النص الخاص بك.</value>
+  </data>
+  <data name="DiagramControlStringId.FontSize_NonNumericErrorMessage" xml:space="preserve">
+    <value>حجم الخط المحدد غير صالح.</value>
+  </data>
+  <data name="DiagramControlStringId.FontSize_OutOfRangeErrorMessage" xml:space="preserve">
+    <value>يجب أن يكون حجم الخط بين {0} و {1}-</value>
+  </data>
+  <data name="DiagramControlStringId.FontSizeAndFamilyButtonGroup" xml:space="preserve">
+    <value>حجم الخط ومجموعة أزرار الأسرة</value>
+  </data>
+  <data name="DiagramControlStringId.FontTypeAndColorButtonGroup" xml:space="preserve">
+    <value>نوع الخط ولون الزر المجموعة</value>
+  </data>
+  <data name="DiagramControlStringId.ForegroundColor" xml:space="preserve">
+    <value>لون الخط</value>
+  </data>
+  <data name="DiagramControlStringId.ForegroundColor_Description" xml:space="preserve">
+    <value>تغيير لون النص الخاص بك-</value>
+  </data>
+  <data name="DiagramControlStringId.HorizontalTextAlignmentButtonGroup" xml:space="preserve">
+    <value>مجموعة الزر محاذاة النص أفقياً</value>
+  </data>
+  <data name="DiagramControlStringId.ImageFlipMode_Both" xml:space="preserve">
+    <value>كلا</value>
+  </data>
+  <data name="DiagramControlStringId.ImageLoadErrorMessage" xml:space="preserve">
+    <value>لا يمكن تحميل الملف المحدد</value>
+  </data>
+  <data name="DiagramControlStringId.ImageStretchMode_Uniform" xml:space="preserve">
+    <value>موحدة</value>
+  </data>
+  <data name="DiagramControlStringId.ImageStretchMode_UniformToFill" xml:space="preserve">
+    <value>موحدة لملء</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsRotate_Description" xml:space="preserve">
+    <value>استدارة أو انعكاس الصورة المحددة.</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale" xml:space="preserve">
+    <value>تعيين حجم الصورة</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_0_25" xml:space="preserve">
+    <value>25%</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_0_5" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_0_75" xml:space="preserve">
+    <value>75 ٪</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_1" xml:space="preserve">
+    <value>100 ٪</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_1_5" xml:space="preserve">
+    <value>150%</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_2" xml:space="preserve">
+    <value>200%</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_4" xml:space="preserve">
+    <value>400%</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsSetImageScale_Description" xml:space="preserve">
+    <value>يحدد عامل مقياس الصورة.</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsStretchMode" xml:space="preserve">
+    <value>تعيين وضع التمدد</value>
+  </data>
+  <data name="DiagramControlStringId.ImageToolsStretchMode_Description" xml:space="preserve">
+    <value>إدارة كيف يتم تغيير حجم الصورة المصدر لملء المساحة المخصصة لها-</value>
+  </data>
+  <data name="DiagramControlStringId.InsertContainer" xml:space="preserve">
+    <value>حاوية</value>
+  </data>
+  <data name="DiagramControlStringId.InsertContainer_Description" xml:space="preserve">
+    <value>وضع حاوية حول الأشكال المحددة في الرسم التخطيطي.</value>
+  </data>
+  <data name="DiagramControlStringId.InsertImage_DialogFilter" xml:space="preserve">
+    <value>كافة الصور</value>
+  </data>
+  <data name="DiagramControlStringId.InsertPictureTitle" xml:space="preserve">
+    <value>إدراج الصورة</value>
+  </data>
+  <data name="DiagramControlStringId.LayoutAndRoutingGroupSuperTip_Caption" xml:space="preserve">
+    <value>التخطيط والتوجيه</value>
+  </data>
+  <data name="DiagramControlStringId.LayoutAndRoutingGroupSuperTip_Description" xml:space="preserve">
+    <value>إظهار علامة التبويب التخطيط والتوجيه في مربع الحوار-</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_Bow" xml:space="preserve">
+    <value>القوس</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_FiveSides" xml:space="preserve">
+    <value>الجانبين 5</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_FourSides" xml:space="preserve">
+    <value>4 الجانبين</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_Gap" xml:space="preserve">
+    <value>الفجوة</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_HeightSetter" xml:space="preserve">
+    <value>الانتقال السريع خط الطول</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_HorizontalLines" xml:space="preserve">
+    <value>خطوط أفقية</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_LinesSelector" xml:space="preserve">
+    <value>إضافة بند يقفز إلى</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_SevenSides" xml:space="preserve">
+    <value>الجانبين 7</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_SixSides" xml:space="preserve">
+    <value>الجانبين 6</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_StyleSelector" xml:space="preserve">
+    <value>الانتقال السريع خط نمط</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_ThreeSides" xml:space="preserve">
+    <value>3 الجانبين</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_TwoSides" xml:space="preserve">
+    <value>2 الجانبين</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_VerticalLines" xml:space="preserve">
+    <value>خطوط عمودية</value>
+  </data>
+  <data name="DiagramControlStringId.LineJump_WidthSetter" xml:space="preserve">
+    <value>الانتقال السريع خط العرض</value>
+  </data>
+  <data name="DiagramControlStringId.MeasureUnit_Degrees_Shorthand" xml:space="preserve">
+    <value>درجة</value>
+  </data>
+  <data name="DiagramControlStringId.MeasureUnit_Inches" xml:space="preserve">
+    <value>بوصة</value>
+  </data>
+  <data name="DiagramControlStringId.MeasureUnit_Millimeters" xml:space="preserve">
+    <value>ملليمتر</value>
+  </data>
+  <data name="DiagramControlStringId.MeasureUnit_Pixels" xml:space="preserve">
+    <value>بكسل</value>
+  </data>
+  <data name="DiagramControlStringId.MeasureUnit_Pixels_Shorthand" xml:space="preserve">
+    <value>px</value>
+  </data>
+  <data name="DiagramControlStringId.Menu_AllowEmptySelection_Button" xml:space="preserve">
+    <value>تحديد فارغ</value>
+  </data>
+  <data name="DiagramControlStringId.Menu_AllowLiveResizing_Button" xml:space="preserve">
+    <value>يعيش ريسيزينج</value>
+  </data>
+  <data name="DiagramControlStringId.Menu_SnapDistance_Editor" xml:space="preserve">
+    <value>انطباق المسافة</value>
+  </data>
+  <data name="DiagramControlStringId.Menu_SnapToGrid_Button" xml:space="preserve">
+    <value>انجذاب إلى الشبكة</value>
+  </data>
+  <data name="DiagramControlStringId.Menu_SnapToItems_Button" xml:space="preserve">
+    <value>انجذاب للعناصر</value>
+  </data>
+  <data name="DiagramControlStringId.MessageAddCommandConstructorError" xml:space="preserve">
+    <value>لا يمكن العثور على منشئ مع معلمة نوع دياجرامكونترول في الفئة {0}</value>
+  </data>
+  <data name="DiagramControlStringId.More_Shapes_Name" xml:space="preserve">
+    <value>المزيد من الأشكال</value>
+  </data>
+  <data name="DiagramControlStringId.No_Shapes_Found_Name" xml:space="preserve">
+    <value>لا توجد مباريات</value>
+  </data>
+  <data name="DiagramControlStringId.No_Stencils_Open_Name" xml:space="preserve">
+    <value>هناك لا قوالب الاستنسل المفتوحة.</value>
+  </data>
+  <data name="DiagramControlStringId.OpenFile_UnknownItemKindMessage" xml:space="preserve">
+    <value>المخطط يحتوي على عنصر غير معروف: '{0}'</value>
+  </data>
+  <data name="DiagramControlStringId.OpenFileDialogTitle" xml:space="preserve">
+    <value>فتح ملف</value>
+  </data>
+  <data name="DiagramControlStringId.PageOrientation_Description" xml:space="preserve">
+    <value>تبديل الصفحة بين التخطيطات العمودية والأفقية.</value>
+  </data>
+  <data name="DiagramControlStringId.PageOrientationHeader" xml:space="preserve">
+    <value>معرض اتجاه الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.PageOrientationSelectorName" xml:space="preserve">
+    <value>محدد اتجاه الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.PanAndZoomPanel" xml:space="preserve">
+    <value>عموم &amp;&amp; التكبير</value>
+  </data>
+  <data name="DiagramControlStringId.PanAndZoomPanel_Description" xml:space="preserve">
+    <value>إظهار نافذة عموم &amp;&amp; التكبير/ التصغير.</value>
+  </data>
+  <data name="DiagramControlStringId.PanAndZoomPanel_SingleAmp" xml:space="preserve">
+    <value>التحريك والتكبير/التصغير</value>
+  </data>
+  <data name="DiagramControlStringId.PanAndZoomPanel_SingleAmp_Description" xml:space="preserve">
+    <value>إظهار نافذة التحريك والتكبير/التصغير.</value>
+  </data>
+  <data name="DiagramControlStringId.Panel_PanAndZoom_Name" xml:space="preserve">
+    <value>التحريك والتكبير/التصغير</value>
+  </data>
+  <data name="DiagramControlStringId.Panel_Shapes_Name" xml:space="preserve">
+    <value>الأشكال</value>
+  </data>
+  <data name="DiagramControlStringId.Panes" xml:space="preserve">
+    <value>أجزاء</value>
+  </data>
+  <data name="DiagramControlStringId.Panes_Description" xml:space="preserve">
+    <value>إظهار أجزاء لعرض الأشكال وبيانات الشكل.</value>
+  </data>
+  <data name="DiagramControlStringId.PrintMenu_Description" xml:space="preserve">
+    <value>طباعة هذا الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_BestFit" xml:space="preserve">
+    <value>الاحتواء الأفضل</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_BestFit_Description" xml:space="preserve">
+    <value>إعداد التكبير الأمثل وصفحات في صف في المعاينة.</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Close_Description" xml:space="preserve">
+    <value>إغلاق المعاينة.</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_FitToMaxPagesAcrossHeader" xml:space="preserve">
+    <value>الصفحات ماكس</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_FitToMaxPagesAcrossSelector" xml:space="preserve">
+    <value>يصلح لصفحات كحد أقصى عبر محدد</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_PageOfPagesDisplayFormat" xml:space="preserve">
+    <value>الصفحة {0} {1}</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Description" xml:space="preserve">
+    <value>تمدد أو تقليص المستند للمحتوى إلى نسبة مئوية من حجمها الفعلي.</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Dialog_BeginAdjustLabel" xml:space="preserve">
+    <value>ضبط إلى</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Dialog_BeginFitLabel" xml:space="preserve">
+    <value>من المناسب أن</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Dialog_EndAdjustLabel" xml:space="preserve">
+    <value>الحجم العادي</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Dialog_EndFitLabel" xml:space="preserve">
+    <value>صفحة (صفحات) إلى</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Scale_Dialog_ValidationError" xml:space="preserve">
+    <value>القيمة خارج النطاق</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_Zoom_Description" xml:space="preserve">
+    <value>تغيير عامل التكبير/التصغير الحالي لمعاينة المستند.</value>
+  </data>
+  <data name="DiagramControlStringId.PrintPreview_ZoomSelector" xml:space="preserve">
+    <value>تكبير محدد</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel" xml:space="preserve">
+    <value>خصائص الفريق</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Angle" xml:space="preserve">
+    <value>زاوية</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BackgroundColor" xml:space="preserve">
+    <value>معلومات أساسية</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginArrow" xml:space="preserve">
+    <value>بدء بدء السهم</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginArrowSize" xml:space="preserve">
+    <value>بدء تشغيل حجم السهم</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginLabelArrowOffset" xml:space="preserve">
+    <value>بدء تسمية السهم إزاحة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginLabelConnectorOffset" xml:space="preserve">
+    <value>بداية تسمية إزاحة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginLeftLabel" xml:space="preserve">
+    <value>التسمية</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginRightLabel" xml:space="preserve">
+    <value>ابدأ التسمية اليمنى</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginX" xml:space="preserve">
+    <value>ابدأ X</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BeginY" xml:space="preserve">
+    <value>بدء Y</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BorderBrush" xml:space="preserve">
+    <value>حد فرشاة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BorderThickness" xml:space="preserve">
+    <value>سمك</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BottomLeft" xml:space="preserve">
+    <value>أسفل اليسار</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_BottomRight" xml:space="preserve">
+    <value>أسفل اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_CanvasSizeMode" xml:space="preserve">
+    <value>حجم وضع</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_ContentBackground" xml:space="preserve">
+    <value>نصف</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_CornerRadius" xml:space="preserve">
+    <value>قطرها</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Description" xml:space="preserve">
+    <value>إظهار لوحة الخصائص.</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndArrow" xml:space="preserve">
+    <value>نهاية السهم</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndArrowSize" xml:space="preserve">
+    <value>نهاية حجم السهم</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndLabelArrowOffset" xml:space="preserve">
+    <value>إزاحة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndLabelConnectorOffset" xml:space="preserve">
+    <value>نهاية رابط التسمية إزاحة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndLeftLabel" xml:space="preserve">
+    <value>نهاية التسمية اليسرى</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndRightLabel" xml:space="preserve">
+    <value>نهاية التسمية اليمنى</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndX" xml:space="preserve">
+    <value>نهاية X</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_EndY" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_FlipMode" xml:space="preserve">
+    <value>الوجه</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_ForegroundColor" xml:space="preserve">
+    <value>رأس الأمامية</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_HeaderPadding" xml:space="preserve">
+    <value>الانتقال</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_LineJumpPlacement" xml:space="preserve">
+    <value>خط</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_LineJumpSize" xml:space="preserve">
+    <value>خط الانتقال</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_LineJumpStyle" xml:space="preserve">
+    <value>Line Jump Style</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Padding" xml:space="preserve">
+    <value>الحشو</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_PageSize" xml:space="preserve">
+    <value>حجم الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_PaperKind" xml:space="preserve">
+    <value>نوع الورق</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_SelectedStencils" xml:space="preserve">
+    <value>المحدد</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_ShowGrid" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_ShowHeader" xml:space="preserve">
+    <value>خطوط رؤوس عرض</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_ShowRulers" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_StrokeColor" xml:space="preserve">
+    <value>السكتة الدماغية</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_StrokeDashArray" xml:space="preserve">
+    <value>الحد</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_StrokeThickness" xml:space="preserve">
+    <value>سُمك حدّة نمط</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Theme" xml:space="preserve">
+    <value>الموضوع</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_TopLeft" xml:space="preserve">
+    <value>أعلى اليسار</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_TopRight" xml:space="preserve">
+    <value>أعلى اليمين</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Type" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_X" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="DiagramControlStringId.PropertiesPanel_Y" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="DiagramControlStringId.PropertyGridView_Alphabetical" xml:space="preserve">
+    <value>أبجدي</value>
+  </data>
+  <data name="DiagramControlStringId.PropertyGridView_Categorized" xml:space="preserve">
+    <value>تصنيف</value>
+  </data>
+  <data name="DiagramControlStringId.QuickShapes_Name" xml:space="preserve">
+    <value>الأشكال السريع</value>
+  </data>
+  <data name="DiagramControlStringId.Region_LineJumps" xml:space="preserve">
+    <value>التقاطع</value>
+  </data>
+  <data name="DiagramControlStringId.Region_PageMargin" xml:space="preserve">
+    <value>هامش الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.Region_PageOrientation" xml:space="preserve">
+    <value>اتجاه الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.Region_PageSize" xml:space="preserve">
+    <value>صفحة حجم</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayout" xml:space="preserve">
+    <value>إعادة تخطيط الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayout_Description" xml:space="preserve">
+    <value>تخطيط الرسم التخطيطي بالسماح للبرامج لإعادة تعيين موضع العناصر.</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutCircularHeader" xml:space="preserve">
+    <value>التعميم</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutMindMapTreeHeader" xml:space="preserve">
+    <value>MindMap</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutParts" xml:space="preserve">
+    <value>إعادة تخطيط المرؤوسين</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutParts_Description" xml:space="preserve">
+    <value>المرؤوسين إعادة تخطيط العنصر الجذر أو العناصر المحددة-</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutPartsMindMapTreeHeader" xml:space="preserve">
+    <value>MindMap</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutPartsTipOverTreeHeader" xml:space="preserve">
+    <value>تيبوفير</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutPartsTreeHeader" xml:space="preserve">
+    <value>التسلسل الهرمي</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutSugiyama" xml:space="preserve">
+    <value>الطبقات</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutTipOverTreeHeader" xml:space="preserve">
+    <value>تيبوفير</value>
+  </data>
+  <data name="DiagramControlStringId.ReLayoutTree" xml:space="preserve">
+    <value>التسلسل الهرمي</value>
+  </data>
+  <data name="DiagramControlStringId.Ribbon_GridSize" xml:space="preserve">
+    <value>حجم الشبكة</value>
+  </data>
+  <data name="DiagramControlStringId.Ribbon_MeasureUnit" xml:space="preserve">
+    <value>قياس</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonGallery_ThemeStyles" xml:space="preserve">
+    <value>موضوع الأنماط</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonGallery_VariantStyles" xml:space="preserve">
+    <value>أنماط البديل</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageCategory_ContainerTools" xml:space="preserve">
+    <value>أدوات حاوية</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageCategory_ImageTools" xml:space="preserve">
+    <value>أدوات الصورة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Action" xml:space="preserve">
+    <value>عمل</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Arrange" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Clipboard" xml:space="preserve">
+    <value>الحافظة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_ContainerStyles" xml:space="preserve">
+    <value>أنماط الحاوية</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_DiagramParts" xml:space="preserve">
+    <value>أجزاء الرسم التخطيطي</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_ImageTools_Arrange" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_ImageTools_ImageStyles" xml:space="preserve">
+    <value>أنماط الصور</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_ImageTools_Picture" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_ShapeStyles" xml:space="preserve">
+    <value>الشكل</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Show" xml:space="preserve">
+    <value>إظهار</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Themes" xml:space="preserve">
+    <value>المواضيع</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_Toolbox" xml:space="preserve">
+    <value>مربع الأدوات</value>
+  </data>
+  <data name="DiagramControlStringId.RibbonPageGroup_UserInterfaceThemes" xml:space="preserve">
+    <value>واجهة المواضيع</value>
+  </data>
+  <data name="DiagramControlStringId.SaveFileAsDialogTitle" xml:space="preserve">
+    <value>ملف كما</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Alternative_Name" xml:space="preserve">
+    <value>البديل</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_CreateRequest_Name" xml:space="preserve">
+    <value>كريتيريكويست</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Decision1_Name" xml:space="preserve">
+    <value>Decision1</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Decision2_Name" xml:space="preserve">
+    <value>Decision2</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_DiskStorage_Name" xml:space="preserve">
+    <value>التخزين على القرص</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_DividedEvent_Name" xml:space="preserve">
+    <value>الحدث مقسم</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_DividedProcess_Name" xml:space="preserve">
+    <value>عملية منقسمة</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_MessageFromUser_Name" xml:space="preserve">
+    <value>رسالة من مستخدم</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_MessageToUser_Name" xml:space="preserve">
+    <value>رسالة إلى مستخدم</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Name" xml:space="preserve">
+    <value>أشكال الرسم التخطيطي SDL</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_OffPageReference_Name" xml:space="preserve">
+    <value>إيقاف الصفحة المرجعية</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_OnPageReference_Name" xml:space="preserve">
+    <value>في الصفحة المرجعية</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_PrimitiveFromCallControl_Name" xml:space="preserve">
+    <value>بدائية من التحكم بالاتصال</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_PrimitiveToCallControl_Name" xml:space="preserve">
+    <value>البدائية لاستدعاء عنصر التحكم</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Procedure_Name" xml:space="preserve">
+    <value>الإجراء</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Return_Name" xml:space="preserve">
+    <value>العودة</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_Terminator_Name" xml:space="preserve">
+    <value>فاصل</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_VariableProcedure_Name" xml:space="preserve">
+    <value>الإجراء متغير</value>
+  </data>
+  <data name="DiagramControlStringId.SDLDiagramShapes_VariableStart_Name" xml:space="preserve">
+    <value>بدء متغير</value>
+  </data>
+  <data name="DiagramControlStringId.Search_Shapes_Null_Text" xml:space="preserve">
+    <value>البحث عن الأشكال...</value>
+  </data>
+  <data name="DiagramControlStringId.Selector_CustomSize" xml:space="preserve">
+    <value>حجم مخصص</value>
+  </data>
+  <data name="DiagramControlStringId.Selector_PredefinedSize" xml:space="preserve">
+    <value>المساحة المحددة مسبقاً</value>
+  </data>
+  <data name="DiagramControlStringId.SeparatorName" xml:space="preserve">
+    <value>البند شريط فاصل</value>
+  </data>
+  <data name="DiagramControlStringId.ShapesPanel" xml:space="preserve">
+    <value>لوحة الأشكال</value>
+  </data>
+  <data name="DiagramControlStringId.ShapesPanel_Description" xml:space="preserve">
+    <value>إظهار لوحة الأشكال-</value>
+  </data>
+  <data name="DiagramControlStringId.ShapeStyles" xml:space="preserve">
+    <value>أنماط الأشكال</value>
+  </data>
+  <data name="DiagramControlStringId.ShowContainerHeader" xml:space="preserve">
+    <value>إظهار رأس</value>
+  </data>
+  <data name="DiagramControlStringId.ShowContainerHeader_Description" xml:space="preserve">
+    <value>إظهار/إخفاء رأس للحاوية</value>
+  </data>
+  <data name="DiagramControlStringId.ShowGrid_Description" xml:space="preserve">
+    <value>خطوط الشبكة تجعل من السهل لأن يمكنك محاذاة الكائنات مع نص أو كائنات أخرى أو معين الموضعية.</value>
+  </data>
+  <data name="DiagramControlStringId.ShowPageBreaks" xml:space="preserve">
+    <value>فواصل الصفحات</value>
+  </data>
+  <data name="DiagramControlStringId.ShowPageBreaks_Description" xml:space="preserve">
+    <value>تشغيل فواصل الصفحات لرؤية ما سيتم طباعته على كل صفحة من المستند الخاص بك.</value>
+  </data>
+  <data name="DiagramControlStringId.ShowRulers" xml:space="preserve">
+    <value>المسطرة</value>
+  </data>
+  <data name="DiagramControlStringId.SnapToGrid" xml:space="preserve">
+    <value>انجذاب إلى الشبكة</value>
+  </data>
+  <data name="DiagramControlStringId.SnapToGrid_Description" xml:space="preserve">
+    <value>موقف عناصر الرسم التخطيطي إلى أقرب تقاطع في الشبكة.</value>
+  </data>
+  <data name="DiagramControlStringId.SnapToItems" xml:space="preserve">
+    <value>انجذاب للعناصر</value>
+  </data>
+  <data name="DiagramControlStringId.SnapToItems_Description" xml:space="preserve">
+    <value>محاذاة العناصر الرسم التخطيطي مع بعضها البعض.</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Calendar_Name" xml:space="preserve">
+    <value>التقويم</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Database_Name" xml:space="preserve">
+    <value>قاعدة بيانات</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Filter_Name" xml:space="preserve">
+    <value>عامل التصفية</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Forward_Name" xml:space="preserve">
+    <value>إلى الأمام</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_HardDrive_Name" xml:space="preserve">
+    <value>طوة</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Lock_Name" xml:space="preserve">
+    <value>قفل</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Name" xml:space="preserve">
+    <value>أيقونات البرامج</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Network_Name" xml:space="preserve">
+    <value>شبكة</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Permission_Name" xml:space="preserve">
+    <value>إذن</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_Sort_Name" xml:space="preserve">
+    <value>الفرز</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_ZoomIn_Name" xml:space="preserve">
+    <value>زومين</value>
+  </data>
+  <data name="DiagramControlStringId.SoftwareIcons_ZoomOut_Name" xml:space="preserve">
+    <value>زوموت</value>
+  </data>
+  <data name="DiagramControlStringId.StandardContainers_Alternating" xml:space="preserve">
+    <value>التناوب</value>
+  </data>
+  <data name="DiagramControlStringId.StandardContainers_Banner" xml:space="preserve">
+    <value>شعار</value>
+  </data>
+  <data name="DiagramControlStringId.StandardContainers_Classic" xml:space="preserve">
+    <value>كلاسيك</value>
+  </data>
+  <data name="DiagramControlStringId.StandardContainers_Corners" xml:space="preserve">
+    <value>الزوايا</value>
+  </data>
+  <data name="DiagramControlStringId.StandardContainers_Name" xml:space="preserve">
+    <value>حاوية معيارية</value>
+  </data>
+  <data name="DiagramControlStringId.StandardContainers_Plain" xml:space="preserve">
+    <value>عادي</value>
+  </data>
+  <data name="DiagramControlStringId.StatusBarAngle" xml:space="preserve">
+    <value>زاوية</value>
+  </data>
+  <data name="DiagramControlStringId.StatusBarShapeInfo" xml:space="preserve">
+    <value>معلومات الشكل</value>
+  </data>
+  <data name="DiagramControlStringId.StatusBarZoomEditor_Description" xml:space="preserve">
+    <value>تغيير عامل التكبير/التصغير-</value>
+  </data>
+  <data name="DiagramControlStringId.Stencils_Name" xml:space="preserve">
+    <value>قوالب الاستنسل</value>
+  </data>
+  <data name="DiagramControlStringId.StrokeColor" xml:space="preserve">
+    <value>السكتة الدماغية</value>
+  </data>
+  <data name="DiagramControlStringId.StrokeColor_Description" xml:space="preserve">
+    <value>تغيير لون الحد.</value>
+  </data>
+  <data name="DiagramControlStringId.TabHeader_LayoutAndRouting" xml:space="preserve">
+    <value>التخطيط والتوجيه</value>
+  </data>
+  <data name="DiagramControlStringId.TabHeader_PageSize" xml:space="preserve">
+    <value>حجم الصفحة</value>
+  </data>
+  <data name="DiagramControlStringId.Themes" xml:space="preserve">
+    <value>المواضيع</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_BalancedEffect_Name" xml:space="preserve">
+    <value>متوازنة</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Daybreak_Name" xml:space="preserve">
+    <value>فجر</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_FocusedEffect_Name" xml:space="preserve">
+    <value>وركز</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Integral_Name" xml:space="preserve">
+    <value>لا يتجزأ</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_IntenseEffect_Name" xml:space="preserve">
+    <value>مكثف</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Linear_Name" xml:space="preserve">
+    <value>خطي</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Lines_Name" xml:space="preserve">
+    <value>خطوط</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_ModerateEffect_Name" xml:space="preserve">
+    <value>معتدلة</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_NoTheme_Name" xml:space="preserve">
+    <value>لا توجد سمة</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Office_Name" xml:space="preserve">
+    <value>مكتب</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Parallel_Name" xml:space="preserve">
+    <value>متوازي</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_RefinedEffect_Name" xml:space="preserve">
+    <value>المكرر</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_Sequence_Name" xml:space="preserve">
+    <value>التسلسل</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_SubtleEffect_Name" xml:space="preserve">
+    <value>خفية</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_ThemeStyleId_Name" xml:space="preserve">
+    <value>{0}، لهجة {1}</value>
+  </data>
+  <data name="DiagramControlStringId.Themes_VariantStyleId_Name" xml:space="preserve">
+    <value>{0} البديل</value>
+  </data>
+  <data name="DiagramControlStringId.Tool_Connector" xml:space="preserve">
+    <value>موصل</value>
+  </data>
+  <data name="DiagramControlStringId.Tool_Pan" xml:space="preserve">
+    <value>عموم</value>
+  </data>
+  <data name="DiagramControlStringId.Tool_Pointer" xml:space="preserve">
+    <value>المؤشر</value>
+  </data>
+  <data name="DiagramControlStringId.ToolDisplayFormat" xml:space="preserve">
+    <value>أداة {0}</value>
+  </data>
+  <data name="DiagramControlStringId.Validation_Size" xml:space="preserve">
+    <value>يجب أن تكون قيمة {0} أكبر من أو يساوي {1}.</value>
+  </data>
+  <data name="DiagramControlStringId.VerticalTextAlignmentButtonGroup" xml:space="preserve">
+    <value>مجموعة الزر محاذاة النص العمودي</value>
+  </data>
+</root>

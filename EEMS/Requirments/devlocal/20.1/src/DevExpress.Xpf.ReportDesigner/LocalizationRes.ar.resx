@@ -1,0 +1,1967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReportDesignerStringId.NewParameterEditor_Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_OptionsTab_Header" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="ReportDesignerStringId.Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ReportDesignerStringId.Delete_Caption" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_Header" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportStyle_Data" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesEditor_PropertiesTab" xml:space="preserve">
+    <value>خصائص</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_PropertiesTab_Header" xml:space="preserve">
+    <value>خصائص</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties" xml:space="preserve">
+    <value>خصائص</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_SeriesElements_AddSeriesTitle_Caption" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_ChartTitle" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SeriesTitle" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportStyle_Title" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddLegend_Caption" xml:space="preserve">
+    <value>أسطورة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_Legend" xml:space="preserve">
+    <value>أسطورة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AxisElements_AddStrip_Caption" xml:space="preserve">
+    <value>قطاع</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Redo_Hint" xml:space="preserve">
+    <value>الإعادة</value>
+  </data>
+  <data name="ReportDesignerStringId.Redo_Caption" xml:space="preserve">
+    <value>الإعادة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Undo_Hint" xml:space="preserve">
+    <value>التراجع عن</value>
+  </data>
+  <data name="ReportDesignerStringId.Undo_Caption" xml:space="preserve">
+    <value>التراجع عن</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_AreaSeriesGroup" xml:space="preserve">
+    <value>المنطقة سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_BarSeriesGroup" xml:space="preserve">
+    <value>سلسلة شريط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_RangeSeriesGroup" xml:space="preserve">
+    <value>سلسلة النطاق</value>
+  </data>
+  <data name="ReportDesignerStringId.Warning" xml:space="preserve">
+    <value>تحذير</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_NoDataTargetControlText" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="ReportDesignerStringId.None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_LayoutGroup" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_ConstantLineCollection" xml:space="preserve">
+    <value>خطوط ثابتة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SeriesLabel" xml:space="preserve">
+    <value>التسمية</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesEditor_PointsTab" xml:space="preserve">
+    <value>النقاط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SeriesPointCollection" xml:space="preserve">
+    <value>النقاط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_StripCollection" xml:space="preserve">
+    <value>شرائط</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_AlignmentGroup" xml:space="preserve">
+    <value>المحاذاة</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="ReportDesignerStringId.Copy" xml:space="preserve">
+    <value>نسخة</value>
+  </data>
+  <data name="ReportDesignerStringId.Copy_Caption" xml:space="preserve">
+    <value>نسخة</value>
+  </data>
+  <data name="ReportDesignerStringId.All" xml:space="preserve">
+    <value>جميع</value>
+  </data>
+  <data name="ReportDesignerStringId.Add" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PalettesEditor_Add" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="ReportDesignerStringId.Remove" xml:space="preserve">
+    <value>إزالة</value>
+  </data>
+  <data name="ReportDesignerStringId.Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="ReportDesignerStringId.Column" xml:space="preserve">
+    <value>عمود</value>
+  </data>
+  <data name="ReportDesignerStringId.Clear" xml:space="preserve">
+    <value>واضحة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesEditor_ColorColumn" xml:space="preserve">
+    <value>لون</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_ColorDropTargetControlText" xml:space="preserve">
+    <value>لون</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_FontGroup" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonGroup_Font" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonPage_Preview" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Enabled" xml:space="preserve">
+    <value>تمكين</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesEditor_ValueColumn" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_ValueDropTargetControlText" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PalettesEditor_Load" xml:space="preserve">
+    <value>تحميل</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PalettesEditor_Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="ReportDesignerStringId.SaveReport_Caption" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="ReportDesignerStringId.PageOrientation_Landscape" xml:space="preserve">
+    <value>المناظر الطبيعية</value>
+  </data>
+  <data name="ReportDesignerStringId.PageOrientation_Portrait" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SummaryRunning_Page" xml:space="preserve">
+    <value>الصفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectLabelType_Height" xml:space="preserve">
+    <value>الطول:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectLabelType_Width" xml:space="preserve">
+    <value>العرض:</value>
+  </data>
+  <data name="ReportDesignerStringId.ExpressionEditor_Title" xml:space="preserve">
+    <value>محرر التعبير</value>
+  </data>
+  <data name="ReportDesignerStringId.ExpressionEditor_Fields_Caption" xml:space="preserve">
+    <value>الحقول</value>
+  </data>
+  <data name="ReportDesignerStringId.Fields" xml:space="preserve">
+    <value>الحقول</value>
+  </data>
+  <data name="ReportDesignerStringId.Parameters" xml:space="preserve">
+    <value>المعلمات</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DRotationActionName" xml:space="preserve">
+    <value>تدوير</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_EditGroup" xml:space="preserve">
+    <value>تحرير</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonGroup_Edit" xml:space="preserve">
+    <value>تحرير</value>
+  </data>
+  <data name="ReportDesignerStringId.Cut" xml:space="preserve">
+    <value>قص</value>
+  </data>
+  <data name="ReportDesignerStringId.Cut_Caption" xml:space="preserve">
+    <value>قص</value>
+  </data>
+  <data name="ReportDesignerStringId.Paste" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="ReportDesignerStringId.Paste_Caption" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesEditor_ArgumentColumn" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SummaryFunctionEditor_Argument_Caption" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_ArgumentDropTargetControlText" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="ReportDesignerStringId.Insert" xml:space="preserve">
+    <value>إدراج</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions_Count" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="ReportDesignerStringId.PageSetup_Caption" xml:space="preserve">
+    <value>إعداد الصفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_PreviewPage" xml:space="preserve">
+    <value>معاينة قبل الطباعة</value>
+  </data>
+  <data name="ReportDesignerStringId.Row" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions_Max" xml:space="preserve">
+    <value>ماكس</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions_Min" xml:space="preserve">
+    <value>الأدنى:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions_Sum" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportExplorer_Styles" xml:space="preserve">
+    <value>أنماط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DZoomInActionName" xml:space="preserve">
+    <value>التكبير</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SummaryRunning_Group" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.BringToFront_Caption" xml:space="preserve">
+    <value>إحضار إلى الأمام</value>
+  </data>
+  <data name="ReportDesignerStringId.SentToBack_Caption" xml:space="preserve">
+    <value>إرسال إلى الخلف</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Stretch" xml:space="preserve">
+    <value>وتمتد</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DZoomOutActionName" xml:space="preserve">
+    <value>التصغير</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SummaryFunctionEditor_NoFunctionIsSelected_Text" xml:space="preserve">
+    <value>(بلا)</value>
+  </data>
+  <data name="ReportDesignerStringId.Editors_NullValue_Text" xml:space="preserve">
+    <value>(بلا)</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SummaryRunning_Report" xml:space="preserve">
+    <value>تقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_ReportGroup" xml:space="preserve">
+    <value>تقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonGroup_Report" xml:space="preserve">
+    <value>تقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.Watermark_Caption" xml:space="preserve">
+    <value>علامة مائية</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignVerticalCenters_Caption" xml:space="preserve">
+    <value>قم بمحاذاة مراكز</value>
+  </data>
+  <data name="ReportDesignerStringId.CenterHorizontally_Caption" xml:space="preserve">
+    <value>توسيط أفقي</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceConcatenate_Caption" xml:space="preserve">
+    <value>إزالة التباعد الأفقي</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceDecrease_Caption" xml:space="preserve">
+    <value>إنقاص التباعد الأفقي</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceIncrease_Caption" xml:space="preserve">
+    <value>زيادة التباعد الأفقي</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceMakeEqual_Caption" xml:space="preserve">
+    <value>متساوي التباعد الأفقي</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToControlHeight_Caption" xml:space="preserve">
+    <value>جعل نفس الارتفاع</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToControlWidth_Caption" xml:space="preserve">
+    <value>جعل نفس العرض</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceDecrease_Caption" xml:space="preserve">
+    <value>إنقاص التباعد العمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceIncrease_Caption" xml:space="preserve">
+    <value>زيادة التباعد العمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceMakeEqual_Caption" xml:space="preserve">
+    <value>تباعد عمودي متساوي</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_HomePage" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_WordWrap" xml:space="preserve">
+    <value>التفاف</value>
+  </data>
+  <data name="ReportDesignerStringId.ColorEditor_None" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="ReportDesignerStringId.ColorEditor_Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Alignment" xml:space="preserve">
+    <value>المحاذاة</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_Height" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Weight" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Style" xml:space="preserve">
+    <value>نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Format" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Format_Number" xml:space="preserve">
+    <value>عدد</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Format_Percent" xml:space="preserve">
+    <value>في المائة</value>
+  </data>
+  <data name="ReportDesignerStringId.KeyCollectionEditor_Value" xml:space="preserve">
+    <value>القيمة:</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Format_Currency" xml:space="preserve">
+    <value>تحويل العملات</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Format_DateTime" xml:space="preserve">
+    <value>التاريخ والوقت</value>
+  </data>
+  <data name="ReportDesignerStringId.LocalizationEditor_Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="ReportDesignerStringId.AddCalculatedField" xml:space="preserve">
+    <value>إضافة حقل محسوب</value>
+  </data>
+  <data name="ReportDesignerStringId.AddFormattingRule" xml:space="preserve">
+    <value>إضافة قاعدة التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.AddParameter" xml:space="preserve">
+    <value>إضافة معلمة</value>
+  </data>
+  <data name="ReportDesignerStringId.AddStyle" xml:space="preserve">
+    <value>إضافة نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.AddSubBand" xml:space="preserve">
+    <value>إضافة سوباند</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignBottom_Caption" xml:space="preserve">
+    <value>محاذاة القيعان</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignBottom_Hint" xml:space="preserve">
+    <value>محاذاة القيعان من عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignHorizontalCenters_Caption" xml:space="preserve">
+    <value>محاذاة إلى المنتصف</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignHorizontalCenters_Hint" xml:space="preserve">
+    <value>محاذاة مراكز عناصر التحكم المحددة أفقياً.</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignLeft_Caption" xml:space="preserve">
+    <value>محاذاة إلى اليسار</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignLeft_Hint" xml:space="preserve">
+    <value>اليسار محاذاة عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignRight_Caption" xml:space="preserve">
+    <value>محاذاة حقوق</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignRight_Hint" xml:space="preserve">
+    <value>اليمين محاذاة عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignToGrid_Caption" xml:space="preserve">
+    <value>محاذاة إلى الشبكة</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignToGrid_Hint" xml:space="preserve">
+    <value>محاذاة مواضع عناصر التحكم المحددة على الشبكة-</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignTop_Caption" xml:space="preserve">
+    <value>محاذاة قمم</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignTop_Hint" xml:space="preserve">
+    <value>محاذاة القمم من عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.AlignVerticalCenters_Hint" xml:space="preserve">
+    <value>محاذاة مراكز عناصر التحكم المحددة عمودياً.</value>
+  </data>
+  <data name="ReportDesignerStringId.BackGround_Hint" xml:space="preserve">
+    <value>تعيين لون خلفية عنصر التحكم.</value>
+  </data>
+  <data name="ReportDesignerStringId.BandCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة الفرقة</value>
+  </data>
+  <data name="ReportDesignerStringId.BindingsEditor_ControlColumn" xml:space="preserve">
+    <value>عنصر التحكم</value>
+  </data>
+  <data name="ReportDesignerStringId.BindingsEditor_DestinationBindingColumn" xml:space="preserve">
+    <value>الوجهة ملزمة</value>
+  </data>
+  <data name="ReportDesignerStringId.BindingsEditor_PropertyNameColumn" xml:space="preserve">
+    <value>اسم الخاصية</value>
+  </data>
+  <data name="ReportDesignerStringId.BindingsEditor_SourceBindingColumn" xml:space="preserve">
+    <value>المصدر ملزم</value>
+  </data>
+  <data name="ReportDesignerStringId.BindingsEditor_Title" xml:space="preserve">
+    <value>تحرير الارتباطات...</value>
+  </data>
+  <data name="ReportDesignerStringId.BringForward_Caption" xml:space="preserve">
+    <value>إحضار إلى الأمام</value>
+  </data>
+  <data name="ReportDesignerStringId.BringToFront_Hint" xml:space="preserve">
+    <value>جلب عناصر التحكم المحددة إلى شحيحة</value>
+  </data>
+  <data name="ReportDesignerStringId.CalculatedFields_Editor_Title" xml:space="preserve">
+    <value>محرر مجموعة الحقول المحسوبة</value>
+  </data>
+  <data name="ReportDesignerStringId.Cell" xml:space="preserve">
+    <value>الخلية</value>
+  </data>
+  <data name="ReportDesignerStringId.CenterHorizontally_Hint" xml:space="preserve">
+    <value>أفقياً توسيط عناصر التحكم المحددة داخل فرقة.</value>
+  </data>
+  <data name="ReportDesignerStringId.CenterVertically_Caption" xml:space="preserve">
+    <value>توسيط عمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.CenterVertically_Hint" xml:space="preserve">
+    <value>عمودياً توسيط عناصر التحكم المحددة داخل فرقة.</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_AnnotationAnchorPointEditor_Title" xml:space="preserve">
+    <value>اختر نقطة الربط</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_AnnotationsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة التعليق التوضيحي</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_AnnotationShapePositionEditor_Title" xml:space="preserve">
+    <value>اختر الشكل الموضع</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_AxisVisibilityEditor_Title" xml:space="preserve">
+    <value>محور الرؤية</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_ConstantLinesEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة خط ثابت</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_CustomLabelsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة تسمية محور مخصص</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_DataFiltersEditor_And" xml:space="preserve">
+    <value>و</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_DataFiltersEditor_Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_DataFiltersEditor_Title" xml:space="preserve">
+    <value>تصفية البيانات في محرر مجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_DiagramPanesEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة جزء الرسم التخطيطي</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_EditPalettes" xml:space="preserve">
+    <value>لوحات تحرير...</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_IndicatorCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة المؤشرات</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_LegendCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة أسطورة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PalettesEditor_Title" xml:space="preserve">
+    <value>محرر لوحات</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Caption" xml:space="preserve">
+    <value>محرر النقش</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Format_Special" xml:space="preserve">
+    <value>الخاصة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Pattern" xml:space="preserve">
+    <value>نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_PatternEditor_Placeholders" xml:space="preserve">
+    <value>العناصر النائبة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_RecipientsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة المتلقي</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_RunDesigner" xml:space="preserve">
+    <value>تشغيل مصمم...</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_ScaleBreaksEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة فاصل المقياس</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SecondaryAxesXEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة المحور الثانوي X</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SecondaryAxesYEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة ص المحور الثانوي</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_Series" xml:space="preserve">
+    <value>تحرير سلسلة...</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة السلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesPointEditor_Title" xml:space="preserve">
+    <value>سلسلة النقاط</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesTitleCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة عنوان السلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SeriesViewEditor_Title" xml:space="preserve">
+    <value>اختر عرض سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_StripsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة قطاع</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SummaryFunctionEditor_ChooseSummaryFunction_Caption" xml:space="preserve">
+    <value>اختر دالة التلخيص...</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SummaryFunctionEditor_NoDataToSelect_Caption" xml:space="preserve">
+    <value>لا توجد بيانات لتحديد</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_SummaryFunctionEditor_Title" xml:space="preserve">
+    <value>ملخص وظيفة محرر</value>
+  </data>
+  <data name="ReportDesignerStringId.Chart_TitlesEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة عنوان المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddChartElement_Hint" xml:space="preserve">
+    <value>إضافة عنصر المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_AreaSeries3DGroup" xml:space="preserve">
+    <value>منطقة سلسلة 3D</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_BarSeries3DGroup" xml:space="preserve">
+    <value>شريط سلسلة 3D</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_FinancialSeriesGroup" xml:space="preserve">
+    <value>المالية سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_FunnelSeriesGroup" xml:space="preserve">
+    <value>تحويل سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_GanttSeriesGroup" xml:space="preserve">
+    <value>سلسلة مخطط جانت</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_LineSeries3DGroup" xml:space="preserve">
+    <value>خط سلسلة 3D</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_LineSeriesGroup" xml:space="preserve">
+    <value>سلسلة سطر</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_PieAndDoughnutSeriesGroup" xml:space="preserve">
+    <value>الدائرية والدائرية المجوفة سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_PointAndBubbleSeriesGroup" xml:space="preserve">
+    <value>و فقاعة سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_PolarSeriesGroup" xml:space="preserve">
+    <value>سلسلة الأقطاب</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AddSeriesGallery_RadarSeriesGroup" xml:space="preserve">
+    <value>سلسلة الرادار</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AnnotationMove" xml:space="preserve">
+    <value>Ctrl + زر الماوس الأيسر لنقل التعليق التوضيحي</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AxisElements_AddConstantLine_Caption" xml:space="preserve">
+    <value>Constant Line</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AxisElements_AddScaleBreak_Caption" xml:space="preserve">
+    <value>فاصل مقياس</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_AxisElements_Caption" xml:space="preserve">
+    <value>عناصر المحور</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChangeChartType_Hint" xml:space="preserve">
+    <value>Change Chart Type</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddAnnotation_Caption" xml:space="preserve">
+    <value>تعليق توضيحي...</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddAxisX_Caption" xml:space="preserve">
+    <value>المحور الثانوي X</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddAxisY_Caption" xml:space="preserve">
+    <value>المحور الثانوي Y</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddChartTitle_Caption" xml:space="preserve">
+    <value>عنوان المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddPane_Caption" xml:space="preserve">
+    <value>جزء</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_AddSeries_Caption" xml:space="preserve">
+    <value>سلسلة...</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_ChartElements_Caption" xml:space="preserve">
+    <value>عناصر المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_ChooseDataSource_Caption" xml:space="preserve">
+    <value>اختر مصدر بيانات...</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_NoDataToDisplay_Caption" xml:space="preserve">
+    <value>لا توجد بيانات للعرض</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_SeriesDropTargetControlText" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DataTab_ToolTipHintDropTargetControlText" xml:space="preserve">
+    <value>تلميح تلميح الأدوات</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Dialog_Title" xml:space="preserve">
+    <value>مصمم المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_DragDataMembersToCorrespondingCell_Hint" xml:space="preserve">
+    <value>أعضاء البيانات اسحب إلى الخلية المقابلة لتحديد بيانات المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg2DPieExplodingToolTip" xml:space="preserve">
+    <value>استخدام Ctrl مع زر الماوس الأيسر
+لتنفجر أو انهيار شرائح.</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg2DScrollingToolTip" xml:space="preserve">
+    <value>استخدام Ctrl مع زر الماوس الأيسر
+للتمرير المخطط.</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DRotationToolTip" xml:space="preserve">
+    <value>Ctrl + زر الماوس الأيسر</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DScrollingActionName" xml:space="preserve">
+    <value>التمرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DScrollingToolTip" xml:space="preserve">
+    <value>Ctrl + عجلة الماوس</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DZoomInToolTip" xml:space="preserve">
+    <value>Shift + زر الماوس الأيسر</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Msg3DZoomOutToolTip" xml:space="preserve">
+    <value>زر الماوس الأيسر + alt</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_RunDesignerSettings" xml:space="preserve">
+    <value>عرض المصمم في كل مرة يتم إضافة تخطيط جديد</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_SeriesElements_AddIndicator_Caption" xml:space="preserve">
+    <value>مؤشر</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_SeriesElements_Caption" xml:space="preserve">
+    <value>عناصر سلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_AdditionalLegendCollection" xml:space="preserve">
+    <value>أساطير إضافية</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_AdditionalPaneCollection" xml:space="preserve">
+    <value>أجزاء إضافية</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_AnnotationCollection" xml:space="preserve">
+    <value>شروح</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_AutoCreatedSeries" xml:space="preserve">
+    <value>سلسلة تم إنشاؤه تلقائياً</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_Chart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_ChartTitleCollection" xml:space="preserve">
+    <value>عناوين</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_FunnelDiagram3D" xml:space="preserve">
+    <value>3D تحويل الرسم التخطيطي</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_GanttDiagram" xml:space="preserve">
+    <value>مخطط جانت</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_IndicatorCollection" xml:space="preserve">
+    <value>المؤشرات</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_PolarDiagram" xml:space="preserve">
+    <value>رسم تخطيطي للقطبية</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_RadarDiagram" xml:space="preserve">
+    <value>رسم تخطيطي للرادار</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_ScaleBreakCollection" xml:space="preserve">
+    <value>فواصل الجدول</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SeriesCollection" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SeriesTitleCollection" xml:space="preserve">
+    <value>عناوين</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SimpleDiagram" xml:space="preserve">
+    <value>رسم تخطيطي بسيط</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SimpleDiagram3D" xml:space="preserve">
+    <value>رسم تخطيطي بسيط ثلاثي الأبعاد</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SwiftPlotDiagram" xml:space="preserve">
+    <value>سويفت رسم تخطيطي</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SwiftPlotSecondaryAxisXCollection" xml:space="preserve">
+    <value>إكساكسيس الثانوية</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_SwiftPlotSecondaryAxisYCollection" xml:space="preserve">
+    <value>ياكسيس الثانوية</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_XYDiagram" xml:space="preserve">
+    <value>مخطط س ص</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_XYDiagram3D" xml:space="preserve">
+    <value>مخطط س وص 3D</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_XYDiagramSecondaryAxisXCollection" xml:space="preserve">
+    <value>إكساكسيس الثانوية</value>
+  </data>
+  <data name="ReportDesignerStringId.ChartDesigner_Tree_XYDiagramSecondaryAxisYCollection" xml:space="preserve">
+    <value>ياكسيس الثانوية</value>
+  </data>
+  <data name="ReportDesignerStringId.ClearFormattingRules" xml:space="preserve">
+    <value>مسح تنسيق القواعد</value>
+  </data>
+  <data name="ReportDesignerStringId.ClearStyles" xml:space="preserve">
+    <value>واضح أنماط واضحة</value>
+  </data>
+  <data name="ReportDesignerStringId.CloneFormattingRule" xml:space="preserve">
+    <value>استنساخ قاعدة تنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.CloneStyle" xml:space="preserve">
+    <value>استنساخ النمط</value>
+  </data>
+  <data name="ReportDesignerStringId.CollectionItems" xml:space="preserve">
+    <value>عناصر المجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.ColorEditor_Colors" xml:space="preserve">
+    <value>الألوان</value>
+  </data>
+  <data name="ReportDesignerStringId.ColorEditor_SystemColors" xml:space="preserve">
+    <value>ألوان النظام</value>
+  </data>
+  <data name="ReportDesignerStringId.ColumnToLeft" xml:space="preserve">
+    <value>عمود إلى اليسار</value>
+  </data>
+  <data name="ReportDesignerStringId.ColumnToRight" xml:space="preserve">
+    <value>عمود إلى اليمين</value>
+  </data>
+  <data name="ReportDesignerStringId.ConditionEditor_Title" xml:space="preserve">
+    <value>محرر شرط</value>
+  </data>
+  <data name="ReportDesignerStringId.ContextMenu_Edit" xml:space="preserve">
+    <value>تحرير...</value>
+  </data>
+  <data name="ReportDesignerStringId.ContextMenu_EditExpression" xml:space="preserve">
+    <value>تحرير التعبير...</value>
+  </data>
+  <data name="ReportDesignerStringId.ContextMenu_EditFields" xml:space="preserve">
+    <value>تحرير الحقول المحتسبة...</value>
+  </data>
+  <data name="ReportDesignerStringId.Copy_Hint" xml:space="preserve">
+    <value>نسخ عناصر التحكم المحددة ووضعها في الحافظة.</value>
+  </data>
+  <data name="ReportDesignerStringId.Cut_Hint" xml:space="preserve">
+    <value>قطع عناصر التحكم المحددة من التقرير ووضعها في الحافظة.</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_ConfigureConnection" xml:space="preserve">
+    <value>تكوين اتصال...</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_ManageQueries" xml:space="preserve">
+    <value>إدارة الاستعلامات...</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_ManageRelations" xml:space="preserve">
+    <value>إدارة العلاقات...</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_QueriesEditor_Title" xml:space="preserve">
+    <value>إدارة الاستعلامات</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_RebuildDatabaseSchema " xml:space="preserve">
+    <value>إعادة إنشاء مخطط قاعدة البيانات</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_RebuildSchema" xml:space="preserve">
+    <value>إعادة بناء المخطط</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_RelationsEditor_Title" xml:space="preserve">
+    <value>محرر علاقة رئيسي-تفصيلي</value>
+  </data>
+  <data name="ReportDesignerStringId.DataSource_UpdateSchema" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="ReportDesignerStringId.DeleteUnusedFormattingRules" xml:space="preserve">
+    <value>حذف قواعد تنسيق غير مستخدمة</value>
+  </data>
+  <data name="ReportDesignerStringId.DeleteUnusedStyles" xml:space="preserve">
+    <value>الأنماط غير المستخدمة</value>
+  </data>
+  <data name="ReportDesignerStringId.DesignInReportWizard" xml:space="preserve">
+    <value>تصميم في معالج التقرير...</value>
+  </data>
+  <data name="ReportDesignerStringId.Detail" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="ReportDesignerStringId.EditBands" xml:space="preserve">
+    <value>تحرير وإعادة ترتيب العصابات...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditBindings" xml:space="preserve">
+    <value>تحرير الارتباطات...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditCalculatedFields" xml:space="preserve">
+    <value>تحرير الحقول المحتسبة...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditFormattingRules" xml:space="preserve">
+    <value>تحرير قواعد التنسيق...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditFormattingRuleSheet" xml:space="preserve">
+    <value>تحرير ورقة قاعدة التنسيق...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditGroupFields" xml:space="preserve">
+    <value>فريق تحرير الحقول...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditLevels" xml:space="preserve">
+    <value>تحرير مستويات...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditParameters" xml:space="preserve">
+    <value>تحرير معلمات...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditSortFields" xml:space="preserve">
+    <value>تحرير حقول الفرز...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditStyles" xml:space="preserve">
+    <value>تحرير أنماط</value>
+  </data>
+  <data name="ReportDesignerStringId.EditStyleSheet" xml:space="preserve">
+    <value>تحرير ورقة أنماط...</value>
+  </data>
+  <data name="ReportDesignerStringId.EditWatermark" xml:space="preserve">
+    <value>تحرير علامة مائية...</value>
+  </data>
+  <data name="ReportDesignerStringId.FavoritePropertiesEditor" xml:space="preserve">
+    <value>محرر خصائص المفضلة</value>
+  </data>
+  <data name="ReportDesignerStringId.Field" xml:space="preserve">
+    <value>حقل</value>
+  </data>
+  <data name="ReportDesignerStringId.FieldList" xml:space="preserve">
+    <value>قائمة الحقول</value>
+  </data>
+  <data name="ReportDesignerStringId.FilterStringEditor_Title" xml:space="preserve">
+    <value>تصفية محرر السلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.FitBoundsToText" xml:space="preserve">
+    <value>تناسب حدود النص</value>
+  </data>
+  <data name="ReportDesignerStringId.FitHeightToText" xml:space="preserve">
+    <value>احتواء ارتفاع النص</value>
+  </data>
+  <data name="ReportDesignerStringId.FitTextToBounds" xml:space="preserve">
+    <value>احتواء النص إلى حدود</value>
+  </data>
+  <data name="ReportDesignerStringId.FitWidthToText" xml:space="preserve">
+    <value>احتواء العرض للنص</value>
+  </data>
+  <data name="ReportDesignerStringId.FontBold_Hint" xml:space="preserve">
+    <value>جعل الخط غامقاً.</value>
+  </data>
+  <data name="ReportDesignerStringId.FontItalic_Hint" xml:space="preserve">
+    <value>جعل الخط مائل.</value>
+  </data>
+  <data name="ReportDesignerStringId.FontName_Hint" xml:space="preserve">
+    <value>تغيير الخط الوجه.</value>
+  </data>
+  <data name="ReportDesignerStringId.FontSize_Hint" xml:space="preserve">
+    <value>تغيير حجم الخط-</value>
+  </data>
+  <data name="ReportDesignerStringId.FontStrikeOut_Hint" xml:space="preserve">
+    <value>الإضراب خارج الخط.</value>
+  </data>
+  <data name="ReportDesignerStringId.FontUnderline_Hint" xml:space="preserve">
+    <value>تسطير الخط.</value>
+  </data>
+  <data name="ReportDesignerStringId.Foreground_Hint" xml:space="preserve">
+    <value>تعيين اللون الأمامي لعنصر التحكم-</value>
+  </data>
+  <data name="ReportDesignerStringId.FormatStringEditor_Category" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="ReportDesignerStringId.FormatStringEditor_CustomFormats" xml:space="preserve">
+    <value>تنسيقات مخصصة</value>
+  </data>
+  <data name="ReportDesignerStringId.FormatStringEditor_NotSupported" xml:space="preserve">
+    <value>تنسيق عامة قد لا يوجد تنسيق رقم محدد</value>
+  </data>
+  <data name="ReportDesignerStringId.FormatStringEditor_Sample" xml:space="preserve">
+    <value>عينة:</value>
+  </data>
+  <data name="ReportDesignerStringId.FormatStringEditor_StandardFormats" xml:space="preserve">
+    <value>التنسيقات القياسية</value>
+  </data>
+  <data name="ReportDesignerStringId.FormatStringEditor_Title" xml:space="preserve">
+    <value>تنسيق محرر السلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRulesEditor_AppliedRules" xml:space="preserve">
+    <value>القواعد المطبقة على عنصر تحكم:</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRulesEditor_AvailableRules" xml:space="preserve">
+    <value>المتاحة في تقرير القواعد:</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRulesEditor_EditRuleSheet" xml:space="preserve">
+    <value>تحرير قاعدة الورقة...</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRulesEditor_Title" xml:space="preserve">
+    <value>تنسيق محرر القواعد</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRuleSheetEditor_AddRule" xml:space="preserve">
+    <value>إضافة قاعدة التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRuleSheetEditor_ClearRules" xml:space="preserve">
+    <value>مسح تنسيق القواعد</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRuleSheetEditor_CloneRule" xml:space="preserve">
+    <value>استنساخ قاعدة التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRuleSheetEditor_DeleteUnusedRules" xml:space="preserve">
+    <value>حذف قواعد التنسيق غير المستخدمة</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRuleSheetEditor_RemoveRule" xml:space="preserve">
+    <value>إزالة قاعدة التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.FormattingRuleSheetEditor_Title" xml:space="preserve">
+    <value>تنسيق محرر صحيفة القاعدة</value>
+  </data>
+  <data name="ReportDesignerStringId.FunctionNameCount" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupAndSort" xml:space="preserve">
+    <value>مخطط المجموعة وفرز</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupAndSort_AddGroup" xml:space="preserve">
+    <value>إضافة مجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupAndSort_AddSort" xml:space="preserve">
+    <value>إضافة فرز</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupAndSort_ShowFooter" xml:space="preserve">
+    <value>إظهار تذييل الصفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupAndSort_ShowHeader" xml:space="preserve">
+    <value>إظهار رأس</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupFieldsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة حقل المجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupFooter" xml:space="preserve">
+    <value>تذييل المجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.GroupHeader" xml:space="preserve">
+    <value>رأس المجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceConcatenate_Hint" xml:space="preserve">
+    <value>إزالة التباعد الأفقي بين عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceDecrease_Hint" xml:space="preserve">
+    <value>إنقاص التباعد الأفقي بين عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceIncrease_Hint" xml:space="preserve">
+    <value>زيادة التباعد الأفقي بين عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.HorizontalSpaceMakeEqual_Hint" xml:space="preserve">
+    <value>جعل التباعد الأفقي بين عناصر التحكم المحددة تساوي.</value>
+  </data>
+  <data name="ReportDesignerStringId.ImageResourcesEditor_AddImage" xml:space="preserve">
+    <value>إضافة صورة</value>
+  </data>
+  <data name="ReportDesignerStringId.ImageResourcesEditor_RemoveImage" xml:space="preserve">
+    <value>إزالة صورة</value>
+  </data>
+  <data name="ReportDesignerStringId.ImageResourcesEditor_Title" xml:space="preserve">
+    <value>موارد</value>
+  </data>
+  <data name="ReportDesignerStringId.InsertBand" xml:space="preserve">
+    <value>إدراج الفرقة</value>
+  </data>
+  <data name="ReportDesignerStringId.InsertDetailReport" xml:space="preserve">
+    <value>إدراج تفاصيل التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.InsertVerticalBand" xml:space="preserve">
+    <value>إدراج شريط عمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.InvalidValue" xml:space="preserve">
+    <value>الصالحة</value>
+  </data>
+  <data name="ReportDesignerStringId.KeyCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة المفتاح</value>
+  </data>
+  <data name="ReportDesignerStringId.KeyCollectionEditor_Type" xml:space="preserve">
+    <value>النوع:</value>
+  </data>
+  <data name="ReportDesignerStringId.Load" xml:space="preserve">
+    <value>تحميل...</value>
+  </data>
+  <data name="ReportDesignerStringId.LoadFile" xml:space="preserve">
+    <value>تحميل ملف...</value>
+  </data>
+  <data name="ReportDesignerStringId.LocalizationEditor_DefaultLanguage" xml:space="preserve">
+    <value>الافتراضية لغة</value>
+  </data>
+  <data name="ReportDesignerStringId.LocalizationEditor_Languages" xml:space="preserve">
+    <value>اللغات</value>
+  </data>
+  <data name="ReportDesignerStringId.LocalizationEditor_LocalizedTextValues" xml:space="preserve">
+    <value>المترجمة نص قيم</value>
+  </data>
+  <data name="ReportDesignerStringId.LocalizationEditor_Property" xml:space="preserve">
+    <value>الخاصية</value>
+  </data>
+  <data name="ReportDesignerStringId.LocalizationEditor_Title" xml:space="preserve">
+    <value>التعريب</value>
+  </data>
+  <data name="ReportDesignerStringId.LookUpValuesEditor_Title" xml:space="preserve">
+    <value>البحث عن القيم</value>
+  </data>
+  <data name="ReportDesignerStringId.MoveDown" xml:space="preserve">
+    <value>تحريك لأسفل</value>
+  </data>
+  <data name="ReportDesignerStringId.MoveUp" xml:space="preserve">
+    <value>تحريك لأعلى</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_AllowMultipleValues" xml:space="preserve">
+    <value>السماح بقيم متعددة</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_AllowNull" xml:space="preserve">
+    <value>السماح القيمة null</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_DefaultValue" xml:space="preserve">
+    <value>القيمة الافتراضية</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_DynamicValues" xml:space="preserve">
+    <value>قيم ديناميكية</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_Expression" xml:space="preserve">
+    <value>التعبير</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_SelectAllValues" xml:space="preserve">
+    <value>Select all values</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_ShowInParametersPanel" xml:space="preserve">
+    <value>وتظهر في لوحة المعلمات</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_StaticValues" xml:space="preserve">
+    <value>قيم ثابتة</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_SupportsStandardValues" xml:space="preserve">
+    <value>وتدعم مجموعة القيم القياسية</value>
+  </data>
+  <data name="ReportDesignerStringId.NewParameterEditor_Type" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="ReportDesignerStringId.NewReport_Caption" xml:space="preserve">
+    <value>تقرير جديد</value>
+  </data>
+  <data name="ReportDesignerStringId.NewReport_Hint" xml:space="preserve">
+    <value>بدء تشغيل معالج التقارير لإنشاء تقرير جديد.</value>
+  </data>
+  <data name="ReportDesignerStringId.NewReportParameter" xml:space="preserve">
+    <value>معلمة تقرير جديد...</value>
+  </data>
+  <data name="ReportDesignerStringId.OpenReport_Caption" xml:space="preserve">
+    <value>فتح...</value>
+  </data>
+  <data name="ReportDesignerStringId.OpenReport_Hint" xml:space="preserve">
+    <value>فتح تقرير.</value>
+  </data>
+  <data name="ReportDesignerStringId.PageFooter" xml:space="preserve">
+    <value>تذييل الصفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.PageHeader" xml:space="preserve">
+    <value>رأس الصفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.PageSetup_Hint" xml:space="preserve">
+    <value>ضبط إعدادات الصفحة في التقرير-</value>
+  </data>
+  <data name="ReportDesignerStringId.PageSetup_MarginsInHundredthsOfAnInch" xml:space="preserve">
+    <value>هوامش في المئات شبر</value>
+  </data>
+  <data name="ReportDesignerStringId.PageSetup_MarginsInPixels" xml:space="preserve">
+    <value>هوامش في بكسل</value>
+  </data>
+  <data name="ReportDesignerStringId.PageSetup_MarginsInTenthsOfAMillimeter" xml:space="preserve">
+    <value>هوامش في أعشار الملليمتر</value>
+  </data>
+  <data name="ReportDesignerStringId.ParameterBindingsEditor_ParameterBinding" xml:space="preserve">
+    <value>ربط المعلمة</value>
+  </data>
+  <data name="ReportDesignerStringId.ParameterBindingsEditor_Sync" xml:space="preserve">
+    <value>محرر مجموعة المعلمات ملزم</value>
+  </data>
+  <data name="ReportDesignerStringId.ParameterBindingsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة المعلمات ملزم</value>
+  </data>
+  <data name="ReportDesignerStringId.Parameters_Add" xml:space="preserve">
+    <value>إضافة معلمة</value>
+  </data>
+  <data name="ReportDesignerStringId.Parameters_EditParameters" xml:space="preserve">
+    <value>تحرير معلمات...</value>
+  </data>
+  <data name="ReportDesignerStringId.Parameters_NewParameterEditor_Title" xml:space="preserve">
+    <value>إضافة معلمة جديدة</value>
+  </data>
+  <data name="ReportDesignerStringId.ParametersEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة المعلمات</value>
+  </data>
+  <data name="ReportDesignerStringId.Paste_Hint" xml:space="preserve">
+    <value>لصق محتويات "الحافظة".</value>
+  </data>
+  <data name="ReportDesignerStringId.Pivot_AddNewField" xml:space="preserve">
+    <value>إضافة حقل جديد إلى المنطقة</value>
+  </data>
+  <data name="ReportDesignerStringId.Pivot_FieldArea" xml:space="preserve">
+    <value>منطقة حقل لحقل جديد</value>
+  </data>
+  <data name="ReportDesignerStringId.Pivot_RunDesigner" xml:space="preserve">
+    <value>تشغيل مصمم...</value>
+  </data>
+  <data name="ReportDesignerStringId.PivotGrid_Designer_Title" xml:space="preserve">
+    <value>مصمم بيفوتجريد</value>
+  </data>
+  <data name="ReportDesignerStringId.PivotGrid_FieldCustomTotalsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة إجمالي مخصص بيفوتجريدفيلد</value>
+  </data>
+  <data name="ReportDesignerStringId.PivotGrid_FieldsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة الحقول</value>
+  </data>
+  <data name="ReportDesignerStringId.PivotGrid_FieldSortConditionsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة شرط فرز بيفوتجريدفيلد</value>
+  </data>
+  <data name="ReportDesignerStringId.PivotGrid_OLAPConStringEditor_Title" xml:space="preserve">
+    <value>محرر السلسلة الاتصال OLAP</value>
+  </data>
+  <data name="ReportDesignerStringId.PivotGridFieldSortCondition_DuplicateFieldEntry_MessageText" xml:space="preserve">
+    <value>تكرار الإدخال: حالة الحقل</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ActualValue" xml:space="preserve">
+    <value>Actual Value </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_AnchorVertically" xml:space="preserve">
+    <value>مرساة عمودياً</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Angle" xml:space="preserve">
+    <value>Angle </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Argument_Expression" xml:space="preserve">
+    <value>تعبير</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_AutoModule" xml:space="preserve">
+    <value>السيارات--وحدة نمطية</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_AutoWidth" xml:space="preserve">
+    <value>عرض السيارات</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_BandLayout" xml:space="preserve">
+    <value>تخطيط الفرقة</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Bookmark" xml:space="preserve">
+    <value>Bookmark </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_BoundField" xml:space="preserve">
+    <value>حقل منضم</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_CanGrow" xml:space="preserve">
+    <value>يمكن أن تنمو</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_CanShrink" xml:space="preserve">
+    <value>ويمكن تقليص</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_CheckState" xml:space="preserve">
+    <value>الدولة الاختيار</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ColumnCount" xml:space="preserve">
+    <value>Column Count </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ColumnSpacing" xml:space="preserve">
+    <value>Column Spacing </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ColumnWidth" xml:space="preserve">
+    <value>Column Width </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_DataBinding" xml:space="preserve">
+    <value>Data Binding </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_DataMember" xml:space="preserve">
+    <value>Data Member </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_DataSource" xml:space="preserve">
+    <value>Data Source </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_DetailCountAtDesignTime" xml:space="preserve">
+    <value>Detail Count at Design Time </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_DisplayMember" xml:space="preserve">
+    <value>Display Member </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_EndBand" xml:space="preserve">
+    <value>نهاية الشريط</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Expression" xml:space="preserve">
+    <value>التعبير</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Field" xml:space="preserve">
+    <value>حقل</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_FillColor" xml:space="preserve">
+    <value>Fill Color </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_FilterString" xml:space="preserve">
+    <value>Filter String </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Format" xml:space="preserve">
+    <value>Format </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_FormatString" xml:space="preserve">
+    <value>سلسلة تنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_FormattingRules" xml:space="preserve">
+    <value>قواعد التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_GroupFields" xml:space="preserve">
+    <value>مجموعة الحقول</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_GroupUnion" xml:space="preserve">
+    <value>Group Union </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_HtmlDataBinding" xml:space="preserve">
+    <value>ربط بيانات html</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_HtmlExpression" xml:space="preserve">
+    <value>التعبير إتش تي أم ال</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_IgnoreNullValues" xml:space="preserve">
+    <value>تجاهل القيم الخالية</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Image" xml:space="preserve">
+    <value>Image </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ImageAlignment" xml:space="preserve">
+    <value>Image Alignment </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ImageURL" xml:space="preserve">
+    <value>Image Url </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_KeepTogether" xml:space="preserve">
+    <value>الإبقاء معا</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_KeepTogetherWithDetailReport" xml:space="preserve">
+    <value>يبقى جنبا إلى جنب مع تفاصيل التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Level" xml:space="preserve">
+    <value>Level </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_LineDirection" xml:space="preserve">
+    <value>Line Direction </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_LineStyle" xml:space="preserve">
+    <value>Line Style </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_LineWidth" xml:space="preserve">
+    <value>Line Width </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Maximum" xml:space="preserve">
+    <value>Maximum </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_MeasureUnits" xml:space="preserve">
+    <value>Measure Units </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Minimum" xml:space="preserve">
+    <value>Minimum </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Module" xml:space="preserve">
+    <value>Module </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_MultiColumnLayout" xml:space="preserve">
+    <value>Multi-Column Layout </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_MultiColumnMode" xml:space="preserve">
+    <value>Multi-Column Mode </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Multiline" xml:space="preserve">
+    <value>سطور متعددة</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_OlapConnectionString" xml:space="preserve">
+    <value>Olap Connection String</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Orientation" xml:space="preserve">
+    <value>Orientation </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_PageBreak" xml:space="preserve">
+    <value>Page Break </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_PageInformation" xml:space="preserve">
+    <value>Page Information </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ParameterBindings" xml:space="preserve">
+    <value>روابط المعلمات</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ParentBookmark" xml:space="preserve">
+    <value>Parent Bookmark </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_PdfSource" xml:space="preserve">
+    <value>المصدر</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_PdfSourceUrl" xml:space="preserve">
+    <value>رابط</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_PrintAtBottom" xml:space="preserve">
+    <value>الطباعة في الأسفل</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_PrintOn" xml:space="preserve">
+    <value>Print On </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_RepeatEveryPage" xml:space="preserve">
+    <value>كرر كل صفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ReportSourceUrl" xml:space="preserve">
+    <value>Report Source Url </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_RtfDataBinding" xml:space="preserve">
+    <value>ربط البيانات Rtf</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_RtfExpression" xml:space="preserve">
+    <value>التعبير Rtf</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_RunningBand" xml:space="preserve">
+    <value>Running Band </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SegmentWidth" xml:space="preserve">
+    <value>Segment Width </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Shape" xml:space="preserve">
+    <value>Shape </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ShowText" xml:space="preserve">
+    <value>إظهار النص</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Sizing" xml:space="preserve">
+    <value>Sizing </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SortFields" xml:space="preserve">
+    <value>حقول الفرز</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SortingSummary" xml:space="preserve">
+    <value>Sorting Summary </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SortOrder" xml:space="preserve">
+    <value>Sort Order </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_StartBand" xml:space="preserve">
+    <value>تبدأ الفرقة</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_StartPageNumber" xml:space="preserve">
+    <value>Start Page Number </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_StyleSheet" xml:space="preserve">
+    <value>ورقة الأنماط</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Summary" xml:space="preserve">
+    <value>Summary </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SummaryFunction" xml:space="preserve">
+    <value>تعمل ملخص</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_SummaryRunning" xml:space="preserve">
+    <value>ملخص تشغيل</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Symbology" xml:space="preserve">
+    <value>Symbology </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_TargetValue" xml:space="preserve">
+    <value>Target Value </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_Text" xml:space="preserve">
+    <value>Text </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_TreatStringsAsNumerics" xml:space="preserve">
+    <value>معالجة سلاسل كرقمات</value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ValueMember" xml:space="preserve">
+    <value>Value Member </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ViewStyle" xml:space="preserve">
+    <value>View Style </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ViewTheme" xml:space="preserve">
+    <value>View Theme </value>
+  </data>
+  <data name="ReportDesignerStringId.Properties_ViewType" xml:space="preserve">
+    <value>View Type </value>
+  </data>
+  <data name="ReportDesignerStringId.PropertyGrid_BarControl_BarItem_Alphabetical" xml:space="preserve">
+    <value>أبجدي</value>
+  </data>
+  <data name="ReportDesignerStringId.PropertyGrid_BarControl_BarItem_Categorized" xml:space="preserve">
+    <value>تصنيف</value>
+  </data>
+  <data name="ReportDesignerStringId.PropertyGrid_TabExpressions" xml:space="preserve">
+    <value>التعبيرات</value>
+  </data>
+  <data name="ReportDesignerStringId.Redo_Hint" xml:space="preserve">
+    <value>إعادة العملية الأخيرة-</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveAllFormattingRules" xml:space="preserve">
+    <value>إزالة كافة قواعد التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveAllParameters" xml:space="preserve">
+    <value>إزالة كافة المعلمات</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveAllStyles" xml:space="preserve">
+    <value>إزالة كافة الأنماط</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveCalculatedFields" xml:space="preserve">
+    <value>قم بإزالة كافة الحقول المحسوبة</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveFormattingRule" xml:space="preserve">
+    <value>إزالة قاعدة التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveStyle" xml:space="preserve">
+    <value>إزالة نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveUnusedFormattingRules" xml:space="preserve">
+    <value>إزالة قواعد التنسيق غير المستخدمة</value>
+  </data>
+  <data name="ReportDesignerStringId.RemoveUnusedStyles" xml:space="preserve">
+    <value>إزالة الأنماط غير المستخدمة</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportExplorer" xml:space="preserve">
+    <value>مستكشف التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportExplorer_Components" xml:space="preserve">
+    <value>مكونات</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportExplorer_FormattingRules" xml:space="preserve">
+    <value>قواعد التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportFooter" xml:space="preserve">
+    <value>تذييل التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportGallery" xml:space="preserve">
+    <value>معرض التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportGallery_Name_Already_Exists_Msg" xml:space="preserve">
+    <value>الاسم {0} موجود بالفعل</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportHeader" xml:space="preserve">
+    <value>رأس التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_AddGroupingLevel" xml:space="preserve">
+    <value>إنشاء مجموعات متعددة، كل منها قيمة حقل مفرد، أو تحديد عدة حقول في نفس المجموعة-</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_AddGroupingLevel_AvailableColumns" xml:space="preserve">
+    <value>الأعمدة المتوفرة:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseDataSourceTypePage_DataSourceNoData_Name" xml:space="preserve">
+    <value>لا توجد بيانات</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportColorSchemePage" xml:space="preserve">
+    <value>اختر نظام ألوان التقرير.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout" xml:space="preserve">
+    <value>تخطيط التقرير يحدد الطريقة التي يتم ترتيب حقول البيانات المحددة على صفحات فردية.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_AlignLeft1" xml:space="preserve">
+    <value>محاذاة لليسار 1</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_AlignLeft2" xml:space="preserve">
+    <value>محاذاة لليسار 2</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_Columnar" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_Justified" xml:space="preserve">
+    <value>له ما يبرره</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_Outline1" xml:space="preserve">
+    <value>مخطط تفصيلي 1</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_Outline2" xml:space="preserve">
+    <value>المخطط التفصيلي 2</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_Stepped" xml:space="preserve">
+    <value>صعدت</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportLayout_Tabular" xml:space="preserve">
+    <value>جدولي</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportStyle" xml:space="preserve">
+    <value>نمط تقرير يحدد مظهر التقرير الخاص بك-</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportStyle_Caption" xml:space="preserve">
+    <value>التسمية التوضيحية</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportTemplate_Description" xml:space="preserve">
+    <value>اختر قالب للتقرير الخاص بك.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType" xml:space="preserve">
+    <value>حدد نوع التقرير ترغب في إنشاء.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType_DataBound" xml:space="preserve">
+    <value>ربط بيانات التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType_Empty" xml:space="preserve">
+    <value>تقرير فارغ</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType_Label" xml:space="preserve">
+    <value>تسمية تقرير أفقي</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType_Table" xml:space="preserve">
+    <value>تقرير الجدول</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType_Template" xml:space="preserve">
+    <value>قالب تقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseReportType_Vertical" xml:space="preserve">
+    <value>تقرير عمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ChooseXPObjectEntityTypePage" xml:space="preserve">
+    <value>اختر نوع كيان.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_ConfigureReportPageSettingsPage" xml:space="preserve">
+    <value>حدد إعدادات صفحة التقرير.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel" xml:space="preserve">
+    <value>يمكنك ضبط المعلمات للتسمية هنا إذا لزم الأمر-</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_BottomMargin" xml:space="preserve">
+    <value>الهامش السفلي</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_HorizontalPitch" xml:space="preserve">
+    <value>الملعب</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_LabelHeight" xml:space="preserve">
+    <value>ارتفاع بطاقة العنونة</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_LabelWidth" xml:space="preserve">
+    <value>عرض التسمية</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_LeftMargin" xml:space="preserve">
+    <value>ترك هامش</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_PageSize" xml:space="preserve">
+    <value>حجم الصفحة</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_RightMargin" xml:space="preserve">
+    <value>الهامش الأيمن</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_TopMargin" xml:space="preserve">
+    <value>الهامش العلوي</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_CustomizeLabel_VerticalPitch" xml:space="preserve">
+    <value>خطوة عمودية</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MapReportTemplateFields_Description" xml:space="preserve">
+    <value>خريطة البيانات مصدر الحقول إلى الحقول المتوفرة في القالب.
+يمكنك استخدام السحب والإسقاط أو تعيين القيم المطلوبة في القوائم المنسدلة "قيمة حقل قالب".</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MapReportTemplateFieldsPage_ReportDataSource" xml:space="preserve">
+    <value>مصدر بيانات التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MasterDetailAddGroupingLevelPage" xml:space="preserve">
+    <value>تجميع البيانات في تقارير مختارة. يمكنك تحديد واحد أو أكثر من الحقول لكل مجموعة.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MasterDetailAddGroupingLevelPage_SelectFields" xml:space="preserve">
+    <value>تحديد الحقول:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MasterDetailAddGroupingLevelPage_SelectReport" xml:space="preserve">
+    <value>حدد التقرير:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MasterDetailConfigurePage" xml:space="preserve">
+    <value>حدد واحد أو أكثر لتعيين للتقرير والتفصيل في التقارير.
+اختر الحقول المراد عرضها في هذه التقارير-</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MasterDetailConfigurePage_SelectDataFields" xml:space="preserve">
+    <value>تحديد حقول البيانات:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MasterDetailConfigurePage_SelectDataMembers" xml:space="preserve">
+    <value>حدد أعضاء البيانات:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MultiQuerySelectFieldsPage" xml:space="preserve">
+    <value>حدد التقرير بيانات الأعضاء وبيانات الحقول التي سوف سيبلي البيانات للتقرير الخاص بك.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MultiQuerySelectFieldsPage_SelectDataFields" xml:space="preserve">
+    <value>تحديد حقول البيانات:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_MultiQuerySelectFieldsPage_SelectDataMember" xml:space="preserve">
+    <value>البيانات حدد الأعضاء:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectColumns" xml:space="preserve">
+    <value>حدد الأعمدة التي تريد عرضها في التقرير الخاص بك.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectColumns_AvailableColumns" xml:space="preserve">
+    <value>الأعمدة المتوفرة:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectColumns_SelectedColumns" xml:space="preserve">
+    <value>تحديد الأعمدة:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectLabelType" xml:space="preserve">
+    <value>حدد إحدى التسميات المحددة مسبقاً بتحديد المنتج والمعرف الخاص به.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectLabelType_LabelProduct" xml:space="preserve">
+    <value>تسمية المنتج:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectLabelType_PaperType" xml:space="preserve">
+    <value>ورقة النوع:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SelectLabelType_ProductNumber" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SetReportTitle" xml:space="preserve">
+    <value>لدينا جميع المعلومات اللازمة لعملية التقرير.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SetReportTitle_ReportTitle" xml:space="preserve">
+    <value>التقرير على العنوان:</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SpecifyReportTemplateOptions_Description" xml:space="preserve">
+    <value>تحديد خيارات التقرير.</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions" xml:space="preserve">
+    <value>ما دالات التلخيص هل ترغب في حساب؟</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions_Avg" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_SummaryOptions_IgnoreNullValues" xml:space="preserve">
+    <value>تجاهل القيم الخالية</value>
+  </data>
+  <data name="ReportDesignerStringId.ReportWizard_Title" xml:space="preserve">
+    <value>معالج التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_ArrangeGroup" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_DesignerPage" xml:space="preserve">
+    <value>مصمم التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.Ribbon_EditorsGroup" xml:space="preserve">
+    <value>المحررين</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonGroup_Arrange" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonGroup_Editors" xml:space="preserve">
+    <value>المحررين</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonPage_Designer" xml:space="preserve">
+    <value>مصمم التقرير</value>
+  </data>
+  <data name="ReportDesignerStringId.RibbonPageCategory_Table" xml:space="preserve">
+    <value>أدوات الجدول</value>
+  </data>
+  <data name="ReportDesignerStringId.RowAbove" xml:space="preserve">
+    <value>صف لأعلى</value>
+  </data>
+  <data name="ReportDesignerStringId.RowBelow" xml:space="preserve">
+    <value>صف لأسفل</value>
+  </data>
+  <data name="ReportDesignerStringId.RtlException" xml:space="preserve">
+    <value>من اليمين لليسار وضع غير معتمد حاليا.</value>
+  </data>
+  <data name="ReportDesignerStringId.RunRichTextEditor" xml:space="preserve">
+    <value>تشغيل محرر نص منسق...</value>
+  </data>
+  <data name="ReportDesignerStringId.Save" xml:space="preserve">
+    <value>حفظ...</value>
+  </data>
+  <data name="ReportDesignerStringId.SaveReport_Hint" xml:space="preserve">
+    <value>حفظ التقرير الحالي.</value>
+  </data>
+  <data name="ReportDesignerStringId.SaveReportAs_Caption" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="ReportDesignerStringId.SaveReportAs_Hint" xml:space="preserve">
+    <value>حفظ التقرير الحالي باسم جديد-</value>
+  </data>
+  <data name="ReportDesignerStringId.Scripts_Caption" xml:space="preserve">
+    <value>البرامج النصية</value>
+  </data>
+  <data name="ReportDesignerStringId.Scripts_Hint" xml:space="preserve">
+    <value>إظهار أو إخفاء "محرر البرامج النصية".</value>
+  </data>
+  <data name="ReportDesignerStringId.SelectControlsWithFormattingRule" xml:space="preserve">
+    <value>حدد عناصر التحكم مع قاعدة التنسيق</value>
+  </data>
+  <data name="ReportDesignerStringId.SelectControlsWithStyle" xml:space="preserve">
+    <value>مع</value>
+  </data>
+  <data name="ReportDesignerStringId.SentBackward_Caption" xml:space="preserve">
+    <value>إرسال إلى الخلف</value>
+  </data>
+  <data name="ReportDesignerStringId.SentToBack_Hint" xml:space="preserve">
+    <value>نقل عناصر التحكم المحددة إلى الظهر.</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToControl_Caption" xml:space="preserve">
+    <value>جعل نفس الحجم</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToControl_Hint" xml:space="preserve">
+    <value>عناصر التحكم المحددة لها نفس الحجم.</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToControlHeight_Hint" xml:space="preserve">
+    <value>عناصر التحكم المحددة لها نفس الارتفاع.</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToControlWidth_Hint" xml:space="preserve">
+    <value>عناصر التحكم المحددة لها نفس العرض.</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToGrid_Caption" xml:space="preserve">
+    <value>الحجم للشبكة</value>
+  </data>
+  <data name="ReportDesignerStringId.SizeToGrid_Hint" xml:space="preserve">
+    <value>حجم عناصر التحكم المحددة على الشبكة-</value>
+  </data>
+  <data name="ReportDesignerStringId.SortFieldsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة حقل الفرز</value>
+  </data>
+  <data name="ReportDesignerStringId.SortingSummaryEditor_Title" xml:space="preserve">
+    <value>فريق الفرز محرر الموجز</value>
+  </data>
+  <data name="ReportDesignerStringId.SortOrder" xml:space="preserve">
+    <value>ترتيب الفرز</value>
+  </data>
+  <data name="ReportDesignerStringId.SplitCells" xml:space="preserve">
+    <value>تقسيم الخلايا</value>
+  </data>
+  <data name="ReportDesignerStringId.StringCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة السلسلة</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_AddStyle" xml:space="preserve">
+    <value>إضافة نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_ClearStyles" xml:space="preserve">
+    <value>أنماط واضحة</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_CloneStyle" xml:space="preserve">
+    <value>استنساخ نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_DeleteUnusedStyles" xml:space="preserve">
+    <value>حذف الأنماط غير المستخدمة</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_LoadFromFile" xml:space="preserve">
+    <value>تحميل أنماط من ملف</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_RemoveStyle" xml:space="preserve">
+    <value>إزالة نمط</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_SaveToFile" xml:space="preserve">
+    <value>حفظ أنماط لملف</value>
+  </data>
+  <data name="ReportDesignerStringId.StyleSheetEditor_Title" xml:space="preserve">
+    <value>محرر أنماط</value>
+  </data>
+  <data name="ReportDesignerStringId.SubBandCollectionEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة سوباند</value>
+  </data>
+  <data name="ReportDesignerStringId.SubReport_EditParameterBindings" xml:space="preserve">
+    <value>تحرير الارتباطات المعلمة...</value>
+  </data>
+  <data name="ReportDesignerStringId.SummaryEditor_Title" xml:space="preserve">
+    <value>محرر الموجز</value>
+  </data>
+  <data name="ReportDesignerStringId.Table_ConvertToLabels" xml:space="preserve">
+    <value>تحويل إلى تسميات</value>
+  </data>
+  <data name="ReportDesignerStringId.TextHorizontalAlignment_Center_Hint" xml:space="preserve">
+    <value>محاذاة النص لعنصر التحكم إلى المركز-</value>
+  </data>
+  <data name="ReportDesignerStringId.TextHorizontalAlignment_Justify_Hint" xml:space="preserve">
+    <value>محاذاة النص إلى على حد سواء الجانبين الأيمن والأيسر، إضافة مسافة زائدة بين الكلمات حسب الضرورة.</value>
+  </data>
+  <data name="ReportDesignerStringId.TextHorizontalAlignment_Left_Hint" xml:space="preserve">
+    <value>محاذاة النص لعنصر التحكم إلى اليسار.</value>
+  </data>
+  <data name="ReportDesignerStringId.TextHorizontalAlignment_Right_Hint" xml:space="preserve">
+    <value>محاذاة النص لعنصر التحكم إلى اليمين.</value>
+  </data>
+  <data name="ReportDesignerStringId.TextVerticalAlignment_Bottom_Hint" xml:space="preserve">
+    <value>محاذاة النص لعنصر التحكم إلى الأسفل.</value>
+  </data>
+  <data name="ReportDesignerStringId.TextVerticalAlignment_Center_Hint" xml:space="preserve">
+    <value>محاذاة النص في عنصر التحكم بحيث يتم توسيطه بين أعلى وأسفل عنصر التحكم.</value>
+  </data>
+  <data name="ReportDesignerStringId.TextVerticalAlignment_Top_Hint" xml:space="preserve">
+    <value>محاذاة النص لعنصر التحكم للأعلى.</value>
+  </data>
+  <data name="ReportDesignerStringId.ToC_LevelsEditor_Title" xml:space="preserve">
+    <value>محرر مجموعة</value>
+  </data>
+  <data name="ReportDesignerStringId.Unbound" xml:space="preserve">
+    <value>غير منضم</value>
+  </data>
+  <data name="ReportDesignerStringId.Undo_Hint" xml:space="preserve">
+    <value>التراجع عن العملية الأخيرة.</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalBands" xml:space="preserve">
+    <value>الأشرطة العمودية</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalDetail" xml:space="preserve">
+    <value>تفاصيل العمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalHeader" xml:space="preserve">
+    <value>رأس عمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceConcatenate_Caption" xml:space="preserve">
+    <value>إزالة التباعد العمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceConcatenate_Hint" xml:space="preserve">
+    <value>إزالة التباعد العمودي بين عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceDecrease_Hint" xml:space="preserve">
+    <value>إنقاص المسافة العمودية بين عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceIncrease_Hint" xml:space="preserve">
+    <value>زيادة التباعد العمودي بين عناصر التحكم المحددة.</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalSpaceMakeEqual_Hint" xml:space="preserve">
+    <value>جعل تباعد عمودي بين عناصر التحكم المحددة تساوي.</value>
+  </data>
+  <data name="ReportDesignerStringId.VerticalTotal" xml:space="preserve">
+    <value>مجموعة العمودي</value>
+  </data>
+  <data name="ReportDesignerStringId.Watermark_Hint" xml:space="preserve">
+    <value>ضبط إعدادات علامة مائية في التقرير-</value>
+  </data>
+  <data name="ReportDesignerStringId.WatermarkEditor_Behind" xml:space="preserve">
+    <value>خلف</value>
+  </data>
+  <data name="ReportDesignerStringId.WatermarkEditor_InFront" xml:space="preserve">
+    <value>الجبهة</value>
+  </data>
+  <data name="ReportDesignerStringId.WatermarkEditor_Pages" xml:space="preserve">
+    <value>صفحات</value>
+  </data>
+</root>

@@ -1,0 +1,2433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DashboardStringId.CloseCaption" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="DashboardStringId.ButtonCancel" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="DashboardStringId.ButtonOK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="DashboardStringId.DescriptionColumns" xml:space="preserve">
+    <value>الأعمدة</value>
+  </data>
+  <data name="DashboardStringId.FilterStatePresentationNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.ScaleModeNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.SizeModeNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDay" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DashboardStringId.NumericGroupIntervalContinuous" xml:space="preserve">
+    <value>المستمر</value>
+  </data>
+  <data name="DashboardStringId.DashboardNullValue" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="DashboardStringId.Title" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="DashboardStringId.PaperKind" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemValue" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DashboardStringId.ValueCaption" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DashboardStringId.PageLayoutPortrait" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="DashboardStringId.OpenCaption" xml:space="preserve">
+    <value>مفتوحة</value>
+  </data>
+  <data name="DashboardStringId.SizeModeStretch" xml:space="preserve">
+    <value>وتمتد</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeMax" xml:space="preserve">
+    <value>ماكس</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeMin" xml:space="preserve">
+    <value>الأدنى:</value>
+  </data>
+  <data name="DashboardStringId.AxisYNameCount" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeCount" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeSum" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="DashboardStringId.SizeModeZoom" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeHighLowClose" xml:space="preserve">
+    <value>علو-انخفاض-إغلاق</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameImageItem" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitSymbolBillions" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="DashboardStringId.ActionAllowMultiselection" xml:space="preserve">
+    <value>تحديد متعدد</value>
+  </data>
+  <data name="DashboardStringId.ActionClearMasterFilter" xml:space="preserve">
+    <value>إلغاء تطبيق عامل التصفية في الماجستير</value>
+  </data>
+  <data name="DashboardStringId.ActionDrillUp" xml:space="preserve">
+    <value>حفر حتى</value>
+  </data>
+  <data name="DashboardStringId.ActionExportTo" xml:space="preserve">
+    <value>التصدير إلى</value>
+  </data>
+  <data name="DashboardStringId.ActionExportToImage" xml:space="preserve">
+    <value>تصدير إلى الصورة</value>
+  </data>
+  <data name="DashboardStringId.ActionExportToPdf" xml:space="preserve">
+    <value>التصدير إلى PDF</value>
+  </data>
+  <data name="DashboardStringId.ActionOtherValues" xml:space="preserve">
+    <value>قيم</value>
+  </data>
+  <data name="DashboardStringId.ActualValueCaption" xml:space="preserve">
+    <value>الفعلية</value>
+  </data>
+  <data name="DashboardStringId.AutoArrangeContent" xml:space="preserve">
+    <value>ترتيب تلقائي للمحتوى</value>
+  </data>
+  <data name="DashboardStringId.AutoFitPageCount" xml:space="preserve">
+    <value>السيارات تناسب عدد الصفحات</value>
+  </data>
+  <data name="DashboardStringId.AxisXNameArguments" xml:space="preserve">
+    <value>الحجج</value>
+  </data>
+  <data name="DashboardStringId.AxisYNameValues" xml:space="preserve">
+    <value>قيم</value>
+  </data>
+  <data name="DashboardStringId.ButtonExport" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="DashboardStringId.ButtonReset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="DashboardStringId.ButtonSubmit" xml:space="preserve">
+    <value>يقدم</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldsTreeItemName" xml:space="preserve">
+    <value>الحقول المحسوبة</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeBoolean" xml:space="preserve">
+    <value>قيمة منطقية</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeDateTime" xml:space="preserve">
+    <value>التاريخ والوقت</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeDecimal" xml:space="preserve">
+    <value>العشرية</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeObject" xml:space="preserve">
+    <value>كائن</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeString" xml:space="preserve">
+    <value>السلسلة</value>
+  </data>
+  <data name="DashboardStringId.DataEngineGrandTotal" xml:space="preserve">
+    <value>المجموع الكلي</value>
+  </data>
+  <data name="DashboardStringId.DataItemsHeader" xml:space="preserve">
+    <value>عناصر البيانات</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDateHour" xml:space="preserve">
+    <value>تاريخ ساعة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDateHourMinute" xml:space="preserve">
+    <value>تاريخ-ساعة-دقيقة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDateHourMinuteSecond" xml:space="preserve">
+    <value>تاريخ-ساعة-دقيقة-ثانية</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDayMonthYear" xml:space="preserve">
+    <value>يوم-شهر-سنة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDayOfWeek" xml:space="preserve">
+    <value>يوم أسبوع</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalDayOfYear" xml:space="preserve">
+    <value>يوم من أيام السنة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalHour" xml:space="preserve">
+    <value>ساعة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalMinute" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalMonth" xml:space="preserve">
+    <value>في الشهر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalMonthYear" xml:space="preserve">
+    <value>الشهر-السنة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalQuarter" xml:space="preserve">
+    <value>الربع</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalQuarterYear" xml:space="preserve">
+    <value>ربع السنة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalSecond" xml:space="preserve">
+    <value>الثانية</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalWeekOfMonth" xml:space="preserve">
+    <value>أسبوع شهر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalWeekOfYear" xml:space="preserve">
+    <value>أسبوع في السنة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalYear" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardStringId.DefaultDashboardTitleText" xml:space="preserve">
+    <value>لوحة المعلومات</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameCardItem" xml:space="preserve">
+    <value>بطاقات</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameChartPane" xml:space="preserve">
+    <value>جزء</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameGaugeItem" xml:space="preserve">
+    <value>أجهزة قياس</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameGridItem" xml:space="preserve">
+    <value>الشبكة</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameMapItem" xml:space="preserve">
+    <value>خريطة</value>
+  </data>
+  <data name="DashboardStringId.DefaultNamePieItem" xml:space="preserve">
+    <value>فطائر</value>
+  </data>
+  <data name="DashboardStringId.DefaultNamePivotItem" xml:space="preserve">
+    <value>المحور</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameRangeFilterItem" xml:space="preserve">
+    <value>عامل تصفية نطاق</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameTextBoxItem" xml:space="preserve">
+    <value>مربع نص</value>
+  </data>
+  <data name="DashboardStringId.Delta" xml:space="preserve">
+    <value>دلتا</value>
+  </data>
+  <data name="DashboardStringId.DescriptionArguments" xml:space="preserve">
+    <value>الحجج</value>
+  </data>
+  <data name="DashboardStringId.DescriptionCards" xml:space="preserve">
+    <value>بطاقات</value>
+  </data>
+  <data name="DashboardStringId.DescriptionDimensions" xml:space="preserve">
+    <value>أبعاد</value>
+  </data>
+  <data name="DashboardStringId.DescriptionGauges" xml:space="preserve">
+    <value>أجهزة قياس</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemArgument" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemAuto" xml:space="preserve">
+    <value>عمود جديد</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemColumn" xml:space="preserve">
+    <value>عمود</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemDimension" xml:space="preserve">
+    <value>البعد</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemMeasure" xml:space="preserve">
+    <value>التدبير</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemRow" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="DashboardStringId.DescriptionMaps" xml:space="preserve">
+    <value>خرائط</value>
+  </data>
+  <data name="DashboardStringId.DescriptionMapValue" xml:space="preserve">
+    <value>خريطة/القيمة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionMapValues" xml:space="preserve">
+    <value>خريطة/قيم</value>
+  </data>
+  <data name="DashboardStringId.DescriptionMeasures" xml:space="preserve">
+    <value>التدابير</value>
+  </data>
+  <data name="DashboardStringId.DescriptionRows" xml:space="preserve">
+    <value>الصفوف</value>
+  </data>
+  <data name="DashboardStringId.DescriptionSparkline" xml:space="preserve">
+    <value>خط المؤشر</value>
+  </data>
+  <data name="DashboardStringId.DescriptionSparklineArgument" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionValues" xml:space="preserve">
+    <value>قيم</value>
+  </data>
+  <data name="DashboardStringId.ElementNameCards" xml:space="preserve">
+    <value>بطاقات</value>
+  </data>
+  <data name="DashboardStringId.ElementNameGauges" xml:space="preserve">
+    <value>أجهزة قياس</value>
+  </data>
+  <data name="DashboardStringId.FileName" xml:space="preserve">
+    <value>اسم الملف</value>
+  </data>
+  <data name="DashboardStringId.FilterStatePresentationAfter" xml:space="preserve">
+    <value>أدناه</value>
+  </data>
+  <data name="DashboardStringId.FilterStatePresentationAfterAndSplitPage" xml:space="preserve">
+    <value>صفحة منفصلة</value>
+  </data>
+  <data name="DashboardStringId.FitToPageWidth" xml:space="preserve">
+    <value>لعرض الصفحة</value>
+  </data>
+  <data name="DashboardStringId.GroupIntervalNone" xml:space="preserve">
+    <value>لا تجمع</value>
+  </data>
+  <data name="DashboardStringId.HiddenDataItemsHeader" xml:space="preserve">
+    <value>بيانات العناصر المخفية</value>
+  </data>
+  <data name="DashboardStringId.ImageFormat" xml:space="preserve">
+    <value>تنسيق الصورة</value>
+  </data>
+  <data name="DashboardStringId.LoadingDataError" xml:space="preserve">
+    <value>"لوحة المعلومات" مصادفة مشكلة أثناء تحميل البيانات. قد تظهر واحدة أو عدة عناصر لوحة فارغة.
+الرجاء الاتصال ببائع التطبيق أو مسؤول النظام الخاص بك، وتوفير المعلومات التالية.
+
+فشل خادم تطبيق ويب إنشاء اتصالات البيانات التالية:
+{0}</value>
+  </data>
+  <data name="DashboardStringId.Longitude" xml:space="preserve">
+    <value>خط الطول</value>
+  </data>
+  <data name="DashboardStringId.NewCalculatedFieldNamePrefix" xml:space="preserve">
+    <value>حساب الحقل</value>
+  </data>
+  <data name="DashboardStringId.NumericGroupIntervalDiscrete" xml:space="preserve">
+    <value>المنفصلة</value>
+  </data>
+  <data name="DashboardStringId.PageLayout" xml:space="preserve">
+    <value>تخطيط الصفحة</value>
+  </data>
+  <data name="DashboardStringId.PageLayoutLandscape" xml:space="preserve">
+    <value>المناظر الطبيعية</value>
+  </data>
+  <data name="DashboardStringId.PaperKindExecutive" xml:space="preserve">
+    <value>التنفيذية</value>
+  </data>
+  <data name="DashboardStringId.PaperKindLegal" xml:space="preserve">
+    <value>القانونية</value>
+  </data>
+  <data name="DashboardStringId.PaperKindLetter" xml:space="preserve">
+    <value>رسالة</value>
+  </data>
+  <data name="DashboardStringId.ParametersFormCaption" xml:space="preserve">
+    <value>معلمات لوحة المعلومات</value>
+  </data>
+  <data name="DashboardStringId.ParametersSelectorText" xml:space="preserve">
+    <value>حدد...</value>
+  </data>
+  <data name="DashboardStringId.PivotGridGrandTotal" xml:space="preserve">
+    <value>المجموع الكلي</value>
+  </data>
+  <data name="DashboardStringId.PivotGridTotal" xml:space="preserve">
+    <value>{0} المجموع</value>
+  </data>
+  <data name="DashboardStringId.PrintHeadersOnEveryPage" xml:space="preserve">
+    <value>طباعة رؤوس في كل صفحة</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterEmptyArgument" xml:space="preserve">
+    <value>الرجاء تحديد وسيطة "تصفية نطاق"</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterEmptySeries" xml:space="preserve">
+    <value>الرجاء تحديد "عامل تصفية نطاق" القيم</value>
+  </data>
+  <data name="DashboardStringId.Resolution" xml:space="preserve">
+    <value>القرار (نقطة في البوصة)</value>
+  </data>
+  <data name="DashboardStringId.ScaleFactor" xml:space="preserve">
+    <value>عامل مقياس</value>
+  </data>
+  <data name="DashboardStringId.ScaleMode" xml:space="preserve">
+    <value>وضع مقياس</value>
+  </data>
+  <data name="DashboardStringId.ScaleModeUseScaleFactor" xml:space="preserve">
+    <value>استخدام عامل المقياس</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeArea" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeBar" xml:space="preserve">
+    <value>بار</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeBubble" xml:space="preserve">
+    <value>فقاعة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeCandleStick" xml:space="preserve">
+    <value>عصا شمعة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeFullStackedArea" xml:space="preserve">
+    <value>مساحة مكدس كامل</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeFullStackedBar" xml:space="preserve">
+    <value>شريط مكدس كامل</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeFullStackedLine" xml:space="preserve">
+    <value>خطي مكدس كامل</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeFullStackedSplineArea" xml:space="preserve">
+    <value>مساحة مكدس كامل الشريحة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupArea" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupBar" xml:space="preserve">
+    <value>بار</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupBubble" xml:space="preserve">
+    <value>فقاعة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupFinancial" xml:space="preserve">
+    <value>المالية</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupPointLine" xml:space="preserve">
+    <value>أشر/خط</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupRange" xml:space="preserve">
+    <value>النطاق</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeGroupRangeFilter" xml:space="preserve">
+    <value>عامل تصفية نطاق</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeLine" xml:space="preserve">
+    <value>خط</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypePoint" xml:space="preserve">
+    <value>نقطة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeRangeArea" xml:space="preserve">
+    <value>مجموعة المجال</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeSideBySideFullStackedBar" xml:space="preserve">
+    <value>شريط مكدس كامل جنبا بجنب</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeSideBySideRangeBar" xml:space="preserve">
+    <value>شريط مجموعة جنبا بجنب</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeSideBySideStackedBar" xml:space="preserve">
+    <value>مكدس بار جنبا بجنب</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeSpline" xml:space="preserve">
+    <value>الشريحة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeSplineArea" xml:space="preserve">
+    <value>مساحة الشريحة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStackedArea" xml:space="preserve">
+    <value>منطقة مكدسة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStackedBar" xml:space="preserve">
+    <value>مكدس بار</value>
+  </data>
+  <data name="DashboardStringId.SparklineTooltipEndValue" xml:space="preserve">
+    <value>نهاية:</value>
+  </data>
+  <data name="DashboardStringId.SparklineTooltipMaxValue" xml:space="preserve">
+    <value>ماكس:</value>
+  </data>
+  <data name="DashboardStringId.SparklineTooltipMinValue" xml:space="preserve">
+    <value>مين:</value>
+  </data>
+  <data name="DashboardStringId.SparklineTooltipStartValue" xml:space="preserve">
+    <value>بدء تشغيل:</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeAverage" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeStdDev" xml:space="preserve">
+    <value>الانحراف المعياري</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeStdDevp" xml:space="preserve">
+    <value>الانحراف المعياري للمحتوى</value>
+  </data>
+  <data name="DashboardStringId.TargetValueCaption" xml:space="preserve">
+    <value>الهدف</value>
+  </data>
+  <data name="DashboardStringId.ColoringModeDefault" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.ColoringModeNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.FilterElementShowAllItem" xml:space="preserve">
+    <value>(جميع)</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameItemGroup" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="DashboardStringId.DashboardErrorValue" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="DashboardStringId.ColorAutoAssigned" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="DashboardStringId.PageLayoutAuto" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeCountDistinct" xml:space="preserve">
+    <value>عد متميزة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionArgument" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemColor" xml:space="preserve">
+    <value>لون</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemWeight" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="DashboardStringId.IncorrectParameterType" xml:space="preserve">
+    <value>قيم المعلمة لوحة معلومات لا تتوافق مع نوع Parameter.Type-</value>
+  </data>
+  <data name="DashboardStringId.GridSortDescending" xml:space="preserve">
+    <value>فرز تنازلي</value>
+  </data>
+  <data name="DashboardStringId.GridTotalTypeCount" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="DashboardStringId.CsvValueSeparator" xml:space="preserve">
+    <value>فاصل</value>
+  </data>
+  <data name="DashboardStringId.GridTotalTypeMax" xml:space="preserve">
+    <value>ماكس</value>
+  </data>
+  <data name="DashboardStringId.GridTotalTypeMin" xml:space="preserve">
+    <value>الأدنى:</value>
+  </data>
+  <data name="DashboardStringId.GridTotalTypeSum" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="DashboardStringId.GridTotalAutoTemplate" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DashboardStringId.GridTotalValueTemplate" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DashboardStringId.ParametersFormValueColumnCaption" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DashboardStringId.ChartTotalValue" xml:space="preserve">
+    <value>المجموع</value>
+  </data>
+  <data name="DashboardStringId.ColorAutoAssignedNotApplied" xml:space="preserve">
+    <value>تلقائي (لا ينطبق)</value>
+  </data>
+  <data name="DashboardStringId.ColoringModeHue" xml:space="preserve">
+    <value>هوي</value>
+  </data>
+  <data name="DashboardStringId.ColorInherited" xml:space="preserve">
+    <value>(الموروثة)</value>
+  </data>
+  <data name="DashboardStringId.ColorPaletteIndex" xml:space="preserve">
+    <value>فهرس لوح الألوان:</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalExactDate" xml:space="preserve">
+    <value>التاريخ المحدد</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameComboBoxItem" xml:space="preserve">
+    <value>مربع التحرير والسرد</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameListBoxItem" xml:space="preserve">
+    <value>مربع قائمة</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameTreeViewItem" xml:space="preserve">
+    <value>طريقة عرض الشجرة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionDashboardItemComponentName" xml:space="preserve">
+    <value>اسم المكون عنصر لوحة المعلومات</value>
+  </data>
+  <data name="DashboardStringId.DescriptionDashboardItemName" xml:space="preserve">
+    <value>اسم عنصر لوحة المعلومات</value>
+  </data>
+  <data name="DashboardStringId.DescriptionTooltipDimensions" xml:space="preserve">
+    <value>أبعاد تلميح الأدوات</value>
+  </data>
+  <data name="DashboardStringId.DescriptionTooltipMeasures" xml:space="preserve">
+    <value>التدابير تلميح الأدوات</value>
+  </data>
+  <data name="DashboardStringId.FormatMasterFilterDisplayText" xml:space="preserve">
+    <value>, {0}</value>
+  </data>
+  <data name="DashboardStringId.FormatRangeFilterDisplayText" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="DashboardStringId.FormatStringDashboardItemCaption" xml:space="preserve">
+    <value> - {0}</value>
+  </data>
+  <data name="DashboardStringId.FormatStringDataItemName" xml:space="preserve">
+    <value>{0} ({1})</value>
+  </data>
+  <data name="DashboardStringId.FormatStringKpiElementCaption" xml:space="preserve">
+    <value>{0} vs {1}</value>
+  </data>
+  <data name="DashboardStringId.FormatStringSeriesName" xml:space="preserve">
+    <value> - {0}</value>
+  </data>
+  <data name="DashboardStringId.GridClearSorting" xml:space="preserve">
+    <value>قم بفرز</value>
+  </data>
+  <data name="DashboardStringId.GridResetColumnWidths" xml:space="preserve">
+    <value>Reset column widths</value>
+  </data>
+  <data name="DashboardStringId.InitialExtent" xml:space="preserve">
+    <value>درجة أولى</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectFilterValueLength" xml:space="preserve">
+    <value>القائمة القيم تم تعيينها كقيمة لعامل التصفية يحتوي على طول يطابق الطول المتوقع لقيمة التصفية.</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectGridDashboardControlOperation" xml:space="preserve">
+    <value>An invalid operation was performed in GridDashboardControl.</value>
+  </data>
+  <data name="DashboardStringId.MeasureNamesDimensionName" xml:space="preserve">
+    <value>ميسوريناميس</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectDashboardItemGroupAssign" xml:space="preserve">
+    <value>A لوحة المعلومات إلى مجموعة من العناصر لوحة المعلومات. استخدام الخاصية Dashboard.Groups لإضافة المجموعة إلى لوحة المعلومات.</value>
+  </data>
+  <data name="DashboardStringId.MessageUnassignedDashboardItemGroup" xml:space="preserve">
+    <value>المجموعة عنصر لوحة المعلومات ينبغي أن تنتمي إلى لوحة المعلومات. لإضافة مجموعة إلى لوحة المعلومات، استخدم الخاصية Dashboard.Groups.</value>
+  </data>
+  <data name="DashboardStringId.MessageWrongAxisName" xml:space="preserve">
+    <value>على محور بيانات بالاسم المحدد غير موجود في هذا البند في لوحة المعلومات. انظر فئة ثابتة DevExpress.DashboardCommon.DashboardDataAxisNames لأسماء محور البيانات صالحة.</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitSymbolMillions" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitSymbolThousands" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="DashboardStringId.PaperKindA3" xml:space="preserve">
+    <value>A3</value>
+  </data>
+  <data name="DashboardStringId.PaperKindA4" xml:space="preserve">
+    <value>A4</value>
+  </data>
+  <data name="DashboardStringId.PaperKindA5" xml:space="preserve">
+    <value>A5</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterOLAPDataSource" xml:space="preserve">
+    <value>عامل تصفية مجموعة غير معتمدة في الوضع OLAP.</value>
+  </data>
+  <data name="DashboardStringId.TooltipDataItemsHeader" xml:space="preserve">
+    <value>تلميح الأدوات عناصر البيانات</value>
+  </data>
+  <data name="DashboardStringId.TopNOthersValue" xml:space="preserve">
+    <value>الآخرين</value>
+  </data>
+  <data name="DashboardStringId.Value1Caption" xml:space="preserve">
+    <value>القيمة 1</value>
+  </data>
+  <data name="DashboardStringId.Value2Caption" xml:space="preserve">
+    <value>قيمة 2</value>
+  </data>
+  <data name="DashboardStringId.WeightCaption" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="DashboardStringId.ElementNamePies" xml:space="preserve">
+    <value>فطائر</value>
+  </data>
+  <data name="DashboardStringId.GridSortAscending" xml:space="preserve">
+    <value>فرز تصاعدي</value>
+  </data>
+  <data name="DashboardStringId.FilterElementCheckedComboBoxNoDataCaption" xml:space="preserve">
+    <value>(بلا)</value>
+  </data>
+  <data name="DashboardStringId.CategoryNameGeneral" xml:space="preserve">
+    <value>العام</value>
+  </data>
+  <data name="DashboardStringId.LowCaption" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemMeasureWeight" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="DashboardStringId.DefaultDataSourceName" xml:space="preserve">
+    <value>مصدر البيانات</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateMonthYear" xml:space="preserve">
+    <value>GetDateMonthYear(تاريخ وقت)
+إرجاع تاريخ اليوم الأول من الشهر لـ DateTime معين.</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastDay" xml:space="preserve">
+    <value>آخر يوم</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastMonth" xml:space="preserve">
+    <value>الشهر الأخير</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextDay" xml:space="preserve">
+    <value>وفي اليوم التالي</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextMonth" xml:space="preserve">
+    <value>القادم في الأسبوع</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisDay" xml:space="preserve">
+    <value>هذا اليوم</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisMonth" xml:space="preserve">
+    <value>من هذا</value>
+  </data>
+  <data name="DashboardStringId.Latitude" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="DashboardStringId.ParametersFormCalendarTodayButton" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DashboardStringId.PointLabelContentTypePercent" xml:space="preserve">
+    <value>في المائة</value>
+  </data>
+  <data name="DashboardStringId.PointLabelContentTypeValue" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DashboardStringId.ExportParameters" xml:space="preserve">
+    <value>المعلمات</value>
+  </data>
+  <data name="DashboardStringId.ExportFilters" xml:space="preserve">
+    <value>عوامل التصفية</value>
+  </data>
+  <data name="DashboardStringId.PointLabelContentTypeArgument" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="DashboardStringId.DashboardStatePosition" xml:space="preserve">
+    <value>موقف</value>
+  </data>
+  <data name="DashboardStringId.ActionMaximizeDashboardItem" xml:space="preserve">
+    <value>تكبير</value>
+  </data>
+  <data name="DashboardStringId.PointLabelContentTypeNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameTabPage" xml:space="preserve">
+    <value>الصفحة</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeDateTime" xml:space="preserve">
+    <value>التاريخ والوقت</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeAuto" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="DashboardStringId.CardLayoutTemplateNoneCaption" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.CardLayoutTemplateCustomCaption" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeTitleCaption" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeSparklineCaption" xml:space="preserve">
+    <value>خط المؤشر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateFormatDefaultCaption" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateTimeFormatDefaultCaption" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDayOfWeekFormatDefaultCaption" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatMonthFormatDefaultCaption" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatQuarterFormatDefaultCaption" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatYearFormatDefaultCaption" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateFormatLongCaption" xml:space="preserve">
+    <value>طويلة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateFormatShortCaption" xml:space="preserve">
+    <value>قصيرة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateTimeFormatLongCaption" xml:space="preserve">
+    <value>طويلة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateTimeFormatShortCaption" xml:space="preserve">
+    <value>قصيرة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDateTimeFormatTimeOnlyCaption" xml:space="preserve">
+    <value>الوقت فقط</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatMonthFormatNumericCaption" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatQuarterFormatFullCaption" xml:space="preserve">
+    <value>كامل</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatQuarterFormatNumericCaption" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatYearFormatAbbreviatedCaption" xml:space="preserve">
+    <value>يختصر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatYearFormatFullCaption" xml:space="preserve">
+    <value>كامل</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDayOfWeekFormatNumericCaption" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDayOfWeekFormatFullCaption" xml:space="preserve">
+    <value>كامل</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatMonthFormatFullCaption" xml:space="preserve">
+    <value>كامل</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceCustom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontBold" xml:space="preserve">
+    <value>غامق</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontItalic" xml:space="preserve">
+    <value>مائل</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontUnderline" xml:space="preserve">
+    <value>تسطير</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceCyan" xml:space="preserve">
+    <value>سماوي</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontBlue" xml:space="preserve">
+    <value>الخط الأزرق</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontGrayed" xml:space="preserve">
+    <value>الخط الرمادي</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontGreen" xml:space="preserve">
+    <value>الخط الأخضر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontRed" xml:space="preserve">
+    <value>الخط الأحمر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontYellow" xml:space="preserve">
+    <value>الخط الأصفر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientBlue" xml:space="preserve">
+    <value>أزرق متدرج</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleBlue" xml:space="preserve">
+    <value>أزرق شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleCyan" xml:space="preserve">
+    <value>أزرق شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleGray" xml:space="preserve">
+    <value>رمادي شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleGreen" xml:space="preserve">
+    <value>أخضر شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleOrange" xml:space="preserve">
+    <value>برتقالي شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePalePurple" xml:space="preserve">
+    <value>أرجواني شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleRed" xml:space="preserve">
+    <value>أحمر شاحب</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientGreen" xml:space="preserve">
+    <value>أخضر متدرج</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGray" xml:space="preserve">
+    <value>رمادي</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePurple" xml:space="preserve">
+    <value>أرجواني</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceYellow" xml:space="preserve">
+    <value>أصفر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceRed" xml:space="preserve">
+    <value>الأحمر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGreen" xml:space="preserve">
+    <value>الأخضر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceOrange" xml:space="preserve">
+    <value>أورانج</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientOrange" xml:space="preserve">
+    <value>تدرج اللون البرتقالي</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientPurple" xml:space="preserve">
+    <value>التدرج الأرجواني</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientRed" xml:space="preserve">
+    <value>الأحمر التدرج</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientTransparent" xml:space="preserve">
+    <value>التدرج شفافة</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientYellow" xml:space="preserve">
+    <value>تدرج اللون الأصفر</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearancePaleYellow" xml:space="preserve">
+    <value>أصفر باهت</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceGradientCyan" xml:space="preserve">
+    <value>أزرق متدرج</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceBlue" xml:space="preserve">
+    <value>الأزرق</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalDay" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalSecond" xml:space="preserve">
+    <value>الثانية</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalMonth" xml:space="preserve">
+    <value>في الشهر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalHour" xml:space="preserve">
+    <value>ساعة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalMinute" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalQuarter" xml:space="preserve">
+    <value>الربع</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalYear" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalAll" xml:space="preserve">
+    <value>جميع</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionPercentValueType" xml:space="preserve">
+    <value>في المائة</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionNumberValueType" xml:space="preserve">
+    <value>عدد</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAutomaticValueType" xml:space="preserve">
+    <value>التلقائي</value>
+  </data>
+  <data name="DashboardStringId.SparklineIndicationModeBar" xml:space="preserve">
+    <value>بار</value>
+  </data>
+  <data name="DashboardStringId.SparklineIndicationModeLine" xml:space="preserve">
+    <value>خط</value>
+  </data>
+  <data name="DashboardStringId.SparklineIndicationModeArea" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="DashboardStringId.SparklineIndicationModeWinLoss" xml:space="preserve">
+    <value>فوز/خسارة</value>
+  </data>
+  <data name="DashboardStringId.RankOrderDescending" xml:space="preserve">
+    <value>تنازلي</value>
+  </data>
+  <data name="DashboardStringId.RankOrderAscending" xml:space="preserve">
+    <value>ترتيب تصاعدي</value>
+  </data>
+  <data name="DashboardStringId.DeltaThresholdTypePercent" xml:space="preserve">
+    <value>في المائة</value>
+  </data>
+  <data name="DashboardStringId.DeltaIndicationModeGreaterIsGoodCaption" xml:space="preserve">
+    <value>أكبر حسن</value>
+  </data>
+  <data name="DashboardStringId.DeltaIndicationModeLessIsGoodCaption" xml:space="preserve">
+    <value>أقل من جيد</value>
+  </data>
+  <data name="DashboardStringId.DeltaIndicationModeNoIndicationCaption" xml:space="preserve">
+    <value>لا توجد إشارة</value>
+  </data>
+  <data name="DashboardStringId.DeltaIndicationModeWarningIfGreaterCaption" xml:space="preserve">
+    <value>تحذير إذا كان أكبر</value>
+  </data>
+  <data name="DashboardStringId.DeltaIndicationModeWarningIfLessCaption" xml:space="preserve">
+    <value>تحذير إذا أقل</value>
+  </data>
+  <data name="DashboardStringId.DeltaThresholdTypeAbsolute" xml:space="preserve">
+    <value>المطلقة</value>
+  </data>
+  <data name="DashboardStringId.DifferenceCalculationTargetNext" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="DashboardStringId.DifferenceCalculationTargetPrevious" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="DashboardStringId.DifferenceCalculationTargetLast" xml:space="preserve">
+    <value>الماضي</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypeGeneralCaption" xml:space="preserve">
+    <value>العام</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitAutoCaption" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypeCurrencyCaption" xml:space="preserve">
+    <value>تحويل العملات</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypeNumberCaption" xml:space="preserve">
+    <value>عدد</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypePercentCaption" xml:space="preserve">
+    <value>في المائة</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypeScientificCaption" xml:space="preserve">
+    <value>العلمي</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitBillionsCaption" xml:space="preserve">
+    <value>المليارات</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitMillionsCaption" xml:space="preserve">
+    <value>الملايين</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitOnesCaption" xml:space="preserve">
+    <value>منها</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitThousandsCaption" xml:space="preserve">
+    <value>الآلاف</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypeAutoCaption" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongColumns" xml:space="preserve">
+    <value>الأعمدة</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterCalculationAlongArgument" xml:space="preserve">
+    <value>الوسيطة</value>
+  </data>
+  <data name="DashboardStringId.ChartCalculationAlongArguments" xml:space="preserve">
+    <value>الحجج</value>
+  </data>
+  <data name="DashboardStringId.CardCalculationAlongCards" xml:space="preserve">
+    <value>بطاقات</value>
+  </data>
+  <data name="DashboardStringId.PieCalculationAlongArguments" xml:space="preserve">
+    <value>الحجج</value>
+  </data>
+  <data name="DashboardStringId.GaugeCalculationAlongGauges" xml:space="preserve">
+    <value>أجهزة قياس</value>
+  </data>
+  <data name="DashboardStringId.ScatterCalculationAlongArguments" xml:space="preserve">
+    <value>الحجج</value>
+  </data>
+  <data name="DashboardStringId.IntersectionLevelModeAll" xml:space="preserve">
+    <value>جميع المستويات</value>
+  </data>
+  <data name="DashboardStringId.IntersectionLevelModeAuto" xml:space="preserve">
+    <value>(تلقائي)</value>
+  </data>
+  <data name="DashboardStringId.IntersectionLevelModeFirst" xml:space="preserve">
+    <value>المستوى الأول</value>
+  </data>
+  <data name="DashboardStringId.IntersectionLevelModeLast" xml:space="preserve">
+    <value>المستوى الأخير</value>
+  </data>
+  <data name="DashboardStringId.IntersectionLevelModeSpecific" xml:space="preserve">
+    <value>مستوى معين</value>
+  </data>
+  <data name="DashboardStringId.DeltaValueTypeAbsoluteVariationCaption" xml:space="preserve">
+    <value>التباين المطلق</value>
+  </data>
+  <data name="DashboardStringId.DeltaValueTypeActualValueCaption" xml:space="preserve">
+    <value>القيمة الفعلية</value>
+  </data>
+  <data name="DashboardStringId.DeltaValueTypePercentOfTargetCaption" xml:space="preserve">
+    <value>بالمئة من الهدف</value>
+  </data>
+  <data name="DashboardStringId.DeltaValueTypePercentVariationCaption" xml:space="preserve">
+    <value>نسبة التباين</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypeNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypeExpression" xml:space="preserve">
+    <value>التعبير</value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatDay" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatQuarter" xml:space="preserve">
+    <value>الربع</value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatSecond" xml:space="preserve">
+    <value>الثانية</value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatYear" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatMinute" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatHour" xml:space="preserve">
+    <value>ساعة</value>
+  </data>
+  <data name="DashboardStringId.ExactDateFormatMonth" xml:space="preserve">
+    <value>في الشهر</value>
+  </data>
+  <data name="DashboardStringId.ExactDateDateTimeFormatPattern" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatUnitCaption" xml:space="preserve">
+    <value>وحدة</value>
+  </data>
+  <data name="DashboardStringId.FormatConditionAppearanceFontStrikeout" xml:space="preserve">
+    <value>يتخلله خط</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleValue" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBar" xml:space="preserve">
+    <value>بار</value>
+  </data>
+  <data name="DashboardStringId.CommandDimensionSortModeDisplayText" xml:space="preserve">
+    <value>(نص العرض)</value>
+  </data>
+  <data name="DashboardStringId.CommandDimensionSortModeID" xml:space="preserve">
+    <value>(ID)</value>
+  </data>
+  <data name="DashboardStringId.CommandDimensionSortModeKey" xml:space="preserve">
+    <value>(مفتاح)</value>
+  </data>
+  <data name="DashboardStringId.CommandDimensionSortModeValue" xml:space="preserve">
+    <value>(قيمة)</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleAboveBelowAverage" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBetween" xml:space="preserve">
+    <value>بين</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleNotBetween" xml:space="preserve">
+    <value>ليس بين</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleNotBetweenOrEqual" xml:space="preserve">
+    <value>ليس بين أو يساوي</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleNotEqualTo" xml:space="preserve">
+    <value>لا يساوي</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleRange" xml:space="preserve">
+    <value>النطاق</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBetweenOrEqual" xml:space="preserve">
+    <value>بين أو يساوي</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBottomN" xml:space="preserve">
+    <value>أسفل N</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleColorRangeBar" xml:space="preserve">
+    <value>شريط مجموعة الألوان</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleContains" xml:space="preserve">
+    <value>الذي يحتوي على</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleEqualTo" xml:space="preserve">
+    <value>يساوي</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleExpression" xml:space="preserve">
+    <value>التعبير</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleGradientRangeBar" xml:space="preserve">
+    <value>شريط التدرج النطاقات</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleGreaterThan" xml:space="preserve">
+    <value>أكبر من</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleGreaterThanOrEqualTo" xml:space="preserve">
+    <value>أكبر من أو يساوي</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleLessThan" xml:space="preserve">
+    <value>أقل</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleLessThanOrEqualTo" xml:space="preserve">
+    <value>أقل من أو يساوي</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleRangeSet" xml:space="preserve">
+    <value>تعيين نطاق</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleTopBottom" xml:space="preserve">
+    <value>من أعلى إلى أسفل</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleRangeIcons" xml:space="preserve">
+    <value>النطاقات رمز</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleTopN" xml:space="preserve">
+    <value>أعلى ن</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleAboveAverage" xml:space="preserve">
+    <value>فوق المتوسط</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleDateOccurring" xml:space="preserve">
+    <value>تاريخ متكرر</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBelowAverage" xml:space="preserve">
+    <value>أقل من المتوسط</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleRangeGradient" xml:space="preserve">
+    <value>نطاقات التدرج</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBarRangeColors" xml:space="preserve">
+    <value>شريط الألوان نطاقات</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleRangeColors" xml:space="preserve">
+    <value>نطاقات ألوان</value>
+  </data>
+  <data name="DashboardStringId.RedoText" xml:space="preserve">
+    <value>الإعادة</value>
+  </data>
+  <data name="DashboardStringId.UndoText" xml:space="preserve">
+    <value>التراجع عن</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleStyleAppearance" xml:space="preserve">
+    <value>مظهر</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleApplyTo" xml:space="preserve">
+    <value>تطبيق على</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleApplyToColumn" xml:space="preserve">
+    <value>تطبيق للعمود</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleApplyToRow" xml:space="preserve">
+    <value>تطبيق لصف</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleDrawAxis" xml:space="preserve">
+    <value>محور</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleNegativeStyle" xml:space="preserve">
+    <value>إعدادات الأنماط السلبية</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleShowBarOnly" xml:space="preserve">
+    <value>إظهار شريط فقط</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleStyle" xml:space="preserve">
+    <value>إعدادات النمط</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleStyleIcons" xml:space="preserve">
+    <value>الرموز</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleAllowNegativeAxis" xml:space="preserve">
+    <value>المحور السلبي السماح</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleRangeAdd" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleRangeDelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleRangeReverseStyles" xml:space="preserve">
+    <value>عكس</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleDataItemIsNotAvailable" xml:space="preserve">
+    <value>(n/A)</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleFormatStyle" xml:space="preserve">
+    <value>نمط تنسيق</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleInvalidRule" xml:space="preserve">
+    <value>&lt; قاعدة غير صالحة &gt;</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleInvalidRuleChanging" xml:space="preserve">
+    <value>لا يمكن تمكين "قاعدة غير صالحة".</value>
+  </data>
+  <data name="DashboardStringId.FormatRulePercentOf" xml:space="preserve">
+    <value>% من كافة القيم</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleRangeGenerateRanges" xml:space="preserve">
+    <value>إنشاء نطاقات</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleRangeSegmentNumber" xml:space="preserve">
+    <value>عدد من النطاقات:</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleRangeUsePercent" xml:space="preserve">
+    <value>استخدام نطاقات %</value>
+  </data>
+  <data name="DashboardStringId.MapShapeNoneAttribute" xml:space="preserve">
+    <value>NONE</value>
+  </data>
+  <data name="DashboardStringId.DataSourceDataMember" xml:space="preserve">
+    <value>بيانات الأعضاء</value>
+  </data>
+  <data name="DashboardStringId.ChoroplethMapUseBindingAttribute" xml:space="preserve">
+    <value>استخدام سمة ملزمة</value>
+  </data>
+  <data name="DashboardStringId.DataSourceQuery" xml:space="preserve">
+    <value>الاستعلام</value>
+  </data>
+  <data name="DashboardStringId.DashboardCurrencyUseCurrentCurrency" xml:space="preserve">
+    <value>إعدادات النظام العميل استخدام</value>
+  </data>
+  <data name="DashboardStringId.ActionExportDashboard" xml:space="preserve">
+    <value>تصدير لوحة المعلومات</value>
+  </data>
+  <data name="DashboardStringId.FunctionCategoryWindow" xml:space="preserve">
+    <value>نافذة</value>
+  </data>
+  <data name="DashboardStringId.ButtonApply" xml:space="preserve">
+    <value>تطبيق</value>
+  </data>
+  <data name="DashboardStringId.ExactDatePeriodCaption" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DashboardStringId.MessageCollectionTypesNotSupported" xml:space="preserve">
+    <value>لوحة معلومات لا يعتمد أنواع جمع.</value>
+  </data>
+  <data name="DashboardStringId.NumericFormatFormatTypeCustomCaption" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DashboardStringId.ActionClearSelection" xml:space="preserve">
+    <value>التحديد</value>
+  </data>
+  <data name="DashboardStringId.ActionExportTemplate" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="DashboardStringId.ActionExportToExcel" xml:space="preserve">
+    <value>تصدير إلى Excel</value>
+  </data>
+  <data name="DashboardStringId.ActionPrintPreview" xml:space="preserve">
+    <value>طباعة معاينة...</value>
+  </data>
+  <data name="DashboardStringId.ActionRestoreDashboardItem" xml:space="preserve">
+    <value>استعادة</value>
+  </data>
+  <data name="DashboardStringId.ActionSelectDateTimePeriod" xml:space="preserve">
+    <value>حدد تاريخ الفترة الزمنية</value>
+  </data>
+  <data name="DashboardStringId.ActionShowDataInspector" xml:space="preserve">
+    <value>فحص البيانات</value>
+  </data>
+  <data name="DashboardStringId.AggregatedDataType" xml:space="preserve">
+    <value>تجميع</value>
+  </data>
+  <data name="DashboardStringId.AggregateExFunctionDescriptionCountNotNull" xml:space="preserve">
+    <value>CountNotNull(Value)
+إرجاع عدد كائنات غير فارغة في مجموعة-</value>
+  </data>
+  <data name="DashboardStringId.AggregateExFunctionDescriptionMode" xml:space="preserve">
+    <value>Mode(Value)
+وضع القيم. يتم وضع القيمة التي تتكرر أكثر من أي دولة أخرى في كثير من الأحيان-</value>
+  </data>
+  <data name="DashboardStringId.AggrInMasterFilterDimensionError" xml:space="preserve">
+    <value>لا يمكن تطبيق تصفية الأصول الرأسمالية بقيم الأبعاد التي تم إنشاؤها باستخدام تعبير يحتوي على الدالة أجر.</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeDouble" xml:space="preserve">
+    <value>مزدوجة</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeLong" xml:space="preserve">
+    <value>عدد صحيح</value>
+  </data>
+  <data name="DashboardStringId.CalculatedFieldTypeUnknown" xml:space="preserve">
+    <value>غير معروف</value>
+  </data>
+  <data name="DashboardStringId.CalculationAlongSpecificDimensions" xml:space="preserve">
+    <value>محددة...</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypeDifference" xml:space="preserve">
+    <value>الفرق</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypeMovingCalculation" xml:space="preserve">
+    <value>نقل حساب</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypePercentageDifference" xml:space="preserve">
+    <value>النسبة المئوية للفرق</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypePercentOfTotal" xml:space="preserve">
+    <value>بالمئة من إجمالي</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypeRank" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="DashboardStringId.CalculationTypeRunningTotal" xml:space="preserve">
+    <value>تشغيل إجمالي</value>
+  </data>
+  <data name="DashboardStringId.CardCalculationAlongCardsAndSparklineArgument" xml:space="preserve">
+    <value>بطاقات/وسيطة خط المؤشر</value>
+  </data>
+  <data name="DashboardStringId.CardCalculationAlongSparklineArgument" xml:space="preserve">
+    <value>وسيطة خط المؤشر</value>
+  </data>
+  <data name="DashboardStringId.CardCalculationAlongSparklineArgumentAndCards" xml:space="preserve">
+    <value>وسيطة خط المؤشر/بطاقات</value>
+  </data>
+  <data name="DashboardStringId.CardLayoutTemplateCenteredCaption" xml:space="preserve">
+    <value>توسيط</value>
+  </data>
+  <data name="DashboardStringId.CardLayoutTemplateCompactCaption" xml:space="preserve">
+    <value>المدمجة</value>
+  </data>
+  <data name="DashboardStringId.CardLayoutTemplateLightweightCaption" xml:space="preserve">
+    <value>وزن خفيف</value>
+  </data>
+  <data name="DashboardStringId.CardLayoutTemplateStretchedCaption" xml:space="preserve">
+    <value>امتدت</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeAbsoluteVariationCaption" xml:space="preserve">
+    <value>مطلقة</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeActualValueCaption" xml:space="preserve">
+    <value>القيمة الفعلية</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeCardNameCaption" xml:space="preserve">
+    <value>اسم البطاقة</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeDeltaIndicatorCaption" xml:space="preserve">
+    <value>مؤشر دلتا</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeDimensionValueCaption" xml:space="preserve">
+    <value>البعد</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypePercentOfTargetCaption" xml:space="preserve">
+    <value>بالمائة من الوسيطة الهدف</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypePercentVariationCaption" xml:space="preserve">
+    <value>نسبة تغير التباينات</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeSubtitleCaption" xml:space="preserve">
+    <value>العنوان الفرعي</value>
+  </data>
+  <data name="DashboardStringId.CardRowDataElementTypeTargetValueCaption" xml:space="preserve">
+    <value>القيمة المستهدفة</value>
+  </data>
+  <data name="DashboardStringId.ChartCalculationAlongArgumentsAndSeries" xml:space="preserve">
+    <value>الحجج/سلسلة</value>
+  </data>
+  <data name="DashboardStringId.ChartCalculationAlongSeries" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="DashboardStringId.ChartCalculationAlongSeriesAndArguments" xml:space="preserve">
+    <value>سلسلة/الحجج</value>
+  </data>
+  <data name="DashboardStringId.CommandDimensionGroupChildValues" xml:space="preserve">
+    <value>مجموعة البلاط</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleAboveOrEqualAverage" xml:space="preserve">
+    <value>أعلى أو مساوياً لمتوسط</value>
+  </data>
+  <data name="DashboardStringId.CommandFormatRuleBelowOrEqualAverage" xml:space="preserve">
+    <value>أقل أو يساوي متوسط</value>
+  </data>
+  <data name="DashboardStringId.CustomExpressionCalculationMeasureCaption" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="DashboardStringId.CustomItems" xml:space="preserve">
+    <value>العناصر المخصصة</value>
+  </data>
+  <data name="DashboardStringId.DashboardDataUpdating" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="DashboardStringId.DataInspectorObjectValue" xml:space="preserve">
+    <value>[كائن]</value>
+  </data>
+  <data name="DashboardStringId.DataSourceFederationQuery" xml:space="preserve">
+    <value>الاستعلام</value>
+  </data>
+  <data name="DashboardStringId.DataSourceFilterContainsAggrExceptionText" xml:space="preserve">
+    <value>لا يمكن تحميل البيانات نظراً لأن عامل تصفية مصدر البيانات يجب أن لا تحتوي على الدالة أجر.</value>
+  </data>
+  <data name="DashboardStringId.DateFilterDatePickerButtonDefaultText" xml:space="preserve">
+    <value>تعيين عامل التصفية...</value>
+  </data>
+  <data name="DashboardStringId.DateFilterDisplayTextPattern" xml:space="preserve">
+    <value>عرض نمط النص</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatDayOfWeekFormatAbbreviatedCaption" xml:space="preserve">
+    <value>يختصر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeFormatMonthFormatAbbreviatedCaption" xml:space="preserve">
+    <value>يختصر</value>
+  </data>
+  <data name="DashboardStringId.DateTimeGroupIntervalWeekYear" xml:space="preserve">
+    <value>السنة الأسبوعية</value>
+  </data>
+  <data name="DashboardStringId.DateTimeIntervalWeek" xml:space="preserve">
+    <value>الأسبوع</value>
+  </data>
+  <data name="DashboardStringId.DateTimeQuarterFormat" xml:space="preserve">
+    <value>Q{0}</value>
+  </data>
+  <data name="DashboardStringId.DateTimeQuarterFormatSpecifier" xml:space="preserve">
+    <value>QQ</value>
+  </data>
+  <data name="DashboardStringId.DefaultEFDataSourceName" xml:space="preserve">
+    <value>مصدر البيانات بالانكليزية</value>
+  </data>
+  <data name="DashboardStringId.DefaultExcelDataSourceName" xml:space="preserve">
+    <value>مصدر بيانات Excel</value>
+  </data>
+  <data name="DashboardStringId.DefaultFederationDataSourceName" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="DashboardStringId.DefaultFileExtractDataSourceName" xml:space="preserve">
+    <value>استخراج البيانات المصدر</value>
+  </data>
+  <data name="DashboardStringId.DefaultJsonDataSourceName" xml:space="preserve">
+    <value>مصدر بيانات JSON</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameBoundImageItem" xml:space="preserve">
+    <value>صورة منضمة</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameChartItem" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameDateFilterItem" xml:space="preserve">
+    <value>عوامل تصفية التاريخ</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameScatterChartItem" xml:space="preserve">
+    <value>مخطط مبعثر</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameTabContainerItem" xml:space="preserve">
+    <value>علامة التبويب حاوية</value>
+  </data>
+  <data name="DashboardStringId.DefaultNameTreemapItem" xml:space="preserve">
+    <value>Treemap</value>
+  </data>
+  <data name="DashboardStringId.DefaultObjectDataSourceName" xml:space="preserve">
+    <value>كائن مصدر البيانات</value>
+  </data>
+  <data name="DashboardStringId.DefaultOlapDataSourceName" xml:space="preserve">
+    <value>مصدر بيانات OLAP</value>
+  </data>
+  <data name="DashboardStringId.DefaultPeriodName" xml:space="preserve">
+    <value>الفترة</value>
+  </data>
+  <data name="DashboardStringId.DefaultSqlDataSourceName" xml:space="preserve">
+    <value>مصدر بيانات SQL</value>
+  </data>
+  <data name="DashboardStringId.DefaultXpoDataSourceName" xml:space="preserve">
+    <value>مصدر بيانات XPO</value>
+  </data>
+  <data name="DashboardStringId.DeltaValueTypeTargetValueCaption" xml:space="preserve">
+    <value>القيمة الهدف</value>
+  </data>
+  <data name="DashboardStringId.DescriptionBoundImageAttribute" xml:space="preserve">
+    <value>السمة</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemAxisXMeasure" xml:space="preserve">
+    <value>محور س</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemAxisYMeasure" xml:space="preserve">
+    <value>محور y</value>
+  </data>
+  <data name="DashboardStringId.DescriptionItemSeries" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="DashboardStringId.DescriptionSeries" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="DashboardStringId.DifferenceCalculationMeasureCaptionFormatString" xml:space="preserve">
+    <value>الفرق {0}</value>
+  </data>
+  <data name="DashboardStringId.DifferenceCalculationTargetFirst" xml:space="preserve">
+    <value>الأولى</value>
+  </data>
+  <data name="DashboardStringId.DisplayValueCaption" xml:space="preserve">
+    <value>قيمة العرض</value>
+  </data>
+  <data name="DashboardStringId.EmptyColumnAliasPattern" xml:space="preserve">
+    <value>العمود {0}</value>
+  </data>
+  <data name="DashboardStringId.EndDate" xml:space="preserve">
+    <value>(تاريخ الانتهاء)</value>
+  </data>
+  <data name="DashboardStringId.EntireRangePeriodCaption" xml:space="preserve">
+    <value>مجموعة كاملة</value>
+  </data>
+  <data name="DashboardStringId.ErrorEmptyPeriodName" xml:space="preserve">
+    <value>لا يمكن أن يكون الاسم خاليا أو فارغاً</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingDataBindingError" xml:space="preserve">
+    <value>تحدث الأخطاء التالية أثناء ربط البيانات:</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingEFServerModeError" xml:space="preserve">
+    <value>لا يتم اعتماد وضع ملقم عضو البيانات هذا</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingInvalidCustomFunctions" xml:space="preserve">
+    <value>بعض الدالات المخصصة. تقييم التعبيرات المحرمة الدالات التالية تحتوي على</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingJoinRuleFunctionServerMode" xml:space="preserve">
+    <value>لا يمكن استخدام الدالة joinRule لتصفية مصادر البيانات وضع الخادم</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingNoSuchDataMembers" xml:space="preserve">
+    <value>لا توجد بنود البيانات التالية</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingOrderByCalculationDataMembers" xml:space="preserve">
+    <value>الفرز حسب التدبير لا يمكن تطبيقه إذا كان قياس الهدف للعمليات الحسابية. يتم ترتيب الأبعاد التالية حسب التدابير مع العمليات الحسابية</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingRecursiveDataMembers" xml:space="preserve">
+    <value>عناصر البيانات التالية تشير إلى بعضها البعض</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingSQLServerModeError" xml:space="preserve">
+    <value>ملقم وضع غير معتمد للإجراءات المخزنة</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingTopNByCalculationDataMembers" xml:space="preserve">
+    <value>"ن أعلى" إذا كان قياس الهدف إجراء عملية حسابية. الأبعاد التالية لها "أعلى ن" تطبق التدابير مع حسابات</value>
+  </data>
+  <data name="DashboardStringId.ErrorHandlingWindowDefinitionServerMode" xml:space="preserve">
+    <value>لا يمكن استخدام الدالة w لمصادر البيانات وضع الخادم</value>
+  </data>
+  <data name="DashboardStringId.ErrorIncorrectIntervalCount" xml:space="preserve">
+    <value>يجب أن تكون المعلمة عدد أكبر أو يساوي 1.</value>
+  </data>
+  <data name="DashboardStringId.ErrorToBooleanCharOperand" xml:space="preserve">
+    <value>لا يمكن تحويل حرف إلى قيمة منطقية.</value>
+  </data>
+  <data name="DashboardStringId.ErrorToBooleanDateTimeOperand" xml:space="preserve">
+    <value>لا يمكن تحويل قيمة التاريخ والوقت إلى قيمة منطقية.</value>
+  </data>
+  <data name="DashboardStringId.ExcelFormat" xml:space="preserve">
+    <value>تنسيق Excel</value>
+  </data>
+  <data name="DashboardStringId.ExpressionFieldsTreeItemName" xml:space="preserve">
+    <value>التعبيرات</value>
+  </data>
+  <data name="DashboardStringId.ExtractColumnUnsupportedTypeError" xml:space="preserve">
+    <value>الأعمدة التالية قد غير معتمد من أنواع: {0}</value>
+  </data>
+  <data name="DashboardStringId.ExtractColumnUnsupportedTypeTooltip" xml:space="preserve">
+    <value>وقد غير معتمد العمود نوع</value>
+  </data>
+  <data name="DashboardStringId.ExtractCustomDriverNameError" xml:space="preserve">
+    <value>لا يمكن أن يكون اسم برنامج استخراج مخصصة خاليا أو فارغاً.</value>
+  </data>
+  <data name="DashboardStringId.ExtractDriverNotFoundError" xml:space="preserve">
+    <value>لا يمكن العثور على برنامج تشغيل استخراج بالاسم التالي: '{0}'</value>
+  </data>
+  <data name="DashboardStringId.ExtractEmptyDataFieldsExceptionMessage" xml:space="preserve">
+    <value>لا يمكن إنشاء الملف استخراج من مصدر البيانات "إطار" الكائن أو كيان لجمع ExtractSourceOptions.DataFields فارغ.</value>
+  </data>
+  <data name="DashboardStringId.ExtractEmptyDataMemberExceptionMessage" xml:space="preserve">
+    <value>لا يمكن إنشاء ملف استخراج لأن ExtractSourceOptions.DataMember فارغة أو المحدد غير صحيح.</value>
+  </data>
+  <data name="DashboardStringId.ExtractPreprocessorColumnError" xml:space="preserve">
+    <value>ما يلي:
+{0}</value>
+  </data>
+  <data name="DashboardStringId.ExtractPreprocessorError" xml:space="preserve">
+    <value>خطأ حدث أثناء إنشاء استخراج البيانات:
+{0}</value>
+  </data>
+  <data name="DashboardStringId.ExtractSourceDataSourceNamePostfix" xml:space="preserve">
+    <value>(النسخة المحلية)</value>
+  </data>
+  <data name="DashboardStringId.FilterElementNoDataToDisplay" xml:space="preserve">
+    <value>لا توجد بيانات للعرض</value>
+  </data>
+  <data name="DashboardStringId.FilterElementRadioComboBoxNoDataCaption" xml:space="preserve">
+    <value>حدد...</value>
+  </data>
+  <data name="DashboardStringId.FilterStatePresentationSplitSheet" xml:space="preserve">
+    <value>ورقة منفصلة</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleAppliesToCardBackground" xml:space="preserve">
+    <value>ينطبق النمط المحدد على خلفية البطاقة</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleApplyToAllElements" xml:space="preserve">
+    <value>كافة العناصر</value>
+  </data>
+  <data name="DashboardStringId.FormatRuleApplyToReadOnlyDescription" xml:space="preserve">
+    <value>يتم تطبيق النمط المحدد على كافة عناصر التخطيط</value>
+  </data>
+  <data name="DashboardStringId.FromDatePeriodCaption" xml:space="preserve">
+    <value>من {0}</value>
+  </data>
+  <data name="DashboardStringId.FromToDatePeriodCaption" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="DashboardStringId.FunctionCategoryAdvanced" xml:space="preserve">
+    <value>متقدم</value>
+  </data>
+  <data name="DashboardStringId.FunctionCategoryAggregate" xml:space="preserve">
+    <value>التجميعية</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionAggr" xml:space="preserve">
+    <value>aggr (ملخصExexpression، Dimension1، Dimension2، ...)
+يستخدم مستوى التفاصيل ووظيفة التلخيص لتجميع البيانات الأساسية. المستوى يعتمد على عدد الأبعاد.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionAggregateFilter" xml:space="preserve">
+    <value>(SummaryExpression، تصفية كريتيريا)
+بتصفية البيانات الأساسية بمعايير التصفية المحددة وتجميع البيانات المصفاة باستخدام مستوى التفاصيل الحالي ووظيفة التلخيص.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionAggrJoinRule" xml:space="preserve">
+    <value>joinRule(البعد، البحث القيم)
+تحديد البعد للدالة 'aggr' وعمود يتم استخدام قيمه في عملية الربط بعد اكتمال التجميع.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionCountDistinct" xml:space="preserve">
+    <value>CountDistinct(Value)
+إرجاع عدد كائنات فريدة من نوعها في مجموعة-</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionFirst" xml:space="preserve">
+    <value>أولاً()
+إرجاع عدد الصفوف من الصف الحالي إلى الصف الأول في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionGetDateWeekYear" xml:space="preserve">
+    <value>GetDate الأسبوعية (تاريخ وقت)
+إرجاع تاريخ اليوم الأول من الأسبوع لـ DateTime معين (يستخدم إعدادات الثقافة).</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionGetDateWeekYear2" xml:space="preserve">
+    <value>GetDateWeekYear (تاريخ وقت، ['FirstDay'، 'FirstFullWeek'، 'FirstFourDayWeek'])
+إرجاع تاريخ اليوم الأول من الأسبوع لـ DateTime معين. تحدد المعلمة الثانية قاعدة حساب أسبوع التقويم.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionIndex" xml:space="preserve">
+    <value>الفهرس()
+إرجاع فهرس الصف الحالي في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionLast" xml:space="preserve">
+    <value>آخر ()
+إرجاع عدد الصفوف من الصف الحالي إلى الصف الأخير في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionLookup" xml:space="preserve">
+    <value>البحث (ملخص التعبير، الموضع)
+إرجاع قيمة التعبير في موضع هدف محدد كإزاحة نسبية من الموضع الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionMedian" xml:space="preserve">
+    <value>Median(Value)
+إرجاع متوسط القيم في مجموعة-</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRankCompetition" xml:space="preserve">
+    <value>['asc'، 'desc'])
+إرجاع رتبة المنافسة القياسية للصف الحالي في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRankDense" xml:space="preserve">
+    <value>رانكدنس (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع الرتبة الكثيفة للصف الحالي في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRankModified" xml:space="preserve">
+    <value>رانكديمنت (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع ترتيب المنافسة المعدل للصف الحالي في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRankPercentile" xml:space="preserve">
+    <value>رتبةفيناينيلي (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع ترتيب المئين للصف الحالي في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRankUnique" xml:space="preserve">
+    <value>رتبةيوني (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع الترتيب الفريد للصف الحالي في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRunningAvg" xml:space="preserve">
+    <value>تشغيلAvg (تعبير ملخص)
+إرجاع متوسط تشغيل التعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRunningCount" xml:space="preserve">
+    <value>قيد التشغيلCount (تعبير الملخص)
+إرجاع عدد تشغيل التعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRunningMax" xml:space="preserve">
+    <value>تشغيلماكس (ملخص التعبير)
+إرجاع الحد الأقصى قيد التشغيل للتعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRunningMin" xml:space="preserve">
+    <value>تشغيلالمن (تعبير الملخص)
+إرجاع الحد الأدنى قيد التشغيل للتعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionRunningSum" xml:space="preserve">
+    <value>تشغيل السوم (تعبير الملخص)
+إرجاع مجموع قيد التشغيل من التعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionSize" xml:space="preserve">
+    <value>الحجم()
+إرجاع عدد الصفوف في الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionStdDev" xml:space="preserve">
+    <value>StdDev(Value)
+تقوم بإرجاع تقدير الانحراف المعياري لعدد السكان، حيث تكون العينة مجموعة فرعية من السكان-</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionStdDevp" xml:space="preserve">
+    <value>StdDevp(Value)
+إرجاع الانحراف المعياري لعدد السكان، حيث السكان من البيانات التي سيتم تلخيصها بالكامل-</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionTotal" xml:space="preserve">
+    <value>المجموع (تعبير ملخص)
+إرجاع الإجمالي للتعبير المحدد في إطار حساب جدول.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionVar" xml:space="preserve">
+    <value>Var(Value)
+تقوم بإرجاع تقدير التباين لمحتوى، حيث تكون العينة مجموعة فرعية من السكان-</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionVarp" xml:space="preserve">
+    <value>Varp(Value)
+إرجاع التباين لمحتوى، حيث يكون السكان تلخيص البيانات بالكامل-</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowAvg" xml:space="preserve">
+    <value>نافذةAvg (ملخص التعبير، بدء إزاحة، إزاحة نهاية)
+إرجاع متوسط التعبير داخل الإطار، الذي تم تعريفه باستخدام الإزاحات من الصف الحالي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowCount" xml:space="preserve">
+    <value>عدد الإطارات (ملخص التعبير، أوفيواب بدء، إزاحة نهاية)
+إرجاع عدد التعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowCountDistinct" xml:space="preserve">
+    <value>كونتينديون(ملخص التعبير، أوفيواب البدء، إزاحة النهاية)
+إرجاع عدد مميز من التعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowDefinition" xml:space="preserve">
+    <value>w(WindowExpression، PartitionByFunction، orderByFunction)
+حساب القيم المجمعة مع دالة الإطار المحدد للإطار المحدد المعرفة بواسطة التقسيم والترتيب المحدد.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowDefinitionOrderAsc" xml:space="preserve">
+    <value>asc(عمود)
+يتم فرز صفوف البيانات حسب القيم في العمود المحدد بترتيب تصاعدي. هذا هو ترتيب الفرز الافتراضي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowDefinitionOrderBy" xml:space="preserve">
+    <value>orderBy(العمود1، العمود2، ...)
+تحديد الأعمدة التي يتم من خلالها فرز القيم.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowDefinitionOrderDesc" xml:space="preserve">
+    <value>desc(عمود)
+يتم فرز صفوف البيانات حسب القيم الموجودة في العمود المحدد بترتيب تنازلي.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowDefinitionPartitionBy" xml:space="preserve">
+    <value>partitionBy(العمود1، العمود2، ...)
+تحديد الأعمدة التي يتم تقسيم صفوف البيانات بها. يتم تطبيق وظيفة الإطار على كل قسم بشكل منفصل.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowMax" xml:space="preserve">
+    <value>نافذة ماكس (ملخص التعبير، بدء إزاحة، إزاحة نهاية)
+إرجاع الحد الأقصى للتعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowMedian" xml:space="preserve">
+    <value>ويندوينال (ملخص التعبير، أوفيتأوفيت، إزاحة نهاية)
+إرجاع وسيط التعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowMin" xml:space="preserve">
+    <value>أوووووومين (ملخص التعبير، أوافيت، إزاحة النهاية)
+إرجاع الحد الأدنى للتعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowMode" xml:space="preserve">
+    <value>WindowMode (ملخص التعبير، أوفيتأوفيت، إزاحة نهاية)
+إرجاع وضع التعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowStdDev" xml:space="preserve">
+    <value>Windowstddev (التلخيص التعبير ، بدء الازاحه ، اندفسيت)
+إرجاع نموذج الانحراف المعياري للتعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowStdDevp" xml:space="preserve">
+    <value>Windowstddevp (التلخيص التعبير ، بدء الازاحه ، اندفسيت)
+إرجاع الانحراف المعياري المتحيز للتعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowSum" xml:space="preserve">
+    <value>Windowsum (التلخيص التعبير ، startoffset ، اندديفسيت)
+إرجاع مجموع التعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowVar" xml:space="preserve">
+    <value>إطار (ملخص التعبير، أوفيواب البدء، إزاحة النهاية)
+إرجاع التباين التعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionDescriptionWindowVarp" xml:space="preserve">
+    <value>نافذةفارب (ملخص التعبير، بدء إزاحة، إزاحة النهاية)
+إرجاع التباين المنحاز للتعبير داخل الإطار.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateHour" xml:space="preserve">
+    <value>GetDateHour(DateTime)
+استخراج جزء التاريخ مع قيمة الساعة من التاريخ والوقت المحدد-</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateHourMinute" xml:space="preserve">
+    <value>GetDateHourMinute(DateTime)
+استخراج جزء التاريخ مع القيم ساعة ودقيقة من التاريخ والوقت المحددة.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateHourMinuteSecond" xml:space="preserve">
+    <value>GetDateHourMinuteSecond(DateTime)
+استخراج جزء التاريخ مع ساعة، ودقيقة وقيم الثاني من التاريخ والوقت المحدد-</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetDateQuarterYear" xml:space="preserve">
+    <value>GetDateQuarterYear(تاريخ وقت)
+إرجاع تاريخ اليوم الأول من الربع لتاريخ معين.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetQuarter" xml:space="preserve">
+    <value>GetQuarter(DateTime)
+مقتطفات من ربع من التاريخ والوقت المحدد-</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetWeekOfMonth" xml:space="preserve">
+    <value>GetWeekOfMonth(DateTime)
+مقتطفات في أسبوع الشهر من التاريخ والوقت المحددة.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionGetWeekOfYear" xml:space="preserve">
+    <value>GetWeekOfYear(DateTime)
+مقتطفات الأسبوع في السنة من التاريخ والوقت المحددة.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionMakeDateTime3" xml:space="preserve">
+    <value>ماكيداتيتيمي (سنة، شهر، يوم)
+تقوم بإرجاع قيمة تاريخ شيدت من المحدد في السنة والشهر واليوم-</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionMakeDateTime4" xml:space="preserve">
+    <value>ماكيداتيتيمي (سنة، شهر، يوم، ساعة)
+تقوم بإرجاع قيمة تاريخ التي شيدت من المحدد سنة وشهر ويوم وساعة.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionMakeDateTime5" xml:space="preserve">
+    <value>(سنة، شهر، يوم، ساعة، دقيقة)
+تقوم بإرجاع قيمة تاريخ شيدت من المحدد في السنة، والشهر، واليوم، ساعة ودقيقة-</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionMakeDateTime6" xml:space="preserve">
+    <value>ماكيداتيتيمي (سنة، شهر، يوم، ساعة، دقيقة، ثانية)
+تقوم بإرجاع قيمة تاريخ شيدت من المحدد في السنة، والشهر، واليوم، الساعة الدقيقة والثانية.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionToBoolean" xml:space="preserve">
+    <value>ToBoolean(Value)
+تحويل القيمة إلى قيمة منطقية مكافئة.</value>
+  </data>
+  <data name="DashboardStringId.FunctionOperatorExFunctionDescriptionToDateTime" xml:space="preserve">
+    <value>ToDateTime(Value)
+تحويل القيمة إلى قيمة DateTime.</value>
+  </data>
+  <data name="DashboardStringId.GaugeScaleLabelFormatCaption" xml:space="preserve">
+    <value>تسمية نطاق</value>
+  </data>
+  <data name="DashboardStringId.GeoPointMapTooltipPointCount" xml:space="preserve">
+    <value>نقاط {0}</value>
+  </data>
+  <data name="DashboardStringId.GridCalculationAlongRows" xml:space="preserve">
+    <value>الصفوف</value>
+  </data>
+  <data name="DashboardStringId.GridCalculationAlongRowsAndSparklineArgument" xml:space="preserve">
+    <value>الصفوف/وسيطة خط المؤشر</value>
+  </data>
+  <data name="DashboardStringId.GridCalculationAlongSparklineArgument" xml:space="preserve">
+    <value>وسيطة خط المؤشر</value>
+  </data>
+  <data name="DashboardStringId.GridCalculationAlongSparklineArgumentAndRows" xml:space="preserve">
+    <value>وسيطة خط المؤشر/الصفوف</value>
+  </data>
+  <data name="DashboardStringId.GridHyperlinkUriPatternErrorMessage" xml:space="preserve">
+    <value>العنصر النائب لغير صالح</value>
+  </data>
+  <data name="DashboardStringId.GridTotalTemplate" xml:space="preserve">
+    <value>{0} = {1}</value>
+  </data>
+  <data name="DashboardStringId.GridTotalTypeAvg" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="DashboardStringId.HighCaption" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="DashboardStringId.IncludeExportDashboardState" xml:space="preserve">
+    <value>وتشمل</value>
+  </data>
+  <data name="DashboardStringId.InspectedData" xml:space="preserve">
+    <value>البيانات التي تم فحصها:</value>
+  </data>
+  <data name="DashboardStringId.InspectedTypeFormatString" xml:space="preserve">
+    <value>({0} البيانات)</value>
+  </data>
+  <data name="DashboardStringId.IntegerDivisionValidationMessage" xml:space="preserve">
+    <value>الرجاء ملاحظة: هذا مشغل التعبير يتجاهل الكسور أثناء عمليات تقسيم عدد صحيح. لإرجاع قيم عشرية (قسمة الفاصلة العائمة) استخدم ToDecimal() ToDouble() أو ToFloat() للتعبير الخاص بك. على سبيل المثال، ToDecimal(10)/4 سوف ترجع 2.5 بينما 10/4 سوف ترجع 2.</value>
+  </data>
+  <data name="DashboardStringId.InvalidCustomPropertyNameMessage" xml:space="preserve">
+    <value>اسم الخاصية '{0}' غير صالح. يجب أن يحتوي على أحرف وأرقام ورمز تسطير أسفل السطر فقط ولا يمكن أن يبدأ برقم.</value>
+  </data>
+  <data name="DashboardStringId.MapAttributeDimension" xml:space="preserve">
+    <value>السمة</value>
+  </data>
+  <data name="DashboardStringId.MeasureFilterCaptionFormatString" xml:space="preserve">
+    <value>{0} تمت تصفيتها</value>
+  </data>
+  <data name="DashboardStringId.MessageAggregateFunctionInMasterFilterDimension" xml:space="preserve">
+    <value>رئيسية بقيم البعد التي تم إنشاؤها استناداً إلى الحقل المحسوب باستخدام الدالة أجر. الأبعاد التالية يتم إنشاؤها على أساس في مجالات مثل: {0}-</value>
+  </data>
+  <data name="DashboardStringId.MessageCustomItemIsNotSupported" xml:space="preserve">
+    <value>البند المخصص غير معتمد من قبل عنصر التحكم هذا.</value>
+  </data>
+  <data name="DashboardStringId.MessageDashboardInternalError" xml:space="preserve">
+    <value>لوحة معلومات خطأ داخلي. الرجاء الاتصال ببائع التطبيق أو مسؤول النظام الخاص بك.</value>
+  </data>
+  <data name="DashboardStringId.MessageDashboardNotFoundError" xml:space="preserve">
+    <value>لم يتم العثور على لوحة أجهزة القياس-</value>
+  </data>
+  <data name="DashboardStringId.MessageDashboardNotRelevantError" xml:space="preserve">
+    <value>لوحة المعلومات. عملية تحديث مطلوب.</value>
+  </data>
+  <data name="DashboardStringId.MessageDuplicateDataItemId" xml:space="preserve">
+    <value>على معرف عنصر بيانات بنفس الاسم بالفعل.</value>
+  </data>
+  <data name="DashboardStringId.MessageDuplicatedDataItem" xml:space="preserve">
+    <value>تم بالفعل إضافة هذا المثيل من عنصر البيانات '{0}' إلى '{1}'. لإضافة عنصر بيانات مماثلة إلى '{1}'، قم بإنشاء مثيل جديد من عنصر البيانات هذا.</value>
+  </data>
+  <data name="DashboardStringId.MessageDuplicatedLayoutItem" xml:space="preserve">
+    <value>ويرد هذا البند تخطيط مسبقاً في شجرة</value>
+  </data>
+  <data name="DashboardStringId.MessageEFNotSupportedMedian" xml:space="preserve">
+    <value>الوسيط غير معتمد "إطار الكيان".</value>
+  </data>
+  <data name="DashboardStringId.MessageGridHasNoData" xml:space="preserve">
+    <value>الشبكة يحتوي على أية بيانات.</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectDataAssign" xml:space="preserve">
+    <value>لا يمكن تعيين البيانات في حالة استخدام موفر البيانات</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectLayoutItemWeight" xml:space="preserve">
+    <value>لا يمكن أن يكون تخطيط عنصر الوزن السلبية أو مساوية للصفر</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectMapLatitude" xml:space="preserve">
+    <value>خط العرض ينبغي أن تكون أكبر من أو تساوي {0} وأقل من أو يساوي إلى {1}-</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectMoveTarget" xml:space="preserve">
+    <value>لا يمكن نقل عنصر تخطيط إلى موضع داخل الفرع الخاص به</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectNumericPrecision" xml:space="preserve">
+    <value>دقة القيمة الرقمية لا يمكن أن تكون سلبية-</value>
+  </data>
+  <data name="DashboardStringId.MessageIncorrectValueTopNCount" xml:space="preserve">
+    <value>توبنكونت قيمة الخاصية لا يمكن أن تكون سالبة أو صفر-</value>
+  </data>
+  <data name="DashboardStringId.MessageInternalError" xml:space="preserve">
+    <value>خطأ داخلي. الرجاء الاتصال ببائع التطبيق أو مسؤول النظام الخاص بك، وتوفير المعلومات التالية.
+
+{0}</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidCardLayoutTemplateMaxWidth" xml:space="preserve">
+    <value>عرض الحد الأقصى يجب أن تكون أكبر من الصفر أو يساوي null.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidCardLayoutTemplateMinWidth" xml:space="preserve">
+    <value>الحد الأدنى للعرض يجب أن تكون أكبر من الصفر.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidCultureName" xml:space="preserve">
+    <value>لا يمكن العثور على ثقافة معينة بالاسم التالي: {0}</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidDataFormat" xml:space="preserve">
+    <value>لا يمكن تحويل قيمة {0} إلى نوع البيانات {1}.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidDeltaIndicatorSize" xml:space="preserve">
+    <value>حجم مؤشر دلتا يجب أن تكون أكبر من الصفر.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidFilterExpression" xml:space="preserve">
+    <value>Incorrect عمود المعرف: {0}. معرفاً عمود صالح يجب أن تتكون من يسبق اسم العمود باسم الجدول (أو اسم مستعار، إذا كان المحدد). يجب أن تكون هذه الأسماء مفصولة بنقطة.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidFontSize" xml:space="preserve">
+    <value>يجب أن يكون حجم الخط أكبر من الصفر.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidLayoutClientHeight" xml:space="preserve">
+    <value>ارتفاع التخطيط يجب أن تكون أكبر من الصفر.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidLayoutClientWidth" xml:space="preserve">
+    <value>عرض التخطيط يجب أن تكون أكبر من الصفر.</value>
+  </data>
+  <data name="DashboardStringId.MessageInvalidStream" xml:space="preserve">
+    <value>المعلمة 'تيار' لا يمكن أن يكون فارغاً</value>
+  </data>
+  <data name="DashboardStringId.MessageLayoutDuplicatedDashboardItem" xml:space="preserve">
+    <value>لقد أضيفت عنصر تخطيط لعنصر لوحة المعلومات المحددة إلى شجرة التخطيط</value>
+  </data>
+  <data name="DashboardStringId.MessageLegacyCardLayoutIsNotSupported" xml:space="preserve">
+    <value>هي التي عفا عليها الزمن ولا يمكن عرضها. لعرض هذا البند، حدد قالب تخطيط في "مصمم لوحة المعلومات". لمعرفة المزيد، راجع '"تصميم عناصر لوحة التحكم الرئيسية"&gt; بطاقات &gt; تخطيط' موضوع الوثائق.</value>
+  </data>
+  <data name="DashboardStringId.MessageLoading" xml:space="preserve">
+    <value>تحميل...</value>
+  </data>
+  <data name="DashboardStringId.MessageMasterFilterIncorrectNumberOfValues" xml:space="preserve">
+    <value>لا يمكن تحديد أحد عناصر التي سيتم استخدامها لإجراء تصفية الرئيسي بسبب عدد غير صحيح من القيم المقدمة-</value>
+  </data>
+  <data name="DashboardStringId.MessagePivotHasNoData" xml:space="preserve">
+    <value>الشبكة المحوري يحتوي على أية بيانات.</value>
+  </data>
+  <data name="DashboardStringId.MessageServerModeNotSupportedCountDistinct" xml:space="preserve">
+    <value>Count Distinct غير معتمد في وضع ملقم ل</value>
+  </data>
+  <data name="DashboardStringId.MessageServerModeNotSupportedMedian" xml:space="preserve">
+    <value>غير معتمد في وضع خادم للوسيط</value>
+  </data>
+  <data name="DashboardStringId.MessageServerModeNotSupportedMode" xml:space="preserve">
+    <value>وضع غير معتمد في وضع ملقم ل</value>
+  </data>
+  <data name="DashboardStringId.MessageSummaryCalculatedFieldInDimension" xml:space="preserve">
+    <value>التعبير عن '{0}' الحقل المحسوب الذي يوفر البيانات للبعد '{1}'. يمكن أن توفر حقول محسوبة على أساس موجز بيانات لتدابير فقط.</value>
+  </data>
+  <data name="DashboardStringId.MessageWrongDateTimePeriodName" xml:space="preserve">
+    <value>"داتيتيميبيريودكوليكشن" لا يحتوي على العنصر ذو الاسم المحدد.</value>
+  </data>
+  <data name="DashboardStringId.MessageWrongExcelDataSourceConnectionParametersType" xml:space="preserve">
+    <value>اتصال معلمات غير صالحة. يدعم مصدر بيانات excel فقط اكسسيلداتاسورسيكوننيكتيونباراميتيرس-</value>
+  </data>
+  <data name="DashboardStringId.MessageWrongExtractDataSourceConnectionParametersType" xml:space="preserve">
+    <value>اتصال معلمات غير صالحة. يدعم مصدر بيانات استخراج فقط اكستراكتداتاسورسكوننيكتيونباراميتيرس-</value>
+  </data>
+  <data name="DashboardStringId.MovingCalculationMeasureCaptionFormatString" xml:space="preserve">
+    <value>الانتقال من {0}</value>
+  </data>
+  <data name="DashboardStringId.NewParameterNamePrefix" xml:space="preserve">
+    <value>المعلمة</value>
+  </data>
+  <data name="DashboardStringId.OlapCubeNotFoundError" xml:space="preserve">
+    <value>المكعب بالاسم التالي:
+{0}.</value>
+  </data>
+  <data name="DashboardStringId.OlapRaggedHierarchyNoneItemCaption" xml:space="preserve">
+    <value>شيء)</value>
+  </data>
+  <data name="DashboardStringId.OLAPUnavailableRawData" xml:space="preserve">
+    <value>مصدر بيانات OLAP - لا</value>
+  </data>
+  <data name="DashboardStringId.ParameterNullExportValue" xml:space="preserve">
+    <value>خالية</value>
+  </data>
+  <data name="DashboardStringId.ParametersFormAllowNullColumnCaption" xml:space="preserve">
+    <value>تمرير Null</value>
+  </data>
+  <data name="DashboardStringId.ParametersFormNameColumnCaption" xml:space="preserve">
+    <value>المعلمة</value>
+  </data>
+  <data name="DashboardStringId.PercentOfTotalCalculationMeasureCaptionFormatString" xml:space="preserve">
+    <value>بالمئة من إجمالي {0}</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastHour" xml:space="preserve">
+    <value>آخر ساعة</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastMinute" xml:space="preserve">
+    <value>اللحظة الأخيرة</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastQuarter" xml:space="preserve">
+    <value>الربع الأخير</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastSecond" xml:space="preserve">
+    <value>الثانية والأخيرة</value>
+  </data>
+  <data name="DashboardStringId.PeriodLastYear" xml:space="preserve">
+    <value>في العام الماضي</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextHour" xml:space="preserve">
+    <value>ساعة القادمة</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextMinute" xml:space="preserve">
+    <value>دقيقة المقبلة</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextQuarter" xml:space="preserve">
+    <value>الربع القادم</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextSecond" xml:space="preserve">
+    <value>الثاني المقبل</value>
+  </data>
+  <data name="DashboardStringId.PeriodNextYear" xml:space="preserve">
+    <value>القادم</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisHour" xml:space="preserve">
+    <value>هذه الساعة</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisMinute" xml:space="preserve">
+    <value>هذه اللحظة</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisQuarter" xml:space="preserve">
+    <value>هذا الربع</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisSecond" xml:space="preserve">
+    <value>هذه الثانية</value>
+  </data>
+  <data name="DashboardStringId.PeriodThisYear" xml:space="preserve">
+    <value>هذا العام</value>
+  </data>
+  <data name="DashboardStringId.PieCalculationAlongArgumentsAndSeries" xml:space="preserve">
+    <value>الحجج/سلسلة</value>
+  </data>
+  <data name="DashboardStringId.PieCalculationAlongSeries" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="DashboardStringId.PieCalculationAlongSeriesAndArguments" xml:space="preserve">
+    <value>سلسلة/الحجج</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongColumnsAndRows" xml:space="preserve">
+    <value>الأعمدة/الصفوف</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongGroupsInColumns" xml:space="preserve">
+    <value>الأعمدة داخل المجموعات</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongGroupsInColumnsAndRows" xml:space="preserve">
+    <value>الأعمدة/الصفوف داخل المجموعات</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongGroupsInRows" xml:space="preserve">
+    <value>الصفوف داخل المجموعات</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongGroupsInRowsAndColumns" xml:space="preserve">
+    <value>الصفوف/الأعمدة داخل المجموعات</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongRows" xml:space="preserve">
+    <value>الصفوف</value>
+  </data>
+  <data name="DashboardStringId.PivotCalculationAlongRowsAndColumns" xml:space="preserve">
+    <value>الصفوف/الأعمدة</value>
+  </data>
+  <data name="DashboardStringId.PointLabelContentTypeSeriesName" xml:space="preserve">
+    <value>اسم السلسلة</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterCalculationAlongArgumentAndSeries" xml:space="preserve">
+    <value>الوسيطة/سلسلة</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterCalculationAlongSeries" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterCalculationAlongSeriesAndArgument" xml:space="preserve">
+    <value>سلسلة/حجة</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterCustomDateTimePeriod" xml:space="preserve">
+    <value>فترة مخصصة...</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterHasNoData" xml:space="preserve">
+    <value>"عامل تصفية مجموعة" لا يحتوي على أية بيانات لعرض.</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterIncompatibleArgument" xml:space="preserve">
+    <value>يجب أن يكون "عامل تصفية نطاق" وسيطة الحقل رقمية، التاريخ والوقت، أو اكتب TimeSpan</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterIncompatibleArgumentSorting" xml:space="preserve">
+    <value>لا حجة "عامل تصفية نطاق" يجب فرز في ترتيب تنازلي أو حسب آخر بيانات الصنف</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterIncompatibleDateTimeGroupInterval" xml:space="preserve">
+    <value>وسيطة التاريخ والوقت قيم ينبغي تحديد فترات زمنية أو تواريخ التقويم الفعلي بدلاً من تجميع (أي، يجب أن تحتوي جزء من سنة). تغيير الفاصل الزمني للمجموعة تبعاً لذلك</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterIncompatibleNumericScale" xml:space="preserve">
+    <value>"عامل تصفية نطاق" محور مستمر. تعيين مقياس رقمي لمستمر</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterIncompatibleSeriesType" xml:space="preserve">
+    <value>يمكن أن تحتوي على عامل تصفية نطاق A سلسلة سطر ومنطقة بار فقط</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterIncompatibleTopN" xml:space="preserve">
+    <value>الوسيطة "نطاق تصفية" لا يدعم ميزة "ن أعلى"</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterSelectRange" xml:space="preserve">
+    <value>تحديد النطاق</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterSelectRangeFromCaption" xml:space="preserve">
+    <value>من:</value>
+  </data>
+  <data name="DashboardStringId.RangeFilterSelectRangeToCaption" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="DashboardStringId.RankCalculationMeasureCaptionFormatString" xml:space="preserve">
+    <value>رتبة {0}</value>
+  </data>
+  <data name="DashboardStringId.RankTypeCompetition" xml:space="preserve">
+    <value>المنافسة</value>
+  </data>
+  <data name="DashboardStringId.RankTypeDense" xml:space="preserve">
+    <value>كثيفة</value>
+  </data>
+  <data name="DashboardStringId.RankTypeModified" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="DashboardStringId.RankTypePercentile" xml:space="preserve">
+    <value>المئين:</value>
+  </data>
+  <data name="DashboardStringId.RankTypeUnique" xml:space="preserve">
+    <value>فريدة من نوعها</value>
+  </data>
+  <data name="DashboardStringId.RawDataType" xml:space="preserve">
+    <value>الخام</value>
+  </data>
+  <data name="DashboardStringId.ResetExactDateFormatToDefault" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DashboardStringId.RunningTotalCalculationMeasureCaptionFormatString" xml:space="preserve">
+    <value>تشغيل إجمالي {0}</value>
+  </data>
+  <data name="DashboardStringId.ScaleModeAutoFitToPagesWidth" xml:space="preserve">
+    <value>احتواء تلقائي لعرض الصفحات</value>
+  </data>
+  <data name="DashboardStringId.SearchNullValuePrompt" xml:space="preserve">
+    <value>إدخال النص للبحث...</value>
+  </data>
+  <data name="DashboardStringId.SelectDate" xml:space="preserve">
+    <value>حدد تاريخ</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStackedLine" xml:space="preserve">
+    <value>خطي مرصوف</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStackedSplineArea" xml:space="preserve">
+    <value>مكدسة مساحة الشريحة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStepArea" xml:space="preserve">
+    <value>المنطقة خطوة</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStepLine" xml:space="preserve">
+    <value>خطوة خط</value>
+  </data>
+  <data name="DashboardStringId.SeriesTypeStock" xml:space="preserve">
+    <value>الأوراق المالية</value>
+  </data>
+  <data name="DashboardStringId.ShowTitle" xml:space="preserve">
+    <value>إظهار عنوان</value>
+  </data>
+  <data name="DashboardStringId.SizeMode" xml:space="preserve">
+    <value>وضع حجم</value>
+  </data>
+  <data name="DashboardStringId.SparklineArgumentValueSeparator" xml:space="preserve">
+    <value> - </value>
+  </data>
+  <data name="DashboardStringId.SparklineValuesSeparator" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="DashboardStringId.StartDate" xml:space="preserve">
+    <value>(تاريخ البدء)</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeMedian" xml:space="preserve">
+    <value>الوسيط</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeMode" xml:space="preserve">
+    <value>وضع</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeVar" xml:space="preserve">
+    <value>فأر</value>
+  </data>
+  <data name="DashboardStringId.SummaryTypeVarp" xml:space="preserve">
+    <value>VarP</value>
+  </data>
+  <data name="DashboardStringId.TextGroupIntervalAlphabetical" xml:space="preserve">
+    <value>أبجدي</value>
+  </data>
+  <data name="DashboardStringId.ToDatePeriodCaption" xml:space="preserve">
+    <value>إلى {0}</value>
+  </data>
+  <data name="DashboardStringId.TreemapLabelArgumentTemplate" xml:space="preserve">
+    <value>{0}-{1}</value>
+  </data>
+  <data name="DashboardStringId.TreemapLabelValueTemplate" xml:space="preserve">
+    <value>{0}: {1}</value>
+  </data>
+  <data name="DashboardStringId.UniqueCalculatedFieldNameValidationMessage" xml:space="preserve">
+    <value>يحتوي {0} بالفعل على حقل يسمى {1}.</value>
+  </data>
+  <data name="DashboardStringId.UniqueNameValidationMessage" xml:space="preserve">
+    <value>يجب أن يكون الاسم فريدًا.</value>
+  </data>
+  <data name="DashboardStringId.UriCaption" xml:space="preserve">
+    <value>Uri</value>
+  </data>
+</root>

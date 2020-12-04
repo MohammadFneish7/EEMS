@@ -1,0 +1,1092 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PivotGridStringId.RowHeadersCustomization" xml:space="preserve">
+    <value>Drop Row Fields Here</value>
+  </data>
+  <data name="PivotGridStringId.ColumnHeadersCustomization" xml:space="preserve">
+    <value>Drop Column Fields Here</value>
+  </data>
+  <data name="PivotGridStringId.FilterHeadersCustomization" xml:space="preserve">
+    <value>Drop Filter Fields Here</value>
+  </data>
+  <data name="PivotGridStringId.DataHeadersCustomization" xml:space="preserve">
+    <value>Drop Data Items Here</value>
+  </data>
+  <data name="PivotGridStringId.RowArea" xml:space="preserve">
+    <value>ناحية الصف</value>
+  </data>
+  <data name="PivotGridStringId.ColumnArea" xml:space="preserve">
+    <value>ناحية العمود</value>
+  </data>
+  <data name="PivotGridStringId.FilterArea" xml:space="preserve">
+    <value>ناحية التصفية</value>
+  </data>
+  <data name="PivotGridStringId.DataArea" xml:space="preserve">
+    <value>ناحية البيانات</value>
+  </data>
+  <data name="PivotGridStringId.FilterBlank" xml:space="preserve">
+    <value>(Blank)</value>
+  </data>
+  <data name="PivotGridStringId.FilterShowBlanks" xml:space="preserve">
+    <value>(Show Blanks)</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormCaption" xml:space="preserve">
+    <value>قائمة الحقول</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormText" xml:space="preserve">
+    <value>Drag fields here to hide</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormAddTo" xml:space="preserve">
+    <value>Add To</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormHint" xml:space="preserve">
+    <value>اسحب الحقول بين المجالات أدناه:</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormDeferLayoutUpdate" xml:space="preserve">
+    <value>تأجيل تحديث التخطيط</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormUpdate" xml:space="preserve">
+    <value>التحديث</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormListBoxText" xml:space="preserve">
+    <value>Drag a field here to customize layout</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormHiddenFields" xml:space="preserve">
+    <value>Hidden Fields</value>
+  </data>
+  <data name="PivotGridStringId.Total" xml:space="preserve">
+    <value>المجموع</value>
+  </data>
+  <data name="PivotGridStringId.GrandTotal" xml:space="preserve">
+    <value>المجموع الكلي</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormat" xml:space="preserve">
+    <value>{0} المجموع</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatCount" xml:space="preserve">
+    <value>{0} Count</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatSum" xml:space="preserve">
+    <value>{0} Sum</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatMin" xml:space="preserve">
+    <value>{0} Min</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatMax" xml:space="preserve">
+    <value>{0} Max</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatAverage" xml:space="preserve">
+    <value>{0} Average</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatStdDev" xml:space="preserve">
+    <value>{0} StdDev</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatStdDevp" xml:space="preserve">
+    <value>{0} StdDevp</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatVar" xml:space="preserve">
+    <value>{0} Var</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatVarp" xml:space="preserve">
+    <value>{0} Varp</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatCustom" xml:space="preserve">
+    <value>{0} Custom</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesigner" xml:space="preserve">
+    <value>Print Designer</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerPageOptions" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerPageBehavior" xml:space="preserve">
+    <value>السلوك</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerCategoryDefault" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerCategoryLines" xml:space="preserve">
+    <value>خطوط</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerCategoryHeaders" xml:space="preserve">
+    <value>رؤوس</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerCategoryFieldValues" xml:space="preserve">
+    <value>Field Values</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerHorizontalLines" xml:space="preserve">
+    <value>خطوط أفقية</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerVerticalLines" xml:space="preserve">
+    <value>خطوط عمودية</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerFilterHeaders" xml:space="preserve">
+    <value>تصفية رؤوس</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerDataHeaders" xml:space="preserve">
+    <value>رؤوس البيانات</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerColumnHeaders" xml:space="preserve">
+    <value>رؤوس الأعمدة</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerRowHeaders" xml:space="preserve">
+    <value>رؤوس الصفوف</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerHeadersOnEveryPage" xml:space="preserve">
+    <value>Headers On Every Page</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerUnusedFilterFields" xml:space="preserve">
+    <value>Unused Filter Fields</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerMergeColumnFieldValues" xml:space="preserve">
+    <value>دمج قيم حقل عمود</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerMergeRowFieldValues" xml:space="preserve">
+    <value>قيم حقل صف دمج</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerUsePrintAppearance" xml:space="preserve">
+    <value>استخدام مظهر الطباعة</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuRefreshData" xml:space="preserve">
+    <value>Reload Data</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuSortAscending" xml:space="preserve">
+    <value>Sort A-Z</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuSortDescending" xml:space="preserve">
+    <value>Sort Z-A</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuClearSorting" xml:space="preserve">
+    <value>قم بفرز</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuShowExpression" xml:space="preserve">
+    <value>محرر التعبير...</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuHideField" xml:space="preserve">
+    <value>Hide this Field</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuShowFieldList" xml:space="preserve">
+    <value>إظهار قائمة الحقول</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuHideFieldList" xml:space="preserve">
+    <value>إخفاء قائمة الحقول</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFieldOrder" xml:space="preserve">
+    <value>ترتيب</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuMovetoBeginning" xml:space="preserve">
+    <value>Move to Beginning</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuMovetoLeft" xml:space="preserve">
+    <value>Move to Left</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuMovetoRight" xml:space="preserve">
+    <value>Move to Right</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuMovetoEnd" xml:space="preserve">
+    <value>Move to End</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuCollapse" xml:space="preserve">
+    <value>انهيار</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuCollapseAll" xml:space="preserve">
+    <value>طي الكل</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuSortFieldByColumn" xml:space="preserve">
+    <value>Sort "{0}" by This Column</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuSortFieldByRow" xml:space="preserve">
+    <value>Sort "{0}" by This Row</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuRemoveAllSortByColumn" xml:space="preserve">
+    <value>Remove All Sorting</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuExpand" xml:space="preserve">
+    <value>قم بتوسيع</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuExpandAll" xml:space="preserve">
+    <value>توسيع الكل</value>
+  </data>
+  <data name="PivotGridStringId.DataFieldCaption" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="PivotGridStringId.TopValueOthersRow" xml:space="preserve">
+    <value>الآخرين</value>
+  </data>
+  <data name="PivotGridStringId.CellError" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="PivotGridStringId.CannotCopyMultipleSelections" xml:space="preserve">
+    <value>هذا الأمر لا يمكن استخدامه على أكثر من تحديد</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuShowPrefilter" xml:space="preserve">
+    <value>إظهار التصفية المبدئية</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuHidePrefilter" xml:space="preserve">
+    <value>Hide Prefilter</value>
+  </data>
+  <data name="PivotGridStringId.EditPrefilter" xml:space="preserve">
+    <value>Edit Prefilter</value>
+  </data>
+  <data name="PivotGridStringId.PrefilterFormCaption" xml:space="preserve">
+    <value>PivotGrid Prefilter</value>
+  </data>
+  <data name="PivotGridStringId.FilterCancel" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+    <comment></comment>
+  </data>
+  <data name="PivotGridStringId.FilterOk" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="PivotGridStringId.FilterShowAll" xml:space="preserve">
+    <value>(إظهار الكل)</value>
+  </data>
+  <data name="PivotGridStringId.OLAPMeasuresCaption" xml:space="preserve">
+    <value>التدابير</value>
+  </data>
+  <data name="PivotGridStringId.OLAPDrillDownFilterException" xml:space="preserve">
+    <value>Show Details command cannot be executed when multiple items are selected in a report filter field. Select a single item for each field in the report filter area before performing a drillthrough.</value>
+  </data>
+  <data name="PivotGridStringId.TrendGoingDown" xml:space="preserve">
+    <value>Going Down</value>
+  </data>
+  <data name="PivotGridStringId.TrendGoingUp" xml:space="preserve">
+    <value>Going Up</value>
+  </data>
+  <data name="PivotGridStringId.TrendNoChange" xml:space="preserve">
+    <value>No Change</value>
+  </data>
+  <data name="PivotGridStringId.StatusBad" xml:space="preserve">
+    <value>سيئة</value>
+  </data>
+  <data name="PivotGridStringId.StatusNeutral" xml:space="preserve">
+    <value>محايدة</value>
+  </data>
+  <data name="PivotGridStringId.StatusGood" xml:space="preserve">
+    <value>جيدة</value>
+  </data>
+  <data name="PivotGridStringId.SummaryCount" xml:space="preserve">
+    <value>العد</value>
+  </data>
+  <data name="PivotGridStringId.SummarySum" xml:space="preserve">
+    <value>مجموع</value>
+  </data>
+  <data name="PivotGridStringId.SummaryMin" xml:space="preserve">
+    <value>الأدنى:</value>
+  </data>
+  <data name="PivotGridStringId.SummaryMax" xml:space="preserve">
+    <value>ماكس</value>
+  </data>
+  <data name="PivotGridStringId.SummaryAverage" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="PivotGridStringId.SummaryStdDev" xml:space="preserve">
+    <value>الانحراف المعياري</value>
+  </data>
+  <data name="PivotGridStringId.SummaryStdDevp" xml:space="preserve">
+    <value>StdDevp</value>
+  </data>
+  <data name="PivotGridStringId.SummaryVar" xml:space="preserve">
+    <value>فأر</value>
+  </data>
+  <data name="PivotGridStringId.SummaryVarp" xml:space="preserve">
+    <value>Varp</value>
+  </data>
+  <data name="PivotGridStringId.SummaryCustom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormStackedDefault" xml:space="preserve">
+    <value>Fields Section and Areas Section Stacked</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormStackedSideBySide" xml:space="preserve">
+    <value>Fields Section and Areas Section Side-By-Side</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormTopPanelOnly" xml:space="preserve">
+    <value>Fields Section Only</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormBottomPanelOnly2by2" xml:space="preserve">
+    <value>Areas Section Only (2 by 2)</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormBottomPanelOnly1by4" xml:space="preserve">
+    <value>Areas Section Only (1 by 4)</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormLayoutButtonTooltip" xml:space="preserve">
+    <value>Customization Form Layout</value>
+  </data>
+  <data name="PivotGridStringId.Alt_Expand" xml:space="preserve">
+    <value>[Expand]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_Collapse" xml:space="preserve">
+    <value>[Collapse]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_SortedAscending" xml:space="preserve">
+    <value>(Ascending)</value>
+  </data>
+  <data name="PivotGridStringId.Alt_SortedDescending" xml:space="preserve">
+    <value>(Descending)</value>
+  </data>
+  <data name="PivotGridStringId.Alt_FilterWindowSizeGrip" xml:space="preserve">
+    <value>[Resize]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_FilterButton" xml:space="preserve">
+    <value>[Filter]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_FilterButtonActive" xml:space="preserve">
+    <value>[Filtered]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_DragHideField" xml:space="preserve">
+    <value>إخفاء</value>
+  </data>
+  <data name="PivotGridStringId.Alt_FilterAreaHeaders" xml:space="preserve">
+    <value>[Filter Area Headers]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_ColumnAreaHeaders" xml:space="preserve">
+    <value>[Column Area Headers]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_RowAreaHeaders" xml:space="preserve">
+    <value>[Row Area Headers]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_DataAreaHeaders" xml:space="preserve">
+    <value>[Data Area Headers]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_FieldListHeaders" xml:space="preserve">
+    <value>[Hidden Field's Headers]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_LayoutButton" xml:space="preserve">
+    <value>[Layout Button]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_StackedDefaultLayout" xml:space="preserve">
+    <value>[Stacked Default Layout]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_StackedSideBySideLayout" xml:space="preserve">
+    <value>[Stacked Side By Side Layout]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_TopPanelOnlyLayout" xml:space="preserve">
+    <value>[Top Panel Only Layout]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_BottomPanelOnly2by2Layout" xml:space="preserve">
+    <value>[Bottom Panel Only 2 by 2 Layout]</value>
+  </data>
+  <data name="PivotGridStringId.Alt_BottomPanelOnly1by4Layout" xml:space="preserve">
+    <value>[Bottom Panel Only 1 by 4 Layout]</value>
+  </data>
+  <data name="PivotGridStringId.FilterInvert" xml:space="preserve">
+    <value>عكس عامل التصفية</value>
+  </data>
+  <data name="PivotGridStringId.SearchBoxText" xml:space="preserve">
+    <value>البحث</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="PivotGridStringId.ValueError" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="PivotGridStringId.OLAPKPITypeValue" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterClearButton" xml:space="preserve">
+    <value>واضحة</value>
+  </data>
+  <data name="PivotGridStringId.OLAPKPITypeStatus" xml:space="preserve">
+    <value>مركز</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterApplyToSpecificLevel" xml:space="preserve">
+    <value>تطبيق على مستوى معين</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterLegendVisible" xml:space="preserve">
+    <value>مرئية</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterLabelValues" xml:space="preserve">
+    <value>قيم</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesColumn" xml:space="preserve">
+    <value>عمود</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesRow" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="PivotGridStringId.DrillDownException" xml:space="preserve">
+    <value>خطأ في استرداد مجموعة البيانات الكشف</value>
+  </data>
+  <data name="PivotGridStringId.OLAPKPIsCaption" xml:space="preserve">
+    <value>مؤشرات الأداء الرئيسية</value>
+  </data>
+  <data name="PivotGridStringId.OLAPKPITypeGoal" xml:space="preserve">
+    <value>الهدف</value>
+  </data>
+  <data name="PivotGridStringId.OLAPKPITypeTrend" xml:space="preserve">
+    <value>الاتجاه</value>
+  </data>
+  <data name="PivotGridStringId.OLAPKPITypeWeight" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="PivotGridStringId.OLAPNoOleDbProvidersMessage" xml:space="preserve">
+    <value>من أجل استخدام وظائف OLAP بيفوتجريد، يجب أن يكون لديك موفر MS OLAP OleDb المثبتة على النظام الخاص بك.
+يمكنك تحميله من هنا:</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphic" xml:space="preserve">
+    <value>الرسومات KPI</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicCylinder" xml:space="preserve">
+    <value>اسطوانة</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicFaces" xml:space="preserve">
+    <value>ويواجه</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicGauge" xml:space="preserve">
+    <value>قياس</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicReversedCylinder" xml:space="preserve">
+    <value>عكس الاسطوانة</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicReversedGauge" xml:space="preserve">
+    <value>عكس قياس</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicReversedStatusArrow" xml:space="preserve">
+    <value>عكس حالة السهم</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicReversedThermometer" xml:space="preserve">
+    <value>عكس الحرارة</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicRoadSigns" xml:space="preserve">
+    <value>علامات وإشارات الطرق</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicServerDefined" xml:space="preserve">
+    <value>تعريف الملقم</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicShapes" xml:space="preserve">
+    <value>الأشكال</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicStandardArrow" xml:space="preserve">
+    <value>السهم القياسية</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicStatusArrow" xml:space="preserve">
+    <value>حالة السهم</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicThermometer" xml:space="preserve">
+    <value>ميزان الحرارة</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicTrafficLights" xml:space="preserve">
+    <value>إشارات المرور</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuKPIGraphicVarianceArrow" xml:space="preserve">
+    <value>السهم الفرق</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionEditorFieldsCategory" xml:space="preserve">
+    <value>الحقول</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDay" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalSecond" xml:space="preserve">
+    <value>الثانية</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalHour" xml:space="preserve">
+    <value>ساعة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalMinute" xml:space="preserve">
+    <value>دقيقة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalMonth" xml:space="preserve">
+    <value>في الشهر</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalQuarter" xml:space="preserve">
+    <value>الربع</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalYear" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="PivotGridStringId.FunctionCategoryWindow" xml:space="preserve">
+    <value>نافذة</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormAvailableFields" xml:space="preserve">
+    <value>اختر الحقول المراد إضافتها للتقرير:</value>
+  </data>
+  <data name="PivotGridStringId.CustomizationFormEmptyFilterText" xml:space="preserve">
+    <value>لا يوجد تطابق لسلسله البحث</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDateHour" xml:space="preserve">
+    <value>تاريخ ساعة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDateHourMinute" xml:space="preserve">
+    <value>تاريخ-ساعة-دقيقة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDateHourMinuteSecond" xml:space="preserve">
+    <value>تاريخ-ساعة-دقيقة-ثانية</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDateWeekYear" xml:space="preserve">
+    <value>السنة الأسبوعية</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDayMonthYear" xml:space="preserve">
+    <value>يوم-شهر-سنة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDayOfWeek" xml:space="preserve">
+    <value>يوم أسبوع</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalDayOfYear" xml:space="preserve">
+    <value>يوم من أيام السنة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalExactDate" xml:space="preserve">
+    <value>التاريخ المحدد</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalMonthYear" xml:space="preserve">
+    <value>الشهر-السنة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalQuarterYear" xml:space="preserve">
+    <value>ربع السنة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalWeekOfMonth" xml:space="preserve">
+    <value>أسبوع شهر</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeGroupIntervalWeekOfYear" xml:space="preserve">
+    <value>أسبوع في السنة</value>
+  </data>
+  <data name="PivotGridStringId.DateTimeQuarterFormat" xml:space="preserve">
+    <value>Q{0}</value>
+  </data>
+  <data name="PivotGridStringId.EditFilter" xml:space="preserve">
+    <value>تحرير عامل تصفية</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionEditorFieldDescription" xml:space="preserve">
+    <value>التسمية التوضيحية: {0}
+النوع: {1}</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationCircularDependency" xml:space="preserve">
+    <value>الحقول التالية لها تبعية دائرية: {0}</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationExpressionIsEmpty" xml:space="preserve">
+    <value>تعبير لا يمكن أن يكون فارغاً.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationFunctionIsNotSupported" xml:space="preserve">
+    <value>دالة {0} غير معتمدة في وضع الحساب الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationInvalidArgumentCount" xml:space="preserve">
+    <value>عدد الوسائط لدالة {0} غير صحيح.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationInvalidExpression" xml:space="preserve">
+    <value>لا يمكن تقييم التعبير.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationInvalidFunctionArgument" xml:space="preserve">
+    <value>تتوقع وظيفة "{0}" "{1}" كحجة {2}.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationInvalidProperty" xml:space="preserve">
+    <value>لم يتم العثور على {0}.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationInvalidWindowExpressionUsage" xml:space="preserve">
+    <value>يمكن استخدام الدالة {0} فقط في تعبير إطار.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationNotSummaryExpressionExpected" xml:space="preserve">
+    <value>لا يمكن أن تتضمن معايير المجاميع.</value>
+  </data>
+  <data name="PivotGridStringId.ExpressionValidationSummaryExpressionExpected" xml:space="preserve">
+    <value>يتوقع تعبير موجز.</value>
+  </data>
+  <data name="PivotGridStringId.FilterFormCaption" xml:space="preserve">
+    <value>تصفية محرر</value>
+  </data>
+  <data name="PivotGridStringId.FunctionCategoryAdvanced" xml:space="preserve">
+    <value>متقدم</value>
+  </data>
+  <data name="PivotGridStringId.FunctionCategoryAggregate" xml:space="preserve">
+    <value>التجميعية</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionAggr" xml:space="preserve">
+    <value>aggr (ملخصExexpression، Dimension1، Dimension2، ...)
+تجميع البيانات الأساسية باستخدام مستوى التفاصيل ووظيفة التلخيص. يتم تحديد المستوى بواسطة مجموعة أبعاد محددة مسبقاً.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionAvg" xml:space="preserve">
+    <value>متوسط (قيمة)
+حساب متوسط القيمة من الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionCount" xml:space="preserve">
+    <value>العدد()
+إرجاع عدد الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionCountDistinct" xml:space="preserve">
+    <value>Countاديسينكت(قيمة)
+إرجاع عدد القيم الفريدة في الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionCountNotNull" xml:space="preserve">
+    <value>كونتونوت(قيمة)
+إرجاع عدد من القيم غير الفارغة في الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionFirst" xml:space="preserve">
+    <value>أولاً()
+إرجاع عدد الصفوف من الصف الحالي إلى الصف الأول في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateHour" xml:space="preserve">
+    <value>GetDateHour(DateTime)
+استخراج جزء التاريخ مع قيمة الساعة من التاريخ والوقت المحدد-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateHourMinute" xml:space="preserve">
+    <value>GetDateHourMinute(DateTime)
+استخراج جزء التاريخ مع القيم ساعة ودقيقة من التاريخ والوقت المحددة.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateHourMinuteSecond" xml:space="preserve">
+    <value>GetDateHourMinuteSecond(DateTime)
+استخراج جزء التاريخ مع ساعة، ودقيقة وقيم الثاني من التاريخ والوقت المحدد-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateMonthYear" xml:space="preserve">
+    <value>GetDateMonthYear(تاريخ وقت)
+إرجاع تاريخ اليوم الأول من الشهر لـ DateTime معين.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateQuarterYear" xml:space="preserve">
+    <value>GetDateQuarterYear(تاريخ وقت)
+إرجاع تاريخ اليوم الأول من الربع لتاريخ معين.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateWeekYear" xml:space="preserve">
+    <value>GetDate الأسبوعية (تاريخ وقت)
+إرجاع تاريخ اليوم الأول من الأسبوع لـ DateTime معين (يستخدم إعدادات الثقافة).</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetDateWeekYear2" xml:space="preserve">
+    <value>GetDateWeekYear (تاريخ وقت، ['FirstDay'، 'FirstFullWeek'، 'FirstFourDayWeek'])
+إرجاع تاريخ اليوم الأول من الأسبوع لـ DateTime معين. تحدد المعلمة الثانية قاعدة حساب أسبوع التقويم.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetQuarter" xml:space="preserve">
+    <value>GetQuarter(DateTime)
+مقتطفات من ربع من التاريخ والوقت المحدد-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetWeekOfMonth" xml:space="preserve">
+    <value>GetWeekOfMonth(DateTime)
+مقتطفات في أسبوع الشهر من التاريخ والوقت المحددة.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionGetWeekOfYear" xml:space="preserve">
+    <value>GetWeekOfYear(DateTime)
+مقتطفات الأسبوع في السنة من التاريخ والوقت المحددة.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionIndex" xml:space="preserve">
+    <value>الفهرس()
+إرجاع فهرس الصف الحالي في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionLast" xml:space="preserve">
+    <value>آخر ()
+إرجاع عدد الصفوف من الصف الحالي إلى الصف الأخير في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionLookup" xml:space="preserve">
+    <value>البحث (ملخص التعبير، الموضع)
+إرجاع قيمة التعبير في موضع هدف محدد كإزاحة نسبية من الموضع الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMakeDateTime3" xml:space="preserve">
+    <value>ماكيداتيتيمي (سنة، شهر، يوم)
+تقوم بإرجاع قيمة تاريخ شيدت من المحدد في السنة والشهر واليوم-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMakeDateTime4" xml:space="preserve">
+    <value>ماكيداتيتيمي (سنة، شهر، يوم، ساعة)
+تقوم بإرجاع قيمة تاريخ التي شيدت من المحدد سنة وشهر ويوم وساعة.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMakeDateTime5" xml:space="preserve">
+    <value>(سنة، شهر، يوم، ساعة، دقيقة)
+تقوم بإرجاع قيمة تاريخ شيدت من المحدد في السنة، والشهر، واليوم، ساعة ودقيقة-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMakeDateTime6" xml:space="preserve">
+    <value>ماكيداتيتيمي (سنة، شهر، يوم، ساعة، دقيقة، ثانية)
+تقوم بإرجاع قيمة تاريخ شيدت من المحدد في السنة، والشهر، واليوم، الساعة الدقيقة والثانية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMax" xml:space="preserve">
+    <value>الحد الأقصى (القيمة)
+إرجاع الحد الأقصى للقيمة من الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMedian" xml:space="preserve">
+    <value>الوسيط (القيمة)
+إرجاع متوسط القيم في الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMin" xml:space="preserve">
+    <value>الحد الأدنى (القيمة)
+إرجاع الحد الأدنى للقيمة من الصفوف المستخدمة لحساب قيمة تجميعية.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionMode" xml:space="preserve">
+    <value>الوضع(القيمة)
+إرجاع وضع القيم، حيث يكون الوضع هو القيمة التي يتم تكرارها أكثر.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRankCompetition" xml:space="preserve">
+    <value>['asc'، 'desc'])
+إرجاع رتبة المنافسة القياسية للصف الحالي في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRankDense" xml:space="preserve">
+    <value>رانكدنس (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع الرتبة الكثيفة للصف الحالي في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRankModified" xml:space="preserve">
+    <value>رانكديمنت (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع ترتيب المنافسة المعدل للصف الحالي في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRankPercentile" xml:space="preserve">
+    <value>رتبةفيناينيلي (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع ترتيب المئين للصف الحالي في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRankUnique" xml:space="preserve">
+    <value>رتبةيوني (ملخص التعبير، ['ASC'، 'desc'])
+إرجاع الترتيب الفريد للصف الحالي في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRunningAvg" xml:space="preserve">
+    <value>تشغيلAvg (تعبير ملخص)
+إرجاع متوسط تشغيل التعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRunningCount" xml:space="preserve">
+    <value>قيد التشغيلCount (تعبير الملخص)
+إرجاع عدد تشغيل التعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRunningMax" xml:space="preserve">
+    <value>تشغيلماكس (ملخص التعبير)
+إرجاع الحد الأقصى قيد التشغيل للتعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRunningMin" xml:space="preserve">
+    <value>تشغيلالمن (تعبير الملخص)
+إرجاع الحد الأدنى قيد التشغيل للتعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionRunningSum" xml:space="preserve">
+    <value>تشغيل السوم (تعبير الملخص)
+إرجاع مجموع قيد التشغيل من التعبير المحدد من الصف الأول في الإطار إلى الصف الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionSize" xml:space="preserve">
+    <value>الحجم()
+إرجاع عدد الصفوف في الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionStdDev" xml:space="preserve">
+    <value>StdDev(Value)
+تقوم بإرجاع تقدير الانحراف المعياري لعدد السكان، حيث تكون العينة مجموعة فرعية من السكان-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionStdDevp" xml:space="preserve">
+    <value>StdDevp(Value)
+إرجاع الانحراف المعياري لعدد السكان، حيث السكان من البيانات التي سيتم تلخيصها بالكامل-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionSum" xml:space="preserve">
+    <value>المجموع (القيمة)
+إرجاع مجموع القيم في الصفوف.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionToBoolean" xml:space="preserve">
+    <value>ToBoolean(Value)
+تحويل القيمة إلى قيمة منطقية مكافئة.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionToDateTime" xml:space="preserve">
+    <value>ToDateTime(Value)
+تحويل القيمة إلى قيمة DateTime.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionTotal" xml:space="preserve">
+    <value>المجموع (تعبير ملخص)
+إرجاع الإجمالي للتعبير المحدد في إطار حساب جدول.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionVar" xml:space="preserve">
+    <value>Var(Value)
+تقوم بإرجاع تقدير التباين لمحتوى، حيث تكون العينة مجموعة فرعية من السكان-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionVarp" xml:space="preserve">
+    <value>Varp(Value)
+إرجاع التباين لمحتوى، حيث يكون السكان تلخيص البيانات بالكامل-</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowAvg" xml:space="preserve">
+    <value>نافذةAvg (ملخص التعبير، بدء إزاحة، إزاحة نهاية)
+إرجاع متوسط التعبير داخل الإطار، الذي تم تعريفه باستخدام الإزاحات من الصف الحالي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowCount" xml:space="preserve">
+    <value>عدد الإطارات (ملخص التعبير، أوفيواب بدء، إزاحة نهاية)
+إرجاع عدد التعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowCountDistinct" xml:space="preserve">
+    <value>كونتينديون(ملخص التعبير، أوفيواب البدء، إزاحة النهاية)
+إرجاع عدد مميز من التعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowDefinition" xml:space="preserve">
+    <value>w(WindowExpression، PartitionByFunction، orderByFunction)
+حساب القيم المجمعة مع دالة الإطار المحدد للإطار المحدد المعرفة بواسطة التقسيم والترتيب المحدد.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowDefinitionOrderAsc" xml:space="preserve">
+    <value>asc(عمود)
+يتم فرز صفوف البيانات حسب القيم في العمود المحدد بترتيب تصاعدي. هذا هو ترتيب الفرز الافتراضي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowDefinitionOrderBy" xml:space="preserve">
+    <value>orderBy(العمود1، العمود2، ...)
+تحديد الأعمدة التي يتم من خلالها فرز القيم.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowDefinitionOrderDesc" xml:space="preserve">
+    <value>desc(عمود)
+يتم فرز صفوف البيانات حسب القيم الموجودة في العمود المحدد بترتيب تنازلي.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowDefinitionPartitionBy" xml:space="preserve">
+    <value>partitionBy(العمود1، العمود2، ...)
+تحديد الأعمدة التي يتم تقسيم صفوف البيانات بها. يتم تطبيق وظيفة الإطار على كل قسم بشكل منفصل.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowMax" xml:space="preserve">
+    <value>نافذة ماكس (ملخص التعبير، بدء إزاحة، إزاحة نهاية)
+إرجاع الحد الأقصى للتعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowMedian" xml:space="preserve">
+    <value>ويندوينال (ملخص التعبير، أوفيتأوفيت، إزاحة نهاية)
+إرجاع وسيط التعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowMin" xml:space="preserve">
+    <value>أوووووومين (ملخص التعبير، أوافيت، إزاحة النهاية)
+إرجاع الحد الأدنى للتعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowMode" xml:space="preserve">
+    <value>WindowMode (ملخص التعبير، أوفيتأوفيت، إزاحة نهاية)
+إرجاع وضع التعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowStdDev" xml:space="preserve">
+    <value>Windowstddev (التلخيص التعبير ، بدء الازاحه ، اندفسيت)
+إرجاع نموذج الانحراف المعياري للتعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowStdDevp" xml:space="preserve">
+    <value>Windowstddevp (التلخيص التعبير ، بدء الازاحه ، اندفسيت)
+إرجاع الانحراف المعياري المتحيز للتعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowSum" xml:space="preserve">
+    <value>Windowsum (التلخيص التعبير ، startoffset ، اندديفسيت)
+إرجاع مجموع التعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowVar" xml:space="preserve">
+    <value>إطار (ملخص التعبير، أوفيواب البدء، إزاحة النهاية)
+إرجاع التباين التعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.FunctionDescriptionWindowVarp" xml:space="preserve">
+    <value>نافذةفارب (ملخص التعبير، بدء إزاحة، إزاحة النهاية)
+إرجاع التباين المنحاز للتعبير داخل الإطار.</value>
+  </data>
+  <data name="PivotGridStringId.OLAPDrillDownTopNException" xml:space="preserve">
+    <value>لا يمكن تنفيذ الأمر إظهار التفاصيل عند تطبيق N أعلى لأحد حقول الصف/العمود.</value>
+  </data>
+  <data name="PivotGridStringId.OptimizedEngineServerModeNotSupportedException" xml:space="preserve">
+    <value>لا يعتمد محرك معالجة البيانات المحسّنة وضع الملقم. لا تقم بالتبديل إلى محرك محسّن عند العمل مع مصادر البيانات التي تعمل في "وضع الخادم".</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuBestFit" xml:space="preserve">
+    <value>الاحتواء الأفضل</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFixColumnLeft" xml:space="preserve">
+    <value>تثبيت هذا العمود إلى اليسار</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFixColumnRight" xml:space="preserve">
+    <value>اليمين</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFixRowBottom" xml:space="preserve">
+    <value>تثبيت هذا الصف في تثبيت</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFixRowTop" xml:space="preserve">
+    <value>الأعلى</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRules" xml:space="preserve">
+    <value>قواعد تنسيق</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesAnyField" xml:space="preserve">
+    <value>(أي)</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesClearAllRules" xml:space="preserve">
+    <value>قواعد واضحة من جميع التدابير</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesClearIntersectionRules" xml:space="preserve">
+    <value>قواعد واضحة من هذا التقاطع</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesClearMeasureRules" xml:space="preserve">
+    <value>قواعد واضحة من هذا التدبير</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesGrandTotal" xml:space="preserve">
+    <value>(المجموع الكلي)</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesIntersectionOnly" xml:space="preserve">
+    <value>تطبيق فقط على مستوى معين</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuFormatRulesMeasure" xml:space="preserve">
+    <value>التدبير</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuHideFilter" xml:space="preserve">
+    <value>تصفية</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuMore" xml:space="preserve">
+    <value>المزيد</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuShowFilter" xml:space="preserve">
+    <value>إظهار محرر عامل التصفية</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuSortBySummary" xml:space="preserve">
+    <value>فرز حسب الملخص</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuSummaryType" xml:space="preserve">
+    <value>اكتب الملخص</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuUnfixColumnLeft" xml:space="preserve">
+    <value>من اليسار</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuUnfixColumnRight" xml:space="preserve">
+    <value>من اليمين</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuUnfixRowBottom" xml:space="preserve">
+    <value>إلغاء تثبيت هذا الصف من أسفل</value>
+  </data>
+  <data name="PivotGridStringId.PopupMenuUnfixRowTop" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="PivotGridStringId.PrefilterInvalidCriteria" xml:space="preserve">
+    <value>خطأ يحدث في معايير Prefilter. الرجاء الكشف عن التسميات التوضيحية الخاصية غير صالح داخل المعاملات المعايير وتصحيح أو إزالة لهم.</value>
+  </data>
+  <data name="PivotGridStringId.PrefilterInvalidProperty" xml:space="preserve">
+    <value>(الخاصية غير صالح)</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerColumnAreaOnEveryPage" xml:space="preserve">
+    <value>منطقة الأعمدة على كل صفحة</value>
+  </data>
+  <data name="PivotGridStringId.PrintDesignerRowAreaOnEveryPage" xml:space="preserve">
+    <value>ناحية الصف على كل صفحة</value>
+  </data>
+  <data name="PivotGridStringId.SearchForField" xml:space="preserve">
+    <value>حقول البحث...</value>
+  </data>
+  <data name="PivotGridStringId.ServerRequestError" xml:space="preserve">
+    <value>حدث خطأ أثناء معالجة طلب الملقم ({0})</value>
+  </data>
+  <data name="PivotGridStringId.SummaryCountDistinct" xml:space="preserve">
+    <value>عد متميزة</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterColumnField" xml:space="preserve">
+    <value>حقل العمود:</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterLegendHidden" xml:space="preserve">
+    <value>مخفي</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterMaxValueCount" xml:space="preserve">
+    <value>الكونت ماكس</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterMaxVisibleCount" xml:space="preserve">
+    <value>الكونت ماكس مرئية</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterRangeFrom" xml:space="preserve">
+    <value>إظهار القيم من</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterRangeTo" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="PivotGridStringId.SummaryFilterRowField" xml:space="preserve">
+    <value>حقل الصف:</value>
+  </data>
+  <data name="PivotGridStringId.SummaryMedian" xml:space="preserve">
+    <value>الوسيط</value>
+  </data>
+  <data name="PivotGridStringId.SummaryMode" xml:space="preserve">
+    <value>وضع</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatCountDistinct" xml:space="preserve">
+    <value>عدد {0} مميزة</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatMedian" xml:space="preserve">
+    <value>المتوسط</value>
+  </data>
+  <data name="PivotGridStringId.TotalFormatMode" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+</root>

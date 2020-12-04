@@ -20,6 +20,9 @@ Public Class frmECounterEditor
                 MsgBox("خطأ في رقم الملف.")
                 Me.DialogResult = DialogResult.Ignore
             End If
+        Else
+            txtcurrentval.Enabled = True
+            btneditval.Enabled = False
         End If
     End Sub
 

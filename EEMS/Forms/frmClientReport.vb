@@ -140,7 +140,7 @@ Public Class frmClientReport
             lblhrem.Text = "باقي" & vbNewLine & sumremainstr & " ل.ل"
 
             'lbl1.Text = "اجمالي المطلوب = " & ri.sumcredit.ToString("N0") & " | اجمالي المدفوع = " & ri.sumpayed.ToString("N0") & " | الباقي = " & ri.remaining.ToString("N0")
-            lbl2.Text = "المجموع = " & ri.sumcredit.ToString("N0") & " ل.ل"
+            lbl2.Text = "إجمالي مطلوب = " & ri.sumcredit.ToString("N0") & " ل.ل"
         Else
             btnPrint.Enabled = False
         End If

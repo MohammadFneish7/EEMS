@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DxDesignerStringId.CodeCompletion_Field" xml:space="preserve">
+    <value>field</value>
+  </data>
+  <data name="DxDesignerStringId.None" xml:space="preserve">
+    <value>(بلا)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SearchDialog_Cancel" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ParametersPanel_False" xml:space="preserve">
+    <value>كلا</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ParametersPanel_True" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="AnalyticsCoreStringId.TooltipButtons_Preview" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.MenuButtons_Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Next" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Previous" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Actions" xml:space="preserve">
+    <value>الإجراءات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PropertyGrid_PopupMenu_Reset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_Operand_Type_Value" xml:space="preserve">
+    <value>قيمة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SelectAll" xml:space="preserve">
+    <value>(تحديد الكل)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_Parameters" xml:space="preserve">
+    <value>المعلمات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.EditCut" xml:space="preserve">
+    <value>قص</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Zoom" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ZoomIn" xml:space="preserve">
+    <value>التكبير</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ZoomOut" xml:space="preserve">
+    <value>التصغير</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Cmd_Delete" xml:space="preserve">
+    <value>&amp; حذف</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FormatFontName" xml:space="preserve">
+    <value>اسم الخط</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Redo" xml:space="preserve">
+    <value>&amp; إعادة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ExpressionEditor_ItemInfo_Fields" xml:space="preserve">
+    <value>الحقول</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ExpressionEditor_ExpressionCaption" xml:space="preserve">
+    <value>محرر التعبير</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Font.Size" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Font.Unit" xml:space="preserve">
+    <value>وحدة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PaddingInfo.Left" xml:space="preserve">
+    <value>اليسار</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PaddingInfo.Right" xml:space="preserve">
+    <value>حق</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PaddingInfo.Top" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PaddingInfo.Bottom" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SizeF.Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SizeF.Height" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PaddingInfo.All" xml:space="preserve">
+    <value>جميع</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SearchDialog_Cancel" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ParametersPanel_False" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ParametersPanel_True" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="AnalyticsCoreStringId.TooltipButtons_Preview" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.MenuButtons_Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Next" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Previous" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Actions" xml:space="preserve">
+    <value>الإجراءات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PropertyGrid_PopupMenu_Reset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_Operand_Type_Value" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SelectAll" xml:space="preserve">
+    <value>(تحديد الكل)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_Parameters" xml:space="preserve">
+    <value>المعلمات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.CollectionEditor_Name_Placeholder" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilePicker_Placeholder" xml:space="preserve">
+    <value>الملف</value>
+  </data>
+  <data name="AnalyticsCoreStringId.CollectionEditor_Value_Placeholder" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ImagePicker_Placeholder" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_ChooseJsonSourcePage_Header" xml:space="preserve">
+    <value>رأس</value>
+  </data>
+  <data name="AnalyticsCoreIStringId.Parameter_Type_Double" xml:space="preserve">
+    <value>عدد (مزدوجة الدقة الفاصلة العائمة)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Category" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Cmd_Copy" xml:space="preserve">
+    <value>الشرطي &amp; y</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Cmd_MoveDown" xml:space="preserve">
+    <value>تحريك لأسفل</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Cmd_MoveUp" xml:space="preserve">
+    <value>تحريك لأعلى</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Cmd_Paste" xml:space="preserve">
+    <value>&amp; لصق</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Cmd_Properties" xml:space="preserve">
+    <value>بروكتر آند روبرتس</value>
+  </data>
+  <data name="AnalyticsCoreStringId.DataPreview_Empty" xml:space="preserve">
+    <value>لا توجد بيانات للعرض</value>
+  </data>
+  <data name="AnalyticsCoreStringId.DataPreview_Title" xml:space="preserve">
+    <value>معاينة البيانات (الصفوف الأولى 100 عرض)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.DSWizard_Title" xml:space="preserve">
+    <value>معالج مصدر البيانات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FieldListActions_AddParameter" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_AdvancedMode" xml:space="preserve">
+    <value>وضع متقدم</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_Operand_CreateNewParameter" xml:space="preserve">
+    <value>إنشاء معلمة جديدة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_Operand_Type_Parameter" xml:space="preserve">
+    <value>المعلمة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_Operand_Type_Property" xml:space="preserve">
+    <value>الخاصية</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FilterEditor_TreeCreationError" xml:space="preserve">
+    <value>لا يمكن إنشاء شجرة لهذا التعبير</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FontOptions_Unit_Pixel" xml:space="preserve">
+    <value>بكسل</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FontOptions_Unit_World" xml:space="preserve">
+    <value>العالم</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FormatStringEditor_PreviewNotAvailable_Text" xml:space="preserve">
+    <value>لا تتوفر معاينة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FormatStringEditor_Suffix" xml:space="preserve">
+    <value>لاحقة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FormatStringEditor_Title" xml:space="preserve">
+    <value>تنسيق محرر السلسلة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.FormatStringEditor_Types" xml:space="preserve">
+    <value>أنواع</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Group_Edit" xml:space="preserve">
+    <value>&amp; تحرير</value>
+  </data>
+  <data name="AnalyticsCoreStringId.GuidIsRequired_Error" xml:space="preserve">
+    <value>Guid مطلوب ويجب أن يكون تنسيق صالح-</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_ChooseConnection_Description" xml:space="preserve">
+    <value>الذي تريده لاستخدام اتصال بيانات موجود؟</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_ChooseJsonSchemaPage_Placeholder" xml:space="preserve">
+    <value>لتحديد حقول البيانات، اختر اتصال بيانات أو أنشئ.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_ChooseJsonSourcePage_PathParameter" xml:space="preserve">
+    <value>معلمة المسار</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_ChooseJsonSourcePage_QueryParameter" xml:space="preserve">
+    <value>معلمة استعلام</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_CreateNewConnection" xml:space="preserve">
+    <value>لا، أود إنشاء اتصال بيانات جديد</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_CreateNewConnectionPage_Description" xml:space="preserve">
+    <value>إنشاء اتصال بيانات.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_CreateNewConnectionPage_Placeholder" xml:space="preserve">
+    <value>لإنشاء اتصال بيانات، حدد "لا، أود إنشاء اتصال بيانات جديد".</value>
+  </data>
+  <data name="AnalyticsCoreStringId.JsonDSWizard_UseExistingConnection" xml:space="preserve">
+    <value>نعم، دعوني أختار اتصال بيانات موجود من القائمة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Loading" xml:space="preserve">
+    <value>تحميل...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Mobile_DateRange_EndDate" xml:space="preserve">
+    <value>تعيين تاريخ النهاية</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Mobile_DateRange_From" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Mobile_DateRange_SelectPeriod" xml:space="preserve">
+    <value>حدد</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Mobile_DateRange_StartDate" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="AnalyticsCoreStringId.Mobile_DateRange_Title" xml:space="preserve">
+    <value>معلمة نطاق تاريخ</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Mobile_DateRange_Until" xml:space="preserve">
+    <value>حتى</value>
+  </data>
+  <data name="AnalyticsCoreStringId.NameIsRequired_Error" xml:space="preserve">
+    <value>اسم مطلوب ويجب أن يكون معرف صالح.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_ChooseDataMember_Description" xml:space="preserve">
+    <value>اختر الكائن بأكمله أو عضو بيانات للربط.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_ChooseDataMember_Disabled_Description" xml:space="preserve">
+    <value>لتحديد عضو بيانات، اختر نوعًا يحتوي على عضو بيانات واحد على الأقل.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_ChooseType_Description" xml:space="preserve">
+    <value>اختر النوع والمنشئ.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_ConfigureParameters_Description" xml:space="preserve">
+    <value>تكوين معلمات المنشئ و/أو معلمات الأسلوب.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_ConfigureParameters_Disabled_Description" xml:space="preserve">
+    <value>لتحديد المعلمات، حدد منشئ أو أسلوب معلمة.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_ConfigureParameters_EntireObject" xml:space="preserve">
+    <value>كائن كامل</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ObjectDSWizard_EditParameters" xml:space="preserve">
+    <value>تحرير معلمات...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Boolean" xml:space="preserve">
+    <value>قيمة منطقية</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_DateTime" xml:space="preserve">
+    <value>تاريخ</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Decimal" xml:space="preserve">
+    <value>عدد (عشري)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Float" xml:space="preserve">
+    <value>عدد (عائمة)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Guid" xml:space="preserve">
+    <value>المعرف الفريد العمومي</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Int16" xml:space="preserve">
+    <value>رقم (عدد صحيح 16 بت)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Int32" xml:space="preserve">
+    <value>رقم (عدد صحيح 32 بت)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_Int64" xml:space="preserve">
+    <value>عدد صحيح (integer 64 بت)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Parameter_Type_String" xml:space="preserve">
+    <value>السلسلة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ParametersPanel_DateTimeValueValidationError" xml:space="preserve">
+    <value>لا يمكن أن تكون القيمة فارغة.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Prefix" xml:space="preserve">
+    <value>بادئة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.PropertyGrid_Editor_EmptyText" xml:space="preserve">
+    <value>حدد...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_AvailableTables" xml:space="preserve">
+    <value>الجداول المتاحة ووجهات النظر</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_ColumnProperties" xml:space="preserve">
+    <value>خصائص العمود</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_JoinType" xml:space="preserve">
+    <value>نوع الصلة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_LeftOperand" xml:space="preserve">
+    <value>غادر المعامل</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_Offset" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_Operator" xml:space="preserve">
+    <value>عامل التشغيل</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_PageConfigureParametersEmpty" xml:space="preserve">
+    <value>انقر فوق الزر "إضافة" لإنشاء معلمة.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_PreviewSelectStatement_Tooltip" xml:space="preserve">
+    <value>حدد معاينة البيان...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_QueryProperties" xml:space="preserve">
+    <value>خصائص الاستعلام</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_RelationProperties" xml:space="preserve">
+    <value>خصائص العلاقة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_RightOperand" xml:space="preserve">
+    <value>معامل أيمن</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SearchBox_EmptyText" xml:space="preserve">
+    <value>إدخال النص للبحث...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SelectAll" xml:space="preserve">
+    <value>حدد كافة (*)</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SelectDistinct" xml:space="preserve">
+    <value>حدد متميزة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SelectionProperties" xml:space="preserve">
+    <value>خصائص التحديد</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SelectStatementPreview_Title" xml:space="preserve">
+    <value>حدد معاينة البيان</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SelectTop" xml:space="preserve">
+    <value>حدد أعلى</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SortType" xml:space="preserve">
+    <value>نوع الفرز</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_SurfacePlaceholder" xml:space="preserve">
+    <value>إسقاط الجدول أو طريقة العرض هنا لإنشاء استعلام.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_TableProperties" xml:space="preserve">
+    <value>خصائص الجدول</value>
+  </data>
+  <data name="AnalyticsCoreStringId.QueryBuilder_Tables_ShowMore" xml:space="preserve">
+    <value>عرض المزيد...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_AddQuery" xml:space="preserve">
+    <value>استعلام</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_CreateNewQuery" xml:space="preserve">
+    <value>إنشاء استعلام جديد...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_CustomSqlEditor" xml:space="preserve">
+    <value>محرر SQL مخصصة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_EditQuery" xml:space="preserve">
+    <value>تحرير الاستعلام</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_PageChooseConnection" xml:space="preserve">
+    <value>اختيار اتصال بيانات-</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_PageConfigureMasterDetailRelations" xml:space="preserve">
+    <value>تكوين علاقات رئيسي-تفصيلي.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_PageConfigureMultiQuery" xml:space="preserve">
+    <value>سيتم تضمين الأعمدة المحددة من جداول محددة و/أو طرق العرض تلقائياً إلى استعلام منفصل.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_PageConfigureParameters" xml:space="preserve">
+    <value>تكوين معلمات الاستعلام.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_PageConfigureParametersEmpty" xml:space="preserve">
+    <value>لإنشاء عنصر انقر فوق الزر إضافة-</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_QueryName" xml:space="preserve">
+    <value>اسم الاستعلام</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_QueryNamePlaceholder" xml:space="preserve">
+    <value>اسم استعلام مخصص اسم (الاسم الحالي: {0})</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_RemoveQuery" xml:space="preserve">
+    <value>إزالة الاستعلام</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_Title" xml:space="preserve">
+    <value>معالج مصدر البيانات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.SqlDSWizard_WriteCustomSQL" xml:space="preserve">
+    <value>كتابة مخصص SQL</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Undo" xml:space="preserve">
+    <value>&amp; التراجع عن</value>
+  </data>
+  <data name="AnalyticsCoreStringId.UploadFile" xml:space="preserve">
+    <value>تحميل الملف</value>
+  </data>
+  <data name="AnalyticsCoreStringId.UploadJsonFile_Title" xml:space="preserve">
+    <value>تحميل تفاصيل ملف JSON</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Validation" xml:space="preserve">
+    <value>التحقق...</value>
+  </data>
+  <data name="AnalyticsCoreStringId.ValueIsRequiredOrInvalidFormat_Error" xml:space="preserve">
+    <value>لا يمكن أن تكون القيمة فارغة ويجب أن يكون لها تنسيق صالح.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.WarningMessage_FieldNotFound" xml:space="preserve">
+    <value>لم يتم العثور على {0}</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_ChooseDataSource_Description" xml:space="preserve">
+    <value>اختيار "مصدر البيانات" لاستخدامها في التقرير الخاص بك.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_ChooseDataSourceFromList" xml:space="preserve">
+    <value>نعم، اسمحوا لي أن اختيار مصدر بيانات موجود من القائمة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_ConfigureQueryParameters_Placeholder" xml:space="preserve">
+    <value>لتحديد معلمات الاستعلام، حدد إجراء مخزن بمعلمات أو قم بإنشاء استعلام مخصص.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_CreateNewDataSource" xml:space="preserve">
+    <value>لا، أود إنشاء مصدر بيانات جديد</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Finish" xml:space="preserve">
+    <value>إنهاء</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Inch" xml:space="preserve">
+    <value>بوصة</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_MasterDetailRelationship_DetailQuery" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_MasterDetailRelationship_MasterQuery" xml:space="preserve">
+    <value>الرئيسي</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_MasterDetailRelationship_Placeholder" xml:space="preserve">
+    <value>لإنشاء علاقة تفاصيل رئيسية، حدد استعلامين أو أكثر.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Millimeter" xml:space="preserve">
+    <value>ملليمتر</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_Queries_Description" xml:space="preserve">
+    <value>اختر استعلامات معرفة مسبقاً و/أو قم بإنشاء استعلامات مخصصة.</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_SelectDataSourceType" xml:space="preserve">
+    <value>تحديد نوع مصدر البيانات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_SelectDataSourceType_Placeholder" xml:space="preserve">
+    <value>لتحديد مصدر بيانات، حدد "لا، أود إنشاء مصدر بيانات جديد".</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_SpecifyDataSourceSettingsPage" xml:space="preserve">
+    <value>تحديد إعدادات مصدر البيانات</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_SpecifyObjectDataSourceSettingsPage_Description" xml:space="preserve">
+    <value>تحديد إعدادات مصدر بيانات الكائن</value>
+  </data>
+  <data name="AnalyticsCoreStringId.Wizard_UseExisting_DataSource" xml:space="preserve">
+    <value>هل تريد استخدام مصدر بيانات موجود؟</value>
+  </data>
+  <data name="DataAccessWebStringId.QueryBuilder_ColumnsLoading" xml:space="preserve">
+    <value>تحميل...</value>
+  </data>
+  <data name="DataAccessWebStringId.QueryBuilder_ResultType" xml:space="preserve">
+    <value>نوع النتيجة</value>
+  </data>
+  <data name="DxDesignerStringId.CodeCompletion_Function" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DxDesignerStringId.CodeCompletion_List" xml:space="preserve">
+    <value>قائمة</value>
+  </data>
+  <data name="DxDesignerStringId.CodeCompletion_Operator" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="DxDesignerStringId.Error_SchemaLoadingFailed" xml:space="preserve">
+    <value>. {0}</value>
+  </data>
+</root>

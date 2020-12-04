@@ -35,19 +35,22 @@ Partial Class frmGeneralSettings
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmblang = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.UpgradeReport_Success
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(20, 236)
+        Me.Button1.Location = New System.Drawing.Point(20, 249)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(97, 30)
+        Me.Button1.Size = New System.Drawing.Size(331, 45)
         Me.Button1.TabIndex = 59
         Me.Button1.Text = "حفظ"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -169,24 +172,13 @@ Partial Class frmGeneralSettings
         '
         Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(20, 163)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 167)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox1.Size = New System.Drawing.Size(331, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(159, 67)
         Me.GroupBox1.TabIndex = 70
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "طباعة الفواتير"
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(251, 32)
-        Me.Label6.Name = "Label6"
-        Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label6.Size = New System.Drawing.Size(77, 13)
-        Me.Label6.TabIndex = 69
-        Me.Label6.Text = "تحريك عامودي:"
         '
         'NumericUpDown1
         '
@@ -194,14 +186,49 @@ Partial Class frmGeneralSettings
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(235, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(70, 20)
         Me.NumericUpDown1.TabIndex = 70
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(79, 32)
+        Me.Label6.Name = "Label6"
+        Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label6.Size = New System.Drawing.Size(77, 13)
+        Me.Label6.TabIndex = 69
+        Me.Label6.Text = "تحريك عامودي:"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.CheckBox1)
+        Me.GroupBox2.Location = New System.Drawing.Point(195, 167)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.GroupBox2.Size = New System.Drawing.Size(156, 63)
+        Me.GroupBox2.TabIndex = 71
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "احتساب الفواتير"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Checked = True
+        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox1.Location = New System.Drawing.Point(37, 31)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "تدوير كسر الألف "
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'frmGeneralSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(363, 276)
+        Me.ClientSize = New System.Drawing.Size(363, 303)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmblang)
         Me.Controls.Add(Me.Label5)
@@ -223,6 +250,8 @@ Partial Class frmGeneralSettings
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -241,4 +270,6 @@ Partial Class frmGeneralSettings
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

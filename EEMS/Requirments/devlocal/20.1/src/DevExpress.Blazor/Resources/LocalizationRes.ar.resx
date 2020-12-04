@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DxBlazorStringId.Calendar_ClearButton" xml:space="preserve">
+    <value>واضحة</value>
+  </data>
+  <data name="DxBlazorStringId.Calendar_TodayButton" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_ClearButton" xml:space="preserve">
+    <value>واضحة</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_GroupPanel" xml:space="preserve">
+    <value>Drag a column header here to group by that column</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_TodayButton" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_DeleteButton" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_ToolTip_Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_EditButton" xml:space="preserve">
+    <value>تحرير</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_ToolTip_Edit" xml:space="preserve">
+    <value>تحرير</value>
+  </data>
+  <data name="DxBlazorStringId.DateEdit_ApplyButton" xml:space="preserve">
+    <value>تطبيق</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_CancelButton" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="DxBlazorStringId.DateEdit_CloseButton" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_ToolTip_Close" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="DxBlazorStringId.Pager_NextButton" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_NewButton" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_UpdateButton" xml:space="preserve">
+    <value>التحديث</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Label" xml:space="preserve">
+    <value>التسمية</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Location" xml:space="preserve">
+    <value>موقع</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Months" xml:space="preserve">
+    <value>شهر (أشهر)</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_DayViewName" xml:space="preserve">
+    <value>اليوم</value>
+  </data>
+  <data name="DxBlazorStringId.Pager_PageOfLabel" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Blue" xml:space="preserve">
+    <value>الأزرق</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Green" xml:space="preserve">
+    <value>الأخضر</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Red" xml:space="preserve">
+    <value>الأحمر</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Yellow" xml:space="preserve">
+    <value>أصفر</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Hours" xml:space="preserve">
+    <value>ساعات</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Subject" xml:space="preserve">
+    <value>هذا الموضوع</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_StartDate" xml:space="preserve">
+    <value>بدء تشغيل</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_AllText" xml:space="preserve">
+    <value>جميع</value>
+  </data>
+  <data name="DxBlazorStringId.DateEdit_ChooseDate" xml:space="preserve">
+    <value>اختيار تاريخ</value>
+  </data>
+  <data name="DxBlazorStringId.DateEdit_DisabledDateNotification" xml:space="preserve">
+    <value>التاريخ المحدد غير متوفر. الرجاء اختيار تاريخ مختلف.</value>
+  </data>
+  <data name="DxBlazorStringId.DateEdit_OutOfRangeNotification" xml:space="preserve">
+    <value>يجب أن يكون التاريخ المحدد بين {0} {1}.</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_ColumnChooser" xml:space="preserve">
+    <value>محدد العمود</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_ColumnChooser_CommandColumn" xml:space="preserve">
+    <value>عمود الأوامر</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_ColumnChooser_Header" xml:space="preserve">
+    <value>الأعمدة</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_ColumnChooser_SelectionColumn" xml:space="preserve">
+    <value>عمود تحديد</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_EmptyDataRow" xml:space="preserve">
+    <value>لا توجد بيانات للعرض</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_PageSize" xml:space="preserve">
+    <value>صفحة حجم</value>
+  </data>
+  <data name="DxBlazorStringId.Grid_PopupEditFormCaption" xml:space="preserve">
+    <value>تحرير نموذج</value>
+  </data>
+  <data name="DxBlazorStringId.ListBox_EmptyDataRow" xml:space="preserve">
+    <value>لا توجد بيانات للعرض</value>
+  </data>
+  <data name="DxBlazorStringId.Pager_PrevButton" xml:space="preserve">
+    <value>السابق</value>
+  </data>
+  <data name="DxBlazorStringId.PivotGrid_GrandTotal" xml:space="preserve">
+    <value>المجموع الكلي</value>
+  </data>
+  <data name="DxBlazorStringId.PivotGrid_TotalFormat" xml:space="preserve">
+    <value>{0} المجموع</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Cyan" xml:space="preserve">
+    <value>سماوي</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Indigo" xml:space="preserve">
+    <value>النيلي</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Light" xml:space="preserve">
+    <value>الضوء</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Orange" xml:space="preserve">
+    <value>أورانج</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Pink" xml:space="preserve">
+    <value>الوردي</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Purple" xml:space="preserve">
+    <value>أرجواني</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Color_Teal" xml:space="preserve">
+    <value>Teal</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_AllDay" xml:space="preserve">
+    <value>كل يوم</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_ConfirmDelete" xml:space="preserve">
+    <value>هل تريد حذف هذا الموعد فقط أو السلسلة بأكملها؟</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_ConfirmEdit" xml:space="preserve">
+    <value>هل تريد تحرير هذا الموعد فقط أو السلسلة بأكملها؟</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Days" xml:space="preserve">
+    <value>يوم (أيام)</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_DeleteButton" xml:space="preserve">
+    <value>حذف الموعد</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_DeleteSeriesButton" xml:space="preserve">
+    <value>Delete series</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Discard" xml:space="preserve">
+    <value>تجاهل</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_EditButton" xml:space="preserve">
+    <value>موعد تحرير</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_EditSeriesButton" xml:space="preserve">
+    <value>Edit series</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_EndDate" xml:space="preserve">
+    <value>نهاية</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Occurrences" xml:space="preserve">
+    <value>التكرار (التكرارات)</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_On" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_OnDay" xml:space="preserve">
+    <value>في اليوم</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_OnThe" xml:space="preserve">
+    <value>على</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Repeat" xml:space="preserve">
+    <value>كرر</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_RepeatAppointment" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_RepeatEnd" xml:space="preserve">
+    <value>النهاية</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_RepeatEvery" xml:space="preserve">
+    <value>كرر كل</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Status" xml:space="preserve">
+    <value>مركز</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Title" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Form_Weeks" xml:space="preserve">
+    <value>أسبوع (أسابيع)</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_NoSubject" xml:space="preserve">
+    <value>(لا يوجد موضوع)</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceRange_EndAfter" xml:space="preserve">
+    <value>نهاية بعد</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceRange_EndBy" xml:space="preserve">
+    <value>نهاية طريق</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceRange_NoEndDate" xml:space="preserve">
+    <value>No End Date</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceType_Daily" xml:space="preserve">
+    <value>اليومية</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceType_Monthly" xml:space="preserve">
+    <value>الشهرية</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceType_Never" xml:space="preserve">
+    <value>ابدأ</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceType_Weekly" xml:space="preserve">
+    <value>التنزيلات</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_RecurrenceType_Yearly" xml:space="preserve">
+    <value>سنوياً</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Status_Away" xml:space="preserve">
+    <value>بعيدا</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Status_Busy" xml:space="preserve">
+    <value>مشغول</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Status_Free" xml:space="preserve">
+    <value>مجاناً</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Status_Tentative" xml:space="preserve">
+    <value>مؤقت</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_Status_WorkingElsewhere" xml:space="preserve">
+    <value>Working elsewhere</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_ToolTip_RestoreOccurrence" xml:space="preserve">
+    <value>استعادة التواجد</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekDays_Day" xml:space="preserve">
+    <value>يوم شهر</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekDays_Weekend" xml:space="preserve">
+    <value>عطله نهايه الاسبوع</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekDays_WorkDay" xml:space="preserve">
+    <value>work day</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekOfMonth_First" xml:space="preserve">
+    <value>first</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekOfMonth_Fourth" xml:space="preserve">
+    <value>fourth</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekOfMonth_Last" xml:space="preserve">
+    <value>last</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekOfMonth_Second" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekOfMonth_Third" xml:space="preserve">
+    <value>third</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WeekViewName" xml:space="preserve">
+    <value>الأسبوع</value>
+  </data>
+  <data name="DxBlazorStringId.Scheduler_WorkWeekViewName" xml:space="preserve">
+    <value>أسبوع العمل</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_Canceled" xml:space="preserve">
+    <value>تم إلغاء</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_Done" xml:space="preserve">
+    <value>تحميل</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_Failed" xml:space="preserve">
+    <value>تحميل فشل</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FileIsTooLarge" xml:space="preserve">
+    <value>جدا</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FileIsTooSmall" xml:space="preserve">
+    <value>الملف صغير جدًا</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FilesToUpload" xml:space="preserve">
+    <value>{0} الملفات الجاهزة لتحميل</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FilesWereNotUploaded" xml:space="preserve">
+    <value>الملفات لم يتم تحميلها</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FileToUpload" xml:space="preserve">
+    <value>{0} ملف جاهز لتحميل</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FileTypeIsNotAllowed" xml:space="preserve">
+    <value>به</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_FileWasNotUploaded" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DxBlazorStringId.Upload_ReadyToUpload" xml:space="preserve">
+    <value>جاهزًا لتحميل</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_SelectFileButton" xml:space="preserve">
+    <value>ملف</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_UploadedFile" xml:space="preserve">
+    <value>{0} تم تحميله</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_UploadedFiles" xml:space="preserve">
+    <value>الملفات التي تم تحميلها</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_UploadingFile" xml:space="preserve">
+    <value>تحميل ملف {0}</value>
+  </data>
+  <data name="DxBlazorStringId.Upload_UploadingFiles" xml:space="preserve">
+    <value>تحميل ملفات {0}</value>
+  </data>
+</root>

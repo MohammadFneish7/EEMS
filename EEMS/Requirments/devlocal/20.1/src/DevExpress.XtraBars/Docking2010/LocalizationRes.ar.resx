@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DocumentManagerStringId.CommandBack" xml:space="preserve">
+    <value>مرة أخرى</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileHorizontal" xml:space="preserve">
+    <value>Show Windows Stacked</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDock" xml:space="preserve">
+    <value>قفص الاتهام كالمستندات المبوبة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandActivate" xml:space="preserve">
+    <value>تنشيط</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandHorizontalOrientation" xml:space="preserve">
+    <value>ترتيب مجموعات علامات التبويب أفقياً</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandNewVerticalDocumentGroup" xml:space="preserve">
+    <value>New Vertical Tab Group</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandMoveToPrevDocumentGroup" xml:space="preserve">
+    <value>Move to Previous Tab Group</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandFloat" xml:space="preserve">
+    <value>تعويم</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandMaximize" xml:space="preserve">
+    <value>تكبير</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandMinimizeAll" xml:space="preserve">
+    <value>تصغير النوافذ</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandMoveToNextDocumentGroup" xml:space="preserve">
+    <value>الانتقال إلى مجموعة علامات التبويب التالي</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileVertical" xml:space="preserve">
+    <value>Show Windows Side by Side</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandRestoreAll" xml:space="preserve">
+    <value>Restore Windows</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandArrangeIcons" xml:space="preserve">
+    <value>ترتيب الرموز</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandNewHorizontalDocumentGroup" xml:space="preserve">
+    <value>New Horizontal Tab Group</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandClose" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandVerticalOrientation" xml:space="preserve">
+    <value>Arrange Tab Groups Vertically</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandRestore" xml:space="preserve">
+    <value>استعادة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandCascade" xml:space="preserve">
+    <value>تتالي الإطارات</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandCloseAllButThis" xml:space="preserve">
+    <value>قم بإغلاق كل شيء لكن هذا</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandNewDocumentGroup" xml:space="preserve">
+    <value>New Tab Group</value>
+  </data>
+  <data name="DocumentManagerStringId.OpenedWindowsDialogNameColumnCaption" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="DocumentManagerStringId.SplashScreenCaption" xml:space="preserve">
+    <value>تحميل...</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspacesDialogNameColumnCaption" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandRotate" xml:space="preserve">
+    <value>تدوير</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandHome" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="DocumentManagerStringId.ActivateDocumentButtonText" xml:space="preserve">
+    <value>تنشيط مستند</value>
+  </data>
+  <data name="DocumentManagerStringId.ApplyWorkspaceButtonText" xml:space="preserve">
+    <value>تطبيق مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.CloseAllDocumentsButtonText" xml:space="preserve">
+    <value>قم بإغلاق كافة المستندات</value>
+  </data>
+  <data name="DocumentManagerStringId.CloseAllDocumentsWarningMessage" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد إغلاق كافة المستندات؟</value>
+  </data>
+  <data name="DocumentManagerStringId.CloseDocumentButtonText" xml:space="preserve">
+    <value>إغلاق المستند</value>
+  </data>
+  <data name="DocumentManagerStringId.CloseDocumentWarningMessage" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد إغلاق المستند {0}؟</value>
+  </data>
+  <data name="DocumentManagerStringId.RemoveAllWorkspacesButtonText" xml:space="preserve">
+    <value>إزالة كافة مساحات العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.RemoveAllWorkspacesWarningMessage" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد إزالة كافة مساحات العمل؟</value>
+  </data>
+  <data name="DocumentManagerStringId.RemoveWorkspaceButtonText" xml:space="preserve">
+    <value>إزالة مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.RemoveWorkspaceItemCaption" xml:space="preserve">
+    <value>إزالة مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.SaveCurrentWorkspaceItemCaption" xml:space="preserve">
+    <value>حفظ مساحة العمل الحالية...</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspaceRemoveWarningMessage" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد إزالة مساحة العمل {0}؟</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspacesDialogCaption" xml:space="preserve">
+    <value>مساحات العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspacesDialogPathColumnCaption" xml:space="preserve">
+    <value>مسار</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileWideSizeDescription" xml:space="preserve">
+    <value>تغيير حجم بلاط على نطاق واسع</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileSizeFlyoutPanel" xml:space="preserve">
+    <value>حجم البلاط</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileSmallSize" xml:space="preserve">
+    <value>الصغيرة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileSmallSizeDescription" xml:space="preserve">
+    <value>تغيير حجم البلاطة الصغيرة</value>
+  </data>
+  <data name="DocumentManagerStringId.OpenedWindowsDialogCaption" xml:space="preserve">
+    <value>ويندوز</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileSizeFlyoutPanelDescription" xml:space="preserve">
+    <value>تغيير حجم بلاط</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileMediumSizeDescription" xml:space="preserve">
+    <value>تغيير حجم البلاطة للمتوسطة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandExit" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="DocumentManagerStringId.TabbedViewLayoutModeChangingDialogText" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد تطبيق الوضع الافتراضي "التخطيط الخطي"؟</value>
+  </data>
+  <data name="DocumentManagerStringId.DocumentModeInappropriateViewExceptionMessage" xml:space="preserve">
+    <value>ويهدف هذا النوع من طرق العرض لاستخدامها في حالة عدم-الوثيقة فقط.</value>
+  </data>
+  <data name="DocumentManagerStringId.SaveWorkspaceItemCaption" xml:space="preserve">
+    <value>حفظ مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.SaveWorkspaceButtonText" xml:space="preserve">
+    <value>حفظ مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.SaveWorkspaceFormCaption" xml:space="preserve">
+    <value>حفظ مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.SaveWorkspaceAsButtonText" xml:space="preserve">
+    <value>حفظ مساحة العمل as...</value>
+  </data>
+  <data name="DocumentManagerStringId.TabbedViewLayoutModeChangingDialogCaption" xml:space="preserve">
+    <value>تعطيل فريلايوتمودي</value>
+  </data>
+  <data name="DocumentManagerStringId.CaptureWorkspaceItemCaption" xml:space="preserve">
+    <value>التقاط مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandBackDescription" xml:space="preserve">
+    <value>التنقل إلى الوراء</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandClearSelection" xml:space="preserve">
+    <value>التحديد الواضح</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandClearSelectionDescription" xml:space="preserve">
+    <value>اختيار البلاط واضحة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandCloseAll" xml:space="preserve">
+    <value>قم بإغلاق كافة المستندات</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandCloseAllButPinned" xml:space="preserve">
+    <value>إغلاق كافة لكن المثبتة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDetail" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDetailDescription" xml:space="preserve">
+    <value>انتقل إلى هذا المستند</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDisableFullScreenMode" xml:space="preserve">
+    <value>تعطيل شاشة كاملة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDisableFullScreenModeDescription" xml:space="preserve">
+    <value>التبديل إلى طريقة العرض العادية</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDockAll" xml:space="preserve">
+    <value>قفص الاتهام جميع</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandDockWidget" xml:space="preserve">
+    <value>قفص الاتهام</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandEnableFullScreenMode" xml:space="preserve">
+    <value>كامل الشاشة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandEnableFullScreenModeDescription" xml:space="preserve">
+    <value>التبديل إلى وضع ملء الشاشة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandExitDescription" xml:space="preserve">
+    <value>إنهاء التطبيق</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandFlip" xml:space="preserve">
+    <value>الوجه</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandFlipDescription" xml:space="preserve">
+    <value>الوجه الوثائق</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandFloatAll" xml:space="preserve">
+    <value>تعدت كل</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandHomeDescription" xml:space="preserve">
+    <value>انتقل إلى الشاشة الرئيسية</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandMoveToMainDocumentGroup" xml:space="preserve">
+    <value>الانتقال إلى مجموعة المستند الرئيسي</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandOpenedWindowsDialog" xml:space="preserve">
+    <value>ويندوز...</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandOverview" xml:space="preserve">
+    <value>نظرة عامة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandOverviewDescription" xml:space="preserve">
+    <value>عرض المستندات كقائمة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandPinTab" xml:space="preserve">
+    <value>علامة التبويب رقم pin</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandResetLayout" xml:space="preserve">
+    <value>إعادة تعيين تخطيط نافذة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandRotateDescription" xml:space="preserve">
+    <value>تدوير التخطيط</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileLargeSize" xml:space="preserve">
+    <value>كبير</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileLargeSizeDescription" xml:space="preserve">
+    <value>تغيير حجم البلاطة الكبيرة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileMediumSize" xml:space="preserve">
+    <value>متوسطة</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandTileWideSize" xml:space="preserve">
+    <value>على نطاق واسع</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandToggleTileSize" xml:space="preserve">
+    <value>تبديل حجم</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandToggleTileSizeDescription" xml:space="preserve">
+    <value>تبديل بلاط الحجم</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandUnpinTab" xml:space="preserve">
+    <value>حذف علامة التبويب</value>
+  </data>
+  <data name="DocumentManagerStringId.CommandWorkspacesDialog" xml:space="preserve">
+    <value>مساحات العمل...</value>
+  </data>
+  <data name="DocumentManagerStringId.DeferredLoadingExceptionMessage" xml:space="preserve">
+    <value>مضمون مؤجل. لتوفير المحتوى، الاشتراك في الحدث الخاص بطريقة العرض كويريكونترول.</value>
+  </data>
+  <data name="DocumentManagerStringId.DuplicateDocumentInTileExceptionMessage" xml:space="preserve">
+    <value>لديك تجانب واحد فقط في وقت الذي يتصل بكل وثيقة من خلال خاصية المستند. إذا كنت ترغب في إنشاء بلاطات متعددة تشير إلى نفس المستند، ضع هذه الوثيقة إلى حاوية صفحة وتعيين هذه الحاوية أكتيفاتيونتارجيت لهذه البلاط.</value>
+  </data>
+  <data name="DocumentManagerStringId.InconsistentDocumentHostingExceptionMessage" xml:space="preserve">
+    <value>يجب أن يكون لخصائص MdiParent و ClientControl و ContainerControl لـ DocumentManager التابع نفس القيم كالخصائص ذات الصلة بمدير مستندات حاوية أصل.</value>
+  </data>
+  <data name="DocumentManagerStringId.LoadingIndicatorCaption" xml:space="preserve">
+    <value>الانتظار</value>
+  </data>
+  <data name="DocumentManagerStringId.LoadingIndicatorDescription" xml:space="preserve">
+    <value>تحميل...</value>
+  </data>
+  <data name="DocumentManagerStringId.LoadWorkspaceButtonText" xml:space="preserve">
+    <value>تحميل مساحة العمل...</value>
+  </data>
+  <data name="DocumentManagerStringId.LoadWorkspaceFormCaption" xml:space="preserve">
+    <value>تحميل مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.LoadWorkspaceItemCaption" xml:space="preserve">
+    <value>تحميل مساحة العمل...</value>
+  </data>
+  <data name="DocumentManagerStringId.NonDocumentModeInappropriateViewExceptionMessage" xml:space="preserve">
+    <value>ليس المقصود هذا النوع من طريقة العرض لاستخدامها في حالة عدم-الوثيقة.</value>
+  </data>
+  <data name="DocumentManagerStringId.NonDocumentModeInitializationExceptionMessage" xml:space="preserve">
+    <value>. لتمكين هذا الوضع، تعيين الخاصية كلينتكونترول دوكومينتماناجير-</value>
+  </data>
+  <data name="DocumentManagerStringId.NonUniqueNameExceptionMessage" xml:space="preserve">
+    <value>يجب أن يكون كل عنصر من عناصر العرض (مستند أو تجانب) اسم فريد.</value>
+  </data>
+  <data name="DocumentManagerStringId.NoPreviewAvailableText" xml:space="preserve">
+    <value>لا تتوفر أية معاينة</value>
+  </data>
+  <data name="DocumentManagerStringId.NullParentContainerExceptionMessage" xml:space="preserve">
+    <value>"دوكومينتماناجير" يجب أن يكون لديك من حاوية أصل. تأكد من أن يتم تعيين واحدة من الخصائص التالية: mdiparent به أو كلينتكونترول أو ContainerControl.</value>
+  </data>
+  <data name="DocumentManagerStringId.OpenedWindowsDialogPathColumnCaption" xml:space="preserve">
+    <value>مسار</value>
+  </data>
+  <data name="DocumentManagerStringId.OverlapAllControlsWarning" xml:space="preserve">
+    <value>"دوكومينتماناجير" تحتل كل المساحة المتوفرة، وقد تتداخل مع عناصر تحكم أخرى. لتقييد حجم الوثيقة بالمدير، استخدم الخاصية ContainerControl لوضعه في حاوية منفصلة.</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspaceNameFormCaption" xml:space="preserve">
+    <value>استبدال مساحة العمل</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspaceNameFormErrorMessage" xml:space="preserve">
+    <value>{0} مساحة عمل موجودة بالفعل. هل تريد استبداله؟</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspaceNameWarningMessage" xml:space="preserve">
+    <value>لا يمكن أن يكون مساحة اسم فارغة.</value>
+  </data>
+  <data name="DocumentManagerStringId.WorkspaceRemoveCaption" xml:space="preserve">
+    <value>إزالة مساحة العمل</value>
+  </data>
+</root>

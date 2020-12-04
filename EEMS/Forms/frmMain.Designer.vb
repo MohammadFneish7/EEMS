@@ -158,7 +158,7 @@ Partial Class frmMain
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ChartBarController1 = New DevExpress.XtraCharts.UI.ChartBarController()
+        Me.ChartBarController1 = New DevExpress.XtraCharts.UI.ChartBarController(Me.components)
         Me.CommandBarGalleryDropDown1 = New DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(Me.components)
         Me.CommandBarGalleryDropDown2 = New DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(Me.components)
         Me.CommandBarGalleryDropDown3 = New DevExpress.XtraBars.Commands.CommandBarGalleryDropDown(Me.components)
@@ -242,6 +242,7 @@ Partial Class frmMain
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.lblPayment = New System.Windows.Forms.Label()
+        Me.اعادةتوليفالمصنعToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -304,7 +305,6 @@ Partial Class frmMain
         Me.ChartControl1.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad
         Me.ChartControl1.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.[False]
         Me.ChartControl1.CrosshairEnabled = DevExpress.Utils.DefaultBoolean.[Default]
-        Me.ChartControl1.DataBindings = Nothing
         XyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
         XyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
         Me.ChartControl1.Diagram = XyDiagram1
@@ -393,6 +393,7 @@ Partial Class frmMain
         Me.ListView1.FullRowSelect = True
         Me.ListView1.GridLines = True
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.ListView1.HideSelection = False
         Me.ListView1.Location = New System.Drawing.Point(3, 30)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -455,72 +456,72 @@ Partial Class frmMain
         '
         '
         CreateBarChartItem1.Caption = "Clustered Column"
-        CreateBarChartItem1.Description = "Compare values across categories by using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the" & _
-    " order of categories is not important or for displaying item counts such as a hi" & _
+        CreateBarChartItem1.Description = "Compare values across categories by using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the" &
+    " order of categories is not important or for displaying item counts such as a hi" &
     "stogram."
-        CreateBarChartItem1.Hint = "Compare values across categories by using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the" & _
-    " order of categories is not important or for displaying item counts such as a hi" & _
+        CreateBarChartItem1.Hint = "Compare values across categories by using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the" &
+    " order of categories is not important or for displaying item counts such as a hi" &
     "stogram."
         CreateFullStackedBarChartItem1.Caption = "100% Stacked Column"
-        CreateFullStackedBarChartItem1.Description = "Compare the percentage that each value contributes to a total across categories b" & _
-    "y using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the proportion of each data " & _
+        CreateFullStackedBarChartItem1.Description = "Compare the percentage that each value contributes to a total across categories b" &
+    "y using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the proportion of each data " &
     "series."
-        CreateFullStackedBarChartItem1.Hint = "Compare the percentage that each value contributes to a total across categories b" & _
-    "y using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the proportion of each data " & _
+        CreateFullStackedBarChartItem1.Hint = "Compare the percentage that each value contributes to a total across categories b" &
+    "y using vertical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the proportion of each data " &
     "series."
         CreateSideBySideFullStackedBarChartItem1.Caption = "Clustered 100% Stacked Column"
-        CreateSideBySideFullStackedBarChartItem1.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" & _
-    " types, so that you can stack different columns, and combine them into groups ac" & _
+        CreateSideBySideFullStackedBarChartItem1.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" &
+    " types, so that you can stack different columns, and combine them into groups ac" &
     "ross the same axis value."
-        CreateSideBySideFullStackedBarChartItem1.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" & _
-    " types, so that you can stack different columns, and combine them into groups ac" & _
+        CreateSideBySideFullStackedBarChartItem1.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" &
+    " types, so that you can stack different columns, and combine them into groups ac" &
     "ross the same axis value."
         CreateSideBySideStackedBarChartItem1.Caption = "Clustered Stacked Column"
-        CreateSideBySideStackedBarChartItem1.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" & _
-    "s, so that you can stack different columns, and combine them into groups across " & _
+        CreateSideBySideStackedBarChartItem1.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" &
+    "s, so that you can stack different columns, and combine them into groups across " &
     "the same axis value."
-        CreateSideBySideStackedBarChartItem1.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" & _
-    "s, so that you can stack different columns, and combine them into groups across " & _
+        CreateSideBySideStackedBarChartItem1.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" &
+    "s, so that you can stack different columns, and combine them into groups across " &
     "the same axis value."
         CreateStackedBarChartItem1.Caption = "Stacked Column"
-        CreateStackedBarChartItem1.Description = "Compare the contribution of each value to a total across categories by using vert" & _
-    "ical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the total across series for one category" & _
+        CreateStackedBarChartItem1.Description = "Compare the contribution of each value to a total across categories by using vert" &
+    "ical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the total across series for one category" &
     "."
-        CreateStackedBarChartItem1.Hint = "Compare the contribution of each value to a total across categories by using vert" & _
-    "ical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the total across series for one category" & _
+        CreateStackedBarChartItem1.Hint = "Compare the contribution of each value to a total across categories by using vert" &
+    "ical rectangles." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the total across series for one category" &
     "."
         ChartControlCommandGalleryItemGroup2DColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBarChartItem1, CreateFullStackedBarChartItem1, CreateSideBySideFullStackedBarChartItem1, CreateSideBySideStackedBarChartItem1, CreateStackedBarChartItem1})
         CreateBar3DChartItem1.Caption = "3-D Clustered Column"
         CreateBar3DChartItem1.Description = "Compare values across categories and display clustered columns in 3-D format."
         CreateBar3DChartItem1.Hint = "Compare values across categories and display clustered columns in 3-D format."
         CreateFullStackedBar3DChartItem1.Caption = "100% Stacked Column in 3-D"
-        CreateFullStackedBar3DChartItem1.Description = "Compare the percentage each value contributes to a total across categories and di" & _
+        CreateFullStackedBar3DChartItem1.Description = "Compare the percentage each value contributes to a total across categories and di" &
     "splay 100% stacked columns in 3-D format."
-        CreateFullStackedBar3DChartItem1.Hint = "Compare the percentage each value contributes to a total across categories and di" & _
+        CreateFullStackedBar3DChartItem1.Hint = "Compare the percentage each value contributes to a total across categories and di" &
     "splay 100% stacked columns in 3-D format."
         CreateManhattanBarChartItem1.Caption = "3-D Column"
-        CreateManhattanBarChartItem1.Description = "Compare values across categories and across series on three axes." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when " & _
+        CreateManhattanBarChartItem1.Description = "Compare values across categories and across series on three axes." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when " &
     "the categories and series are equally important."
-        CreateManhattanBarChartItem1.Hint = "Compare values across categories and across series on three axes." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when " & _
+        CreateManhattanBarChartItem1.Hint = "Compare values across categories and across series on three axes." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when " &
     "the categories and series are equally important."
         CreateSideBySideFullStackedBar3DChartItem1.Caption = "Clustered 100% Stacked Column in 3-D"
-        CreateSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" & _
-    " types in 3-D format, so that you can stack different columns, and combine them " & _
+        CreateSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" &
+    " types in 3-D format, so that you can stack different columns, and combine them " &
     "into groups across the same axis value."
-        CreateSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" & _
-    " types in 3-D format, so that you can stack different columns, and combine them " & _
+        CreateSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Column and Clustered Column chart" &
+    " types in 3-D format, so that you can stack different columns, and combine them " &
     "into groups across the same axis value."
         CreateSideBySideStackedBar3DChartItem1.Caption = "Clustered Stacked Column in 3-D"
-        CreateSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" & _
-    "s in 3-D format, so that you can stack different columns, and combine them into " & _
+        CreateSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Column and Clustered Column chart type" &
+    "s in 3-D format, so that you can stack different columns, and combine them into " &
     "groups across the same axis value."
-        CreateSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" & _
-    "s in 3-D format, so that you can stack different columns, and combine them into " & _
+        CreateSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Column and Clustered Column chart type" &
+    "s in 3-D format, so that you can stack different columns, and combine them into " &
     "groups across the same axis value."
         CreateStackedBar3DChartItem1.Caption = "Stacked Column in 3-D"
-        CreateStackedBar3DChartItem1.Description = "Compare the contribution of each value to a total across categories and display s" & _
+        CreateStackedBar3DChartItem1.Description = "Compare the contribution of each value to a total across categories and display s" &
     "tacked columns in 3-D format."
-        CreateStackedBar3DChartItem1.Hint = "Compare the contribution of each value to a total across categories and display s" & _
+        CreateStackedBar3DChartItem1.Hint = "Compare the contribution of each value to a total across categories and display s" &
     "tacked columns in 3-D format."
         ChartControlCommandGalleryItemGroup3DColumn1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateBar3DChartItem1, CreateFullStackedBar3DChartItem1, CreateManhattanBarChartItem1, CreateSideBySideFullStackedBar3DChartItem1, CreateSideBySideStackedBar3DChartItem1, CreateStackedBar3DChartItem1})
         CreateCylinderBar3DChartItem1.Caption = "Clustered Cylinder"
@@ -530,23 +531,23 @@ Partial Class frmMain
         CreateCylinderFullStackedBar3DChartItem1.Description = "Compare the percentage each value contributes to a total across categories."
         CreateCylinderFullStackedBar3DChartItem1.Hint = "Compare the percentage each value contributes to a total across categories."
         CreateCylinderManhattanBarChartItem1.Caption = "3-D Cylinder"
-        CreateCylinderManhattanBarChartItem1.Description = "Compare values across categories and across series and display a cylinder chart o" & _
+        CreateCylinderManhattanBarChartItem1.Description = "Compare values across categories and across series and display a cylinder chart o" &
     "n three axes."
-        CreateCylinderManhattanBarChartItem1.Hint = "Compare values across categories and across series and display a cylinder chart o" & _
+        CreateCylinderManhattanBarChartItem1.Hint = "Compare values across categories and across series and display a cylinder chart o" &
     "n three axes."
         CreateCylinderSideBySideFullStackedBar3DChartItem1.Caption = "Clustered 100% Stacked Cylinder"
-        CreateCylinderSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" & _
-    "hart types, so that you can stack different cylinders, and combine them into gro" & _
+        CreateCylinderSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" &
+    "hart types, so that you can stack different cylinders, and combine them into gro" &
     "ups across the same axis value."
-        CreateCylinderSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" & _
-    "hart types, so that you can stack different cylinders, and combine them into gro" & _
+        CreateCylinderSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Cylinder and Clustered Cylinder c" &
+    "hart types, so that you can stack different cylinders, and combine them into gro" &
     "ups across the same axis value."
         CreateCylinderSideBySideStackedBar3DChartItem1.Caption = "Clustered Stacked Cylinder"
-        CreateCylinderSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " & _
-    "types, so that you can stack different cylinders, and combine them into groups a" & _
+        CreateCylinderSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " &
+    "types, so that you can stack different cylinders, and combine them into groups a" &
     "cross the same axis value."
-        CreateCylinderSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " & _
-    "types, so that you can stack different cylinders, and combine them into groups a" & _
+        CreateCylinderSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Cylinder and Clustered Cylinder chart " &
+    "types, so that you can stack different cylinders, and combine them into groups a" &
     "cross the same axis value."
         CreateCylinderStackedBar3DChartItem1.Caption = "Stacked Cylinder"
         CreateCylinderStackedBar3DChartItem1.Description = "Compare the contribution of each value to a total across categories."
@@ -559,23 +560,23 @@ Partial Class frmMain
         CreateConeFullStackedBar3DChartItem1.Description = "Compare the percentage each value contributes to a total across categories."
         CreateConeFullStackedBar3DChartItem1.Hint = "Compare the percentage each value contributes to a total across categories."
         CreateConeManhattanBarChartItem1.Caption = "3-D Cone"
-        CreateConeManhattanBarChartItem1.Description = "Compare values across categories and across series and display a cone chart on th" & _
+        CreateConeManhattanBarChartItem1.Description = "Compare values across categories and across series and display a cone chart on th" &
     "ree axes."
-        CreateConeManhattanBarChartItem1.Hint = "Compare values across categories and across series and display a cone chart on th" & _
+        CreateConeManhattanBarChartItem1.Hint = "Compare values across categories and across series and display a cone chart on th" &
     "ree axes."
         CreateConeSideBySideFullStackedBar3DChartItem1.Caption = "Clustered 100% Stacked Cone"
-        CreateConeSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" & _
-    "es, so that you can stack different cones, and combine them into groups across t" & _
+        CreateConeSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" &
+    "es, so that you can stack different cones, and combine them into groups across t" &
     "he same axis value."
-        CreateConeSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" & _
-    "es, so that you can stack different cones, and combine them into groups across t" & _
+        CreateConeSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Cone and Clustered Cone chart typ" &
+    "es, so that you can stack different cones, and combine them into groups across t" &
     "he same axis value."
         CreateConeSideBySideStackedBar3DChartItem1.Caption = "Clustered Stacked Cone"
-        CreateConeSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" & _
-    "o that you can stack different cones, and combine them into groups across the sa" & _
+        CreateConeSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" &
+    "o that you can stack different cones, and combine them into groups across the sa" &
     "me axis value."
-        CreateConeSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" & _
-    "o that you can stack different cones, and combine them into groups across the sa" & _
+        CreateConeSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Cone and Clustered Cone chart types, s" &
+    "o that you can stack different cones, and combine them into groups across the sa" &
     "me axis value."
         CreateConeStackedBar3DChartItem1.Caption = "Stacked Cone"
         CreateConeStackedBar3DChartItem1.Description = "Compare the contribution of each value to a total across categories."
@@ -588,23 +589,23 @@ Partial Class frmMain
         CreatePyramidFullStackedBar3DChartItem1.Description = "Compare the percentage each value contributes to a total across categories."
         CreatePyramidFullStackedBar3DChartItem1.Hint = "Compare the percentage each value contributes to a total across categories."
         CreatePyramidManhattanBarChartItem1.Caption = "3-D Pyramid"
-        CreatePyramidManhattanBarChartItem1.Description = "Compare values across categories and across series and display a pyramid chart on" & _
+        CreatePyramidManhattanBarChartItem1.Description = "Compare values across categories and across series and display a pyramid chart on" &
     " three axes."
-        CreatePyramidManhattanBarChartItem1.Hint = "Compare values across categories and across series and display a pyramid chart on" & _
+        CreatePyramidManhattanBarChartItem1.Hint = "Compare values across categories and across series and display a pyramid chart on" &
     " three axes."
         CreatePyramidSideBySideFullStackedBar3DChartItem1.Caption = "Clustered 100% Stacked Pyramid"
-        CreatePyramidSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" & _
-    "rt types, so that you can stack different pyramids, and combine them into groups" & _
+        CreatePyramidSideBySideFullStackedBar3DChartItem1.Description = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" &
+    "rt types, so that you can stack different pyramids, and combine them into groups" &
     " across the same axis value."
-        CreatePyramidSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" & _
-    "rt types, so that you can stack different pyramids, and combine them into groups" & _
+        CreatePyramidSideBySideFullStackedBar3DChartItem1.Hint = "Combine the advantages of both the 100% Stacked Pyramid and Clustered Pyramid cha" &
+    "rt types, so that you can stack different pyramids, and combine them into groups" &
     " across the same axis value."
         CreatePyramidSideBySideStackedBar3DChartItem1.Caption = "Clustered Stacked Pyramid"
-        CreatePyramidSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" & _
-    "pes, so that you can stack different pyramids, and combine them into groups acro" & _
+        CreatePyramidSideBySideStackedBar3DChartItem1.Description = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" &
+    "pes, so that you can stack different pyramids, and combine them into groups acro" &
     "ss the same axis value."
-        CreatePyramidSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" & _
-    "pes, so that you can stack different pyramids, and combine them into groups acro" & _
+        CreatePyramidSideBySideStackedBar3DChartItem1.Hint = "Combine the advantages of both the Stacked Pyramid and Clustered Pyramid chart ty" &
+    "pes, so that you can stack different pyramids, and combine them into groups acro" &
     "ss the same axis value."
         CreatePyramidStackedBar3DChartItem1.Caption = "Stacked Pyramid"
         CreatePyramidStackedBar3DChartItem1.Description = "Compare the contribution of each value to a total across categories."
@@ -620,14 +621,14 @@ Partial Class frmMain
         '
         '
         CreateLineChartItem1.Caption = "Line"
-        CreateLineChartItem1.Description = "Displays trend overtime (dates, years) or ordered categories. Useful when there a" & _
+        CreateLineChartItem1.Description = "Displays trend overtime (dates, years) or ordered categories. Useful when there a" &
     "re many data points and the order is important."
-        CreateLineChartItem1.Hint = "Displays trend overtime (dates, years) or ordered categories. Useful when there a" & _
+        CreateLineChartItem1.Hint = "Displays trend overtime (dates, years) or ordered categories. Useful when there a" &
     "re many data points and the order is important."
         CreateFullStackedLineChartItem1.Caption = "100% Stacked Line"
-        CreateFullStackedLineChartItem1.Description = "Displays the trend of the percentage each value contributes over time or ordered " & _
+        CreateFullStackedLineChartItem1.Description = "Displays the trend of the percentage each value contributes over time or ordered " &
     "categories."
-        CreateFullStackedLineChartItem1.Hint = "Displays the trend of the percentage each value contributes over time or ordered " & _
+        CreateFullStackedLineChartItem1.Hint = "Displays the trend of the percentage each value contributes over time or ordered " &
     "categories."
         CreateScatterLineChartItem1.Caption = "Scatter Line"
         CreateScatterLineChartItem1.Description = "Represent series points in the same order that they have in the collection."
@@ -636,9 +637,9 @@ Partial Class frmMain
         CreateSplineChartItem1.Description = "Plot a fitted curve through each data point in a series."
         CreateSplineChartItem1.Hint = "Plot a fitted curve through each data point in a series."
         CreateStackedLineChartItem1.Caption = "Stacked Line"
-        CreateStackedLineChartItem1.Description = "Displays the trend of the contribution of each value over time or ordered categor" & _
+        CreateStackedLineChartItem1.Description = "Displays the trend of the contribution of each value over time or ordered categor" &
     "ies."
-        CreateStackedLineChartItem1.Hint = "Displays the trend of the contribution of each value over time or ordered categor" & _
+        CreateStackedLineChartItem1.Hint = "Displays the trend of the contribution of each value over time or ordered categor" &
     "ies."
         CreateStepLineChartItem1.Caption = "Step Line"
         CreateStepLineChartItem1.Description = "Show to what extent values have changed for different points in the same series."
@@ -648,21 +649,21 @@ Partial Class frmMain
         CreateLine3DChartItem1.Description = "Displays each row or column of data as a 3-D ribbon on three axes."
         CreateLine3DChartItem1.Hint = "Displays each row or column of data as a 3-D ribbon on three axes."
         CreateFullStackedLine3DChartItem1.Caption = "100% Stacked Line in 3-D"
-        CreateFullStackedLine3DChartItem1.Description = "Displays all series stacked and is useful when it is necessary to compare how muc" & _
-    "h each series adds to the total aggregate value for specific arguments (as perce" & _
+        CreateFullStackedLine3DChartItem1.Description = "Displays all series stacked and is useful when it is necessary to compare how muc" &
+    "h each series adds to the total aggregate value for specific arguments (as perce" &
     "nts)."
-        CreateFullStackedLine3DChartItem1.Hint = "Displays all series stacked and is useful when it is necessary to compare how muc" & _
-    "h each series adds to the total aggregate value for specific arguments (as perce" & _
+        CreateFullStackedLine3DChartItem1.Hint = "Displays all series stacked and is useful when it is necessary to compare how muc" &
+    "h each series adds to the total aggregate value for specific arguments (as perce" &
     "nts)."
         CreateSpline3DChartItem1.Caption = "3-D Spline"
         CreateSpline3DChartItem1.Description = "Plot a fitted curve through each data point in a series."
         CreateSpline3DChartItem1.Hint = "Plot a fitted curve through each data point in a series."
         CreateStackedLine3DChartItem1.Caption = "Stacked Line in 3-D"
-        CreateStackedLine3DChartItem1.Description = "Displays all points from different series in a stacked manner and is useful when " & _
-    "it is necessary to compare how much each series adds to the total aggregate valu" & _
+        CreateStackedLine3DChartItem1.Description = "Displays all points from different series in a stacked manner and is useful when " &
+    "it is necessary to compare how much each series adds to the total aggregate valu" &
     "e for specific arguments."
-        CreateStackedLine3DChartItem1.Hint = "Displays all points from different series in a stacked manner and is useful when " & _
-    "it is necessary to compare how much each series adds to the total aggregate valu" & _
+        CreateStackedLine3DChartItem1.Hint = "Displays all points from different series in a stacked manner and is useful when " &
+    "it is necessary to compare how much each series adds to the total aggregate valu" &
     "e for specific arguments."
         CreateStepLine3DChartItem1.Caption = "Step Line in 3-D"
         CreateStepLine3DChartItem1.Description = "Show to what extent values have changed for different points in the same series."
@@ -678,32 +679,32 @@ Partial Class frmMain
         '
         '
         CreatePieChartItem1.Caption = "Pie"
-        CreatePieChartItem1.Description = "Displays the contribution of each value to a total." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the values can" & _
-    " be added together or when you have only one data series and all values are posi" & _
+        CreatePieChartItem1.Description = "Displays the contribution of each value to a total." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the values can" &
+    " be added together or when you have only one data series and all values are posi" &
     "tive."
-        CreatePieChartItem1.Hint = "Displays the contribution of each value to a total." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the values can" & _
-    " be added together or when you have only one data series and all values are posi" & _
+        CreatePieChartItem1.Hint = "Displays the contribution of each value to a total." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it when the values can" &
+    " be added together or when you have only one data series and all values are posi" &
     "tive."
         CreateDoughnutChartItem1.Caption = "Doughnut"
-        CreateDoughnutChartItem1.Description = "Displays the contribution of each value to a total like a pie chart, but it can c" & _
+        CreateDoughnutChartItem1.Description = "Displays the contribution of each value to a total like a pie chart, but it can c" &
     "ontain multiple series."
-        CreateDoughnutChartItem1.Hint = "Displays the contribution of each value to a total like a pie chart, but it can c" & _
+        CreateDoughnutChartItem1.Hint = "Displays the contribution of each value to a total like a pie chart, but it can c" &
     "ontain multiple series."
         CreateNestedDoughnutChartItem1.Caption = "Nested Doughnut"
-        CreateNestedDoughnutChartItem1.Description = "Displays the contribution of each value to a total while comparing series with on" & _
+        CreateNestedDoughnutChartItem1.Description = "Displays the contribution of each value to a total while comparing series with on" &
     "e doughnut nested in another one."
-        CreateNestedDoughnutChartItem1.Hint = "Displays the contribution of each value to a total while comparing series with on" & _
+        CreateNestedDoughnutChartItem1.Hint = "Displays the contribution of each value to a total while comparing series with on" &
     "e doughnut nested in another one."
         ChartControlCommandGalleryItemGroup2DPie1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePieChartItem1, CreateDoughnutChartItem1, CreateNestedDoughnutChartItem1})
         CreatePie3DChartItem1.Caption = "Pie in 3-D"
         CreatePie3DChartItem1.Description = "Displays the contribution of each value to a total."
         CreatePie3DChartItem1.Hint = "Displays the contribution of each value to a total."
         CreateDoughnut3DChartItem1.Caption = "Doughnut in 3-D"
-        CreateDoughnut3DChartItem1.Description = "Compare the percentage values of different point arguments in the same series, an" & _
-    "d illustrate these values as easy to understand pie slices, but with a hole in i" & _
+        CreateDoughnut3DChartItem1.Description = "Compare the percentage values of different point arguments in the same series, an" &
+    "d illustrate these values as easy to understand pie slices, but with a hole in i" &
     "ts center."
-        CreateDoughnut3DChartItem1.Hint = "Compare the percentage values of different point arguments in the same series, an" & _
-    "d illustrate these values as easy to understand pie slices, but with a hole in i" & _
+        CreateDoughnut3DChartItem1.Hint = "Compare the percentage values of different point arguments in the same series, an" &
+    "d illustrate these values as easy to understand pie slices, but with a hole in i" &
     "ts center."
         ChartControlCommandGalleryItemGroup3DPie1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePie3DChartItem1, CreateDoughnut3DChartItem1})
         Me.CommandBarGalleryDropDown3.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DPie1, ChartControlCommandGalleryItemGroup3DPie1})
@@ -716,31 +717,31 @@ Partial Class frmMain
         '
         '
         CreateRotatedBarChartItem1.Caption = "Bar"
-        CreateRotatedBarChartItem1.Description = "Insert a bar chart." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bar charts are the best chart type for comparing multiple " & _
+        CreateRotatedBarChartItem1.Description = "Insert a bar chart." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bar charts are the best chart type for comparing multiple " &
     "values."
-        CreateRotatedBarChartItem1.Hint = "Insert a bar chart." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bar charts are the best chart type for comparing multiple " & _
+        CreateRotatedBarChartItem1.Hint = "Insert a bar chart." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Bar charts are the best chart type for comparing multiple " &
     "values."
         CreateRotatedFullStackedBarChartItem1.Caption = "100% Stacked Bar"
         CreateRotatedFullStackedBarChartItem1.Description = resources.GetString("CreateRotatedFullStackedBarChartItem1.Description")
         CreateRotatedFullStackedBarChartItem1.Hint = resources.GetString("CreateRotatedFullStackedBarChartItem1.Hint")
         CreateRotatedSideBySideFullStackedBarChartItem1.Caption = "Clustered 100% Stacked Bar"
-        CreateRotatedSideBySideFullStackedBarChartItem1.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" & _
-    ", so you can stack different bars, and combine them into groups across the same " & _
+        CreateRotatedSideBySideFullStackedBarChartItem1.Description = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" &
+    ", so you can stack different bars, and combine them into groups across the same " &
     "axis value."
-        CreateRotatedSideBySideFullStackedBarChartItem1.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" & _
-    ", so you can stack different bars, and combine them into groups across the same " & _
+        CreateRotatedSideBySideFullStackedBarChartItem1.Hint = "Combine the advantages of both the 100% Stacked Bar and Clustered Bar chart types" &
+    ", so you can stack different bars, and combine them into groups across the same " &
     "axis value."
         CreateRotatedSideBySideStackedBarChartItem1.Caption = "Clustered Stacked Bar"
-        CreateRotatedSideBySideStackedBarChartItem1.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " & _
-    "that you can stack different bars, and combine them into groups across the same " & _
+        CreateRotatedSideBySideStackedBarChartItem1.Description = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " &
+    "that you can stack different bars, and combine them into groups across the same " &
     "axis value."
-        CreateRotatedSideBySideStackedBarChartItem1.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " & _
-    "that you can stack different bars, and combine them into groups across the same " & _
+        CreateRotatedSideBySideStackedBarChartItem1.Hint = "Combine the advantages of both the Stacked Bar and Clustered Bar chart types, so " &
+    "that you can stack different bars, and combine them into groups across the same " &
     "axis value."
         CreateRotatedStackedBarChartItem1.Caption = "Stacked Bar"
-        CreateRotatedStackedBarChartItem1.Description = "Compare the contribution of each value to a total across categories by using hori" & _
+        CreateRotatedStackedBarChartItem1.Description = "Compare the contribution of each value to a total across categories by using hori" &
     "zontal rectangles."
-        CreateRotatedStackedBarChartItem1.Hint = "Compare the contribution of each value to a total across categories by using hori" & _
+        CreateRotatedStackedBarChartItem1.Hint = "Compare the contribution of each value to a total across categories by using hori" &
     "zontal rectangles."
         ChartControlCommandGalleryItemGroup2DBar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRotatedBarChartItem1, CreateRotatedFullStackedBarChartItem1, CreateRotatedSideBySideFullStackedBarChartItem1, CreateRotatedSideBySideStackedBarChartItem1, CreateRotatedStackedBarChartItem1})
         Me.CommandBarGalleryDropDown4.Gallery.Groups.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItemGroup() {ChartControlCommandGalleryItemGroup2DBar1})
@@ -756,39 +757,39 @@ Partial Class frmMain
         CreateAreaChartItem1.Description = "Displays the trend of values over time or categories."
         CreateAreaChartItem1.Hint = "Displays the trend of values over time or categories."
         CreateFullStackedAreaChartItem1.Caption = "100% Stacked Area"
-        CreateFullStackedAreaChartItem1.Description = "Displays the trend of the percentage each value contributes over time or categori" & _
+        CreateFullStackedAreaChartItem1.Description = "Displays the trend of the percentage each value contributes over time or categori" &
     "es." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the trend in the proportion of each series."
-        CreateFullStackedAreaChartItem1.Hint = "Displays the trend of the percentage each value contributes over time or categori" & _
+        CreateFullStackedAreaChartItem1.Hint = "Displays the trend of the percentage each value contributes over time or categori" &
     "es." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Use it to emphasize the trend in the proportion of each series."
         CreateFullStackedSplineAreaChartItem1.Caption = "100% Stacked Spline Area"
-        CreateFullStackedSplineAreaChartItem1.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" & _
+        CreateFullStackedSplineAreaChartItem1.Description = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" &
     "int in a series."
-        CreateFullStackedSplineAreaChartItem1.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" & _
+        CreateFullStackedSplineAreaChartItem1.Hint = "Behave similar to 100% Stacked Area, but plot a fitted curve through each data po" &
     "int in a series."
         CreateFullStackedStepAreaChartItem1.Caption = "100% Stacked Step Area"
-        CreateFullStackedStepAreaChartItem1.Description = "Behaves similarly to the 100% Stacked Area Chart but connects data points using h" & _
+        CreateFullStackedStepAreaChartItem1.Description = "Behaves similarly to the 100% Stacked Area Chart but connects data points using h" &
     "orizontal and vertical lines."
-        CreateFullStackedStepAreaChartItem1.Hint = "Behaves similarly to the 100% Stacked Area Chart but connects data points using h" & _
+        CreateFullStackedStepAreaChartItem1.Hint = "Behaves similarly to the 100% Stacked Area Chart but connects data points using h" &
     "orizontal and vertical lines."
         CreateSplineAreaChartItem1.Caption = "Spline Area"
-        CreateSplineAreaChartItem1.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" & _
+        CreateSplineAreaChartItem1.Description = "Behave similar to Area Chart but plot a fitted curve through each data point in a" &
     " series."
-        CreateSplineAreaChartItem1.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" & _
+        CreateSplineAreaChartItem1.Hint = "Behave similar to Area Chart but plot a fitted curve through each data point in a" &
     " series."
         CreateStackedAreaChartItem1.Caption = "Stacked Area"
-        CreateStackedAreaChartItem1.Description = "Displays the trend of the contribution of each value over time or categories." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & _
+        CreateStackedAreaChartItem1.Description = "Displays the trend of the contribution of each value over time or categories." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "Use it to emphasize the trend in the total across series for one category."
-        CreateStackedAreaChartItem1.Hint = "Displays the trend of the contribution of each value over time or categories." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & _
+        CreateStackedAreaChartItem1.Hint = "Displays the trend of the contribution of each value over time or categories." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) &
     "Use it to emphasize the trend in the total across series for one category."
         CreateStackedStepAreaChartItem1.Caption = "Stacked Step Area"
-        CreateStackedStepAreaChartItem1.Description = "Behaves similarly to the Stacked Area Chart but connects data points using horizo" & _
+        CreateStackedStepAreaChartItem1.Description = "Behaves similarly to the Stacked Area Chart but connects data points using horizo" &
     "ntal and vertical lines."
-        CreateStackedStepAreaChartItem1.Hint = "Behaves similarly to the Stacked Area Chart but connects data points using horizo" & _
+        CreateStackedStepAreaChartItem1.Hint = "Behaves similarly to the Stacked Area Chart but connects data points using horizo" &
     "ntal and vertical lines."
         CreateStackedSplineAreaChartItem1.Caption = "Stacked Spline Area"
-        CreateStackedSplineAreaChartItem1.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" & _
+        CreateStackedSplineAreaChartItem1.Description = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" &
     "int in a series."
-        CreateStackedSplineAreaChartItem1.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" & _
+        CreateStackedSplineAreaChartItem1.Hint = "Behave similar to Stacked Area Chart but plot a fitted curve through each data po" &
     "int in a series."
         CreateStepAreaChartItem1.Caption = "Step Area"
         CreateStepAreaChartItem1.Description = "Show how much values have changed for different points of the same series."
@@ -801,24 +802,24 @@ Partial Class frmMain
         CreateFullStackedArea3DChartItem1.Description = resources.GetString("CreateFullStackedArea3DChartItem1.Description")
         CreateFullStackedArea3DChartItem1.Hint = resources.GetString("CreateFullStackedArea3DChartItem1.Hint")
         CreateFullStackedSplineArea3DChartItem1.Caption = "100% Stacked Spline Area in 3-D"
-        CreateFullStackedSplineArea3DChartItem1.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " & _
+        CreateFullStackedSplineArea3DChartItem1.Description = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " &
     "each data point in a series."
-        CreateFullStackedSplineArea3DChartItem1.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " & _
+        CreateFullStackedSplineArea3DChartItem1.Hint = "Behave similar to 100% Stacked Area Chart in 3D, but plot a fitted curve through " &
     "each data point in a series."
         CreateSplineArea3DChartItem1.Caption = "Spline Area in 3-D"
-        CreateSplineArea3DChartItem1.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " & _
+        CreateSplineArea3DChartItem1.Description = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " &
     "in a series."
-        CreateSplineArea3DChartItem1.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " & _
+        CreateSplineArea3DChartItem1.Hint = "Behave similar to 3D Area Chart, but plot a fitted curve through each data point " &
     "in a series."
         CreateStackedArea3DChartItem1.Caption = "Stacked Area in 3-D"
-        CreateStackedArea3DChartItem1.Description = "Displays series as areas on a diagram, so that the value of each data point is ag" & _
+        CreateStackedArea3DChartItem1.Description = "Displays series as areas on a diagram, so that the value of each data point is ag" &
     "gregated with the underlying data points' values."
-        CreateStackedArea3DChartItem1.Hint = "Displays series as areas on a diagram, so that the value of each data point is ag" & _
+        CreateStackedArea3DChartItem1.Hint = "Displays series as areas on a diagram, so that the value of each data point is ag" &
     "gregated with the underlying data points' values."
         CreateStackedSplineArea3DChartItem1.Caption = "Stacked Spline Area in 3-D"
-        CreateStackedSplineArea3DChartItem1.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " & _
+        CreateStackedSplineArea3DChartItem1.Description = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " &
     "data point in a series."
-        CreateStackedSplineArea3DChartItem1.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " & _
+        CreateStackedSplineArea3DChartItem1.Hint = "Behave similar to Stacked Area in 3D chart, but plot a fitted curve through each " &
     "data point in a series."
         CreateStepArea3DChartItem1.Caption = "Step Area in 3-D"
         CreateStepArea3DChartItem1.Description = "Show to what extent values have changed for different points in the same series."
@@ -834,14 +835,14 @@ Partial Class frmMain
         '
         '
         CreatePointChartItem1.Caption = "Point"
-        CreatePointChartItem1.Description = "Use it when it's necessary to show stand-alone data points on the same chart plot" & _
+        CreatePointChartItem1.Description = "Use it when it's necessary to show stand-alone data points on the same chart plot" &
     "."
-        CreatePointChartItem1.Hint = "Use it when it's necessary to show stand-alone data points on the same chart plot" & _
+        CreatePointChartItem1.Hint = "Use it when it's necessary to show stand-alone data points on the same chart plot" &
     "."
         CreateBubbleChartItem1.Caption = "Bubble"
-        CreateBubbleChartItem1.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" & _
+        CreateBubbleChartItem1.Description = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" &
     "ird value determines the size of the bubble marker."
-        CreateBubbleChartItem1.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" & _
+        CreateBubbleChartItem1.Hint = "Resemble a Scatter chart, but compare sets of three values instead of two. The th" &
     "ird value determines the size of the bubble marker."
         ChartControlCommandGalleryItemGroupPoint1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePointChartItem1, CreateBubbleChartItem1})
         CreateFunnelChartItem1.Caption = "Funnel"
@@ -859,19 +860,19 @@ Partial Class frmMain
         CreateCandleStickChartItem1.Hint = resources.GetString("CreateCandleStickChartItem1.Hint")
         ChartControlCommandGalleryItemGroupFinancial1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateStockChartItem1, CreateCandleStickChartItem1})
         CreateRadarPointChartItem1.Caption = "Radar Point"
-        CreateRadarPointChartItem1.Description = "Show points from two or more different series on the same points arguments on a c" & _
+        CreateRadarPointChartItem1.Description = "Show points from two or more different series on the same points arguments on a c" &
     "ircular grid that has multiple axes along which data can be plotted."
-        CreateRadarPointChartItem1.Hint = "Show points from two or more different series on the same points arguments on a c" & _
+        CreateRadarPointChartItem1.Hint = "Show points from two or more different series on the same points arguments on a c" &
     "ircular grid that has multiple axes along which data can be plotted."
         CreateRadarLineChartItem1.Caption = "Radar Line"
-        CreateRadarLineChartItem1.Description = "Show trends for several series and compare their values for the same points argum" & _
+        CreateRadarLineChartItem1.Description = "Show trends for several series and compare their values for the same points argum" &
     "ents on a circular grid that has multiple axes along which data can be plotted."
-        CreateRadarLineChartItem1.Hint = "Show trends for several series and compare their values for the same points argum" & _
+        CreateRadarLineChartItem1.Hint = "Show trends for several series and compare their values for the same points argum" &
     "ents on a circular grid that has multiple axes along which data can be plotted."
         CreateRadarAreaChartItem1.Caption = "Radar Area"
-        CreateRadarAreaChartItem1.Description = "Displays series as filled area on a circular grid that has multiple axes along wh" & _
+        CreateRadarAreaChartItem1.Description = "Displays series as filled area on a circular grid that has multiple axes along wh" &
     "ich data can be plotted."
-        CreateRadarAreaChartItem1.Hint = "Displays series as filled area on a circular grid that has multiple axes along wh" & _
+        CreateRadarAreaChartItem1.Hint = "Displays series as filled area on a circular grid that has multiple axes along wh" &
     "ich data can be plotted."
         CreateRadarRangeAreaChartItem1.Caption = "Radar Range Area"
         CreateRadarRangeAreaChartItem1.Description = resources.GetString("CreateRadarRangeAreaChartItem1.Description")
@@ -881,16 +882,16 @@ Partial Class frmMain
         CreateScatterRadarLineChartItem1.Hint = resources.GetString("CreateScatterRadarLineChartItem1.Hint")
         ChartControlCommandGalleryItemGroupRadar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreateRadarPointChartItem1, CreateRadarLineChartItem1, CreateRadarAreaChartItem1, CreateRadarRangeAreaChartItem1, CreateScatterRadarLineChartItem1})
         CreatePolarPointChartItem1.Caption = "Polar Point"
-        CreatePolarPointChartItem1.Description = "Show points from two or more different series on the same circular diagram on the" & _
+        CreatePolarPointChartItem1.Description = "Show points from two or more different series on the same circular diagram on the" &
     " basis of angles."
         CreatePolarPointChartItem1.Enabled = False
-        CreatePolarPointChartItem1.Hint = "Show points from two or more different series on the same circular diagram on the" & _
+        CreatePolarPointChartItem1.Hint = "Show points from two or more different series on the same circular diagram on the" &
     " basis of angles."
         CreatePolarLineChartItem1.Caption = "Polar Line"
-        CreatePolarLineChartItem1.Description = "Show trends for several series and compare their values for the same points argum" & _
+        CreatePolarLineChartItem1.Description = "Show trends for several series and compare their values for the same points argum" &
     "ents on a circular diagram on the basis of angles."
         CreatePolarLineChartItem1.Enabled = False
-        CreatePolarLineChartItem1.Hint = "Show trends for several series and compare their values for the same points argum" & _
+        CreatePolarLineChartItem1.Hint = "Show trends for several series and compare their values for the same points argum" &
     "ents on a circular diagram on the basis of angles."
         CreatePolarAreaChartItem1.Caption = "Polar Area"
         CreatePolarAreaChartItem1.Description = "Displays series as filled area on a circular diagram on the basis of angles."
@@ -906,14 +907,14 @@ Partial Class frmMain
         CreateScatterPolarLineChartItem1.Hint = resources.GetString("CreateScatterPolarLineChartItem1.Hint")
         ChartControlCommandGalleryItemGroupPolar1.Items.AddRange(New DevExpress.XtraBars.Ribbon.GalleryItem() {CreatePolarPointChartItem1, CreatePolarLineChartItem1, CreatePolarAreaChartItem1, CreatePolarRangeAreaChartItem1, CreateScatterPolarLineChartItem1})
         CreateRangeBarChartItem1.Caption = "Range Column"
-        CreateRangeBarChartItem1.Description = "Displays vertical columns along the Y-axis (the axis of values). Each column repr" & _
+        CreateRangeBarChartItem1.Description = "Displays vertical columns along the Y-axis (the axis of values). Each column repr" &
     "esents a range of data for each argument value."
-        CreateRangeBarChartItem1.Hint = "Displays vertical columns along the Y-axis (the axis of values). Each column repr" & _
+        CreateRangeBarChartItem1.Hint = "Displays vertical columns along the Y-axis (the axis of values). Each column repr" &
     "esents a range of data for each argument value."
         CreateSideBySideRangeBarChartItem1.Caption = "Clustered Range Column"
-        CreateSideBySideRangeBarChartItem1.Description = "Show activity columns from different series grouped by their arguments. Each colu" & _
+        CreateSideBySideRangeBarChartItem1.Description = "Show activity columns from different series grouped by their arguments. Each colu" &
     "mn represents a range of data with two values for each argument value."
-        CreateSideBySideRangeBarChartItem1.Hint = "Show activity columns from different series grouped by their arguments. Each colu" & _
+        CreateSideBySideRangeBarChartItem1.Hint = "Show activity columns from different series grouped by their arguments. Each colu" &
     "mn represents a range of data with two values for each argument value."
         CreateRangeAreaChartItem1.Caption = "Range Area"
         CreateRangeAreaChartItem1.Description = resources.GetString("CreateRangeAreaChartItem1.Description")
@@ -970,7 +971,6 @@ Partial Class frmMain
         Me.ChartControl4.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad
         Me.ChartControl4.AppearanceNameSerializable = "Pastel Kit"
         Me.ChartControl4.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.[False]
-        Me.ChartControl4.DataBindings = Nothing
         Me.ChartControl4.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ChartControl4.Legend.BackColor = System.Drawing.Color.White
         Me.ChartControl4.Legend.Name = "Default Legend"
@@ -1001,7 +1001,6 @@ Partial Class frmMain
         Me.ChartControl3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad
         Me.ChartControl3.AutoLayout = False
         Me.ChartControl3.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.[False]
-        Me.ChartControl3.DataBindings = Nothing
         Me.ChartControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ChartControl3.Legend.Name = "Default Legend"
         Me.ChartControl3.Location = New System.Drawing.Point(4, 410)
@@ -1212,7 +1211,7 @@ Partial Class frmMain
         '
         'ادارةToolStripMenuItem
         '
-        Me.ادارةToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.تعديلسعرالكيلواتToolStripMenuItem, Me.استيرادمناكسيلToolStripMenuItem, Me.تصحيحكسرالألفToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem1, Me.أخذنسخةاحتياطيةToolStripMenuItem, Me.إضافةحسملمجموعةToolStripMenuItem, Me.SQLToolStripMenuItem})
+        Me.ادارةToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.تعديلسعرالكيلواتToolStripMenuItem, Me.استيرادمناكسيلToolStripMenuItem, Me.تصحيحكسرالألفToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem1, Me.أخذنسخةاحتياطيةToolStripMenuItem, Me.إضافةحسملمجموعةToolStripMenuItem, Me.SQLToolStripMenuItem, Me.اعادةتوليفالمصنعToolStripMenuItem})
         Me.ادارةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.State_ItemVisibility_Show
         Me.ادارةToolStripMenuItem.Name = "ادارةToolStripMenuItem"
         Me.ادارةToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
@@ -1288,35 +1287,35 @@ Partial Class frmMain
         '
         Me.btnEditUsers.Image = Global.EEMS.My.Resources.Resources.ico001team
         Me.btnEditUsers.Name = "btnEditUsers"
-        Me.btnEditUsers.Size = New System.Drawing.Size(159, 22)
+        Me.btnEditUsers.Size = New System.Drawing.Size(180, 22)
         Me.btnEditUsers.Text = "ادارة المستخدمين"
         '
         'تغييركلمةالمرورToolStripMenuItem
         '
         Me.تغييركلمةالمرورToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.ico002key
         Me.تغييركلمةالمرورToolStripMenuItem.Name = "تغييركلمةالمرورToolStripMenuItem"
-        Me.تغييركلمةالمرورToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.تغييركلمةالمرورToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.تغييركلمةالمرورToolStripMenuItem.Text = "تغيير كلمة المرور"
         '
         'إعداداتعامةToolStripMenuItem
         '
         Me.إعداداتعامةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.settingsIcon16
         Me.إعداداتعامةToolStripMenuItem.Name = "إعداداتعامةToolStripMenuItem"
-        Me.إعداداتعامةToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.إعداداتعامةToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.إعداداتعامةToolStripMenuItem.Text = "إعدادات عامّة"
         '
         'tmsLog
         '
         Me.tmsLog.Image = Global.EEMS.My.Resources.Resources.log
         Me.tmsLog.Name = "tmsLog"
-        Me.tmsLog.Size = New System.Drawing.Size(159, 22)
+        Me.tmsLog.Size = New System.Drawing.Size(180, 22)
         Me.tmsLog.Text = "سجل التغيير"
         '
         'تجديدالخدمةToolStripMenuItem
         '
         Me.تجديدالخدمةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.backyp16
         Me.تجديدالخدمةToolStripMenuItem.Name = "تجديدالخدمةToolStripMenuItem"
-        Me.تجديدالخدمةToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.تجديدالخدمةToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.تجديدالخدمةToolStripMenuItem.Text = "تجديد الخدمة"
         '
         'حولالبرنامجToolStripMenuItem
@@ -1769,6 +1768,13 @@ Partial Class frmMain
         Me.lblPayment.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.lblPayment.Visible = False
         '
+        'اعادةتوليفالمصنعToolStripMenuItem
+        '
+        Me.اعادةتوليفالمصنعToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources._002_error
+        Me.اعادةتوليفالمصنعToolStripMenuItem.Name = "اعادةتوليفالمصنعToolStripMenuItem"
+        Me.اعادةتوليفالمصنعToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.اعادةتوليفالمصنعToolStripMenuItem.Text = "اعادة توليف المصنع"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1939,4 +1945,5 @@ Partial Class frmMain
     Friend WithEvents طباعةنموذجإدخالالعداداتToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents تجديدالخدمةToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents lblPayment As System.Windows.Forms.Label
+    Friend WithEvents اعادةتوليفالمصنعToolStripMenuItem As ToolStripMenuItem
 End Class

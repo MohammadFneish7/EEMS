@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_Alignment" xml:space="preserve">
+    <value>المحاذاة</value>
+  </data>
+  <data name="SnapExtensionsStringId.GalleryGroupCaption_Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="SnapExtensionsStringId.Msg_Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_Text" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_Width" xml:space="preserve">
+    <value>العرض</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_Checked" xml:space="preserve">
+    <value>التحقق</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_GroupDesign" xml:space="preserve">
+    <value>المجموعة</value>
+  </data>
+  <data name="SnapExtensionsStringId.RemoveThemeBarItem_Caption" xml:space="preserve">
+    <value>إزالة</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_Appearance" xml:space="preserve">
+    <value>مظهر</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_Height" xml:space="preserve">
+    <value>الارتفاع</value>
+  </data>
+  <data name="SnapExtensionsStringId.ViewBar_Text" xml:space="preserve">
+    <value>طريقة العرض</value>
+  </data>
+  <data name="SnapExtensionsStringId.ViewRibbonPageGroup_Text" xml:space="preserve">
+    <value>طريقة العرض</value>
+  </data>
+  <data name="SnapExtensionsStringId.GroupingRibbonPageGroup_Text" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="SnapExtensionsStringId.ListHeaderAndFooterRibbonPageGroup_Text" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_Color" xml:space="preserve">
+    <value>لون</value>
+  </data>
+  <data name="SnapExtensionsStringId.FieldListDockPanel_Text" xml:space="preserve">
+    <value>مستكشف البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.Msg_ContainsIllegalSymbols" xml:space="preserve">
+    <value>سلسلة تنسيق الإدخال يحتوي على symbol(s) غير قانونية-</value>
+  </data>
+  <data name="SnapExtensionsStringId.ParametersErrorDialogCaption" xml:space="preserve">
+    <value>اسم المعلمة غير صحيحة</value>
+  </data>
+  <data name="SnapExtensionsStringId.ParametersErrorDialogTextIdenticalNames" xml:space="preserve">
+    <value>لا يمكن إنشاء معلمات مع أسماء متطابقة:</value>
+  </data>
+  <data name="SnapExtensionsStringId.ParametersErrorDialogTextInvalidCharacters" xml:space="preserve">
+    <value>لا يمكن إنشاء معلمات مع أسماء غير صحيحة:</value>
+  </data>
+  <data name="SnapExtensionsStringId.ParametersErrorDialogTextNoName" xml:space="preserve">
+    <value>لا يمكن إنشاء معلمة دون تحديد اسمها.</value>
+  </data>
+  <data name="SnapExtensionsStringId.RemoveDataSource" xml:space="preserve">
+    <value>إزالة مصدر البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.SNTextFieldTagItem_TextFormat" xml:space="preserve">
+    <value>تنسيق النص</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_MarkerColor" xml:space="preserve">
+    <value>لون العلامة</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_MarkerSize" xml:space="preserve">
+    <value>حجم العلامة</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_MaxPointColor" xml:space="preserve">
+    <value>لون النقطة ماكس</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_MaxPointMarkerSize" xml:space="preserve">
+    <value>الحد الأقصى لحجم علامة نقطة</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_MinPointColor" xml:space="preserve">
+    <value>نقطة دقيقة بالألوان</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_MinPointMarkerSize" xml:space="preserve">
+    <value>حجم علامة نقطة دقيقة</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_NegativePointColor" xml:space="preserve">
+    <value>لون النقطة السلبية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_NegativePointMarkerSize" xml:space="preserve">
+    <value>حجم علامة النقطة السلبية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_ShowMarkers" xml:space="preserve">
+    <value>إظهار علامات</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_StartPointColor" xml:space="preserve">
+    <value>لون نقطة البداية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_StartPointMarkerSize" xml:space="preserve">
+    <value>حجم علامة نقطة البدء</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_ViewType" xml:space="preserve">
+    <value>نوع العرض</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_AreaOpacity" xml:space="preserve">
+    <value>مجال التعتيم</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_BarDistance" xml:space="preserve">
+    <value>شريط المسافة</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_EndPointColor" xml:space="preserve">
+    <value>لون نقطة النهاية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_EndPointMarkerSize" xml:space="preserve">
+    <value>حجم علامة نقطة النهاية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_HighlightEndPoint" xml:space="preserve">
+    <value>تسليط الضوء على نقطة النهاية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_HighlightMaxPoint" xml:space="preserve">
+    <value>تسليط الضوء على نقطة ماكس</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_HighlightMinPoint" xml:space="preserve">
+    <value>نقطة دقيقة بتسليط الضوء على</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_HighlightNegativePoints" xml:space="preserve">
+    <value>تسليط الضوء على النقاط السلبية</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_HighlightStartPoint" xml:space="preserve">
+    <value>تسليط الضوء على نقطة البداية</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeDataSource" xml:space="preserve">
+    <value>استخدام لـ Mail Merge</value>
+  </data>
+  <data name="SnapExtensionsStringId.RestoreDefaultDocumentStylesBarItem_Caption" xml:space="preserve">
+    <value>استعادة أنماط المستند الافتراضي</value>
+  </data>
+  <data name="SnapExtensionsStringId.RestoreDefaultsBarItem_Caption" xml:space="preserve">
+    <value>استعادة الافتراضيات</value>
+  </data>
+  <data name="SnapExtensionsStringId.ImageSmartTagItem_Sizing" xml:space="preserve">
+    <value>تحجيم</value>
+  </data>
+  <data name="SnapExtensionsStringId.ImageSmartTagItem_UpdateMode" xml:space="preserve">
+    <value>تحديث وضع</value>
+  </data>
+  <data name="SnapExtensionsStringId.SnapBarToolbarsListItem_Caption" xml:space="preserve">
+    <value>&amp; ويندوز</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_Orientation" xml:space="preserve">
+    <value>التوجه</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_Data" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.DataRibbonPageGroup_DefaultText" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeRibbonPageGroup_Text" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.ViewFieldsRibbonPageGroup_Text" xml:space="preserve">
+    <value>الحقول</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeCurrentRecordEdit_LastButtonTooltip" xml:space="preserve">
+    <value>الماضي</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeCurrentRecordEdit_NextButtonTooltip" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeCurrentRecordEdit_PreviousButtonTooltip" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_Binding" xml:space="preserve">
+    <value>ملزم</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_ContentType" xml:space="preserve">
+    <value>نوع المحتوى</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_EmptyFieldDataAlias" xml:space="preserve">
+    <value>الاسم المستعار لبيانات حقل فارغ</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_EnableEmptyFieldDataAlias" xml:space="preserve">
+    <value>تمكين حقل فارغ البيانات اسم مستعار</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_FormatString" xml:space="preserve">
+    <value>سلسلة تنسيق</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_ScreenTip" xml:space="preserve">
+    <value>تلميح الشاشة</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_Summary" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="SnapExtensionsStringId.ActionList_TargetFrame" xml:space="preserve">
+    <value>الإطار الهدف</value>
+  </data>
+  <data name="SnapExtensionsStringId.AddDataSource" xml:space="preserve">
+    <value>إضافة مصدر بيانات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.AddQuery" xml:space="preserve">
+    <value>إضافة استعلام...</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_AutoModule" xml:space="preserve">
+    <value>السيارات--وحدة نمطية</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_Module" xml:space="preserve">
+    <value>الوحدة النمطية</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_ShowData" xml:space="preserve">
+    <value>وتظهر البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_Symbology" xml:space="preserve">
+    <value>الرموز</value>
+  </data>
+  <data name="SnapExtensionsStringId.BarCodeSmartTagItem_TextAlignment" xml:space="preserve">
+    <value>محاذاة النص</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_Data" xml:space="preserve">
+    <value>أدوات البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_Group" xml:space="preserve">
+    <value>مجموعة أدوات</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_SNList" xml:space="preserve">
+    <value>قائمة الأدوات</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_SNListDesign" xml:space="preserve">
+    <value>قائمة</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_SNMergeField" xml:space="preserve">
+    <value>أدوات الحقل</value>
+  </data>
+  <data name="SnapExtensionsStringId.Caption_SNMergeFieldDesign" xml:space="preserve">
+    <value>حقل</value>
+  </data>
+  <data name="SnapExtensionsStringId.Configure" xml:space="preserve">
+    <value>تكوين مصدر البيانات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.ConfigureConnection" xml:space="preserve">
+    <value>تكوين اتصال...</value>
+  </data>
+  <data name="SnapExtensionsStringId.ConfigureConnectionParameters" xml:space="preserve">
+    <value>تكوين معلمات الاتصال...</value>
+  </data>
+  <data name="SnapExtensionsStringId.DataShapingPageGroup_DefaultText" xml:space="preserve">
+    <value>تشكيل البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditConnection" xml:space="preserve">
+    <value>تحرير اتصال...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditConstructor" xml:space="preserve">
+    <value>تحرير المنشئ...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditDataMember" xml:space="preserve">
+    <value>تحرير بيانات الأعضاء...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditDataSource" xml:space="preserve">
+    <value>تحرير مصدر البيانات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditFilters" xml:space="preserve">
+    <value>تحرير عوامل تصفية...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditJsonDataSource" xml:space="preserve">
+    <value>تحرير...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditJsonSchema" xml:space="preserve">
+    <value>تحرير المخطط...</value>
+  </data>
+  <data name="SnapExtensionsStringId.EditParameters" xml:space="preserve">
+    <value>تحرير معلمات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.FinishAndMergePageGroup_DefaultText" xml:space="preserve">
+    <value>نشر</value>
+  </data>
+  <data name="SnapExtensionsStringId.GalleryGroupCaption_Regular" xml:space="preserve">
+    <value>العادية</value>
+  </data>
+  <data name="SnapExtensionsStringId.ImageSmartTagItem_ShowPlaceholder" xml:space="preserve">
+    <value>إظهار العناصر النائبة</value>
+  </data>
+  <data name="SnapExtensionsStringId.IndexSmartTagItem_GroupIndexMode" xml:space="preserve">
+    <value>وضع المجموعة</value>
+  </data>
+  <data name="SnapExtensionsStringId.ListCommandsRibbonPageGroup_DefaultText" xml:space="preserve">
+    <value>أوامر</value>
+  </data>
+  <data name="SnapExtensionsStringId.ListEditorRowLimitRibbonPageGroup_DefaultText" xml:space="preserve">
+    <value>حد صف محرر</value>
+  </data>
+  <data name="SnapExtensionsStringId.LoadThemeBarItem_Caption" xml:space="preserve">
+    <value>تحميل موضوع من ملف...</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeCurrentRecordEdit_FirstButtonTooltip" xml:space="preserve">
+    <value>الأولى</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeCurrentRecordRibbonPageGroup_DefaultText" xml:space="preserve">
+    <value>السجل الحالي</value>
+  </data>
+  <data name="SnapExtensionsStringId.MailMergeRibbonPage_DefaultText" xml:space="preserve">
+    <value>دمج المراسلات</value>
+  </data>
+  <data name="SnapExtensionsStringId.ManageFederationDataSourceQueries" xml:space="preserve">
+    <value>إدارة الاستعلامات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.ManageFederationDataSourceRelations" xml:space="preserve">
+    <value>إدارة العلاقات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.ManageQueries" xml:space="preserve">
+    <value>إدارة الاستعلامات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.ManageRelations" xml:space="preserve">
+    <value>إدارة العلاقات...</value>
+  </data>
+  <data name="SnapExtensionsStringId.RebuildFederationDataSourceResultSchema" xml:space="preserve">
+    <value>إعادة بناء المخطط نتيجة</value>
+  </data>
+  <data name="SnapExtensionsStringId.RebuildResultSchema" xml:space="preserve">
+    <value>إعادة بناء المخطط...</value>
+  </data>
+  <data name="SnapExtensionsStringId.ReportExplorerDockPanel_Text" xml:space="preserve">
+    <value>مستكشف التقرير</value>
+  </data>
+  <data name="SnapExtensionsStringId.SaveThemeBarItem_Caption" xml:space="preserve">
+    <value>حفظ السمة الحالية إلى ملف...</value>
+  </data>
+  <data name="SnapExtensionsStringId.SnapBarToolbarsListItem_Hint" xml:space="preserve">
+    <value>إظهار أو إخفاء نوافذ مستكشف البيانات والتقرير Explorer.</value>
+  </data>
+  <data name="SnapExtensionsStringId.SNMergeFieldPropertiesRibbonPageGroup_DefaultText" xml:space="preserve">
+    <value>العنصر</value>
+  </data>
+  <data name="SnapExtensionsStringId.SNTextFieldTagItem_KeepLastParagraph" xml:space="preserve">
+    <value>الاحتفاظ بالفقرة الأخيرة</value>
+  </data>
+  <data name="SnapExtensionsStringId.SortingCollectionEditor_SortBy" xml:space="preserve">
+    <value>فرز حسب</value>
+  </data>
+  <data name="SnapExtensionsStringId.SparklineSmartTagItem_LineWidth" xml:space="preserve">
+    <value>عرض الخط</value>
+  </data>
+  <data name="SnapExtensionsStringId.TableCellStylesRibbonPageGroup_DefaultText" xml:space="preserve">
+    <value>أنماط الخلية</value>
+  </data>
+  <data name="SnapExtensionsStringId.ThemesBar_Text" xml:space="preserve">
+    <value>المواضيع</value>
+  </data>
+  <data name="SnapExtensionsStringId.ThemesRibbonPageGroup_Text" xml:space="preserve">
+    <value>مواضيع التقرير</value>
+  </data>
+  <data name="SnapExtensionsStringId.ToolboxPageGroup_DefaultText" xml:space="preserve">
+    <value>مربع الأدوات</value>
+  </data>
+  <data name="SnapExtensionsStringId.UpdateDataSource" xml:space="preserve">
+    <value>تحديث مصدر البيانات</value>
+  </data>
+  <data name="SnapExtensionsStringId.UpdateSchema" xml:space="preserve">
+    <value>تحديث المخطط...</value>
+  </data>
+  <data name="SnapExtensionsStringId.UpdateToMatchDocumentStylesBarItem_Caption" xml:space="preserve">
+    <value>تحديث لمطابقة أنماط المستند</value>
+  </data>
+</root>

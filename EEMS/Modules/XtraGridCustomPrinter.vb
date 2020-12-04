@@ -1,5 +1,7 @@
 ﻿Imports DevExpress.XtraPrinting
 Imports DevExpress.XtraGrid
+Imports System.IO
+Imports System.Reflection
 
 Public Class XtraGridCustomPrinter
 
@@ -62,7 +64,7 @@ Public Class XtraGridCustomPrinter
         titleBrick.BorderWidth = 0
 
         Dim imgBrick As New ImageBrick
-        imgBrick.Image = My.Resources.cedar
+        imgBrick.Image = Image.FromFile(Path.Combine(Directory.GetParent(Assembly.GetExecutingAssembly().FullName).FullName, "Logo/logo.jpg"))
         imgBrick.BorderWidth = 0
         imgBrick.Rect = New Rectangle(e.Graph.ClientPageSize.Width - 70, 30, 64, 55)
         imgBrick.ImageAlignment = ImageAlignment.MiddleCenter

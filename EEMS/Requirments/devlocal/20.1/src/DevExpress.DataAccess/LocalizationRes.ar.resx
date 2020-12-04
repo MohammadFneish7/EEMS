@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DataAccessStringId.ConnectingToDatabaseCaption" xml:space="preserve">
+    <value>الرجاء الانتظار</value>
+  </data>
+  <data name="DataAccessStringId.ConnectingToDatabaseMessage" xml:space="preserve">
+    <value>Connecting to the database...</value>
+  </data>
+  <data name="DataAccessStringId.DefaultNameDataSource" xml:space="preserve">
+    <value>مصدر البيانات</value>
+  </data>
+  <data name="DataAccessStringId.EmptyColumnAliasPattern" xml:space="preserve">
+    <value>العمود {0}</value>
+  </data>
+  <data name="DataAccessStringId.MessageDuplicateItem" xml:space="preserve">
+    <value>مجموعة بالفعل يحتوي على عنصر '{0}'</value>
+  </data>
+  <data name="DataAccessStringId.MessageDuplicateItemName" xml:space="preserve">
+    <value>جمع هذا الفعل يتضمن بندا باسم '{0}'</value>
+  </data>
+  <data name="DataAccessStringId.MessageInvalidItemName" xml:space="preserve">
+    <value>لا يمكن أن يكون اسم العنصر فارغة أو سلسلة فارغة</value>
+  </data>
+  <data name="DataAccessStringId.MessageWrongCharacterItemName" xml:space="preserve">
+    <value>اسم العنصر '{0}' يحتوي على أحرف غير صحيحة</value>
+  </data>
+  <data name="DataAccessStringId.MessageWrongCharacterParameterName" xml:space="preserve">
+    <value>اسم المعلمة '{0}' يحتوي على أحرف غير صحيحة</value>
+  </data>
+  <data name="DataAccessStringId.PropertyGridBehaviorCategoryName" xml:space="preserve">
+    <value>السلوك</value>
+  </data>
+  <data name="DataAccessStringId.PropertyGridDataCategoryName" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="DataAccessStringId.QueryDesignerJoinExpressionElementSeparator" xml:space="preserve">
+    <value>,</value>
+  </data>
+  <data name="DataAccessStringId.QueryDesignerJoinExpressionPattern" xml:space="preserve">
+    <value>{0} في {1}</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Columns" xml:space="preserve">
+    <value>الأعمدة</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Parameters" xml:space="preserve">
+    <value>المعلمات</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_FunctionCategory_DateTime" xml:space="preserve">
+    <value>التاريخ والوقت</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Custom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Operators" xml:space="preserve">
+    <value>عوامل تشغيل</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_Caption" xml:space="preserve">
+    <value>محرر التعبير</value>
+  </data>
+  <data name="DataAccessStringId.AggregateQueryInvalidSortingValidationException" xml:space="preserve">
+    <value>غير صالح فرز عمود "{0}". " {1}". يمكن فرز نتائج تابليكويري التي تحتوي على دالات تجميعية فقط بالأعمدة المستخدمة كتجميع المعايير.</value>
+  </data>
+  <data name="DataAccessStringId.AggregationWithoutAliasValidationException" xml:space="preserve">
+    <value>ينبغي أن يكون عمود تجميع باسم مستعار.</value>
+  </data>
+  <data name="DataAccessStringId.CircularRelationsValidationException" xml:space="preserve">
+    <value>تم الكشف عن علاقات دائرية.</value>
+  </data>
+  <data name="DataAccessStringId.ColumnNotInSchemaValidationException" xml:space="preserve">
+    <value>المخطط لا يحتوي على الأعمدة التالية: "{0}". " {1}".</value>
+  </data>
+  <data name="DataAccessStringId.ColumnNullValidationException" xml:space="preserve">
+    <value>لا يمكن أن يكون عمود فارغ.</value>
+  </data>
+  <data name="DataAccessStringId.ConfigureMultiQueryPage_QueryCategory" xml:space="preserve">
+    <value>الاستعلامات</value>
+  </data>
+  <data name="DataAccessStringId.ConfigureMultiQueryPage_SpCategory" xml:space="preserve">
+    <value>الإجراءات المخزنة</value>
+  </data>
+  <data name="DataAccessStringId.ConfigureMultiQueryPage_TableCategory" xml:space="preserve">
+    <value>الجداول</value>
+  </data>
+  <data name="DataAccessStringId.ConfigureMultiQueryPage_ValidateRelationError" xml:space="preserve">
+    <value>العلاقات واحدة أو أكثر غير صالحة. 
+لمعرفة المزيد حول تفاصيل الخطأ، انقر فوق "إدارة العلاقات".</value>
+  </data>
+  <data name="DataAccessStringId.ConfigureMultiQueryPage_ViewCategory" xml:space="preserve">
+    <value>وجهات النظر</value>
+  </data>
+  <data name="DataAccessStringId.ConfigureQueryPage_CustomSqlWillBeLost" xml:space="preserve">
+    <value>دليل من SQL مخصصة. الاستعلام الحالي يمثل سلسلة استعلام SQL مخصصة، التي سوف تضيع إذا كنت المضي قدما مع تحرير الاستعلام باستخدام مربع الحوار "منشئ الاستعلام". 
+
+هل تريد تجاهل SQL مخصصة والمضي قدما في "منشئ الاستعلام"؟</value>
+  </data>
+  <data name="DataAccessStringId.ConnectionAborted_ExceptionMessage" xml:space="preserve">
+    <value>تم إلغاء الاتصال.</value>
+  </data>
+  <data name="DataAccessStringId.ConnectionNotSpecified_ExceptionMessage" xml:space="preserve">
+    <value>لم يتم تحديد أي اتصال-</value>
+  </data>
+  <data name="DataAccessStringId.ConnectionPropertiesPage_ProviderNotSupported" xml:space="preserve">
+    <value>لأن الموفر {0} غير معتمد. 
+حدد أحد موفري البيانات المتاحة وتحديد معلمات الاتصال أو إغلاق المعالج باستخدام الزر إغلاق للتراجع عن هذا التغيير.</value>
+  </data>
+  <data name="DataAccessStringId.ConnectionStringPostfixAppConfig" xml:space="preserve">
+    <value>(في ملف التكوين)</value>
+  </data>
+  <data name="DataAccessStringId.ConnectionStringPostfixServerExplorer" xml:space="preserve">
+    <value>(من مستكشف الملقم)</value>
+  </data>
+  <data name="DataAccessStringId.CustomExpressionWithAmbiguousColumnValidationException" xml:space="preserve">
+    <value>اسم العمود [{0}] المستخدم في التعبير المخصص غير فريد. توجد أعمده بهذا الاسم في الجداول التالية: {1}.</value>
+  </data>
+  <data name="DataAccessStringId.CustomExpressionWithColumnOfMissingTableValidationException" xml:space="preserve">
+    <value>لا توجد جداول تحتوي علي العمود [{0}] المستخدم في التعبير المخصص.</value>
+  </data>
+  <data name="DataAccessStringId.CustomExpressionWithMissingInSchemaColumnValidationException" xml:space="preserve">
+    <value>العمود [{0}]. يتم استخدام [{1}] في التعبير المخصص ، ولكنه مفقود في DBSchema.</value>
+  </data>
+  <data name="DataAccessStringId.CustomExpressionWithMissingParameterValidationException" xml:space="preserve">
+    <value>يتم استخدام المعلمة [{0}] في التعبير المخصص ، ولكنها مفقوده في الاستعلام.</value>
+  </data>
+  <data name="DataAccessStringId.CustomSqlQueryValidationException" xml:space="preserve">
+    <value>استعلام SQL مخصص يجب أن تحتوي على عبارات SELECT فقط.</value>
+  </data>
+  <data name="DataAccessStringId.DatabaseConnectionExceptionMessage" xml:space="preserve">
+    <value>اسم الاتصال: {0}
+ رسالة الخطأ:
+{1}</value>
+  </data>
+  <data name="DataAccessStringId.DatabaseConnectionExceptionStringId" xml:space="preserve">
+    <value>فشل في الاتصال بقاعدة البيانات. لمزيد من المعلومات، راجع تفاصيل الاستثناء. 
+
+تفاصيل الاستثناء:
+ {0}</value>
+  </data>
+  <data name="DataAccessStringId.DataSourceFillExceptionMessage" xml:space="preserve">
+    <value>فشل تحميل البيانات. راجع تفاصيل الاستثناء للحصول على مزيد من المعلومات. 
+
+تفاصيل الاستثناء:
+ {0}</value>
+  </data>
+  <data name="DataAccessStringId.DefaultNameParameter" xml:space="preserve">
+    <value>المعلمة</value>
+  </data>
+  <data name="DataAccessStringId.DuplicatingColumnNamesValidationException" xml:space="preserve">
+    <value>عمود بما يلي: "{0}". " {1}".</value>
+  </data>
+  <data name="DataAccessStringId.DuplicatingTableNamesValidationException" xml:space="preserve">
+    <value>جدول بالاسم التالي موجود بالفعل: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.EFFilterControl_EmptyFilterString" xml:space="preserve">
+    <value>لا يمكن أن تكون سلسلة عامل تصفية فارغة.</value>
+  </data>
+  <data name="DataAccessStringId.ExcelDataSource_FileNotFoundMessage" xml:space="preserve">
+    <value>{0}
+لم يتم العثور على الملف.
+تحقق من اسم الملف وحاول مرة أخرى.</value>
+  </data>
+  <data name="DataAccessStringId.ExcelDataSource_SchemaLoadingText" xml:space="preserve">
+    <value>تحميل المخطط...</value>
+  </data>
+  <data name="DataAccessStringId.ExcelEncryptedFileException_EncryptionTypeNotSupported" xml:space="preserve">
+    <value>لا يمكن فتح الملف المحمي.</value>
+  </data>
+  <data name="DataAccessStringId.ExcelEncryptedFileException_PasswordRequired" xml:space="preserve">
+    <value>مطلوب كلمة مرور لفتح هذا المصنف-</value>
+  </data>
+  <data name="DataAccessStringId.ExcelEncryptedFileException_WrongPassword" xml:space="preserve">
+    <value>كلمة المرور غير صحيحة. الرجاء المحاولة مرة أخرى.</value>
+  </data>
+  <data name="DataAccessStringId.ExcelInvalidFileException_BIFF5Format" xml:space="preserve">
+    <value>BIFF5 لم يتم دعم تنسيق ملف (Excel 5.0/95) XLS.</value>
+  </data>
+  <data name="DataAccessStringId.ExcelInvalidFileException_CorruptedFile" xml:space="preserve">
+    <value>الملف تالف.</value>
+  </data>
+  <data name="DataAccessStringId.ExcelInvalidFileException_WrongFormat" xml:space="preserve">
+    <value>تنسيق الملف Incorrect</value>
+  </data>
+  <data name="DataAccessStringId.ExcelWizard_ValueSeparator_Comma" xml:space="preserve">
+    <value>الفاصلة</value>
+  </data>
+  <data name="DataAccessStringId.ExcelWizard_ValueSeparator_Semicolon" xml:space="preserve">
+    <value>الفاصلة المنقوطة</value>
+  </data>
+  <data name="DataAccessStringId.ExcelWizard_ValueSeparator_Space" xml:space="preserve">
+    <value>الفضاء</value>
+  </data>
+  <data name="DataAccessStringId.ExcelWizard_ValueSeparator_Tab" xml:space="preserve">
+    <value>التبويب</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_ColumnDescriptionFormat" xml:space="preserve">
+    <value>نوع: {0}</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Columns_Tooltip" xml:space="preserve">
+    <value>العمود</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Constants" xml:space="preserve">
+    <value>الثوابت</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Constants_Tooltip" xml:space="preserve">
+    <value>ثابت</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Functions" xml:space="preserve">
+    <value>وظائف</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Functions_Tooltip" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Operators_Tooltip" xml:space="preserve">
+    <value>عامل</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_DocumentationCategory_Parameters_Tooltip" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_EmptyExpression" xml:space="preserve">
+    <value>السلسلة التعبير لا يمكن أن يكون فارغاً.</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_FunctionCategory_Aggregate" xml:space="preserve">
+    <value>التجميعية</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_FunctionCategory_Logical" xml:space="preserve">
+    <value>المنطقية</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_FunctionCategory_Math" xml:space="preserve">
+    <value>الرياضيات</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_FunctionCategory_Text" xml:space="preserve">
+    <value>السلسلة</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_InvalidColumn" xml:space="preserve">
+    <value>العمود غير صالح: '{0}'.</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_InvalidCustomFunction" xml:space="preserve">
+    <value>دالة غير صالح: '{0}'.</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_InvalidExpression" xml:space="preserve">
+    <value>تعبير غير صالح-</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_InvalidParameter" xml:space="preserve">
+    <value>معلمة غير صالحة: '{0}'.</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionEditor_NotSupportedAggregateFunction" xml:space="preserve">
+    <value>الدالة التجميعية التالية غير معتمدة: '{0}'.</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionNullValidationException" xml:space="preserve">
+    <value>تعبير لا يمكن أن تكون فارغة، أما العمود أو تعبير مخصص من المتوقع-</value>
+  </data>
+  <data name="DataAccessStringId.ExpressionStringNullValidationException" xml:space="preserve">
+    <value>لا يمكن أن يكون تعبير عبارة عن سلسلة فارغة</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ColumnNotExistInTableValidationErrorMessage" xml:space="preserve">
+    <value>لا يحتوي الجدول [{0}] على العمود [{1}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ColumnTableNotExistValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}]. [{1}] غير موجود في مصادر البيانات.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ConditionAmbiguousColumnNameValidationErrorMessage" xml:space="preserve">
+    <value>اسم العمود [{0}] ليس فريدًا. يوجد نفس اسم العمود في الجداول: {1}. الشرط: [{2}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ConditionColumnMissingInTableValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}]. [{1}] غير موجود في الجدول [{0}]. الشرط: [{2}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ConditionColumnNotExistValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}] غير موجود في مصادر البيانات. الشرط: [{1}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_DuplicatedExpressionNamesValidationErrorMessage" xml:space="preserve">
+    <value>تحتوي العقدة {0} على تعبيرات ذات أسماء فعلية مكررة: {1}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_DuplicateSourceNameErrorMessage" xml:space="preserve">
+    <value>يوجد بالفعل مصدر بالاسم المحدد: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_EmptySourceNameErrorMessage" xml:space="preserve">
+    <value>لا يمكن أن يكون اسم المصدر فارغاً.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ExpressionAmbiguousColumnNameValidationErrorMessage" xml:space="preserve">
+    <value>اسم العمود [{0}] غير فريد. يوجد نفس اسم العمود في الجداول: {1}. التعبير: [{2}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ExpressionColumnMissingInTableValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}]. [{1}] غير موجود في الجدول [{0}]. التعبير: [{2}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ExpressionColumnNotExistValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}] غير موجود في مصادر البيانات. التعبير: [{1}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_ExpressionNodeNullValidationErrorMessage" xml:space="preserve">
+    <value>تحتوي العقدة على تعبير غير مرتبط بعقدة: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_FilterAmbiguousColumnNameValidationErrorMessage" xml:space="preserve">
+    <value>اسم العمود [{0}] غير فريد. نفس اسم العمود موجود في الجداول: {1}. سلسلة عوامل التصفية: [{2}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_FilterColumnMissingInTableValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}]. [{1}] غير موجود في الجدول [{0}]. سلسلة عوامل التصفية: [{2}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_FilterColumnNotExistValidationErrorMessage" xml:space="preserve">
+    <value>العمود [{0}] غير موجود في مصادر البيانات. سلسلة عوامل التصفية: [{1}].</value>
+  </data>
+  <data name="DataAccessStringId.Federation_NestedFederatedDataSourceErrorMessage" xml:space="preserve">
+    <value>لا يمكن استخدام مصدر البيانات المتحد كمصدر بيانات لمصدر بيانات متحد آخر.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_NodeExpressionNameNullValidationErrorMessage" xml:space="preserve">
+    <value>تحتوي العقدة على تعبير غير مسمى: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_NodeIsNotUniqueValidationErrorMessage" xml:space="preserve">
+    <value>لا تسمح العقد بالتكرارات: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_NodeWithoutExpressionValidationErrorMessage" xml:space="preserve">
+    <value>عقدة بدون تعبير: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_RootNullValidationErrorMessage" xml:space="preserve">
+    <value>لم تتم تهيئة المرجع الجذر: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_SourceNullValidationErrorMessage" xml:space="preserve">
+    <value>لم تتم تهيئة المرجع المصدر: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_UnionWithDifferentColumnTypesErrorMessage" xml:space="preserve">
+    <value>{0} عقدة الاتحاد: يجب أن يكون للأعمدة المرتبطة أنواع مشابهة: {1}. {2}, {3}. {4}، لقد كنتُ أُوَدّيًا</value>
+  </data>
+  <data name="DataAccessStringId.Federation_UnionWithDifferentNumberOfColumnsErrorMessage" xml:space="preserve">
+    <value>{0} عقدة الاتحاد: يجب أن يكون للعناصر نفس عدد الأعمدة: {1}، {2}.</value>
+  </data>
+  <data name="DataAccessStringId.Federation_UnionWithNoElementsValidationErrorMessage" xml:space="preserve">
+    <value>عقدة الاتحاد لا تحتوي على عناصر: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.FileNameFilter_AllFormats" xml:space="preserve">
+    <value>كل أشكال الدعم</value>
+  </data>
+  <data name="DataAccessStringId.FileNameFilter_CSV" xml:space="preserve">
+    <value>ملفات CSV</value>
+  </data>
+  <data name="DataAccessStringId.FileNameFilter_Excel" xml:space="preserve">
+    <value>مصنفات Excel</value>
+  </data>
+  <data name="DataAccessStringId.FilterByAmbiguousColumnValidationException" xml:space="preserve">
+    <value>اسم العمود [{0}] المستخدم في سلسلة عوامل التصفية غير فريد. توجد أعمدة بهذا الاسم في الجداول التالية: {1}.</value>
+  </data>
+  <data name="DataAccessStringId.FilterByColumnOfMissingTableValidationException" xml:space="preserve">
+    <value>لا توجد جداول تحتوي على العمود [{0}] المستخدم في سلسلة عوامل التصفية.</value>
+  </data>
+  <data name="DataAccessStringId.FilterByMissingInSchemaColumnValidationException" xml:space="preserve">
+    <value>العمود [{0}]. [{1}] يتم استخدامه في سلسلة عوامل التصفية، ولكنه مفقود في DBSchema.</value>
+  </data>
+  <data name="DataAccessStringId.FilterByMissingParameterValidationException" xml:space="preserve">
+    <value>يتم استخدام المعلمة [{0}] في سلسلة عوامل التصفية، ولكنها مفقودة في الاستعلام.</value>
+  </data>
+  <data name="DataAccessStringId.FilterEditor_TreeCreationError" xml:space="preserve">
+    <value>لا يمكن إنشاء شجرة لهذا التعبير</value>
+  </data>
+  <data name="DataAccessStringId.GatheringTypesPanelText" xml:space="preserve">
+    <value>جمع أنواع المعلومات...</value>
+  </data>
+  <data name="DataAccessStringId.GroupByAggregateColumnValidationException" xml:space="preserve">
+    <value>لا يمكن التجميع حسب عمود إجمالي: "{0}". " {1}".</value>
+  </data>
+  <data name="DataAccessStringId.GroupByWithoutAggregateValidationException" xml:space="preserve">
+    <value>يتطلب تجميع واحد على الأقل من الأعمدة المجمعة.</value>
+  </data>
+  <data name="DataAccessStringId.GroupFilterStringEditorNoGroups" xml:space="preserve">
+    <value>لا يمكن تطبيق تصفية المجموعة للبيانات التي لم يتم تجميعها. الرجاء تطبيق بيانات التجميع أولاً.</value>
+  </data>
+  <data name="DataAccessStringId.GroupNullValidationException" xml:space="preserve">
+    <value>معايير تجميع لا يمكن أن تكون فارغة.</value>
+  </data>
+  <data name="DataAccessStringId.HavingWithoutGroupByValidationException" xml:space="preserve">
+    <value>مجموعة معايير التصفية في حين لا يتم تجميع البيانات. الرجاء تطبيق تجميع البيانات أو إزالة مجموعة معايير التصفية في التبويب "عامل تصفية مجموعة" من مربع الحوار "محرر تصفية".</value>
+  </data>
+  <data name="DataAccessStringId.IncompleteRelationValidationException" xml:space="preserve">
+    <value>بعلاقة معينة غير مكتملة: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.IntegerDivisionValidationMessage" xml:space="preserve">
+    <value>الرجاء ملاحظة: هذا مشغل التعبير يتجاهل الكسور أثناء عمليات تقسيم عدد صحيح. لإرجاع قيم عشرية (قسمة الفاصلة العائمة) استخدم ToDecimal() ToDouble() أو ToFloat() للتعبير الخاص بك. على سبيل المثال، ToDecimal(10)/4 سوف ترجع 2.5 بينما 10/4 سوف ترجع 2.</value>
+  </data>
+  <data name="DataAccessStringId.InvalidExpressionStringValidationException" xml:space="preserve">
+    <value>لا يمكن تحليل السلسلة التعبير التالي: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.InvalidPortErrorMessage" xml:space="preserve">
+    <value>. ينبغي أن يكون رقم منفذ بين 0 و 65535 شاملة-</value>
+  </data>
+  <data name="DataAccessStringId.LoadingDataPanelText" xml:space="preserve">
+    <value>تحميل البيانات...</value>
+  </data>
+  <data name="DataAccessStringId.LoadingDataSourcePanelCounter" xml:space="preserve">
+    <value>{0} of {1}...</value>
+  </data>
+  <data name="DataAccessStringId.LoadingDataSourcePanelText" xml:space="preserve">
+    <value>تحميل مصدر البيانات</value>
+  </data>
+  <data name="DataAccessStringId.MessageCannotCreateSelectStatement" xml:space="preserve">
+    <value>حدد فشل إنشاء البيان.</value>
+  </data>
+  <data name="DataAccessStringId.MessageCannotLoadCustomAssembly" xml:space="preserve">
+    <value>قادر على تحميل التجميع {0} لسياق {1}. الرجاء اختيار التجميع الخارجية القائمة و/أو سياق القائمة.</value>
+  </data>
+  <data name="DataAccessStringId.MessageCannotOpenDatabase" xml:space="preserve">
+    <value>قادر على فتح قاعدة بيانات-</value>
+  </data>
+  <data name="DataAccessStringId.MessageCannotRebuildSchema" xml:space="preserve">
+    <value>حدث خطأ أثناء إعادة بناء مخطط مصدر بيانات-</value>
+  </data>
+  <data name="DataAccessStringId.MessageDuplicateQueryName" xml:space="preserve">
+    <value>استعلام بالاسم المحدد موجود بالفعل: {0}-</value>
+  </data>
+  <data name="DataAccessStringId.MessageEmptyQueryName" xml:space="preserve">
+    <value>لا يمكن أن يكون اسم الاستعلام فارغاً.</value>
+  </data>
+  <data name="DataAccessStringId.MessageNonexistentColumn" xml:space="preserve">
+    <value>العمود '{0}'. ' {1} ' غير موجود.</value>
+  </data>
+  <data name="DataAccessStringId.MessageNonexistentQuery" xml:space="preserve">
+    <value>الاستعلام '{0}' غير موجود.</value>
+  </data>
+  <data name="DataAccessStringId.MessageNullItem" xml:space="preserve">
+    <value>لا يمكن إضافة قيمة فارغة إلى مجموعة</value>
+  </data>
+  <data name="DataAccessStringId.NegativeTopSkipValidationException" xml:space="preserve">
+    <value>يجب أن تكون الخصائص أعلى وتخطي عدد صحيح غير سالب.</value>
+  </data>
+  <data name="DataAccessStringId.NoColumnsValidationException" xml:space="preserve">
+    <value>أي من الجداول تحتوي على أعمدة أي.</value>
+  </data>
+  <data name="DataAccessStringId.NoRelationColumnsValidationException" xml:space="preserve">
+    <value>Columns are not specified for the relation: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.NoTablesValidationException" xml:space="preserve">
+    <value>مجموعة الجداول لا يمكن أن يكون فارغاً.</value>
+  </data>
+  <data name="DataAccessStringId.NoXpoProviderStringId" xml:space="preserve">
+    <value>سلسلة الاتصال يحتوي على أي مفتاح إكسبوبروفيدير أو المفتاح المحدد غير صالح. 
+
+تفاصيل الاستثناء:
+ {0}</value>
+  </data>
+  <data name="DataAccessStringId.ObjectDataSourceLoadingWarningMessage" xml:space="preserve">
+    <value>تحميل مصادر البيانات المشار إليها في هذا الملف قد تلحق الضرر بالكمبيوتر الخاص بك. تم الحصول على هذا الملف من مصدر موثوق به؟
+
+انقر فوق 'نعم' لتحميل محتوى مصدر البيانات كما هو.
+انقر فوق 'لا' لتحميل محتوى المصدر البيانات الموثوق بها فقط-</value>
+  </data>
+  <data name="DataAccessStringId.ObjectDataSourceWizard_CannotGetPropertiesForThisMethodReturnType" xml:space="preserve">
+    <value>لا يمكن الحصول على خصائص لنوع يتم إرجاعها بواسطة هذا الأسلوب.</value>
+  </data>
+  <data name="DataAccessStringId.ObjectDataSourceWizard_CannotGetTypeProperties" xml:space="preserve">
+    <value>لا يمكن الحصول على خصائص هذا النوع-</value>
+  </data>
+  <data name="DataAccessStringId.ODSErrorMissingMember" xml:space="preserve">
+    <value>عضو بيانات '{0}' غير موجود.</value>
+  </data>
+  <data name="DataAccessStringId.ODSWizardErrorExceptionInCtor" xml:space="preserve">
+    <value>منشئ افتراضي لتنفيذ إيتيبيدليست تم طرح استثناء.</value>
+  </data>
+  <data name="DataAccessStringId.ODSWizardErrorExceptionInGetItemProperties" xml:space="preserve">
+    <value>"جيتيتيمبروبيرتيس" طريقة إيتيبيدليست تم طرح استثناء.</value>
+  </data>
+  <data name="DataAccessStringId.ODSWizardErrorNoDefaultCtor" xml:space="preserve">
+    <value>لا يمكن الحصول على خصائص عنصر من إيليستسورسي دون منشئ افتراضي.</value>
+  </data>
+  <data name="DataAccessStringId.ODSWizardErrorStaticValue" xml:space="preserve">
+    <value>النوع ثابت وليس لديه أي أعضاء العودة IEnumerable.</value>
+  </data>
+  <data name="DataAccessStringId.ParameterlessConstructor" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="DataAccessStringId.ParameterListEmpty" xml:space="preserve">
+    <value>بلا</value>
+  </data>
+  <data name="DataAccessStringId.ParameterListNull" xml:space="preserve">
+    <value>خالية</value>
+  </data>
+  <data name="DataAccessStringId.PartialAggregationValidationException" xml:space="preserve">
+    <value>بعض الأعمدة في قائمة select غير صحيحة نظراً لأنها لا ترد في أي دالة تجميعية أو في جملة Group By. تطبيق التجميع/التجميع لكافة الأعمدة أو لأي منهم-</value>
+  </data>
+  <data name="DataAccessStringId.PositiveIntegerError" xml:space="preserve">
+    <value>قيم رقمية فقط غير سالب مسموح.</value>
+  </data>
+  <data name="DataAccessStringId.PropertyGridConnectionCategoryName" xml:space="preserve">
+    <value>اتصال</value>
+  </data>
+  <data name="DataAccessStringId.ProviderNotSupportedException" xml:space="preserve">
+    <value>موفر قاعدة البيانات التالية غير معتمدة: {0}.</value>
+  </data>
+  <data name="DataAccessStringId.ProviderNotSupportedFeatureExceptionHeader" xml:space="preserve">
+    <value>ميزات الاستعلام التالية غير معتمدة للموفر الحالي:</value>
+  </data>
+  <data name="DataAccessStringId.ProviderNotSupportedFeatureParametersInSelect" xml:space="preserve">
+    <value>المعلمات في تعبيرات الأعمدة</value>
+  </data>
+  <data name="DataAccessStringId.ProviderNotSupportedLabel" xml:space="preserve">
+    <value>بعض ميزات الاستعلام غير معتمدة للموفر الحالي.</value>
+  </data>
+  <data name="DataAccessStringId.QueriesFailedToExecute_ExceptionMessage" xml:space="preserve">
+    <value>وقد فشل تنفيذ استعلام واحد أو أكثر.</value>
+  </data>
+  <data name="DataAccessStringId.QueriesFailedToValidate_ExceptionMessage" xml:space="preserve">
+    <value>وقد فشل استعلام واحد أو أكثر للتحقق من صحة-</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilder_AllColumns" xml:space="preserve">
+    <value>* (كافة الأعمدة)</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilder_AllTables" xml:space="preserve">
+    <value>(كافة الجداول)</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilder_RowCount" xml:space="preserve">
+    <value>(عدد الصفوف)</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderAliasAlreadyExists" xml:space="preserve">
+    <value>المحدد موجود بالفعل اسم مستعار.</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderCanJoin" xml:space="preserve">
+    <value>يمكنك الانضمام إلى {0}</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderInvalidFilter" xml:space="preserve">
+    <value>الرجاء النقر فوق الزر 'تصفية...' لتصحيح سلسلة عامل التصفية.</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderJoinEditorMissingData" xml:space="preserve">
+    <value>يتم تحديد أجزاء ليست كلها من التعبير-</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderJoinedOn" xml:space="preserve">
+    <value>وانضم إلى على {0}</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderNoTablesAndViews" xml:space="preserve">
+    <value>قاعدة بيانات لا يحتوي على الجداول أو طرق العرض ولا يدعم تحرير SQL. لتكون قادراً على تشغيل "منشئ الاستعلام"، تأكد من أن قاعدة البيانات الخاصة بك تحتوي على جدول واحد على الأقل أو يدعم تحرير SQL.</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderNoTablesSelected" xml:space="preserve">
+    <value>تم اختيار لا جدول. الرجاء تحديد جدول واحد على الأقل للمتابعة.</value>
+  </data>
+  <data name="DataAccessStringId.QueryBuilderNothingSelected" xml:space="preserve">
+    <value>وقد تم اختيار لا عمود. الرجاء تحديد عمود واحد على الأقل المتابعة.</value>
+  </data>
+  <data name="DataAccessStringId.QueryDesignerJoinTooltipPattern" xml:space="preserve">
+    <value>[{0}] التسجيل {1} [{2}] على {3}</value>
+  </data>
+  <data name="DataAccessStringId.QueryPropertyGridCommonCategoryName" xml:space="preserve">
+    <value>المشتركة</value>
+  </data>
+  <data name="DataAccessStringId.QueryPropertyGridCustomSqlCategoryName" xml:space="preserve">
+    <value>مخصص SQL</value>
+  </data>
+  <data name="DataAccessStringId.QueryPropertyGridStoredProcCategoryName" xml:space="preserve">
+    <value>الإجراء المخزن</value>
+  </data>
+  <data name="DataAccessStringId.QueryPropertyGridTableSelectionCategoryName" xml:space="preserve">
+    <value>تحديد الجدول</value>
+  </data>
+  <data name="DataAccessStringId.RebuildResultSchemaWaitFormText" xml:space="preserve">
+    <value>إعادة بناء المخطط نتيجة...</value>
+  </data>
+  <data name="DataAccessStringId.RelationColumnNotInSchemaValidationException" xml:space="preserve">
+    <value>المخطط لا يحتوي على عمود العلاقة التالية: "{0}". " {1}".</value>
+  </data>
+  <data name="DataAccessStringId.RelationColumnNullValidationException" xml:space="preserve">
+    <value>عمود العلاقة لا يمكن أن تكون فارغة.</value>
+  </data>
+  <data name="DataAccessStringId.RelationEditorRelationTypeInnerJoin" xml:space="preserve">
+    <value>الداخلية الانضمام</value>
+  </data>
+  <data name="DataAccessStringId.RelationEditorRelationTypeLeftOuterJoin" xml:space="preserve">
+    <value>الصلة الخارجية اليسرى</value>
+  </data>
+  <data name="DataAccessStringId.RelationEditorRelationTypeMasterDetail" xml:space="preserve">
+    <value>علاقة رئيسي-تفصيلي</value>
+  </data>
+  <data name="DataAccessStringId.RelationException" xml:space="preserve">
+    <value>العلاقة بين الأعمدة '{0}'. ' {1} 'من نوع {2} و' {3} '.' {4} ' من نوع {5}-</value>
+  </data>
+  <data name="DataAccessStringId.RelationNullValidationException" xml:space="preserve">
+    <value>علاقة لا يمكن أن تكون فارغة.</value>
+  </data>
+  <data name="DataAccessStringId.RelationTableNotSelectedValidationException" xml:space="preserve">
+    <value>لم يتم تحديد جدول المرجع: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.ResultRelation_ColumnNotFoundError" xml:space="preserve">
+    <value>لم يتم العثور على عمود: '{0}'. ' {1}'.</value>
+  </data>
+  <data name="DataAccessStringId.RunExpressionEditor" xml:space="preserve">
+    <value>محرر التعبير...</value>
+  </data>
+  <data name="DataAccessStringId.SchemaDiscoveryMaxItemCountExceptionMessage" xml:space="preserve">
+    <value>يجب أن تكون القيمة أكبر من أو تساوي الصفر.</value>
+  </data>
+  <data name="DataAccessStringId.SkipWithoutSortingPropertyGridError" xml:space="preserve">
+    <value>التخطي تم تعيين في حين لا يتم فرز السجلات. الرجاء تطبيق الفرز ليتمكن من تخطي السجلات N الأول.</value>
+  </data>
+  <data name="DataAccessStringId.SkipWithoutSortingValidationException" xml:space="preserve">
+    <value>التخطي تم تعيين في حين لا يتم فرز السجلات. الرجاء تطبيق الفرز لتكون قادرة على تخطي السجلات N الأول أو إعادة تعيين الإعداد تخطي في مربع الحوار "محرر تصفية".</value>
+  </data>
+  <data name="DataAccessStringId.SkipWithoutSortingWebValidationException" xml:space="preserve">
+    <value>يتم تعيين إعداد إزاحة بينما لا يتم فرز السجلات. الرجاء تطبيق الفرز ليتمكن من تخطي السجلات N الأول.</value>
+  </data>
+  <data name="DataAccessStringId.SortByAggregateColumnValidationException" xml:space="preserve">
+    <value>لا يمكن الفرز حسب عمود إجمالي: {0}({1})، لأنه لا يتم تجميع الاستعلام.</value>
+  </data>
+  <data name="DataAccessStringId.SortingBySameColumnTwiceValidationException" xml:space="preserve">
+    <value>التالية كمعيار فرز أكثر من مرة: "{0}". " {1}".</value>
+  </data>
+  <data name="DataAccessStringId.SortingNullValidationException" xml:space="preserve">
+    <value>من معايير فرز لا يمكن أن تكون فارغة.</value>
+  </data>
+  <data name="DataAccessStringId.SqlExecutionException" xml:space="preserve">
+    <value>خطأ أثناء محاولة تنفيذ SQL الاستعلام {0} {1}. {2} خطأ: {3}</value>
+  </data>
+  <data name="DataAccessStringId.SqlExecutionException_WithParameters" xml:space="preserve">
+    <value>مع المعلمات: {0} {1}</value>
+  </data>
+  <data name="DataAccessStringId.SqlQueryExecutionException" xml:space="preserve">
+    <value>فشل تنفيذ الاستعلام {0}.</value>
+  </data>
+  <data name="DataAccessStringId.SqlStringEmptyValidationException" xml:space="preserve">
+    <value>سلسلة SQL غير صحيح أو فارغ.</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcedureParameterTypeValidationException" xml:space="preserve">
+    <value>عدم تطابق نوع المعلمة '{2}': &lt; {0} &gt; &lt; {1} &gt; المتوقع.</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcNameNullValidationException" xml:space="preserve">
+    <value>لا يمكن أن يكون اسم الإجراء المخزن فارغاً.</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcNotInSchemaValidationException" xml:space="preserve">
+    <value>لا يمكن العثور على الإجراء المخزن المحدد: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcParamCountValidationException" xml:space="preserve">
+    <value>عدم تطابق عدد المعلمات: &lt; {0} &gt; &lt; {1} &gt; المتوقع.</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcParamNameValidationException" xml:space="preserve">
+    <value>عدم تطابق اسم المعلمة: &lt; {0} &gt; &lt; {1} &gt; المتوقع.</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcParamNullValidationException" xml:space="preserve">
+    <value>لا يمكن أن تكون معلمة فارغة.</value>
+  </data>
+  <data name="DataAccessStringId.StoredProcParamTypeValidationException" xml:space="preserve">
+    <value>عدم تطابق نوع المعلمة: &lt; {0} &gt; &lt; {1} &gt; المتوقع.</value>
+  </data>
+  <data name="DataAccessStringId.TableNotInSchemaValidationException" xml:space="preserve">
+    <value>لا يحتوي المخطط على الجدول المحدد: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.TableNotSelectedValidationException" xml:space="preserve">
+    <value>الجدول التالي غير موجود في قائمة الجداول، ولكن يتم استخدام العمود به: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.TableNullValidationException" xml:space="preserve">
+    <value>لا يمكن أن يكون جدول فارغاً.</value>
+  </data>
+  <data name="DataAccessStringId.TablesNotRelatedValidationException" xml:space="preserve">
+    <value>لا توجد علاقات الجداول التالية: "{0}".</value>
+  </data>
+  <data name="DataAccessStringId.Type_Byte" xml:space="preserve">
+    <value>عدم السلبية عدد صحيح (integer 8 بت)</value>
+  </data>
+  <data name="DataAccessStringId.Type_ByteArray" xml:space="preserve">
+    <value>Byte array</value>
+  </data>
+  <data name="DataAccessStringId.Type_Char" xml:space="preserve">
+    <value>Char</value>
+  </data>
+  <data name="DataAccessStringId.Type_Object" xml:space="preserve">
+    <value>كائن</value>
+  </data>
+  <data name="DataAccessStringId.Type_SByte" xml:space="preserve">
+    <value>عدد صحيح (integer 8 بت)</value>
+  </data>
+  <data name="DataAccessStringId.Type_TimeSpan" xml:space="preserve">
+    <value>Time interval</value>
+  </data>
+  <data name="DataAccessStringId.Type_UInt" xml:space="preserve">
+    <value>رقم سالب عدم (عدد صحيح 32 بت)</value>
+  </data>
+  <data name="DataAccessStringId.Type_ULong" xml:space="preserve">
+    <value>عدم السلبية عدد صحيح (integer 64 بت)</value>
+  </data>
+  <data name="DataAccessStringId.Type_UShort" xml:space="preserve">
+    <value>رقم سالب عدم (عدد صحيح 16 بت)</value>
+  </data>
+  <data name="DataAccessStringId.UnknownType" xml:space="preserve">
+    <value>غير معروف</value>
+  </data>
+  <data name="DataAccessStringId.UnnamedColumnValidationException" xml:space="preserve">
+    <value>لم يتم تحديد اسم العمود-</value>
+  </data>
+  <data name="DataAccessStringId.UnnamedTableValidationException" xml:space="preserve">
+    <value>لم يتم تحديد اسم الجدول.</value>
+  </data>
+  <data name="DataAccessStringId.WizardAssemblyLoadingDisallowed" xml:space="preserve">
+    <value>لا يمكن تحميل هذه الجمعية لأسباب أمنية.</value>
+  </data>
+  <data name="DataAccessStringId.WizardCustomConnectionString" xml:space="preserve">
+    <value>سلسلة اتصال مخصصة</value>
+  </data>
+  <data name="DataAccessStringId.WizardDataConnectionNameExistsMessage" xml:space="preserve">
+    <value>اتصال بيانات مع المحدد موجود بالفعل. الرجاء تحديد اسم اتصال مختلف.</value>
+  </data>
+  <data name="DataAccessStringId.WizardEmptyConnectionNameMessage" xml:space="preserve">
+    <value>لا يمكن أن يكون الاسم فارغة، فارغة أو تحتوي على فقط whitespaces.</value>
+  </data>
+  <data name="DataAccessStringId.WizardNoEFDataContextsMessage" xml:space="preserve">
+    <value>التجميع المحدد لا يحتوي على سياقات البيانات Entity Framework.</value>
+  </data>
+  <data name="DataAccessStringId.WizardPageChooseJsonSchema_EmptySelection" xml:space="preserve">
+    <value>Select at least one data field.</value>
+  </data>
+  <data name="DataAccessStringId.WizardPageChooseJsonSource_DataLocationMismatch" xml:space="preserve">
+    <value>لا يتوافق موقع بيانات JSON المحدد مع مصدر JSON الذي تم اختياره.</value>
+  </data>
+  <data name="DataAccessStringId.WizardPageChooseJsonSource_UnknownFormat" xml:space="preserve">
+    <value>غير قادر على تحميل البيانات لأنه لا يمكن تحديد تنسيق URI المحدد.</value>
+  </data>
+  <data name="DataAccessStringId.XmlFileStrategy_FileNameFilter" xml:space="preserve">
+    <value>XML Files</value>
+  </data>
+  <data name="DataAccessStringId.XmlProviderNotSupportedFeatureException" xml:space="preserve">
+    <value>التالية غير معتمدة لملفات XML:
+	• تعبير مخصص في أعمدة؛
+	• النجمة؛
+	• سجلات الجرد؛
+	• متميزة.
+للمتابعة، إزالة هذه الميزات من الاستعلام أو قم بالتبديل إلى استخدام موفر بيانات آخر.</value>
+  </data>
+  <data name="DataAccessStringId.XmlProviderNotSupportedLabel" xml:space="preserve">
+    <value>لا يتم دعم بعض ميزات الاستعلام لملفات XML.</value>
+  </data>
+</root>

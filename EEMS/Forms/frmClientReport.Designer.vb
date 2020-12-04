@@ -146,9 +146,9 @@ Partial Class frmClientReport
         Me.lbl2.Location = New System.Drawing.Point(113, 16)
         Me.lbl2.Name = "lbl2"
         Me.lbl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lbl2.Size = New System.Drawing.Size(66, 13)
+        Me.lbl2.Size = New System.Drawing.Size(96, 13)
         Me.lbl2.TabIndex = 7
-        Me.lbl2.Text = "المجموع = 0"
+        Me.lbl2.Text = "إجمالي مطلوب = 0"
         '
         'dgvCredits
         '

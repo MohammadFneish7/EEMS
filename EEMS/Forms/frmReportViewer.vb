@@ -2,6 +2,8 @@
 Imports EEMS.SqlDBHelper
 Imports CrystalDecisions.CrystalReports.Engine.SCRCollection
 Imports CrystalDecisions.Shared
+Imports System.IO
+Imports System.Reflection
 
 Public Class frmReportViewer
 
@@ -102,7 +104,7 @@ Public Class frmReportViewer
 
     Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
         Dim dr As DataRow = ds.OrgInfodt.NewOrgInfodtRow
-        dr.ItemArray = New Object() {orgname, ""}
+        dr.ItemArray = New Object() {orgname, Path.Combine(Directory.GetParent(Assembly.GetExecutingAssembly().FullName).FullName, "Logo/logo.jpg")}
         ds.OrgInfodt.Rows.Add(dr)
 
         Dim rptDoc As ReportClass = Nothing

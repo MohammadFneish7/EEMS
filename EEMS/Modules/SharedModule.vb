@@ -26,6 +26,7 @@ Module SharedModule
     Public currentUser As User
     Public orgname As String = "Organization Name"
     Public invoiceYOffset = 0
+    Public roundToThousand As Boolean = True
 
     Public isPaymentVerified As Boolean = True
 
@@ -83,8 +84,10 @@ Module SharedModule
         For Each dr As DataRow In a.ds.Tables(0).Rows
             If dr.Item(0).ToString.Trim.ToLower.Equals("orgname") Then
                 orgname = dr.Item(1).ToString.Trim.ToLower
-            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceYOffset") Then
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceyoffset") Then
                 invoiceYOffset = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
+                roundToThousand = Boolean.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
         Next
     End Sub
@@ -135,6 +138,10 @@ Module SharedModule
     End Sub
 
     Public Function getRoundThousand(ByVal i As Integer) As Integer
+        If Not roundToThousand Then
+            Return 0
+        End If
+
         If (i Mod 1000) = 1000 Or (i Mod 1000) = 0 Then
             Return 0
         End If

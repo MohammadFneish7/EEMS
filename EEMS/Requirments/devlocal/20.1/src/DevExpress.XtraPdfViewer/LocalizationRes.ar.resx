@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XtraPdfViewerStringId.CommandFindTextCaption" xml:space="preserve">
+    <value>البحث عن</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSearchCaption" xml:space="preserve">
+    <value>البحث عن</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageErrorCaption" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOpenFileCaption" xml:space="preserve">
+    <value>مفتوحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPrintFileCaption" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandViewExactZoomListCaption" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.ZoomRibbonGroupCaption" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoomInCaption" xml:space="preserve">
+    <value>التكبير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoomOutCaption" xml:space="preserve">
+    <value>التصغير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandCopyCaption" xml:space="preserve">
+    <value>نسخة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandHandToolCaption" xml:space="preserve">
+    <value>أداة اليد</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandHandToolDescription" xml:space="preserve">
+    <value>أداة اليد</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FileRibbonGroupCaption" xml:space="preserve">
+    <value>الملف</value>
+  </data>
+  <data name="XtraPdfViewerStringId.NavigationRibbonGroupCaption" xml:space="preserve">
+    <value>الملاحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandExportFormDataCaption" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSaveAsFileCaption" xml:space="preserve">
+    <value>حفظ باسم</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom100Caption" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandNextPageCaption" xml:space="preserve">
+    <value>التالية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPreviousPageCaption" xml:space="preserve">
+    <value>السابقة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FindRibbonGroupCaption" xml:space="preserve">
+    <value>البحث عن</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DeleteAnnotationCommandCaption" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextStrikethroughCommandCaption" xml:space="preserve">
+    <value>يتوسطه خط</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextUnderlineCommandCaption" xml:space="preserve">
+    <value>تسطير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextCommentRibbonPageGroupCaption" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="XtraPdfViewerStringId.BarCaption" xml:space="preserve">
+    <value>عارض PDF</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandCopyDescription" xml:space="preserve">
+    <value>محتوى PDF نسخة إلى "الحافظة"</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandEnlargePageThumbnailsCaption" xml:space="preserve">
+    <value>تكبير مصغرات الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandEnlargePageThumbnailsDescription" xml:space="preserve">
+    <value>تكبير مصغرات الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandExportFormDataDescription" xml:space="preserve">
+    <value>تصدير بيانات النموذج إلى ملف.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandFindTextDescription" xml:space="preserve">
+    <value>البحث عن نص.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandImportFormDataCaption" xml:space="preserve">
+    <value>استيراد</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandImportFormDataDescription" xml:space="preserve">
+    <value>استيراد بيانات النموذج من ملف.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandMarqueeZoomCaption" xml:space="preserve">
+    <value>مستطيلة تقريب</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandMarqueeZoomDescription" xml:space="preserve">
+    <value>مستطيلة تقريب</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandNextPageDescription" xml:space="preserve">
+    <value>إظهار الصفحة التالية-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandNextViewCaption" xml:space="preserve">
+    <value>العرض التالي</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandNextViewDescription" xml:space="preserve">
+    <value>العرض التالي</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOpenFileDescription" xml:space="preserve">
+    <value>فتح ملف PDF-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesCollapseTopLevelCaption" xml:space="preserve">
+    <value>انهيار المستوى الأعلى الإشارات المرجعية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesExpandCurrentCaption" xml:space="preserve">
+    <value>قم بتوسيع المرجعية الحالية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesExpandTopLevelCaption" xml:space="preserve">
+    <value>قم بتوسيع المستوى الأعلى الإشارات المرجعية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesGotoCaption" xml:space="preserve">
+    <value>الانتقال إلى المرجعية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesHideAfterUseCaption" xml:space="preserve">
+    <value>إخفاء بعد الاستخدام</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesPrintSectionsCaption" xml:space="preserve">
+    <value>طباعة الأجزاء</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesTextSizeCaption" xml:space="preserve">
+    <value>حجم النص</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesTextSizeToLargeCaption" xml:space="preserve">
+    <value>كبير</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesTextSizeToMediumCaption" xml:space="preserve">
+    <value>متوسطة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesTextSizeToSmallCaption" xml:space="preserve">
+    <value>الصغيرة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandOutlinesWrapLongLinesCaption" xml:space="preserve">
+    <value>التفاف الإشارات المرجعية الطويلة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPreviousPageDescription" xml:space="preserve">
+    <value>عرض الصفحة السابقة-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPreviousViewCaption" xml:space="preserve">
+    <value>العرض السابق</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPreviousViewDescription" xml:space="preserve">
+    <value>العرض السابق</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPrintFileDescription" xml:space="preserve">
+    <value>طباعة الملف.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandPrintPagesCaption" xml:space="preserve">
+    <value>طباعة صفحة/صفحات</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandReducePageThumbnailsCaption" xml:space="preserve">
+    <value>تقليل مصغرات الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandReducePageThumbnailsDescription" xml:space="preserve">
+    <value>تقليل مصغرات الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandRotatePageClockwiseCaption" xml:space="preserve">
+    <value>تدوير في اتجاه عقارب الساعة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandRotatePageCounterclockwiseCaption" xml:space="preserve">
+    <value>تدوير عكس اتجاه عقارب الساعة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSaveAsFileDescription" xml:space="preserve">
+    <value>ملف حفظ PDF-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSelectAllCaption" xml:space="preserve">
+    <value>حدد كافة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSelectAllDescription" xml:space="preserve">
+    <value>حدد كافة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSelectToolCaption" xml:space="preserve">
+    <value>حدد أداة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSelectToolDescription" xml:space="preserve">
+    <value>حدد أداة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetActualSizeZoomModeCaption" xml:space="preserve">
+    <value>الحجم الفعلي</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetFitVisibleZoomModeCaption" xml:space="preserve">
+    <value>تناسب مرئية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetFitWidthZoomModeCaption" xml:space="preserve">
+    <value>تناسب العرض</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetPageLevelZoomModeCaption" xml:space="preserve">
+    <value>تكبير/تصغير على مستوى الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetPageNumberCaption" xml:space="preserve">
+    <value>رقم الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetPageNumberDescription" xml:space="preserve">
+    <value>تغيير رقم الصفحة والانتقال إلى الصفحة.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandSetPageNumberLabelFormat" xml:space="preserve">
+    <value>of {0}</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandShowDocumentProperties" xml:space="preserve">
+    <value>خصائص المستند</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandViewExactZoomListDescription" xml:space="preserve">
+    <value>تغيير مستوى التكبير/التصغير من وثيقة PDF-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom10Caption" xml:space="preserve">
+    <value>10%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom125Caption" xml:space="preserve">
+    <value>125%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom150Caption" xml:space="preserve">
+    <value>150%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom200Caption" xml:space="preserve">
+    <value>200%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom25Caption" xml:space="preserve">
+    <value>25%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom400Caption" xml:space="preserve">
+    <value>400%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom500Caption" xml:space="preserve">
+    <value>500%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom50Caption" xml:space="preserve">
+    <value>50%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoom75Caption" xml:space="preserve">
+    <value>75%</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoomInDescription" xml:space="preserve">
+    <value>التكبير للحصول على عرض عن قرب للمستند PDF.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoomInShortcutCaption" xml:space="preserve">
+    <value>(Ctrl + Plus)</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoomOutDescription" xml:space="preserve">
+    <value>التصغير لمشاهدة مساحة أكبر من الصفحة على حجم مصغر.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommandZoomOutShortcutCaption" xml:space="preserve">
+    <value>(Ctrl + علامة ناقص)</value>
+  </data>
+  <data name="XtraPdfViewerStringId.CommentBarCaption" xml:space="preserve">
+    <value>التعليق</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DeleteAnnotationCommandDescription" xml:space="preserve">
+    <value>حذف التعليق التوضيحي المحدد.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionListCreateAllBarsTransaction" xml:space="preserve">
+    <value>إنشاء أشرطة عارض PDF</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionListCreateBarsTransaction" xml:space="preserve">
+    <value>إنشاء أشرطة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionListCreateBarTransaction" xml:space="preserve">
+    <value>إنشاء "{0}" بار</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionListCreateRibbonTransaction" xml:space="preserve">
+    <value>إنشاء الشريط</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodCreateAllBars" xml:space="preserve">
+    <value>إنشاء كافة أشرطة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodCreateBar" xml:space="preserve">
+    <value>إنشاء "{0}" بار</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodCreateBars" xml:space="preserve">
+    <value>إنشاء أشرطة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodCreateRibbon" xml:space="preserve">
+    <value>إنشاء الشريط</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodDockInParentContainer" xml:space="preserve">
+    <value>قفص الاتهام في الحاوية الأصل</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodLoadPdf" xml:space="preserve">
+    <value>تحميل قوات الدفاع الشعبي ملف...</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodUndockInParentContainer" xml:space="preserve">
+    <value>إلغاء الإرساء في الحاوية الأصل</value>
+  </data>
+  <data name="XtraPdfViewerStringId.DesignerActionMethodUnloadPdf" xml:space="preserve">
+    <value>ملف تفريغ PDF</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FindControlCaseSensitive" xml:space="preserve">
+    <value>القضية الحساسة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FindControlWholeWordsOnly" xml:space="preserve">
+    <value>الكلمات بأكملها فقط</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FormDataBarCaption" xml:space="preserve">
+    <value>نموذج تفاعلي</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FormDataFileFilter" xml:space="preserve">
+    <value>ملفات FDF|*.fdf| ملفات XFDF|*.xfdf| ملفات XML|*.xml| ملفات TXT|*.txt</value>
+  </data>
+  <data name="XtraPdfViewerStringId.FormDataRibbonPageGroupCaption" xml:space="preserve">
+    <value>بيانات النموذج</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageAddCommandConstructorError" xml:space="preserve">
+    <value>لا يمكن العثور على منشئ مع معلمة نوع بدففيوير في الفئة {0}</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageClipboardError" xml:space="preserve">
+    <value>قادر على نسخ البيانات إلى الحافظة.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageCurrentPageNumberOutOfRange" xml:space="preserve">
+    <value>رقم الصفحة الحالية يجب أن تكون أكبر من 0-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageDocumentClosing" xml:space="preserve">
+    <value>هل تريد حفظ التغييرات إلى المستند قبل إغلاق ذلك؟</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageDocumentClosingCaption" xml:space="preserve">
+    <value>إغلاق المستند</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageDocumentIsProtected" xml:space="preserve">
+    <value>محمي {0}</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageExportError" xml:space="preserve">
+    <value>حدث خطأ أثناء تصدير بيانات النموذج من المستند.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageImportError" xml:space="preserve">
+    <value>قادر على استيراد البيانات المحددة في النموذج المستند.
+{0}
+ الرجاء التأكد من أن البيانات المتوفرة تفي بمواصفات {1}.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageIncorrectMaxPrintingDpi" xml:space="preserve">
+    <value>ينبغي أن يكون الحد الأقصى لقيمة DPI طباعة أكبر من أو تساوي 0.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageIncorrectNavigationPaneVisibility" xml:space="preserve">
+    <value>رؤية جزء التنقل الحالية لا يمكن تعيين إلى PdfNavigationPaneVisibility.Default-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageIncorrectPageNumber" xml:space="preserve">
+    <value>رقم الصفحة يجب أن تكون أكبر من 0، وأقل من أو يساوي عدد الصفحات في المستند.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageIncorrectPassword" xml:space="preserve">
+    <value>كلمة المرور غير صحيحة. الرجاء التأكد من أنه لم يتم تمكين مفتاح Caps Lock.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageLoadingError" xml:space="preserve">
+    <value>قادر على تحميل وثيقة PDF لأنه لا يتوفر الملف التالي أو أنها ليست وثيقة PDF صالحة.
+{0}
+الرجاء التأكد من أن التطبيق يمكن الوصول إلى هذا الملف، وأن كان صالحاً، أو تحديد ملف آخر.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessagePrintError" xml:space="preserve">
+    <value>قادر على طباعة المستند. الرجاء الاتصال بمسؤول النظام الخاص بك.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSaveAsError" xml:space="preserve">
+    <value>لا يمكن حفظ وثيقة PDF بالاسم التالي: {0}.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSaveAttachmentError" xml:space="preserve">
+    <value>لا يمكن حفظ المرفق مع اسم الملف التالي: {0}-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSearchFinished" xml:space="preserve">
+    <value>انتهى البحث في المستند بأكمله. تم العثور على مطابقات لا أكثر-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSearchFinishedNoMatchesFound" xml:space="preserve">
+    <value>انتهى البحث في المستند بأكمله. تم العثور على أية تطابقات.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSecurityWarningCaption" xml:space="preserve">
+    <value>تحذير أمان</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSecurityWarningFileAttachmentOpening" xml:space="preserve">
+    <value>الوصول إلى تطبيق خارجي لفتح هذا الملف:
+'{0}'
+هل تريد فتحه؟</value>
+  </data>
+  <data name="XtraPdfViewerStringId.MessageSecurityWarningUriOpening" xml:space="preserve">
+    <value>الوثيقة تحاول الوصول إلى مورد خارجي باستخدام URL التالي:
+'{0}'
+هل تريد فتحه مع ذلك؟</value>
+  </data>
+  <data name="XtraPdfViewerStringId.NavigationPaneAttachmentsPageCaption" xml:space="preserve">
+    <value>المرفقات</value>
+  </data>
+  <data name="XtraPdfViewerStringId.NavigationPaneOutlinesPageCaption" xml:space="preserve">
+    <value>الإشارات المرجعية</value>
+  </data>
+  <data name="XtraPdfViewerStringId.NavigationPaneThumbnailsPageCaption" xml:space="preserve">
+    <value>مصغرات الصفحة</value>
+  </data>
+  <data name="XtraPdfViewerStringId.PageSize" xml:space="preserve">
+    <value>{0:0.00} × {1:0.00} في</value>
+  </data>
+  <data name="XtraPdfViewerStringId.PDFFileFilter" xml:space="preserve">
+    <value>ملفات PDF|*.pdf</value>
+  </data>
+  <data name="XtraPdfViewerStringId.PRNFileFilter" xml:space="preserve">
+    <value>الملفات القابلة للطباعة|*.prn| كافة الملفات|*.*</value>
+  </data>
+  <data name="XtraPdfViewerStringId.SelectionRibbonGroupCaption" xml:space="preserve">
+    <value>التحديد</value>
+  </data>
+  <data name="XtraPdfViewerStringId.ShowAnnotationPropertiesCommandCaption" xml:space="preserve">
+    <value>خصائص...</value>
+  </data>
+  <data name="XtraPdfViewerStringId.ShowAnnotationPropertiesCommandDescription" xml:space="preserve">
+    <value>يظهر مربع الحوار خصائص التعليق التوضيحي للتعليق التوضيحي المحدد.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextHighlightCommandCaption" xml:space="preserve">
+    <value>تسليط الضوء على</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextHighlightTextCommandDescription" xml:space="preserve">
+    <value>تسليط الضوء على النص-</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextStrikethroughCommandDescription" xml:space="preserve">
+    <value>نص يتوسطه خط.</value>
+  </data>
+  <data name="XtraPdfViewerStringId.TextUnderlineCommandDescription" xml:space="preserve">
+    <value>تسطير النص.</value>
+  </data>
+</root>

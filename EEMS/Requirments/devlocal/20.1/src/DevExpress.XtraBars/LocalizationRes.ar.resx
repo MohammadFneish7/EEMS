@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BarString.PopupMenuEditor" xml:space="preserve">
+    <value>Popup Menu Editor</value>
+  </data>
+  <data name="BarString.BarUnassignedItems" xml:space="preserve">
+    <value>(Unassigned Items)</value>
+  </data>
+  <data name="BarString.ShowShortcutKeysOnScreenTipsName" xml:space="preserve">
+    <value>Show shortcut keys in ScreenTips</value>
+  </data>
+  <data name="BarString.RibbonToolbarBelow" xml:space="preserve">
+    <value>&amp;Show Quick Access Toolbar Below the Ribbon</value>
+  </data>
+  <data name="BarString.CollapseRibbonSuperTipHeader" xml:space="preserve">
+    <value>Minimize the Ribbon (Ctrl+F1)</value>
+  </data>
+  <data name="BarString.CustomizeRibbon" xml:space="preserve">
+    <value>Customize the &amp;Ribbon...</value>
+  </data>
+  <data name="BarString.MenuAnimationRandom" xml:space="preserve">
+    <value>عشوائية</value>
+  </data>
+  <data name="BarString.RibbonToolbarRemove" xml:space="preserve">
+    <value>&amp;Remove from Quick Access Toolbar</value>
+  </data>
+  <data name="BarString.MaximizeButton" xml:space="preserve">
+    <value>تكبير</value>
+  </data>
+  <data name="BarString.ResetBar" xml:space="preserve">
+    <value>Are you sure you want to reset the changes made to the '{0}' toolbar?</value>
+  </data>
+  <data name="BarString.MenuAnimationFade" xml:space="preserve">
+    <value>Fade</value>
+  </data>
+  <data name="BarString.ToolbarNameCaption" xml:space="preserve">
+    <value>&amp;Toolbar Name:</value>
+  </data>
+  <data name="BarString.ExpandRibbonSuperTipText" xml:space="preserve">
+    <value>Show the Ribbon so that it is always expanded even after you click a command</value>
+  </data>
+  <data name="BarString.RibbonAllPages" xml:space="preserve">
+    <value>(All Pages)</value>
+  </data>
+  <data name="BarString.HelpButton" xml:space="preserve">
+    <value>مساعدة</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilterNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="BarString.RibbonToolbarAbove" xml:space="preserve">
+    <value>&amp;Show Quick Access Toolbar Above the Ribbon</value>
+  </data>
+  <data name="BarString.CloseButton" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="BarString.NewToolbarCustomNameFormat" xml:space="preserve">
+    <value>Custom {0}</value>
+  </data>
+  <data name="BarString.MinimizeButton" xml:space="preserve">
+    <value>تصغير</value>
+  </data>
+  <data name="BarString.CustomizeQuickAccessToolbar" xml:space="preserve">
+    <value>&amp;Customize Quick Access Toolbar...</value>
+  </data>
+  <data name="BarString.RestoreButton" xml:space="preserve">
+    <value>Restore Down</value>
+  </data>
+  <data name="BarString.MoreCommands" xml:space="preserve">
+    <value>&amp;More Commands...</value>
+  </data>
+  <data name="BarString.ShowScreenTipsOnToolbarsName" xml:space="preserve">
+    <value>إظهار تلميحات الشاشة على أشرطة الأدوات</value>
+  </data>
+  <data name="BarString.NewMenuName" xml:space="preserve">
+    <value>القائمة الرئيسية</value>
+  </data>
+  <data name="BarString.ResetBarCaption" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="BarString.BarAllItems" xml:space="preserve">
+    <value>(All Items)</value>
+  </data>
+  <data name="BarString.RibbonToolbarAdd" xml:space="preserve">
+    <value>&amp;Add to Quick Access Toolbar</value>
+  </data>
+  <data name="BarString.MenuAnimationNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="BarString.RibbonGalleryFilter" xml:space="preserve">
+    <value>All groups</value>
+  </data>
+  <data name="BarString.NewStatusBarName" xml:space="preserve">
+    <value>Status bar</value>
+  </data>
+  <data name="BarString.MenuAnimationSystem" xml:space="preserve">
+    <value>(System default)</value>
+  </data>
+  <data name="BarString.MenuAnimationSlide" xml:space="preserve">
+    <value>الشريحة</value>
+  </data>
+  <data name="BarString.CustomizeWindowCaption" xml:space="preserve">
+    <value>التخصيص</value>
+  </data>
+  <data name="BarString.RibbonToolbarMinimizeRibbon" xml:space="preserve">
+    <value>Mi&amp;nimize the Ribbon</value>
+  </data>
+  <data name="BarString.CustomizeButton" xml:space="preserve">
+    <value>&amp;Customize ...</value>
+  </data>
+  <data name="BarString.RibbonUnassignedPages" xml:space="preserve">
+    <value>(Unassigned Pages)</value>
+  </data>
+  <data name="BarString.AddOrRemove" xml:space="preserve">
+    <value>&amp;Add or Remove Buttons</value>
+  </data>
+  <data name="BarString.RenameToolbarCaption" xml:space="preserve">
+    <value>Rename Toolbar</value>
+  </data>
+  <data name="BarString.ResetButton" xml:space="preserve">
+    <value>&amp;Reset Toolbar</value>
+  </data>
+  <data name="BarString.ExpandRibbonSuperTipHeader" xml:space="preserve">
+    <value>Expand the Ribbon (Ctrl+F1)</value>
+  </data>
+  <data name="BarString.MenuAnimationUnfold" xml:space="preserve">
+    <value>Unfold</value>
+  </data>
+  <data name="BarString.CollapseRibbonSuperTipText" xml:space="preserve">
+    <value>Only show tab names on the Ribbon</value>
+  </data>
+  <data name="BarString.NewToolbarCaption" xml:space="preserve">
+    <value>New Toolbar</value>
+  </data>
+  <data name="BarString.NewToolbarName" xml:space="preserve">
+    <value>أدوات</value>
+  </data>
+  <data name="BarString.RibbonCustomizationAddText" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="BarString.CancelButton" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="BarString.RibbonCustomizationStandardCustomItemSuffix" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="BarString.RibbonCustomizationImportSettingsCommand" xml:space="preserve">
+    <value>استيراد ملف التخصيص</value>
+  </data>
+  <data name="BarString.RibbonCustomizationNewGroupCommand" xml:space="preserve">
+    <value>مجموعة جديدة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationNewGroupDefaultAlias" xml:space="preserve">
+    <value>مجموعة جديدة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationRenameText" xml:space="preserve">
+    <value>إعادة تسمية</value>
+  </data>
+  <data name="BarString.RibbonCustomizationExportSettingsCommand" xml:space="preserve">
+    <value>تصدير كافة التخصيصات</value>
+  </data>
+  <data name="BarString.RibbonCustomizationNewCategoryCommand" xml:space="preserve">
+    <value>فئة جديدة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationNewCategoryDefaultAlias" xml:space="preserve">
+    <value>فئة جديدة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationNewPageCommand" xml:space="preserve">
+    <value>علامة تبويب جديدة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationNewTabDefaultAlias" xml:space="preserve">
+    <value>علامة تبويب جديدة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationOptionAllCommands" xml:space="preserve">
+    <value>كافة الأوامر</value>
+  </data>
+  <data name="BarString.RibbonCustomizationOptionAllTabs" xml:space="preserve">
+    <value>كافة علامات التبويب</value>
+  </data>
+  <data name="BarString.RibbonCustomizationRemoveText" xml:space="preserve">
+    <value>إزالة</value>
+  </data>
+  <data name="BarString.RibbonCustomizationResetSettingsCommand" xml:space="preserve">
+    <value>إعادة تعيين كافة التخصيصات</value>
+  </data>
+  <data name="BarString.RibbonCustomizationUpText" xml:space="preserve">
+    <value>تحريك لأعلى</value>
+  </data>
+  <data name="BarString.Visible" xml:space="preserve">
+    <value>مرئية</value>
+  </data>
+  <data name="BarString.ColorAuto" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="BarString.ColorPickHueAxisName" xml:space="preserve">
+    <value>هوي</value>
+  </data>
+  <data name="BarString.RibbonSearchItemNullText" xml:space="preserve">
+    <value>البحث</value>
+  </data>
+  <data name="BarString.SkinCategoryDefault" xml:space="preserve">
+    <value>الافتراضي</value>
+  </data>
+  <data name="BarString.SkinCategoryCustom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="BarString.AccordionControlSearchBoxPromptText" xml:space="preserve">
+    <value>اكتب الكلمات الأساسية هنا</value>
+  </data>
+  <data name="BarString.ColorPickBlueValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون العنصر الأزرق في مجموعة 0..255</value>
+  </data>
+  <data name="BarString.ColorPickBrightnessAxisName" xml:space="preserve">
+    <value>السطوع</value>
+  </data>
+  <data name="BarString.ColorPickBrightValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون مكون السطوع في نطاق 0..100</value>
+  </data>
+  <data name="BarString.ColorPickColorHexValidationMsg" xml:space="preserve">
+    <value>القيمة الست عشرية غير صالحة</value>
+  </data>
+  <data name="BarString.ColorPickGreenValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون العنصر الأخضر في مجموعة 0..255</value>
+  </data>
+  <data name="BarString.ColorPickHueValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون العنصر هوي في نطاق 0..359</value>
+  </data>
+  <data name="BarString.ColorPickLuminanceAxisName" xml:space="preserve">
+    <value>الإنارة</value>
+  </data>
+  <data name="BarString.ColorPickOpacityAxisName" xml:space="preserve">
+    <value>العتامة</value>
+  </data>
+  <data name="BarString.ColorPickOpacityValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون العنصر العتامة في نطاق 0..255</value>
+  </data>
+  <data name="BarString.ColorPickPopupMoreColorsItemCaption" xml:space="preserve">
+    <value>مزيد من الألوان...</value>
+  </data>
+  <data name="BarString.ColorPickPopupRecentColorsGroupCaption" xml:space="preserve">
+    <value>الألوان المستخدمة مؤخرا</value>
+  </data>
+  <data name="BarString.ColorPickPopupStandardColorsGroupCaption" xml:space="preserve">
+    <value>الألوان القياسية</value>
+  </data>
+  <data name="BarString.ColorPickPopupThemeColorsGroupCaption" xml:space="preserve">
+    <value>ألوان السمة</value>
+  </data>
+  <data name="BarString.ColorPickRedValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون العنصر الأحمر في نطاق 0..255</value>
+  </data>
+  <data name="BarString.ColorPickSaturationAxisName" xml:space="preserve">
+    <value>التشبع</value>
+  </data>
+  <data name="BarString.ColorPickSaturationValidationMsg" xml:space="preserve">
+    <value>ينبغي أن يكون العنصر التشبع في نطاق 0..100</value>
+  </data>
+  <data name="BarString.ColorTabWebSafeColors" xml:space="preserve">
+    <value>ويب أمن</value>
+  </data>
+  <data name="BarString.CustomizeToolbarSuperTipText" xml:space="preserve">
+    <value>تخصيص شريط أدوات الوصول السريع</value>
+  </data>
+  <data name="BarString.CustomizeToolbarText" xml:space="preserve">
+    <value>تخصيص شريط الأدوات</value>
+  </data>
+  <data name="BarString.FullScreenButton" xml:space="preserve">
+    <value>خيارات عرض الشريط</value>
+  </data>
+  <data name="BarString.RibbonCaptionTextNone" xml:space="preserve">
+    <value>لا يوجد اسم</value>
+  </data>
+  <data name="BarString.RibbonCustomizationDownText" xml:space="preserve">
+    <value>تحريك لأسفل</value>
+  </data>
+  <data name="BarString.RibbonCustomizationResetSelectedTabSettingsCommand" xml:space="preserve">
+    <value>إعادة تعيين علامة تبويب الشريط المحدد فقط</value>
+  </data>
+  <data name="BarString.RibbonExpandedItemCaption" xml:space="preserve">
+    <value>إظهار علامات التبويب والأوامر</value>
+  </data>
+  <data name="BarString.RibbonExpandedItemDescription" xml:space="preserve">
+    <value>"الشريط إظهار" علامات التبويب والأوامر طوال الوقت-</value>
+  </data>
+  <data name="BarString.RibbonFullScreenItemCaption" xml:space="preserve">
+    <value>صناعة السيارات في إخفاء الشريط</value>
+  </data>
+  <data name="BarString.RibbonFullScreenItemDescription" xml:space="preserve">
+    <value>إخفاء الشريط. انقر فوق في الجزء العلوي من التطبيق يظهر به</value>
+  </data>
+  <data name="BarString.RibbonMinimizedItemCaption" xml:space="preserve">
+    <value>إظهار علامات التبويب</value>
+  </data>
+  <data name="BarString.RibbonMinimizedItemDescription" xml:space="preserve">
+    <value>"الشريط إظهار" علامات التبويب فقط. انقر فوق علامة تبويب لعرض الأوامر.</value>
+  </data>
+  <data name="BarString.RibbonSearchItemNoMatchesFound" xml:space="preserve">
+    <value>لا توجد تطابقات</value>
+  </data>
+  <data name="BarString.RibbonTouchMouseModeCommandText" xml:space="preserve">
+    <value>وضع اللمس/الماوس</value>
+  </data>
+  <data name="BarString.RibbonTouchMouseModeGalleryGroupText" xml:space="preserve">
+    <value>تحسين الفضاء بين الأوامر.</value>
+  </data>
+  <data name="BarString.RibbonTouchMouseModeMouseItemDescription" xml:space="preserve">
+    <value>القياسية والأوامر. الأمثل للاستخدام مع ماوس.</value>
+  </data>
+  <data name="BarString.RibbonTouchMouseModeMouseItemText" xml:space="preserve">
+    <value>الماوس</value>
+  </data>
+  <data name="BarString.RibbonTouchMouseModeTouchItemDescription" xml:space="preserve">
+    <value>مساحة أكبر بين الأوامر. الأمثل للاستخدام مع لمسة.</value>
+  </data>
+  <data name="BarString.RibbonTouchMouseModeTouchItemText" xml:space="preserve">
+    <value>تعمل باللمس</value>
+  </data>
+  <data name="BarString.SkinCaptions" xml:space="preserve">
+    <value>| نمط DevExpress| كراميل | مال التوائم| DevExpress نمط الظلام|iMaginary| ليليان | أسود | أزرق | مكتب 2010 الأزرق| مكتب 2010 أسود| مكتب 2010 فضة| مكتب 2007 الأزرق| مكتب 2007 أسود| مكتب 2007 فضة| مكتب 2007 الأخضر| مكتب 2007 الوردي| سبعة | سبعة كلاسيك| غرفة مظلمة| مكسكين| شارب | شارب بلس| ضبابي| الجانب المظلم| عيد الميلاد (أزرق)| فصل الربيع | الصيف | اليقطين | عيد الحب | ستاردست| قهوة | المحيطات الزجاجية | تباين عالي| سماء سائلة| لندن السائل السماء | عالم الأسفلت | مخطط | وايت برينت| استوديو البصرية 2010| متروبوليس | متروبوليس دارك| مكتب 2013 أبيض| مكتب 2013 رمادي داكن| مكتب 2013 رمادي فاتح| استوديو البصرية 2013 الأزرق| استوديو البصرية 2013 الظلام| استوديو البصرية 2013 ضوء | مكتب 2016 الملونة| مكتب 2016 الظلام| مكتب 2016 أسود| أساسي | البيزيير | مكتب 2019 ملون| مكتب 2019 أسود| مكتب 2019 أبيض| مكتب 2019 الظلام|</value>
+  </data>
+  <data name="BarString.SkinCategoryLatestOfficeSkins" xml:space="preserve">
+    <value>آخر أسطح Office</value>
+  </data>
+  <data name="BarString.SkinCategoryPreviousOfficeSkins" xml:space="preserve">
+    <value>أسطح Office السابقة الجلود</value>
+  </data>
+  <data name="BarString.SkinCategoryRetro3D" xml:space="preserve">
+    <value>ريترو 3D</value>
+  </data>
+  <data name="BarString.SkinCategoryRetroFlat" xml:space="preserve">
+    <value>ريترو مسطحة</value>
+  </data>
+  <data name="BarString.SkinCategorySeasonal" xml:space="preserve">
+    <value>الموسمية</value>
+  </data>
+  <data name="BarString.SkinCategorySVG" xml:space="preserve">
+    <value>متجه</value>
+  </data>
+  <data name="BarString.SkinCategoryThematic" xml:space="preserve">
+    <value>المواضيعية</value>
+  </data>
+  <data name="BarString.SkinCategoryThematicFlat" xml:space="preserve">
+    <value>شقة</value>
+  </data>
+  <data name="BarString.SkinCategoryVisualStudio" xml:space="preserve">
+    <value>البصرية</value>
+  </data>
+  <data name="BarString.SkinPaletteGalleryDisabledItemCaption" xml:space="preserve">
+    <value>تحديد سطح ناقل إطلاق العنان للحوامل-</value>
+  </data>
+  <data name="BarString.SkinPaletteGalleryDisabledItemDescription" xml:space="preserve">
+    <value>الحوامل هي لوحات ملونة بتعديل نظام الألوان البشرة.</value>
+  </data>
+  <data name="BarString.SkinsBonus" xml:space="preserve">
+    <value>جلود مكافأة</value>
+  </data>
+  <data name="BarString.SkinsCustom" xml:space="preserve">
+    <value>جلود مخصصة</value>
+  </data>
+  <data name="BarString.SkinsMain" xml:space="preserve">
+    <value>جلود القياسية</value>
+  </data>
+  <data name="BarString.SkinsOffice" xml:space="preserve">
+    <value>مكتب جلود</value>
+  </data>
+  <data name="BarString.SkinsTheme" xml:space="preserve">
+    <value>موضوع الجلود</value>
+  </data>
+  <data name="BarString.SwitchRibbonsSuperTipHeader" xml:space="preserve">
+    <value>تبديل الأشرطة</value>
+  </data>
+  <data name="BarString.SwitchRibbonsSuperTipText" xml:space="preserve">
+    <value>التبديل بين الشريط مبسطة والشريط الكلاسيكية</value>
+  </data>
+  <data name="BarString.ToolBarMenu" xml:space="preserve">
+    <value>وإعادة تعيين $&amp; حذف $! &amp; اسم $!ديفو &amp; lt نمط $&amp; "نص فقط" (دائماً) $Text &amp; فقط (في القوائم) $Image &amp; ونص $!تبدأ المجموعة $&amp;$ مرئية &amp; &amp; وفي الآونة الأخيرة استخدمت</value>
+  </data>
+</root>

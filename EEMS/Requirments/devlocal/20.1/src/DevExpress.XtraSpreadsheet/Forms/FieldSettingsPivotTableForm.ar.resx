@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>إعدادات الحقل</value>
+  </data>
+  <data name="btnCancel.AccessibleName" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="btnNumberFormat.AccessibleName" xml:space="preserve">
+    <value>تنسيق الأرقام</value>
+  </data>
+  <data name="btnNumberFormat.Text" xml:space="preserve">
+    <value>&amp; تنسيق الرقم</value>
+  </data>
+  <data name="btnOk.AccessibleName" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="chkAutomaticSubtotal.Properties.AccessibleName" xml:space="preserve">
+    <value>التلقائي</value>
+  </data>
+  <data name="chkAutomaticSubtotal.Properties.Caption" xml:space="preserve">
+    <value>&amp; التلقائي</value>
+  </data>
+  <data name="chkCompactForm.Properties.AccessibleName" xml:space="preserve">
+    <value>عرض التسميات الموجودة في الحقل التالي في نفس العمود (شكل مضغوط)</value>
+  </data>
+  <data name="chkCompactForm.Properties.Caption" xml:space="preserve">
+    <value>&amp; عرض التسميات الموجودة في الحقل التالي في نفس العمود (شكل مضغوط)</value>
+  </data>
+  <data name="chkCustomSubtotal.Properties.AccessibleName" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="chkCustomSubtotal.Properties.Caption" xml:space="preserve">
+    <value>&amp; مخصص</value>
+  </data>
+  <data name="chkIncludeNewItems.Properties.Caption" xml:space="preserve">
+    <value>وتضمين عناصر جديدة في التصفية اليدوية</value>
+  </data>
+  <data name="chkInsertBlankLine.Properties.AccessibleName" xml:space="preserve">
+    <value>إدراج سطر فارغ بعد كل تسمية عنصر</value>
+  </data>
+  <data name="chkInsertBlankLine.Properties.Caption" xml:space="preserve">
+    <value>إدراج &amp; سطر فارغ بعد كل تسمية عنصر</value>
+  </data>
+  <data name="chkInsertPageBreak.Properties.AccessibleName" xml:space="preserve">
+    <value>إدراج فاصل صفحة بعد كل عنصر</value>
+  </data>
+  <data name="chkInsertPageBreak.Properties.Caption" xml:space="preserve">
+    <value>كسر إدراج &amp; صفحة بعد كل عنصر</value>
+  </data>
+  <data name="chkNoneSubtotal.Properties.AccessibleName" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="chkNoneSubtotal.Properties.Caption" xml:space="preserve">
+    <value>غير &amp; ه</value>
+  </data>
+  <data name="chkRepeatItemLabels.Properties.AccessibleName" xml:space="preserve">
+    <value>تكرار تسميات العناصر</value>
+  </data>
+  <data name="chkRepeatItemLabels.Properties.Caption" xml:space="preserve">
+    <value>&amp; تكرار تسميات العناصر</value>
+  </data>
+  <data name="chkShowItemLabelsOutlineForm.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار تسميات العناصر على شكل مخطط تفصيلي</value>
+  </data>
+  <data name="chkShowItemLabelsOutlineForm.Properties.Caption" xml:space="preserve">
+    <value>واظهار تسميات العناصر على شكل مخطط تفصيلي</value>
+  </data>
+  <data name="chkShowItemLabelsTabularForm.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار تسميات العناصر على شكل جدول</value>
+  </data>
+  <data name="chkShowItemLabelsTabularForm.Properties.Caption" xml:space="preserve">
+    <value>إظهار &amp; البند التسميات في نموذج جدولي</value>
+  </data>
+  <data name="chkShowItemWithNoData.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار العناصر مع أية بيانات</value>
+  </data>
+  <data name="chkShowItemWithNoData.Properties.Caption" xml:space="preserve">
+    <value>شو &amp; w العناصر دون بيانات</value>
+  </data>
+  <data name="chkSubtotalTop.Properties.AccessibleName" xml:space="preserve">
+    <value>عرض الإجماليات الفرعية في الجزء العلوي من كل مجموعة</value>
+  </data>
+  <data name="chkSubtotalTop.Properties.Caption" xml:space="preserve">
+    <value>العرض الفرعية والإجماليات في الجزء العلوي من كل مجموعة</value>
+  </data>
+  <data name="edtCustomName.Properties.AccessibleName" xml:space="preserve">
+    <value>اسم مخصص</value>
+  </data>
+  <data name="lbFunctions.AccessibleName" xml:space="preserve">
+    <value>وظائف</value>
+  </data>
+  <data name="lblCustomName.AccessibleName" xml:space="preserve">
+    <value>اسم مخصص</value>
+  </data>
+  <data name="lblCustomName.Text" xml:space="preserve">
+    <value>نا مخصصة &amp; لي:</value>
+  </data>
+  <data name="lblFilter.AccessibleName" xml:space="preserve">
+    <value>عامل التصفية</value>
+  </data>
+  <data name="lblFilter.Text" xml:space="preserve">
+    <value>عامل التصفية</value>
+  </data>
+  <data name="lblLayout.AccessibleName" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="lblLayout.Text" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="lblPrint.AccessibleName" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="lblPrint.Text" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="lblSelectFunctions.AccessibleName" xml:space="preserve">
+    <value>حدد مهمة واحدة أو أكثر</value>
+  </data>
+  <data name="lblSelectFunctions.Text" xml:space="preserve">
+    <value>حدد واحد أو أكثر من وظائف:</value>
+  </data>
+  <data name="lblSourceName.AccessibleName" xml:space="preserve">
+    <value>اسم المصدر</value>
+  </data>
+  <data name="lblSourceName.Text" xml:space="preserve">
+    <value>اسم المصدر:</value>
+  </data>
+  <data name="lblSourceNameValue.AccessibleName" xml:space="preserve">
+    <value>قيمة اسم المصدر</value>
+  </data>
+  <data name="lblSubtotals.AccessibleName" xml:space="preserve">
+    <value>المجاميع الفرعية</value>
+  </data>
+  <data name="lblSubtotals.Text" xml:space="preserve">
+    <value>المجاميع الفرعية</value>
+  </data>
+  <data name="xtraTabLayoutAndPrint.AccessibleName" xml:space="preserve">
+    <value>تخطيط &amp; طباعة</value>
+  </data>
+  <data name="xtraTabLayoutAndPrint.Text" xml:space="preserve">
+    <value>تخطيط &amp; &amp; طباعة</value>
+  </data>
+  <data name="xtraTabSubtotalsAndFilters.AccessibleName" xml:space="preserve">
+    <value>الإجماليات الفرعية &amp; عوامل تصفية</value>
+  </data>
+  <data name="xtraTabSubtotalsAndFilters.Text" xml:space="preserve">
+    <value>الإجماليات الفرعية &amp; &amp; عوامل التصفية</value>
+  </data>
+</root>

@@ -809,7 +809,7 @@ Public Class frmCompanyReport
         End If
         Try
             loadGeneralReport()
-            Dim frm As New frmDataViewer("كشف عام", dtGeneralReport, False)
+            Dim frm As New frmDataViewer("كشف عام تفصيلي", dtGeneralReport, False)
             frm.ShowDialog()
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
@@ -1058,7 +1058,7 @@ Public Class frmCompanyReport
 	                         from CounterHistory ch join Registration r  on ch.regid = r.id join Client c on r.clientid=c.ID
 	                         group by r.ID,c.id, r.insurance,c.clientname, c.phone, c.mobile
                         ) as innertable group by innertable.cid, cname,cphone,cmobile")
-            Dim frm As New frmDataViewer("كشف مكسورات الزبائن", ac.ds.Tables(0), False)
+            Dim frm As New frmDataViewer("كشف عام حسب الزبون", ac.ds.Tables(0), False)
             frm.ShowDialog()
         Catch ex As Exception
             ErrorDialog.showDlg(ex)

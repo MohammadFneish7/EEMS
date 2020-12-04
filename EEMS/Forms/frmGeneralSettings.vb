@@ -24,6 +24,8 @@ Public Class frmGeneralSettings
                 txtnote3.Text = dr.Item(1).ToString.Trim.ToLower
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceyoffset") Then
                 NumericUpDown1.Value = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
+                CheckBox1.Checked = Boolean.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
         Next
     End Sub
@@ -36,16 +38,21 @@ Public Class frmGeneralSettings
             End If
 
             a.ExecuteNoReturn("delete from DefinedKeys where reference='" & selectionKeyReference.ToLower & "'")
-            a.ExecuteNoReturn("insert into DefinedKeys (dkey,title,reference) values('orgname','" & txtname.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " & _
-                              "('invoiceyoffset','" & NumericUpDown1.Value & "','" & selectionKeyReference.ToLower & "'), " & _
-                              "('note1','" & txtnote1.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " & _
-                              "('note2','" & txtnote2.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " & _
+            a.ExecuteNoReturn("insert into DefinedKeys (dkey,title,reference) values('orgname','" & txtname.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('invoiceyoffset','" & NumericUpDown1.Value & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('roundToThousand','" & CheckBox1.Checked & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('note1','" & txtnote1.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('note2','" & txtnote2.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note3','" & txtnote3.Text.Trim & "','" & selectionKeyReference.ToLower & "') ")
+
             orgname = txtname.Text.Trim
             invoiceYOffset = NumericUpDown1.Value
+            roundToThousand = CheckBox1.Checked
+
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
         Me.Dispose()
     End Sub
+
 End Class

@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>خيارات PivotTable</value>
+  </data>
+  <data name="btnCancel.AccessibleName" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="btnOk.AccessibleName" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="btnOk.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="chkAutofitColumnWidths.Properties.AccessibleName" xml:space="preserve">
+    <value>احتواء تلقائي لعرض الأعمدة في التحديث</value>
+  </data>
+  <data name="chkAutofitColumnWidths.Properties.Caption" xml:space="preserve">
+    <value>واحتواء تلقائي لعرض الأعمدة في التحديث</value>
+  </data>
+  <data name="chkDisplayFieldAndFilter.Properties.AccessibleName" xml:space="preserve">
+    <value>عرض التسميات التوضيحية للحقول وتصفية إسقاط داونز</value>
+  </data>
+  <data name="chkDisplayFieldAndFilter.Properties.Caption" xml:space="preserve">
+    <value>&amp; عرض التسميات التوضيحية للحقول وتصفية إسقاط داونز</value>
+  </data>
+  <data name="chkDisplayItemLabels.Properties.AccessibleName" xml:space="preserve">
+    <value>دمج وتوسيط الخلايا مع التسميات</value>
+  </data>
+  <data name="chkDisplayItemLabels.Properties.Caption" xml:space="preserve">
+    <value>عرض تسميات العناصر عندما لا &amp; الحقول في ناحية القيم</value>
+  </data>
+  <data name="chkEmptyCellsShow.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار ما يلي للخلايا الفارغة</value>
+  </data>
+  <data name="chkEmptyCellsShow.Properties.Caption" xml:space="preserve">
+    <value>للخلايا الفارغة واظهار:</value>
+  </data>
+  <data name="chkEnableCellEditing.Properties.AccessibleName" xml:space="preserve">
+    <value>تمكين تحرير في مجال قيم الخلية</value>
+  </data>
+  <data name="chkEnableCellEditing.Properties.Caption" xml:space="preserve">
+    <value>&amp; تمكين الخلية التحرير في ناحية القيم</value>
+  </data>
+  <data name="chkEnableShowDetails.Properties.AccessibleName" xml:space="preserve">
+    <value>تمكين إظهار التفاصيل</value>
+  </data>
+  <data name="chkEnableShowDetails.Properties.Caption" xml:space="preserve">
+    <value>&amp; تمكين إظهار التفاصيل</value>
+  </data>
+  <data name="chkErrorValuesShow.Properties.AccessibleName" xml:space="preserve">
+    <value>تظهر قيمة الخطأ</value>
+  </data>
+  <data name="chkErrorValuesShow.Properties.Caption" xml:space="preserve">
+    <value>أجل &amp; خطأ القيم العرض:</value>
+  </data>
+  <data name="chkGrandTotalsColumns.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار الإجماليات الكلية للأعمدة</value>
+  </data>
+  <data name="chkGrandTotalsColumns.Properties.Caption" xml:space="preserve">
+    <value>إظهار &amp; الإجماليات الكلية للأعمدة</value>
+  </data>
+  <data name="chkGrandTotalsRows.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار الإجماليات الكلية للصفوف</value>
+  </data>
+  <data name="chkGrandTotalsRows.Properties.Caption" xml:space="preserve">
+    <value>&amp; عرض المجاميع الكلية للصفوف</value>
+  </data>
+  <data name="chkMergeAndCenterCells.Properties.AccessibleName" xml:space="preserve">
+    <value>دمج وتوسيط الخلايا مع التسميات</value>
+  </data>
+  <data name="chkMergeAndCenterCells.Properties.Caption" xml:space="preserve">
+    <value>&amp; دمج وتوسيط الخلايا مع التسميات</value>
+  </data>
+  <data name="chkMultipleFiltersField.Properties.AccessibleName" xml:space="preserve">
+    <value>السماح بعوامل تصفية متعددة لكل حقل</value>
+  </data>
+  <data name="chkMultipleFiltersField.Properties.Caption" xml:space="preserve">
+    <value>&amp; السماح بعوامل تصفية متعددة لكل حقل</value>
+  </data>
+  <data name="chkPreserveCellFormatting.Properties.AccessibleName" xml:space="preserve">
+    <value>المحافظة على تنسيق الخلية عند التحديث</value>
+  </data>
+  <data name="chkPreserveCellFormatting.Properties.Caption" xml:space="preserve">
+    <value>والمحافظة على تنسيق الخلية عند التحديث</value>
+  </data>
+  <data name="chkPrintExpandColapseButtons.Properties.AccessibleName" xml:space="preserve">
+    <value>أزرار توسيع/طي الطباعة عند عرض PivotTable</value>
+  </data>
+  <data name="chkPrintExpandColapseButtons.Properties.Caption" xml:space="preserve">
+    <value>&amp; طباعة أزرار توسيع/طي عند عرض PivotTable</value>
+  </data>
+  <data name="chkRepeatRowLabels.Properties.AccessibleName" xml:space="preserve">
+    <value>تكرار تسميات الصفوف على كل صفحة مطبوعة</value>
+  </data>
+  <data name="chkRepeatRowLabels.Properties.Caption" xml:space="preserve">
+    <value>&amp; تكرار تسميات الصف على كل صفحة مطبوعة</value>
+  </data>
+  <data name="chkRerfeshData.Properties.AccessibleName" xml:space="preserve">
+    <value>تحديث البيانات عند فتح الملف</value>
+  </data>
+  <data name="chkRerfeshData.Properties.Caption" xml:space="preserve">
+    <value>&amp; تحديث البيانات عند فتح الملف</value>
+  </data>
+  <data name="chkSaveSourceDataWithFile.Properties.AccessibleName" xml:space="preserve">
+    <value>حفظ مصدر البيانات مع الملف</value>
+  </data>
+  <data name="chkSaveSourceDataWithFile.Properties.Caption" xml:space="preserve">
+    <value>&amp; حفظ مصدر البيانات مع الملف</value>
+  </data>
+  <data name="chkSetPrintTitles.Properties.AccessibleName" xml:space="preserve">
+    <value>تعيين عناوين الطباعة</value>
+  </data>
+  <data name="chkSetPrintTitles.Properties.Caption" xml:space="preserve">
+    <value>&amp; تعيين عناوين الطباعة</value>
+  </data>
+  <data name="chkShowContextualTooltips.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار تلميحات الأدوات السياقية</value>
+  </data>
+  <data name="chkShowContextualTooltips.Properties.Caption" xml:space="preserve">
+    <value>إظهار &amp; تلميحات الأدوات السياقية</value>
+  </data>
+  <data name="chkShowExpandCollapseButtons.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار أزرار توسيع/طي</value>
+  </data>
+  <data name="chkShowExpandCollapseButtons.Properties.Caption" xml:space="preserve">
+    <value>&amp; عرض أزرار توسيع/طي</value>
+  </data>
+  <data name="chkShowItemsWithNoDataOnColumns.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار العناصر دون بيانات في أعمدة</value>
+  </data>
+  <data name="chkShowItemsWithNoDataOnColumns.Properties.Caption" xml:space="preserve">
+    <value>إظهار &amp; العناصر دون بيانات في أعمدة</value>
+  </data>
+  <data name="chkShowItemsWithNoDataOnRows.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار العناصر دون بيانات في صفوف</value>
+  </data>
+  <data name="chkShowItemsWithNoDataOnRows.Properties.Caption" xml:space="preserve">
+    <value>وتبين أنها &amp; ems مع أية بيانات في صفوف</value>
+  </data>
+  <data name="chkShowPropertiesInTooltips.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار الخصائص في تلميحات الأدوات</value>
+  </data>
+  <data name="chkShowPropertiesInTooltips.Properties.Caption" xml:space="preserve">
+    <value>إظهار الخصائص في &amp; تلميحات الأدوات</value>
+  </data>
+  <data name="chkShowTheValuesRow.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار صف القيم</value>
+  </data>
+  <data name="chkShowTheValuesRow.Properties.Caption" xml:space="preserve">
+    <value>وتبين &amp; صف القيم</value>
+  </data>
+  <data name="chkSubtotalFilteredItems.Properties.AccessibleName" xml:space="preserve">
+    <value>عناصر الصفحة المصفاة المجموع الفرعي</value>
+  </data>
+  <data name="chkSubtotalFilteredItems.Properties.Caption" xml:space="preserve">
+    <value>المجموع الفرعي &amp; عناصر الصفحة المصفاة</value>
+  </data>
+  <data name="chkUseCustomLists.Properties.AccessibleName" xml:space="preserve">
+    <value>استخدام قوائم مخصصة عند فرز</value>
+  </data>
+  <data name="chkUseCustomLists.Properties.Caption" xml:space="preserve">
+    <value>مخصص استخدام &amp; القوائم عند الفرز</value>
+  </data>
+  <data name="edtDecsription.Properties.AccessibleName" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="edtEmptyCellsShow.Properties.AccessibleName" xml:space="preserve">
+    <value>إظهار ما يلي للخلايا الفارغة</value>
+  </data>
+  <data name="edtErrorValuesShow.Properties.AccessibleName" xml:space="preserve">
+    <value>تظهر قيمة الخطأ</value>
+  </data>
+  <data name="edtFieldsReportFilterArea.Properties.AccessibleName" xml:space="preserve">
+    <value>عرض الحقول في ناحية تصفية التقرير</value>
+  </data>
+  <data name="edtIndentRowLabels.Properties.AccessibleName" xml:space="preserve">
+    <value>عندما تكون في نموذج مضغوط مسافة بادئة تسميات الصفوف</value>
+  </data>
+  <data name="edtNumberOfItems.Properties.AccessibleName" xml:space="preserve">
+    <value>عدد العناصر التي سيتم الاحتفاظ بها لكل حقل</value>
+  </data>
+  <data name="edtPivotTableName.Properties.AccessibleName" xml:space="preserve">
+    <value>اسم PivotTable</value>
+  </data>
+  <data name="edtReportFilterFields.Properties.AccessibleName" xml:space="preserve">
+    <value>حقول تصفية التقرير</value>
+  </data>
+  <data name="edtTitle.Properties.AccessibleName" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="lblAltText.AccessibleName" xml:space="preserve">
+    <value>الألقاب والأوصاف توفير تمثيل بديل، يستند إلى نص</value>
+  </data>
+  <data name="lblAltText.Text" xml:space="preserve">
+    <value>الألقاب والأوصاف توفير تمثيل بديل، يستند إلى نص
+المعلومات الواردة في الجداول. هذه المعلومات غير مفيدة للناس مع الرؤية
+أو الإعاقات الإدراكية الذين قد لا تكون قادراً على رؤية أو فهم الجدول. A
+العنوان يمكن قراءتها لشخص المعوق ويتم استخدامه لتحديد ما إذا كان
+يرغبون في سماع وصف المحتوى.</value>
+  </data>
+  <data name="lblCharacters.AccessibleName" xml:space="preserve">
+    <value>الأحرف</value>
+  </data>
+  <data name="lblCharacters.Text" xml:space="preserve">
+    <value>حرف (أحرف)</value>
+  </data>
+  <data name="lblColumn.AccessibleName" xml:space="preserve">
+    <value>العمود</value>
+  </data>
+  <data name="lblColumn.Text" xml:space="preserve">
+    <value>العمود:</value>
+  </data>
+  <data name="lblDescription.AccessibleName" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>&amp; الوصف</value>
+  </data>
+  <data name="lblDisplay.AccessibleName" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="lblDisplay.Text" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="lblFieldList.AccessibleName" xml:space="preserve">
+    <value>قائمة الحقول</value>
+  </data>
+  <data name="lblFieldList.Text" xml:space="preserve">
+    <value>قائمة الحقول</value>
+  </data>
+  <data name="lblFieldsReportFilterArea.AccessibleName" xml:space="preserve">
+    <value>عرض الحقول في ناحية تصفية التقرير</value>
+  </data>
+  <data name="lblFieldsReportFilterArea.Text" xml:space="preserve">
+    <value>&amp; عرض الحقول في ناحية تصفية التقرير:</value>
+  </data>
+  <data name="lblFilters.AccessibleName" xml:space="preserve">
+    <value>عوامل التصفية</value>
+  </data>
+  <data name="lblFilters.Text" xml:space="preserve">
+    <value>عوامل التصفية</value>
+  </data>
+  <data name="lblFormat.AccessibleName" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="lblFormat.Text" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="lblGrandTotals.AccessibleName" xml:space="preserve">
+    <value>المجاميع الكلية</value>
+  </data>
+  <data name="lblGrandTotals.Text" xml:space="preserve">
+    <value>المجاميع الكلية</value>
+  </data>
+  <data name="lblIndentRowLabels.AccessibleName" xml:space="preserve">
+    <value>عندما تكون في نموذج مضغوط مسافة بادئة تسميات الصفوف</value>
+  </data>
+  <data name="lblIndentRowLabels.Text" xml:space="preserve">
+    <value>عندما تكون في &amp; المسافة البادئة في نموذج مضغوط صف التسميات:</value>
+  </data>
+  <data name="lblLayout.AccessibleName" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="lblLayout.Text" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="lblNumberOfItems.AccessibleName" xml:space="preserve">
+    <value>عدد العناصر التي سيتم الاحتفاظ بها لكل حقل</value>
+  </data>
+  <data name="lblNumberOfItems.Text" xml:space="preserve">
+    <value>&amp; عدد العناصر التي سيتم الاحتفاظ بها لكل حقل:</value>
+  </data>
+  <data name="lblPivotTableData.AccessibleName" xml:space="preserve">
+    <value>بيانات PivotTable</value>
+  </data>
+  <data name="lblPivotTableData.Text" xml:space="preserve">
+    <value>بيانات PivotTable</value>
+  </data>
+  <data name="lblPivotTableName.AccessibleName" xml:space="preserve">
+    <value>اسم PivotTable</value>
+  </data>
+  <data name="lblPivotTableName.Text" xml:space="preserve">
+    <value>PivotTable &amp; الاسم:</value>
+  </data>
+  <data name="lblPrint.AccessibleName" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="lblPrint.Text" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="lblReportFilterFields.AccessibleName" xml:space="preserve">
+    <value>حقول تصفية التقرير لكل</value>
+  </data>
+  <data name="lblReportFilterFields.Text" xml:space="preserve">
+    <value>عامل تصفية التقرير والحقول لكل</value>
+  </data>
+  <data name="lblRetainItemsDeletedFromTheDataSource.AccessibleName" xml:space="preserve">
+    <value>الاحتفاظ العناصر المحذوفة من مصدر البيانات</value>
+  </data>
+  <data name="lblRetainItemsDeletedFromTheDataSource.Text" xml:space="preserve">
+    <value>الاحتفاظ العناصر المحذوفة من مصدر البيانات</value>
+  </data>
+  <data name="lblRow.AccessibleName" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="lblRow.Text" xml:space="preserve">
+    <value>صف:</value>
+  </data>
+  <data name="lblSorting.AccessibleName" xml:space="preserve">
+    <value>الفرز</value>
+  </data>
+  <data name="lblSorting.Text" xml:space="preserve">
+    <value>الفرز</value>
+  </data>
+  <data name="lblTitle.AccessibleName" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>&amp; العنوان</value>
+  </data>
+  <data name="lblWhatIfAnalysis.AccessibleName" xml:space="preserve">
+    <value>تحليل ماذا لو</value>
+  </data>
+  <data name="lblWhatIfAnalysis.Text" xml:space="preserve">
+    <value>تحليل ماذا لو</value>
+  </data>
+  <data name="rgrpSort.Properties.AccessibleName" xml:space="preserve">
+    <value>الفرز</value>
+  </data>
+  <data name="rgrpSort.Properties.Items1" xml:space="preserve">
+    <value>فرز &amp; من الألف إلى الياء</value>
+  </data>
+  <data name="rgrpSort.Properties.Items3" xml:space="preserve">
+    <value>الفرز في البيانات المصدر اوردي &amp; r</value>
+  </data>
+  <data name="xtraTabAltText.Text" xml:space="preserve">
+    <value>النص البديل</value>
+  </data>
+  <data name="xtraTabData.Text" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="xtraTabDisplay.Text" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="xtraTabLayoutAndFormat.Text" xml:space="preserve">
+    <value>تخطيط &amp; &amp; تنسيق</value>
+  </data>
+  <data name="xtraTabPrinting.Text" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="xtraTabTotalsAndFilters.Text" xml:space="preserve">
+    <value>المجاميع &amp; &amp; عوامل التصفية</value>
+  </data>
+</root>

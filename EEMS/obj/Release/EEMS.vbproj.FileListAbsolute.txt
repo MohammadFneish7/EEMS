@@ -472,7 +472,6 @@ C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Releas
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.frmCurrentPayments.resources
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.frmReportViewer.resources
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.frmChangePass.resources
-C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.XtraReport1.resources
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.vbproj.GenerateResource.cache
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.exe.licenses
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\bin\Release\EEMS.exe.config
@@ -756,3 +755,5 @@ C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Releas
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.exe
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.xml
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.pdb
+C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.vbprojAssemblyReference.cache
+C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\bin\Release\Logo\logo.jpg

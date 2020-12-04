@@ -13,6 +13,12 @@ ALTER TABLE CounterHistory DROP CONSTRAINT fk_CounterHistoryArabicMonth;
 ALTER TABLE Payment DROP CONSTRAINT fk_PaymentCounterHistory;
 ALTER TABLE UserRoles DROP CONSTRAINT fk_UserRolesUsers;
 ALTER TABLE UserRoles DROP CONSTRAINT fk_UserRolesRoles;
+ALTER TABLE Purchases DROP CONSTRAINT fk_PurchasesItems;
+ALTER TABLE Consumption DROP CONSTRAINT fk_ConsumptionItems;
+ALTER TABLE FuelPurchases DROP CONSTRAINT fk_FuelPurchasesFuelTank;
+ALTER TABLE FuelConsumption DROP CONSTRAINT fk_FuelConsumptionFuelTank;
+ALTER TABLE FuelConsumption DROP CONSTRAINT fk_FuelConsumptionEngine;
+ALTER TABLE Maintenance DROP CONSTRAINT fk_Maintenance;
 GO
 
 GO
@@ -44,7 +50,7 @@ CREATE TABLE ECounter (ID INT IDENtity(1,1) PRIMARY KEY,serial VARCHAR(50) NOT N
 CREATE TABLE ElectricBox (ID INT IDENtity(1,1) PRIMARY KEY,code VARCHAR(10) NOT NULL,location VARCHAR(50),collectorid INT NOT NULL,engineid INT NOT NULL,notes VARCHAR(255));
 CREATE TABLE Engine (ID INT IDENtity(1,1) PRIMARY KEY,label VARCHAR(20) NOT NULL,ename VARCHAR(50) NOT NULL,location VARCHAR(50),epower int,company VARCHAR(50),contactphone VARCHAR(50),repairparty VARCHAR(50),notes VARCHAR(255));
 CREATE TABLE EngineWorkingHours (engineid INT NOT NULL,cmonth INT NOT NULL,cyear INT NOT NULL,workinghours INT DEFAULT 0,notes VARCHAR(255), PRIMARY KEY(engineid,cmonth,cyear));
-CREATE TABLE Expenditure (ID INT IDENtity(1,1) PRIMARY KEY,expdate date NOT NULL,title VARCHAR(50),amount INT DEFAULT 0,party VARCHAR(50),detail VARCHAR(255)),paymentRef VARCHAR(50);
+CREATE TABLE Expenditure (ID INT IDENtity(1,1) PRIMARY KEY,expdate date NOT NULL,title VARCHAR(50),amount INT DEFAULT 0,party VARCHAR(50),detail VARCHAR(255),paymentRef VARCHAR(50));
 CREATE TABLE Package (ID INT IDENtity(1,1) PRIMARY KEY,ampere INT NOT NULL,title VARCHAR(50) NOT NULL,fee INT NOT NULL,insurance INT NOT NULL,kilowattprice INT NOT NULL,notes VARCHAR(255));
 CREATE TABLE Payment (ID INT IDENtity(1,1) PRIMARY KEY,counterhistoryid INT NOT NULL,pdate DATETIME NOT NULL,pvalue INT NOT NULL,notes VARCHAR(255),collector VARCHAR(50));
 CREATE TABLE Registration (ID INT IDENtity(1,1) PRIMARY KEY,clientid INT NOT NULL,registrationdate date NOT NULL,packageid INT NOT NULL,counterid INT NOT NULL,active BIT DEFAULT 0,enddate date,insurance INT DEFAULT 0,notes VARCHAR(255));
@@ -52,7 +58,7 @@ CREATE TABLE Notes(ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,ExpiryDate date NOT
 CREATE TABLE DefinedKeys(ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,title VARCHAR(50),dkey VARCHAR(255) NOT NULL,reference VARCHAR(50) NOT NULL);
 CREATE TABLE Users (username VARCHAR(25) PRIMARY KEY NOT NULL, pass VARCHAR(50) NOT NULL);
 CREATE TABLE Roles (rolename VARCHAR(55) PRIMARY KEY NOT NULL, caption VARCHAR(55) NOT NULL);
-CREATE TABLE UserRoles (ID INT IDENtity(1,1) PRIMARY KEY, username VARCHAR(25) NOT NULL, rolename VARCHAR(50) NOT NULL);
+CREATE TABLE UserRoles (ID INT IDENtity(1,1) PRIMARY KEY, username VARCHAR(25) NOT NULL, rolename VARCHAR(55) NOT NULL);
 
 
 CREATE TABLE Items(ID INT IDENTITY(1,1) NOT NULL PRIMARY KEY,itemname VARCHAR(50) NOT NULL,unit VARCHAR(20) NOT NULL,quantityThreshold INT NOT NULL,properties VARCHAR(255) NOT NULL,notes VARCHAR(255));

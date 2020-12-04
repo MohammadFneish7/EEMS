@@ -1,0 +1,2337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"></xsd:import>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"></xsd:attribute>
+              <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"></xsd:attribute>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"></xsd:attribute>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"></xsd:attribute>
+              <xsd:attribute ref="xml:space"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"></xsd:element>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"></xsd:attribute>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormGeneralPage" xml:space="preserve">
+    <value>العام</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DefinedNameFormName" xml:space="preserve">
+    <value>الاسم:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormPropertyName" xml:space="preserve">
+    <value>الاسم:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderColor" xml:space="preserve">
+    <value>اللون:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontColor" xml:space="preserve">
+    <value>اللون:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormCloseButton" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontFamily" xml:space="preserve">
+    <value>الخط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormPropertyValue" xml:space="preserve">
+    <value>القيمة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormCustomPage" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormColumnTitle" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PatternStyleNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormTabMargins" xml:space="preserve">
+    <value>هوامش</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTabAlignment" xml:space="preserve">
+    <value>المحاذاة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormColumnName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormColumnName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTabFont" xml:space="preserve">
+    <value>الخط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormYes" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectRangeFormPassword" xml:space="preserve">
+    <value>كلمة السر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectSheetFormPassword" xml:space="preserve">
+    <value>كلمة السر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectWorkbookFormPassword" xml:space="preserve">
+    <value>كلمة السر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormColumnValue" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontPreview" xml:space="preserve">
+    <value>معاينة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPagePortraitOrienation" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormTabPage" xml:space="preserve">
+    <value>الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineGroupFormColumns" xml:space="preserve">
+    <value>الأعمدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationFormClearAllBtn" xml:space="preserve">
+    <value>مسح كافة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormSubject" xml:space="preserve">
+    <value>هذا الموضوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormSubject" xml:space="preserve">
+    <value>هذا الموضوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontSubscript" xml:space="preserve">
+    <value>منخفض</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontSuperscript" xml:space="preserve">
+    <value>مرتفع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertSymbolFromSelectionFormTitle" xml:space="preserve">
+    <value>الرمز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileLocation" xml:space="preserve">
+    <value>الموقع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormTitle" xml:space="preserve">
+    <value>إعداد الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetPrint" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginLeft" xml:space="preserve">
+    <value>اليسار:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginRight" xml:space="preserve">
+    <value>الحق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginTop" xml:space="preserve">
+    <value>العلوي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderLine" xml:space="preserve">
+    <value>خط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontStrikethrough" xml:space="preserve">
+    <value>يتوسطه خط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureReset" xml:space="preserve">
+    <value>إعادة تعيين</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureSizeTab" xml:space="preserve">
+    <value>الحجم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingBetweenRuleFormAnd" xml:space="preserve">
+    <value>ويوم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureColor" xml:space="preserve">
+    <value>اللون:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureHeight" xml:space="preserve">
+    <value>الطول:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureScaledHeight" xml:space="preserve">
+    <value>الطول:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureScaledWidth" xml:space="preserve">
+    <value>العرض:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureWidth" xml:space="preserve">
+    <value>العرض:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectWorkbookFormWindows" xml:space="preserve">
+    <value>ويندوز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureScale" xml:space="preserve">
+    <value>مقياس</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureCropLeft" xml:space="preserve">
+    <value>اليسار:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureCropRight" xml:space="preserve">
+    <value>الحق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureCropTop" xml:space="preserve">
+    <value>العلوي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageLandscapeOrienation" xml:space="preserve">
+    <value>المناظر الطبيعية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormTitle" xml:space="preserve">
+    <value>خصائص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageOrienation" xml:space="preserve">
+    <value>التوجه</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileSize" xml:space="preserve">
+    <value>الحجم:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsValue" xml:space="preserve">
+    <value>القيمة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsThatContainControlAnd" xml:space="preserve">
+    <value>ويوم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlColor" xml:space="preserve">
+    <value>اللون:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlValue" xml:space="preserve">
+    <value>Value: </value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlBorderColor" xml:space="preserve">
+    <value>لون</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingFormatCellsClear" xml:space="preserve">
+    <value>واضحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsCustom" xml:space="preserve">
+    <value>مخصص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormulaBarCancelButtonTooltip" xml:space="preserve">
+    <value>إلغاء الأمر</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlValue" xml:space="preserve">
+    <value>القيمة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlFillColor" xml:space="preserve">
+    <value>لون</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormDown" xml:space="preserve">
+    <value>إلى أسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormGridFormat" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormMatchCase" xml:space="preserve">
+    <value>مطابقة حالة الأحرف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrderCloseButton" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableAltTextDescription" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormDelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlBottom" xml:space="preserve">
+    <value>أسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlLeft" xml:space="preserve">
+    <value>اليسار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlRight" xml:space="preserve">
+    <value>حق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlTop" xml:space="preserve">
+    <value>أعلى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTabData" xml:space="preserve">
+    <value>البيانات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableAltTextTitle" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderNone" xml:space="preserve">
+    <value>لا شيء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableLayout" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatLayout" xml:space="preserve">
+    <value>تخطيط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsHorizontal" xml:space="preserve">
+    <value>أفقي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlHorizontal" xml:space="preserve">
+    <value>أفقي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsVertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlVertical" xml:space="preserve">
+    <value>عمودي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoomFormTitle" xml:space="preserve">
+    <value>تكبير/تصغير</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormAdd" xml:space="preserve">
+    <value>إضافة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableLabelDateValueFilterFormAnd" xml:space="preserve">
+    <value>ويوم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ColumnHeaderItem" xml:space="preserve">
+    <value>عمود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatFormat" xml:space="preserve">
+    <value>تنسيق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_EncryptDocumentPassword" xml:space="preserve">
+    <value>كلمة السر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasswordRequestPassword" xml:space="preserve">
+    <value>كلمة السر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemName" xml:space="preserve">
+    <value>الاسم:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldAuto" xml:space="preserve">
+    <value>صناعة السيارات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderInside" xml:space="preserve">
+    <value>داخل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentPreviewText" xml:space="preserve">
+    <value>نص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoomPercent" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasteSpecialLocalFormPaste" xml:space="preserve">
+    <value>لصق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersFilters" xml:space="preserve">
+    <value>عوامل التصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTablePrint" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTablePrintingPrint" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertMovePivotTableLocation" xml:space="preserve">
+    <value>الموقع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsButtonUpdate" xml:space="preserve">
+    <value>التحديث</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarThumb" xml:space="preserve">
+    <value>موقف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentOrientation" xml:space="preserve">
+    <value>التوجه</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertSheetFormTitle" xml:space="preserve">
+    <value>إدراج</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTabPrinting" xml:space="preserve">
+    <value>طباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_RowHeaderItem" xml:space="preserve">
+    <value>صف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTabNumber" xml:space="preserve">
+    <value>عدد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertSymbolFormFindButton" xml:space="preserve">
+    <value>إدراج</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormCloseButton" xml:space="preserve">
+    <value>وثيقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMaximum" xml:space="preserve">
+    <value>الحد الأقصى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlMaximum" xml:space="preserve">
+    <value>الحد الأقصى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleDashDot" xml:space="preserve">
+    <value>شرطة نقطة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleDashDotDot" xml:space="preserve">
+    <value>شرطة نقطة نقطة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleDashed" xml:space="preserve">
+    <value>متقطع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleDotted" xml:space="preserve">
+    <value>منقط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleDouble" xml:space="preserve">
+    <value>مزدوجة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleHair" xml:space="preserve">
+    <value>الشعر</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleMedium" xml:space="preserve">
+    <value>متوسطة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleMediumDashDot" xml:space="preserve">
+    <value>المتوسطة داش دوت</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleMediumDashDotDot" xml:space="preserve">
+    <value>متوسطة شرطة نقطة نقطة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleMediumDashed" xml:space="preserve">
+    <value>متوسطة متقطع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleSlantDashDot" xml:space="preserve">
+    <value>نقطة شرطة المائلة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleThick" xml:space="preserve">
+    <value>سميكة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_BorderStyleThin" xml:space="preserve">
+    <value>رقيقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChangeChartTypeFormTitle" xml:space="preserve">
+    <value>Change Chart Type</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChangeDataSourcePivotTableFormTitle" xml:space="preserve">
+    <value>تغيير مصدر البيانات PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChartHorizontalAxisTitleFormTitle" xml:space="preserve">
+    <value>الأفقي عنوان</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChartSelectDataFormDataRange" xml:space="preserve">
+    <value>نطاق بيانات المخطط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChartSelectDataFormShowDataInHiddenRowsColumns" xml:space="preserve">
+    <value>وتظهر البيانات في الصفوف والأعمدة المخفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChartSelectDataFormTitle" xml:space="preserve">
+    <value>تحديد عنوان مصدر تغيير</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_Chartsheet" xml:space="preserve">
+    <value>_Chart</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChartTitleFormTitle" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ChartVerticalAxisTitleFormTitle" xml:space="preserve">
+    <value>المحور العمودي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ColumnWidthFormTitle" xml:space="preserve">
+    <value>عرض العمود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ColumnWidthFormValue" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingBetweenRuleFormWith" xml:space="preserve">
+    <value>مع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMaximumColor" xml:space="preserve">
+    <value>لون كحد أقصى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMaximumValue" xml:space="preserve">
+    <value>قيمة الحد الأقصى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMidpoint" xml:space="preserve">
+    <value>نقطة الوسط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMidpointColor" xml:space="preserve">
+    <value>لون الوسط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMidpointValue" xml:space="preserve">
+    <value>قيمة نقطة الوسط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMinimum" xml:space="preserve">
+    <value>الحد الأدنى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMinimumColor" xml:space="preserve">
+    <value>لون الحد الأدنى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlMinimumValue" xml:space="preserve">
+    <value>قيمة الحد الأدنى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlPreview" xml:space="preserve">
+    <value>المعاينة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingColorScaleControlType" xml:space="preserve">
+    <value>النوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlBarAppearance" xml:space="preserve">
+    <value>شريط مظهر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlBarDirection" xml:space="preserve">
+    <value>شريط التوجيه:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlBorder" xml:space="preserve">
+    <value>الحدود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlFill" xml:space="preserve">
+    <value>ملء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlMinimum" xml:space="preserve">
+    <value>الحد الأدنى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlNegativeValueAndAxis" xml:space="preserve">
+    <value>قيمة سالبة ومحور...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlPreview" xml:space="preserve">
+    <value>المعاينة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlShowBarOnly" xml:space="preserve">
+    <value>المحور فقط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarControlType" xml:space="preserve">
+    <value>النوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlApplySameBorderColorAsPositiveBar" xml:space="preserve">
+    <value>تطبيق نفس لون الحدود شريط الإيجابية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlApplySameFillColorAsPositiveBar" xml:space="preserve">
+    <value>تطبيق نفس لون التعبئة الإيجابية بار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlAutomatic" xml:space="preserve">
+    <value>تلقائي (العرض في موقف متغير استناداً إلى القيم السالبة)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlAxisColor" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlAxisSettings" xml:space="preserve">
+    <value>إعدادات المحور</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlBorderColor" xml:space="preserve">
+    <value>الحدود اللون:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlCellMidpoint" xml:space="preserve">
+    <value>منتصف الخلية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlFillColor" xml:space="preserve">
+    <value>لون التعبئة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlNegativeBarBorderColor" xml:space="preserve">
+    <value>لون الحدود شريط السلبية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlNegativeBarFillColor" xml:space="preserve">
+    <value>لون التعبئة السلبية بار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlNone" xml:space="preserve">
+    <value>بلا (إظهار أشرطة قيمة سالبة في نفس اتجاه إيجابي)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlSelectAxisPosition" xml:space="preserve">
+    <value>حدد موضع المحور في الخلية لتغيير مظهر أشرطة للقيم السالبة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingDataBarNegativeValueAndAxisControlTitle" xml:space="preserve">
+    <value>قيمة سالبة وإعدادات المحور</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsComparison" xml:space="preserve">
+    <value>مقارنة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsDisplayEachIcon" xml:space="preserve">
+    <value>ديسبالي كل رمز وفقا لهذه القواعد:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsIcon" xml:space="preserve">
+    <value>رمز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsIconStyle" xml:space="preserve">
+    <value>نمط الرمز:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsNoCellIcon" xml:space="preserve">
+    <value>لا يوجد رمز الخلية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsReverseIconOrder" xml:space="preserve">
+    <value>عكس ترتيب الرموز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsShowIconOnly" xml:space="preserve">
+    <value>إظهار الرمز فقط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingIconSetsType" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormDeleteRule" xml:space="preserve">
+    <value>حذف قاعدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormEditRule" xml:space="preserve">
+    <value>قم بتحرير القاعدة...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormGridAppliesToColumn" xml:space="preserve">
+    <value>وينطبق على</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormGridRuleColumn" xml:space="preserve">
+    <value>قاعدة (تطبيق الترتيب الموضح)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormGridStopIfTrueColumn" xml:space="preserve">
+    <value>الإيقاف في حالة True</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormNewRule" xml:space="preserve">
+    <value>قاعدة جديدة...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormShowFormattingRules" xml:space="preserve">
+    <value>إظهار قواعد التنسيق ل:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormTitle" xml:space="preserve">
+    <value>إدارة قواعد التنسيق الشرطي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConditionalFormattingRulesManagerFormUp" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConfirmPasswordFormDescription" xml:space="preserve">
+    <value>تحذير: إذا فقدت أو نسيت كلمة المرور، لا يمكن استردادها. فمن المستحسن بالاحتفاظ بقائمة من كلمات المرور والمصنف المقابلة وأسماء الأوراق في مكان أمن. (تذكر أن كلمات المرور حساسة لحالة الأحرف.)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConfirmPasswordFormPassword" xml:space="preserve">
+    <value>إعادة إدخال كلمة المرور للمتابعة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ConfirmPasswordFormTitle" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_CreateDefinedNamesFromSelectionFormBottomRow" xml:space="preserve">
+    <value>الصف السفلي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_CreateDefinedNamesFromSelectionFormCreateNameValues" xml:space="preserve">
+    <value>بإنشاء أسماء من القيم في:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_CreateDefinedNamesFromSelectionFormLeftColumn" xml:space="preserve">
+    <value>إظهار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_CreateDefinedNamesFromSelectionFormRightColumn" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_CreateDefinedNamesFromSelectionFormTitle" xml:space="preserve">
+    <value>إنشاء أسماء من التحديد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_CreateDefinedNamesFromSelectionFormTopRow" xml:space="preserve">
+    <value>الصف العلوي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableBaseField" xml:space="preserve">
+    <value>حقل القاعدة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableBaseItem" xml:space="preserve">
+    <value>عنصر القاعدة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableChooseTheTypeOfCalculation" xml:space="preserve">
+    <value>اختر نوع الحساب الذي تريد استخدامه لتلخيص البيانات من الحقل المحدد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableFormTitle" xml:space="preserve">
+    <value>إعدادات حقل القيم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableShowValuesAs" xml:space="preserve">
+    <value>القيم كما</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableSummarizeValueFieldBy" xml:space="preserve">
+    <value>تلخيص حقل القيم حسب</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableTabShowValuesAs" xml:space="preserve">
+    <value>كما</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataFieldSettingsPivotTableTabSummarizeValuesBy" xml:space="preserve">
+    <value>تلخيص القيم حسب</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationAllow" xml:space="preserve">
+    <value>تسمح:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationApplyToAllCells" xml:space="preserve">
+    <value>تطبيق هذه التغييرات على كافة الخلايا الأخرى ذات الإعدادات المشابهة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationCriteria" xml:space="preserve">
+    <value>معايير التحقق من الصحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationData" xml:space="preserve">
+    <value>البيانات:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationErrorAlertPage" xml:space="preserve">
+    <value>تنبيه إلى الخطأ</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationErrorMessage" xml:space="preserve">
+    <value>رسالة الخطأ:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationErrorMessageCheckbox" xml:space="preserve">
+    <value>إظهار التنبيه إلى الخطأ بعد إدخال بيانات غير صالحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationErrorMessageStyle" xml:space="preserve">
+    <value>نمط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationErrorMessageText" xml:space="preserve">
+    <value>عندما يقوم المستخدم بإدخال بيانات غير صالحة، إظهار هذا التنبيه إلى الخطأ:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationFormTitle" xml:space="preserve">
+    <value>التحقق من صحة البيانات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationIgnoreBlank" xml:space="preserve">
+    <value>تجاهل فارغة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationInCellDropdown" xml:space="preserve">
+    <value>قائمة منسدلة في الخلية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationInputMessage" xml:space="preserve">
+    <value>رسالة الإدخال:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationInputMessageCheckbox" xml:space="preserve">
+    <value>إظهار رسالة الإدخال عند تحديد الخلية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationInputMessagePage" xml:space="preserve">
+    <value>إدخال رسالة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationInputMessageText" xml:space="preserve">
+    <value>عند تحديد الخلية، تظهر رسالة الإدخال هذه:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationInputMessageTitle" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DataValidationSettingsPage" xml:space="preserve">
+    <value>إعدادات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DefaultColumnWidthFormTitle" xml:space="preserve">
+    <value>العرض القياسي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DefaultColumnWidthFormValue" xml:space="preserve">
+    <value>عرض العمود القياسي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DefinedNameFormComment" xml:space="preserve">
+    <value>التعليق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DefinedNameFormReference" xml:space="preserve">
+    <value>يشير إلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DefinedNameFormScope" xml:space="preserve">
+    <value>نطاق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormAccessed" xml:space="preserve">
+    <value>الوصول إلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormAuthor" xml:space="preserve">
+    <value>المؤلف:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormCategory" xml:space="preserve">
+    <value>الفئة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormColumnType" xml:space="preserve">
+    <value>نوع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormComments" xml:space="preserve">
+    <value>التعليقات:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormCompany" xml:space="preserve">
+    <value>الشركة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormCreated" xml:space="preserve">
+    <value>التي تم إنشاؤها:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormDocumentTitle" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileAccessed" xml:space="preserve">
+    <value>الوصول إلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileAttributeArchive" xml:space="preserve">
+    <value>أرشيف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileAttributeHidden" xml:space="preserve">
+    <value>مخفي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileAttributeReadOnly" xml:space="preserve">
+    <value>فقط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileAttributes" xml:space="preserve">
+    <value>سمات:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileAttributeSystem" xml:space="preserve">
+    <value>رقم النظام</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileCreated" xml:space="preserve">
+    <value>التي تم إنشاؤها:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileModified" xml:space="preserve">
+    <value>تعديل:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileName" xml:space="preserve">
+    <value>اسم الملف:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormFileShortName" xml:space="preserve">
+    <value>اسم MS-DOS:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormKeywords" xml:space="preserve">
+    <value>الكلمات الرئيسية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormLastSavedBy" xml:space="preserve">
+    <value>الحفظ الأخير بواسطة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormLinkToContent" xml:space="preserve">
+    <value>ارتباط بالمحتوى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormManager" xml:space="preserve">
+    <value>مدير:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormModified" xml:space="preserve">
+    <value>تعديل:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormModify" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormPrinted" xml:space="preserve">
+    <value>المطبوعة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormProperties" xml:space="preserve">
+    <value>خصائص:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormPropertySource" xml:space="preserve">
+    <value>المصدر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormPropertyType" xml:space="preserve">
+    <value>النوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormStatisticsPage" xml:space="preserve">
+    <value>إحصائيات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_DocumentPropertiesFormSummaryPage" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_EncryptDocumentDescription" xml:space="preserve">
+    <value>تحذير: إذا فقدت أو نسيت كلمة المرور، لا يمكن استردادها. فمن المستحسن بالاحتفاظ بقائمة من كلمات المرور والمصنف المقابلة وأسماء الأوراق في مكان أمن. (تذكر أن كلمات المرور حساسة لحالة الأحرف.)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_EncryptDocumentLabel" xml:space="preserve">
+    <value>تشفير محتويات هذا الملف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_EncryptDocumentTitle" xml:space="preserve">
+    <value>تشفير المستند</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldAndDataFieldSettingsPivotTableCustomName" xml:space="preserve">
+    <value>اسم مخصص:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldAndDataFieldSettingsPivotTableSourceName" xml:space="preserve">
+    <value>اسم المصدر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableCompactForm" xml:space="preserve">
+    <value>_Display التسميات الموجودة في الحقل التالي في نفس العمود (شكل مضغوط)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableFilter" xml:space="preserve">
+    <value>عامل التصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableFormTitle" xml:space="preserve">
+    <value>إعدادات الحقل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableInsertBlankLine" xml:space="preserve">
+    <value>إدراج خط _blank بعد كل تسمية عنصر</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableInsertPageBreak" xml:space="preserve">
+    <value>إدراج فاصل _page بعد كل عنصر</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableItemLabelsOutlineForm" xml:space="preserve">
+    <value>_ إظهار تسميات العناصر على شكل مخطط تفصيلي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableItemLabelsTabularForm" xml:space="preserve">
+    <value>إظهار تسميات مختار في نموذج جدولي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableNewItemsManualFilter" xml:space="preserve">
+    <value>_Include عناصر جديدة في التصفية اليدوية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableRepeatItemLabels" xml:space="preserve">
+    <value>تسميات العناصر _Repeat</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableSelectSubtotalFunctions" xml:space="preserve">
+    <value>حدد واحد أو أكثر من وظائف:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableShowItemsWithNoData" xml:space="preserve">
+    <value>العناصر Sho_w مع أية بيانات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableSubtotalAutomatic" xml:space="preserve">
+    <value>_Automatic</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableSubtotalCustom" xml:space="preserve">
+    <value>_Custom</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableSubtotalNone" xml:space="preserve">
+    <value>Non_e</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableSubtotals" xml:space="preserve">
+    <value>المجاميع الفرعية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableSubtotalTop" xml:space="preserve">
+    <value>عرض sub_totals في الجزء العلوي من كل مجموعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableTabLayoutAndPrint" xml:space="preserve">
+    <value>تخطيط &amp; طباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FieldSettingsPivotTableTabSubtotalsAndFilters" xml:space="preserve">
+    <value>الإجماليات الفرعية &amp; عوامل تصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsColors" xml:space="preserve">
+    <value>الألوان</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsDiagonalDown" xml:space="preserve">
+    <value>قطري إلى الأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsDiagonalUp" xml:space="preserve">
+    <value>قطري يصل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsFirstColor" xml:space="preserve">
+    <value>لون 1:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsFormTitle" xml:space="preserve">
+    <value>تأثيرات التعبئة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsFromCenter" xml:space="preserve">
+    <value>من مركز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsFromCorner" xml:space="preserve">
+    <value>من الزاوية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsSample" xml:space="preserve">
+    <value>عينة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsSecondColor" xml:space="preserve">
+    <value>اللون 2:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsShadingStyles" xml:space="preserve">
+    <value>أنماط التظليل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FillEffectsFormatCellsVariants" xml:space="preserve">
+    <value>المتغيرات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormFindButton" xml:space="preserve">
+    <value>_Find القادم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormFindPage" xml:space="preserve">
+    <value>Fin_d</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormFindWhat" xml:space="preserve">
+    <value>البحث عن:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormMatchEntireCellContents" xml:space="preserve">
+    <value>مطابقة محتويات الخلية بأكملها</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormReplaceAllButton" xml:space="preserve">
+    <value>استبدال _All</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormReplaceButton" xml:space="preserve">
+    <value>_Replace</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormReplacePage" xml:space="preserve">
+    <value>Re_place</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormReplaceWith" xml:space="preserve">
+    <value>استبدالها:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormSearchBy" xml:space="preserve">
+    <value>البحث:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormSearchIn" xml:space="preserve">
+    <value>البحث في:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FindReplaceFormTitle" xml:space="preserve">
+    <value>البحث عن واستبدال</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlDiagonalDown" xml:space="preserve">
+    <value>قطري إلى الأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderControlDiagonalUp" xml:space="preserve">
+    <value>قطري يصل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatBorderPreviewControl" xml:space="preserve">
+    <value>معاينة الحدود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentDegrees" xml:space="preserve">
+    <value>درجة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentHorizontal" xml:space="preserve">
+    <value>الأفقي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentIndent" xml:space="preserve">
+    <value>المسافة البادئة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentJustifyDistributed" xml:space="preserve">
+    <value>ضبط توزيع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentMergeCells" xml:space="preserve">
+    <value>دمج الخلايا</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentPreview" xml:space="preserve">
+    <value>المعاينة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentRightToLeft" xml:space="preserve">
+    <value>اليسار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentShrinkToFit" xml:space="preserve">
+    <value>تقليص لاحتواء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentTextAlignment" xml:space="preserve">
+    <value>محاذاة النص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentTextControl" xml:space="preserve">
+    <value>النص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentTextDirection" xml:space="preserve">
+    <value>اتجاه النص:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentVertical" xml:space="preserve">
+    <value>رأسي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormAlignmentWrapText" xml:space="preserve">
+    <value>النص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderBorder" xml:space="preserve">
+    <value>الحدود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderDescription" xml:space="preserve">
+    <value>يمكن تطبيق نمط الحدود المحددة بواسطة النقر فوق الإعدادات المسبقة، ومعاينة الرسم التخطيطي أو الأزرار أعلاه.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderOutline" xml:space="preserve">
+    <value>مخطط تفصيلي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderPresets" xml:space="preserve">
+    <value>الإعدادات المسبقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormBorderStyle" xml:space="preserve">
+    <value>نمط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFillBackgroundColor" xml:space="preserve">
+    <value>الخلفية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFillEffects" xml:space="preserve">
+    <value>آثار F_ill...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFillNoColor" xml:space="preserve">
+    <value>لا لون</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFillPatternColor" xml:space="preserve">
+    <value>نمط اللون:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFillPatternStyle" xml:space="preserve">
+    <value>نمط نمط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFillSample" xml:space="preserve">
+    <value>عينة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontDescription" xml:space="preserve">
+    <value>هذا الخط خط تروتايب. سيتم استخدام نفس الخط على كل من الطابعة والشاشة-</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontEffects" xml:space="preserve">
+    <value>آثار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontSample" xml:space="preserve">
+    <value>آبكسييز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontSize" xml:space="preserve">
+    <value>حجم الخط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontStyle" xml:space="preserve">
+    <value>نمط الخط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormFontUnderline" xml:space="preserve">
+    <value>تسطير:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberCalendar" xml:space="preserve">
+    <value>التقويم نوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberCategory" xml:space="preserve">
+    <value>الفئة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberDecimalPlaces" xml:space="preserve">
+    <value>العشرية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberInputDates" xml:space="preserve">
+    <value>إدخال التواريخ وفقا للتقويم المحدد:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberLocation" xml:space="preserve">
+    <value>اللغة (الموقع):</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberNegativeNumbers" xml:space="preserve">
+    <value>الأرقام السالبة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberSample" xml:space="preserve">
+    <value>عينة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberSymbol" xml:space="preserve">
+    <value>رمز:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberType" xml:space="preserve">
+    <value>النوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormNumberUseThousandSeparator" xml:space="preserve">
+    <value>1000 فاصل المحاذاة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormProtectionDescription" xml:space="preserve">
+    <value>تأمين الخلايا أو لإخفاء الصيغ ليس له أي تأثير حتى تقوم بحماية ورقة العمل (علامة التبويب مراجعة، والمجموعة تغييرات، زر حماية ورقة).</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormProtectionHidden" xml:space="preserve">
+    <value>مخفي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormProtectionLocked" xml:space="preserve">
+    <value>مؤمن</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTabBorder" xml:space="preserve">
+    <value>الحدود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTabFill" xml:space="preserve">
+    <value>ملء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTabProtection" xml:space="preserve">
+    <value>حماية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsFormTitle" xml:space="preserve">
+    <value>تنسيق خلايا</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatCellsThatContainControlFormatOnlyCellsWith" xml:space="preserve">
+    <value>تنسيق الخلايا فقط مع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureBrightness" xml:space="preserve">
+    <value>السطوع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureContrast" xml:space="preserve">
+    <value>التباين:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlBrightnessThumbDescription" xml:space="preserve">
+    <value>يشير إلى السطوع الحالي، ويمكن سحبه لتغييره مباشرة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlContrastThumbDescription" xml:space="preserve">
+    <value>ويشير إلى التباين الحالي، ويمكن سحبه لتغييره مباشرة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlDecreaseBrightnessButtonDescription" xml:space="preserve">
+    <value>تقليل سطوع بنسبة 5 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlDecreaseBrightnessEdgeButtonDescription" xml:space="preserve">
+    <value>تقليل سطوع بنسبة 1 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlDecreaseButton" xml:space="preserve">
+    <value>انخفاض بنسبة 5 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlDecreaseContrastButtonDescription" xml:space="preserve">
+    <value>إنقاص التباين بنسبة 5 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlDecreaseContrastEdgeButtonDescription" xml:space="preserve">
+    <value>إنقاص التباين بنسبة 1 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlDecreaseEdgeButton" xml:space="preserve">
+    <value>انخفاض بنسبة 1 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlIncreaseBrightnessButtonDescription" xml:space="preserve">
+    <value>زيادة سطوع بنسبة 5 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlIncreaseBrightnessEdgeButtonDescription" xml:space="preserve">
+    <value>زيادة سطوع بنسبة 1 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlIncreaseButton" xml:space="preserve">
+    <value>زيادة بنسبة 5 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlIncreaseContrastButtonDescription" xml:space="preserve">
+    <value>زيادة التباين بنسبة 5 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlIncreaseContrastEdgeButtonDescription" xml:space="preserve">
+    <value>زيادة التباين بنسبة 1 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureControlIncreaseEdgeButton" xml:space="preserve">
+    <value>زيادة بنسبة 1 في المائة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureCrop" xml:space="preserve">
+    <value>المحاصيل من</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureCropBottom" xml:space="preserve">
+    <value>السفلي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureFormTitle" xml:space="preserve">
+    <value>تنسيق الصورة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureImageControl" xml:space="preserve">
+    <value>التحكم بالصورة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureLockAspectRatio" xml:space="preserve">
+    <value>تأمين نسبة الارتفاع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureOriginalSize" xml:space="preserve">
+    <value>الحجم الأصلي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPicturePictureTab" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureRelativeToOriginal" xml:space="preserve">
+    <value>نسبة إلى حجم الصورة الأصلي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureRotation" xml:space="preserve">
+    <value>التناوب:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatPictureSizeAndRotate" xml:space="preserve">
+    <value>حجم واستدارة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatToApply" xml:space="preserve">
+    <value>تنسيق لتطبيق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatTopBottomRankedValuesControlFormatValuesThatRankInThe" xml:space="preserve">
+    <value>تنسيق القيم التي يأتي ترتيبها في:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatTopBottomRankedValuesControlPercentOfTheSelectedRange" xml:space="preserve">
+    <value>% من النطاق المحدد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatUniqueDuplicateValuesControlFormatAll" xml:space="preserve">
+    <value>تنسيق كافة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatUniqueDuplicateValuesControlValuesSelectedRange" xml:space="preserve">
+    <value>القيم في النطاق المحدد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatValuesAboveBelowAverageControlAverageForSelectedRange" xml:space="preserve">
+    <value>المتوسط بالنسبة للنطاق المحدد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormatValuesAboveBelowAverageControlFormatValuesThatAre" xml:space="preserve">
+    <value>تنسيق القيم التي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormulaBarInsertFunctionButtonTooltip" xml:space="preserve">
+    <value>دالة إظهار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormulaBarOkButtonTooltip" xml:space="preserve">
+    <value>أدخل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FormulaDetermineWhichCellsFormatControlFormatValuesWhereFormulaIsTrue" xml:space="preserve">
+    <value>تنسيق القيم عندما تكون هذه الصيغة الحقيقية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_FunctionArgumentsFormTitle" xml:space="preserve">
+    <value>وسيطات الدالة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_GenericFilterFormDescriptionSeriesCharacters" xml:space="preserve">
+    <value>استخدام * لتمثيل أية سلسلة من الأحرف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_GenericFilterFormDescriptionSingleCharacter" xml:space="preserve">
+    <value>استخدام؟ لتمثيل أي حرف مفرد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_GenericFilterFormOperationAnd" xml:space="preserve">
+    <value>و</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_GenericFilterFormOperationOr" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_GenericFilterFormShowRows" xml:space="preserve">
+    <value>الصفوف حيث:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_GenericFilterFormTitle" xml:space="preserve">
+    <value>تصفية تلقائية مخصصة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterCenterFooter" xml:space="preserve">
+    <value>مركز تذييل الصفحة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterCenterHeader" xml:space="preserve">
+    <value>رأس المركز:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterDescription" xml:space="preserve">
+    <value>لإدراج رقم الصفحة، التاريخ، الوقت، مسار الملف، اسم الملف أو اسم علامة التبويب: ضع نقطة الإدراج في مربع التحرير، ثم اختر الزر المناسب.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterFormatPicture" xml:space="preserve">
+    <value>تنسيق الصورة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterFormTitle" xml:space="preserve">
+    <value>رأس/تذييل الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertDate" xml:space="preserve">
+    <value>إدراج التاريخ</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertFileName" xml:space="preserve">
+    <value>إدراج اسم الملف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertFilePath" xml:space="preserve">
+    <value>أدخل مسار الملف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertNumberOfPages" xml:space="preserve">
+    <value>إدراج عدد الصفحات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertPageNumber" xml:space="preserve">
+    <value>إدراج رقم الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertPicture" xml:space="preserve">
+    <value>إدراج الصورة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertSheetName" xml:space="preserve">
+    <value>إدراج اسم الورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterInsertTime" xml:space="preserve">
+    <value>إدراج الوقت</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterLeftFooter" xml:space="preserve">
+    <value>غادر تذييل الصفحة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterLeftHeader" xml:space="preserve">
+    <value>الرأس الأيسر:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterRightFooter" xml:space="preserve">
+    <value>الحق تذييل الصفحة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterRightHeader" xml:space="preserve">
+    <value>رأس الحق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterTabEvenHeaderFooter" xml:space="preserve">
+    <value>حتى رأس/تذييل الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterTabFirstHeaderFooter" xml:space="preserve">
+    <value>رأس/تذييل الصفحة الأولى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterTabHeaderFooter" xml:space="preserve">
+    <value>رأس/تذييل الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HeaderFooterTabOddHeaderFooter" xml:space="preserve">
+    <value>رأس/تذييل الصفحة الفردية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormAddress" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormCellReference" xml:space="preserve">
+    <value>اكتب مرجع الخلية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormEMail" xml:space="preserve">
+    <value>عنوان البريد الإلكتروني:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormEMailAddress" xml:space="preserve">
+    <value>عنوان البريد الإلكتروني</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormExistingFileOrWebPage" xml:space="preserve">
+    <value>اكسيسيستينج ملف أو صفحة ويب</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormLinkTo" xml:space="preserve">
+    <value>الارتباط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormPlaceInThisDocument" xml:space="preserve">
+    <value>مكان في هذا المستند</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormScreenTip" xml:space="preserve">
+    <value>تلميح الشاشة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormSelectPlaceInDocument" xml:space="preserve">
+    <value>أو حدد مكاناً في هذا المستند:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormTextToDisplay" xml:space="preserve">
+    <value>النص لعرض:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_HyperlinkFormTitle" xml:space="preserve">
+    <value>إدراج ارتباط تشعبي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertChangeDataSourcePivotTableDataToAnalyze" xml:space="preserve">
+    <value>اختر البيانات التي تريد تحليلها</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertChangeDataSourcePivotTableTableRange" xml:space="preserve">
+    <value>جدول/نطاق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertDeleteCellsFormEntireColumn" xml:space="preserve">
+    <value>كامل للعمود</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertDeleteCellsFormEntireRow" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertDeleteCellsFormShiftCellsDown" xml:space="preserve">
+    <value>إزاحة الخلايا إلى الأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertDeleteCellsFormShiftCellsLeft" xml:space="preserve">
+    <value>إزاحة الخلايا اليسار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertDeleteCellsFormShiftCellsRight" xml:space="preserve">
+    <value>إزاحة الخلايا لليسار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertDeleteCellsFormShiftCellsUp" xml:space="preserve">
+    <value>إزاحة الخلايا إلى أعلى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertFunctionCategory" xml:space="preserve">
+    <value>الفئة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertFunctionFormTitle" xml:space="preserve">
+    <value>إدراج دالة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertFunctionSelect" xml:space="preserve">
+    <value>تحديد دالة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertHFPictureWarningFooter" xml:space="preserve">
+    <value>يمكن إدراج صورة واحدة فقط في كل مقطع تذييل الصفحة.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertHFPictureWarningHeader" xml:space="preserve">
+    <value>يمكن إدراج صورة واحدة فقط في كل قسم من الرأس-</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertHFPictureWarningKeep" xml:space="preserve">
+    <value>● للحفاظ على الصورة الموجودة، اضغط على إبقاء.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertHFPictureWarningReplace" xml:space="preserve">
+    <value>● لاستبدال الصورة الموجودة، اضغط استبدال-</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertMovePivotTableExistingWorksheet" xml:space="preserve">
+    <value>ورقة عمل _Existing</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertMovePivotTableNewWorksheet" xml:space="preserve">
+    <value>ورقة عمل _New</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertMovePivotTablePlaceForPivotTableReport" xml:space="preserve">
+    <value>اختر المكان الذي تريد تقرير PivotTable لتوضع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertPivotTableFormTitle" xml:space="preserve">
+    <value>إنشاء PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertTableFormDataLocation" xml:space="preserve">
+    <value>أين توجد البيانات للجدول الخاص بك؟</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_InsertTableFormTableHasHeaders" xml:space="preserve">
+    <value>يحتوي الجدول على رؤوس</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_KeepButton" xml:space="preserve">
+    <value>الحفاظ على</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveChartFormDescription" xml:space="preserve">
+    <value>اختر المكان الذي تريد وضع المخطط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveChartFormNewSheet" xml:space="preserve">
+    <value>_Sheet الجديدة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveChartFormNewSheetAutomationName" xml:space="preserve">
+    <value>اسم ورقة جديدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveChartFormObjectIn" xml:space="preserve">
+    <value>_Object في:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveChartFormObjectInAutomationName" xml:space="preserve">
+    <value>الأوراق في المصنف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveChartFormTitle" xml:space="preserve">
+    <value>نقل المخطط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveOrCopySheetCreateCopy" xml:space="preserve">
+    <value>إنشاء نسخة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveOrCopySheetFormTitle" xml:space="preserve">
+    <value>نقل أو نسخ</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MoveOrCopySheetMoveSelectedSheetBefore" xml:space="preserve">
+    <value>نقل الأوراق المحددة قبل الورقة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_MovePivotTableFormTitle" xml:space="preserve">
+    <value>نقل PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameForDefinedNameRequestFormLabel" xml:space="preserve">
+    <value>اسم موجود بالفعل على الورقة الوجهة.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameForDefinedNameRequestFormNewName" xml:space="preserve">
+    <value>الاسم الجديد:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameForDefinedNameRequestFormOldName" xml:space="preserve">
+    <value>الاسم القديم:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameForDefinedNameRequestFormTitle" xml:space="preserve">
+    <value>تعارض في الأسماء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormColumnComment" xml:space="preserve">
+    <value>التعليق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormColumnReference" xml:space="preserve">
+    <value>يشير إلى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormColumnScope" xml:space="preserve">
+    <value>نطاق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormDelete" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormEdit" xml:space="preserve">
+    <value>تحرير...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormNew" xml:space="preserve">
+    <value>_New...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormReference" xml:space="preserve">
+    <value>يشير إلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NameManagerFormTitle" xml:space="preserve">
+    <value>اسم مدير</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NewEditConditionalFormattingRuleFormEditRuleDescripiton" xml:space="preserve">
+    <value>تحرير وصف القاعدة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NewEditConditionalFormattingRuleFormFormat" xml:space="preserve">
+    <value>تنسيق...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NewEditConditionalFormattingRuleFormFormatAllCellsBasedOnTheirValues" xml:space="preserve">
+    <value>تنسيق كافة الخلايا استناداً إلى قيمها:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NewEditConditionalFormattingRuleFormFormatStyle" xml:space="preserve">
+    <value>تنسيق نمط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NewEditConditionalFormattingRuleFormPreview" xml:space="preserve">
+    <value>المعاينة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_NewEditConditionalFormattingRuleFormSelectRuleType" xml:space="preserve">
+    <value>حدد نوع قاعدة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableAltTextDescriptionText" xml:space="preserve">
+    <value>ووصف تقديم تمثيلات البديلة، ويستند إلى نص من المعلومات الواردة في الجداول. تعتبر هذه المعلومات مفيدة للناس مع الرؤية أو الإعاقات الإدراكية الذين قد لا تكون قادراً على رؤية أو فهم الجدول. عنوان يمكن قراءتها لشخص المعوق ويتم استخدامه لتحديد ما إذا كانوا يرغبون في سماع وصف المحتوى.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataEnableCellEditing" xml:space="preserve">
+    <value>خلية _ تمكين التحرير في ناحية القيم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataEnableShowDetails" xml:space="preserve">
+    <value>_ تمكين إظهار التفاصيل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataNumberOfItemsToRetainPerField" xml:space="preserve">
+    <value>عدد العناصر التي سيتم الاحتفاظ بها لكل حقل:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataPivotTableData" xml:space="preserve">
+    <value>بيانات PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataRefreshData" xml:space="preserve">
+    <value>_Refresh البيانات عند فتح الملف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataRetainItemsDeleted" xml:space="preserve">
+    <value>الاحتفاظ العناصر المحذوفة من مصدر البيانات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataSaveSourceData" xml:space="preserve">
+    <value>_Save مصدر البيانات مع الملف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDataWhatIfAnalysis" xml:space="preserve">
+    <value>تحليل ماذا لو</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayClassicPivotTableLayout" xml:space="preserve">
+    <value>تخطيط C_lassic PivotTable (تمكين سحب الحقول في الشبكة)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayContextualTooltips" xml:space="preserve">
+    <value>إظهار تلميحات الأدوات _contextual</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayDisplay" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayExpandCollapsButtons" xml:space="preserve">
+    <value>_ إظهار توسيع/طي الأزرار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayFieldCaptionsFilterDropDowns" xml:space="preserve">
+    <value>التسميات التوضيحية للحقول _Display وتصفية إسقاط داونز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayFieldList" xml:space="preserve">
+    <value>قائمة الحقول</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayItemLabelsWhenNoFieldsInValuesArea" xml:space="preserve">
+    <value>عرض تسميات العناصر عندما تكون لا حقول في ناحية القيم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayItemsNoDataColumns" xml:space="preserve">
+    <value>إظهار _items مع أية بيانات في أعمدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayItemsNoDataRows" xml:space="preserve">
+    <value>إظهار العناصر دون بيانات في صفوف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayPropertiesInTooltips" xml:space="preserve">
+    <value>إظهار الخصائص في تلميحات الأدوات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplayShowValuesRow" xml:space="preserve">
+    <value>إظهار صف _Values</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplaySortAToZ" xml:space="preserve">
+    <value>فرز _A من الألف إلى الياء</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableDisplaySortInDataSourceOrder" xml:space="preserve">
+    <value>الفرز في البيانات المصدر orde_r</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableFormTitle" xml:space="preserve">
+    <value>خيارات PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatAutofitColumnWidths" xml:space="preserve">
+    <value>_Autofit عرض الأعمدة عند التحديث</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatCharacters" xml:space="preserve">
+    <value>حرف (أحرف)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatColumn" xml:space="preserve">
+    <value>العمود:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatEmptyCellsShow" xml:space="preserve">
+    <value>للخلايا الفارغة _ إظهار:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatErrorValuesShow" xml:space="preserve">
+    <value>إظهار ما يلي لقيم _error:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatIndentRowLabels" xml:space="preserve">
+    <value>عندما تكون في نموذج مضغوط مسافة بادئة تسميات الصفوف:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatMergeAndCenterCells" xml:space="preserve">
+    <value>_Merge وتوسيط الخلايا مع التسميات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatPreserveCellFormatting" xml:space="preserve">
+    <value>_Preserve تنسيق الخلية عند التحديث</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatReportFilterArea" xml:space="preserve">
+    <value>عرض الحقول في ناحية تصفية التقرير:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatReportFilterFields" xml:space="preserve">
+    <value>حقول تصفية التقرير لكل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableLayoutAndFormatRow" xml:space="preserve">
+    <value>صف:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableName" xml:space="preserve">
+    <value>اسم PivotTable:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTablePrintingExpandCollapseButtonDisplayedPivotTable" xml:space="preserve">
+    <value>_Print توسيع/طي الأزرار عند عرض PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTablePrintingRepeatRowLabels" xml:space="preserve">
+    <value>_Repeat تسميات الصفوف على كل صفحة مطبوعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTablePrintingSetPrintTitles" xml:space="preserve">
+    <value>_ تعيين عناوين الطباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTabAltText" xml:space="preserve">
+    <value>النص البديل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTabDisplay" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTabLayoutAndFormat" xml:space="preserve">
+    <value>التخطيط والتنسيق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTabTotalsAndFilters" xml:space="preserve">
+    <value>إجماليات &amp; عوامل التصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersColumnsGrandTotals" xml:space="preserve">
+    <value>إظهار إجماليات الأعمدة _grand</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersGrandTotals" xml:space="preserve">
+    <value>المجاميع الكلية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersMultipleFilters" xml:space="preserve">
+    <value>_Allow عوامل تصفية متعددة لكل حقل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersRowGrandTotals" xml:space="preserve">
+    <value>_ إظهار الإجماليات الكلية للصفوف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersSorting" xml:space="preserve">
+    <value>الفرز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersSubtotalPageItems" xml:space="preserve">
+    <value>المجموع الفرعي لعناصر الصفحة _filtered</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OptionsPivotTableTotalsAndFiltersUseCustomList" xml:space="preserve">
+    <value>_Lists "استخدام مخصصة" عند الفرز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineGroupFormRows" xml:space="preserve">
+    <value>الصفوف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormApplyStylesButton" xml:space="preserve">
+    <value>تطبيق _Styles</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormAutomaticStyles" xml:space="preserve">
+    <value>الأنماط التلقائية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormCreateButton" xml:space="preserve">
+    <value>_Create</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormDirection" xml:space="preserve">
+    <value>الاتجاه</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormSummaryColumns" xml:space="preserve">
+    <value>أعمدة التلخيص يمين التفصيل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormSummaryRows" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSettingFormTitle" xml:space="preserve">
+    <value>إعدادات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormAddSubtotalTo" xml:space="preserve">
+    <value>إضافة مجموع فرعي إلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormAtEachChangeIn" xml:space="preserve">
+    <value>عند كل تغيير في:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormPageBreakBetweenGroups" xml:space="preserve">
+    <value>فاصل صفحات بين المجموعات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormRemoveAll" xml:space="preserve">
+    <value>_Remove كل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormReplaceCurrentSubtotal" xml:space="preserve">
+    <value>استبدال المجاميع الفرعية الحالية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormSubtotal" xml:space="preserve">
+    <value>المجاميع الفرعية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormSummaryBelowData" xml:space="preserve">
+    <value>التلخيص أسفل البيانات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_OutlineSubtotalFormUseFunction" xml:space="preserve">
+    <value>استخدام الدالة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageMarginsDrawingControl" xml:space="preserve">
+    <value>عينة الهامش</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormChartBlackAndWhite" xml:space="preserve">
+    <value>طباعه بالأسود والأبيض</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormChartPrintingQuality" xml:space="preserve">
+    <value>جودة الطباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterAlignWithPageMargins" xml:space="preserve">
+    <value>محاذاة مع هوامش الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterCustomHeaderFooter" xml:space="preserve">
+    <value>رأس/تذييل مخصص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterDifferentFirstPage" xml:space="preserve">
+    <value>الصفحة الأولى مختلفة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterDifferentOddAndEvenPages" xml:space="preserve">
+    <value>صفحات فردية وزوجية مختلفة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterFooter" xml:space="preserve">
+    <value>تذييل الصفحة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterHeader" xml:space="preserve">
+    <value>الرأس:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormHeaderFooterScaleWithDocument" xml:space="preserve">
+    <value>مقياس مع الوثيقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginBottom" xml:space="preserve">
+    <value>السفلي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginCenterOnPage" xml:space="preserve">
+    <value>توسيط في الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginFooter" xml:space="preserve">
+    <value>تذييل الصفحة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginHeader" xml:space="preserve">
+    <value>الرأس:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginHorizontally" xml:space="preserve">
+    <value>أفقياً</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormMarginVertically" xml:space="preserve">
+    <value>عمودياً</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageAdjustTo" xml:space="preserve">
+    <value>ضبط إلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageFirstPageNumber" xml:space="preserve">
+    <value>رقم الصفحة الأولى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageFitTo" xml:space="preserve">
+    <value>صالح على:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageNormalSizeScaling" xml:space="preserve">
+    <value>% من الحجم العادي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPagePagesWideBy" xml:space="preserve">
+    <value>صفحة (صفحات) على نطاق واسع من قبل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPagePaperSize" xml:space="preserve">
+    <value>ورقة الحجم:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPagePrint" xml:space="preserve">
+    <value>طباعة...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPagePrintPreview" xml:space="preserve">
+    <value>الطباعة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPagePrintQuality" xml:space="preserve">
+    <value>جودة الطباعة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageScaling" xml:space="preserve">
+    <value>تحجيم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormPageTall" xml:space="preserve">
+    <value>طويل القامة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetBlackAndWhite" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetCellErrorAs" xml:space="preserve">
+    <value>الأخطاء كالخلية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetColumnsToRepeat" xml:space="preserve">
+    <value>أعمدة مكررة في اتجاه اليمين:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetComments" xml:space="preserve">
+    <value>التعليقات:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetDownThanOver" xml:space="preserve">
+    <value>إلى الأسفل، ثم فوق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetDraftQuality" xml:space="preserve">
+    <value>جودة المسودة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetGridlines" xml:space="preserve">
+    <value>خطوط الشبكة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetOverThanDown" xml:space="preserve">
+    <value>على، ثم إلى الأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetPageOrder" xml:space="preserve">
+    <value>ترتيب الصفحات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetPrintArea" xml:space="preserve">
+    <value>ناحية الطباعة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetPrintTitles" xml:space="preserve">
+    <value>طباعة العناوين</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetRowAndColumnHeadings" xml:space="preserve">
+    <value>عناوين الصفوف والأعمدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormSheetRowsToRepeat" xml:space="preserve">
+    <value>الصفوف المكررة إلى الأعلى:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormTabChart" xml:space="preserve">
+    <value>Chart</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormTabHeaderFooter" xml:space="preserve">
+    <value>رأس/تذييل الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PageSetupFormTabSheet" xml:space="preserve">
+    <value>ورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasswordRequestLabel" xml:space="preserve">
+    <value>محمية {0}.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasswordRequestTitle" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasteSpecialFormPasteAs" xml:space="preserve">
+    <value>لصق ك:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasteSpecialFormSkipBlanks" xml:space="preserve">
+    <value>تخطي الفراغات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PasteSpecialFormTitle" xml:space="preserve">
+    <value>لصق خاص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemAdd" xml:space="preserve">
+    <value>_Add</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemDelete" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemFields" xml:space="preserve">
+    <value>الحقول:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemFormula" xml:space="preserve">
+    <value>الصيغة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemInsertField" xml:space="preserve">
+    <value>إدراج Fi_eld</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemInsertItem" xml:space="preserve">
+    <value>إدراج I_tem</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemItems" xml:space="preserve">
+    <value>البنود:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedFieldItemModify" xml:space="preserve">
+    <value>_Modify</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrder" xml:space="preserve">
+    <value>حل النظام:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrderDeleteButton" xml:space="preserve">
+    <value>Dele_te</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrderDescription" xml:space="preserve">
+    <value>إذا كانت القيمة في PivotTable متأثرة باثنين أو أكثر من العناصر المحسوبة، يتم تحديد القيمة بواسطة الصيغة الأخيرة في ترتيب الحل.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrderMoveDownButton" xml:space="preserve">
+    <value>نقل _Down</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrderMoveUpButton" xml:space="preserve">
+    <value>نقل _Up</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableCalculatedItemSolveOrderTitle" xml:space="preserve">
+    <value>عنصر محتسب حل النظام</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableDateFilterFormTitle" xml:space="preserve">
+    <value>عوامل تصفية التاريخ</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableDateFilterUseWholeDay" xml:space="preserve">
+    <value>كامله</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldFilterItemsFormAddSelectionToFilter" xml:space="preserve">
+    <value>إضافة التحديد الحالي لتصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldFilterItemsFormTitle" xml:space="preserve">
+    <value>تصفية العنصر</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsColumns" xml:space="preserve">
+    <value>الأعمدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsDeferLayoutUpdate" xml:space="preserve">
+    <value>تأجيل تحديث التخطيط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsFilters" xml:space="preserve">
+    <value>تصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsFormChooseFields" xml:space="preserve">
+    <value>اختر الحقول المراد إضافتها للتقرير:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsFormDragFields" xml:space="preserve">
+    <value>اسحب الحقول بين المجالات أدناه:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsFormTitle" xml:space="preserve">
+    <value>حقول PivotTable</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsNumberFormat" xml:space="preserve">
+    <value>تنسيق _Number</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsRows" xml:space="preserve">
+    <value>الصفوف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableFieldsValues" xml:space="preserve">
+    <value>القيم</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldByDate" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldByNumber" xml:space="preserve">
+    <value>من:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldEndingAt" xml:space="preserve">
+    <value>_Ending على:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldFormTitle" xml:space="preserve">
+    <value>تجميع</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldNumberOfDays" xml:space="preserve">
+    <value>عدد الأيام:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableGroupFieldStartingAt" xml:space="preserve">
+    <value>_Starting على:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableLabelFilterFormShowItemsForWhichTheDate" xml:space="preserve">
+    <value>إظهار العناصر التي التاريخ</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableLabelFilterFormShowItemsForWhichTheLabel" xml:space="preserve">
+    <value>إظهار العناصر التي التسمية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableLabelFilterFormTitle" xml:space="preserve">
+    <value>تصفية التسمية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableMoreSortOptionsAutoSort" xml:space="preserve">
+    <value>الفرز التلقائي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableMoreSortOptionsGrandTotal" xml:space="preserve">
+    <value>المجموع الكلي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableMoreSortOptionsSortAutomatically" xml:space="preserve">
+    <value>_Sort تلقائياً في كل مرة يتم فيها تحديث التقرير</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableMoreSortOptionsSortBy" xml:space="preserve">
+    <value>حسب</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTablePageFieldFilterItemsSelectMultipleItems" xml:space="preserve">
+    <value>تحديد عناصر متعددة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableShowValuesAsFormBaseField" xml:space="preserve">
+    <value>الحقل:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableShowValuesAsFormBaseItem" xml:space="preserve">
+    <value>العنصر الأساسي:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableShowValuesAsFormTitle" xml:space="preserve">
+    <value>كما</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableSortOptionsAscending" xml:space="preserve">
+    <value>_Ascending (A إلى Z) من:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableSortOptionsDescending" xml:space="preserve">
+    <value>_Descending (Z إلى A) من:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableSortOptionsManual" xml:space="preserve">
+    <value>_Manual (يمكنك سحب العناصر ترتيبها)</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableSortOptionsMoreOptions" xml:space="preserve">
+    <value>Mo_re الخيارات...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableSortOptionsSortOptions" xml:space="preserve">
+    <value>خيارات الفرز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableSortOptionsSummary" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableTop10FilterFormBy" xml:space="preserve">
+    <value>من قبل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableTop10FilterFormShow" xml:space="preserve">
+    <value>إظهار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableTop10FilterFormTitle" xml:space="preserve">
+    <value>أعلى 10 تصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableValueFilterFormShowItemsForWhich" xml:space="preserve">
+    <value>إظهار العناصر التي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_PivotTableValueFilterFormTitle" xml:space="preserve">
+    <value>قيمة عامل التصفية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectChartsheetFormContents" xml:space="preserve">
+    <value>_Contents</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectChartsheetFormDescription" xml:space="preserve">
+    <value>حماية ورقة العمل عن</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectChartsheetFormObjects" xml:space="preserve">
+    <value>_Objects</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectChartsheetFormPassword" xml:space="preserve">
+    <value>كلمة مرور (اختياري):</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectChartsheetFormTitle" xml:space="preserve">
+    <value>حماية الورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeFormName" xml:space="preserve">
+    <value>العنوان:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeFormPassword" xml:space="preserve">
+    <value>كلمة مرور النطاق:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeFormPermissions" xml:space="preserve">
+    <value>P_ermissions...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeFormReference" xml:space="preserve">
+    <value>يشير إلى خلايا:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeFormSetPassword" xml:space="preserve">
+    <value>مجموعة _Password</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormColumnReference" xml:space="preserve">
+    <value>يشير إلى خلايا</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormDelete" xml:space="preserve">
+    <value>_Delete</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormDescription" xml:space="preserve">
+    <value>النطاقات غير المؤمنة بواسطة كلمة مرور عندما تكون الورقة محمية:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormModify" xml:space="preserve">
+    <value>_Modify...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormNew" xml:space="preserve">
+    <value>_New...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormPermissions" xml:space="preserve">
+    <value>_Permissions...</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormPermissionsDescription" xml:space="preserve">
+    <value>تحديد الذين يمكن تحرير النطاق بدون كلمة مرور:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectedRangeManagerFormTitle" xml:space="preserve">
+    <value>السماح للمستخدمين بتحرير النطاقات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectSheetFormPassword" xml:space="preserve">
+    <value>كلمة مرور لإلغاء حماية الورقة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectSheetFormPermissions" xml:space="preserve">
+    <value>السماح لكافة مستخدمي ورقة العمل هذه ب:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectSheetFormProtectSheet" xml:space="preserve">
+    <value>حماية ورقة العمل ومحتويات الخلايا المؤمنة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectSheetFormTitle" xml:space="preserve">
+    <value>حماية الورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectWorkbookFormPassword" xml:space="preserve">
+    <value>كلمة مرور (اختياري):</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectWorkbookFormProtectedObjects" xml:space="preserve">
+    <value>حماية المصنف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectWorkbookFormStructure" xml:space="preserve">
+    <value>هيكل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ProtectWorkbookFormTitle" xml:space="preserve">
+    <value>حماية البنية والإطارات</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_RenameSheetFormSheetName" xml:space="preserve">
+    <value>اسم الورقة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_RenameSheetFormTitle" xml:space="preserve">
+    <value>إعادة تسمية ورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ReplaceButton" xml:space="preserve">
+    <value>استبدال</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_RowHeightFormTitle" xml:space="preserve">
+    <value>ارتفاع الصف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_RowHeightFormValue" xml:space="preserve">
+    <value>صف الارتفاع:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetActivationFormActivate" xml:space="preserve">
+    <value>تنشيط:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetActivationFormTitle" xml:space="preserve">
+    <value>تنشيط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabDescription" xml:space="preserve">
+    <value>علامة التبويب ورقة يمثل ورقة واحدة في الكتاب</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabNewWorksheet" xml:space="preserve">
+    <value>ورقة عمل جديدة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToFirst" xml:space="preserve">
+    <value>قم بالتمرير إلى ورقة العمل الأولى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToFirstDescription" xml:space="preserve">
+    <value>قم بالتمرير قائمة "تبويب الورقة" حيث تكون الورقة الأولى مرئية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToLast" xml:space="preserve">
+    <value>قم بالتمرير إلى آخر ورقة العمل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToLastDescription" xml:space="preserve">
+    <value>قم بالتمرير قائمة "تبويب الورقة" حيث تكون الورقة الأخيرة مرئية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToNext" xml:space="preserve">
+    <value>قم بالتمرير إلى ورقة العمل التالية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToNextDescription" xml:space="preserve">
+    <value>التمرير "علامة التبويب ورقة" قائمة ورقة واحدة إلى الأمام</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToPrevious" xml:space="preserve">
+    <value>قم بالتمرير إلى ورقة العمل السابقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabScrollToPreviousDescription" xml:space="preserve">
+    <value>التمرير قائمة "التبويب ورقة" ورقة واحدة إلى الخلف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabSelector" xml:space="preserve">
+    <value>شريط التنقل ورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SheetTabSelectorDescription" xml:space="preserve">
+    <value>شريط التنقل ورقة تحتوي على عناصر تحكم لعرض الأوراق في كتاب والتبديل بينها</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SimpleFilterCheckAll" xml:space="preserve">
+    <value>تحقق من كافة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SimpleFilterFormTitle" xml:space="preserve">
+    <value>تصفية تلقائية</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SimpleFilterUncheckAll" xml:space="preserve">
+    <value>إلغاء تحديد الكل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SortButton" xml:space="preserve">
+    <value>الفرز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SortWarningContinueWithCurrentSelection" xml:space="preserve">
+    <value>المتابعة مع التحديد الحالي</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SortWarningExpandSelection" xml:space="preserve">
+    <value>توسيع التحديد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SortWarningFormTitle" xml:space="preserve">
+    <value>تحذيرات الفرز</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SortWarningFoundData" xml:space="preserve">
+    <value>وجد جدول البيانات بجوار التحديد الخاص بك. إذ لم تقم بتحديد هذه البيانات، فإنه لا يتم فرز.</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SortWarningWhatToDo" xml:space="preserve">
+    <value>ماذا تريد أن تفعل؟</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetSpinEditLess" xml:space="preserve">
+    <value>أقل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetSpinEditMore" xml:space="preserve">
+    <value>المزيد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarDownButton" xml:space="preserve">
+    <value>صفحة لأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarDownButtonDescription" xml:space="preserve">
+    <value>تحريك الموضع الرأسي سطرين أسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarDownEdgeButton" xml:space="preserve">
+    <value>سطر لأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarDownEdgeButtonDescription" xml:space="preserve">
+    <value>تحريك الموضع الرأسي سطر واحد لأسفل</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarLeftButton" xml:space="preserve">
+    <value>يسار الصفحة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarLeftButtonDescription" xml:space="preserve">
+    <value>تحريك الموضع الأفقي عمودين اليسار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarLeftEdgeButton" xml:space="preserve">
+    <value>العمود الأيسر</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarLeftEdgeButtonDescription" xml:space="preserve">
+    <value>يتحرك في الموضع الأفقي الأيمن في عمود واحد</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarRightButton" xml:space="preserve">
+    <value>الصفحة اليمنى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarRightButtonDescription" xml:space="preserve">
+    <value>تحريك الموضع الأفقي عمودين اليمين</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarRightEdgeButton" xml:space="preserve">
+    <value>العمود الأيمن</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarRightEdgeButtonDescription" xml:space="preserve">
+    <value>يتحرك العمود الموضع الأفقي واحدة لليمين</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarThumbHorizontalDescription" xml:space="preserve">
+    <value>يشير إلى الموضع الأفقي الحالي، ويمكن سحبه لتغييره مباشرة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarThumbVerticalDescription" xml:space="preserve">
+    <value>يشير إلى الموضع العمودي الحالي، ويمكن سحبه لتغييره مباشرة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarUpButton" xml:space="preserve">
+    <value>صفحة لأعلى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarUpButtonDescription" xml:space="preserve">
+    <value>نقل الموضع العمودي لأعلى بمقدار سطرين</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarUpEdgeButton" xml:space="preserve">
+    <value>حتى خط</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_SpreadsheetViewScrollBarUpEdgeButtonDescription" xml:space="preserve">
+    <value>تحريك الموضع الرأسي سطر واحد لأعلى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_Top10FilterFormShow" xml:space="preserve">
+    <value>إظهار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_Top10FilterFormTitle" xml:space="preserve">
+    <value>تصفية تلقائية 10 أعلى</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnhideSheetFormTitle" xml:space="preserve">
+    <value>إظهار</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnhideSheetFormUnhideSheet" xml:space="preserve">
+    <value>إظهار الورقة:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectRangeFormDescription" xml:space="preserve">
+    <value>خلية تحاول تغيير محمي بكلمة مرور-</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectRangeFormTitle" xml:space="preserve">
+    <value>تأمين النطاق</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectSheetFormTitle" xml:space="preserve">
+    <value>إلغاء حماية الورقة</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_UnprotectWorkbookFormTitle" xml:space="preserve">
+    <value>إلغاء حماية المصنف</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoom100Percent" xml:space="preserve">
+    <value>_100%</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoom200Percent" xml:space="preserve">
+    <value>20_0%</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoom25Percent" xml:space="preserve">
+    <value>_25%</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoom50Percent" xml:space="preserve">
+    <value>_50%</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoom75Percent" xml:space="preserve">
+    <value>_75%</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoomCustomPercent" xml:space="preserve">
+    <value>_Custom:</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_ViewZoomMagnification" xml:space="preserve">
+    <value>التكبير</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Caption_Worksheet" xml:space="preserve">
+    <value>_Worksheet</value>
+  </data>
+  <data name="SpreadsheetControlStringId.Msg_ErrorEmptySimpleFilter" xml:space="preserve">
+    <value>لا يمكن تطبيق عامل تصفية فارغة. تحقق من أي عنصر في القائمة-</value>
+  </data>
+</root>

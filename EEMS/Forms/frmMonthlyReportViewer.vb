@@ -1,4 +1,6 @@
-﻿Imports CrystalDecisions.CrystalReports.Engine
+﻿Imports System.IO
+Imports System.Reflection
+Imports CrystalDecisions.CrystalReports.Engine
 Imports EEMS.SqlDBHelper
 
 Public Class frmMonthlyReportViewer
@@ -12,10 +14,10 @@ Public Class frmMonthlyReportViewer
         InitializeComponent()
     End Sub
 
-   
+
     Private Sub CrystalReportViewer1_Load(sender As Object, e As EventArgs) Handles CrystalReportViewer1.Load
         Dim dr As DataRow = ds.OrgInfodt.NewOrgInfodtRow
-        dr.ItemArray = New Object() {orgname, ""}
+        dr.ItemArray = New Object() {orgname, Path.Combine(Directory.GetParent(Assembly.GetExecutingAssembly().FullName).FullName, "Logo/logo.jpg")}
         ds.OrgInfodt.Rows.Add(dr)
 
         Dim rptDoc As New GeneralMonthlyReport

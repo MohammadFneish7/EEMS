@@ -560,7 +560,7 @@ Public Class frmMain
     End Sub
 
     Private Sub إعداداتعامةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles إعداداتعامةToolStripMenuItem.Click
-        If Not currentUser.hasPermision("dataexport") Then
+        If Not currentUser.hasPermision("admin") Then
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
@@ -718,6 +718,72 @@ Public Class frmMain
             If tok.tokenAccepted Then
                 Dim frm As New frmValidityRenual
                 frm.ShowDialog()
+            End If
+        End If
+    End Sub
+
+    Private Sub اعادةتوليفالمصنعToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles اعادةتوليفالمصنعToolStripMenuItem.Click
+        If Not currentUser.hasPermision("admin") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Dim msgdialog As New CustomMsgDialog("انتبه", "عند اعادة توليف المصنع ستفقد كامل البيانات، لذا ننصحك بأخذ نسخة احتياطيّة قبل المتابعة." & vbNewLine & vbNewLine & "هل أنت متأكد من أنك تريد المتابعة؟", 5)
+        If msgdialog.ShowDialog = DialogResult.Yes Then
+            Dim errorMsg As String = Nothing
+            If (a.ExecuteInTransaction({
+                                   "ALTER TABLE EngineWorkingHours DROP CONSTRAINT fk_EngineWorkingHours",
+                                   "ALTER TABLE ElectricBox DROP CONSTRAINT fk_ElectricBoxEngine",
+                                   "ALTER TABLE ElectricBox DROP CONSTRAINT fk_ElectricBoxCollector",
+                                   "ALTER TABLE ECounter DROP CONSTRAINT fk_ECounterElectricBox",
+                                   "ALTER TABLE Registration DROP CONSTRAINT fk_RegistrationECounter",
+                                   "ALTER TABLE Registration DROP CONSTRAINT fk_RegistrationPackage",
+                                   "ALTER TABLE Registration DROP CONSTRAINT fk_RegistrationClient",
+                                   "ALTER TABLE CounterHistory DROP CONSTRAINT fk_CounterHistoryRegistration",
+                                   "ALTER TABLE CounterHistory DROP CONSTRAINT fk_CounterHistoryArabicMonth",
+                                   "ALTER TABLE Payment DROP CONSTRAINT fk_PaymentCounterHistory",
+                                   "ALTER TABLE UserRoles DROP CONSTRAINT fk_UserRolesUsers",
+                                   "ALTER TABLE UserRoles DROP CONSTRAINT fk_UserRolesRoles",
+                                   "ALTER TABLE Purchases DROP CONSTRAINT fk_PurchasesItems",
+                                   "ALTER TABLE Consumption DROP CONSTRAINT fk_ConsumptionItems",
+                                   "ALTER TABLE FuelPurchases DROP CONSTRAINT fk_FuelPurchasesFuelTank",
+                                   "ALTER TABLE FuelConsumption DROP CONSTRAINT fk_FuelConsumptionFuelTank",
+                                   "ALTER TABLE FuelConsumption DROP CONSTRAINT fk_FuelConsumptionEngine",
+                                   "ALTER TABLE Maintenance DROP CONSTRAINT fk_Maintenance",
+                                   "TRUNCATE TABLE Client", "TRUNCATE TABLE Registration",
+                                   "TRUNCATE TABLE Package", "TRUNCATE TABLE ECounter",
+                                   "TRUNCATE TABLE ElectricBox", "TRUNCATE TABLE Collector",
+                                   "TRUNCATE TABLE FuelPurchases", "TRUNCATE TABLE FuelConsumption",
+                                   "TRUNCATE TABLE FuelTank", "TRUNCATE TABLE Maintenance",
+                                   "TRUNCATE TABLE EngineWorkingHours", "TRUNCATE TABLE Engine",
+                                   "TRUNCATE TABLE Payment", "TRUNCATE TABLE CounterHistory",
+                                   "TRUNCATE TABLE Items", "TRUNCATE TABLE Consumption",
+                                   "TRUNCATE TABLE Purchases", "TRUNCATE TABLE LogSet",
+                                   "TRUNCATE TABLE ChangeLog", "TRUNCATE TABLE CounterHistory",
+                                   "TRUNCATE TABLE Expenditure",
+                                   "ALTER TABLE EngineWorkingHours ADD CONSTRAINT fk_EngineWorkingHours FOREIGN KEY (engineid) REFERENCES Engine(ID)",
+                                   "ALTER TABLE ElectricBox ADD CONSTRAINT fk_ElectricBoxEngine FOREIGN KEY (engineid) REFERENCES Engine(ID)",
+                                   "ALTER TABLE ElectricBox ADD CONSTRAINT fk_ElectricBoxCollector FOREIGN KEY (collectorid) REFERENCES Collector(ID)",
+                                   "ALTER TABLE ECounter ADD CONSTRAINT fk_ECounterElectricBox FOREIGN KEY (boxid) REFERENCES ElectricBox(ID)",
+                                   "ALTER TABLE Registration ADD CONSTRAINT fk_RegistrationECounter FOREIGN KEY (counterid) REFERENCES ECounter(ID)",
+                                   "ALTER TABLE Registration ADD CONSTRAINT fk_RegistrationPackage FOREIGN KEY (packageid) REFERENCES Package(ID)",
+                                   "ALTER TABLE Registration ADD CONSTRAINT fk_RegistrationClient FOREIGN KEY (clientid) REFERENCES Client(ID)",
+                                   "ALTER TABLE CounterHistory ADD CONSTRAINT fk_CounterHistoryRegistration FOREIGN KEY (regid) REFERENCES Registration(ID)",
+                                   "ALTER TABLE CounterHistory ADD CONSTRAINT fk_CounterHistoryArabicMonth FOREIGN KEY (cmonth) REFERENCES ArabicMonth(ID)",
+                                   "ALTER TABLE Payment ADD CONSTRAINT fk_PaymentCounterHistory FOREIGN KEY (counterhistoryid) REFERENCES CounterHistory(ID)",
+                                   "ALTER TABLE UserRoles ADD CONSTRAINT fk_UserRolesUsers FOREIGN KEY (username) REFERENCES Users(username)",
+                                   "ALTER TABLE UserRoles ADD CONSTRAINT fk_UserRolesRoles FOREIGN KEY (rolename) REFERENCES Roles(rolename)",
+                                   "ALTER TABLE Purchases ADD CONSTRAINT fk_PurchasesItems FOREIGN KEY (itemid) REFERENCES Items(ID)",
+                                   "ALTER TABLE Consumption ADD CONSTRAINT fk_ConsumptionItems FOREIGN KEY (itemid) REFERENCES Items(ID)",
+                                   "ALTER TABLE FuelPurchases ADD CONSTRAINT fk_FuelPurchasesFuelTank FOREIGN KEY (tankid) REFERENCES FuelTank(ID)",
+                                   "ALTER TABLE FuelConsumption ADD CONSTRAINT fk_FuelConsumptionFuelTank FOREIGN KEY (tankid) REFERENCES FuelTank(ID)",
+                                   "ALTER TABLE FuelConsumption ADD CONSTRAINT fk_FuelConsumptionEngine FOREIGN KEY (engineid) REFERENCES Engine(ID)",
+                                   "ALTER TABLE Maintenance ADD CONSTRAINT fk_Maintenance FOREIGN KEY (engineid) REFERENCES Engine(ID)"
+                                   }.ToList(), errorMsg)) Then
+                MessageBox.Show("تمت العمليّة بنجاح، سيتم اغلاق البرنامج.")
+                Application.Restart()
+            Else
+                MessageBox.Show("فشلت محاولة اعادة توليف المصنع" & vbNewLine & vbNewLine & errorMsg, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             End If
         End If
     End Sub
