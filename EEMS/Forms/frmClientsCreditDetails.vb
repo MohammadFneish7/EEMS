@@ -35,9 +35,9 @@ Public Class frmClientsCreditDetails
 
     Public Sub loadData()
         a.ds = New DataSet
-        a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],cl.clientname as [إسم المشترك], cl.phone as [هاتف], cl.mobile as [خلوي],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك],(ch.currentvalue-ch.previousvalue) as [فرق عداد],ch.kilowattprice as [سعر الكيلو],((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue as [مطلوب كيلو],total+discount as [المجموع],ch.discount as [حسم],total as [مطلوب], ISNULL(SUM(p.pvalue),0) as [مدفوع], total-ISNULL(SUM(p.pvalue),0) as [باقي] " &
+        a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],cl.clientname as [إسم المشترك], cl.phone as [هاتف], cl.mobile as [خلوي],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك],(ch.currentvalue-ch.previousvalue) as [فرق عداد],ch.kilowattprice as [سعر الكيلو],((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue as [مطلوب كيلو],total+discount as [المجموع],ch.discount as [حسم],total as [مطلوب], ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [مدفوع], total-ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [باقي] " &
             " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID join Client cl on cl.id=r.clientid" &
-            " group by ch.ID,r.ID,cl.clientname, cl.phone, cl.mobile,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.kilowattprice,((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue,total+discount,ch.discount,ch.total having (total-ISNULL(SUM(p.pvalue),0))>0 order by r.ID,cl.clientname", "dt2")
+            " group by ch.ID,r.ID,cl.clientname, cl.phone, cl.mobile,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.kilowattprice,((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue,total+discount,ch.discount,ch.total having (total-ISNULL(sum(Cast(p.pvalue AS BIGINT)),0))>0 order by r.ID,cl.clientname", "dt2")
         dgvData1.DataSource = a.ds.Tables("dt2")
 
 

@@ -42,14 +42,14 @@ Public Class frmItemEditor
         End If
         a.ds = New DataSet
         If add = False Then
-            Dim countfound As Int32 = a.ExecuteScalar("select count(*) from Items where itemname='" & txtname.Text.Trim & "' and ID<>" & Itemid)
+            Dim countfound As Long = a.ExecuteScalar("select count(*) from Items where itemname='" & txtname.Text.Trim & "' and ID<>" & Itemid)
             If countfound > 0 Then
                 MsgBox("اسم الصنف موجود اصلاً الرجاء اختيار اسم جديد للمتابعة.")
                 Return
             End If
             a.Execute("Update Items Set itemname='" & txtname.Text.Trim & "',unit='" & cmbUnit.SelectedItem.ToString.Trim & "',quantityThreshold=" & txtThreshold.Text.Trim & ",properties='" & txtProperties.Text.Trim & "',notes='" & txtNotes.Text.Trim & "' Where ID=" & Itemid)
         Else
-            Dim countfound As Int32 = a.ExecuteScalar("select count(*) from Items where itemname='" & txtname.Text.Trim & "'")
+            Dim countfound As Long = a.ExecuteScalar("select count(*) from Items where itemname='" & txtname.Text.Trim & "'")
             If countfound > 0 Then
                 MsgBox("اسم الصنف موجود اصلاً الرجاء اختيار اسم جديد للمتابعة.")
                 Return

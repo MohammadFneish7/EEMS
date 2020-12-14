@@ -48,7 +48,7 @@ Public Class frmEngineEditor
         If add = False Then
             a.Execute("Update Engine Set ename='" & txtname.Text.Trim & "',location='" & txtaddress.Text.Trim & "',epower=" & txtpower.Text.Trim & ",company='" & txtCompany.Text.Trim & "',contactphone='" & txtphone.Text.Trim & "',repairparty='" & txtrepairer.Text.Trim & "',notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
         Else
-            Dim count As Integer = a.ExecuteScalar("Select count(*) from Engine e where e.ename='" & txtname.Text.Trim & "'")
+            Dim count As Long = a.ExecuteScalar("Select count(*) from Engine e where e.ename='" & txtname.Text.Trim & "'")
             If count > 0 Then
                 MsgBox("اسم المولد موجود أصلا، الرجاء إختيار اسم أخر للمتابعة")
                 Return

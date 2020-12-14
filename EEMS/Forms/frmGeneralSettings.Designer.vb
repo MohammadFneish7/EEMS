@@ -38,7 +38,7 @@ Partial Class frmGeneralSettings
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -202,26 +202,24 @@ Partial Class frmGeneralSettings
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.CheckBox1)
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Location = New System.Drawing.Point(195, 167)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupBox2.Size = New System.Drawing.Size(156, 63)
         Me.GroupBox2.TabIndex = 71
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "احتساب الفواتير"
+        Me.GroupBox2.Text = "تدوير كسر الألف"
         '
-        'CheckBox1
+        'ComboBox1
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Checked = True
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(37, 31)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "تدوير كسر الألف "
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"تدوير الى الأعلى", "تدوير نسبي", "عدم تدوير"})
+        Me.ComboBox1.Location = New System.Drawing.Point(6, 29)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(144, 21)
+        Me.ComboBox1.TabIndex = 0
         '
         'frmGeneralSettings
         '
@@ -251,7 +249,6 @@ Partial Class frmGeneralSettings
         Me.GroupBox1.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -271,5 +268,5 @@ Partial Class frmGeneralSettings
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

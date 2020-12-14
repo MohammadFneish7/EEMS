@@ -5,7 +5,7 @@ Public Class frmPaymentEditor
     Dim chID As Integer = -2
     Dim regID As Integer = -2
     Dim a As New Helper
-    Dim leftPayments As Integer = 0
+    Dim leftPayments As Long = 0
     Dim maxPay As Integer = 0
     Dim indate As Date
     Dim collector As String = ""
@@ -20,6 +20,7 @@ Public Class frmPaymentEditor
         Me.collector = collector
         Me.regID = regID_
         Me.clientName = clientName_
+        Me.dtp.Value = inDate
 
         txtCollector.Text = collector.Trim
         txtClientName.Text = clientName_
@@ -136,7 +137,7 @@ Public Class frmPaymentEditor
             Next
 
 
-            Dim payid As Integer = a.Execute("insert into Payment(counterhistoryid,pdate,pvalue,notes,collector) values(" & chID & ",'" & indate & "'," & txtpayment.Text.Trim & ",'" & txtnotes.Text.Trim & "','" & collecname & "')")
+            Dim payid As Integer = a.Execute("insert into Payment(counterhistoryid,pdate,pvalue,notes,collector) values(" & chID & ",'" & dtp.Value & "'," & txtpayment.Text.Trim & ",'" & txtnotes.Text.Trim & "','" & collecname & "')")
             a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & Date.Now.ToShortDateString & "','" & intitle & "'," & txtpayment.Text.Trim & ",'" & name & "','" & "اشتراك رقم " & regsid & "','py" & payid & "')")
             payedAmmount = Integer.Parse(txtpayment.Text.Trim)
 

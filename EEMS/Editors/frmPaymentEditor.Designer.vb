@@ -24,6 +24,10 @@ Partial Class frmPaymentEditor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPaymentEditor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtMonth = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtClientName = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -39,11 +43,9 @@ Partial Class frmPaymentEditor
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtpayment = New System.Windows.Forms.TextBox()
         Me.btnsave = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtClientName = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtMonth = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -52,6 +54,8 @@ Partial Class frmPaymentEditor
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.dtp)
+        Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.txtMonth)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -69,10 +73,50 @@ Partial Class frmPaymentEditor
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox1.Size = New System.Drawing.Size(387, 318)
+        Me.GroupBox1.Size = New System.Drawing.Size(387, 342)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "التفصيل"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(278, 100)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.TabIndex = 29
+        Me.Label5.Text = "عن شهر:"
+        '
+        'txtMonth
+        '
+        Me.txtMonth.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtMonth.BackColor = System.Drawing.Color.Gainsboro
+        Me.txtMonth.Location = New System.Drawing.Point(31, 97)
+        Me.txtMonth.Name = "txtMonth"
+        Me.txtMonth.ReadOnly = True
+        Me.txtMonth.Size = New System.Drawing.Size(241, 20)
+        Me.txtMonth.TabIndex = 28
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(278, 22)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 27
+        Me.Label4.Text = "المشترك:"
+        '
+        'txtClientName
+        '
+        Me.txtClientName.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtClientName.BackColor = System.Drawing.Color.Gainsboro
+        Me.txtClientName.Location = New System.Drawing.Point(31, 19)
+        Me.txtClientName.Name = "txtClientName"
+        Me.txtClientName.ReadOnly = True
+        Me.txtClientName.Size = New System.Drawing.Size(241, 20)
+        Me.txtClientName.TabIndex = 26
         '
         'GroupBox2
         '
@@ -80,7 +124,7 @@ Partial Class frmPaymentEditor
         Me.GroupBox2.Controls.Add(Me.RadioButton3)
         Me.GroupBox2.Controls.Add(Me.RadioButton2)
         Me.GroupBox2.Controls.Add(Me.RadioButton1)
-        Me.GroupBox2.Location = New System.Drawing.Point(31, 210)
+        Me.GroupBox2.Location = New System.Drawing.Point(31, 234)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(316, 82)
         Me.GroupBox2.TabIndex = 25
@@ -133,7 +177,7 @@ Partial Class frmPaymentEditor
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(278, 187)
+        Me.Label3.Location = New System.Drawing.Point(278, 211)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(41, 13)
         Me.Label3.TabIndex = 21
@@ -143,7 +187,7 @@ Partial Class frmPaymentEditor
         '
         Me.txtCollector.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtCollector.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtCollector.Location = New System.Drawing.Point(31, 184)
+        Me.txtCollector.Location = New System.Drawing.Point(31, 208)
         Me.txtCollector.Name = "txtCollector"
         Me.txtCollector.ReadOnly = True
         Me.txtCollector.Size = New System.Drawing.Size(241, 20)
@@ -185,7 +229,7 @@ Partial Class frmPaymentEditor
         '
         Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(278, 128)
+        Me.Label17.Location = New System.Drawing.Point(278, 152)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(52, 13)
         Me.Label17.TabIndex = 15
@@ -194,7 +238,7 @@ Partial Class frmPaymentEditor
         'txtnotes
         '
         Me.txtnotes.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtnotes.Location = New System.Drawing.Point(31, 125)
+        Me.txtnotes.Location = New System.Drawing.Point(31, 149)
         Me.txtnotes.MaxLength = 255
         Me.txtnotes.Multiline = True
         Me.txtnotes.Name = "txtnotes"
@@ -227,7 +271,7 @@ Partial Class frmPaymentEditor
         Me.btnsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnsave.Image = Global.EEMS.My.Resources.Resources.UpgradeReport_Success
         Me.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnsave.Location = New System.Drawing.Point(12, 336)
+        Me.btnsave.Location = New System.Drawing.Point(12, 375)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnsave.Size = New System.Drawing.Size(102, 29)
@@ -237,52 +281,12 @@ Partial Class frmPaymentEditor
         Me.btnsave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btnsave.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(278, 22)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 13)
-        Me.Label4.TabIndex = 27
-        Me.Label4.Text = "المشترك:"
-        '
-        'txtClientName
-        '
-        Me.txtClientName.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtClientName.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtClientName.Location = New System.Drawing.Point(31, 19)
-        Me.txtClientName.Name = "txtClientName"
-        Me.txtClientName.ReadOnly = True
-        Me.txtClientName.Size = New System.Drawing.Size(241, 20)
-        Me.txtClientName.TabIndex = 26
-        '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(278, 100)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 13)
-        Me.Label5.TabIndex = 29
-        Me.Label5.Text = "عن شهر:"
-        '
-        'txtMonth
-        '
-        Me.txtMonth.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtMonth.BackColor = System.Drawing.Color.Gainsboro
-        Me.txtMonth.Location = New System.Drawing.Point(31, 97)
-        Me.txtMonth.Name = "txtMonth"
-        Me.txtMonth.ReadOnly = True
-        Me.txtMonth.Size = New System.Drawing.Size(241, 20)
-        Me.txtMonth.TabIndex = 28
-        '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.printer16
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(120, 336)
+        Me.Button1.Location = New System.Drawing.Point(120, 375)
         Me.Button1.Name = "Button1"
         Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button1.Size = New System.Drawing.Size(152, 29)
@@ -292,12 +296,32 @@ Partial Class frmPaymentEditor
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(278, 129)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(64, 13)
+        Me.Label6.TabIndex = 30
+        Me.Label6.Text = "تاريخ الدفعة:"
+        '
+        'dtp
+        '
+        Me.dtp.CustomFormat = "dd-MMM-yyyy HH:mm:ss"
+        Me.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtp.Location = New System.Drawing.Point(31, 123)
+        Me.dtp.Name = "dtp"
+        Me.dtp.RightToLeftLayout = True
+        Me.dtp.Size = New System.Drawing.Size(241, 20)
+        Me.dtp.TabIndex = 31
+        '
         'frmPaymentEditor
         '
         Me.AcceptButton = Me.btnsave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(411, 377)
+        Me.ClientSize = New System.Drawing.Size(411, 416)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnsave)
         Me.Controls.Add(Me.GroupBox1)
@@ -334,5 +358,6 @@ Partial Class frmPaymentEditor
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtClientName As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-
+    Friend WithEvents dtp As DateTimePicker
+    Friend WithEvents Label6 As Label
 End Class

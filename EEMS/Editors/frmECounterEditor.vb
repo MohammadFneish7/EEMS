@@ -40,7 +40,7 @@ Public Class frmECounterEditor
         Else
             a.ds = New DataSet
             If add Then
-                Dim count As Integer = a.ExecuteScalar("Select count(*) from ECounter e where e.serial='" & txtserial.Text.Trim & "'")
+                Dim count As Long = a.ExecuteScalar("Select count(*) from ECounter e where e.serial='" & txtserial.Text.Trim & "'")
                 If count > 0 Then
                     MsgBox("رقم العداد موجود أصلا، الرجاء إدخال رقم أخر للمتابعة")
                     Return

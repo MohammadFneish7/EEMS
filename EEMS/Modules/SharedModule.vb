@@ -26,7 +26,7 @@ Module SharedModule
     Public currentUser As User
     Public orgname As String = "Organization Name"
     Public invoiceYOffset = 0
-    Public roundToThousand As Boolean = True
+    Public roundToThousand As Integer = 0 '0 round to 1000, 1 ceil, 2 dont rount
 
     Public isPaymentVerified As Boolean = True
 
@@ -87,7 +87,7 @@ Module SharedModule
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceyoffset") Then
                 invoiceYOffset = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
-                roundToThousand = Boolean.Parse(dr.Item(1).ToString.Trim.ToLower)
+                roundToThousand = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
         Next
     End Sub
@@ -138,14 +138,23 @@ Module SharedModule
     End Sub
 
     Public Function getRoundThousand(ByVal i As Integer) As Integer
-        If Not roundToThousand Then
+        If roundToThousand = 2 Then
             Return 0
         End If
 
         If (i Mod 1000) = 1000 Or (i Mod 1000) = 0 Then
             Return 0
         End If
-        Return 1000 - (i Mod 1000)
+
+        If roundToThousand = 0 Then
+            Return 1000 - (i Mod 1000)
+        End If
+
+        If (i Mod 1000) < 500 Then
+            Return -(i Mod 1000)
+        Else
+            Return 1000 - (i Mod 1000)
+        End If
     End Function
 
     Public Function getBit(b As Boolean) As Integer

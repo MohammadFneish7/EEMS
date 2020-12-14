@@ -42,14 +42,14 @@ Public Class frmFuelTankEditor
         End If
         a.ds = New DataSet
         If add = False Then
-            Dim countfound As Int32 = a.ExecuteScalar("select count(*) from FuelTank where tankname='" & txtname.Text.Trim & "' and ID<>" & Tankid)
+            Dim countfound As Long = a.ExecuteScalar("select count(*) from FuelTank where tankname='" & txtname.Text.Trim & "' and ID<>" & Tankid)
             If countfound > 0 Then
                 MsgBox("اسم الخزّان موجود اصلاً الرجاء اختيار اسم جديد للمتابعة.")
                 Return
             End If
             a.Execute("Update FuelTank Set tankname='" & txtname.Text.Trim & "',location='" & txtLocation.Text.Trim & "',capacity=" & txtCapacity.Text.Trim & ",notes='" & txtNotes.Text.Trim & "' Where ID=" & Tankid)
         Else
-            Dim countfound As Int32 = a.ExecuteScalar("select count(*) from FuelTank where tankname='" & txtname.Text.Trim & "'")
+            Dim countfound As Long = a.ExecuteScalar("select count(*) from FuelTank where tankname='" & txtname.Text.Trim & "'")
             If countfound > 0 Then
                 MsgBox("اسم الخزّان موجود اصلاً الرجاء اختيار اسم جديد للمتابعة.")
                 Return

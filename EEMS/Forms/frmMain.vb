@@ -341,12 +341,8 @@ Public Class frmMain
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
-        Try
-            a.Execute("Update CounterHistory set roundvalue=IIF((1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000))=1000,0,(1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000))) where cyear<>2015")
-            MsgBox("تمت العمليّة بنجاح")
-        Catch ex As Exception
-            ErrorDialog.showDlg(ex)
-        End Try
+        Dim frm As New frmCorrectRoundValue
+        frm.ShowDialog()
     End Sub
 
     Private Sub إستيرادمنAccessToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles إستيرادمنAccessToolStripMenuItem.Click
@@ -727,6 +723,14 @@ Public Class frmMain
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
+
+        Dim tok As New frmTokenizer
+        If tok.ShowDialog = DialogResult.OK Then
+            If Not tok.tokenAccepted Then
+                Return
+            End If
+        End If
+
         Dim msgdialog As New CustomMsgDialog("انتبه", "عند اعادة توليف المصنع ستفقد كامل البيانات، لذا ننصحك بأخذ نسخة احتياطيّة قبل المتابعة." & vbNewLine & vbNewLine & "هل أنت متأكد من أنك تريد المتابعة؟", 5)
         If msgdialog.ShowDialog = DialogResult.Yes Then
             Dim errorMsg As String = Nothing
@@ -786,5 +790,16 @@ Public Class frmMain
 
             End If
         End If
+    End Sub
+
+    Private Sub كسرواتماقبلالبرنامجToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles كسرواتماقبلالبرنامجToolStripMenuItem.Click
+        If Not currentUser.hasPermision("admin") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+
+        Dim frm As New frmPreRegistrationCredits
+        frm.ShowDialog()
+
     End Sub
 End Class

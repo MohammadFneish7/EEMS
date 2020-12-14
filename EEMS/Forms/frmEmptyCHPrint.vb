@@ -45,13 +45,13 @@
 
             a.ds = New DataSet
 
-            Dim query As String = "SELECT en.ename as [الموتور],c.clientname as [المشترك],b.code as [رمز العلبة],b.location as [عنوان العلبة]," & _
-                        "	p.ampere as [أمبير],ec.serial as [رقم العداد],ec.code as [الرمز في العلبة]," & _
-                        "	IsNull((Select MAX(chh.currentvalue) From CounterHistory chh Where chh.regid = r.ID),0) AS [القيمة السابقة],'' as [القيمة الحاليّة],'" & CType(cmbCollector.SelectedItem, DataRowView).Item(1).ToString.Trim & "' as [الجابي]" & _
-                        " FROM Registration r JOIN Client c ON r.clientid = c.ID" & _
-                        "	JOIN ECounter ec ON r.counterid = ec.ID JOIN ElectricBox b ON ec.boxid=b.id JOIN Engine en ON b.engineid=en.id" & _
-                        "	JOIN Collector cl ON b.collectorid=cl.id JOIN Package p ON r.packageid=p.id RIGHT JOIN CounterHistory ch ON r.counterid=ch.id" & _
-                        " WHERE (DatePart(yyyy, r.registrationdate) < " & Year & " Or (DatePart(m, r.registrationdate) <= " & Month & " And DatePart(yyyy, r.registrationdate) = " & Year & "))" & _
+            Dim query As String = "SELECT en.ename as [الموتور],c.clientname as [المشترك],b.code as [رمز العلبة],b.location as [عنوان العلبة]," &
+                        "	p.ampere as [أمبير],ec.serial as [رقم العداد],ec.code as [الرمز في العلبة]," &
+                        "	IsNull((Select MAX(chh.currentvalue) From CounterHistory chh Where chh.regid = r.ID),0) AS [القيمة السابقة],'' as [القيمة الحاليّة],'" & CType(cmbCollector.SelectedItem, DataRowView).Item(1).ToString.Trim & "' as [الجابي]" &
+                        " FROM Registration r JOIN Client c ON r.clientid = c.ID" &
+                        "	JOIN ECounter ec ON r.counterid = ec.ID JOIN ElectricBox b ON ec.boxid=b.id JOIN Engine en ON b.engineid=en.id" &
+                        "	JOIN Collector cl ON b.collectorid=cl.id JOIN Package p ON r.packageid=p.id RIGHT JOIN CounterHistory ch ON r.counterid=ch.id" &
+                        " WHERE (DatePart(yyyy, r.registrationdate) < " & Year & " Or (DatePart(m, r.registrationdate) <= " & Month & " And DatePart(yyyy, r.registrationdate) = " & Year & "))" &
                         " and r.ID not in (Select regID from CounterHistory where cmonth = " & Month & " and cyear = " & Year & ")"
 
             If cmbEngine.SelectedIndex > 0 Then

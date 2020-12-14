@@ -30,7 +30,7 @@ Public Class frmCollectorEditor
         If add = False Then
             a.Execute("Update Collector Set fullname='" & txtname.Text.Trim & "',caddress='" & txtaddress.Text.Trim & "',phone='" & txtphone.Text.Trim & "',mobile='" & txtmobile.Text.Trim & "',notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
         Else
-            Dim count As Integer = a.ExecuteScalar("Select count(*) from Collector e where e.fullname='" & txtname.Text.Trim & "'")
+            Dim count As Long = a.ExecuteScalar("Select count(*) from Collector e where e.fullname='" & txtname.Text.Trim & "'")
             If count > 0 Then
                 MsgBox("اسم الجابي موجود أصلا، الرجاء إختيار اسم أخر للمتابعة")
                 Return

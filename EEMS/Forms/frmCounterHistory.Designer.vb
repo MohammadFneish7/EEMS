@@ -25,6 +25,7 @@ Partial Class frmCounterHistory
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCounterHistory))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.chkShowNonActive = New System.Windows.Forms.CheckBox()
         Me.btnExportExcell = New System.Windows.Forms.Button()
@@ -52,6 +53,7 @@ Partial Class frmCounterHistory
         Me.btnsave = New System.Windows.Forms.Button()
         Me.DataSetInvoices = New EEMS.DataSetInvoices()
         Me.InvoicesdtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnimport = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvData1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +70,8 @@ Partial Class frmCounterHistory
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.btnimport)
+        Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.chkShowNonActive)
         Me.GroupBox1.Controls.Add(Me.btnExportExcell)
@@ -83,6 +87,20 @@ Partial Class frmCounterHistory
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "القيم"
+        '
+        'Button3
+        '
+        Me.Button3.Image = Global.EEMS.My.Resources.Resources.downarrow16
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(444, 26)
+        Me.Button3.Name = "Button3"
+        Me.Button3.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button3.Size = New System.Drawing.Size(188, 29)
+        Me.Button3.TabIndex = 39
+        Me.Button3.Text = "تصدير نموذج ادخال العدّادات"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -406,6 +424,22 @@ Partial Class frmCounterHistory
         Me.InvoicesdtBindingSource.DataMember = "invoicesdt"
         Me.InvoicesdtBindingSource.DataSource = Me.DataSetInvoices
         '
+        'btnimport
+        '
+        Me.btnimport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnimport.Enabled = False
+        Me.btnimport.Image = Global.EEMS.My.Resources.Resources.downup16
+        Me.btnimport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnimport.Location = New System.Drawing.Point(1106, 69)
+        Me.btnimport.Name = "btnimport"
+        Me.btnimport.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnimport.Size = New System.Drawing.Size(212, 29)
+        Me.btnimport.TabIndex = 40
+        Me.btnimport.Text = "استيراد القيم من نموذج الادخال"
+        Me.btnimport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnimport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnimport.UseVisualStyleBackColor = True
+        '
         'frmCounterHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -464,5 +498,6 @@ Partial Class frmCounterHistory
     Friend WithEvents btnShowPrint As System.Windows.Forms.Button
     Friend WithEvents chkShowNonActive As System.Windows.Forms.CheckBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
-
+    Friend WithEvents Button3 As Button
+    Friend WithEvents btnimport As Button
 End Class

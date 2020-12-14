@@ -10,6 +10,7 @@ Public Class frmGeneralSettings
         ' This call is required by the designer.
         InitializeComponent()
         cmblang.SelectedIndex = 0
+        ComboBox1.SelectedIndex = 0
         ' Add any initialization after the InitializeComponent() call.
         a.ds = New DataSet
         a.GetData("select dkey,title from DefinedKeys where reference='" & selectionKeyReference.ToLower & "'")
@@ -25,7 +26,7 @@ Public Class frmGeneralSettings
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceyoffset") Then
                 NumericUpDown1.Value = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
-                CheckBox1.Checked = Boolean.Parse(dr.Item(1).ToString.Trim.ToLower)
+                ComboBox1.SelectedIndex = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
         Next
     End Sub
@@ -40,14 +41,14 @@ Public Class frmGeneralSettings
             a.ExecuteNoReturn("delete from DefinedKeys where reference='" & selectionKeyReference.ToLower & "'")
             a.ExecuteNoReturn("insert into DefinedKeys (dkey,title,reference) values('orgname','" & txtname.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('invoiceyoffset','" & NumericUpDown1.Value & "','" & selectionKeyReference.ToLower & "'), " &
-                              "('roundToThousand','" & CheckBox1.Checked & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('roundToThousand','" & ComboBox1.SelectedIndex & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note1','" & txtnote1.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note2','" & txtnote2.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note3','" & txtnote3.Text.Trim & "','" & selectionKeyReference.ToLower & "') ")
 
             orgname = txtname.Text.Trim
             invoiceYOffset = NumericUpDown1.Value
-            roundToThousand = CheckBox1.Checked
+            roundToThousand = ComboBox1.SelectedIndex
 
         Catch ex As Exception
             MsgBox(ex.ToString)

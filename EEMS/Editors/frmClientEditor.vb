@@ -44,7 +44,7 @@ Public Class frmClientEditor
         If add = False Then
             a.Execute("Update Client Set clientname='" & txtname.Text.Trim & "',clientnickname='" & txtnickname.Text.Trim & "',clientmothername='" & txtmothername.Text.Trim & "',caddress='" & txtaddress.Text.Trim & "',phone='" & txtphone.Text.Trim & "',mobile='" & txtmobile.Text.Trim & "' Where ID=" & clientid)
         Else
-            Dim count As Integer = a.ExecuteScalar("Select count(*) from Client e where e.clientname='" & txtname.Text.Trim & "'")
+            Dim count As Long = a.ExecuteScalar("Select count(*) from Client e where e.clientname='" & txtname.Text.Trim & "'")
             If count > 0 Then
                 MsgBox("اسم المشترك موجود أصلا، الرجاء إختيار اسم أخر للمتابعة")
                 Return

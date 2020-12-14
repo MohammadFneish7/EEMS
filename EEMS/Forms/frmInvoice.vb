@@ -65,9 +65,9 @@ Public Class frmInvoice
 
     Private Sub calculateStats()
         Try
-            Dim soldkilo As Integer = a.ExecuteScalar("SELECT IsNull(SUM((ch.currentvalue-ch.previousvalue)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
-            Dim kiloprofit As Integer = a.ExecuteScalar("SELECT IsNull(SUM(((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
-            Dim fees As Integer = a.ExecuteScalar("SELECT IsNull(SUM(ch.monthlyfee),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim soldkilo As Integer = a.ExecuteScalar("SELECT IsNull(SUM((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim kiloprofit As Integer = a.ExecuteScalar("SELECT IsNull(SUM(((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))*Cast(ch.kilowattprice AS BIGINT))+Cast(roundvalue AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim fees As Integer = a.ExecuteScalar("SELECT IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
             Dim workinghours As Integer = a.ExecuteScalar("SELECT IsNull(MAX(workinghours),0) FROM EngineWorkingHours WHERE cmonth =" & month & " and cyear=" & year)
             lblsoldKilo.Text = soldkilo
             lblkilopayments.Text = kiloprofit
@@ -242,7 +242,7 @@ Public Class frmInvoice
                             " r.active AS مفعّل, en.ename AS [الموتور], " &
                             " b.location AS [عنوان العلبة], " &
                             " c.clientname AS [المشترك], " &
-                            " p.ampere AS [أمبير], " &
+                            " p.title AS [أمبير], " &
                             " cl.fullname AS [الجابي], " &
                             " b.code AS [رمز العلبة], " &
                             " ec.code AS [الرمز في العلبة]," &
@@ -278,7 +278,7 @@ Public Class frmInvoice
                             " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " &
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
-                        " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.ampere, cl.fullname, b.code, ec.code, ch.previousvalue, " &
+                        " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
                                 " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" &
                         " ORDER BY cl.fullname, b.code, ec.code"
         If withCredits Then
@@ -310,17 +310,17 @@ Public Class frmInvoice
         End If
 
 
-        Dim q1 As String = "SELECT r.ID AS [المعرّف], " & _
-                            "ch.ID AS [معرّف القيمة], " & _
-                            " r.active AS مفعّل, en.ename AS [الموتور], " & _
-                            " b.code AS [رمز العلبة], " & _
-                            " b.location AS [عنوان العلبة], " & _
-                            " c.clientname AS [المشترك], " & _
-                            " p.ampere AS [أمبير], " & _
-                            " ec.code AS [الرمز في العلبة]," & _
-                            " cl.fullname AS [الجابي], " & _
-                            " ch.previousvalue AS [القيمة السابقة], " & _
-                            " ch.currentvalue AS [القيمة الحاليّة], " & _
+        Dim q1 As String = "SELECT r.ID AS [المعرّف], " &
+                            "ch.ID AS [معرّف القيمة], " &
+                            " r.active AS مفعّل, en.ename AS [الموتور], " &
+                            " b.code AS [رمز العلبة], " &
+                            " b.location AS [عنوان العلبة], " &
+                            " c.clientname AS [المشترك], " &
+                            " p.title AS [أمبير], " &
+                            " ec.code AS [الرمز في العلبة]," &
+                            " cl.fullname AS [الجابي], " &
+                            " ch.previousvalue AS [القيمة السابقة], " &
+                            " ch.currentvalue AS [القيمة الحاليّة], " &
                             " r.insurance AS [تأمين], "
 
         Dim q2 As String = " (SELECT " & _
@@ -335,24 +335,24 @@ Public Class frmInvoice
         'Dim q2 As String = " (SELECT SUM(total) - ISNULL(SUM(pyy.pvalue),  0) FROM CounterHistory coh LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = coh.ID" & _
         '                    " WHERE coh.regid = r.ID AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) AS [مكسورات], "
 
-        Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " & _
-                            " (b.code + ec.code) AS [رمز مفتاح], " & _
-                            " ch.monthlyfee AS [رسم اشتراك], " & _
-                            " (ch.currentvalue-ch.previousvalue) AS [فرق عداد], " & _
-                            " ch.kilowattprice AS [سعر الكيلو], " & _
-                            " (((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue) AS [مطلوب كيلو], " & _
-                            " total AS [المجموع], " & _
-                            " discount AS [حسم], " & _
-                            " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " & _
-                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي] " & _
-                        " FROM Registration r" & _
-                            " INNER JOIN Client c on r.clientid = c.ID" & _
-                            " INNER JOIN Package p on r.packageid = p.ID" & _
-                            " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " & _
-                            " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" & _
-                        " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected & _
-                        " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.ampere, cl.fullname, b.code, ec.code, ch.previousvalue, " & _
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" & _
+        Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &
+                            " (b.code + ec.code) AS [رمز مفتاح], " &
+                            " ch.monthlyfee AS [رسم اشتراك], " &
+                            " (ch.currentvalue-ch.previousvalue) AS [فرق عداد], " &
+                            " ch.kilowattprice AS [سعر الكيلو], " &
+                            " (((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue) AS [مطلوب كيلو], " &
+                            " total AS [المجموع], " &
+                            " discount AS [حسم], " &
+                            " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
+                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي] " &
+                        " FROM Registration r" &
+                            " INNER JOIN Client c on r.clientid = c.ID" &
+                            " INNER JOIN Package p on r.packageid = p.ID" &
+                            " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " &
+                            " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
+                        " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
+                        " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
+                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" &
                         " ORDER BY cl.fullname, b.code, ec.code"
         If withCredits Then
             Return q1 + q2 + q3

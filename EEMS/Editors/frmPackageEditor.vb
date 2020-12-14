@@ -35,7 +35,7 @@ Public Class frmPackageEditor
         If add = False Then
             a.Execute("Update Package Set title='" & txttitle.Text.Trim & "', ampere=" & txtampere.Text.Trim & ",fee=" & txtfee.Text.Trim & ",insurance=" & txtinsurance.Text.Trim & ",kilowattprice=" & txtkiloprice.Text.Trim & ",notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
         Else
-            Dim count As Integer = a.ExecuteScalar("Select count(*) from Package e where e.title='" & txttitle.Text.Trim & "'")
+            Dim count As Long = a.ExecuteScalar("Select count(*) from Package e where e.title='" & txttitle.Text.Trim & "'")
             If count > 0 Then
                 MsgBox("عنوان الاشتراك موجود أصلا، الرجاء إختيار عنوان أخر للمتابعة")
                 Return

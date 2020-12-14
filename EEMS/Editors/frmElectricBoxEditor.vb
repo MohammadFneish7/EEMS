@@ -91,7 +91,7 @@ Public Class frmElectricBoxEditor
             Next
         Else
             a.ds = New DataSet
-            Dim i As Int32 = a.ExecuteScalar("select count(id) from electricbox where code='" & txtEngine.Text.Trim & "-" & txtcode.Text.Trim & "'")
+            Dim i As Long = a.ExecuteScalar("select count(id) from electricbox where code='" & txtEngine.Text.Trim & "-" & txtcode.Text.Trim & "'")
             If i > 0 Then
                 MsgBox("رمز العلبة الذي تم اختياره موجود اصلا.")
                 Return
