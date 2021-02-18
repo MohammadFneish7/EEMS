@@ -67,7 +67,7 @@ Public Class frmPreRegistrationCredits
                             a.ds.Tables("dt2").Clear()
                         Catch ex As Exception
                         End Try
-                        a.GetData("select ID from CounterHistory where cmonth=" & regDate.Month & " and cyear=" & regDate.Year, "dt2")
+                        a.GetData("select ch.ID from CounterHistory ch Join Registration r on ch.regid=r.id where cmonth=" & regDate.Month & " and cyear=" & regDate.Year & " and r.id=" & GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1)).ToString(), "dt2")
                         If a.ds.Tables("dt2").Rows.Count > 0 Then
                             Dim chID As Integer = a.ds.Tables("dt2").Rows(0).Item(0)
                             a.ExecuteNoReturn("update CounterHistory set monthlyfee=" & result & " where ID=" & chID)

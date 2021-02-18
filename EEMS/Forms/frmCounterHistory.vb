@@ -411,28 +411,28 @@ Public Class frmCounterHistory
                     For i As Int32 = 0 To GridView1.RowCount - 1
                         Dim gridRegid As Integer = GridView1.GetRowCellValue(i, GridView1.Columns(0))
                         If gridRegid = tempRegID Then
-                            If Not (GridView1.GetRowCellValue(i, GridView1.Columns(12)) = 0 And tempValue = 0) Then
+                            If tempValue > 0 Then
                                 If GridView1.GetRowCellValue(i, GridView1.Columns(12)) > tempValue Then
                                     MessageBox.Show($"خطأ: قيمة العداد الحاليّة الواردة من ملف الإكسل للإشتراك {gridRegid} أصغر من القيمة السابقة الموجودة في البرنامج. سيتم الغاء العمليّة وسحب التعديلات.")
                                     loadData(Nothing, True)
                                     Return
                                 End If
+                                GridView1.SetRowCellValue(i, GridView1.Columns(13), tempValue)
+                                Exit For
                             End If
-                            GridView1.SetRowCellValue(i, GridView1.Columns(13), tempValue)
-                            Exit For
                         End If
                     Next
                 Next
 
+                MessageBox.Show("تمت العمليّة بنجاح")
             End If
-            MessageBox.Show("تمت العمليّة بنجاح")
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
         Finally
             Try
                 Dim pid As Integer = -1
                 GetWindowThreadProcessId(application.Hwnd, pid)
-                workbook.Close()
+                'workbook.Close()
                 application.Quit()
                 Marshal.ReleaseComObject(application)
                 If pid > -1 Then

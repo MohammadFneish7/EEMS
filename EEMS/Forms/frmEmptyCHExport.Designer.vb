@@ -26,6 +26,7 @@ Partial Class frmEmptyCHExport
         Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'dtp
@@ -52,7 +53,7 @@ Partial Class frmEmptyCHExport
         '
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.downarrow16
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(12, 59)
+        Me.Button1.Location = New System.Drawing.Point(12, 84)
         Me.Button1.Name = "Button1"
         Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Button1.Size = New System.Drawing.Size(255, 39)
@@ -62,11 +63,23 @@ Partial Class frmEmptyCHExport
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(108, 59)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.CheckBox1.Size = New System.Drawing.Size(104, 17)
+        Me.CheckBox1.TabIndex = 3
+        Me.CheckBox1.Text = "تصدير غير الفاعل"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmEmptyCHExport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(279, 109)
+        Me.ClientSize = New System.Drawing.Size(279, 135)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dtp)
@@ -83,4 +96,5 @@ Partial Class frmEmptyCHExport
     Friend WithEvents dtp As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

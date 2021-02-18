@@ -177,7 +177,7 @@ Public Class frmClientReport
         If dgvCredits.SelectedRows.Count > 0 Then
             Try
                 Try
-                    a.ds.Tables("dt6").Clear()
+                    a.ds.Tables("dt6")?.Clear()
                 Catch ex As Exception
 
                 End Try

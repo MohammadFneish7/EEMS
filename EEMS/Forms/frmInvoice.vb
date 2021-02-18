@@ -110,7 +110,7 @@ Public Class frmInvoice
                 year = DateTimePicker1.Value.Year
                 Dim ar As New Helper
                 ar.ds = New DataSet
-                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True), "dt")
+                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked), "dt")
                 Dim frm As New frmReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
                 frm.ShowDialog()
             End If
@@ -289,7 +289,7 @@ Public Class frmInvoice
 
     End Function
 
-    Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16, withCredits As Boolean) As String
+    Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16, withCredits As Boolean, Optional ByVal orderByCust As Boolean = False, Optional ByVal creditsByCust As Boolean = False) As String
         Dim d As New Date(y, m, 1)
         d = d.AddMonths(1)
 
@@ -323,17 +323,21 @@ Public Class frmInvoice
                             " ch.currentvalue AS [القيمة الحاليّة], " &
                             " r.insurance AS [تأمين], "
 
-        Dim q2 As String = " (SELECT " & _
-                           "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.regid = r.ID " & _
-                           " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " & _
-                           " - " & _
-                           " (SELECT ISNULL(SUM(pyy.pvalue),  0) " & _
-                           " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " & _
-                           " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " & _
+        Dim q2 As String = " (SELECT " &
+                           "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.regid = r.ID " &
+                           " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
+                           " - " &
+                           " (SELECT ISNULL(SUM(pyy.pvalue),  0) " &
+                           " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " &
+                           " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
                            " ) AS [مكسورات], "
 
-        'Dim q2 As String = " (SELECT SUM(total) - ISNULL(SUM(pyy.pvalue),  0) FROM CounterHistory coh LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = coh.ID" & _
-        '                    " WHERE coh.regid = r.ID AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) AS [مكسورات], "
+        If creditsByCust Then
+            q2 =" (SELECT " & 
+                " (SELECT ISNULL(SUM(coh.total),  0)-ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = r.ID " &
+                           " LEFT OUTER JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
+                           " ) AS [مكسورات], "
+        End If
 
         Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &
                             " (b.code + ec.code) AS [رمز مفتاح], " &
@@ -351,9 +355,13 @@ Public Class frmInvoice
                             " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " &
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
-                        " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" &
-                        " ORDER BY cl.fullname, b.code, ec.code"
+                        " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
+                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount"
+        If orderByCust Then
+            q3 += " ORDER BY c.clientname"
+        Else
+            q3 += " ORDER BY cl.fullname, b.code, ec.code"
+        End If
         If withCredits Then
             Return q1 + q2 + q3
         Else

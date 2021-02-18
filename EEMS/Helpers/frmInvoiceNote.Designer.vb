@@ -28,6 +28,8 @@ Partial Class frmInvoiceNote
         Me.lblcount = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.chkverbose = New System.Windows.Forms.CheckBox()
+        Me.chkOrderByCust = New System.Windows.Forms.CheckBox()
+        Me.chkCreditByCust = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -60,9 +62,9 @@ Partial Class frmInvoiceNote
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 86)
+        Me.Button1.Location = New System.Drawing.Point(12, 142)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(357, 28)
+        Me.Button1.Size = New System.Drawing.Size(357, 36)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "متابعة"
         Me.Button1.UseVisualStyleBackColor = True
@@ -78,12 +80,36 @@ Partial Class frmInvoiceNote
         Me.chkverbose.Text = "طباعة التأمين والمكسورات"
         Me.chkverbose.UseVisualStyleBackColor = True
         '
+        'chkOrderByCust
+        '
+        Me.chkOrderByCust.AutoSize = True
+        Me.chkOrderByCust.Location = New System.Drawing.Point(241, 90)
+        Me.chkOrderByCust.Name = "chkOrderByCust"
+        Me.chkOrderByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkOrderByCust.Size = New System.Drawing.Size(128, 17)
+        Me.chkOrderByCust.TabIndex = 5
+        Me.chkOrderByCust.Text = "ترتيب حسب المشترك"
+        Me.chkOrderByCust.UseVisualStyleBackColor = True
+        '
+        'chkCreditByCust
+        '
+        Me.chkCreditByCust.AutoSize = True
+        Me.chkCreditByCust.Location = New System.Drawing.Point(167, 113)
+        Me.chkCreditByCust.Name = "chkCreditByCust"
+        Me.chkCreditByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkCreditByCust.Size = New System.Drawing.Size(202, 17)
+        Me.chkCreditByCust.TabIndex = 6
+        Me.chkCreditByCust.Text = "جمع مكسورات الزبون من كل اشتراكاته"
+        Me.chkCreditByCust.UseVisualStyleBackColor = True
+        '
         'frmInvoiceNote
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 121)
+        Me.ClientSize = New System.Drawing.Size(381, 190)
+        Me.Controls.Add(Me.chkCreditByCust)
+        Me.Controls.Add(Me.chkOrderByCust)
         Me.Controls.Add(Me.chkverbose)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblcount)
@@ -105,4 +131,6 @@ Partial Class frmInvoiceNote
     Friend WithEvents lblcount As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents chkverbose As System.Windows.Forms.CheckBox
+    Friend WithEvents chkOrderByCust As CheckBox
+    Friend WithEvents chkCreditByCust As CheckBox
 End Class

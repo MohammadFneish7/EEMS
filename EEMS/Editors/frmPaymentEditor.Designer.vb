@@ -24,15 +24,17 @@ Partial Class frmPaymentEditor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPaymentEditor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dtp = New System.Windows.Forms.DateTimePicker()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtMonth = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtClientName = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.rad3 = New System.Windows.Forms.RadioButton()
+        Me.rad4 = New System.Windows.Forms.RadioButton()
+        Me.rad1 = New System.Windows.Forms.RadioButton()
+        Me.rad2 = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtCollector = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -44,8 +46,6 @@ Partial Class frmPaymentEditor
         Me.txtpayment = New System.Windows.Forms.TextBox()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.dtp = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -77,6 +77,26 @@ Partial Class frmPaymentEditor
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "التفصيل"
+        '
+        'dtp
+        '
+        Me.dtp.CustomFormat = "dd-MMM-yyyy HH:mm:ss"
+        Me.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtp.Location = New System.Drawing.Point(31, 123)
+        Me.dtp.Name = "dtp"
+        Me.dtp.RightToLeftLayout = True
+        Me.dtp.Size = New System.Drawing.Size(241, 20)
+        Me.dtp.TabIndex = 31
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(278, 129)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(64, 13)
+        Me.Label6.TabIndex = 30
+        Me.Label6.Text = "تاريخ الدفعة:"
         '
         'Label5
         '
@@ -120,10 +140,10 @@ Partial Class frmPaymentEditor
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.RadioButton4)
-        Me.GroupBox2.Controls.Add(Me.RadioButton3)
-        Me.GroupBox2.Controls.Add(Me.RadioButton2)
-        Me.GroupBox2.Controls.Add(Me.RadioButton1)
+        Me.GroupBox2.Controls.Add(Me.rad3)
+        Me.GroupBox2.Controls.Add(Me.rad4)
+        Me.GroupBox2.Controls.Add(Me.rad1)
+        Me.GroupBox2.Controls.Add(Me.rad2)
         Me.GroupBox2.Location = New System.Drawing.Point(31, 234)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(316, 82)
@@ -131,47 +151,47 @@ Partial Class frmPaymentEditor
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "طريقة الدفع:"
         '
-        'RadioButton4
+        'rad3
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(170, 52)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(127, 17)
-        Me.RadioButton4.TabIndex = 28
-        Me.RadioButton4.Text = "قبض مكسورات مباشر"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.rad3.AutoSize = True
+        Me.rad3.Location = New System.Drawing.Point(170, 52)
+        Me.rad3.Name = "rad3"
+        Me.rad3.Size = New System.Drawing.Size(127, 17)
+        Me.rad3.TabIndex = 28
+        Me.rad3.Text = "قبض مكسورات مباشر"
+        Me.rad3.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'rad4
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(23, 52)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(121, 17)
-        Me.RadioButton3.TabIndex = 27
-        Me.RadioButton3.Text = "قبض مكسورات جباية"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.rad4.AutoSize = True
+        Me.rad4.Location = New System.Drawing.Point(23, 52)
+        Me.rad4.Name = "rad4"
+        Me.rad4.Size = New System.Drawing.Size(121, 17)
+        Me.rad4.TabIndex = 27
+        Me.rad4.Text = "قبض مكسورات جباية"
+        Me.rad4.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'rad1
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Checked = True
-        Me.RadioButton2.Location = New System.Drawing.Point(218, 29)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(79, 17)
-        Me.RadioButton2.TabIndex = 26
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "قبض مباشر"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rad1.AutoSize = True
+        Me.rad1.Checked = True
+        Me.rad1.Location = New System.Drawing.Point(218, 29)
+        Me.rad1.Name = "rad1"
+        Me.rad1.Size = New System.Drawing.Size(79, 17)
+        Me.rad1.TabIndex = 26
+        Me.rad1.TabStop = True
+        Me.rad1.Text = "قبض مباشر"
+        Me.rad1.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rad2
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(71, 29)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(73, 17)
-        Me.RadioButton1.TabIndex = 25
-        Me.RadioButton1.Text = "قبض جباية"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rad2.AutoSize = True
+        Me.rad2.Location = New System.Drawing.Point(71, 29)
+        Me.rad2.Name = "rad2"
+        Me.rad2.Size = New System.Drawing.Size(73, 17)
+        Me.rad2.TabIndex = 25
+        Me.rad2.Text = "قبض جباية"
+        Me.rad2.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -296,26 +316,6 @@ Partial Class frmPaymentEditor
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(278, 129)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(64, 13)
-        Me.Label6.TabIndex = 30
-        Me.Label6.Text = "تاريخ الدفعة:"
-        '
-        'dtp
-        '
-        Me.dtp.CustomFormat = "dd-MMM-yyyy HH:mm:ss"
-        Me.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtp.Location = New System.Drawing.Point(31, 123)
-        Me.dtp.Name = "dtp"
-        Me.dtp.RightToLeftLayout = True
-        Me.dtp.Size = New System.Drawing.Size(241, 20)
-        Me.dtp.TabIndex = 31
-        '
         'frmPaymentEditor
         '
         Me.AcceptButton = Me.btnsave
@@ -349,10 +349,10 @@ Partial Class frmPaymentEditor
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtCollector As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad4 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad1 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad2 As System.Windows.Forms.RadioButton
+    Friend WithEvents rad3 As System.Windows.Forms.RadioButton
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtMonth As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label

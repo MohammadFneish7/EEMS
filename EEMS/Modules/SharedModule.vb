@@ -27,6 +27,7 @@ Module SharedModule
     Public orgname As String = "Organization Name"
     Public invoiceYOffset = 0
     Public roundToThousand As Integer = 0 '0 round to 1000, 1 ceil, 2 dont rount
+    Public defaultPayOption As Integer = 0
 
     Public isPaymentVerified As Boolean = True
 
@@ -88,6 +89,8 @@ Module SharedModule
                 invoiceYOffset = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
                 roundToThousand = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("defaultPayOption") Then
+                defaultPayOption = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
         Next
     End Sub

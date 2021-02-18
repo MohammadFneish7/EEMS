@@ -28,10 +28,23 @@ Public Class frmPaymentEditor
 
         If chid_ < 0 Then
             MsgBox("خطأ في رقم الملف.")
-            Me.DialogResult =DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
         End If
+
     End Sub
 
+    Private Sub togglePayOption()
+
+        If defaultPayOption = 0 Then
+            rad1.Checked = True
+        ElseIf defaultPayOption = 1 Then
+            rad2.Checked = True
+        ElseIf defaultPayOption = 2 Then
+            rad3.Checked = True
+        ElseIf defaultPayOption = 3 Then
+            rad4.Checked = True
+        End If
+    End Sub
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Dim thisMonthCounterRequiredValueQuery As String = "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.ID =ch.ID)"
@@ -43,15 +56,16 @@ Public Class frmPaymentEditor
             maxPay = leftPayments
             If leftPayments = 0 Then
                 MsgBox("تم تسديد كامل حساب الشهر الحالي لهذا الاشتراك.")
-                Me.DialogResult =DialogResult.Ignore
+                Me.DialogResult = DialogResult.Ignore
             End If
             txtleftp.Text = leftPayments.ToString("N0")
             txtpayment.SelectAll()
         Catch ex As Exception
             MessageBox.Show("فشل اثناء محاولة تحميل البيانات." & vbNewLine & "تم الغاء العمليّة." & vbNewLine & ex.Message, "فشل", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Me.DialogResult =DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
         End Try
 
+        togglePayOption()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnsave.Click
@@ -101,8 +115,13 @@ Public Class frmPaymentEditor
                 Return
             End If
 
-            If txtCollector.Text.Trim.Length = 0 And RadioButton2.Checked = False Then
+            If txtCollector.Text.Trim.Length = 0 And rad1.Checked = False Then
                 MsgBox("لا يمكن اضافة دفعة بدون اسم الجابي الا اذا كانت طبيعة الدفعة تسديد مباشر.")
+                Return
+            End If
+
+            If dtp.Value > Date.Now Then
+                MsgBox("لا يمكن ادخال الدفعة بتاريخ مستقبلي.")
                 Return
             End If
 
@@ -138,8 +157,25 @@ Public Class frmPaymentEditor
 
 
             Dim payid As Integer = a.Execute("insert into Payment(counterhistoryid,pdate,pvalue,notes,collector) values(" & chID & ",'" & dtp.Value & "'," & txtpayment.Text.Trim & ",'" & txtnotes.Text.Trim & "','" & collecname & "')")
-            a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & Date.Now.ToShortDateString & "','" & intitle & "'," & txtpayment.Text.Trim & ",'" & name & "','" & "اشتراك رقم " & regsid & "','py" & payid & "')")
+            a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','" & intitle & "'," & txtpayment.Text.Trim & ",'" & name & "','" & "اشتراك رقم " & regsid & "','py" & payid & "')")
             payedAmmount = Integer.Parse(txtpayment.Text.Trim)
+
+            Try
+                If rad1.Checked Then
+                    defaultPayOption = 0
+                ElseIf rad2.Checked Then
+                    defaultPayOption = 1
+                ElseIf rad3.Checked Then
+                    defaultPayOption = 2
+                ElseIf rad4.Checked Then
+                    defaultPayOption = 3
+                End If
+
+                a.ExecuteNoReturn("delete from DefinedKeys where reference='settings_1'")
+                a.ExecuteNoReturn("insert into DefinedKeys (dkey,title,reference) values('defaultPayOption','" & defaultPayOption & "','settings_1')")
+            Catch ex As Exception
+
+            End Try
 
             If printInvoice Then
                 Dim frm As New frmReportViewer(regID)
@@ -152,4 +188,5 @@ Public Class frmPaymentEditor
             Me.DialogResult =DialogResult.Ignore
         End Try
     End Sub
+
 End Class

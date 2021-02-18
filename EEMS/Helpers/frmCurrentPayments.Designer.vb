@@ -113,6 +113,7 @@ Partial Class frmCurrentPayments
         Me.GridView1.OptionsMenu.EnableColumnMenu = False
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsPrint.EnableAppearanceOddRow = True
+        Me.GridView1.OptionsSelection.MultiSelect = True
         Me.GridView1.OptionsView.EnableAppearanceOddRow = True
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways

@@ -19,6 +19,10 @@
                         " WHERE (DatePart(yyyy, r.registrationdate) < " & Year & " Or (DatePart(m, r.registrationdate) <= " & Month & " And DatePart(yyyy, r.registrationdate) = " & Year & "))" &
                         " and r.ID not in (Select regID from CounterHistory where cmonth = " & Month & " and cyear = " & Year & ")"
 
+            If Not CheckBox1.Checked Then
+                query += " and r.active=1"
+            End If
+
             query = query & " order by en.ename, b.code"
 
             a.GetData(query, "EmptyCHDT")
