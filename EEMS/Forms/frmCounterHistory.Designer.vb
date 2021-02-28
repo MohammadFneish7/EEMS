@@ -25,6 +25,7 @@ Partial Class frmCounterHistory
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCounterHistory))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnimport = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.chkShowNonActive = New System.Windows.Forms.CheckBox()
@@ -53,7 +54,8 @@ Partial Class frmCounterHistory
         Me.btnsave = New System.Windows.Forms.Button()
         Me.DataSetInvoices = New EEMS.DataSetInvoices()
         Me.InvoicesdtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnimport = New System.Windows.Forms.Button()
+        Me.chkShowBoxID = New System.Windows.Forms.CheckBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvData1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +65,7 @@ Partial Class frmCounterHistory
         Me.Panel2.SuspendLayout()
         CType(Me.DataSetInvoices, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoicesdtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -70,16 +73,13 @@ Partial Class frmCounterHistory
         Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Panel7)
         Me.GroupBox1.Controls.Add(Me.btnimport)
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.chkShowNonActive)
         Me.GroupBox1.Controls.Add(Me.btnExportExcell)
         Me.GroupBox1.Controls.Add(Me.btnShowPrint)
         Me.GroupBox1.Controls.Add(Me.dgvData1)
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 105)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -87,6 +87,22 @@ Partial Class frmCounterHistory
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "القيم"
+        '
+        'btnimport
+        '
+        Me.btnimport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnimport.Enabled = False
+        Me.btnimport.Image = Global.EEMS.My.Resources.Resources.downup16
+        Me.btnimport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnimport.Location = New System.Drawing.Point(1106, 69)
+        Me.btnimport.Name = "btnimport"
+        Me.btnimport.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnimport.Size = New System.Drawing.Size(212, 29)
+        Me.btnimport.TabIndex = 40
+        Me.btnimport.Text = "استيراد القيم من نموذج الادخال"
+        Me.btnimport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnimport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnimport.UseVisualStyleBackColor = True
         '
         'Button3
         '
@@ -120,8 +136,8 @@ Partial Class frmCounterHistory
         '
         Me.chkShowNonActive.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkShowNonActive.AutoSize = True
-        Me.chkShowNonActive.BackColor = System.Drawing.Color.White
-        Me.chkShowNonActive.Location = New System.Drawing.Point(1033, 33)
+        Me.chkShowNonActive.BackColor = System.Drawing.Color.Transparent
+        Me.chkShowNonActive.Location = New System.Drawing.Point(268, 7)
         Me.chkShowNonActive.Name = "chkShowNonActive"
         Me.chkShowNonActive.Size = New System.Drawing.Size(103, 17)
         Me.chkShowNonActive.TabIndex = 37
@@ -186,12 +202,13 @@ Partial Class frmCounterHistory
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.filter
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(948, 29)
+        Me.Button1.Location = New System.Drawing.Point(7, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(91, 23)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "تصفية"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -203,7 +220,7 @@ Partial Class frmCounterHistory
         Me.DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DateTimePicker1.CustomFormat = "MM/yyyy"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(1142, 31)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(377, 5)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.RightToLeftLayout = True
         Me.DateTimePicker1.Size = New System.Drawing.Size(122, 20)
@@ -213,7 +230,7 @@ Partial Class frmCounterHistory
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1270, 34)
+        Me.Label1.Location = New System.Drawing.Point(505, 8)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 1
@@ -424,21 +441,31 @@ Partial Class frmCounterHistory
         Me.InvoicesdtBindingSource.DataMember = "invoicesdt"
         Me.InvoicesdtBindingSource.DataSource = Me.DataSetInvoices
         '
-        'btnimport
+        'chkShowBoxID
         '
-        Me.btnimport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnimport.Enabled = False
-        Me.btnimport.Image = Global.EEMS.My.Resources.Resources.downup16
-        Me.btnimport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnimport.Location = New System.Drawing.Point(1106, 69)
-        Me.btnimport.Name = "btnimport"
-        Me.btnimport.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.btnimport.Size = New System.Drawing.Size(212, 29)
-        Me.btnimport.TabIndex = 40
-        Me.btnimport.Text = "استيراد القيم من نموذج الادخال"
-        Me.btnimport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnimport.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.btnimport.UseVisualStyleBackColor = True
+        Me.chkShowBoxID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkShowBoxID.AutoSize = True
+        Me.chkShowBoxID.BackColor = System.Drawing.Color.Transparent
+        Me.chkShowBoxID.Location = New System.Drawing.Point(104, 7)
+        Me.chkShowBoxID.Name = "chkShowBoxID"
+        Me.chkShowBoxID.Size = New System.Drawing.Size(158, 17)
+        Me.chkShowBoxID.TabIndex = 41
+        Me.chkShowBoxID.Text = "عرض معرّف العلبة بدل رمزها"
+        Me.chkShowBoxID.UseVisualStyleBackColor = False
+        '
+        'Panel7
+        '
+        Me.Panel7.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.Label1)
+        Me.Panel7.Controls.Add(Me.chkShowBoxID)
+        Me.Panel7.Controls.Add(Me.DateTimePicker1)
+        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Controls.Add(Me.chkShowNonActive)
+        Me.Panel7.Location = New System.Drawing.Point(768, 23)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(558, 32)
+        Me.Panel7.TabIndex = 42
         '
         'frmCounterHistory
         '
@@ -455,7 +482,6 @@ Partial Class frmCounterHistory
         Me.Text = "ملف إدخال العدّادات"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.dgvData1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -467,6 +493,8 @@ Partial Class frmCounterHistory
         Me.Panel2.PerformLayout()
         CType(Me.DataSetInvoices, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvoicesdtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -500,4 +528,6 @@ Partial Class frmCounterHistory
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As Button
     Friend WithEvents btnimport As Button
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents chkShowBoxID As CheckBox
 End Class

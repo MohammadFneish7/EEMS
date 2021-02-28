@@ -333,10 +333,11 @@ Public Class frmInvoice
                            " ) AS [مكسورات], "
 
         If creditsByCust Then
-            q2 =" (SELECT " & 
-                " (SELECT ISNULL(SUM(coh.total),  0)-ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = r.ID " &
-                           " LEFT OUTER JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
-                           " ) AS [مكسورات], "
+            q2 = "(Select (SELECT ISNULL(SUM(coh.total),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & ")))) AS [مكسورات],"
+            'q2 = " (SELECT " &
+            '    " (SELECT ISNULL(SUM(coh.total),  0)-ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID " &
+            '               " LEFT OUTER JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
+            '               " ) AS [مكسورات], "
         End If
 
         Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &

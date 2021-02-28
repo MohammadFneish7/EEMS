@@ -74,6 +74,8 @@ Public Class frmCounterHistory
                 End If
             End If
 
+            GridView1.Columns.Clear()
+
             Dim activeConstraint As String = " and r.active = 1 "
             If chkShowNonActive.Checked Then
                 activeConstraint = String.Empty
@@ -82,7 +84,9 @@ Public Class frmCounterHistory
             dgvData1.DataSource = Nothing
             a.ds = New DataSet
 
-            a.GetData("SELECT Distinct r.ID as [المعرّف],r.active as مفعّل,en.ename as [الموتور],b.code as [رمز العلبة],b.location as [عنوان العلبة]," &
+            Dim boxQuery As String = If(chkShowBoxID.Checked, "b.ID as [معرّف العلبة]", "b.code as [رمز العلبة]")
+
+            a.GetData("SELECT Distinct r.ID as [المعرّف],r.active as مفعّل,en.ename as [الموتور]," & boxQuery & ",b.location as [عنوان العلبة]," &
                         "	c.clientname as [المشترك],p.title as [أمبير],ec.serial as [رقم العداد],ec.code as [الرمز في العلبة],cl.fullname as [الجابي]," &
                         "	p.fee as [اشتراك شهري],p.kilowattprice as [سعر الكيلو]," &
                         "	IsNull((Select MAX(chh.currentvalue) From CounterHistory chh Where chh.regid = r.ID),0) AS [القيمة السابقة]," &
@@ -92,7 +96,7 @@ Public Class frmCounterHistory
                         "	JOIN Collector cl ON b.collectorid=cl.id JOIN Package p ON r.packageid=p.id left outer JOIN CounterHistory ch ON r.counterid=ch.id" &
                         " WHERE (DatePart(yyyy, r.registrationdate) < " & year & " Or (DatePart(m, r.registrationdate) <= " & month & " And DatePart(yyyy, r.registrationdate) = " & year & "))" & activeConstraint &
                         " and r.ID not in (Select regID from CounterHistory where cyear > " & year & " OR (cmonth >= " & month & " and cyear = " & year & "))" &
-                        " order by en.ename, b.code")
+                        " order by en.ename, " & If(chkShowBoxID.Checked, "b.id", "b.code") & "")
 
             bs.DataSource = a.ds.Tables(0)
             dgvData1.DataSource = bs
@@ -335,7 +339,7 @@ Public Class frmCounterHistory
             e.Column.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
             e.Column.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
             e.Column.DisplayFormat.FormatString = "N0"
-        ElseIf index = 1 Then
+        ElseIf index = 1 Or index = 3 Then
             e.Column.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
         End If
     End Sub
@@ -351,16 +355,19 @@ Public Class frmCounterHistory
 
 
     Private Sub GridView1_RowStyle(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs) Handles GridView1.RowStyle
-        If e.RowHandle >= 0 Then
-            If errorRowsRegIds.Contains(GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(0))) Then
-                e.Appearance.BackColor = Color.Pink
-                e.HighPriority = True
-            Else
-                e.Appearance.BackColor = gva.Row.BackColor
-                e.HighPriority = False
+        Try
+            If e.RowHandle >= 0 Then
+                If errorRowsRegIds.Contains(GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(0))) Then
+                    e.Appearance.BackColor = Color.Pink
+                    e.HighPriority = True
+                Else
+                    e.Appearance.BackColor = gva.Row.BackColor
+                    e.HighPriority = False
+                End If
             End If
-        End If
+        Catch ex As Exception
 
+        End Try
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click

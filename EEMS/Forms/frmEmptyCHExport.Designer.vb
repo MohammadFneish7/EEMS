@@ -27,11 +27,13 @@ Partial Class frmEmptyCHExport
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkShowBoxID = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'dtp
         '
-        Me.dtp.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtp.CustomFormat = "MM/yyyy"
+        Me.dtp.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtp.Location = New System.Drawing.Point(12, 33)
         Me.dtp.Name = "dtp"
         Me.dtp.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -53,7 +55,7 @@ Partial Class frmEmptyCHExport
         '
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.downarrow16
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(12, 84)
+        Me.Button1.Location = New System.Drawing.Point(11, 112)
         Me.Button1.Name = "Button1"
         Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Button1.Size = New System.Drawing.Size(255, 39)
@@ -74,11 +76,25 @@ Partial Class frmEmptyCHExport
         Me.CheckBox1.Text = "تصدير غير الفاعل"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
+        'chkShowBoxID
+        '
+        Me.chkShowBoxID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkShowBoxID.AutoSize = True
+        Me.chkShowBoxID.BackColor = System.Drawing.Color.Transparent
+        Me.chkShowBoxID.Location = New System.Drawing.Point(54, 82)
+        Me.chkShowBoxID.Name = "chkShowBoxID"
+        Me.chkShowBoxID.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkShowBoxID.Size = New System.Drawing.Size(158, 17)
+        Me.chkShowBoxID.TabIndex = 42
+        Me.chkShowBoxID.Text = "عرض معرّف العلبة بدل رمزها"
+        Me.chkShowBoxID.UseVisualStyleBackColor = False
+        '
         'frmEmptyCHExport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(279, 135)
+        Me.ClientSize = New System.Drawing.Size(279, 163)
+        Me.Controls.Add(Me.chkShowBoxID)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -97,4 +113,5 @@ Partial Class frmEmptyCHExport
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkShowBoxID As CheckBox
 End Class
