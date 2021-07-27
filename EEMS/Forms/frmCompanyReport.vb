@@ -148,50 +148,50 @@ Public Class frmCompanyReport
     End Function
 
     Private Function getTotalInvoiceIn() As Long
-        Dim totalInvoiceIn As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where (ex.title='قبض' OR ex.title like '%قبض جباية%' OR ex.title='قبض مباشر') and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
+        Dim totalInvoiceIn As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where (ex.title='قبض' OR ex.title like '%قبض جباية%' OR ex.title='قبض مباشر') and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
         btnIn.Text = "قبض فواتير" & vbNewLine & vbNewLine & totalInvoiceIn.ToString("N0") & " ل.ل"
         Return totalInvoiceIn
     End Function
 
     Private Function getTotalcredit() As Long
-        Dim totalcredit As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where (ex.title like '%قبض مكسورات%') and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
+        Dim totalcredit As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where (ex.title like '%قبض مكسورات%') and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
         btnTotalCreditIn.Text = "قبض مكسورات" & vbNewLine & vbNewLine & totalcredit.ToString("N0") & " ل.ل"
         Return totalcredit
     End Function
 
     Private Function getTotalInsuranceIn() As Long
-        Dim totalInsuranceIn As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where ex.title='قبض تأمين' and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
+        Dim totalInsuranceIn As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.title='قبض تأمين' and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
         btnInsuranceIn.Text = "قبض تأمين" & vbNewLine & vbNewLine & totalInsuranceIn.ToString("N0") & " ل.ل"
         Return totalInsuranceIn
     End Function
 
     Private Function getTotalInsuranceOut() As Long
-        Dim totalInsuranceOut As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where ex.title='استرداد تأمين' and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
+        Dim totalInsuranceOut As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.title='استرداد تأمين' and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
         btnInsuranceOut.Text = "استرداد تأمين" & vbNewLine & vbNewLine & totalInsuranceOut.ToString("N0") & " ل.ل"
         Return totalInsuranceOut
     End Function
 
     Private Function getTotalOtherIn(totalInvoiceIn As Long, totalcredit As Long, totalInsuranceIn As Long) As Long
-        Dim totalOtherIn As Long = (a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where ex.amount>0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInvoiceIn - totalcredit - totalInsuranceIn)
+        Dim totalOtherIn As Long = (a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.amount>0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInvoiceIn - totalcredit - totalInsuranceIn)
         btnOtherIn.Text = "مداخيل اخرى" & vbNewLine & vbNewLine & totalOtherIn.ToString("N0") & " ل.ل"
         Return totalOtherIn
     End Function
 
     Private Function getTotalOtherOut(totalInsuranceOut As Long) As Long
-        Dim totalOtherOut As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where ex.amount<0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInsuranceOut
+        Dim totalOtherOut As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.amount<0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInsuranceOut
         btnTotalOut.Text = "مصاريف اخرى" & vbNewLine & vbNewLine & totalOtherOut.ToString("N0") & " ل.ل"
         Return totalOtherOut
     End Function
 
     Private Function getPerviousMonthNet() As Long
         Dim latMonthDate As Date = dtp1.Value
-        Dim perviousMonthNet As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure ex where DatePart(""yyyy"",ex.expdate)<" & latMonthDate.Year & "  OR (DatePart(""yyyy"",ex.expdate)=" & latMonthDate.Year & " AND DatePart(""m"",ex.expdate)<" & latMonthDate.Month & ")")
+        Dim perviousMonthNet As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where DatePart(""yyyy"",ex.expdate)<" & latMonthDate.Year & "  OR (DatePart(""yyyy"",ex.expdate)=" & latMonthDate.Year & " AND DatePart(""m"",ex.expdate)<" & latMonthDate.Month & ")")
         btnPrevNet.Text = "صندوق الشهر الماضي" & vbNewLine & vbNewLine & perviousMonthNet.ToString("N0") & " ل.ل"
         Return perviousMonthNet
     End Function
 
     Private Function getAllNet() As Long
-        Dim AllNet As Long = a.ExecuteScalar("SELECT IsNull(SUM(amount),0) FROM Expenditure")
+        Dim AllNet As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure")
         btnALLNet.Text = "صندوق تراكمي" & vbNewLine & vbNewLine & AllNet.ToString("N0") & " ل.ل"
         Return AllNet
     End Function

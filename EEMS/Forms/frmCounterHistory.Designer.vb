@@ -25,17 +25,19 @@ Partial Class frmCounterHistory
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCounterHistory))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkShowBoxID = New System.Windows.Forms.CheckBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.chkShowNonActive = New System.Windows.Forms.CheckBox()
         Me.btnimport = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.chkShowNonActive = New System.Windows.Forms.CheckBox()
         Me.btnExportExcell = New System.Windows.Forms.Button()
         Me.btnShowPrint = New System.Windows.Forms.Button()
         Me.dgvData1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -54,9 +56,8 @@ Partial Class frmCounterHistory
         Me.btnsave = New System.Windows.Forms.Button()
         Me.DataSetInvoices = New EEMS.DataSetInvoices()
         Me.InvoicesdtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.chkShowBoxID = New System.Windows.Forms.CheckBox()
-        Me.Panel7 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel7.SuspendLayout()
         CType(Me.dgvData1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -65,7 +66,6 @@ Partial Class frmCounterHistory
         Me.Panel2.SuspendLayout()
         CType(Me.DataSetInvoices, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InvoicesdtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel7.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -87,6 +87,81 @@ Partial Class frmCounterHistory
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "القيم"
+        '
+        'Panel7
+        '
+        Me.Panel7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel7.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel7.Controls.Add(Me.Label1)
+        Me.Panel7.Controls.Add(Me.chkShowBoxID)
+        Me.Panel7.Controls.Add(Me.DateTimePicker1)
+        Me.Panel7.Controls.Add(Me.Button1)
+        Me.Panel7.Controls.Add(Me.chkShowNonActive)
+        Me.Panel7.Location = New System.Drawing.Point(768, 23)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(558, 32)
+        Me.Panel7.TabIndex = 42
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(505, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "الشهر:"
+        '
+        'chkShowBoxID
+        '
+        Me.chkShowBoxID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkShowBoxID.AutoSize = True
+        Me.chkShowBoxID.BackColor = System.Drawing.Color.Transparent
+        Me.chkShowBoxID.Location = New System.Drawing.Point(104, 7)
+        Me.chkShowBoxID.Name = "chkShowBoxID"
+        Me.chkShowBoxID.Size = New System.Drawing.Size(158, 17)
+        Me.chkShowBoxID.TabIndex = 41
+        Me.chkShowBoxID.Text = "عرض معرّف العلبة بدل رمزها"
+        Me.chkShowBoxID.UseVisualStyleBackColor = False
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DateTimePicker1.CustomFormat = "MM/yyyy"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(377, 5)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.RightToLeftLayout = True
+        Me.DateTimePicker1.Size = New System.Drawing.Size(122, 20)
+        Me.DateTimePicker1.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Image = Global.EEMS.My.Resources.Resources.filter
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.Location = New System.Drawing.Point(7, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(91, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "تصفية"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'chkShowNonActive
+        '
+        Me.chkShowNonActive.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkShowNonActive.AutoSize = True
+        Me.chkShowNonActive.BackColor = System.Drawing.Color.Transparent
+        Me.chkShowNonActive.Location = New System.Drawing.Point(268, 7)
+        Me.chkShowNonActive.Name = "chkShowNonActive"
+        Me.chkShowNonActive.Size = New System.Drawing.Size(103, 17)
+        Me.chkShowNonActive.TabIndex = 37
+        Me.chkShowNonActive.Text = "عرض غير الفاعل"
+        Me.chkShowNonActive.UseVisualStyleBackColor = False
         '
         'btnimport
         '
@@ -131,18 +206,6 @@ Partial Class frmCounterHistory
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'chkShowNonActive
-        '
-        Me.chkShowNonActive.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.chkShowNonActive.AutoSize = True
-        Me.chkShowNonActive.BackColor = System.Drawing.Color.Transparent
-        Me.chkShowNonActive.Location = New System.Drawing.Point(268, 7)
-        Me.chkShowNonActive.Name = "chkShowNonActive"
-        Me.chkShowNonActive.Size = New System.Drawing.Size(103, 17)
-        Me.chkShowNonActive.TabIndex = 37
-        Me.chkShowNonActive.Text = "عرض غير الفاعل"
-        Me.chkShowNonActive.UseVisualStyleBackColor = False
         '
         'btnExportExcell
         '
@@ -199,42 +262,6 @@ Partial Class frmCounterHistory
         Me.GridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Image = Global.EEMS.My.Resources.Resources.filter
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(7, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "تصفية"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DateTimePicker1.CustomFormat = "MM/yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(377, 5)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.RightToLeftLayout = True
-        Me.DateTimePicker1.Size = New System.Drawing.Size(122, 20)
-        Me.DateTimePicker1.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(505, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "الشهر:"
         '
         'Panel1
         '
@@ -441,32 +468,6 @@ Partial Class frmCounterHistory
         Me.InvoicesdtBindingSource.DataMember = "invoicesdt"
         Me.InvoicesdtBindingSource.DataSource = Me.DataSetInvoices
         '
-        'chkShowBoxID
-        '
-        Me.chkShowBoxID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.chkShowBoxID.AutoSize = True
-        Me.chkShowBoxID.BackColor = System.Drawing.Color.Transparent
-        Me.chkShowBoxID.Location = New System.Drawing.Point(104, 7)
-        Me.chkShowBoxID.Name = "chkShowBoxID"
-        Me.chkShowBoxID.Size = New System.Drawing.Size(158, 17)
-        Me.chkShowBoxID.TabIndex = 41
-        Me.chkShowBoxID.Text = "عرض معرّف العلبة بدل رمزها"
-        Me.chkShowBoxID.UseVisualStyleBackColor = False
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.Panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel7.Controls.Add(Me.Label1)
-        Me.Panel7.Controls.Add(Me.chkShowBoxID)
-        Me.Panel7.Controls.Add(Me.DateTimePicker1)
-        Me.Panel7.Controls.Add(Me.Button1)
-        Me.Panel7.Controls.Add(Me.chkShowNonActive)
-        Me.Panel7.Location = New System.Drawing.Point(768, 23)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(558, 32)
-        Me.Panel7.TabIndex = 42
-        '
         'frmCounterHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -482,6 +483,8 @@ Partial Class frmCounterHistory
         Me.Text = "ملف إدخال العدّادات"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox1.ResumeLayout(False)
+        Me.Panel7.ResumeLayout(False)
+        Me.Panel7.PerformLayout()
         CType(Me.dgvData1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
@@ -493,8 +496,6 @@ Partial Class frmCounterHistory
         Me.Panel2.PerformLayout()
         CType(Me.DataSetInvoices, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InvoicesdtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel7.ResumeLayout(False)
-        Me.Panel7.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

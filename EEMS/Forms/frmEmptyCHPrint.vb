@@ -62,7 +62,11 @@
                 query = query & " and cl.id = " & cmbCollector.SelectedValue
             End If
 
-            query = query & " order by en.ename, b.code"
+            If CheckBox1.Checked Then
+                query = query & " order by c.clientname"
+            Else
+                query = query & " order by en.ename, b.code"
+            End If
 
             a.GetData(query, "EmptyCHDT")
             Dim rprt As New frmReportViewer(a.ds.Tables(0))

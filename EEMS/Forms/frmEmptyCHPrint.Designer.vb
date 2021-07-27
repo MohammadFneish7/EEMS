@@ -30,6 +30,7 @@ Partial Class frmEmptyCHPrint
         Me.btnShowPrint = New System.Windows.Forms.Button()
         Me.cmbEngine = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -77,7 +78,7 @@ Partial Class frmEmptyCHPrint
         '
         Me.btnShowPrint.Image = Global.EEMS.My.Resources.Resources.printer16
         Me.btnShowPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnShowPrint.Location = New System.Drawing.Point(12, 92)
+        Me.btnShowPrint.Location = New System.Drawing.Point(12, 116)
         Me.btnShowPrint.Name = "btnShowPrint"
         Me.btnShowPrint.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnShowPrint.Size = New System.Drawing.Size(241, 29)
@@ -107,12 +108,24 @@ Partial Class frmEmptyCHPrint
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "المولّد:"
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(100, 92)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.CheckBox1.Size = New System.Drawing.Size(153, 17)
+        Me.CheckBox1.TabIndex = 40
+        Me.CheckBox1.Text = "ترتيب حسب اسم المشترك"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'frmEmptyCHPrint
         '
         Me.AcceptButton = Me.btnShowPrint
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 131)
+        Me.ClientSize = New System.Drawing.Size(312, 157)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.cmbEngine)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnShowPrint)
@@ -137,4 +150,5 @@ Partial Class frmEmptyCHPrint
     Friend WithEvents btnShowPrint As System.Windows.Forms.Button
     Friend WithEvents cmbEngine As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents CheckBox1 As CheckBox
 End Class
