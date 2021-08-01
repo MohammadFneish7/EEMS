@@ -761,3 +761,5 @@ C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Releas
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.frmEmptyCHExport.resources
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.vbprojAssemblyReference.cache
 C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.vbproj.CoreCompileInputs.cache
+C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.frmChangeMonthlyFee.resources
+C:\Users\MOHAMMAD\Documents\Visual Studio 2012\Projects\EEMS GIT\EEMS\obj\Release\EEMS.frmPriceRuleEditor.resources

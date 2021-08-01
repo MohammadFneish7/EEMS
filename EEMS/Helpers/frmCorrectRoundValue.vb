@@ -10,9 +10,9 @@
             End If
             Dim query As String = String.Empty
             If cmbtype.SelectedIndex = 0 Then
-                query = "Update CounterHistory set roundvalue=IIF((1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000))=1000,0,(1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000)))" & whereClause
+                query = "Update CounterHistory set roundvalue=IIF((1000 - (([monthlyfee]+([kilowattprice])) % 1000))=1000,0,(1000 - (([monthlyfee]+([kilowattprice])) % 1000)))" & whereClause
             ElseIf cmbtype.SelectedIndex = 1 Then
-                query = "Update CounterHistory set roundvalue=IIF((1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000))=1000,0,IIF((([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000) < 500, -(([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000),1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000)))" & whereClause
+                query = "Update CounterHistory set roundvalue=IIF((1000 - (([monthlyfee]+([kilowattprice])) % 1000))=1000,0,IIF((([monthlyfee]+([kilowattprice])) % 1000) < 500, -(([monthlyfee]+([kilowattprice])) % 1000),1000 - (([monthlyfee]+([kilowattprice])) % 1000)))" & whereClause
             ElseIf cmbtype.SelectedIndex = 2 Then
                 query = "Update CounterHistory set roundvalue=0" & whereClause
             End If

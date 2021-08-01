@@ -413,6 +413,12 @@
     <Compile Include="Helpers\ErrorDialog.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Helpers\frmChangeMonthlyFee.Designer.vb">
+      <DependentUpon>frmChangeMonthlyFee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmChangeMonthlyFee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helpers\frmCorrectRoundValue.Designer.vb">
       <DependentUpon>frmCorrectRoundValue.vb</DependentUpon>
     </Compile>
@@ -441,6 +447,12 @@
       <DependentUpon>frmDateSelector.vb</DependentUpon>
     </Compile>
     <Compile Include="Helpers\frmDateSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\frmPriceRuleEditor.Designer.vb">
+      <DependentUpon>frmPriceRuleEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmPriceRuleEditor.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Helpers\frmTokenizer.Designer.vb">
@@ -940,6 +952,9 @@
     <EmbeddedResource Include="Helpers\ErrorDialog.resx">
       <DependentUpon>ErrorDialog.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmChangeMonthlyFee.resx">
+      <DependentUpon>frmChangeMonthlyFee.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmCorrectRoundValue.resx">
       <DependentUpon>frmCorrectRoundValue.vb</DependentUpon>
     </EmbeddedResource>
@@ -1061,6 +1076,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmGeneralPerposeInput.resx">
       <DependentUpon>frmGeneralPerposeInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmPriceRuleEditor.resx">
+      <DependentUpon>frmPriceRuleEditor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.vb</DependentUpon>

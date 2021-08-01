@@ -27,8 +27,7 @@ Partial Class frmChangeKiloPrice
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.txtkiloprice = New System.Windows.Forms.TextBox()
+        Me.txtPriceRule = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -81,25 +80,16 @@ Partial Class frmChangeKiloPrice
         Me.Label4.Text = "سعر الكيلوات:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label25
-        '
-        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(31, 96)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(25, 13)
-        Me.Label25.TabIndex = 72
-        Me.Label25.Text = "ل.ل"
-        '
         'txtkiloprice
         '
-        Me.txtkiloprice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtkiloprice.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtkiloprice.Location = New System.Drawing.Point(27, 92)
-        Me.txtkiloprice.Name = "txtkiloprice"
-        Me.txtkiloprice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtkiloprice.Size = New System.Drawing.Size(279, 20)
-        Me.txtkiloprice.TabIndex = 71
+        Me.txtPriceRule.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtPriceRule.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPriceRule.Location = New System.Drawing.Point(27, 92)
+        Me.txtPriceRule.Name = "txtkiloprice"
+        Me.txtPriceRule.ReadOnly = True
+        Me.txtPriceRule.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.txtPriceRule.Size = New System.Drawing.Size(279, 20)
+        Me.txtPriceRule.TabIndex = 71
         '
         'Button1
         '
@@ -182,8 +172,7 @@ Partial Class frmChangeKiloPrice
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label25)
-        Me.Controls.Add(Me.txtkiloprice)
+        Me.Controls.Add(Me.txtPriceRule)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label5)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -201,8 +190,7 @@ Partial Class frmChangeKiloPrice
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents txtkiloprice As System.Windows.Forms.TextBox
+    Friend WithEvents txtPriceRule As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label23 As Label
     Friend WithEvents Label19 As Label

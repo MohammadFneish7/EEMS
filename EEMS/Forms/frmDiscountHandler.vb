@@ -45,24 +45,24 @@ Public Class frmDiscountHandler
                     " ch.currentvalue AS [القيمة الحاليّة], " & _
                     " r.insurance AS [تأمين], "
 
-        Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " & _
-                            " (b.code + ec.code) AS [رمز مفتاح], " & _
-                            " ch.monthlyfee AS [رسم اشتراك], " & _
-                            " (ch.currentvalue-ch.previousvalue) AS [فرق عداد], " & _
-                            " ch.kilowattprice AS [سعر الكيلو], " & _
-                            " (((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue) AS [مطلوب كيلو], " & _
-                            " total + discount AS [المجموع], " & _
-                            " discount AS [حسم], " & _
-                            " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " & _
-                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي] " & _
-                        " FROM Registration r" & _
-                            " INNER JOIN Client c on r.clientid = c.ID" & _
-                            " INNER JOIN Package p on r.packageid = p.ID" & _
-                            " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " & _
-                            " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" & _
-                            " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & _
-                            " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.ampere, cl.fullname, b.code, ec.code, ch.previousvalue, " & _
-                            " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" & _
+        Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &
+                            " (b.code + ec.code) AS [رمز مفتاح], " &
+                            " ch.monthlyfee AS [رسم اشتراك], " &
+                            " (ch.currentvalue-ch.previousvalue) AS [فرق عداد], " &
+                            " ch.priceRule as [نظام الشطور], " &
+                            " (ch.kilowattprice + roundvalue) AS [مطلوب كيلو], " &
+                            " total + discount AS [المجموع], " &
+                            " discount AS [حسم], " &
+                            " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
+                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي] " &
+                        " FROM Registration r" &
+                            " INNER JOIN Client c on r.clientid = c.ID" &
+                            " INNER JOIN Package p on r.packageid = p.ID" &
+                            " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " &
+                            " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
+                            " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " &
+                            " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.ampere, cl.fullname, b.code, ec.code, ch.previousvalue, " &
+                            " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.priceRule, ch.roundvalue, ch.total, ch.discount" &
                         " ORDER BY cl.fullname, b.code, ec.code"
 
         a.ds = New DataSet

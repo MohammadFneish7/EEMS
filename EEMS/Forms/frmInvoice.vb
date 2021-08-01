@@ -66,7 +66,7 @@ Public Class frmInvoice
     Private Sub calculateStats()
         Try
             Dim soldkilo As Integer = a.ExecuteScalar("SELECT IsNull(SUM((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
-            Dim kiloprofit As Integer = a.ExecuteScalar("SELECT IsNull(SUM(((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))*Cast(ch.kilowattprice AS BIGINT))+Cast(roundvalue AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim kiloprofit As Integer = a.ExecuteScalar("SELECT IsNull(SUM((Cast(ch.kilowattprice AS BIGINT))+Cast(roundvalue AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
             Dim fees As Integer = a.ExecuteScalar("SELECT IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
             Dim workinghours As Integer = a.ExecuteScalar("SELECT IsNull(MAX(workinghours),0) FROM EngineWorkingHours WHERE cmonth =" & month & " and cyear=" & year)
             lblsoldKilo.Text = soldkilo
@@ -196,7 +196,7 @@ Public Class frmInvoice
                 Dim newVal As Integer = CounterHistoryEditDialog.txtNew.Text.Trim
                 Dim kwPice As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(19)))
                 Dim fee As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(17)))
-                Dim round As Integer = getRoundThousand(((newVal - oldVal) * kwPice) + fee)
+                Dim round As Integer = getRoundThousand(kwPice + fee)
                 a.ExecuteNoReturn("update CounterHistory set currentvalue=" & newVal & ", roundvalue=" & round & " where ID=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2))))
                 loadData()
             Catch ex As Exception
@@ -218,7 +218,6 @@ Public Class frmInvoice
             ErrorDialog.showDlg(ex)
         End Try
     End Sub
-
 
     Public Function getInvoiceQuery(m As Int16, y As Int16, withCredits As Boolean, Optional forReport As Boolean = False) As String
         Dim d As New Date(y, m, 1)
@@ -266,8 +265,8 @@ Public Class frmInvoice
                             " (b.code + ec.code) AS [رمز مفتاح], " &
                             " ch.monthlyfee AS [رسم اشتراك ل.ل], " &
                             " (ch.currentvalue-ch.previousvalue) AS [فرق عداد KW], " &
-                            " ch.kilowattprice AS [سعر الكيلو ل.ل], " &
-                            " (((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue) AS [مطلوب كيلو ل.ل], " &
+                            " ch.priceRule as [نظام الشطور], " &
+                            " (ch.kilowattprice + roundvalue) AS [مطلوب كيلو ل.ل], " &
                             " total + discount AS [المجموع ل.ل], " &
                             " discount AS [حسم ل.ل], " &
                             " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع ل.ل], " &
@@ -279,7 +278,7 @@ Public Class frmInvoice
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
                         " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" &
+                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.priceRule, ch.roundvalue, ch.total, ch.discount" &
                         " ORDER BY cl.fullname, b.code, ec.code"
         If withCredits Then
             Return q1 + q2 + q3
@@ -344,8 +343,8 @@ Public Class frmInvoice
                             " (b.code + ec.code) AS [رمز مفتاح], " &
                             " ch.monthlyfee AS [رسم اشتراك], " &
                             " (ch.currentvalue-ch.previousvalue) AS [فرق عداد], " &
-                            " ch.kilowattprice AS [سعر الكيلو], " &
-                            " (((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue) AS [مطلوب كيلو], " &
+                            " ch.priceRule as [نظام الشطور], " &
+                            " (ch.kilowattprice + roundvalue) AS [مطلوب كيلو], " &
                             " total AS [المجموع], " &
                             " discount AS [حسم], " &
                             " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
@@ -357,7 +356,7 @@ Public Class frmInvoice
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
                         " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount"
+                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.priceRule, ch.roundvalue, ch.total, ch.discount"
         If orderByCust Then
             q3 += " ORDER BY c.clientname"
         Else

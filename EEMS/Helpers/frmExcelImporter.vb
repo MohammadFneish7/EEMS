@@ -281,7 +281,7 @@ Public Class frmExcelImporter
                 cl.regid = a.Execute("insert into registration(clientid,registrationdate,packageid,counterid,active,initialcountervalue,insurance)" & _
                                  " values(" & cl.id & ",'" & cl.regdate.ToShortDateString & "'," & cl.pack.id & "," & cl.counter.id & "," & active & "," & 0 & "," & 0 & ")")
             End If
-            a.ExecuteNoReturn("insert into counterhistory (cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,roundvalue)" & _
+            a.ExecuteNoReturn("insert into counterhistory (cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,roundvalue)" &
                               " values(" & txtDate.Value.Month & "," & txtDate.Value.Year & "," & cl.regid & "," & 0 & "," & 0 & "," & 0 & "," & cl.counter.value & "," & 0 & ")")
         Next
 

@@ -30,9 +30,9 @@ Public Class frmClientReport
         regbs.DataSource = a.ds.Tables("dt1")
         dgvRegistration.DataSource = regbs
 
-        a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك ل.ل],(ch.currentvalue-ch.previousvalue) as [فرق عداد (كيلو)],ch.kilowattprice as [سعر الكيلو ل.ل],((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue as [مطلوب كيلو ل.ل],total+discount as [المجموع ل.ل],ch.discount as [حسم ل.ل],total as [مطلوب ل.ل], ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [مدفوع ل.ل], total-ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [باقي ل.ل] " &
+        a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك ل.ل],(ch.currentvalue-ch.previousvalue) as [فرق عداد (كيلو)],ch.priceRule as [نظام الشطور],ch.kilowattprice+roundvalue as [مطلوب كيلو ل.ل],total+discount as [المجموع ل.ل],ch.discount as [حسم ل.ل],total as [مطلوب ل.ل], ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [مدفوع ل.ل], total-ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [باقي ل.ل] " &
                     " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID where r.clientid=" & cid &
-                    " group by ch.ID,r.ID,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.kilowattprice,((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue,total+discount,ch.discount,ch.total", "dt2")
+                    " group by ch.ID,r.ID,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.priceRule,ch.kilowattprice+roundvalue,total+discount,ch.discount,ch.total", "dt2")
         credbs.DataSource = a.ds.Tables("dt2")
 
         dgvCredits.DataSource = credbs

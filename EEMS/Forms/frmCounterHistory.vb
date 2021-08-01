@@ -88,7 +88,7 @@ Public Class frmCounterHistory
 
             a.GetData("SELECT Distinct r.ID as [المعرّف],r.active as مفعّل,en.ename as [الموتور]," & boxQuery & ",b.location as [عنوان العلبة]," &
                         "	c.clientname as [المشترك],p.title as [أمبير],ec.serial as [رقم العداد],ec.code as [الرمز في العلبة],cl.fullname as [الجابي]," &
-                        "	p.fee as [اشتراك شهري],p.kilowattprice as [سعر الكيلو]," &
+                        "	p.fee as [اشتراك شهري],ch.priceRule as [نظام الشطور]," &
                         "	IsNull((Select MAX(chh.currentvalue) From CounterHistory chh Where chh.regid = r.ID),0) AS [القيمة السابقة]," &
                         "   '' as [القيمة الحاليّة],'' as ملاحظات " &
                         " FROM Registration r JOIN Client c ON r.clientid = c.ID" &
@@ -192,23 +192,24 @@ Public Class frmCounterHistory
         Try
             Dim regid As String
             Dim fee As String
-            Dim kiloPrice As String
+            Dim priceRule As String
             Dim prevVal As String
             Dim curVal As String
             Dim note As String
             For i As Int32 = 0 To GridView1.RowCount - 1
                 regid = GridView1.GetRowCellValue(i, GridView1.Columns(0)).ToString
                 fee = GridView1.GetRowCellValue(i, GridView1.Columns(10)).ToString
-                kiloPrice = GridView1.GetRowCellValue(i, GridView1.Columns(11)).ToString
+                priceRule = GridView1.GetRowCellValue(i, GridView1.Columns(11)).ToString
                 prevVal = GridView1.GetRowCellValue(i, GridView1.Columns(12)).ToString
                 curVal = GridView1.GetRowCellValue(i, GridView1.Columns(13)).ToString
                 note = GridView1.GetRowCellValue(i, GridView1.Columns(14)).ToString
                 If curVal.ToString.Trim.Length > 0 Then
                     If Integer.Parse(curVal.ToString.Trim) > 0 Then
                         If (curVal - prevVal) >= 0 Then
-                            Dim j As Integer = (fee + (kiloPrice * (curVal - prevVal)))
+                            Dim totalKilo As Long = SharedModule.getKiloPriceBasedOnPriceRule(curVal - prevVal, priceRule)
+                            Dim j As Integer = fee + totalKilo
                             j = getRoundThousand(j)
-                            sqlQueries.Add("Insert into CounterHistory(cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,notes,roundvalue) VALUES(" & month & "," & year & "," & regid.ToString & "," & fee.ToString & "," & kiloPrice.ToString & "," & prevVal.ToString & "," & curVal.ToString & ",'" & note.ToString & "'," & j & ")")
+                            sqlQueries.Add("Insert into CounterHistory(cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,notes,roundvalue,priceRule) VALUES(" & month & "," & year & "," & regid.ToString & "," & fee.ToString & "," & totalKilo.ToString & "," & prevVal.ToString & "," & curVal.ToString & ",'" & note.ToString & "'," & j & ",'" & priceRule & "')")
                             sqlQueries.Add("UPDATE ECounter SET currentvalue = " & curVal.ToString & " WHERE ID = (SELECT ec.id FROM ECounter ec JOIN Registration r ON r.counterid = ec.ID WHERE r.ID = " & regid.ToString & ")")
                         End If
                     End If

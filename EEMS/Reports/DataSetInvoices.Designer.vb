@@ -601,7 +601,7 @@ Partial Public Class DataSetInvoices
         
         Private columndiff As Global.System.Data.DataColumn
         
-        Private columnkiloprice As Global.System.Data.DataColumn
+        Private columnpriceRule As Global.System.Data.DataColumn
         
         Private columnkilono As Global.System.Data.DataColumn
         
@@ -802,9 +802,9 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property kilopriceColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property priceRuleColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnkiloprice
+                Return Me.columnpriceRule
             End Get
         End Property
         
@@ -905,14 +905,14 @@ Partial Public Class DataSetInvoices
                     ByVal specialcode As String,  _
                     ByVal fee As Integer,  _
                     ByVal diff As Integer,  _
-                    ByVal kiloprice As Integer,  _
+                    ByVal priceRule As String,  _
                     ByVal kilono As Integer,  _
                     ByVal total As Integer,  _
                     ByVal discount As String,  _
                     ByVal paid As Integer,  _
                     ByVal remaining As Integer) As invoicesdtRow
             Dim rowinvoicesdtRow As invoicesdtRow = CType(Me.NewRow,invoicesdtRow)
-            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining}
+            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, priceRule, kilono, total, discount, paid, remaining}
             rowinvoicesdtRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowinvoicesdtRow)
             Return rowinvoicesdtRow
@@ -954,7 +954,7 @@ Partial Public Class DataSetInvoices
             Me.columnspecialcode = MyBase.Columns("specialcode")
             Me.columnfee = MyBase.Columns("fee")
             Me.columndiff = MyBase.Columns("diff")
-            Me.columnkiloprice = MyBase.Columns("kiloprice")
+            Me.columnpriceRule = MyBase.Columns("priceRule")
             Me.columnkilono = MyBase.Columns("kilono")
             Me.columntotal = MyBase.Columns("total")
             Me.columndiscount = MyBase.Columns("discount")
@@ -1003,8 +1003,8 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columnfee)
             Me.columndiff = New Global.System.Data.DataColumn("diff", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndiff)
-            Me.columnkiloprice = New Global.System.Data.DataColumn("kiloprice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnkiloprice)
+            Me.columnpriceRule = New Global.System.Data.DataColumn("priceRule", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpriceRule)
             Me.columnkilono = New Global.System.Data.DataColumn("kilono", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkilono)
             Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -1573,7 +1573,7 @@ Partial Public Class DataSetInvoices
         
         Private columncounterdiff As Global.System.Data.DataColumn
         
-        Private columnkilowattprice As Global.System.Data.DataColumn
+        Private columnpriceRule As Global.System.Data.DataColumn
         
         Private columnrequiredkilo As Global.System.Data.DataColumn
         
@@ -1666,9 +1666,9 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property kilowattpriceColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property priceRuleColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnkilowattprice
+                Return Me.columnpriceRule
             End Get
         End Property
         
@@ -1765,9 +1765,9 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddcreditdtRow(ByVal chID As String, ByVal rID As String, ByVal month As String, ByVal fee As Integer, ByVal counterdiff As Integer, ByVal kilowattprice As Integer, ByVal requiredkilo As Integer, ByVal total As Integer, ByVal discount As Integer, ByVal required As Integer, ByVal paid As Integer, ByVal remained As Integer, ByVal notes As String) As creditdtRow
+        Public Overloads Function AddcreditdtRow(ByVal chID As String, ByVal rID As String, ByVal month As String, ByVal fee As Integer, ByVal counterdiff As Integer, ByVal priceRule As String, ByVal requiredkilo As Integer, ByVal total As Integer, ByVal discount As Integer, ByVal required As Integer, ByVal paid As Integer, ByVal remained As Integer, ByVal notes As String) As creditdtRow
             Dim rowcreditdtRow As creditdtRow = CType(Me.NewRow,creditdtRow)
-            Dim columnValuesArray() As Object = New Object() {chID, rID, month, fee, counterdiff, kilowattprice, requiredkilo, total, discount, required, paid, remained, notes}
+            Dim columnValuesArray() As Object = New Object() {chID, rID, month, fee, counterdiff, priceRule, requiredkilo, total, discount, required, paid, remained, notes}
             rowcreditdtRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowcreditdtRow)
             Return rowcreditdtRow
@@ -1795,7 +1795,7 @@ Partial Public Class DataSetInvoices
             Me.columnmonth = MyBase.Columns("month")
             Me.columnfee = MyBase.Columns("fee")
             Me.columncounterdiff = MyBase.Columns("counterdiff")
-            Me.columnkilowattprice = MyBase.Columns("kilowattprice")
+            Me.columnpriceRule = MyBase.Columns("priceRule")
             Me.columnrequiredkilo = MyBase.Columns("requiredkilo")
             Me.columntotal = MyBase.Columns("total")
             Me.columndiscount = MyBase.Columns("discount")
@@ -1818,8 +1818,8 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columnfee)
             Me.columncounterdiff = New Global.System.Data.DataColumn("counterdiff", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncounterdiff)
-            Me.columnkilowattprice = New Global.System.Data.DataColumn("kilowattprice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnkilowattprice)
+            Me.columnpriceRule = New Global.System.Data.DataColumn("priceRule", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpriceRule)
             Me.columnrequiredkilo = New Global.System.Data.DataColumn("requiredkilo", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnrequiredkilo)
             Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -4246,16 +4246,16 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property kiloprice() As Integer
+        Public Property priceRule() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.kilopriceColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.priceRuleColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'kiloprice' in table 'invoicesdt' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'priceRule' in table 'invoicesdt' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableinvoicesdt.kilopriceColumn) = value
+                Me(Me.tableinvoicesdt.priceRuleColumn) = value
             End Set
         End Property
         
@@ -4564,14 +4564,14 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IskilopriceNull() As Boolean
-            Return Me.IsNull(Me.tableinvoicesdt.kilopriceColumn)
+        Public Function IspriceRuleNull() As Boolean
+            Return Me.IsNull(Me.tableinvoicesdt.priceRuleColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetkilopriceNull()
-            Me(Me.tableinvoicesdt.kilopriceColumn) = Global.System.Convert.DBNull
+        Public Sub SetpriceRuleNull()
+            Me(Me.tableinvoicesdt.priceRuleColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5067,16 +5067,16 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property kilowattprice() As Integer
+        Public Property priceRule() As String
             Get
                 Try 
-                    Return CType(Me(Me.tablecreditdt.kilowattpriceColumn),Integer)
+                    Return CType(Me(Me.tablecreditdt.priceRuleColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'kilowattprice' in table 'creditdt' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'priceRule' in table 'creditdt' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablecreditdt.kilowattpriceColumn) = value
+                Me(Me.tablecreditdt.priceRuleColumn) = value
             End Set
         End Property
         
@@ -5247,14 +5247,14 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function IskilowattpriceNull() As Boolean
-            Return Me.IsNull(Me.tablecreditdt.kilowattpriceColumn)
+        Public Function IspriceRuleNull() As Boolean
+            Return Me.IsNull(Me.tablecreditdt.priceRuleColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub SetkilowattpriceNull()
-            Me(Me.tablecreditdt.kilowattpriceColumn) = Global.System.Convert.DBNull
+        Public Sub SetpriceRuleNull()
+            Me(Me.tablecreditdt.priceRuleColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

@@ -24,13 +24,12 @@ Partial Class frmPackageEditor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPackageEditor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txttitle = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -41,7 +40,7 @@ Partial Class frmPackageEditor
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.txtnotes = New System.Windows.Forms.TextBox()
-        Me.txtkiloprice = New System.Windows.Forms.TextBox()
+        Me.txtPriceRule = New System.Windows.Forms.TextBox()
         Me.txtinsurance = New System.Windows.Forms.TextBox()
         Me.txtfee = New System.Windows.Forms.TextBox()
         Me.txtampere = New System.Windows.Forms.TextBox()
@@ -68,13 +67,12 @@ Partial Class frmPackageEditor
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.txttitle)
-        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label26)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label25)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label24)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -85,7 +83,7 @@ Partial Class frmPackageEditor
         Me.GroupBox1.Controls.Add(Me.Label27)
         Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.txtnotes)
-        Me.GroupBox1.Controls.Add(Me.txtkiloprice)
+        Me.GroupBox1.Controls.Add(Me.txtPriceRule)
         Me.GroupBox1.Controls.Add(Me.txtinsurance)
         Me.GroupBox1.Controls.Add(Me.txtfee)
         Me.GroupBox1.Controls.Add(Me.txtampere)
@@ -96,6 +94,17 @@ Partial Class frmPackageEditor
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "تفاصيل الاشتراك"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(363, 126)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(13, 13)
+        Me.Label5.TabIndex = 30
+        Me.Label5.Text = "*"
         '
         'Label6
         '
@@ -128,17 +137,6 @@ Partial Class frmPackageEditor
         Me.txttitle.Size = New System.Drawing.Size(241, 20)
         Me.txttitle.TabIndex = 0
         '
-        'Label5
-        '
-        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label5.AutoSize = True
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(363, 126)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(13, 13)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "*"
-        '
         'Label26
         '
         Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -155,20 +153,10 @@ Partial Class frmPackageEditor
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(629, 126)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 13)
+        Me.Label4.Size = New System.Drawing.Size(70, 13)
         Me.Label4.TabIndex = 24
-        Me.Label4.Text = "سعر الكيلوات:"
+        Me.Label4.Text = "نظام الشطور:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label25
-        '
-        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(385, 126)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(25, 13)
-        Me.Label25.TabIndex = 20
-        Me.Label25.Text = "ل.ل"
         '
         'Label3
         '
@@ -276,13 +264,14 @@ Partial Class frmPackageEditor
         '
         'txtkiloprice
         '
-        Me.txtkiloprice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtkiloprice.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtkiloprice.Location = New System.Drawing.Point(382, 123)
-        Me.txtkiloprice.MaxLength = 50
-        Me.txtkiloprice.Name = "txtkiloprice"
-        Me.txtkiloprice.Size = New System.Drawing.Size(241, 20)
-        Me.txtkiloprice.TabIndex = 3
+        Me.txtPriceRule.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtPriceRule.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtPriceRule.Location = New System.Drawing.Point(382, 123)
+        Me.txtPriceRule.MaxLength = 50
+        Me.txtPriceRule.Name = "txtkiloprice"
+        Me.txtPriceRule.ReadOnly = True
+        Me.txtPriceRule.Size = New System.Drawing.Size(241, 20)
+        Me.txtPriceRule.TabIndex = 3
         '
         'txtinsurance
         '
@@ -515,7 +504,7 @@ Partial Class frmPackageEditor
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtkiloprice As System.Windows.Forms.TextBox
+    Friend WithEvents txtPriceRule As System.Windows.Forms.TextBox
     Friend WithEvents txtinsurance As System.Windows.Forms.TextBox
     Friend WithEvents txtfee As System.Windows.Forms.TextBox
     Friend WithEvents txtampere As System.Windows.Forms.TextBox
@@ -538,10 +527,8 @@ Partial Class frmPackageEditor
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents btnsave As System.Windows.Forms.Button
     Friend WithEvents btncancel As System.Windows.Forms.Button
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -550,5 +537,5 @@ Partial Class frmPackageEditor
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents txttitle As System.Windows.Forms.TextBox
-
+    Friend WithEvents Label5 As Label
 End Class

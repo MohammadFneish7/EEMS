@@ -72,7 +72,7 @@ Public Class frmPreRegistrationCredits
                             Dim chID As Integer = a.ds.Tables("dt2").Rows(0).Item(0)
                             a.ExecuteNoReturn("update CounterHistory set monthlyfee=" & result & " where ID=" & chID)
                         Else
-                            a.ExecuteNoReturn("insert into CounterHistory (cmonth, cyear, regid, monthlyfee, kilowattprice, previousvalue, currentvalue, roundvalue, discount) values (" & regDate.Month & "," & regDate.Year & "," & GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1)) & "," & result & ",0,0,0,0,0)")
+                            a.ExecuteNoReturn("insert into CounterHistory (cmonth, cyear, regid, monthlyfee, kilowattprice, previousvalue, currentvalue, roundvalue, discount, priceRule) values (" & regDate.Month & "," & regDate.Year & "," & GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1)) & "," & result & ",0,0,0,0,0,'ثابت:0')")
                         End If
                     End If
                 End If

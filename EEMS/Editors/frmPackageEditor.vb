@@ -33,50 +33,50 @@ Public Class frmPackageEditor
         '    Return
         'End If
         If add = False Then
-            a.Execute("Update Package Set title='" & txttitle.Text.Trim & "', ampere=" & txtampere.Text.Trim & ",fee=" & txtfee.Text.Trim & ",insurance=" & txtinsurance.Text.Trim & ",kilowattprice=" & txtkiloprice.Text.Trim & ",notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
+            a.Execute("Update Package Set title='" & txttitle.Text.Trim & "', ampere=" & txtampere.Text.Trim & ",fee=" & txtfee.Text.Trim & ",insurance=" & txtinsurance.Text.Trim & ", priceRule=" & txtPriceRule.Text.Trim & ",notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
         Else
             Dim count As Long = a.ExecuteScalar("Select count(*) from Package e where e.title='" & txttitle.Text.Trim & "'")
             If count > 0 Then
                 MsgBox("عنوان الاشتراك موجود أصلا، الرجاء إختيار عنوان أخر للمتابعة")
                 Return
             End If
-            a.Execute("insert into Package(title,ampere,fee,insurance,kilowattprice,notes) values('" & txttitle.Text.Trim & "'," & txtampere.Text.Trim & "," & txtfee.Text.Trim & "," & txtinsurance.Text.Trim & "," & txtkiloprice.Text.Trim & ",'" & txtnotes.Text.Trim & "')")
+            a.Execute("insert into Package(title,ampere,fee,insurance,priceRule,notes) values('" & txttitle.Text.Trim & "'," & txtampere.Text.Trim & "," & txtfee.Text.Trim & "," & txtinsurance.Text.Trim & "," & txtPriceRule.Text.Trim & ",'" & txtnotes.Text.Trim & "')")
         End If
 
-        Me.DialogResult =DialogResult.OK
+        Me.DialogResult = DialogResult.OK
 
     End Sub
 
     Private Sub loadData()
         Try
             a.ds = New DataSet
-            a.GetData("SELECT title, ampere as امبير,fee as [اشتراك شهري],insurance as [مبلغ التأمين],kilowattprice as [سعر الكيلو وات],notes as ملاحظات FROM Package where ID =" & id)
+            a.GetData("SELECT title, ampere as امبير,fee as [اشتراك شهري],insurance as [مبلغ التأمين], priceRule as [نظام الشطور],notes as ملاحظات FROM Package where ID =" & id)
             txttitle.Text = a.ds.Tables(0).Rows(0).Item(0).ToString
             txtampere.Text = a.ds.Tables(0).Rows(0).Item(1).ToString
             txtfee.Text = a.ds.Tables(0).Rows(0).Item(2).ToString
             txtinsurance.Text = a.ds.Tables(0).Rows(0).Item(3).ToString
-            txtkiloprice.Text = a.ds.Tables(0).Rows(0).Item(4).ToString
+            txtPriceRule.Text = a.ds.Tables(0).Rows(0).Item(4).ToString
             txtnotes.Text = a.ds.Tables(0).Rows(0).Item(5).ToString
         Catch ex As Exception
             MsgBox("خطأ اثناء محاولة تحميل البيانات.")
-            Me.DialogResult =DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
 
         End Try
     End Sub
 
     Private Function checkEmpty() As Boolean
-        If txttitle.Text.Trim.Length = 0 OrElse txtampere.Text.Trim.Length = 0 OrElse txtfee.Text.Trim.Length = 0 OrElse txtinsurance.Text.Trim.Length = 0 OrElse txtkiloprice.Text.Trim.Length = 0 Then
+        If txttitle.Text.Trim.Length = 0 OrElse txtampere.Text.Trim.Length = 0 OrElse txtfee.Text.Trim.Length = 0 OrElse txtinsurance.Text.Trim.Length = 0 OrElse txtPriceRule.Text.Trim.Length = 0 Then
             Return True
         End If
         Return False
     End Function
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
-        Me.DialogResult =DialogResult.Ignore
+        Me.DialogResult = DialogResult.Ignore
     End Sub
 
 
-    Private Sub txtname_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtinsurance.KeyPress, txtkiloprice.KeyPress, txtfee.KeyPress, txtampere.KeyPress
+    Private Sub txtname_KeyPress_1(sender As Object, e As KeyPressEventArgs) Handles txtinsurance.KeyPress, txtfee.KeyPress, txtampere.KeyPress
         a.bindNumeric(sender, e)
     End Sub
 
@@ -87,6 +87,19 @@ Public Class frmPackageEditor
             Catch ex As Exception
                 ErrorDialog.showDlg(ex)
             End Try
+        End If
+    End Sub
+
+    Private Sub txtkiloprice_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtPriceRule.MouseDoubleClick
+        Dim frm1 As New frmPriceRuleEditor(txtPriceRule.Text)
+        If frm1.ShowDialog() = DialogResult.OK Then
+            txtPriceRule.Text = frm1.rule
+        End If
+    End Sub
+
+    Private Sub txtkiloprice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPriceRule.KeyPress
+        If AscW(e.KeyChar) = 32 Then
+            txtkiloprice_MouseDoubleClick(Nothing, Nothing)
         End If
     End Sub
 End Class

@@ -30,7 +30,7 @@ Public Class frmPackage
 
     Private Sub loadData()
         a.ds = New DataSet
-        a.GetData("SELECT ID as المعرّف,title as عنوان,ampere as امبير,fee as [اشتراك شهري],insurance as [مبلغ التأمين],kilowattprice as [سعر الكيلو وات],notes as ملاحظات FROM Package")
+        a.GetData("SELECT ID as المعرّف,title as عنوان,ampere as امبير,fee as [اشتراك شهري],insurance as [مبلغ التأمين],priceRule as [نظام الشطور],notes as ملاحظات FROM Package")
         bs.DataSource = a.ds.Tables(0)
         dgvData.DataSource = bs
     End Sub

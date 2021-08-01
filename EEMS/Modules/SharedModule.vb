@@ -160,6 +160,34 @@ Module SharedModule
         End If
     End Function
 
+    Public Function getKiloPriceBasedOnPriceRule(totalKilos As Integer, rule As String) As Long
+        Dim rules As String() = rule.Split(":")(1).Split(",")
+        If rule.Count = 1 Then
+            Dim fixedPrice As Integer = Integer.Parse(rule(0))
+            Return totalKilos * fixedPrice
+        Else
+            Dim totalKiloPrice As Integer = 0
+            Dim remKilo As Integer = totalKiloPrice
+            For Each r As String In rules
+                Dim rvalues As String() = r.Split("<")
+                Dim rprice As Integer = Integer.Parse(rvalues(0))
+                If rvalues.Count > 1 Then
+                    Dim rlimit As Integer = Integer.Parse(rvalues(1))
+                    If totalKilos - rlimit <= 0 Then
+                        totalKiloPrice += remKilo * rprice
+                        Exit For
+                    Else
+                        remKilo -= rlimit
+                        totalKiloPrice += rlimit * rprice
+                    End If
+                Else
+                    totalKiloPrice += remKilo * rprice
+                End If
+            Next
+            Return totalKiloPrice
+        End If
+    End Function
+
     Public Function getBit(b As Boolean) As Integer
         If b = False Then
             Return 0

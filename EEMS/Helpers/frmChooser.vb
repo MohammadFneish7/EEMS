@@ -47,7 +47,7 @@ Public Class frmChooser
         ElseIf options = PACKAGE_CHOOSER Then
             Me.Text = "اختيار الاشتراك"
             Me.GroupBox1.Text = "اختر الاشتراك"
-            a.GetData("SELECT ID as المعرّف,title as امبير,fee as [اشتراك شهري],insurance as [مبلغ التأمين],kilowattprice as [سعر الكيلو وات] FROM Package")
+            a.GetData("SELECT ID as المعرّف,title as امبير,fee as [اشتراك شهري],insurance as [مبلغ التأمين],priceRule as [نظام الشطور] FROM Package")
         ElseIf options = REGISTRATION_CHOOSER Then
             Me.Text = "اختيار الاشتراك"
             Me.GroupBox1.Text = "اختر الاشتراك"

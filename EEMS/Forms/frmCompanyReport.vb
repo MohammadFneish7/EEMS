@@ -46,7 +46,7 @@ Public Class frmCompanyReport
     End Function
 
     Private Function getTotalKW() As Long
-        Dim totalKW As Long = a.ExecuteScalar("SELECT IsNull(SUM([kilowattprice]*([currentvalue]-[previousvalue])),0) FROM CounterHistory coh WHERE coh.cyear=" & dtp1.Value.Year & " AND coh.cmonth=" & dtp1.Value.Month)
+        Dim totalKW As Long = a.ExecuteScalar("SELECT IsNull(SUM([kilowattprice]),0) FROM CounterHistory coh WHERE coh.cyear=" & dtp1.Value.Year & " AND coh.cmonth=" & dtp1.Value.Month)
         btnTotalKW.Text = "اجمالي كيلوات" & vbNewLine & vbNewLine & totalKW.ToString("N0") & " ل.ل"
         Return totalKW
     End Function
@@ -240,7 +240,7 @@ Public Class frmCompanyReport
         a.GetData("SELECT r.ID as [المعرّف],r.active as مفعّل,en.ename as [الموتور],b.location as [عنوان العلبة],c.clientname as [المشترك], c.phone as [هاتف], c.mobile as [خلوي], p.title as [نوع الاشتراك], p.ampere as [أمبير]," &
                        " cl.fullname as [الجابي],b.code as [رمز العلبة],ec.code as [الرمز في العلبة],(b.code + ec.code) as [رمز مفتاح]," &
                        " IsNull(Max(ch.currentvalue),0) as [مجموع كيلوات (كيلو)]," &
-                       " IsNull(Sum(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue),0) as [اجمالي كيلوات + تدوير ل.ل]," &
+                       " IsNull(Sum((ch.kilowattprice) + ch.roundvalue),0) as [اجمالي كيلوات + تدوير ل.ل]," &
                        " IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) as [اجمالي رسوم ل.ل]," &
                        " IsNull(SUM(total + discount),0) as [اجمالي مطلوب ل.ل]," &
                        " IsNull(SUM(discount),0) as [اجمالي حسومات ل.ل]," &
@@ -427,7 +427,7 @@ Public Class frmCompanyReport
                     " left outer Join Maintenance m on  m.engineid = e1.id " &
                     " Group By e1.ename) t1" &
                     " Left outer Join" &
-                    " (select e2.ename as 'B', ISNUll(SUM(ch2.currentvalue - ch2.previousvalue),0) as KW, ISNUll(SUM((ch2.currentvalue - ch2.previousvalue) * kilowattprice),0) as KWP, ISNUll(SUM(ch2.monthlyfee),0) as MF, ISNUll(SUM(ch2.discount),0) as DIS, ISNUll(SUM(ch2.roundvalue),0) as RND, ISNUll(SUM(ch2.total),0) as totalInvoice" &
+                    " (select e2.ename as 'B', ISNUll(SUM(ch2.currentvalue - ch2.previousvalue),0) as KW, ISNUll(SUM(kilowattprice),0) as KWP, ISNUll(SUM(ch2.monthlyfee),0) as MF, ISNUll(SUM(ch2.discount),0) as DIS, ISNUll(SUM(ch2.roundvalue),0) as RND, ISNUll(SUM(ch2.total),0) as totalInvoice" &
                     " FROM Engine e2" &
                     " Left Join ElectricBox eb2 On eb2.engineid = e2.id" &
                     " 		Left join ECounter ec2 on ec2.boxid = eb2.ID" &
@@ -486,7 +486,7 @@ Public Class frmCompanyReport
                         " 	( " &
                         " 		select e.ename as Enginex, 0 as KW, 0 as KWP, 0 as MF, 0 as DIS, 0 as RND, 0 as D FROM Engine e where e.id not in (select e.id from Engine e Left Join ElectricBox eb On eb.engineid = e.id Left join ECounter ec on ec.boxid = eb.ID Left join Registration r on r.counterid=ec.ID Left join CounterHistory ch on ch.regid = r.id Where ch.cmonth = " & dtp1.Value.Month & " AND ch.cyear = " & dtp1.Value.Year & " ) " &
                         " 		Union " &
-                        " 		select e.ename, ISNUll(SUM(ch.currentvalue - ch.previousvalue),0) as totalkw, ISNUll(SUM((ch.currentvalue - ch.previousvalue) * kilowattprice),0) as totalkwP, ISNUll(sum(Cast(ch.monthlyfee AS BIGINT)),0) as totalMF, ISNUll(SUM(ch.discount),0) as totalDis, ISNUll(SUM(ch.roundvalue),0) as totalRnd, ISNUll(sum(Cast(ch.total AS BIGINT)),0) as totalInvoice " &
+                        " 		select e.ename, ISNUll(SUM(ch.currentvalue - ch.previousvalue),0) as totalkw, ISNUll(SUM(kilowattprice),0) as totalkwP, ISNUll(sum(Cast(ch.monthlyfee AS BIGINT)),0) as totalMF, ISNUll(SUM(ch.discount),0) as totalDis, ISNUll(SUM(ch.roundvalue),0) as totalRnd, ISNUll(sum(Cast(ch.total AS BIGINT)),0) as totalInvoice " &
                         " 		FROM Engine e " &
                         " 		Left Join ElectricBox eb On eb.engineid = e.id " &
                         " 				Left join ECounter ec on ec.boxid = eb.ID " &
@@ -712,38 +712,38 @@ Public Class frmCompanyReport
     End Function
 
     Private Function getCollectersReportQuery2() As String
-        Dim query As String = "SELECT 'اجمالي', " & _
-                                " 	ISNULL(SUM(B),0), " & _
-                                " 	ISNULL(SUM(E),0), " & _
-                                " 	ISNULL(SUM(C),0), " & _
-                                " 	ISNULL(SUM(F),0), " & _
-                                " 	ISNULL(SUM(C - F),0) " & _
-                                " FROM " & _
-                                " 	(Select cl.fullname AS A, " & _
-                                " 		Count(ch.ID) as B, " & _
-                                " 		sum(Cast(ch.total AS BIGINT)) as C " & _
-                                " 		FROM  ElectricBox b JOIN Collector cl   " & _
-                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " & _
-                                " 			ON ec.boxid=b.ID JOIN Registration r  " & _
-                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " & _
-                                " 			ON ch.regid=r.id " & _
-                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" & _
-                                " 		Group by cl.fullname " & _
-                                " 	) t1  " & _
-                                " LEFT JOIN " & _
-                                " 	(Select  cl.fullname AS D, " & _
-                                " 		Count(Distinct p.counterhistoryid) as E, " & _
-                                " 		SUM(pvalue) as F " & _
-                                " 		FROM  ElectricBox b JOIN Collector cl   " & _
-                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " & _
-                                " 			ON ec.boxid=b.ID JOIN Registration r  " & _
-                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " & _
-                                " 			ON ch.regid=r.id JOIN Payment p  " & _
-                                " 			ON p.counterhistoryid = ch.ID  " & _
-                                " 	 " & _
-                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" & _
-                                " 		Group by cl.fullname " & _
-                                " 	) t2  " & _
+        Dim query As String = "SELECT 'اجمالي', " &
+                                " 	ISNULL(SUM(B),0), " &
+                                " 	ISNULL(SUM(E),0), " &
+                                " 	ISNULL(SUM(C),0), " &
+                                " 	ISNULL(SUM(F),0), " &
+                                " 	ISNULL(SUM(C - F),0) " &
+                                " FROM " &
+                                " 	(Select cl.fullname AS A, " &
+                                " 		Count(ch.ID) as B, " &
+                                " 		sum(Cast(ch.total AS BIGINT)) as C " &
+                                " 		FROM  ElectricBox b JOIN Collector cl   " &
+                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " &
+                                " 			ON ec.boxid=b.ID JOIN Registration r  " &
+                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " &
+                                " 			ON ch.regid=r.id " &
+                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" &
+                                " 		Group by cl.fullname " &
+                                " 	) t1  " &
+                                " LEFT JOIN " &
+                                " 	(Select  cl.fullname AS D, " &
+                                " 		Count(Distinct p.counterhistoryid) as E, " &
+                                " 		SUM(pvalue) as F " &
+                                " 		FROM  ElectricBox b JOIN Collector cl   " &
+                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " &
+                                " 			ON ec.boxid=b.ID JOIN Registration r  " &
+                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " &
+                                " 			ON ch.regid=r.id JOIN Payment p  " &
+                                " 			ON p.counterhistoryid = ch.ID  " &
+                                " 	 " &
+                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" &
+                                " 		Group by cl.fullname " &
+                                " 	) t2  " &
                                 " ON t1.A = t2.D "
         Return query
     End Function
@@ -833,28 +833,6 @@ Public Class frmCompanyReport
             ErrorDialog.showDlg(ex)
         End Try
     End Sub
-
-    'Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-    '    If Not currentUser.hasPermision("reportview") Then
-    '        MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-    '        Return
-    '    End If
-    '    Try
-    '        Dim frm1 As New frmChooser(COLLECTOR_CHOOSER)
-    '        If frm1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-    '            If frm1.dgvData.SelectedRows.Count > 0 Then
-    '                Dim colID As Int32 = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
-    '                Dim ac As New Helper
-    '                ac.ds = New DataSet
-    '                ac.GetData("Select * ,'' as [ملاحظات] FROM ( SELECT c.clientname as [المشترك], c.phone as [هاتف], c.mobile as [خلوي],p.ampere as [أمبير], IsNull(Max(ch.currentvalue),0) as [مجموع كيلوات], IsNull(Sum(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue),0) as [اجمالي كيلوات + تدوير], IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) as [اجمالي رسوم], IsNull(SUM(total + discount),0) as [اجمالي مطلوب], IsNull(SUM(discount),0) as [اجمالي حسومات], IsNull(SUM(total),0) as [صافي],(SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS [اجمالي مدفوع], (IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID )) AS [باقي], r.insurance as [له تأمين] FROM Registration r,Client c,ElectricBox b,ECounter ec,CounterHistory ch,Package p,Engine en,Collector cl,ArabicMonth ar  WHERE r.packageid = p.ID And ch.cmonth = ar.ID And r.counterid = ec.ID And ec.boxid = b.ID And r.clientid = c.ID And ch.regid = r.ID And b.engineid = en.ID And b.collectorid = cl.ID and cl.ID = " & colID & " GROUP BY r.ID, r.insurance, c.clientname, c.phone, c.mobile,p.ampere ) as innerTable where [باقي] > 0 ORDER BY [المشترك]")
-    '                Dim frm As New frmDataViewer("كشف مكسورات الزبائن", ac.ds.Tables(0), False)
-    '                frm.ShowDialog()
-    '            End If
-    '        End If
-    '    Catch ex As Exception
-    '        ErrorDialog.showDlg(ex)
-    '    End Try
-    'End Sub
 
     Private Sub btnItemsReport_Click(sender As Object, e As EventArgs) Handles btnItemsReport.Click
         If Not currentUser.hasPermision("reportview") Then
@@ -1046,7 +1024,7 @@ Public Class frmCompanyReport
                         Sum(netDiscount) as [اجمالي حسومات ل.ل], Sum(netNet) as [صافي ل.ل], Sum(totalPaid) as  [اجمالي مدفوع ل.ل], Sum(totalRem) as  [باقي ل.ل], IsNull(Sum(cInsurance),0) as [له تأمين ل.ل]  from (
                         SELECT r.id as rid,c.id as cid, c.clientname as cname, c.phone as cphone, c.mobile as cmobile,
                             IsNull(Max(ch.currentvalue),0) as sumKilo, 
-                            IsNull(Sum(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue),0) as sumKiloAndRound,
+                            IsNull(Sum((ch.kilowattprice) + ch.roundvalue),0) as sumKiloAndRound,
                             IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) as netFees, 
                             IsNull(SUM(total + discount),0) as netRequired, 
                             IsNull(SUM(discount),0) as netDiscount, 
