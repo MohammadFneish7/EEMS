@@ -26,14 +26,15 @@ Module SharedModule
     Public currentUser As User
     Public orgname As String = "Organization Name"
     Public invoiceYOffset = 0
+    Public invoiceXOffset = 0
     Public roundToThousand As Integer = 0 '0 round to 1000, 1 ceil, 2 dont rount
     Public defaultPayOption As Integer = 0
 
     Public isPaymentVerified As Boolean = True
 
     Public Sub moveCRObjectsOnYAxis(enumerator As SCRCollectionEnumerator, yOffset As Integer)
-        While enumerator.MoveNext
-            Try
+        Try
+            While enumerator.MoveNext
                 If TypeOf (enumerator.Current) Is LineObject Then
                     Dim top As Integer = enumerator.Current.Top
                     Dim Bottom As Integer = enumerator.Current.Bottom
@@ -61,11 +62,48 @@ Module SharedModule
                 Else
                     enumerator.Current.Top = enumerator.Current.Top + yOffset
                 End If
-            Catch ex As Exception
-                ErrorDialog.showDlg(ex)
-            End Try
-        End While
+            End While
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
     End Sub
+
+    Public Sub moveCRObjectsOnXAxis(enumerator As SCRCollectionEnumerator, xOffset As Integer)
+        Try
+            While enumerator.MoveNext
+                If TypeOf (enumerator.Current) Is LineObject Then
+                    Dim top As Integer = enumerator.Current.Top
+                    Dim Bottom As Integer = enumerator.Current.Bottom
+                    Dim Left As Integer = enumerator.Current.Left
+                    Dim Right As Integer = enumerator.Current.Right
+                    Dim style As LineStyle = CType(enumerator.Current, LineObject).LineStyle
+
+                    If top = Bottom Then
+                        CType(enumerator.Current, LineObject).Right = Right + xOffset
+                        CType(enumerator.Current, LineObject).Left = Left + xOffset
+                    Else
+                        CType(enumerator.Current, LineObject).Top = 0
+                        CType(enumerator.Current, LineObject).Bottom = 0
+                        CType(enumerator.Current, LineObject).Left = Left + xOffset
+                        CType(enumerator.Current, LineObject).Right = Right + xOffset
+                        CType(enumerator.Current, LineObject).Bottom = Bottom
+                        CType(enumerator.Current, LineObject).Top = top
+                    End If
+
+                    CType(enumerator.Current, LineObject).LineStyle = style
+
+                ElseIf TypeOf (enumerator.Current) Is BoxObject Then
+                    CType(enumerator.Current, BoxObject).Left = enumerator.Current.Left + xOffset
+                    CType(enumerator.Current, BoxObject).Right = enumerator.Current.Right + xOffset
+                Else
+                    enumerator.Current.Left = enumerator.Current.Left + xOffset
+                End If
+            End While
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
+    End Sub
+
     Public Sub cloneTable(ByRef table1 As DataTable, ByRef table2 As DataTable)
         For i As Int32 = 0 To table2.Rows.Count - 1
             table1.Rows.Add()
@@ -87,6 +125,8 @@ Module SharedModule
                 orgname = dr.Item(1).ToString.Trim.ToLower
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceyoffset") Then
                 invoiceYOffset = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoicexoffset") Then
+                invoiceXOffset = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
                 roundToThousand = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("defaultPayOption") Then

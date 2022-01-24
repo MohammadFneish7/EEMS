@@ -39,16 +39,19 @@ Partial Class frmGeneralSettings
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.UpgradeReport_Success
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(20, 249)
+        Me.Button1.Location = New System.Drawing.Point(20, 307)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(331, 45)
         Me.Button1.TabIndex = 59
@@ -64,7 +67,7 @@ Partial Class frmGeneralSettings
         Me.Label4.Location = New System.Drawing.Point(267, 109)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label4.Size = New System.Drawing.Size(55, 13)
+        Me.Label4.Size = New System.Drawing.Size(50, 13)
         Me.Label4.TabIndex = 67
         Me.Label4.Text = "ملاحظة 3:"
         '
@@ -86,7 +89,7 @@ Partial Class frmGeneralSettings
         Me.Label3.Location = New System.Drawing.Point(267, 83)
         Me.Label3.Name = "Label3"
         Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.Size = New System.Drawing.Size(50, 13)
         Me.Label3.TabIndex = 66
         Me.Label3.Text = "ملاحظة 2:"
         '
@@ -108,7 +111,7 @@ Partial Class frmGeneralSettings
         Me.Label2.Location = New System.Drawing.Point(267, 57)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.Size = New System.Drawing.Size(50, 13)
         Me.Label2.TabIndex = 65
         Me.Label2.Text = "ملاحظة 1:"
         '
@@ -130,7 +133,7 @@ Partial Class frmGeneralSettings
         Me.Label1.Location = New System.Drawing.Point(267, 31)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(83, 13)
+        Me.Label1.Size = New System.Drawing.Size(70, 13)
         Me.Label1.TabIndex = 62
         Me.Label1.Text = "اسم المؤسسة:"
         '
@@ -153,7 +156,7 @@ Partial Class frmGeneralSettings
         Me.Label5.Location = New System.Drawing.Point(267, 139)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label5.Size = New System.Drawing.Size(33, 13)
+        Me.Label5.Size = New System.Drawing.Size(30, 13)
         Me.Label5.TabIndex = 68
         Me.Label5.Text = "اللغة:"
         '
@@ -170,19 +173,21 @@ Partial Class frmGeneralSettings
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.NumericUpDown2)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(20, 167)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 234)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox1.Size = New System.Drawing.Size(159, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(331, 67)
         Me.GroupBox1.TabIndex = 70
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "طباعة الفواتير"
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(6, 30)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(163, 31)
         Me.NumericUpDown1.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
         Me.NumericUpDown1.Name = "NumericUpDown1"
@@ -193,20 +198,20 @@ Partial Class frmGeneralSettings
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(79, 32)
+        Me.Label6.Location = New System.Drawing.Point(239, 34)
         Me.Label6.Name = "Label6"
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label6.Size = New System.Drawing.Size(77, 13)
+        Me.Label6.Size = New System.Drawing.Size(78, 13)
         Me.Label6.TabIndex = 69
         Me.Label6.Text = "تحريك عامودي:"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(195, 167)
+        Me.GroupBox2.Location = New System.Drawing.Point(20, 167)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox2.Size = New System.Drawing.Size(156, 63)
+        Me.GroupBox2.Size = New System.Drawing.Size(331, 63)
         Me.GroupBox2.TabIndex = 71
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "تدوير كسر الألف"
@@ -218,14 +223,34 @@ Partial Class frmGeneralSettings
         Me.ComboBox1.Items.AddRange(New Object() {"تدوير الى الأعلى", "تدوير نسبي", "عدم تدوير"})
         Me.ComboBox1.Location = New System.Drawing.Point(6, 29)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(144, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(308, 21)
         Me.ComboBox1.TabIndex = 0
+        '
+        'NumericUpDown2
+        '
+        Me.NumericUpDown2.Location = New System.Drawing.Point(9, 31)
+        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.NumericUpDown2.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.Size = New System.Drawing.Size(70, 20)
+        Me.NumericUpDown2.TabIndex = 72
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(86, 34)
+        Me.Label7.Name = "Label7"
+        Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label7.Size = New System.Drawing.Size(65, 13)
+        Me.Label7.TabIndex = 71
+        Me.Label7.Text = "تحريك افقي:"
         '
         'frmGeneralSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(363, 303)
+        Me.ClientSize = New System.Drawing.Size(363, 364)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmblang)
@@ -249,6 +274,7 @@ Partial Class frmGeneralSettings
         Me.GroupBox1.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -269,4 +295,6 @@ Partial Class frmGeneralSettings
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents NumericUpDown2 As NumericUpDown
+    Friend WithEvents Label7 As Label
 End Class

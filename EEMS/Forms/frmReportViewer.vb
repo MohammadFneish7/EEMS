@@ -122,10 +122,14 @@ Public Class frmReportViewer
             rptDoc = New Invoices
             Dim enumerator As SCRCollectionEnumerator = CType(rptDoc, Invoices).Section3.ReportObjects.GetEnumerator
             SharedModule.moveCRObjectsOnYAxis(enumerator, invoiceYOffset)
+            enumerator.Reset()
+            SharedModule.moveCRObjectsOnXAxis(enumerator, invoiceXOffset)
         ElseIf Not verbose Then
             rptDoc = New InvoicesWithoutCredit
             Dim enumerator As SCRCollectionEnumerator = CType(rptDoc, InvoicesWithoutCredit).Section3.ReportObjects.GetEnumerator
             SharedModule.moveCRObjectsOnYAxis(enumerator, invoiceYOffset)
+            enumerator.Reset()
+            SharedModule.moveCRObjectsOnXAxis(enumerator, invoiceXOffset)
         End If
 
         rptDoc.SetDataSource(ds)

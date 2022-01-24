@@ -25,6 +25,8 @@ Public Class frmGeneralSettings
                 txtnote3.Text = dr.Item(1).ToString.Trim.ToLower
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoiceyoffset") Then
                 NumericUpDown1.Value = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("invoicexoffset") Then
+                NumericUpDown2.Value = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
                 ComboBox1.SelectedIndex = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
@@ -41,6 +43,7 @@ Public Class frmGeneralSettings
             a.ExecuteNoReturn("delete from DefinedKeys where reference='" & selectionKeyReference.ToLower & "'")
             a.ExecuteNoReturn("insert into DefinedKeys (dkey,title,reference) values('orgname','" & txtname.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('invoiceyoffset','" & NumericUpDown1.Value & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('invoicexoffset','" & NumericUpDown2.Value & "','" & selectionKeyReference.ToLower & "'), " &
                               "('roundToThousand','" & ComboBox1.SelectedIndex & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note1','" & txtnote1.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note2','" & txtnote2.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
@@ -48,6 +51,7 @@ Public Class frmGeneralSettings
 
             orgname = txtname.Text.Trim
             invoiceYOffset = NumericUpDown1.Value
+            invoiceXOffset = NumericUpDown2.Value
             roundToThousand = ComboBox1.SelectedIndex
 
         Catch ex As Exception
