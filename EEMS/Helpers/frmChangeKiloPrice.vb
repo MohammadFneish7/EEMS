@@ -5,18 +5,14 @@ Public Class frmChangeKiloPrice
     Dim a As New Helper
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        '////////////////////////////Below are not related code just for test ////////////////////////////
-        'a.ds = New DataSet
-        'a.GetDataFromMsAccess("select id from Registration")
-        'a.ExecuteToMsAccess("delete from payment")
-        'a.ExecuteToMsAccess("delete from CounterHistory where cmonth=3")
-        'For Each row As DataRow In a.ds.Tables(0).Rows
-        '    a.ExecuteToMsAccess("Insert into CounterHistory(cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,notes) VALUES(3,2017," & row.Item(0).ToString & ",10000,300,0,10000,'nothing')")
-        'Next
-        'MsgBox("Done")
-        '//////////////////////////////////////////////////////////////////////////////////////////////////
 
-        If Not String.IsNullOrWhiteSpace(txtkiloprice.Text) > 0 And (CheckBox1.Checked Or Not String.IsNullOrWhiteSpace(txtpackid.Text)) Then
+        If Not String.IsNullOrWhiteSpace(txtkiloprice.Text) And (CheckBox1.Checked Or Not String.IsNullOrWhiteSpace(txtpackid.Text)) Then
+
+            If txtkiloprice.Text < 0 Then
+                MsgBox("الرجاء ادخال قيمة ايجابية")
+                Return
+            End If
+
             Dim conditionQuery As String = " ID in (select ch.ID from CounterHistory ch join Registration r on ch.regid = r.ID join Package p on r.packageid = p.ID where  cmonth=" & DateTimePicker1.Value.Month & " and cyear=" & DateTimePicker1.Value.Year & " and p.ID = " & txtpackid.Text & ")"
             If CheckBox1.Checked Then
                 conditionQuery = " cmonth=" & DateTimePicker1.Value.Month & " and cyear=" & DateTimePicker1.Value.Year

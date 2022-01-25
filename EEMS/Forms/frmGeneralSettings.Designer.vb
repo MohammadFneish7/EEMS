@@ -35,23 +35,26 @@ Partial Class frmGeneralSettings
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmblang = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.numDollar = New System.Windows.Forms.NumericUpDown()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numDollar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Image = Global.EEMS.My.Resources.Resources.UpgradeReport_Success
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(20, 307)
+        Me.Button1.Location = New System.Drawing.Point(20, 163)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(331, 45)
         Me.Button1.TabIndex = 59
@@ -64,7 +67,7 @@ Partial Class frmGeneralSettings
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(267, 109)
+        Me.Label4.Location = New System.Drawing.Point(614, 111)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label4.Size = New System.Drawing.Size(50, 13)
@@ -75,7 +78,7 @@ Partial Class frmGeneralSettings
         '
         Me.txtnote3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtnote3.BackColor = System.Drawing.Color.White
-        Me.txtnote3.Location = New System.Drawing.Point(20, 106)
+        Me.txtnote3.Location = New System.Drawing.Point(367, 108)
         Me.txtnote3.MaxLength = 20
         Me.txtnote3.Name = "txtnote3"
         Me.txtnote3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -86,7 +89,7 @@ Partial Class frmGeneralSettings
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(267, 83)
+        Me.Label3.Location = New System.Drawing.Point(614, 85)
         Me.Label3.Name = "Label3"
         Me.Label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label3.Size = New System.Drawing.Size(50, 13)
@@ -97,7 +100,7 @@ Partial Class frmGeneralSettings
         '
         Me.txtnote2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtnote2.BackColor = System.Drawing.Color.White
-        Me.txtnote2.Location = New System.Drawing.Point(20, 80)
+        Me.txtnote2.Location = New System.Drawing.Point(367, 82)
         Me.txtnote2.MaxLength = 20
         Me.txtnote2.Name = "txtnote2"
         Me.txtnote2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -108,7 +111,7 @@ Partial Class frmGeneralSettings
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(267, 57)
+        Me.Label2.Location = New System.Drawing.Point(614, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label2.Size = New System.Drawing.Size(50, 13)
@@ -119,7 +122,7 @@ Partial Class frmGeneralSettings
         '
         Me.txtnote1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtnote1.BackColor = System.Drawing.Color.White
-        Me.txtnote1.Location = New System.Drawing.Point(20, 54)
+        Me.txtnote1.Location = New System.Drawing.Point(367, 56)
         Me.txtnote1.MaxLength = 20
         Me.txtnote1.Name = "txtnote1"
         Me.txtnote1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -130,7 +133,7 @@ Partial Class frmGeneralSettings
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(267, 31)
+        Me.Label1.Location = New System.Drawing.Point(614, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label1.Size = New System.Drawing.Size(70, 13)
@@ -141,7 +144,7 @@ Partial Class frmGeneralSettings
         '
         Me.txtname.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtname.BackColor = System.Drawing.Color.White
-        Me.txtname.Location = New System.Drawing.Point(20, 28)
+        Me.txtname.Location = New System.Drawing.Point(367, 30)
         Me.txtname.MaxLength = 20
         Me.txtname.Name = "txtname"
         Me.txtname.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -153,7 +156,7 @@ Partial Class frmGeneralSettings
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(267, 139)
+        Me.Label5.Location = New System.Drawing.Point(614, 142)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Label5.Size = New System.Drawing.Size(30, 13)
@@ -165,7 +168,7 @@ Partial Class frmGeneralSettings
         Me.cmblang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmblang.FormattingEnabled = True
         Me.cmblang.Items.AddRange(New Object() {"عربي"})
-        Me.cmblang.Location = New System.Drawing.Point(20, 136)
+        Me.cmblang.Location = New System.Drawing.Point(367, 134)
         Me.cmblang.Name = "cmblang"
         Me.cmblang.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.cmblang.Size = New System.Drawing.Size(241, 21)
@@ -177,13 +180,33 @@ Partial Class frmGeneralSettings
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Location = New System.Drawing.Point(20, 234)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 90)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupBox1.Size = New System.Drawing.Size(331, 67)
         Me.GroupBox1.TabIndex = 70
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "طباعة الفواتير"
+        '
+        'NumericUpDown2
+        '
+        Me.NumericUpDown2.Location = New System.Drawing.Point(9, 31)
+        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.NumericUpDown2.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
+        Me.NumericUpDown2.Name = "NumericUpDown2"
+        Me.NumericUpDown2.Size = New System.Drawing.Size(70, 20)
+        Me.NumericUpDown2.TabIndex = 72
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(86, 34)
+        Me.Label7.Name = "Label7"
+        Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label7.Size = New System.Drawing.Size(65, 13)
+        Me.Label7.TabIndex = 71
+        Me.Label7.Text = "تحريك افقي:"
         '
         'NumericUpDown1
         '
@@ -208,7 +231,7 @@ Partial Class frmGeneralSettings
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(20, 167)
+        Me.GroupBox2.Location = New System.Drawing.Point(20, 23)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupBox2.Size = New System.Drawing.Size(331, 63)
@@ -226,31 +249,34 @@ Partial Class frmGeneralSettings
         Me.ComboBox1.Size = New System.Drawing.Size(308, 21)
         Me.ComboBox1.TabIndex = 0
         '
-        'NumericUpDown2
+        'numDollar
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(9, 31)
-        Me.NumericUpDown2.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
-        Me.NumericUpDown2.Minimum = New Decimal(New Integer() {100000, 0, 0, -2147483648})
-        Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(70, 20)
-        Me.NumericUpDown2.TabIndex = 72
+        Me.numDollar.Location = New System.Drawing.Point(367, 163)
+        Me.numDollar.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.numDollar.Name = "numDollar"
+        Me.numDollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.numDollar.Size = New System.Drawing.Size(241, 20)
+        Me.numDollar.TabIndex = 73
         '
-        'Label7
+        'Label8
         '
-        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(86, 34)
-        Me.Label7.Name = "Label7"
-        Me.Label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label7.Size = New System.Drawing.Size(65, 13)
-        Me.Label7.TabIndex = 71
-        Me.Label7.Text = "تحريك افقي:"
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(614, 166)
+        Me.Label8.Name = "Label8"
+        Me.Label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label8.Size = New System.Drawing.Size(65, 13)
+        Me.Label8.TabIndex = 72
+        Me.Label8.Text = "سعر صرف $:"
         '
         'frmGeneralSettings
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(363, 364)
+        Me.ClientSize = New System.Drawing.Size(700, 222)
+        Me.Controls.Add(Me.numDollar)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmblang)
@@ -272,9 +298,10 @@ Partial Class frmGeneralSettings
         Me.Text = "إعدادات عامّة"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numDollar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -297,4 +324,6 @@ Partial Class frmGeneralSettings
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents NumericUpDown2 As NumericUpDown
     Friend WithEvents Label7 As Label
+    Friend WithEvents numDollar As NumericUpDown
+    Friend WithEvents Label8 As Label
 End Class

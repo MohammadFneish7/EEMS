@@ -802,4 +802,13 @@ Public Class frmMain
         frm.ShowDialog()
 
     End Sub
+
+    Private Sub تعديلسعرصرفالدولارToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تعديلسعرصرفالدولارToolStripMenuItem.Click
+        If Not currentUser.hasPermision("packagePriceEdit") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Dim frm As New frmChangeDollarPrice
+        frm.ShowDialog()
+    End Sub
 End Class

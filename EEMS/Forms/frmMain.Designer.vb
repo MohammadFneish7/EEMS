@@ -195,6 +195,7 @@ Partial Class frmMain
         Me.كشفالفواتيرToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.حسابالمؤسسةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.الكشفالعامToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ادارةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تعديلسعرالكيلواتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.استيرادمناكسيلToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -243,7 +244,7 @@ Partial Class frmMain
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.lblPayment = New System.Windows.Forms.Label()
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تعديلسعرصرفالدولارToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -296,7 +297,7 @@ Partial Class frmMain
         Me.Label5.Location = New System.Drawing.Point(194, 13)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
+        Me.Label5.Size = New System.Drawing.Size(36, 13)
         Me.Label5.TabIndex = 67
         Me.Label5.Text = "الشهر:"
         Me.Label5.Visible = False
@@ -438,7 +439,7 @@ Partial Class frmMain
         Me.Label2.Location = New System.Drawing.Point(583, 7)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 63
         Me.Label2.Text = "المذكّرة:"
         '
@@ -1210,9 +1211,16 @@ Partial Class frmMain
         Me.الكشفالعامToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
         Me.الكشفالعامToolStripMenuItem.Text = " الكشف العام"
         '
+        'كسرواتماقبلالبرنامجToolStripMenuItem
+        '
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.accountingbook
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Name = "كسرواتماقبلالبرنامجToolStripMenuItem"
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Text = "كسروات ما قبل البرنامج"
+        '
         'ادارةToolStripMenuItem
         '
-        Me.ادارةToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.تعديلسعرالكيلواتToolStripMenuItem, Me.استيرادمناكسيلToolStripMenuItem, Me.تصحيحكسرالألفToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem1, Me.أخذنسخةاحتياطيةToolStripMenuItem, Me.إضافةحسملمجموعةToolStripMenuItem, Me.SQLToolStripMenuItem, Me.اعادةتوليفالمصنعToolStripMenuItem})
+        Me.ادارةToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.تعديلسعرالكيلواتToolStripMenuItem, Me.تعديلسعرصرفالدولارToolStripMenuItem, Me.استيرادمناكسيلToolStripMenuItem, Me.تصحيحكسرالألفToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem, Me.إستيرادمنAccessToolStripMenuItem1, Me.أخذنسخةاحتياطيةToolStripMenuItem, Me.إضافةحسملمجموعةToolStripMenuItem, Me.SQLToolStripMenuItem, Me.اعادةتوليفالمصنعToolStripMenuItem})
         Me.ادارةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.State_ItemVisibility_Show
         Me.ادارةToolStripMenuItem.Name = "ادارةToolStripMenuItem"
         Me.ادارةToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
@@ -1776,12 +1784,12 @@ Partial Class frmMain
         Me.lblPayment.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.lblPayment.Visible = False
         '
-        'كسرواتماقبلالبرنامجToolStripMenuItem
+        'تعديلسعرصرفالدولارToolStripMenuItem
         '
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.accountingbook
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Name = "كسرواتماقبلالبرنامجToolStripMenuItem"
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Text = "كسروات ما قبل البرنامج"
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.BO_Opportunity
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Name = "تعديلسعرصرفالدولارToolStripMenuItem"
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Text = "تعديل سعر صرف الدولار"
         '
         'frmMain
         '
@@ -1955,4 +1963,5 @@ Partial Class frmMain
     Friend WithEvents lblPayment As System.Windows.Forms.Label
     Friend WithEvents اعادةتوليفالمصنعToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents كسرواتماقبلالبرنامجToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents تعديلسعرصرفالدولارToolStripMenuItem As ToolStripMenuItem
 End Class

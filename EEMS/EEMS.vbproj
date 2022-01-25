@@ -411,6 +411,12 @@
     <Compile Include="Forms\frmUsersManagement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Helpers\frmChangeDollarPrice.Designer.vb">
+      <DependentUpon>frmChangeDollarPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmChangeDollarPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helpers\CustomMsgDialog.Designer.vb">
       <DependentUpon>CustomMsgDialog.vb</DependentUpon>
     </Compile>
@@ -943,6 +949,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsersManagement.resx">
       <DependentUpon>frmUsersManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmChangeDollarPrice.resx">
+      <DependentUpon>frmChangeDollarPrice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\CustomMsgDialog.resx">
       <DependentUpon>CustomMsgDialog.vb</DependentUpon>

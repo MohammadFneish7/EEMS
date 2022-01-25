@@ -880,3 +880,4 @@ C:\Users\adbulkarim\Source\Repos\EEMS\EEMS\obj\Debug\EEMS.xml
 C:\Users\adbulkarim\Source\Repos\EEMS\EEMS\obj\Debug\EEMS.pdb
 C:\Users\adbulkarim\source\repos\EEMS\EEMS\bin\Debug\log4net.dll
 C:\Users\adbulkarim\source\repos\EEMS\EEMS\bin\Debug\log4net.xml
+C:\Users\adbulkarim\source\repos\EEMS\EEMS\obj\Debug\EEMS.frmChangeDollarPrice.resources
