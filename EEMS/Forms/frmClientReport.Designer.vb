@@ -73,7 +73,7 @@ Partial Class frmClientReport
         Me.GroupBox1.Location = New System.Drawing.Point(12, 51)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox1.Size = New System.Drawing.Size(992, 216)
+        Me.GroupBox1.Size = New System.Drawing.Size(992, 156)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "الاشتراكات الخاصّة بالزبون"
@@ -92,7 +92,7 @@ Partial Class frmClientReport
         Me.dgvRegistration.Name = "dgvRegistration"
         Me.dgvRegistration.ReadOnly = True
         Me.dgvRegistration.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRegistration.Size = New System.Drawing.Size(980, 171)
+        Me.dgvRegistration.Size = New System.Drawing.Size(980, 111)
         Me.dgvRegistration.TabIndex = 0
         '
         'GroupBox2
@@ -104,10 +104,10 @@ Partial Class frmClientReport
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.lbl2)
         Me.GroupBox2.Controls.Add(Me.dgvCredits)
-        Me.GroupBox2.Location = New System.Drawing.Point(511, 273)
+        Me.GroupBox2.Location = New System.Drawing.Point(451, 213)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox2.Size = New System.Drawing.Size(493, 225)
+        Me.GroupBox2.Size = New System.Drawing.Size(553, 285)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "المصاريف الخاصّة بالاشتراكات"
@@ -119,7 +119,7 @@ Partial Class frmClientReport
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(234, 199)
+        Me.Label6.Location = New System.Drawing.Point(294, 259)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(253, 13)
         Me.Label6.TabIndex = 14
@@ -128,14 +128,14 @@ Partial Class frmClientReport
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.GreenYellow
-        Me.Button1.Image = Global.EEMS.My.Resources.Resources.payment
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(11, 11)
+        Me.Button1.Image = Global.EEMS.My.Resources.Resources.paycash
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.Location = New System.Drawing.Point(11, 19)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 23)
+        Me.Button1.Size = New System.Drawing.Size(108, 32)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "اضافة دفعة"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -143,10 +143,10 @@ Partial Class frmClientReport
         '
         Me.lbl2.AutoSize = True
         Me.lbl2.ForeColor = System.Drawing.Color.Firebrick
-        Me.lbl2.Location = New System.Drawing.Point(113, 16)
+        Me.lbl2.Location = New System.Drawing.Point(125, 29)
         Me.lbl2.Name = "lbl2"
         Me.lbl2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lbl2.Size = New System.Drawing.Size(96, 13)
+        Me.lbl2.Size = New System.Drawing.Size(90, 13)
         Me.lbl2.TabIndex = 7
         Me.lbl2.Text = "إجمالي مطلوب = 0"
         '
@@ -160,12 +160,12 @@ Partial Class frmClientReport
         Me.dgvCredits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvCredits.BackgroundColor = System.Drawing.Color.White
         Me.dgvCredits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCredits.Location = New System.Drawing.Point(11, 38)
+        Me.dgvCredits.Location = New System.Drawing.Point(11, 57)
         Me.dgvCredits.MultiSelect = False
         Me.dgvCredits.Name = "dgvCredits"
         Me.dgvCredits.ReadOnly = True
         Me.dgvCredits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCredits.Size = New System.Drawing.Size(476, 158)
+        Me.dgvCredits.Size = New System.Drawing.Size(536, 199)
         Me.dgvCredits.TabIndex = 0
         '
         'GroupBox3
@@ -176,10 +176,10 @@ Partial Class frmClientReport
         Me.GroupBox3.Controls.Add(Me.Button2)
         Me.GroupBox3.Controls.Add(Me.lbl3)
         Me.GroupBox3.Controls.Add(Me.dgvPayments)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 273)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 213)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox3.Size = New System.Drawing.Size(493, 225)
+        Me.GroupBox3.Size = New System.Drawing.Size(433, 285)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "الدفعات الخاصّة بالمصروف"
@@ -191,7 +191,7 @@ Partial Class frmClientReport
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(251, 199)
+        Me.Label1.Location = New System.Drawing.Point(191, 259)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(236, 13)
         Me.Label1.TabIndex = 14
@@ -200,13 +200,13 @@ Partial Class frmClientReport
         'Button2
         '
         Me.Button2.Image = Global.EEMS.My.Resources.Resources.printer16
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(11, 12)
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.Location = New System.Drawing.Point(11, 19)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 23)
+        Me.Button2.Size = New System.Drawing.Size(112, 32)
         Me.Button2.TabIndex = 9
         Me.Button2.Text = "طباعة وصل"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -214,10 +214,10 @@ Partial Class frmClientReport
         '
         Me.lbl3.AutoSize = True
         Me.lbl3.ForeColor = System.Drawing.Color.Green
-        Me.lbl3.Location = New System.Drawing.Point(105, 16)
+        Me.lbl3.Location = New System.Drawing.Point(129, 29)
         Me.lbl3.Name = "lbl3"
         Me.lbl3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lbl3.Size = New System.Drawing.Size(66, 13)
+        Me.lbl3.Size = New System.Drawing.Size(61, 13)
         Me.lbl3.TabIndex = 8
         Me.lbl3.Text = "المجموع = 0"
         '
@@ -231,11 +231,11 @@ Partial Class frmClientReport
         Me.dgvPayments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPayments.BackgroundColor = System.Drawing.Color.White
         Me.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvPayments.Location = New System.Drawing.Point(11, 38)
+        Me.dgvPayments.Location = New System.Drawing.Point(11, 57)
         Me.dgvPayments.Name = "dgvPayments"
         Me.dgvPayments.ReadOnly = True
         Me.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPayments.Size = New System.Drawing.Size(476, 158)
+        Me.dgvPayments.Size = New System.Drawing.Size(416, 199)
         Me.dgvPayments.TabIndex = 0
         '
         'GroupBox4
@@ -366,7 +366,7 @@ Partial Class frmClientReport
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(4, 1)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.Size = New System.Drawing.Size(11, 13)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "*"
         '

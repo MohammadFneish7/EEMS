@@ -208,7 +208,7 @@ Public Class frmCounterHistory
                         If (curVal - prevVal) >= 0 Then
                             Dim j As Integer = (fee + (kiloPrice * (curVal - prevVal)))
                             j = getRoundThousand(j)
-                            sqlQueries.Add("Insert into CounterHistory(cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,notes,roundvalue) VALUES(" & month & "," & year & "," & regid.ToString & "," & fee.ToString & "," & kiloPrice.ToString & "," & prevVal.ToString & "," & curVal.ToString & ",'" & note.ToString & "'," & j & ")")
+                            sqlQueries.Add("Insert into CounterHistory(cmonth,cyear,regid,monthlyfee,kilowattprice,previousvalue,currentvalue,notes,roundvalue,dollarprice) VALUES(" & month & "," & year & "," & regid.ToString & "," & fee.ToString & "," & kiloPrice.ToString & "," & prevVal.ToString & "," & curVal.ToString & ",'" & note.ToString & "'," & j & "," & dollarPrice & ")")
                             sqlQueries.Add("UPDATE ECounter SET currentvalue = " & curVal.ToString & " WHERE ID = (SELECT ec.id FROM ECounter ec JOIN Registration r ON r.counterid = ec.ID WHERE r.ID = " & regid.ToString & ")")
                         End If
                     End If

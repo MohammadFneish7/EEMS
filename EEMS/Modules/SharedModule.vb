@@ -27,6 +27,7 @@ Module SharedModule
     Public orgname As String = "Organization Name"
     Public invoiceYOffset = 0
     Public invoiceXOffset = 0
+    Public dollarPrice = 0
     Public roundToThousand As Integer = 0 '0 round to 1000, 1 ceil, 2 dont rount
     Public defaultPayOption As Integer = 0
 
