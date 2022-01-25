@@ -35,10 +35,11 @@ Partial Class frmInvoiceNote
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(12, 41)
-        Me.TextBox1.MaxLength = 100
+        Me.TextBox1.MaxLength = 150
+        Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.TextBox1.Size = New System.Drawing.Size(357, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(357, 43)
         Me.TextBox1.TabIndex = 0
         '
         'Label1
@@ -47,7 +48,7 @@ Partial Class frmInvoiceNote
         Me.Label1.Location = New System.Drawing.Point(288, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ملاحظة الفواتير:"
         '
@@ -62,7 +63,7 @@ Partial Class frmInvoiceNote
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 142)
+        Me.Button1.Location = New System.Drawing.Point(12, 168)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(357, 36)
         Me.Button1.TabIndex = 3
@@ -72,10 +73,10 @@ Partial Class frmInvoiceNote
         'chkverbose
         '
         Me.chkverbose.AutoSize = True
-        Me.chkverbose.Location = New System.Drawing.Point(222, 67)
+        Me.chkverbose.Location = New System.Drawing.Point(224, 90)
         Me.chkverbose.Name = "chkverbose"
         Me.chkverbose.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkverbose.Size = New System.Drawing.Size(147, 17)
+        Me.chkverbose.Size = New System.Drawing.Size(145, 17)
         Me.chkverbose.TabIndex = 4
         Me.chkverbose.Text = "طباعة التأمين والمكسورات"
         Me.chkverbose.UseVisualStyleBackColor = True
@@ -83,10 +84,10 @@ Partial Class frmInvoiceNote
         'chkOrderByCust
         '
         Me.chkOrderByCust.AutoSize = True
-        Me.chkOrderByCust.Location = New System.Drawing.Point(241, 90)
+        Me.chkOrderByCust.Location = New System.Drawing.Point(251, 113)
         Me.chkOrderByCust.Name = "chkOrderByCust"
         Me.chkOrderByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkOrderByCust.Size = New System.Drawing.Size(128, 17)
+        Me.chkOrderByCust.Size = New System.Drawing.Size(118, 17)
         Me.chkOrderByCust.TabIndex = 5
         Me.chkOrderByCust.Text = "ترتيب حسب المشترك"
         Me.chkOrderByCust.UseVisualStyleBackColor = True
@@ -94,10 +95,10 @@ Partial Class frmInvoiceNote
         'chkCreditByCust
         '
         Me.chkCreditByCust.AutoSize = True
-        Me.chkCreditByCust.Location = New System.Drawing.Point(167, 113)
+        Me.chkCreditByCust.Location = New System.Drawing.Point(168, 136)
         Me.chkCreditByCust.Name = "chkCreditByCust"
         Me.chkCreditByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkCreditByCust.Size = New System.Drawing.Size(202, 17)
+        Me.chkCreditByCust.Size = New System.Drawing.Size(201, 17)
         Me.chkCreditByCust.TabIndex = 6
         Me.chkCreditByCust.Text = "جمع مكسورات الزبون من كل اشتراكاته"
         Me.chkCreditByCust.UseVisualStyleBackColor = True
@@ -107,7 +108,7 @@ Partial Class frmInvoiceNote
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 190)
+        Me.ClientSize = New System.Drawing.Size(381, 216)
         Me.Controls.Add(Me.chkCreditByCust)
         Me.Controls.Add(Me.chkOrderByCust)
         Me.Controls.Add(Me.chkverbose)

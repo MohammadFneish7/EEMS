@@ -8,6 +8,7 @@
         If chkverbose.Checked Then
             verbose = True
         End If
+        TextBox1.Text = If(String.IsNullOrEmpty(TextBox1.Text), "", TextBox1.Text.Replace(vbNewLine, " "))
         Me.DialogResult =DialogResult.OK
     End Sub
 End Class

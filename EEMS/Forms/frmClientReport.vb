@@ -53,13 +53,15 @@ Public Class frmClientReport
 
         For Each row As DataRow In a.ds.Tables("dt2").Rows
             Dim ri As RegInfo
-            If regInfos.ContainsKey(Integer.Parse(row.Item(1).ToString)) Then
-                ri = regInfos.Item(Integer.Parse(row.Item(1).ToString))
-                ri.sumcredit += Integer.Parse(row.Item(9).ToString)
+            Dim rowItem1 As Integer = If(String.IsNullOrEmpty(row.Item(1).ToString()), 0, Integer.Parse(row.Item(1).ToString()))
+            Dim rowItem9 As Integer = If(String.IsNullOrEmpty(row.Item(9).ToString()), 0, Integer.Parse(row.Item(9).ToString()))
+            If regInfos.ContainsKey(rowItem1) Then
+                ri = regInfos.Item(rowItem1)
+                ri.sumcredit += rowItem9
             Else
                 ri = New RegInfo
-                ri.sumcredit = Integer.Parse(row.Item(9).ToString)
-                regInfos.Add(Integer.Parse(row.Item(1).ToString), ri)
+                ri.sumcredit = rowItem9
+                regInfos.Add(rowItem1, ri)
             End If
             ri.remaining = ri.sumcredit - ri.sumpayed
         Next
@@ -72,13 +74,16 @@ Public Class frmClientReport
 
         For Each row As DataRow In a.ds.Tables("dt3").Rows
             Dim ri As RegInfo
-            If regInfos.ContainsKey(Integer.Parse(row.Item(0).ToString)) Then
-                ri = regInfos.Item(Integer.Parse(row.Item(0).ToString))
-                ri.sumpayed += Integer.Parse(row.Item(4).ToString)
+
+            Dim rowItem0 As Integer = If(String.IsNullOrEmpty(row.Item(0).ToString()), 0, Integer.Parse(row.Item(0).ToString()))
+            Dim rowItem4 As Integer = If(String.IsNullOrEmpty(row.Item(4).ToString()), 0, Integer.Parse(row.Item(4).ToString()))
+            If regInfos.ContainsKey(rowItem0) Then
+                ri = regInfos.Item(rowItem0)
+                ri.sumpayed += rowItem4
             Else
                 ri = New RegInfo
-                ri.sumpayed = Integer.Parse(row.Item(4).ToString)
-                regInfos.Add(Integer.Parse(row.Item(0).ToString), ri)
+                ri.sumpayed = rowItem4
+                regInfos.Add(rowItem0, ri)
             End If
             ri.remaining = ri.sumcredit - ri.sumpayed
         Next
@@ -127,7 +132,7 @@ Public Class frmClientReport
             '    Catch ex As Exception
             '    End Try
             'Next
-            Dim ri As RegInfo = regInfos.Item(Integer.Parse(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString))
+            Dim ri As RegInfo = regInfos.Item(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)))
             If IsNothing(ri) Then
                 ri = New RegInfo
             End If
@@ -154,7 +159,7 @@ Public Class frmClientReport
             Dim sumpayed As Integer = 0
             For Each row As DataGridViewRow In dgvPayments.Rows
                 Try
-                    sumpayed += Integer.Parse(row.Cells(4).Value.ToString)
+                    sumpayed += Integer.Parse(If(String.IsNullOrEmpty(row.Cells(4).Value.ToString), "0", row.Cells(4).Value.ToString))
                 Catch ex As Exception
                 End Try
             Next
@@ -167,7 +172,7 @@ Public Class frmClientReport
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
-        Dim frm As New frmReportViewer(Integer.Parse(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString))
+        Dim frm As New frmReportViewer(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)))
         frm.ShowDialog()
     End Sub
 
@@ -203,7 +208,7 @@ Public Class frmClientReport
             Return
         End If
         If dgvPayments.SelectedRows.Count > 0 Then
-            Dim ri As RegInfo = regInfos.Item(Integer.Parse(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString))
+            Dim ri As RegInfo = regInfos.Item(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)))
             Dim sumrequiredstr As String = ri.sumcredit.ToString("N0")
             Dim sumpayedstr As String = ri.sumpayed.ToString("N0")
             Dim sumremainstr As String = ri.remaining.ToString("N0")

@@ -50,7 +50,7 @@ Public Class ValidityChecher
         Return Date.Now
     End Function
 
-    Public Function checkValidity() As Short
+    Public Function checkValidity() As Integer
         Dim validDate As Date = readTimeValidity()
         Dim span = validDate - Date.Today
 

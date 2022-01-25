@@ -689,7 +689,7 @@ Public Class frmMain
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim validityChecker As New ValidityChecher
-        Dim diff As Short = validityChecker.checkValidity
+        Dim diff As Integer = validityChecker.checkValidity
         If diff < 30 And diff > 0 Then
             If diff = 1 Then
                 lblPayment.Text = "باقي يوم واحد على انتهاء عقد الصيانة."
