@@ -198,6 +198,7 @@ Partial Class frmMain
         Me.كسرواتماقبلالبرنامجToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ادارةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تعديلسعرالكيلواتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تعديلسعرصرفالدولارToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.استيرادمناكسيلToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تصحيحكسرالألفToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.إستيرادمنAccessToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -244,7 +245,6 @@ Partial Class frmMain
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.lblPayment = New System.Windows.Forms.Label()
-        Me.تعديلسعرصرفالدولارToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1000,13 +1000,13 @@ Partial Class frmMain
         '
         'ChartControl3
         '
+        Me.ChartControl3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ChartControl3.AnimationStartMode = DevExpress.XtraCharts.ChartAnimationMode.OnLoad
-        Me.ChartControl3.AutoLayout = False
         Me.ChartControl3.BorderOptions.Visibility = DevExpress.Utils.DefaultBoolean.[False]
-        Me.ChartControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ChartControl3.Legend.Name = "Default Legend"
-        Me.ChartControl3.Location = New System.Drawing.Point(4, 410)
-        Me.ChartControl3.Margin = New System.Windows.Forms.Padding(3, 3, 3, 50)
+        Me.ChartControl3.Location = New System.Drawing.Point(0, 406)
         Me.ChartControl3.Name = "ChartControl3"
         Me.ChartControl3.PaletteName = "Metro"
         Series3.CrosshairHighlightPoints = DevExpress.Utils.DefaultBoolean.[True]
@@ -1019,7 +1019,7 @@ Partial Class frmMain
         Series3.ToolTipPointPattern = "{A} , {V}"
         Series3.View = PieSeriesView2
         Me.ChartControl3.SeriesSerializable = New DevExpress.XtraCharts.Series() {Series3}
-        Me.ChartControl3.Size = New System.Drawing.Size(596, 148)
+        Me.ChartControl3.Size = New System.Drawing.Size(604, 200)
         Me.ChartControl3.TabIndex = 72
         ChartTitle3.Dock = DevExpress.XtraCharts.ChartTitleDockStyle.Left
         ChartTitle3.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1233,6 +1233,13 @@ Partial Class frmMain
         Me.تعديلسعرالكيلواتToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.تعديلسعرالكيلواتToolStripMenuItem.Text = "تعديل سعر الكيلوات"
         '
+        'تعديلسعرصرفالدولارToolStripMenuItem
+        '
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.BO_Opportunity
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Name = "تعديلسعرصرفالدولارToolStripMenuItem"
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.تعديلسعرصرفالدولارToolStripMenuItem.Text = "تعديل سعر صرف الدولار"
+        '
         'استيرادمناكسيلToolStripMenuItem
         '
         Me.استيرادمناكسيلToolStripMenuItem.Enabled = False
@@ -1303,35 +1310,35 @@ Partial Class frmMain
         '
         Me.btnEditUsers.Image = Global.EEMS.My.Resources.Resources.ico001team
         Me.btnEditUsers.Name = "btnEditUsers"
-        Me.btnEditUsers.Size = New System.Drawing.Size(159, 22)
+        Me.btnEditUsers.Size = New System.Drawing.Size(180, 22)
         Me.btnEditUsers.Text = "ادارة المستخدمين"
         '
         'تغييركلمةالمرورToolStripMenuItem
         '
         Me.تغييركلمةالمرورToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.ico002key
         Me.تغييركلمةالمرورToolStripMenuItem.Name = "تغييركلمةالمرورToolStripMenuItem"
-        Me.تغييركلمةالمرورToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.تغييركلمةالمرورToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.تغييركلمةالمرورToolStripMenuItem.Text = "تغيير كلمة المرور"
         '
         'إعداداتعامةToolStripMenuItem
         '
         Me.إعداداتعامةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.settingsIcon16
         Me.إعداداتعامةToolStripMenuItem.Name = "إعداداتعامةToolStripMenuItem"
-        Me.إعداداتعامةToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.إعداداتعامةToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.إعداداتعامةToolStripMenuItem.Text = "إعدادات عامّة"
         '
         'tmsLog
         '
         Me.tmsLog.Image = Global.EEMS.My.Resources.Resources.log
         Me.tmsLog.Name = "tmsLog"
-        Me.tmsLog.Size = New System.Drawing.Size(159, 22)
+        Me.tmsLog.Size = New System.Drawing.Size(180, 22)
         Me.tmsLog.Text = "سجل التغيير"
         '
         'تجديدالخدمةToolStripMenuItem
         '
         Me.تجديدالخدمةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.backyp16
         Me.تجديدالخدمةToolStripMenuItem.Name = "تجديدالخدمةToolStripMenuItem"
-        Me.تجديدالخدمةToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.تجديدالخدمةToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.تجديدالخدمةToolStripMenuItem.Text = "تجديد الخدمة"
         '
         'حولالبرنامجToolStripMenuItem
@@ -1783,13 +1790,6 @@ Partial Class frmMain
         Me.lblPayment.Text = "Label11"
         Me.lblPayment.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.lblPayment.Visible = False
-        '
-        'تعديلسعرصرفالدولارToolStripMenuItem
-        '
-        Me.تعديلسعرصرفالدولارToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.BO_Opportunity
-        Me.تعديلسعرصرفالدولارToolStripMenuItem.Name = "تعديلسعرصرفالدولارToolStripMenuItem"
-        Me.تعديلسعرصرفالدولارToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
-        Me.تعديلسعرصرفالدولارToolStripMenuItem.Text = "تعديل سعر صرف الدولار"
         '
         'frmMain
         '

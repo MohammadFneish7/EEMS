@@ -12,7 +12,7 @@ Public Class frmMain
         loadSettings()
         username = user
         SharedModule.currentUser = New User(username, pass)
-        Me.Text = Me.Text & " : " & user
+        Me.Text = "الصفحة الرئيسيّة" & " : " & user & " : " & orgname
 
         'TODO: This line of code loads data into the 'EEMSDataSet.Engine' table. You can move, or remove it, as needed.
         'Me.EngineTableAdapter.Fill(Me.EEMSDataSet.Engine)
@@ -52,6 +52,12 @@ Public Class frmMain
             a.ExecuteNoReturn("delete from ChangeLog where EventDate < '" & Date.Now.AddMonths(-1).ToShortDateString & "'")
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
+        End Try
+
+        Try
+            Me.BackColor = Color.FromArgb(mainColor)
+        Catch ex As Exception
+
         End Try
     End Sub
 
@@ -562,6 +568,14 @@ Public Class frmMain
         End If
         Dim frm As New frmGeneralSettings
         frm.ShowDialog()
+        Try
+            Me.Text = "الصفحة الرئيسيّة" & " : " & username & " : " & orgname
+            Me.BackColor = Color.FromArgb(mainColor)
+            Me.Refresh()
+            Me.Validate()
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click

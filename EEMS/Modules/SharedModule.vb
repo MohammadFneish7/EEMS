@@ -30,7 +30,7 @@ Module SharedModule
     Public dollarPrice = 0
     Public roundToThousand As Integer = 0 '0 round to 1000, 1 ceil, 2 dont rount
     Public defaultPayOption As Integer = 0
-
+    Public mainColor As Integer = Color.White.ToArgb()
     Public isPaymentVerified As Boolean = True
 
     Public Sub moveCRObjectsOnYAxis(enumerator As SCRCollectionEnumerator, yOffset As Integer)
@@ -132,6 +132,10 @@ Module SharedModule
                 roundToThousand = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("defaultPayOption") Then
                 defaultPayOption = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("dollarprice") Then
+                dollarPrice = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("maincolor") Then
+                mainColor = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             End If
         Next
     End Sub

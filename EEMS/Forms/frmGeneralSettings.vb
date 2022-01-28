@@ -31,6 +31,8 @@ Public Class frmGeneralSettings
                 numDollar.Value = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
             ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("roundtothousand") Then
                 ComboBox1.SelectedIndex = Integer.Parse(dr.Item(1).ToString.Trim.ToLower)
+            ElseIf dr.Item(0).ToString.Trim.ToLower.Equals("maincolor") Then
+                ColorPickEdit1.Color = Color.FromArgb(Integer.Parse(dr.Item(1).ToString.Trim.ToLower))
             End If
         Next
     End Sub
@@ -48,10 +50,11 @@ Public Class frmGeneralSettings
                               "('invoicexoffset','" & NumericUpDown2.Value & "','" & selectionKeyReference.ToLower & "'), " &
                               "('dollarprice','" & numDollar.Value & "','" & selectionKeyReference.ToLower & "'), " &
                               "('roundToThousand','" & ComboBox1.SelectedIndex & "','" & selectionKeyReference.ToLower & "'), " &
+                              "('maincolor','" & ColorPickEdit1.Color.ToArgb() & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note1','" & txtnote1.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note2','" & txtnote2.Text.Trim & "','" & selectionKeyReference.ToLower & "'), " &
                               "('note3','" & txtnote3.Text.Trim & "','" & selectionKeyReference.ToLower & "') ")
-
+            mainColor = ColorPickEdit1.Color.ToArgb()
             orgname = txtname.Text.Trim
             invoiceYOffset = NumericUpDown1.Value
             invoiceXOffset = NumericUpDown2.Value

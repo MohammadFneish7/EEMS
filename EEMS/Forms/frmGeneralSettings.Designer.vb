@@ -43,11 +43,14 @@ Partial Class frmGeneralSettings
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.numDollar = New System.Windows.Forms.NumericUpDown()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.ColorPickEdit1 = New DevExpress.XtraEditors.ColorPickEdit()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         CType(Me.numDollar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ColorPickEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -269,12 +272,36 @@ Partial Class frmGeneralSettings
         Me.Label8.TabIndex = 72
         Me.Label8.Text = "سعر صرف $:"
         '
+        'ColorPickEdit1
+        '
+        Me.ColorPickEdit1.EditValue = System.Drawing.Color.Empty
+        Me.ColorPickEdit1.Location = New System.Drawing.Point(367, 189)
+        Me.ColorPickEdit1.Name = "ColorPickEdit1"
+        Me.ColorPickEdit1.Properties.AutomaticColor = System.Drawing.Color.Black
+        Me.ColorPickEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.ColorPickEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.ColorPickEdit1.Size = New System.Drawing.Size(241, 20)
+        Me.ColorPickEdit1.TabIndex = 74
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(614, 192)
+        Me.Label9.Name = "Label9"
+        Me.Label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label9.Size = New System.Drawing.Size(62, 13)
+        Me.Label9.TabIndex = 75
+        Me.Label9.Text = "لون الواجهة:"
+        '
         'frmGeneralSettings
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(700, 222)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.ColorPickEdit1)
         Me.Controls.Add(Me.numDollar)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.GroupBox2)
@@ -302,6 +329,7 @@ Partial Class frmGeneralSettings
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.numDollar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ColorPickEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -326,4 +354,6 @@ Partial Class frmGeneralSettings
     Friend WithEvents Label7 As Label
     Friend WithEvents numDollar As NumericUpDown
     Friend WithEvents Label8 As Label
+    Friend WithEvents ColorPickEdit1 As DevExpress.XtraEditors.ColorPickEdit
+    Friend WithEvents Label9 As Label
 End Class
