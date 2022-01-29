@@ -1183,7 +1183,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Queries\EEMS_20180530.BAK" />
     <None Include="Reports\DataSetGeneralReport.xsc">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
