@@ -20,7 +20,7 @@ Public Class frmChangeMonthlyFeePrice
             a.Execute("Update CounterHistory set monthlyfee=" & txtkiloprice.Text.Trim & " where " & conditionQuery)
             a.Execute("Update CounterHistory set roundvalue=IIF((1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000))=1000,0,(1000 - (([monthlyfee]+([kilowattprice]*([currentvalue]-[previousvalue]))) % 1000))) where " & conditionQuery)
 
-            MsgBox("تم تعديل سعر الكيلوات.")
+            MsgBox("تم تعديل رسم الاشتراك.")
         Else
             MsgBox("الرجاء تعبئة كل الخانات المطلوبة للمتابعة.")
         End If

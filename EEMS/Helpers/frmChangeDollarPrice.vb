@@ -17,7 +17,7 @@ Public Class frmChangeDollarPrice
 
             a.Execute("Update CounterHistory set dollarPrice=" & txtdollarprice.Text.Trim & " where " & conditionQuery)
 
-            MsgBox("تم تعديل سعر الدولار.")
+            MsgBox("تم تعديل سعر صرف الدولار.")
         Else
             MsgBox("الرجاء تعبئة كل الخانات المطلوبة للمتابعة.")
         End If
