@@ -21,15 +21,14 @@ Public Class frmReportViewer
             ds.invoicesdt.Rows.Add()
             ds.invoicesdt.Rows(i).ItemArray = dt(i).ItemArray
         Next
-        If note.Trim.Length > 0 Then
-            For Each row As DataRow In ds.invoicesdt.Rows
-                row.Item(14) = note
-            Next
-        Else
-            For Each row As DataRow In ds.invoicesdt.Rows
-                row.Item(14) = ""
-            Next
-        End If
+        For Each row As DataRow In ds.invoicesdt.Rows
+            If note.Trim.Length > 0 Then
+                row.Item(15) = note
+            Else
+                row.Item(15) = ""
+            End If
+            row.Item(26) = SharedModule.dollarPrice
+        Next
         Me.verbose = verbose
 
         InitializeComponent()

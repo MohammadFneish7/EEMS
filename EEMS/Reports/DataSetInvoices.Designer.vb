@@ -577,6 +577,8 @@ Partial Public Class DataSetInvoices
         
         Private columnclient As Global.System.Data.DataColumn
         
+        Private columnmobile As Global.System.Data.DataColumn
+        
         Private columnampere As Global.System.Data.DataColumn
         
         Private columnecode As Global.System.Data.DataColumn
@@ -612,6 +614,8 @@ Partial Public Class DataSetInvoices
         Private columnpaid As Global.System.Data.DataColumn
         
         Private columnremaining As Global.System.Data.DataColumn
+        
+        Private columndollarprice As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -701,6 +705,14 @@ Partial Public Class DataSetInvoices
         Public ReadOnly Property clientColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnclient
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property mobileColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmobile
             End Get
         End Property
         
@@ -849,6 +861,14 @@ Partial Public Class DataSetInvoices
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property dollarpriceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndollarprice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -893,6 +913,7 @@ Partial Public Class DataSetInvoices
                     ByVal boxcode As String,  _
                     ByVal boxlocation As String,  _
                     ByVal client As String,  _
+                    ByVal mobile As String,  _
                     ByVal ampere As String,  _
                     ByVal ecode As String,  _
                     ByVal collecter As String,  _
@@ -910,9 +931,10 @@ Partial Public Class DataSetInvoices
                     ByVal total As Integer,  _
                     ByVal discount As String,  _
                     ByVal paid As Integer,  _
-                    ByVal remaining As Integer) As invoicesdtRow
+                    ByVal remaining As Integer,  _
+                    ByVal dollarprice As Integer) As invoicesdtRow
             Dim rowinvoicesdtRow As invoicesdtRow = CType(Me.NewRow,invoicesdtRow)
-            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining}
+            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, mobile, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining, dollarprice}
             rowinvoicesdtRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowinvoicesdtRow)
             Return rowinvoicesdtRow
@@ -942,6 +964,7 @@ Partial Public Class DataSetInvoices
             Me.columnboxcode = MyBase.Columns("boxcode")
             Me.columnboxlocation = MyBase.Columns("boxlocation")
             Me.columnclient = MyBase.Columns("client")
+            Me.columnmobile = MyBase.Columns("mobile")
             Me.columnampere = MyBase.Columns("ampere")
             Me.columnecode = MyBase.Columns("ecode")
             Me.columncollecter = MyBase.Columns("collecter")
@@ -960,6 +983,7 @@ Partial Public Class DataSetInvoices
             Me.columndiscount = MyBase.Columns("discount")
             Me.columnpaid = MyBase.Columns("paid")
             Me.columnremaining = MyBase.Columns("remaining")
+            Me.columndollarprice = MyBase.Columns("dollarprice")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -979,6 +1003,8 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columnboxlocation)
             Me.columnclient = New Global.System.Data.DataColumn("client", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclient)
+            Me.columnmobile = New Global.System.Data.DataColumn("mobile", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmobile)
             Me.columnampere = New Global.System.Data.DataColumn("ampere", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnampere)
             Me.columnecode = New Global.System.Data.DataColumn("ecode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -1015,11 +1041,14 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columnpaid)
             Me.columnremaining = New Global.System.Data.DataColumn("remaining", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnremaining)
+            Me.columndollarprice = New Global.System.Data.DataColumn("dollarprice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndollarprice)
             Me.columnidone.Caption = "engine"
             Me.columnidtwo.Caption = "cmonth"
             Me.columnactive.Caption = "notes"
             Me.columnmotor.Caption = "client"
             Me.columnclient.Caption = "ampere"
+            Me.columnmobile.DefaultValue = CType(" ",String)
             Me.columnampere.Caption = "prevalue"
             Me.columnecode.Caption = "currentvalue"
             Me.columncollecter.Caption = "kilos"
@@ -1030,6 +1059,7 @@ Partial Public Class DataSetInvoices
             Me.columnnotes.Caption = "insurance"
             Me.columncmonth.Caption = "credits"
             Me.columnspecialcode.Caption = "collector"
+            Me.columndollarprice.DefaultValue = CType(0,Integer)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4066,6 +4096,21 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property mobile() As String
+            Get
+                If Me.IsmobileNull Then
+                    Return String.Empty
+                Else
+                    Return CType(Me(Me.tableinvoicesdt.mobileColumn),String)
+                End If
+            End Get
+            Set
+                Me(Me.tableinvoicesdt.mobileColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property ampere() As String
             Get
                 Try 
@@ -4336,6 +4381,21 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property dollarprice() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableinvoicesdt.dollarpriceColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'dollarprice' in table 'invoicesdt' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableinvoicesdt.dollarpriceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsidoneNull() As Boolean
             Return Me.IsNull(Me.tableinvoicesdt.idoneColumn)
         End Function
@@ -4416,6 +4476,18 @@ Partial Public Class DataSetInvoices
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetclientNull()
             Me(Me.tableinvoicesdt.clientColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsmobileNull() As Boolean
+            Return Me.IsNull(Me.tableinvoicesdt.mobileColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetmobileNull()
+            Me(Me.tableinvoicesdt.mobileColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4632,6 +4704,18 @@ Partial Public Class DataSetInvoices
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetremainingNull()
             Me(Me.tableinvoicesdt.remainingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsdollarpriceNull() As Boolean
+            Return Me.IsNull(Me.tableinvoicesdt.dollarpriceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetdollarpriceNull()
+            Me(Me.tableinvoicesdt.dollarpriceColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

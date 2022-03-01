@@ -316,6 +316,7 @@ Public Class frmInvoice
                             " b.code AS [رمز العلبة], " &
                             " b.location AS [عنوان العلبة], " &
                             " c.clientname AS [المشترك], " &
+                            " c.mobile AS [رقم الهاتف], " &
                             " p.title AS [أمبير], " &
                             " ec.code AS [الرمز في العلبة]," &
                             " cl.fullname AS [الجابي], " &
@@ -356,7 +357,7 @@ Public Class frmInvoice
                             " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " &
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
-                        " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
+                        " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, c.mobile, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
                                 " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount"
         If orderByCust Then
             q3 += " ORDER BY c.clientname"
