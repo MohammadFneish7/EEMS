@@ -615,6 +615,8 @@ Partial Public Class DataSetInvoices
         
         Private columnremaining As Global.System.Data.DataColumn
         
+        Private columnserial As Global.System.Data.DataColumn
+        
         Private columndollarprice As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -862,6 +864,14 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property serialColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnserial
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property dollarpriceColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columndollarprice
@@ -932,9 +942,10 @@ Partial Public Class DataSetInvoices
                     ByVal discount As String,  _
                     ByVal paid As Integer,  _
                     ByVal remaining As Integer,  _
+                    ByVal serial As String,  _
                     ByVal dollarprice As Integer) As invoicesdtRow
             Dim rowinvoicesdtRow As invoicesdtRow = CType(Me.NewRow,invoicesdtRow)
-            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, mobile, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining, dollarprice}
+            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, mobile, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining, serial, dollarprice}
             rowinvoicesdtRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowinvoicesdtRow)
             Return rowinvoicesdtRow
@@ -983,6 +994,7 @@ Partial Public Class DataSetInvoices
             Me.columndiscount = MyBase.Columns("discount")
             Me.columnpaid = MyBase.Columns("paid")
             Me.columnremaining = MyBase.Columns("remaining")
+            Me.columnserial = MyBase.Columns("serial")
             Me.columndollarprice = MyBase.Columns("dollarprice")
         End Sub
         
@@ -1041,6 +1053,8 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columnpaid)
             Me.columnremaining = New Global.System.Data.DataColumn("remaining", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnremaining)
+            Me.columnserial = New Global.System.Data.DataColumn("serial", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnserial)
             Me.columndollarprice = New Global.System.Data.DataColumn("dollarprice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndollarprice)
             Me.columnidone.Caption = "engine"
@@ -4381,6 +4395,21 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property serial() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableinvoicesdt.serialColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'serial' in table 'invoicesdt' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableinvoicesdt.serialColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property dollarprice() As Integer
             Get
                 Try 
@@ -4704,6 +4733,18 @@ Partial Public Class DataSetInvoices
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetremainingNull()
             Me(Me.tableinvoicesdt.remainingColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsserialNull() As Boolean
+            Return Me.IsNull(Me.tableinvoicesdt.serialColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetserialNull()
+            Me(Me.tableinvoicesdt.serialColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _

@@ -109,7 +109,7 @@ Partial Class frmCounterHistory
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(505, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.Size = New System.Drawing.Size(36, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "الشهر:"
         '
@@ -118,9 +118,9 @@ Partial Class frmCounterHistory
         Me.chkShowBoxID.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkShowBoxID.AutoSize = True
         Me.chkShowBoxID.BackColor = System.Drawing.Color.Transparent
-        Me.chkShowBoxID.Location = New System.Drawing.Point(104, 7)
+        Me.chkShowBoxID.Location = New System.Drawing.Point(110, 7)
         Me.chkShowBoxID.Name = "chkShowBoxID"
-        Me.chkShowBoxID.Size = New System.Drawing.Size(158, 17)
+        Me.chkShowBoxID.Size = New System.Drawing.Size(152, 17)
         Me.chkShowBoxID.TabIndex = 41
         Me.chkShowBoxID.Text = "عرض معرّف العلبة بدل رمزها"
         Me.chkShowBoxID.UseVisualStyleBackColor = False
@@ -156,20 +156,19 @@ Partial Class frmCounterHistory
         Me.chkShowNonActive.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkShowNonActive.AutoSize = True
         Me.chkShowNonActive.BackColor = System.Drawing.Color.Transparent
-        Me.chkShowNonActive.Location = New System.Drawing.Point(268, 7)
+        Me.chkShowNonActive.Location = New System.Drawing.Point(271, 7)
         Me.chkShowNonActive.Name = "chkShowNonActive"
-        Me.chkShowNonActive.Size = New System.Drawing.Size(103, 17)
+        Me.chkShowNonActive.Size = New System.Drawing.Size(100, 17)
         Me.chkShowNonActive.TabIndex = 37
         Me.chkShowNonActive.Text = "عرض غير الفاعل"
         Me.chkShowNonActive.UseVisualStyleBackColor = False
         '
         'btnimport
         '
-        Me.btnimport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnimport.Enabled = False
         Me.btnimport.Image = Global.EEMS.My.Resources.Resources.downup16
         Me.btnimport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnimport.Location = New System.Drawing.Point(1106, 69)
+        Me.btnimport.Location = New System.Drawing.Point(25, 70)
         Me.btnimport.Name = "btnimport"
         Me.btnimport.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnimport.Size = New System.Drawing.Size(212, 29)
@@ -426,7 +425,7 @@ Partial Class frmCounterHistory
         Me.Label30.ForeColor = System.Drawing.Color.Red
         Me.Label30.Location = New System.Drawing.Point(4, 1)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(13, 13)
+        Me.Label30.Size = New System.Drawing.Size(11, 13)
         Me.Label30.TabIndex = 18
         Me.Label30.Text = "*"
         '

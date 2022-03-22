@@ -198,6 +198,7 @@ Public Class frmInvoice
                 Dim fee As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(17)))
                 Dim round As Integer = getRoundThousand(((newVal - oldVal) * kwPice) + fee)
                 a.ExecuteNoReturn("update CounterHistory set currentvalue=" & newVal & ", roundvalue=" & round & " where ID=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2))))
+                a.ExecuteNoReturn("update ECounter set currentvalue=" & newVal & " where id in (select ec.id from ECounter ec join Registration r on r.counterid = ec.id where r.id=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1))) & " and r.active=1)")
                 loadData()
             Catch ex As Exception
                 ErrorDialog.showDlg(ex)
@@ -351,6 +352,7 @@ Public Class frmInvoice
                             " discount AS [حسم], " &
                             " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
                             " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي] " &
+                            " ec.serial AS [سيريال العداد] " &
                         " FROM Registration r" &
                             " INNER JOIN Client c on r.clientid = c.ID" &
                             " INNER JOIN Package p on r.packageid = p.ID" &
@@ -358,7 +360,7 @@ Public Class frmInvoice
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
                         " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, c.mobile, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount"
+                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount, ec.serial"
         If orderByCust Then
             q3 += " ORDER BY c.clientname"
         Else

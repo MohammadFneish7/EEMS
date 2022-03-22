@@ -16,7 +16,6 @@ Public Class frmExpenditure
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
         Dim fromDate As Date = New Date(Date.Today.Year, Date.Today.Month, 1)
         Dim toDate As Date = New Date(Date.Today.Year, Date.Today.Month, System.DateTime.DaysInMonth(Date.Today.Year, Date.Today.Month))
         dtp1.Value = fromDate
