@@ -40,13 +40,13 @@ Partial Class frmElectricBox
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnExportExcell = New System.Windows.Forms.Button()
         Me.btnShowPrint = New System.Windows.Forms.Button()
         Me.dgvData1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.RepositoryItemButtonEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.RepositoryItemButtonEdit2 = New DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit()
         Me.btndelete = New System.Windows.Forms.Button()
-        Me.btnExportExcell = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
@@ -236,7 +236,7 @@ Partial Class frmElectricBox
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(4, 1)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.Size = New System.Drawing.Size(11, 13)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "*"
         '
@@ -269,6 +269,17 @@ Partial Class frmElectricBox
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "العلب"
+        '
+        'btnExportExcell
+        '
+        Me.btnExportExcell.Image = Global.EEMS.My.Resources.Resources.xls
+        Me.btnExportExcell.Location = New System.Drawing.Point(6, 34)
+        Me.btnExportExcell.Name = "btnExportExcell"
+        Me.btnExportExcell.Size = New System.Drawing.Size(102, 29)
+        Me.btnExportExcell.TabIndex = 41
+        Me.btnExportExcell.Text = "تصدير اكسل"
+        Me.btnExportExcell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnExportExcell.UseVisualStyleBackColor = True
         '
         'btnShowPrint
         '
@@ -309,6 +320,7 @@ Partial Class frmElectricBox
         Me.GridView1.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.[False]
         Me.GridView1.OptionsCustomization.AllowQuickHideColumns = False
         Me.GridView1.OptionsFind.AlwaysVisible = True
+        Me.GridView1.OptionsFind.FindNullPrompt = "بحث في الجدول..."
         Me.GridView1.OptionsMenu.EnableColumnMenu = False
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsPrint.EnableAppearanceOddRow = True
@@ -344,17 +356,6 @@ Partial Class frmElectricBox
         Me.btndelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btndelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btndelete.UseVisualStyleBackColor = True
-        '
-        'btnExportExcell
-        '
-        Me.btnExportExcell.Image = Global.EEMS.My.Resources.Resources.xls
-        Me.btnExportExcell.Location = New System.Drawing.Point(6, 34)
-        Me.btnExportExcell.Name = "btnExportExcell"
-        Me.btnExportExcell.Size = New System.Drawing.Size(102, 29)
-        Me.btnExportExcell.TabIndex = 41
-        Me.btnExportExcell.Text = "تصدير اكسل"
-        Me.btnExportExcell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnExportExcell.UseVisualStyleBackColor = True
         '
         'frmElectricBox
         '

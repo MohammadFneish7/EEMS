@@ -124,6 +124,7 @@ Partial Class frmInvoice
         Me.GridView1.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.[False]
         Me.GridView1.OptionsCustomization.AllowQuickHideColumns = False
         Me.GridView1.OptionsFind.AlwaysVisible = True
+        Me.GridView1.OptionsFind.FindNullPrompt = "بحث في الجدول..."
         Me.GridView1.OptionsMenu.EnableColumnMenu = False
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsPrint.EnableAppearanceOddRow = True
@@ -320,7 +321,7 @@ Partial Class frmInvoice
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(1270, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
+        Me.Label1.Size = New System.Drawing.Size(36, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "الشهر:"
         '
@@ -554,7 +555,7 @@ Partial Class frmInvoice
         Me.Label30.ForeColor = System.Drawing.Color.Red
         Me.Label30.Location = New System.Drawing.Point(4, 1)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(13, 13)
+        Me.Label30.Size = New System.Drawing.Size(11, 13)
         Me.Label30.TabIndex = 18
         Me.Label30.Text = "*"
         '

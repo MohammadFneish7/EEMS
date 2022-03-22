@@ -242,7 +242,7 @@ Partial Class frmItemsConsumption
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(4, 1)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.Size = New System.Drawing.Size(11, 13)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "*"
         '
@@ -299,9 +299,9 @@ Partial Class frmItemsConsumption
         Me.Panel8.BackColor = System.Drawing.Color.PaleTurquoise
         Me.Panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel8.Controls.Add(Me.chkSelectAll)
-        Me.Panel8.Location = New System.Drawing.Point(621, 77)
+        Me.Panel8.Location = New System.Drawing.Point(619, 77)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(94, 34)
+        Me.Panel8.Size = New System.Drawing.Size(103, 34)
         Me.Panel8.TabIndex = 52
         '
         'chkSelectAll
@@ -309,9 +309,9 @@ Partial Class frmItemsConsumption
         Me.chkSelectAll.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkSelectAll.AutoSize = True
         Me.chkSelectAll.BackColor = System.Drawing.Color.Transparent
-        Me.chkSelectAll.Location = New System.Drawing.Point(10, 8)
+        Me.chkSelectAll.Location = New System.Drawing.Point(21, 8)
         Me.chkSelectAll.Name = "chkSelectAll"
-        Me.chkSelectAll.Size = New System.Drawing.Size(74, 17)
+        Me.chkSelectAll.Size = New System.Drawing.Size(72, 17)
         Me.chkSelectAll.TabIndex = 50
         Me.chkSelectAll.Text = "عرض الكل"
         Me.chkSelectAll.UseVisualStyleBackColor = False
@@ -337,7 +337,7 @@ Partial Class frmItemsConsumption
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Location = New System.Drawing.Point(302, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.Size = New System.Drawing.Size(50, 13)
         Me.Label2.TabIndex = 46
         Me.Label2.Text = "من تاريخ:"
         '
@@ -370,7 +370,7 @@ Partial Class frmItemsConsumption
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Location = New System.Drawing.Point(129, 9)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
+        Me.Label4.Size = New System.Drawing.Size(54, 13)
         Me.Label4.TabIndex = 48
         Me.Label4.Text = "الى تاريخ:"
         '

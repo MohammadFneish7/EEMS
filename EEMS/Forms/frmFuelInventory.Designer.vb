@@ -60,13 +60,13 @@ Partial Class frmFuelInventory
         CType(Me.RepositoryItemButtonEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'btnItems
+        'btnTanks
         '
         Me.btnTanks.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnTanks.Image = Global.EEMS.My.Resources.Resources.tank16
         Me.btnTanks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnTanks.Location = New System.Drawing.Point(759, 34)
-        Me.btnTanks.Name = "btnItems"
+        Me.btnTanks.Name = "btnTanks"
         Me.btnTanks.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnTanks.Size = New System.Drawing.Size(123, 29)
         Me.btnTanks.TabIndex = 21
@@ -238,7 +238,7 @@ Partial Class frmFuelInventory
         Me.Label8.ForeColor = System.Drawing.Color.Red
         Me.Label8.Location = New System.Drawing.Point(4, 1)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(13, 13)
+        Me.Label8.Size = New System.Drawing.Size(11, 13)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "*"
         '
@@ -340,6 +340,7 @@ Partial Class frmFuelInventory
         Me.GridView1.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.[False]
         Me.GridView1.OptionsCustomization.AllowQuickHideColumns = False
         Me.GridView1.OptionsFind.AlwaysVisible = True
+        Me.GridView1.OptionsFind.FindNullPrompt = "بحث في الجدول..."
         Me.GridView1.OptionsMenu.EnableColumnMenu = False
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsPrint.EnableAppearanceOddRow = True

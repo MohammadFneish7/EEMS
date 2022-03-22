@@ -71,6 +71,7 @@ Partial Class frmDataViewer
         Me.GridView1.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.[False]
         Me.GridView1.OptionsCustomization.AllowQuickHideColumns = False
         Me.GridView1.OptionsFind.AlwaysVisible = True
+        Me.GridView1.OptionsFind.FindNullPrompt = "بحث في الجدول..."
         Me.GridView1.OptionsMenu.EnableColumnMenu = False
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsPrint.EnableAppearanceOddRow = True

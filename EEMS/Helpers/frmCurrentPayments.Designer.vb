@@ -59,7 +59,7 @@ Partial Class frmCurrentPayments
         Me.Label1.Location = New System.Drawing.Point(740, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(75, 13)
+        Me.Label1.Size = New System.Drawing.Size(78, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "تواريخ الدفعات:"
         '
@@ -69,7 +69,7 @@ Partial Class frmCurrentPayments
         Me.Label2.Location = New System.Drawing.Point(733, 318)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label2.Size = New System.Drawing.Size(79, 13)
+        Me.Label2.Size = New System.Drawing.Size(77, 13)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "تفصيل الدفعات:"
         '
@@ -110,6 +110,7 @@ Partial Class frmCurrentPayments
         Me.GridView1.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.[False]
         Me.GridView1.OptionsCustomization.AllowQuickHideColumns = False
         Me.GridView1.OptionsFind.AlwaysVisible = True
+        Me.GridView1.OptionsFind.FindNullPrompt = "بحث في الجدول..."
         Me.GridView1.OptionsMenu.EnableColumnMenu = False
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsPrint.EnableAppearanceOddRow = True

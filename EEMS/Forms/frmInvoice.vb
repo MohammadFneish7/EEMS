@@ -69,10 +69,10 @@ Public Class frmInvoice
             Dim kiloprofit As Integer = a.ExecuteScalar("SELECT IsNull(SUM(((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))*Cast(ch.kilowattprice AS BIGINT))+Cast(roundvalue AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
             Dim fees As Integer = a.ExecuteScalar("SELECT IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
             Dim workinghours As Integer = a.ExecuteScalar("SELECT IsNull(MAX(workinghours),0) FROM EngineWorkingHours WHERE cmonth =" & month & " and cyear=" & year)
-            lblsoldKilo.Text = soldkilo
-            lblkilopayments.Text = kiloprofit
-            lblfees.Text = fees
-            lblWorkingHours.Text = workinghours
+            lblsoldKilo.Text = soldkilo.ToString("N0")
+            lblkilopayments.Text = kiloprofit.ToString("N0")
+            lblfees.Text = fees.ToString("N0")
+            lblWorkingHours.Text = workinghours.ToString("N0")
         Catch ex As Exception
             lblsoldKilo.Text = 0
             lblkilopayments.Text = 0
@@ -351,7 +351,7 @@ Public Class frmInvoice
                             " total AS [المجموع], " &
                             " discount AS [حسم], " &
                             " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
-                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي] " &
+                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي], " &
                             " ec.serial AS [سيريال العداد] " &
                         " FROM Registration r" &
                             " INNER JOIN Client c on r.clientid = c.ID" &
