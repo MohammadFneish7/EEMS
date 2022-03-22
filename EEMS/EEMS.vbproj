@@ -459,6 +459,12 @@
     <Compile Include="Helpers\frmCustomPrinterHandler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Helpers\frmDateChooser.Designer.vb">
+      <DependentUpon>frmDateChooser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmDateChooser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helpers\frmDateSelector.Designer.vb">
       <DependentUpon>frmDateSelector.vb</DependentUpon>
     </Compile>
@@ -979,6 +985,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmCustomPrinterHandler.resx">
       <DependentUpon>frmCustomPrinterHandler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmDateChooser.resx">
+      <DependentUpon>frmDateChooser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmDateSelector.resx">
       <DependentUpon>frmDateSelector.vb</DependentUpon>

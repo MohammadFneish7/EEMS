@@ -172,8 +172,12 @@ Public Class frmClientReport
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
-        Dim frm As New frmReportViewer(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)))
-        frm.ShowDialog()
+        Dim frmdtp As New frmDateChooser
+        If frmdtp.DialogResult = DialogResult.OK Then
+
+            Dim frm As New frmReportViewer(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)), frmdtp.chkall.Checked, frmdtp.dtp0.Value, frmdtp.dtp1.Value)
+            frm.ShowDialog()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -34,7 +34,7 @@ Public Class frmReportViewer
         InitializeComponent()
     End Sub
 
-    Sub New(regid As Integer)
+    Sub New(regid As Integer, checkAll As Boolean, fromd As DateTime, tod As DateTime)
 
 
         Dim a As New Helper
@@ -52,7 +52,6 @@ Public Class frmReportViewer
                     " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID where r.id=" & regid &
                     " group by ch.ID,r.ID,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.kilowattprice,((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue,total+discount,ch.discount,ch.total,ch.notes")
         cloneTable(ds.creditdt, a.ds.Tables(0))
-        '"SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],(ar.caption + '-' + Cast(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك],(ch.currentvalue-ch.previousvalue) as [فرق عداد],ch.kilowattprice as [سعر الكيلو],(ch.currentvalue-ch.previousvalue)*ch.kilowattprice as [مطلوب كيلو],total+discount as [المجموع],ch.discount as [حسم],total as [مطلوب], ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [مدفوع], total-ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [باقي],ch.notes as [ملاحظات] FROM Registration r,CounterHistory ch,ArabicMonth ar WHERE ch.cmonth=ar.ID and ch.regid = r.ID and total>0 and r.ID=" & regid
 
         a.ds = New DataSet
         a.GetData("SELECT p.ID as [معرّف الدفعة],p.counterhistoryid as [معرّف القيمة],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],p.pdate as [تاريخ الدفعة],p.pvalue as [قيمة الدفعة],p.notes as [ملاحظات] FROM Payment p,CounterHistory ch,Registration r, ArabicMonth ar WHERE p.counterhistoryid=ch.ID and ch.regid=r.ID and ch.cmonth=ar.ID and r.ID=" & regid & " order by p.pdate asc")
