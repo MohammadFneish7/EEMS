@@ -178,8 +178,14 @@ Public Class frmPaymentEditor
             End Try
 
             If printInvoice Then
-                Dim frm As New frmReportViewer(regID)
-                frm.ShowDialog()
+                Dim invoiceDate As String = dtp.Value.ToString
+                Dim paymentAmmount As String = Convert.ToInt32(txtpayment.Text).ToString("N0")
+                Dim registrationId As String = regID
+                Dim reportViewer As New frmReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " &
+                                                    clientName & " المحترم/ة  بتاريخ " & invoiceDate &
+                                                    " مبلغ وقدره " & paymentAmmount & " ل.ل عن الاشتراك رقم " &
+                                                    registrationId & ".", "", "")
+                reportViewer.ShowDialog()
             End If
 
             Me.DialogResult =DialogResult.OK

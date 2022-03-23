@@ -34,7 +34,7 @@ Public Class frmReportViewer
         InitializeComponent()
     End Sub
 
-    Sub New(regid As Integer, checkAll As Boolean, fromd As DateTime, tod As DateTime)
+    Sub New(regid As Integer, Optional checkAll As Boolean = True, Optional fromd As DateTime = Nothing, Optional tod As DateTime = Nothing)
 
 
         Dim a As New Helper
@@ -47,14 +47,27 @@ Public Class frmReportViewer
         a.GetData("SELECT r.ID as [معرّف الاشتراك],r.clientid as [معرّف المشترك],r.active as مفعّل,registrationdate as [تاريخ الاشتراك],enddate as [تاريخ انهاء الاشتراك],p.ampere as [أمبير],b.code as [رمز العلبة],b.location as [عنوان العلبة],ec.serial as[رمز العدّاد],ec.code as [الرمز في العلبة],r.insurance as [تأمين],r.notes AS [ملاحظات] FROM Registration r,Client c,ElectricBox b,ECounter ec,Package p WHERE r.packageid = p.ID and r.counterid = ec.ID and ec.boxid = b.ID and r.clientid = c.ID and r.ID=" & regid & " order By r.active")
         cloneTable(ds.registrationdt, a.ds.Tables(0))
 
+        Dim dateConstraint As String = String.Empty
+        If Not checkAll Then
+            dateConstraint = " and (ch.cyear>" & fromd.Year & " or (ch.cyear=" & fromd.Year & " and ch.cmonth>=" & fromd.Month & ")) and (ch.cyear<" & tod.Year & " or (ch.cyear=" & tod.Year & " and ch.cmonth<=" & tod.Month & "))"
+        End If
         a.ds = New DataSet
         a.GetData("SELECT ch.ID as [معرّف القيمة],r.ID as [معرّف الاشتراك],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],ch.monthlyfee as [رسم اشتراك],(ch.currentvalue-ch.previousvalue) as [فرق عداد],ch.kilowattprice as [سعر الكيلو],((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue as [مطلوب كيلو],total+discount as [المجموع],ch.discount as [حسم],total as [مطلوب], ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [مدفوع], total-ISNULL(sum(Cast(p.pvalue AS BIGINT)),0) as [باقي],ch.notes as [ملاحظات]  " &
-                    " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID where r.id=" & regid &
+                    " FROM (CounterHistory ch left join Payment p on p.counterhistoryid=ch.ID) join Registration r on ch.regid = r.ID join ArabicMonth ar on ch.cmonth=ar.ID where r.id=" & regid & dateConstraint &
                     " group by ch.ID,r.ID,(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))),ch.monthlyfee,(ch.currentvalue-ch.previousvalue),ch.kilowattprice,((ch.currentvalue-ch.previousvalue)*ch.kilowattprice)+roundvalue,total+discount,ch.discount,ch.total,ch.notes")
         cloneTable(ds.creditdt, a.ds.Tables(0))
 
+        Dim chIds As New List(Of String)
+        For Each item As DataRow In a.ds.Tables(0).Rows
+            chIds.Add(item.Item(0).ToString())
+        Next
+        Dim idConstraint As String = String.Empty
+        If chIds.Count > 0 Then
+            idConstraint = " and p.counterhistoryid in (" & String.Join(",", chIds) & ") "
+        End If
+
         a.ds = New DataSet
-        a.GetData("SELECT p.ID as [معرّف الدفعة],p.counterhistoryid as [معرّف القيمة],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],p.pdate as [تاريخ الدفعة],p.pvalue as [قيمة الدفعة],p.notes as [ملاحظات] FROM Payment p,CounterHistory ch,Registration r, ArabicMonth ar WHERE p.counterhistoryid=ch.ID and ch.regid=r.ID and ch.cmonth=ar.ID and r.ID=" & regid & " order by p.pdate asc")
+        a.GetData("SELECT p.ID as [معرّف الدفعة],p.counterhistoryid as [معرّف القيمة],(ar.caption + '-' + CAST(ch.cyear as nvarchar(50))) as [شهر],p.pdate as [تاريخ الدفعة],p.pvalue as [قيمة الدفعة],p.notes as [ملاحظات] FROM Payment p,CounterHistory ch,Registration r, ArabicMonth ar WHERE p.counterhistoryid=ch.ID and ch.regid=r.ID and ch.cmonth=ar.ID and r.ID=" & regid & idConstraint & " order by p.pdate asc")
         cloneTable(ds.paymentdt, a.ds.Tables(0))
 
         isClientReport = True

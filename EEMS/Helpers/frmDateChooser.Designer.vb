@@ -36,7 +36,6 @@ Partial Class frmDateChooser
         Me.chkall.AutoSize = True
         Me.chkall.Checked = True
         Me.chkall.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkall.Enabled = False
         Me.chkall.Location = New System.Drawing.Point(172, 12)
         Me.chkall.Name = "chkall"
         Me.chkall.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -101,6 +100,7 @@ Partial Class frmDateChooser
         '
         'frmDateChooser
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(305, 141)

@@ -173,8 +173,7 @@ Public Class frmClientReport
             Return
         End If
         Dim frmdtp As New frmDateChooser
-        If frmdtp.DialogResult = DialogResult.OK Then
-
+        If frmdtp.ShowDialog() = DialogResult.OK Then
             Dim frm As New frmReportViewer(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)), frmdtp.chkall.Checked, frmdtp.dtp0.Value, frmdtp.dtp1.Value)
             frm.ShowDialog()
         End If
@@ -194,7 +193,7 @@ Public Class frmClientReport
                 End Try
 
                 a.GetData("Select fullname from collector c, Registration r, ElectricBox b,Ecounter ec where c.id=b.collectorid and b.id=ec.boxid and r.counterid=ec.id and r.id=" & dgvCredits.SelectedRows(0).Cells(1).Value, "dt6")
-                Dim frm As New frmPaymentEditor(dgvCredits.SelectedRows(0).Cells(0).Value, Date.Now, a.ds.Tables("dt6").Rows(0).Item(0).ToString.Trim, clientname, dgvCredits.SelectedRows(0).Cells(1).Value, dgvCredits.SelectedRows(0).Cells(3).Value.ToString)
+                Dim frm As New frmPaymentEditor(dgvCredits.SelectedRows(0).Cells(0).Value, Date.Now, a.ds.Tables("dt6").Rows(0).Item(0).ToString.Trim, clientname, dgvCredits.SelectedRows(0).Cells(1).Value, dgvCredits.SelectedRows(0).Cells(2).Value.ToString)
                 Dim dr As DialogResult = frm.ShowDialog
                 If dr = System.Windows.Forms.DialogResult.OK Then
                     loadData()
@@ -216,12 +215,14 @@ Public Class frmClientReport
             Dim sumrequiredstr As String = ri.sumcredit.ToString("N0")
             Dim sumpayedstr As String = ri.sumpayed.ToString("N0")
             Dim sumremainstr As String = ri.remaining.ToString("N0")
-
-            Dim reportViewer As New frmReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " & _
-                                                    clientname & " المحترم/ة  بتاريخ " & dgvPayments.SelectedRows(0).Cells(3).Value.ToString & _
-                                                    " مبلغ وقدره " & dgvPayments.SelectedRows(0).Cells(4).Value.ToString & " ل.ل عن الاشتراك رقم " & _
-                                                    dgvRegistration.SelectedRows(0).Cells(0).Value & ".", "تفصيل الاشتراك حتى تاريخ الايصال: " & _
-                                                    vbNewLine & vbNewLine & "● اجمالي مطلوب = " & sumrequiredstr & " ل.ل" & vbNewLine & _
+            Dim invoiceDate As String = dgvPayments.SelectedRows(0).Cells(3).Value.ToString
+            Dim paymentAmmount As String = Convert.ToInt32(dgvPayments.SelectedRows(0).Cells(4).Value).ToString("N0")
+            Dim registrationId As String = dgvRegistration.SelectedRows(0).Cells(0).Value.ToString
+            Dim reportViewer As New frmReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " &
+                                                    clientname & " المحترم/ة  بتاريخ " & invoiceDate &
+                                                    " مبلغ وقدره " & paymentAmmount & " ل.ل عن الاشتراك رقم " &
+                                                    registrationId & ".", "تفصيل الاشتراك حتى تاريخ الايصال: " &
+                                                    vbNewLine & vbNewLine & "● اجمالي مطلوب = " & sumrequiredstr & " ل.ل" & vbNewLine &
                                                     "● اجمالي مدفوع = " & sumpayedstr & " ل.ل" & vbNewLine & "● اجمالي باقي = " & sumremainstr & " ل.ل", "")
             reportViewer.ShowDialog()
         End If
