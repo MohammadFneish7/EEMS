@@ -494,33 +494,33 @@ Public Class frmMain
         Dim dlg As New FolderBrowserDialog
         If dlg.ShowDialog =DialogResult.OK Then
 
-            Dim backupQuery As String = "DECLARE @name VARCHAR(50) " & _
-                                   " DECLARE @path VARCHAR(256) " & _
-                                   " DECLARE @fileName VARCHAR(256) " & _
-                                   " DECLARE @fileDate VARCHAR(20) " & _
-                                   " " & _
-                                   " SET @path = '" & dlg.SelectedPath & "\' " & _
-                                   " " & _
-                                   " SELECT @fileDate = CONVERT(VARCHAR(20),GETDATE(),112) " & _
-                                   " " & _
-                                   " DECLARE db_cursor CURSOR READ_ONLY FOR  " & _
-                                   " Select Name" & _
-                                   " FROM master.dbo.sysdatabases " & _
-                                   " WHERE name IN ('EEMS')" & _
-                                   " " & _
-                                   " OPEN db_cursor   " & _
-                                   " FETCH NEXT FROM db_cursor INTO @name   " & _
-                                   " " & _
-                                   " WHILE @@FETCH_STATUS = 0   " & _
-                                   " BEGIN   " & _
-                                   "    SET @fileName = @path + @name + '_' + @fileDate + '.BAK'  " & _
-                                   "    BACKUP DATABASE @name TO DISK = @fileName  " & _
-                                   " " & _
-                                   "    FETCH NEXT FROM db_cursor INTO @name   " & _
-                                   "                 End" & _
-                                   " " & _
-                                   " " & _
-                                   " CLOSE db_cursor " & _
+            Dim backupQuery As String = "DECLARE @name VARCHAR(50) " &
+                                   " DECLARE @path VARCHAR(256) " &
+                                   " DECLARE @fileName VARCHAR(256) " &
+                                   " DECLARE @fileDate VARCHAR(20) " &
+                                   " " &
+                                   " SET @path = '" & dlg.SelectedPath & "\' " &
+                                   " " &
+                                   " SELECT @fileDate = CONVERT(VARCHAR(20),GETDATE(),112) " &
+                                   " " &
+                                   " DECLARE db_cursor CURSOR READ_ONLY FOR  " &
+                                   " Select Name" &
+                                   " FROM master.dbo.sysdatabases " &
+                                   " WHERE name IN (" & a.cn.Database & ")" &
+                                   " " &
+                                   " OPEN db_cursor   " &
+                                   " FETCH NEXT FROM db_cursor INTO @name   " &
+                                   " " &
+                                   " WHILE @@FETCH_STATUS = 0   " &
+                                   " BEGIN   " &
+                                   "    SET @fileName = @path + @name + '_' + @fileDate + '.BAK'  " &
+                                   "    BACKUP DATABASE @name TO DISK = @fileName  " &
+                                   " " &
+                                   "    FETCH NEXT FROM db_cursor INTO @name   " &
+                                   "                 End" &
+                                   " " &
+                                   " " &
+                                   " CLOSE db_cursor " &
                                    " DEALLOCATE db_cursor"
             Try
                 a.Execute(backupQuery)
