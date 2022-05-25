@@ -506,7 +506,7 @@ Public Class frmMain
                                    " DECLARE db_cursor CURSOR READ_ONLY FOR  " &
                                    " Select Name" &
                                    " FROM master.dbo.sysdatabases " &
-                                   " WHERE name IN (" & a.cn.Database & ")" &
+                                   " WHERE name IN ('" & a.cn.Database & "')" &
                                    " " &
                                    " OPEN db_cursor   " &
                                    " FETCH NEXT FROM db_cursor INTO @name   " &
