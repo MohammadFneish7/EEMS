@@ -1466,6 +1466,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bokehlicia-Captiva-Launcher-bfb.ico" />
+    <None Include="constring">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <Content Include="Queries\Create EC_CurrentValue Field.sql" />
     <Content Include="Queries\Database Build Query.sql" />
     <Content Include="Queries\Index.sql" />

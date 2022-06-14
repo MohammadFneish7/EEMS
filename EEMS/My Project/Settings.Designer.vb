@@ -69,7 +69,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Server=localhost,14356;Database=EEMS;user id=sa;password=mohammadfneish;")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Server=DESKTOP-O3TSL14\SQLEXPRESS2017;Database=EEMS;user id=sa;password=mohammadf"& _ 
+            "neish;")>  _
         Public ReadOnly Property EEMSConnectionString() As String
             Get
                 Return CType(Me("EEMSConnectionString"),String)

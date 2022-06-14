@@ -27,7 +27,7 @@ Public Class frmReportViewer
             Else
                 row.Item(15) = ""
             End If
-            row.Item(27) = SharedModule.dollarPrice
+            'row.Item(27) = SharedModule.dollarPrice
         Next
         Me.verbose = verbose
 
