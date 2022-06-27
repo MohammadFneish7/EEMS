@@ -174,7 +174,7 @@ Public Class frmClientReport
         End If
         Dim frmdtp As New frmDateChooser
         If frmdtp.ShowDialog() = DialogResult.OK Then
-            Dim frm As New frmReportViewer(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)), frmdtp.chkall.Checked, frmdtp.dtp0.Value, frmdtp.dtp1.Value)
+            Dim frm As New XtraReportViewer(Integer.Parse(If(String.IsNullOrEmpty(dgvRegistration.SelectedRows(0).Cells(0).Value.ToString), "0", dgvRegistration.SelectedRows(0).Cells(0).Value.ToString)), frmdtp.chkall.Checked, frmdtp.dtp0.Value, frmdtp.dtp1.Value)
             frm.ShowDialog()
         End If
     End Sub
@@ -218,7 +218,7 @@ Public Class frmClientReport
             Dim invoiceDate As String = dgvPayments.SelectedRows(0).Cells(3).Value.ToString
             Dim paymentAmmount As String = Convert.ToInt32(dgvPayments.SelectedRows(0).Cells(4).Value).ToString("N0")
             Dim registrationId As String = dgvRegistration.SelectedRows(0).Cells(0).Value.ToString
-            Dim reportViewer As New frmReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " &
+            Dim reportViewer As New XtraReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " &
                                                     clientname & " المحترم/ة  بتاريخ " & invoiceDate &
                                                     " مبلغ وقدره " & paymentAmmount & " ل.ل عن الاشتراك رقم " &
                                                     registrationId & ".", "تفصيل الاشتراك حتى تاريخ الايصال: " &

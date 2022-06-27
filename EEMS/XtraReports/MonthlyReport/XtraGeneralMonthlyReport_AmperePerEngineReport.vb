@@ -1,0 +1,3 @@
+﻿Public Class XtraGeneralMonthlyReport_AmperePerEngineReport
+
+End Class

@@ -70,23 +70,6 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -105,6 +88,7 @@
     <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="DevExpress.ExpressApp.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Map.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -113,6 +97,9 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -231,9 +218,6 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -325,12 +309,6 @@
       <DependentUpon>frmEmptyCHExport.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmEmptyCHExport.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmMonthlyReportViewer.Designer.vb">
-      <DependentUpon>frmMonthlyReportViewer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmMonthlyReportViewer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmMaintenance.Designer.vb">
@@ -489,7 +467,7 @@
     <Compile Include="Helpers\frmValidityRenual.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\ChartBuilder.vb" />
+    <Compile Include="Shared\ChartBuilder.vb" />
     <Compile Include="Forms\frmDiscountHandler.Designer.vb">
       <DependentUpon>frmDiscountHandler.vb</DependentUpon>
     </Compile>
@@ -526,90 +504,30 @@
     <Compile Include="Helpers\frmGeneralPerposeInput.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\ValidityChecher.vb" />
-    <Compile Include="Modules\XtraGridCustomPrinter.vb" />
-    <Compile Include="Reports\ClientsCreditsReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientsCreditsReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\AmpereReport.vb">
-      <DependentUpon>AmpereReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\AmperePerEngineReport.vb">
-      <DependentUpon>AmperePerEngineReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\EngineEfficiencyReport.vb">
-      <DependentUpon>EngineEfficiencyReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\MaintainanceReport.vb">
-      <DependentUpon>MaintainanceReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\WorkingHoursReport.vb">
-      <DependentUpon>WorkingHoursReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\FuelConsumptionReport.vb">
-      <DependentUpon>FuelConsumptionReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\DataSetGeneralReport.Designer.vb">
+    <Compile Include="Shared\ValidityChecher.vb" />
+    <Compile Include="Shared\XtraGridCustomPrinter.vb" />
+    <Compile Include="Datasets\DataSetGeneralReport.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DataSetGeneralReport.vb">
+    <Compile Include="Datasets\DataSetGeneralReport.vb">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\GeneralMonthlyReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GeneralMonthlyReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\InvoicesWithoutCredit.vb">
-      <DependentUpon>InvoicesWithoutCredit.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\emptyCouterHistory.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>emptyCouterHistory.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\DataSetInvoices.Designer.vb">
+    <Compile Include="Datasets\DataSetInvoices.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Modules\CryptoSys.vb" />
+    <Compile Include="Shared\CryptoSys.vb" />
     <Compile Include="Forms\frmChangePass.designer.vb">
       <DependentUpon>frmChangePass.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmChangePass.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\User.vb" />
-    <Compile Include="Modules\SqlDBHelper.vb" />
+    <Compile Include="Shared\User.vb" />
+    <Compile Include="Shared\SqlDBHelper.vb" />
     <Compile Include="Editors\frmClientEditor.Designer.vb">
       <DependentUpon>frmClientEditor.vb</DependentUpon>
     </Compile>
@@ -670,8 +588,8 @@
     <Compile Include="Editors\frmCollectorEditor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\MSAccessDBHelper.vb" />
-    <Compile Include="Modules\ExcelExporter.vb" />
+    <Compile Include="Shared\MSAccessDBHelper.vb" />
+    <Compile Include="Shared\ExcelExporter.vb" />
     <Compile Include="Forms\frmClientReport.Designer.vb">
       <DependentUpon>frmClientReport.vb</DependentUpon>
     </Compile>
@@ -825,13 +743,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reports\ClientAccountReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientAccountReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\DataSetInvoices.vb">
+    <Compile Include="Datasets\DataSetInvoices.vb">
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </Compile>
     <Compile Include="Helpers\frmCurrentPayments.Designer.vb">
@@ -840,30 +752,120 @@
     <Compile Include="Helpers\frmCurrentPayments.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmReportViewer.Designer.vb">
-      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    <Compile Include="Shared\SharedModule.vb" />
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmReportViewer.vb">
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmperePerEngineReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_AmperePerEngineReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmperePerEngineReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmpereReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_AmpereReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmpereReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_EngineEfficiencyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExependitureIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_FuelConsumptionReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_FuelConsumptionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_FuelConsumptionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ItemPuchasesReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ItemPuchasesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ItemPuchasesReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_MaintainanceReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_MaintainanceReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_MaintainanceReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_WorkingHoursReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_WorkingHoursReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_WorkingHoursReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport.Designer.vb">
+      <DependentUpon>XtraClientAccountReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_CreditSubReport.Designer.vb">
+      <DependentUpon>XtraClientAccountReport_CreditSubReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_CreditSubReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_PaymentSubReport.Designer.vb">
+      <DependentUpon>XtraClientAccountReport_PaymentSubReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_PaymentSubReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientsCreditsReport.Designer.vb">
+      <DependentUpon>XtraClientsCreditsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientsCreditsReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraEmptyCouterHistoryReport.Designer.vb">
+      <DependentUpon>XtraEmptyCouterHistoryReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraEmptyCouterHistoryReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraGeneralReport.Designer.vb">
+      <DependentUpon>XtraGeneralReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraGeneralReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesReport.Designer.vb">
+      <DependentUpon>XtraInvoicesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesWithoutCreditReport.Designer.vb">
+      <DependentUpon>XtraInvoicesWithoutCreditReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesWithoutCreditReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraReportViewer.Designer.vb">
+      <DependentUpon>XtraReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraReportViewer.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\GeneralReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GeneralReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\Invoices.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Invoices.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Modules\SharedModule.vb" />
-    <Compile Include="Reports\ItemPuchasesReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ItemPuchasesReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -907,9 +909,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEmptyCHExport.resx">
       <DependentUpon>frmEmptyCHExport.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMonthlyReportViewer.resx">
-      <DependentUpon>frmMonthlyReportViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMaintenance.resx">
       <DependentUpon>frmMaintenance.vb</DependentUpon>
@@ -1118,74 +1117,71 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ClientAccountReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ClientAccountReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ClientsCreditsReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ClientsCreditsReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AmpereReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AmpereReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AmperePerEngineReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AmperePerEngineReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\EngineEfficiencyReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>EngineEfficiencyReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MaintainanceReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>MaintainanceReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\WorkingHoursReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>WorkingHoursReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\FuelConsumptionReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>FuelConsumptionReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\GeneralMonthlyReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>GeneralMonthlyReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\InvoicesWithoutCredit.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>InvoicesWithoutCredit.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\emptyCouterHistory.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>emptyCouterHistory.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmCurrentPayments.resx">
       <DependentUpon>frmCurrentPayments.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmReportViewer.resx">
-      <DependentUpon>frmReportViewer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\GeneralReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>GeneralReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Invoices.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Invoices.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChangePass.resx">
       <DependentUpon>frmChangePass.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ItemPuchasesReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ItemPuchasesReport.vb</LastGenOutput>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmperePerEngineReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_AmperePerEngineReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmpereReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_AmpereReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_EngineEfficiencyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExependitureIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_FuelConsumptionReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_FuelConsumptionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ItemPuchasesReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ItemPuchasesReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_MaintainanceReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_MaintainanceReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_WorkingHoursReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_WorkingHoursReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientAccountReport.resx">
+      <DependentUpon>XtraClientAccountReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientAccountReport_CreditSubReport.resx">
+      <DependentUpon>XtraClientAccountReport_CreditSubReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientAccountReport_PaymentSubReport.resx">
+      <DependentUpon>XtraClientAccountReport_PaymentSubReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientsCreditsReport.resx">
+      <DependentUpon>XtraClientsCreditsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraEmptyCouterHistoryReport.resx">
+      <DependentUpon>XtraEmptyCouterHistoryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraGeneralReport.resx">
+      <DependentUpon>XtraGeneralReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraInvoicesReport.resx">
+      <DependentUpon>XtraInvoicesReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraInvoicesWithoutCreditReport.resx">
+      <DependentUpon>XtraInvoicesWithoutCreditReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraReportViewer.resx">
+      <DependentUpon>XtraReportViewer.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Modules\ClassDiagram1.cd" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -1201,31 +1197,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Queries\EEMS_20180530.BAK" />
-    <None Include="Reports\DataSetGeneralReport.xsc">
+    <None Include="Datasets\DataSetGeneralReport.xsc">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetGeneralReport.xsd">
+    <None Include="Datasets\DataSetGeneralReport.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetGeneralReport.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Reports\DataSetGeneralReport.xss">
+    <None Include="Datasets\DataSetGeneralReport.xss">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetInvoices.xsc">
+    <None Include="Datasets\DataSetInvoices.xsc">
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetInvoices.xsd">
+    <None Include="Datasets\DataSetInvoices.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetInvoices.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Reports\DataSetInvoices.xss">
+    <None Include="Datasets\DataSetInvoices.xss">
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </None>
-    <None Include="Requirments\CrystalReport13SP25MSI32.MSI" />
-    <None Include="Requirments\CrystalReport13SP25MSI64.MSI" />
     <None Include="Resources\Business Man Blue.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1469,10 +1462,7 @@
     <None Include="constring">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Queries\Create EC_CurrentValue Field.sql" />
     <Content Include="Queries\Database Build Query.sql" />
-    <Content Include="Queries\Index.sql" />
-    <Content Include="Queries\Update Collectors In Payments Query.sql" />
     <Content Include="Requirments\DevExpressLocalizedResources_2021.2_ar.exe" />
     <Content Include="ar\DevExpress.Blazor.Reporting.v21.2.Viewer.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

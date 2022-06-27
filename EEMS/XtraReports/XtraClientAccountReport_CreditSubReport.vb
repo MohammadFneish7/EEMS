@@ -1,0 +1,3 @@
+﻿Public Class XtraClientAccountReport_CreditSubReport
+
+End Class

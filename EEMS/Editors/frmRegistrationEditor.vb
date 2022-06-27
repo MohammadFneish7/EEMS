@@ -144,7 +144,7 @@ Public Class frmRegistrationEditor
             If Not currentUser.hasPermision("dataexport") Then
                 MessageBox.Show("ليس لديك صلاحيّة لطباعة وصل تأمين.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Else
-                Dim reportViewer As New frmReportViewer("وصل تأمين", "بموجب هذا الوصل يستطيع السيّد/ة " & txtname.Text & " المحترم/ة تحصيل مبلغ التأمين وقدره " & txtpaidinsurance.Text.Trim & " ل.ل وذلك بعد انهاء الاشتراك رقم: " & regid, "", "")
+                Dim reportViewer As New XtraReportViewer("وصل تأمين", "بموجب هذا الوصل يستطيع السيّد/ة " & txtname.Text & " المحترم/ة تحصيل مبلغ التأمين وقدره " & txtpaidinsurance.Text.Trim & " ل.ل وذلك بعد انهاء الاشتراك رقم: " & regid, "", "")
                 reportViewer.ShowDialog()
             End If
         End If
@@ -391,7 +391,7 @@ Public Class frmRegistrationEditor
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
-        Dim reportViewer As New frmReportViewer("وصل تأمين", "بموجب هذا الوصل يستطيع السيّد/ة " & txtname.Text & " المحترم/ة تحصيل مبلغ التأمين وقدره " & txtpaidinsurance.Text.Trim & " ل.ل وذلك بعد انهاء الاشتراك رقم: " & regid, "", "")
+        Dim reportViewer As New XtraReportViewer("وصل تأمين", "بموجب هذا الوصل يستطيع السيّد/ة " & txtname.Text & " المحترم/ة تحصيل مبلغ التأمين وقدره " & txtpaidinsurance.Text.Trim & " ل.ل وذلك بعد انهاء الاشتراك رقم: " & regid, "", "")
         reportViewer.ShowDialog()
     End Sub
 

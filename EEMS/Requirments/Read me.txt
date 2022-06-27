@@ -1,5 +1,4 @@
-1. Install SQL Server and SQL Management studio 
-2. Install Crystal Report Runtime
-3. Open SQL Server Management studio and execute 'Database Build Query.sql'
-4. In Server Management studio Change the collation of the newly created database to 'Arabic_CI_AI'
-5. Open the applicaiton and enter the license u purchased
+1. Install SQL Server and SQL Management studio
+2. Open SQL Server Management studio and execute 'Database Build Query.sql'
+3. In Server Management studio Change the collation of the newly created database to 'Arabic_CI_AI'
+4. Open the applicaiton and enter the license u purchased

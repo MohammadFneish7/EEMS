@@ -655,7 +655,7 @@ Public Class frmCompanyReport
         cloneTable(ds.dtWorkingHours, dtWorkingHours)
         cloneTable(ds.dtEngineEfficiency, dtEngineEfficiency)
 
-        Dim frmRV As New frmMonthlyReportViewer(ds)
+        Dim frmRV As New XtraReportViewer(ds)
         frmRV.ShowDialog()
     End Sub
 

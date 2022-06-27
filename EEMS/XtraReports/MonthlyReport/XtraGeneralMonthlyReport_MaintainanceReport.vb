@@ -1,0 +1,3 @@
+﻿Public Class XtraGeneralMonthlyReport_MaintainanceReport
+
+End Class

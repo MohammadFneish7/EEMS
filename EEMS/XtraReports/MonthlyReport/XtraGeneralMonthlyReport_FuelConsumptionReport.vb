@@ -1,0 +1,3 @@
+﻿Public Class XtraGeneralMonthlyReport_FuelConsumptionReport
+
+End Class

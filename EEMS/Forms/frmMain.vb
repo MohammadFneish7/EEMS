@@ -685,7 +685,7 @@ Public Class frmMain
                 Return
             End If
             If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-                Dim frm As New frmReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
                 frm.ShowDialog()
             End If
         End If

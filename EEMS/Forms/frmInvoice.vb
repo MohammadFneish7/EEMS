@@ -111,7 +111,7 @@ Public Class frmInvoice
                 Dim ar As New Helper
                 ar.ds = New DataSet
                 ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked), "dt")
-                Dim frm As New frmReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
                 frm.ShowDialog()
             End If
         End If
@@ -353,7 +353,8 @@ Public Class frmInvoice
                             " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
                             " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي], " &
                             " ec.serial AS [سيريال العداد], " &
-                            " ch.dollarPrice AS [سعر الصرف] " &
+                            " ch.dollarPrice AS [سعر الصرف], " &
+                            " Format(ch.totaldollar,'N2') AS [مجموع دولار] " &
                         " FROM Registration r" &
                             " INNER JOIN Client c on r.clientid = c.ID" &
                             " INNER JOIN Package p on r.packageid = p.ID" &
@@ -361,7 +362,7 @@ Public Class frmInvoice
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
                         " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, c.mobile, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount, ec.serial, ch.dollarPrice"
+                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount, ec.serial, ch.dollarPrice,ch.totaldollar"
         If orderByCust Then
             q3 += " ORDER BY c.clientname"
         Else

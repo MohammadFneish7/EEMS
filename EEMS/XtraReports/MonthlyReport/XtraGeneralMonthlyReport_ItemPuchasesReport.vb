@@ -1,0 +1,3 @@
+﻿Public Class XtraGeneralMonthlyReport_ItemPuchasesReport
+
+End Class

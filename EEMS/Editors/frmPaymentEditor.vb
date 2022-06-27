@@ -181,7 +181,7 @@ Public Class frmPaymentEditor
                 Dim invoiceDate As String = dtp.Value.ToString
                 Dim paymentAmmount As String = Convert.ToInt32(txtpayment.Text).ToString("N0")
                 Dim registrationId As String = regID
-                Dim reportViewer As New frmReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " &
+                Dim reportViewer As New XtraReportViewer("ايصال  قبض", "وصلنا من السيّد/ة " &
                                                     clientName & " المحترم/ة  بتاريخ " & invoiceDate &
                                                     " مبلغ وقدره " & paymentAmmount & " ل.ل عن الاشتراك رقم " &
                                                     registrationId & ".", "", "")
