@@ -21,10 +21,6 @@ Partial Public Class XtraClientsCreditsReport
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XtraClientsCreditsReport))
         Me.Area3 = New DevExpress.XtraReports.UI.DetailBand()
-        Me.Area1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
-        Me.Area2 = New DevExpress.XtraReports.UI.PageHeaderBand()
-        Me.Area4 = New DevExpress.XtraReports.UI.ReportFooterBand()
-        Me.Area5 = New DevExpress.XtraReports.UI.PageFooterBand()
         Me.client1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.ampere1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.netvalue1 = New DevExpress.XtraReports.UI.XRLabel()
@@ -33,11 +29,14 @@ Partial Public Class XtraClientsCreditsReport
         Me.notes1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.insurance1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Line27 = New DevExpress.XtraReports.UI.XRLine()
+        Me.Area1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.PrintDate1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.Text13 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Picture1 = New DevExpress.XtraReports.UI.XRPictureBox()
         Me.Text22 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Area2 = New DevExpress.XtraReports.UI.PageHeaderBand()
         Me.Text1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text8 = New DevExpress.XtraReports.UI.XRLabel()
@@ -45,6 +44,8 @@ Partial Public Class XtraClientsCreditsReport
         Me.Text10 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text11 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text12 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Area4 = New DevExpress.XtraReports.UI.ReportFooterBand()
+        Me.Area5 = New DevExpress.XtraReports.UI.PageFooterBand()
         Me.PageNumber1 = New DevExpress.XtraReports.UI.XRPageInfo()
         Me.Line15 = New DevExpress.XtraReports.UI.XRCrossBandLine()
         Me.Line20 = New DevExpress.XtraReports.UI.XRCrossBandLine()
@@ -54,7 +55,8 @@ Partial Public Class XtraClientsCreditsReport
         Me.Line24 = New DevExpress.XtraReports.UI.XRCrossBandLine()
         Me.Box2 = New DevExpress.XtraReports.UI.XRCrossBandBox()
         Me.DataSetInvoices1 = New EEMS.DataSetInvoices()
-        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
+        Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
         CType(Me.DataSetInvoices1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -66,39 +68,6 @@ Partial Public Class XtraClientsCreditsReport
         Me.Area3.Name = "Area3"
         Me.Area3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Area3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'Area1
-        '
-        Me.Area1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel1, Me.PrintDate1, Me.Text13, Me.Picture1, Me.Text22, Me.Text3})
-        Me.Area1.HeightF = 75.0!
-        Me.Area1.KeepTogether = True
-        Me.Area1.Name = "Area1"
-        Me.Area1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Area1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'Area2
-        '
-        Me.Area2.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Text1, Me.Text2, Me.Text8, Me.Text9, Me.Text10, Me.Text11, Me.Text12})
-        Me.Area2.HeightF = 65.0!
-        Me.Area2.Name = "Area2"
-        Me.Area2.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Area2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'Area4
-        '
-        Me.Area4.HeightF = 0!
-        Me.Area4.KeepTogether = True
-        Me.Area4.Name = "Area4"
-        Me.Area4.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Area4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'Area5
-        '
-        Me.Area5.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.PageNumber1})
-        Me.Area5.HeightF = 48.0!
-        Me.Area5.Name = "Area5"
-        Me.Area5.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Area5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'client1
         '
@@ -221,6 +190,25 @@ Partial Public Class XtraClientsCreditsReport
         Me.Line27.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line27.SizeF = New System.Drawing.SizeF(794.6248!, 2.083333!)
         '
+        'Area1
+        '
+        Me.Area1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel1, Me.PrintDate1, Me.Text13, Me.Picture1, Me.Text22, Me.Text3})
+        Me.Area1.HeightF = 75.0!
+        Me.Area1.KeepTogether = True
+        Me.Area1.Name = "Area1"
+        Me.Area1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.Area1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel1
+        '
+        Me.XrLabel1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OrgInfodt].[OrgName]")})
+        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(592.3334!, 48.68056!)
+        Me.XrLabel1.Multiline = True
+        Me.XrLabel1.Name = "XrLabel1"
+        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel1.SizeF = New System.Drawing.SizeF(138.5417!, 15.41665!)
+        Me.XrLabel1.Text = "XrLabel1"
+        '
         'PrintDate1
         '
         Me.PrintDate1.BackColor = System.Drawing.Color.Transparent
@@ -302,6 +290,14 @@ Partial Public Class XtraClientsCreditsReport
         Me.Text3.StylePriority.UseTextAlignment = False
         Me.Text3.Text = "التاريخ:"
         Me.Text3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        '
+        'Area2
+        '
+        Me.Area2.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Text1, Me.Text2, Me.Text8, Me.Text9, Me.Text10, Me.Text11, Me.Text12})
+        Me.Area2.HeightF = 65.0!
+        Me.Area2.Name = "Area2"
+        Me.Area2.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.Area2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Text1
         '
@@ -415,6 +411,22 @@ Partial Public Class XtraClientsCreditsReport
         Me.Text12.Text = "ملاحظات"
         Me.Text12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
+        'Area4
+        '
+        Me.Area4.HeightF = 0!
+        Me.Area4.KeepTogether = True
+        Me.Area4.Name = "Area4"
+        Me.Area4.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.Area4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'Area5
+        '
+        Me.Area5.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.PageNumber1})
+        Me.Area5.HeightF = 48.0!
+        Me.Area5.Name = "Area5"
+        Me.Area5.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
+        Me.Area5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
         'PageNumber1
         '
         Me.PageNumber1.BackColor = System.Drawing.Color.Transparent
@@ -502,7 +514,7 @@ Partial Public Class XtraClientsCreditsReport
         Me.Box2.AnchorVertical = CType((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top Or DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom), DevExpress.XtraReports.UI.VerticalAnchorStyles)
         Me.Box2.BorderWidth = 1.0!
         Me.Box2.EndBand = Me.Area4
-        Me.Box2.EndPointFloat = New DevExpress.Utils.PointFloat(8.333333!, -21.09723!)
+        Me.Box2.EndPointFloat = New DevExpress.Utils.PointFloat(8.333333!, 0!)
         Me.Box2.Name = "Box2"
         Me.Box2.StartBand = Me.Area2
         Me.Box2.StartPointFloat = New DevExpress.Utils.PointFloat(8.333333!, 35.41667!)
@@ -513,19 +525,19 @@ Partial Public Class XtraClientsCreditsReport
         Me.DataSetInvoices1.DataSetName = "DataSetInvoices"
         Me.DataSetInvoices1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'XrLabel1
+        'TopMarginBand1
         '
-        Me.XrLabel1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OrgInfodt].[OrgName]")})
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(592.3334!, 48.68056!)
-        Me.XrLabel1.Multiline = True
-        Me.XrLabel1.Name = "XrLabel1"
-        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(138.5417!, 15.41665!)
-        Me.XrLabel1.Text = "XrLabel1"
+        Me.TopMarginBand1.HeightF = 25.0!
+        Me.TopMarginBand1.Name = "TopMarginBand1"
+        '
+        'BottomMarginBand1
+        '
+        Me.BottomMarginBand1.HeightF = 25.0!
+        Me.BottomMarginBand1.Name = "BottomMarginBand1"
         '
         'XtraClientsCreditsReport
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Area3, Me.Area1, Me.Area2, Me.Area4, Me.Area5})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Area3, Me.Area1, Me.Area2, Me.Area4, Me.Area5, Me.TopMarginBand1, Me.BottomMarginBand1})
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.DataSetInvoices1})
         Me.CrossBandControls.AddRange(New DevExpress.XtraReports.UI.XRCrossBandControl() {Me.Line15, Me.Line20, Me.Line21, Me.Line22, Me.Line23, Me.Line24, Me.Box2})
         Me.DataMember = "creditsdt"
@@ -575,4 +587,6 @@ Partial Public Class XtraClientsCreditsReport
     Friend WithEvents Line24 As DevExpress.XtraReports.UI.XRCrossBandLine
     Friend WithEvents Box2 As DevExpress.XtraReports.UI.XRCrossBandBox
     Friend WithEvents DataSetInvoices1 As DataSetInvoices
+    Friend WithEvents TopMarginBand1 As DevExpress.XtraReports.UI.TopMarginBand
+    Friend WithEvents BottomMarginBand1 As DevExpress.XtraReports.UI.BottomMarginBand
 End Class
