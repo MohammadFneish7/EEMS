@@ -21,6 +21,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XtraInvoicesWithoutCreditReport))
         Me.Area3 = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
@@ -126,7 +127,6 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.DataSetInvoices1 = New EEMS.DataSetInvoices()
-        Me.XrLine1 = New DevExpress.XtraReports.UI.XRLine()
         CType(Me.DataSetInvoices1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -138,6 +138,12 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Area3.Name = "Area3"
         Me.Area3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Area3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLine1
+        '
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 305.3749!)
+        Me.XrLine1.Name = "XrLine1"
+        Me.XrLine1.SizeF = New System.Drawing.SizeF(125.9583!, 12.5!)
         '
         'XrLabel3
         '
@@ -154,6 +160,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.XrLabel3.StylePriority.UseTextAlignment = False
         Me.XrLabel3.Text = "XrLabel3"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel3.TextFormatString = "{0:N0}"
         '
         'XrLabel2
         '
@@ -503,6 +510,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.kiloprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kiloprice1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
         Me.kiloprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kiloprice1.TextFormatString = "{0:N0}"
         '
         'Text10
         '
@@ -537,6 +545,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.kilono1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kilono1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
         Me.kilono1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kilono1.TextFormatString = "{0:N0}"
         '
         'Text11
         '
@@ -571,6 +580,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.fee1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.fee1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
         Me.fee1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.fee1.TextFormatString = "{0:N0}"
         '
         'Text12
         '
@@ -606,6 +616,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.total1.SizeF = New System.Drawing.SizeF(91.66666!, 21.87491!)
         Me.total1.StylePriority.UseTextAlignment = False
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.total1.TextFormatString = "{0:N0}"
         '
         'Text13
         '
@@ -1239,6 +1250,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.discount2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.discount2.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
         Me.discount2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.discount2.TextFormatString = "{0:N0}"
         '
         'Text44
         '
@@ -1625,6 +1637,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.dollarprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.dollarprice1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
         Me.dollarprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.dollarprice1.TextFormatString = "{0:N0}"
         '
         'Text51
         '
@@ -1776,12 +1789,6 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         '
         Me.DataSetInvoices1.DataSetName = "DataSetInvoices"
         Me.DataSetInvoices1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'XrLine1
-        '
-        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 305.3749!)
-        Me.XrLine1.Name = "XrLine1"
-        Me.XrLine1.SizeF = New System.Drawing.SizeF(125.9583!, 12.5!)
         '
         'XtraInvoicesWithoutCreditReport
         '

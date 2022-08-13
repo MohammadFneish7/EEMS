@@ -83,6 +83,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
         Me.total1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.total1.SizeF = New System.Drawing.SizeF(392.7083!, 18.75!)
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.total1.TextFormatString = "{0:N0}"
         '
         'Text4
         '

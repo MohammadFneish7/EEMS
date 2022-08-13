@@ -113,6 +113,7 @@ Partial Public Class XtraGeneralMonthlyReport_WorkingHoursReport
         Me.workingHours1.Name = "workingHours1"
         Me.workingHours1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.workingHours1.SizeF = New System.Drawing.SizeF(335.4166!, 18.75!)
+        Me.workingHours1.Text = "{0:N0}"
         Me.workingHours1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Area1

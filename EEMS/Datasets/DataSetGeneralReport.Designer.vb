@@ -1027,33 +1027,33 @@ Partial Public Class DataSetGeneralReport
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Overloads Function AdddtGeneralRow( _
                     ByVal selDate As String,  _
-                    ByVal newAccounts As Integer,  _
-                    ByVal endedAcounts As Integer,  _
-                    ByVal activeAcounts As Integer,  _
-                    ByVal workingHours As Integer,  _
-                    ByVal sellKW As Integer,  _
-                    ByVal totalKW As Integer,  _
+                    ByVal newAccounts As Long,  _
+                    ByVal endedAcounts As Long,  _
+                    ByVal activeAcounts As Long,  _
+                    ByVal workingHours As Long,  _
+                    ByVal sellKW As Long,  _
+                    ByVal totalKW As Long,  _
                     ByVal totalFees As Long,  _
                     ByVal totalRound As Long,  _
-                    ByVal totalDiscount As Integer,  _
-                    ByVal countInvoices As Integer,  _
+                    ByVal totalDiscount As Long,  _
+                    ByVal countInvoices As Long,  _
                     ByVal totalInvoices As Long,  _
-                    ByVal paidInvoices As Integer,  _
-                    ByVal remainingInvoices As Integer,  _
+                    ByVal paidInvoices As Long,  _
+                    ByVal remainingInvoices As Long,  _
                     ByVal totalInvoicesTillDate As Long,  _
                     ByVal totalPaidInvoicesTillDate As Long,  _
                     ByVal totalRemainInvoicesTillDate As Long,  _
                     ByVal totalPastCredit As Long,  _
                     ByVal totalItemsBuy As Long,  _
-                    ByVal totalFuelLeter As Integer,  _
+                    ByVal totalFuelLeter As Long,  _
                     ByVal totalFuelPrice As Long,  _
                     ByVal totalFuelConsumption As Long,  _
                     ByVal totalMaintainancePrice As Long,  _
-                    ByVal boxInInvoices As Integer,  _
-                    ByVal boxInCredits As Integer,  _
-                    ByVal boxInInsurance As Integer,  _
-                    ByVal boxInOther As Integer,  _
-                    ByVal boxOuttotal As Integer,  _
+                    ByVal boxInInvoices As Long,  _
+                    ByVal boxInCredits As Long,  _
+                    ByVal boxInInsurance As Long,  _
+                    ByVal boxInOther As Long,  _
+                    ByVal boxOuttotal As Long,  _
                     ByVal boxOutInsurance As Long,  _
                     ByVal boxNetThisMonth As Long,  _
                     ByVal boxNetLastMonth As Long,  _
@@ -1121,31 +1121,31 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columnselDate = New Global.System.Data.DataColumn("selDate", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnselDate)
-            Me.columnnewAccounts = New Global.System.Data.DataColumn("newAccounts", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnnewAccounts = New Global.System.Data.DataColumn("newAccounts", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnewAccounts)
-            Me.columnendedAcounts = New Global.System.Data.DataColumn("endedAcounts", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnendedAcounts = New Global.System.Data.DataColumn("endedAcounts", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnendedAcounts)
-            Me.columnactiveAcounts = New Global.System.Data.DataColumn("activeAcounts", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnactiveAcounts = New Global.System.Data.DataColumn("activeAcounts", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnactiveAcounts)
-            Me.columnworkingHours = New Global.System.Data.DataColumn("workingHours", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnworkingHours = New Global.System.Data.DataColumn("workingHours", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnworkingHours)
-            Me.columnsellKW = New Global.System.Data.DataColumn("sellKW", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnsellKW = New Global.System.Data.DataColumn("sellKW", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsellKW)
-            Me.columntotalKW = New Global.System.Data.DataColumn("totalKW", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotalKW = New Global.System.Data.DataColumn("totalKW", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalKW)
             Me.columntotalFees = New Global.System.Data.DataColumn("totalFees", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalFees)
             Me.columntotalRound = New Global.System.Data.DataColumn("totalRound", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalRound)
-            Me.columntotalDiscount = New Global.System.Data.DataColumn("totalDiscount", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotalDiscount = New Global.System.Data.DataColumn("totalDiscount", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalDiscount)
-            Me.columncountInvoices = New Global.System.Data.DataColumn("countInvoices", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columncountInvoices = New Global.System.Data.DataColumn("countInvoices", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncountInvoices)
             Me.columntotalInvoices = New Global.System.Data.DataColumn("totalInvoices", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalInvoices)
-            Me.columnpaidInvoices = New Global.System.Data.DataColumn("paidInvoices", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnpaidInvoices = New Global.System.Data.DataColumn("paidInvoices", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpaidInvoices)
-            Me.columnremainingInvoices = New Global.System.Data.DataColumn("remainingInvoices", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnremainingInvoices = New Global.System.Data.DataColumn("remainingInvoices", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnremainingInvoices)
             Me.columntotalInvoicesTillDate = New Global.System.Data.DataColumn("totalInvoicesTillDate", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalInvoicesTillDate)
@@ -1157,7 +1157,7 @@ Partial Public Class DataSetGeneralReport
             MyBase.Columns.Add(Me.columntotalPastCredit)
             Me.columntotalItemsBuy = New Global.System.Data.DataColumn("totalItemsBuy", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalItemsBuy)
-            Me.columntotalFuelLeter = New Global.System.Data.DataColumn("totalFuelLeter", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotalFuelLeter = New Global.System.Data.DataColumn("totalFuelLeter", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalFuelLeter)
             Me.columntotalFuelPrice = New Global.System.Data.DataColumn("totalFuelPrice", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalFuelPrice)
@@ -1165,15 +1165,15 @@ Partial Public Class DataSetGeneralReport
             MyBase.Columns.Add(Me.columntotalFuelConsumption)
             Me.columntotalMaintainancePrice = New Global.System.Data.DataColumn("totalMaintainancePrice", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalMaintainancePrice)
-            Me.columnboxInInvoices = New Global.System.Data.DataColumn("boxInInvoices", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnboxInInvoices = New Global.System.Data.DataColumn("boxInInvoices", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxInInvoices)
-            Me.columnboxInCredits = New Global.System.Data.DataColumn("boxInCredits", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnboxInCredits = New Global.System.Data.DataColumn("boxInCredits", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxInCredits)
-            Me.columnboxInInsurance = New Global.System.Data.DataColumn("boxInInsurance", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnboxInInsurance = New Global.System.Data.DataColumn("boxInInsurance", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxInInsurance)
-            Me.columnboxInOther = New Global.System.Data.DataColumn("boxInOther", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnboxInOther = New Global.System.Data.DataColumn("boxInOther", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxInOther)
-            Me.columnboxOuttotal = New Global.System.Data.DataColumn("boxOuttotal", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnboxOuttotal = New Global.System.Data.DataColumn("boxOuttotal", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxOuttotal)
             Me.columnboxOutInsurance = New Global.System.Data.DataColumn("boxOutInsurance", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxOutInsurance)
@@ -1412,7 +1412,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtWorkingHoursRow(ByVal ename As String, ByVal workingHours As Integer) As dtWorkingHoursRow
+        Public Overloads Function AdddtWorkingHoursRow(ByVal ename As String, ByVal workingHours As Long) As dtWorkingHoursRow
             Dim rowdtWorkingHoursRow As dtWorkingHoursRow = CType(Me.NewRow,dtWorkingHoursRow)
             Dim columnValuesArray() As Object = New Object() {ename, workingHours}
             rowdtWorkingHoursRow.ItemArray = columnValuesArray
@@ -1446,7 +1446,7 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columnename = New Global.System.Data.DataColumn("ename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnename)
-            Me.columnworkingHours = New Global.System.Data.DataColumn("workingHours", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnworkingHours = New Global.System.Data.DataColumn("workingHours", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnworkingHours)
         End Sub
         
@@ -1677,7 +1677,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtAmpereRow(ByVal title As String, ByVal count As Integer) As dtAmpereRow
+        Public Overloads Function AdddtAmpereRow(ByVal title As String, ByVal count As Long) As dtAmpereRow
             Dim rowdtAmpereRow As dtAmpereRow = CType(Me.NewRow,dtAmpereRow)
             Dim columnValuesArray() As Object = New Object() {title, count}
             rowdtAmpereRow.ItemArray = columnValuesArray
@@ -1711,7 +1711,7 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columntitle = New Global.System.Data.DataColumn("title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntitle)
-            Me.columncount = New Global.System.Data.DataColumn("count", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columncount = New Global.System.Data.DataColumn("count", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncount)
         End Sub
         
@@ -1952,7 +1952,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtAmperePerEngineRow(ByVal ename As String, ByVal title As String, ByVal count As Integer) As dtAmperePerEngineRow
+        Public Overloads Function AdddtAmperePerEngineRow(ByVal ename As String, ByVal title As String, ByVal count As Long) As dtAmperePerEngineRow
             Dim rowdtAmperePerEngineRow As dtAmperePerEngineRow = CType(Me.NewRow,dtAmperePerEngineRow)
             Dim columnValuesArray() As Object = New Object() {ename, title, count}
             rowdtAmperePerEngineRow.ItemArray = columnValuesArray
@@ -1989,7 +1989,7 @@ Partial Public Class DataSetGeneralReport
             MyBase.Columns.Add(Me.columnename)
             Me.columntitle = New Global.System.Data.DataColumn("title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntitle)
-            Me.columncount = New Global.System.Data.DataColumn("count", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columncount = New Global.System.Data.DataColumn("count", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncount)
         End Sub
         
@@ -2230,7 +2230,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtItemsRow(ByVal itemName As String, ByVal count As Integer, ByVal priceTotal As Integer) As dtItemsRow
+        Public Overloads Function AdddtItemsRow(ByVal itemName As String, ByVal count As Long, ByVal priceTotal As Long) As dtItemsRow
             Dim rowdtItemsRow As dtItemsRow = CType(Me.NewRow,dtItemsRow)
             Dim columnValuesArray() As Object = New Object() {itemName, count, priceTotal}
             rowdtItemsRow.ItemArray = columnValuesArray
@@ -2265,9 +2265,9 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columnitemName = New Global.System.Data.DataColumn("itemName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnitemName)
-            Me.columncount = New Global.System.Data.DataColumn("count", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columncount = New Global.System.Data.DataColumn("count", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncount)
-            Me.columnpriceTotal = New Global.System.Data.DataColumn("priceTotal", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnpriceTotal = New Global.System.Data.DataColumn("priceTotal", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpriceTotal)
         End Sub
         
@@ -2498,7 +2498,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtFuelConsumptionRow(ByVal ename As String, ByVal quantity As Integer) As dtFuelConsumptionRow
+        Public Overloads Function AdddtFuelConsumptionRow(ByVal ename As String, ByVal quantity As Long) As dtFuelConsumptionRow
             Dim rowdtFuelConsumptionRow As dtFuelConsumptionRow = CType(Me.NewRow,dtFuelConsumptionRow)
             Dim columnValuesArray() As Object = New Object() {ename, quantity}
             rowdtFuelConsumptionRow.ItemArray = columnValuesArray
@@ -2532,7 +2532,7 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columnename = New Global.System.Data.DataColumn("ename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnename)
-            Me.columnquantity = New Global.System.Data.DataColumn("quantity", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnquantity = New Global.System.Data.DataColumn("quantity", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnquantity)
         End Sub
         
@@ -2773,7 +2773,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtMaintainanceRow(ByVal ename As String, ByVal title As String, ByVal priceTotal As Integer) As dtMaintainanceRow
+        Public Overloads Function AdddtMaintainanceRow(ByVal ename As String, ByVal title As String, ByVal priceTotal As Long) As dtMaintainanceRow
             Dim rowdtMaintainanceRow As dtMaintainanceRow = CType(Me.NewRow,dtMaintainanceRow)
             Dim columnValuesArray() As Object = New Object() {ename, title, priceTotal}
             rowdtMaintainanceRow.ItemArray = columnValuesArray
@@ -2810,7 +2810,7 @@ Partial Public Class DataSetGeneralReport
             MyBase.Columns.Add(Me.columnename)
             Me.columntitle = New Global.System.Data.DataColumn("title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntitle)
-            Me.columnpriceTotal = New Global.System.Data.DataColumn("priceTotal", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnpriceTotal = New Global.System.Data.DataColumn("priceTotal", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpriceTotal)
         End Sub
         
@@ -3041,7 +3041,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtExpenditurePosRow(ByVal title As String, ByVal total As Integer) As dtExpenditurePosRow
+        Public Overloads Function AdddtExpenditurePosRow(ByVal title As String, ByVal total As Long) As dtExpenditurePosRow
             Dim rowdtExpenditurePosRow As dtExpenditurePosRow = CType(Me.NewRow,dtExpenditurePosRow)
             Dim columnValuesArray() As Object = New Object() {title, total}
             rowdtExpenditurePosRow.ItemArray = columnValuesArray
@@ -3075,7 +3075,7 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columntitle = New Global.System.Data.DataColumn("title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntitle)
-            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotal)
         End Sub
         
@@ -3306,7 +3306,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtExpenditureNegRow(ByVal title As String, ByVal total As Integer) As dtExpenditureNegRow
+        Public Overloads Function AdddtExpenditureNegRow(ByVal title As String, ByVal total As Long) As dtExpenditureNegRow
             Dim rowdtExpenditureNegRow As dtExpenditureNegRow = CType(Me.NewRow,dtExpenditureNegRow)
             Dim columnValuesArray() As Object = New Object() {title, total}
             rowdtExpenditureNegRow.ItemArray = columnValuesArray
@@ -3340,7 +3340,7 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columntitle = New Global.System.Data.DataColumn("title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntitle)
-            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotal)
         End Sub
         
@@ -3919,7 +3919,7 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AdddtEngineEfficiencyRow(ByVal ename As String, ByVal kw As Integer, ByVal kwp As Integer, ByVal mf As Integer, ByVal dis As Integer, ByVal rnd As Integer, ByVal totalInvoices As Integer, ByVal fuelConsuption As Integer, ByVal maintainace As Integer) As dtEngineEfficiencyRow
+        Public Overloads Function AdddtEngineEfficiencyRow(ByVal ename As String, ByVal kw As Long, ByVal kwp As Long, ByVal mf As Long, ByVal dis As Long, ByVal rnd As Long, ByVal totalInvoices As Long, ByVal fuelConsuption As Long, ByVal maintainace As Long) As dtEngineEfficiencyRow
             Dim rowdtEngineEfficiencyRow As dtEngineEfficiencyRow = CType(Me.NewRow,dtEngineEfficiencyRow)
             Dim columnValuesArray() As Object = New Object() {ename, kw, kwp, mf, dis, rnd, totalInvoices, fuelConsuption, maintainace}
             rowdtEngineEfficiencyRow.ItemArray = columnValuesArray
@@ -3960,21 +3960,21 @@ Partial Public Class DataSetGeneralReport
         Private Sub InitClass()
             Me.columnename = New Global.System.Data.DataColumn("ename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnename)
-            Me.columnkw = New Global.System.Data.DataColumn("kw", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnkw = New Global.System.Data.DataColumn("kw", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkw)
-            Me.columnkwp = New Global.System.Data.DataColumn("kwp", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnkwp = New Global.System.Data.DataColumn("kwp", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkwp)
-            Me.columnmf = New Global.System.Data.DataColumn("mf", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnmf = New Global.System.Data.DataColumn("mf", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmf)
-            Me.columndis = New Global.System.Data.DataColumn("dis", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columndis = New Global.System.Data.DataColumn("dis", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndis)
-            Me.columnrnd = New Global.System.Data.DataColumn("rnd", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnrnd = New Global.System.Data.DataColumn("rnd", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnrnd)
-            Me.columntotalInvoices = New Global.System.Data.DataColumn("totalInvoices", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotalInvoices = New Global.System.Data.DataColumn("totalInvoices", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotalInvoices)
-            Me.columnfuelConsuption = New Global.System.Data.DataColumn("fuelConsuption", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnfuelConsuption = New Global.System.Data.DataColumn("fuelConsuption", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfuelConsuption)
-            Me.columnmaintainace = New Global.System.Data.DataColumn("maintainace", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnmaintainace = New Global.System.Data.DataColumn("maintainace", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmaintainace)
         End Sub
         
@@ -4137,10 +4137,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property newAccounts() As Integer
+        Public Property newAccounts() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.newAccountsColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.newAccountsColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'newAccounts' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4152,10 +4152,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property endedAcounts() As Integer
+        Public Property endedAcounts() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.endedAcountsColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.endedAcountsColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'endedAcounts' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4167,10 +4167,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property activeAcounts() As Integer
+        Public Property activeAcounts() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.activeAcountsColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.activeAcountsColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'activeAcounts' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4182,10 +4182,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property workingHours() As Integer
+        Public Property workingHours() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.workingHoursColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.workingHoursColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'workingHours' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4197,10 +4197,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property sellKW() As Integer
+        Public Property sellKW() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.sellKWColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.sellKWColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'sellKW' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4212,10 +4212,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property totalKW() As Integer
+        Public Property totalKW() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.totalKWColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.totalKWColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'totalKW' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4257,10 +4257,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property totalDiscount() As Integer
+        Public Property totalDiscount() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.totalDiscountColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.totalDiscountColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'totalDiscount' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4272,10 +4272,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property countInvoices() As Integer
+        Public Property countInvoices() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.countInvoicesColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.countInvoicesColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'countInvoices' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4302,10 +4302,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property paidInvoices() As Integer
+        Public Property paidInvoices() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.paidInvoicesColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.paidInvoicesColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'paidInvoices' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4317,10 +4317,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property remainingInvoices() As Integer
+        Public Property remainingInvoices() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.remainingInvoicesColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.remainingInvoicesColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'remainingInvoices' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4408,10 +4408,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property totalFuelLeter() As Integer
+        Public Property totalFuelLeter() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.totalFuelLeterColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.totalFuelLeterColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'totalFuelLeter' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4468,10 +4468,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property boxInInvoices() As Integer
+        Public Property boxInInvoices() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.boxInInvoicesColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.boxInInvoicesColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'boxInInvoices' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4483,10 +4483,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property boxInCredits() As Integer
+        Public Property boxInCredits() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.boxInCreditsColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.boxInCreditsColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'boxInCredits' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4498,10 +4498,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property boxInInsurance() As Integer
+        Public Property boxInInsurance() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.boxInInsuranceColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.boxInInsuranceColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'boxInInsurance' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4513,10 +4513,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property boxInOther() As Integer
+        Public Property boxInOther() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.boxInOtherColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.boxInOtherColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'boxInOther' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -4528,10 +4528,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property boxOuttotal() As Integer
+        Public Property boxOuttotal() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtGeneral.boxOuttotalColumn),Integer)
+                    Return CType(Me(Me.tabledtGeneral.boxOuttotalColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'boxOuttotal' in table 'dtGeneral' is DBNull.", e)
                 End Try
@@ -5018,10 +5018,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property workingHours() As Integer
+        Public Property workingHours() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtWorkingHours.workingHoursColumn),Integer)
+                    Return CType(Me(Me.tabledtWorkingHours.workingHoursColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'workingHours' in table 'dtWorkingHours' is DBNull.", e)
                 End Try
@@ -5088,10 +5088,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property count() As Integer
+        Public Property count() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtAmpere.countColumn),Integer)
+                    Return CType(Me(Me.tabledtAmpere.countColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'count' in table 'dtAmpere' is DBNull.", e)
                 End Try
@@ -5173,10 +5173,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property count() As Integer
+        Public Property count() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtAmperePerEngine.countColumn),Integer)
+                    Return CType(Me(Me.tabledtAmperePerEngine.countColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'count' in table 'dtAmperePerEngine' is DBNull.", e)
                 End Try
@@ -5255,10 +5255,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property count() As Integer
+        Public Property count() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtItems.countColumn),Integer)
+                    Return CType(Me(Me.tabledtItems.countColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'count' in table 'dtItems' is DBNull.", e)
                 End Try
@@ -5270,10 +5270,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property priceTotal() As Integer
+        Public Property priceTotal() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtItems.priceTotalColumn),Integer)
+                    Return CType(Me(Me.tabledtItems.priceTotalColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'priceTotal' in table 'dtItems' is DBNull.", e)
                 End Try
@@ -5352,10 +5352,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property quantity() As Integer
+        Public Property quantity() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtFuelConsumption.quantityColumn),Integer)
+                    Return CType(Me(Me.tabledtFuelConsumption.quantityColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'quantity' in table 'dtFuelConsumption' is DBNull.", e)
                 End Try
@@ -5437,10 +5437,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property priceTotal() As Integer
+        Public Property priceTotal() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtMaintainance.priceTotalColumn),Integer)
+                    Return CType(Me(Me.tabledtMaintainance.priceTotalColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'priceTotal' in table 'dtMaintainance' is DBNull.", e)
                 End Try
@@ -5519,10 +5519,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property total() As Integer
+        Public Property total() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtExpenditurePos.totalColumn),Integer)
+                    Return CType(Me(Me.tabledtExpenditurePos.totalColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'total' in table 'dtExpenditurePos' is DBNull.", e)
                 End Try
@@ -5589,10 +5589,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property total() As Integer
+        Public Property total() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtExpenditureNeg.totalColumn),Integer)
+                    Return CType(Me(Me.tabledtExpenditureNeg.totalColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'total' in table 'dtExpenditureNeg' is DBNull.", e)
                 End Try
@@ -5756,10 +5756,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property kw() As Integer
+        Public Property kw() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.kwColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.kwColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'kw' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5771,10 +5771,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property kwp() As Integer
+        Public Property kwp() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.kwpColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.kwpColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'kwp' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5786,10 +5786,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property mf() As Integer
+        Public Property mf() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.mfColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.mfColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'mf' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5801,10 +5801,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property dis() As Integer
+        Public Property dis() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.disColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.disColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'dis' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5816,10 +5816,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property rnd() As Integer
+        Public Property rnd() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.rndColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.rndColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'rnd' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5831,10 +5831,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property totalInvoices() As Integer
+        Public Property totalInvoices() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.totalInvoicesColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.totalInvoicesColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'totalInvoices' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5846,10 +5846,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property fuelConsuption() As Integer
+        Public Property fuelConsuption() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.fuelConsuptionColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.fuelConsuptionColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'fuelConsuption' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try
@@ -5861,10 +5861,10 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property maintainace() As Integer
+        Public Property maintainace() As Long
             Get
                 Try 
-                    Return CType(Me(Me.tabledtEngineEfficiency.maintainaceColumn),Integer)
+                    Return CType(Me(Me.tabledtEngineEfficiency.maintainaceColumn),Long)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'maintainace' in table 'dtEngineEfficiency' is DBNull.", e)
                 End Try

@@ -116,6 +116,7 @@ Partial Public Class XtraClientAccountReport_PaymentSubReport
         Me.pvalue1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.pvalue1.SizeF = New System.Drawing.SizeF(104.375!, 15.34722!)
         Me.pvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.pvalue1.TextFormatString = "{0:N0}"
         '
         'notes1
         '
@@ -361,6 +362,7 @@ Partial Public Class XtraClientAccountReport_PaymentSubReport
         XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report
         Me.Sumofpvalue1.Summary = XrSummary1
         Me.Sumofpvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.Sumofpvalue1.TextFormatString = "{0:N0}"
         '
         'Text9
         '

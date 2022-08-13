@@ -201,6 +201,7 @@ Partial Public Class XtraEmptyCouterHistoryReport
         Me.lastvalue1.SizeF = New System.Drawing.SizeF(71.875!, 15.34722!)
         Me.lastvalue1.StylePriority.UseBorders = False
         Me.lastvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.lastvalue1.TextFormatString = "{0:N0}"
         '
         'newvalue1
         '
@@ -218,6 +219,7 @@ Partial Public Class XtraEmptyCouterHistoryReport
         Me.newvalue1.SizeF = New System.Drawing.SizeF(58.33334!, 15.34722!)
         Me.newvalue1.StylePriority.UseBorders = False
         Me.newvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
+        Me.newvalue1.TextFormatString = "{0:N0}"
         '
         'Line3
         '

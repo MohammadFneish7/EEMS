@@ -22,14 +22,23 @@ Partial Public Class XtraGeneralMonthlyReport
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XtraGeneralMonthlyReport))
         Me.Area3 = New DevExpress.XtraReports.UI.DetailBand()
         Me.Section3 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport2 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection1 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport3 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection2 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport1 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection3 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport4 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection4 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport5 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection5 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport6 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection6 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport7 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection7 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport8 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.DetailSection8 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport9 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.Area1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text1 = New DevExpress.XtraReports.UI.XRLabel()
@@ -163,15 +172,6 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DataSetGeneralReport1 = New EEMS.DataSetGeneralReport()
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
-        Me.Subreport2 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport3 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport1 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport4 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport5 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport6 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport7 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport8 = New DevExpress.XtraReports.UI.XRSubreport()
-        Me.Subreport9 = New DevExpress.XtraReports.UI.XRSubreport()
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -192,6 +192,14 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Section3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Section3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'Subreport2
+        '
+        Me.Subreport2.CanShrink = True
+        Me.Subreport2.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport2.Name = "Subreport2"
+        Me.Subreport2.ReportSource = New EEMS.XtraGeneralMonthlyReport_AmpereReport()
+        Me.Subreport2.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
+        '
         'DetailSection1
         '
         Me.DetailSection1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Subreport3})
@@ -200,6 +208,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection1.Name = "DetailSection1"
         Me.DetailSection1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'Subreport3
+        '
+        Me.Subreport3.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport3.Name = "Subreport3"
+        Me.Subreport3.ReportSource = New EEMS.XtraGeneralMonthlyReport_AmperePerEngineReport()
+        Me.Subreport3.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
         '
         'DetailSection2
         '
@@ -210,6 +225,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection2.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'Subreport1
+        '
+        Me.Subreport1.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport1.Name = "Subreport1"
+        Me.Subreport1.ReportSource = New EEMS.XtraGeneralMonthlyReport_WorkingHoursReport()
+        Me.Subreport1.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
+        '
         'DetailSection3
         '
         Me.DetailSection3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Subreport4})
@@ -218,6 +240,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection3.Name = "DetailSection3"
         Me.DetailSection3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'Subreport4
+        '
+        Me.Subreport4.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport4.Name = "Subreport4"
+        Me.Subreport4.ReportSource = New EEMS.XtraGeneralMonthlyReport_FuelConsumptionReport()
+        Me.Subreport4.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
         '
         'DetailSection4
         '
@@ -228,6 +257,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection4.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'Subreport5
+        '
+        Me.Subreport5.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport5.Name = "Subreport5"
+        Me.Subreport5.ReportSource = New EEMS.XtraGeneralMonthlyReport_MaintainanceReport()
+        Me.Subreport5.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
+        '
         'DetailSection5
         '
         Me.DetailSection5.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Subreport6})
@@ -236,6 +272,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection5.Name = "DetailSection5"
         Me.DetailSection5.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'Subreport6
+        '
+        Me.Subreport6.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport6.Name = "Subreport6"
+        Me.Subreport6.ReportSource = New EEMS.XtraGeneralMonthlyReport_EngineEfficiencyReport()
+        Me.Subreport6.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
         '
         'DetailSection6
         '
@@ -246,6 +289,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection6.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'Subreport7
+        '
+        Me.Subreport7.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport7.Name = "Subreport7"
+        Me.Subreport7.ReportSource = New EEMS.XtraGeneralMonthlyReport_ItemPuchasesReport()
+        Me.Subreport7.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
+        '
         'DetailSection7
         '
         Me.DetailSection7.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Subreport8})
@@ -255,6 +305,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection7.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
+        'Subreport8
+        '
+        Me.Subreport8.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport8.Name = "Subreport8"
+        Me.Subreport8.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExependitureIn()
+        Me.Subreport8.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
+        '
         'DetailSection8
         '
         Me.DetailSection8.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Subreport9})
@@ -263,6 +320,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection8.Name = "DetailSection8"
         Me.DetailSection8.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.DetailSection8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'Subreport9
+        '
+        Me.Subreport9.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
+        Me.Subreport9.Name = "Subreport9"
+        Me.Subreport9.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExpenditureOut()
+        Me.Subreport9.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
         '
         'Area1
         '
@@ -351,6 +415,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.newAccounts1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.newAccounts1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.newAccounts1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.newAccounts1.TextFormatString = "{0:N0}"
         '
         'Text3
         '
@@ -385,6 +450,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.endedAcounts1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.endedAcounts1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.endedAcounts1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.endedAcounts1.TextFormatString = "{0:N0}"
         '
         'Text4
         '
@@ -419,6 +485,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.activeAcounts1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.activeAcounts1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.activeAcounts1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.activeAcounts1.TextFormatString = "{0:N0}"
         '
         'Text5
         '
@@ -453,6 +520,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.workingHours1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.workingHours1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.workingHours1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.workingHours1.TextFormatString = "{0:N0}"
         '
         'Text6
         '
@@ -487,6 +555,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.sellKW1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.sellKW1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.sellKW1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.sellKW1.TextFormatString = "{0:N0}"
         '
         'Text7
         '
@@ -521,6 +590,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalKW1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalKW1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalKW1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalKW1.TextFormatString = "{0:N0}"
         '
         'Text8
         '
@@ -555,6 +625,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalFees1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalFees1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalFees1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalFees1.TextFormatString = "{0:N0}"
         '
         'Text9
         '
@@ -589,6 +660,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalRound1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalRound1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalRound1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalRound1.TextFormatString = "{0:N0}"
         '
         'Text10
         '
@@ -623,6 +695,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalDiscount1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalDiscount1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalDiscount1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalDiscount1.TextFormatString = "{0:N0}"
         '
         'Text11
         '
@@ -657,6 +730,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.countInvoices1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.countInvoices1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.countInvoices1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.countInvoices1.TextFormatString = "{0:N0}"
         '
         'Text12
         '
@@ -691,6 +765,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalInvoices1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalInvoices1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalInvoices1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalInvoices1.TextFormatString = "{0:N0}"
         '
         'Text13
         '
@@ -725,6 +800,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.paidInvoices1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.paidInvoices1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.paidInvoices1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.paidInvoices1.TextFormatString = "{0:N0}"
         '
         'Text14
         '
@@ -759,6 +835,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.remainingInvoices1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.remainingInvoices1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.remainingInvoices1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.remainingInvoices1.TextFormatString = "{0:N0}"
         '
         'Text15
         '
@@ -793,6 +870,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalInvoicesTillDate1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalInvoicesTillDate1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalInvoicesTillDate1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalInvoicesTillDate1.TextFormatString = "{0:N0}"
         '
         'Text16
         '
@@ -827,6 +905,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalPaidInvoicesTillDate1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalPaidInvoicesTillDate1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalPaidInvoicesTillDate1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalPaidInvoicesTillDate1.TextFormatString = "{0:N0}"
         '
         'Text17
         '
@@ -861,6 +940,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalRemainInvoicesTillDate1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalRemainInvoicesTillDate1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalRemainInvoicesTillDate1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalRemainInvoicesTillDate1.TextFormatString = "{0:N0}"
         '
         'Text18
         '
@@ -895,6 +975,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalPastCredit1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalPastCredit1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalPastCredit1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalPastCredit1.TextFormatString = "{0:N0}"
         '
         'Text19
         '
@@ -929,6 +1010,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalItemsBuy1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalItemsBuy1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalItemsBuy1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalItemsBuy1.TextFormatString = "{0:N0}"
         '
         'Text20
         '
@@ -963,6 +1045,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalFuelLeter1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalFuelLeter1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalFuelLeter1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalFuelLeter1.TextFormatString = "{0:N0}"
         '
         'Text21
         '
@@ -997,6 +1080,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalFuelPrice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalFuelPrice1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalFuelPrice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalFuelPrice1.TextFormatString = "{0:N0}"
         '
         'Text22
         '
@@ -1031,6 +1115,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalMaintainancePrice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalMaintainancePrice1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalMaintainancePrice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalMaintainancePrice1.TextFormatString = "{0:N0}"
         '
         'PrintDate1
         '
@@ -1585,6 +1670,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxInInvoices1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxInInvoices1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxInInvoices1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxInInvoices1.TextFormatString = "{0:N0}"
         '
         'boxInCredits1
         '
@@ -1601,6 +1687,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxInCredits1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxInCredits1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxInCredits1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxInCredits1.TextFormatString = "{0:N0}"
         '
         'boxInInsurance1
         '
@@ -1617,6 +1704,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxInInsurance1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxInInsurance1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxInInsurance1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxInInsurance1.TextFormatString = "{0:N0}"
         '
         'boxInOther1
         '
@@ -1633,6 +1721,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxInOther1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxInOther1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxInOther1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxInOther1.TextFormatString = "{0:N0}"
         '
         'boxOuttotal1
         '
@@ -1649,6 +1738,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxOuttotal1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxOuttotal1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxOuttotal1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxOuttotal1.TextFormatString = "{0:N0}"
         '
         'boxOutInsurance1
         '
@@ -1665,6 +1755,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxOutInsurance1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxOutInsurance1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxOutInsurance1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxOutInsurance1.TextFormatString = "{0:N0}"
         '
         'Text26
         '
@@ -1976,6 +2067,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxNetLastMonth1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxNetLastMonth1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxNetLastMonth1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxNetLastMonth1.TextFormatString = "{0:N0}"
         '
         'Text63
         '
@@ -2026,6 +2118,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxNetThisMonth1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxNetThisMonth1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxNetThisMonth1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxNetThisMonth1.TextFormatString = "{0:N0}"
         '
         'Text65
         '
@@ -2118,6 +2211,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxTotal1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxTotal1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.boxTotal1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.boxTotal1.TextFormatString = "{0:N0}"
         '
         'Text67
         '
@@ -2254,6 +2348,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.totalFuelConsumption1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalFuelConsumption1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
         Me.totalFuelConsumption1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalFuelConsumption1.TextFormatString = "{0:N0}"
         '
         'Area2
         '
@@ -2361,70 +2456,6 @@ Partial Public Class XtraGeneralMonthlyReport
         '
         Me.BottomMarginBand1.HeightF = 25.0!
         Me.BottomMarginBand1.Name = "BottomMarginBand1"
-        '
-        'Subreport2
-        '
-        Me.Subreport2.CanShrink = True
-        Me.Subreport2.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport2.Name = "Subreport2"
-        Me.Subreport2.ReportSource = New EEMS.XtraGeneralMonthlyReport_AmpereReport()
-        Me.Subreport2.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport3
-        '
-        Me.Subreport3.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport3.Name = "Subreport3"
-        Me.Subreport3.ReportSource = New EEMS.XtraGeneralMonthlyReport_AmperePerEngineReport()
-        Me.Subreport3.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport1
-        '
-        Me.Subreport1.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport1.Name = "Subreport1"
-        Me.Subreport1.ReportSource = New EEMS.XtraGeneralMonthlyReport_WorkingHoursReport()
-        Me.Subreport1.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport4
-        '
-        Me.Subreport4.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport4.Name = "Subreport4"
-        Me.Subreport4.ReportSource = New EEMS.XtraGeneralMonthlyReport_FuelConsumptionReport()
-        Me.Subreport4.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport5
-        '
-        Me.Subreport5.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport5.Name = "Subreport5"
-        Me.Subreport5.ReportSource = New EEMS.XtraGeneralMonthlyReport_MaintainanceReport()
-        Me.Subreport5.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport6
-        '
-        Me.Subreport6.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport6.Name = "Subreport6"
-        Me.Subreport6.ReportSource = New EEMS.XtraGeneralMonthlyReport_EngineEfficiencyReport()
-        Me.Subreport6.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport7
-        '
-        Me.Subreport7.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport7.Name = "Subreport7"
-        Me.Subreport7.ReportSource = New EEMS.XtraGeneralMonthlyReport_ItemPuchasesReport()
-        Me.Subreport7.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport8
-        '
-        Me.Subreport8.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport8.Name = "Subreport8"
-        Me.Subreport8.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExependitureIn()
-        Me.Subreport8.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
-        '
-        'Subreport9
-        '
-        Me.Subreport9.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
-        Me.Subreport9.Name = "Subreport9"
-        Me.Subreport9.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExpenditureOut()
-        Me.Subreport9.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
         '
         'XtraGeneralMonthlyReport
         '

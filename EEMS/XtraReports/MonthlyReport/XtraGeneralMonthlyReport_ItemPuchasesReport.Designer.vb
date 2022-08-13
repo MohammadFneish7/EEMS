@@ -87,6 +87,7 @@ Partial Public Class XtraGeneralMonthlyReport_ItemPuchasesReport
         Me.count1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.count1.SizeF = New System.Drawing.SizeF(265.625!, 18.75!)
         Me.count1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.count1.TextFormatString = "{0:N0}"
         '
         'priceTotal1
         '
@@ -103,6 +104,7 @@ Partial Public Class XtraGeneralMonthlyReport_ItemPuchasesReport
         Me.priceTotal1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.priceTotal1.SizeF = New System.Drawing.SizeF(230.2083!, 18.75!)
         Me.priceTotal1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.priceTotal1.TextFormatString = "{0:N0}"
         '
         'Text10
         '

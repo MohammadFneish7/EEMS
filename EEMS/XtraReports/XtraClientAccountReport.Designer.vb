@@ -1161,6 +1161,7 @@ Partial Public Class XtraClientAccountReport
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(123.9582!, 15.34722!)
         Me.XrLabel2.StylePriority.UseFont = False
         Me.XrLabel2.Text = "XrLabel2"
+        Me.XrLabel2.TextFormatString = "{0:N0}"
         '
         'Text24
         '

@@ -115,6 +115,7 @@ Partial Public Class XtraClientsCreditsReport
         Me.netvalue1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.netvalue1.SizeF = New System.Drawing.SizeF(95.83334!, 15.34722!)
         Me.netvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.netvalue1.TextFormatString = "{0:N0}"
         '
         'netpaid1
         '
@@ -130,6 +131,7 @@ Partial Public Class XtraClientsCreditsReport
         Me.netpaid1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.netpaid1.SizeF = New System.Drawing.SizeF(75.0!, 15.34722!)
         Me.netpaid1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.netpaid1.TextFormatString = "{0:N0}"
         '
         'netremainder1
         '
@@ -145,6 +147,7 @@ Partial Public Class XtraClientsCreditsReport
         Me.netremainder1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.netremainder1.SizeF = New System.Drawing.SizeF(75.0!, 15.34722!)
         Me.netremainder1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.netremainder1.TextFormatString = "{0:N0}"
         '
         'notes1
         '
@@ -176,6 +179,7 @@ Partial Public Class XtraClientsCreditsReport
         Me.insurance1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.insurance1.SizeF = New System.Drawing.SizeF(66.66666!, 15.34722!)
         Me.insurance1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.insurance1.TextFormatString = "{0:N0}"
         '
         'Line27
         '

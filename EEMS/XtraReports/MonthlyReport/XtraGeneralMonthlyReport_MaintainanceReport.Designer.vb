@@ -133,6 +133,7 @@ Partial Public Class XtraGeneralMonthlyReport_MaintainanceReport
         Me.priceTotal1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.priceTotal1.SizeF = New System.Drawing.SizeF(233.3333!, 18.75!)
         Me.priceTotal1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.priceTotal1.TextFormatString = "{0:N0}"
         '
         'Area1
         '

@@ -116,6 +116,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.totalInvoices1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.totalInvoices1.SizeF = New System.Drawing.SizeF(96.875!, 18.75!)
         Me.totalInvoices1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.totalInvoices1.TextFormatString = "{0:N0}"
         '
         'fuelConsuption1
         '
@@ -131,6 +132,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.fuelConsuption1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.fuelConsuption1.SizeF = New System.Drawing.SizeF(71.875!, 18.75!)
         Me.fuelConsuption1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.fuelConsuption1.TextFormatString = "{0:N0}"
         '
         'maintainace1
         '
@@ -146,6 +148,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.maintainace1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.maintainace1.SizeF = New System.Drawing.SizeF(95.83334!, 18.75!)
         Me.maintainace1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.maintainace1.TextFormatString = "{0:N0}"
         '
         'kw1
         '
@@ -161,6 +164,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.kw1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kw1.SizeF = New System.Drawing.SizeF(73.84717!, 18.75!)
         Me.kw1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kw1.TextFormatString = "{0:N0}"
         '
         'kwp1
         '
@@ -176,6 +180,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.kwp1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kwp1.SizeF = New System.Drawing.SizeF(64.58337!, 18.75!)
         Me.kwp1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kwp1.TextFormatString = "{0:N0}"
         '
         'mf1
         '
@@ -191,6 +196,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.mf1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.mf1.SizeF = New System.Drawing.SizeF(75.0!, 18.75!)
         Me.mf1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.mf1.TextFormatString = "{0:N0}"
         '
         'dis1
         '
@@ -206,6 +212,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.dis1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.dis1.SizeF = New System.Drawing.SizeF(64.58334!, 18.75!)
         Me.dis1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.dis1.TextFormatString = "{0:N0}"
         '
         'rnd1
         '
@@ -221,6 +228,7 @@ Partial Public Class XtraGeneralMonthlyReport_EngineEfficiencyReport
         Me.rnd1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.rnd1.SizeF = New System.Drawing.SizeF(72.91666!, 18.75!)
         Me.rnd1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.rnd1.TextFormatString = "{0:N0}"
         '
         'Area1
         '

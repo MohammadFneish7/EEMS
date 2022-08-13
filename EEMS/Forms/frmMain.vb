@@ -834,4 +834,8 @@ Public Class frmMain
         Dim frm As New frmChangeMonthlyFeePrice
         frm.ShowDialog()
     End Sub
+
+    Private Sub frmMain_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        Application.Exit()
+    End Sub
 End Class

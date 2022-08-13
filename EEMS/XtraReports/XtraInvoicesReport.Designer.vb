@@ -119,7 +119,6 @@ Partial Public Class XtraInvoicesReport
         Me.Line28 = New DevExpress.XtraReports.UI.XRLine()
         Me.Line29 = New DevExpress.XtraReports.UI.XRLine()
         Me.Text46 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.Text45 = New DevExpress.XtraReports.UI.XRLabel()
         Me.net_1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text48 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Line1 = New DevExpress.XtraReports.UI.XRLine()
@@ -137,6 +136,7 @@ Partial Public Class XtraInvoicesReport
         Me.Text52 = New DevExpress.XtraReports.UI.XRLabel()
         Me.credit2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text53 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.Text45 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Area1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
         Me.Area2 = New DevExpress.XtraReports.UI.PageHeaderBand()
         Me.Area4 = New DevExpress.XtraReports.UI.ReportFooterBand()
@@ -172,6 +172,7 @@ Partial Public Class XtraInvoicesReport
         Me.XrLabel3.StylePriority.UseTextAlignment = False
         Me.XrLabel3.Text = "XrLabel3"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.XrLabel3.TextFormatString = "{0:N0}"
         '
         'XrLabel2
         '
@@ -580,6 +581,7 @@ Partial Public Class XtraInvoicesReport
         Me.kiloprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kiloprice1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
         Me.kiloprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kiloprice1.TextFormatString = "{0:N0}"
         '
         'Text10
         '
@@ -614,6 +616,7 @@ Partial Public Class XtraInvoicesReport
         Me.kilono1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kilono1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
         Me.kilono1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kilono1.TextFormatString = "{0:N0}"
         '
         'Text11
         '
@@ -648,6 +651,7 @@ Partial Public Class XtraInvoicesReport
         Me.fee1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.fee1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
         Me.fee1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.fee1.TextFormatString = "{0:N0}"
         '
         'Text12
         '
@@ -682,6 +686,7 @@ Partial Public Class XtraInvoicesReport
         Me.total1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.total1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.total1.TextFormatString = "{0:N0}"
         '
         'Text13
         '
@@ -716,6 +721,7 @@ Partial Public Class XtraInvoicesReport
         Me.insure1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.insure1.SizeF = New System.Drawing.SizeF(66.66666!, 15.34722!)
         Me.insure1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.insure1.TextFormatString = "{0:N0}"
         '
         'Text14
         '
@@ -750,6 +756,7 @@ Partial Public Class XtraInvoicesReport
         Me.credit1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.credit1.SizeF = New System.Drawing.SizeF(58.33333!, 15.34722!)
         Me.credit1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.credit1.TextFormatString = "{0:N0}"
         '
         'Text15
         '
@@ -930,6 +937,7 @@ Partial Public Class XtraInvoicesReport
         Me.kiloprice2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kiloprice2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
         Me.kiloprice2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kiloprice2.TextFormatString = "{0:N0}"
         '
         'total2
         '
@@ -946,6 +954,7 @@ Partial Public Class XtraInvoicesReport
         Me.total2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.total2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
         Me.total2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.total2.TextFormatString = "{0:N0}"
         '
         'Text26
         '
@@ -1348,6 +1357,7 @@ Partial Public Class XtraInvoicesReport
         Me.discount1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.discount1.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
         Me.discount1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.discount1.TextFormatString = "{0:N0}"
         '
         'Text19
         '
@@ -1415,6 +1425,7 @@ Partial Public Class XtraInvoicesReport
         Me.discount2.SizeF = New System.Drawing.SizeF(72.91669!, 15.34723!)
         Me.discount2.StylePriority.UseFont = False
         Me.discount2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.discount2.TextFormatString = "{0:N0}"
         '
         'Text44
         '
@@ -1736,24 +1747,6 @@ Partial Public Class XtraInvoicesReport
         Me.Text46.Text = "تاريخ الطباعة:"
         Me.Text46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight
         '
-        'Text45
-        '
-        Me.Text45.BackColor = System.Drawing.Color.Silver
-        Me.Text45.BorderColor = System.Drawing.Color.Black
-        Me.Text45.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.Text45.BorderWidth = 1.0!
-        Me.Text45.CanGrow = False
-        Me.Text45.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Text45.ForeColor = System.Drawing.Color.Black
-        Me.Text45.LocationFloat = New DevExpress.Utils.PointFloat(425.0!, 312.5!)
-        Me.Text45.Name = "Text45"
-        Me.Text45.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.Text45.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
-        Me.Text45.SizeF = New System.Drawing.SizeF(46.44449!, 19.51389!)
-        Me.Text45.StylePriority.UseTextAlignment = False
-        Me.Text45.Text = " إجمالي:"
-        Me.Text45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        '
         'net_1
         '
         Me.net_1.BackColor = System.Drawing.Color.Silver
@@ -1772,6 +1765,7 @@ Partial Public Class XtraInvoicesReport
         XrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group
         Me.net_1.Summary = XrSummary1
         Me.net_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.net_1.TextFormatString = "{0:N0}"
         '
         'Text48
         '
@@ -1901,6 +1895,7 @@ Partial Public Class XtraInvoicesReport
         Me.dollarprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.dollarprice1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
         Me.dollarprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.dollarprice1.TextFormatString = "{0:N0}"
         '
         'Text51
         '
@@ -2017,6 +2012,7 @@ Partial Public Class XtraInvoicesReport
         Me.credit2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.credit2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
         Me.credit2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.credit2.TextFormatString = "{0:N0}"
         '
         'Text53
         '
@@ -2035,6 +2031,24 @@ Partial Public Class XtraInvoicesReport
         Me.Text53.StylePriority.UseTextAlignment = False
         Me.Text53.Text = "مكسورات:"
         Me.Text53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'Text45
+        '
+        Me.Text45.BackColor = System.Drawing.Color.Silver
+        Me.Text45.BorderColor = System.Drawing.Color.Black
+        Me.Text45.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.Text45.BorderWidth = 1.0!
+        Me.Text45.CanGrow = False
+        Me.Text45.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text45.ForeColor = System.Drawing.Color.Black
+        Me.Text45.LocationFloat = New DevExpress.Utils.PointFloat(425.0!, 312.5!)
+        Me.Text45.Name = "Text45"
+        Me.Text45.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.Text45.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.Text45.SizeF = New System.Drawing.SizeF(46.44449!, 19.51389!)
+        Me.Text45.StylePriority.UseTextAlignment = False
+        Me.Text45.Text = " إجمالي:"
+        Me.Text45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
         '
         'Area1
         '

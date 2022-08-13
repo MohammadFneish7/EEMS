@@ -46,7 +46,7 @@ Public Class frmCompanyReport
     End Function
 
     Private Function getTotalKW() As Long
-        Dim totalKW As Long = a.ExecuteScalar("SELECT IsNull(SUM([kilowattprice]*([currentvalue]-[previousvalue])),0) FROM CounterHistory coh WHERE coh.cyear=" & dtp1.Value.Year & " AND coh.cmonth=" & dtp1.Value.Month)
+        Dim totalKW As Long = a.ExecuteScalar("SELECT IsNull(SUM(Cast(kilowattprice AS BIGINT)*(currentvalue-previousvalue)),0) FROM CounterHistory coh WHERE coh.cyear=" & dtp1.Value.Year & " AND coh.cmonth=" & dtp1.Value.Month)
         btnTotalKW.Text = "اجمالي كيلوات" & vbNewLine & vbNewLine & totalKW.ToString("N0") & " ل.ل"
         Return totalKW
     End Function
@@ -257,7 +257,7 @@ Public Class frmCompanyReport
 
     Private Sub loadItemsReport()
         a.ds = New DataSet
-        a.GetData("select i.itemname as [الصنف], ISNUll(SUM(p.quantity),0) as [الكمية], ISNUll(SUM(p.pricetotal),0) as [اجمالي سعر ل.ل] From Purchases p JOIN Items i ON p.itemid = i.ID WHERE MONTH(p.indate) = " & dtp1.Value.Month & " AND YEAR(p.indate) = " & dtp1.Value.Year & " Group By i.itemname", "dt7")
+        a.GetData("select i.itemname as [الصنف], ISNUll(SUM(Cast(p.quantity AS BIGINT)),0) as [الكمية], ISNUll(SUM(Cast(p.pricetotal AS BIGINT)),0) as [اجمالي سعر ل.ل] From Purchases p JOIN Items i ON p.itemid = i.ID WHERE MONTH(p.indate) = " & dtp1.Value.Month & " AND YEAR(p.indate) = " & dtp1.Value.Year & " Group By i.itemname", "dt7")
         dtItems.Clear()
         dtItems.Merge(a.ds.Tables("dt7"))
 
@@ -277,7 +277,7 @@ Public Class frmCompanyReport
 
     Private Sub loadFuelConsumptionReport()
         a.ds = New DataSet
-        a.GetData("select e.ename as [اسم المولد], ISNUll(SUM(fc.quantity),0) as [الكمية] FROM FuelConsumption fc Join Engine e ON fc.engineid=e.ID  WHERE MONTH(fc.outdate) = " & dtp1.Value.Month & " AND YEAR(fc.outdate) = " & dtp1.Value.Year & " Group By e.ename", "dt8")
+        a.GetData("select e.ename as [اسم المولد], ISNUll(SUM(Cast(fc.quantity AS BIGINT)),0) as [الكمية] FROM FuelConsumption fc Join Engine e ON fc.engineid=e.ID  WHERE MONTH(fc.outdate) = " & dtp1.Value.Month & " AND YEAR(fc.outdate) = " & dtp1.Value.Year & " Group By e.ename", "dt8")
         dtFuelConsumption.Clear()
         dtFuelConsumption.Merge(a.ds.Tables("dt8"))
 
@@ -294,7 +294,7 @@ Public Class frmCompanyReport
 
     Private Sub loadMaintainanceReport()
         a.ds = New DataSet
-        a.GetData("select e.ename as [اسم المولد], m.mainaction as [نوع العمل], ISNUll(SUM(m.pricetotal),0) as [اجمالي سعر ل.ل] FROM Maintenance m Join Engine e ON m.engineid=e.ID  WHERE MONTH(m.indate) = " & dtp1.Value.Month & " AND YEAR(m.indate) = " & dtp1.Value.Year & " Group By m.mainaction ,e.ename", "dt9")
+        a.GetData("select e.ename as [اسم المولد], m.mainaction as [نوع العمل], ISNUll(SUM(Cast(m.pricetotal AS BIGINT)),0) as [اجمالي سعر ل.ل] FROM Maintenance m Join Engine e ON m.engineid=e.ID  WHERE MONTH(m.indate) = " & dtp1.Value.Month & " AND YEAR(m.indate) = " & dtp1.Value.Year & " Group By m.mainaction ,e.ename", "dt9")
         dtMaintainance.Clear()
         dtMaintainance.Merge(a.ds.Tables("dt9"))
 
@@ -312,7 +312,7 @@ Public Class frmCompanyReport
 
     Private Sub loadExpenditureAllReport()
         a.ds = New DataSet
-        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount),0) as [اجمالي ل.ل] FROM Expenditure e WHERE MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt10")
+        a.GetData("select e.title as [العنوان], ISNUll(SUM(Cast(e.amount AS BIGINT)),0) as [اجمالي ل.ل] FROM Expenditure e WHERE MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt10")
         dtExpenditureAll.Clear()
         dtExpenditureAll.Merge(a.ds.Tables("dt10"))
 
@@ -329,7 +329,7 @@ Public Class frmCompanyReport
 
     Private Sub loadExpenditurePositivesReport()
         a.ds = New DataSet
-        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount>0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt12")
+        a.GetData("select e.title as [العنوان], ISNUll(SUM(Cast(e.amount AS BIGINT)),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount>0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt12")
         dtExpenditurePositives.Clear()
         dtExpenditurePositives.Merge(a.ds.Tables("dt12"))
 
@@ -348,9 +348,9 @@ Public Class frmCompanyReport
         a.ds = New DataSet
 
         If asAbsolute Then
-            a.GetData("select e.title as [العنوان], ABS(ISNUll(SUM(e.amount),0)) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt13")
+            a.GetData("select e.title as [العنوان], ABS(ISNUll(SUM(Cast(e.amount AS BIGINT)),0)) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt13")
         Else
-            a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt13")
+            a.GetData("select e.title as [العنوان], ISNUll(SUM(Cast(e.amount AS BIGINT)),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt13")
         End If
 
         dtExpenditureNegatives.Clear()
@@ -486,7 +486,7 @@ Public Class frmCompanyReport
                         " 	( " &
                         " 		select e.ename as Enginex, 0 as KW, 0 as KWP, 0 as MF, 0 as DIS, 0 as RND, 0 as D FROM Engine e where e.id not in (select e.id from Engine e Left Join ElectricBox eb On eb.engineid = e.id Left join ECounter ec on ec.boxid = eb.ID Left join Registration r on r.counterid=ec.ID Left join CounterHistory ch on ch.regid = r.id Where ch.cmonth = " & dtp1.Value.Month & " AND ch.cyear = " & dtp1.Value.Year & " ) " &
                         " 		Union " &
-                        " 		select e.ename, ISNUll(SUM(ch.currentvalue - ch.previousvalue),0) as totalkw, ISNUll(SUM((ch.currentvalue - ch.previousvalue) * kilowattprice),0) as totalkwP, ISNUll(sum(Cast(ch.monthlyfee AS BIGINT)),0) as totalMF, ISNUll(SUM(ch.discount),0) as totalDis, ISNUll(SUM(ch.roundvalue),0) as totalRnd, ISNUll(sum(Cast(ch.total AS BIGINT)),0) as totalInvoice " &
+                        " 		select e.ename, ISNUll(SUM(ch.currentvalue - ch.previousvalue),0) as totalkw, ISNUll(SUM((ch.currentvalue - ch.previousvalue) * Cast(ch.kilowattprice AS BIGINT)),0) as totalkwP, ISNUll(sum(Cast(ch.monthlyfee AS BIGINT)),0) as totalMF, ISNUll(SUM(ch.discount),0) as totalDis, ISNUll(SUM(ch.roundvalue),0) as totalRnd, ISNUll(sum(Cast(ch.total AS BIGINT)),0) as totalInvoice " &
                         " 		FROM Engine e " &
                         " 		Left Join ElectricBox eb On eb.engineid = e.id " &
                         " 				Left join ECounter ec on ec.boxid = eb.ID " &

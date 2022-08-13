@@ -130,6 +130,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.total1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.total1.SizeF = New System.Drawing.SizeF(83.33334!, 22.84722!)
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.total1.TextFormatString = "{0:N0}"
         '
         'fee1
         '
@@ -162,6 +163,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.counterdiff1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.counterdiff1.SizeF = New System.Drawing.SizeF(77.08334!, 22.84722!)
         Me.counterdiff1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.counterdiff1.TextFormatString = "{0:N0}"
         '
         'kilowattprice1
         '
@@ -178,6 +180,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.kilowattprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.kilowattprice1.SizeF = New System.Drawing.SizeF(66.66666!, 22.84722!)
         Me.kilowattprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.kilowattprice1.TextFormatString = "{0:N0}"
         '
         'requiredkilo1
         '
@@ -194,6 +197,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.requiredkilo1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.requiredkilo1.SizeF = New System.Drawing.SizeF(77.08334!, 22.84722!)
         Me.requiredkilo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.requiredkilo1.TextFormatString = "{0:N0}"
         '
         'Line1
         '
@@ -224,6 +228,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.discount1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.discount1.SizeF = New System.Drawing.SizeF(62.5!, 22.84722!)
         Me.discount1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.discount1.TextFormatString = "{0:N0}"
         '
         'required1
         '
@@ -240,6 +245,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.required1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.required1.SizeF = New System.Drawing.SizeF(62.5!, 22.84722!)
         Me.required1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.required1.TextFormatString = "{0:N0}"
         '
         'paid1
         '
@@ -256,6 +262,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.paid1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.paid1.SizeF = New System.Drawing.SizeF(62.5!, 22.84722!)
         Me.paid1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.paid1.TextFormatString = "{0:N0}"
         '
         'remained1
         '
@@ -272,6 +279,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.remained1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.remained1.SizeF = New System.Drawing.SizeF(62.5!, 22.84722!)
         Me.remained1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
+        Me.remained1.TextFormatString = "{0:N0}"
         '
         'ReportHeaderArea1
         '
@@ -567,6 +575,7 @@ Partial Public Class XtraClientAccountReport_CreditSubReport
         Me.SharedtotalCredit_1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.SharedtotalCredit_1.SizeF = New System.Drawing.SizeF(123.9583!, 16.66667!)
         Me.SharedtotalCredit_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.SharedtotalCredit_1.TextFormatString = "{0:N0}"
         '
         'ReportFooterSection2
         '
