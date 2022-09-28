@@ -118,31 +118,31 @@ Public Class frmCompanyReport
     End Function
 
     Private Function getTotalFuelPurhasesLetersValue() As Long
-        Dim totalPurchaseLiterValue As Long = a.ExecuteScalar("select ISNUll(SUM(fp.pricetotal),0) as total FROM FuelPurchases fp WHERE MONTH(fp.indate) = " & dtp1.Value.Month & " AND YEAR(fp.indate) = " & dtp1.Value.Year)
+        Dim totalPurchaseLiterValue As Long = a.ExecuteScalar("select ISNUll(SUM(Cast(fp.pricetotal AS BIGINT)),0) as total FROM FuelPurchases fp WHERE MONTH(fp.indate) = " & dtp1.Value.Month & " AND YEAR(fp.indate) = " & dtp1.Value.Year)
         btnTotalFuelLeter.Text = "اجمالي شراء محروقات / ليتر" & vbNewLine & vbNewLine & totalPurchaseLiterValue.ToString("N0") & " ليتر"
         Return totalPurchaseLiterValue
     End Function
 
     Private Function getTotalFuelPurhasesPriceValue() As Long
-        Dim totalPurchasePriceValue As Long = a.ExecuteScalar("select ISNUll(SUM(fp.quantity),0) as total FROM FuelPurchases fp WHERE MONTH(fp.indate) = " & dtp1.Value.Month & " AND YEAR(fp.indate) = " & dtp1.Value.Year)
+        Dim totalPurchasePriceValue As Long = a.ExecuteScalar("select ISNUll(SUM(Cast(fp.quantity AS BIGINT)),0) as total FROM FuelPurchases fp WHERE MONTH(fp.indate) = " & dtp1.Value.Month & " AND YEAR(fp.indate) = " & dtp1.Value.Year)
         btnTotalFuelPrice.Text = "اجمالي شراء محروقات / سعر" & vbNewLine & vbNewLine & totalPurchasePriceValue.ToString("N0") & " ل.ل"
         Return totalPurchasePriceValue
     End Function
 
     Private Function getTotalMaintainanceValue() As Long
-        Dim totalMaintainancePriceValue As Long = a.ExecuteScalar("select ISNUll(SUM(m.pricetotal),0) as total FROM Maintenance m WHERE MONTH(m.indate) = " & dtp1.Value.Month & " AND YEAR(m.indate) = " & dtp1.Value.Year)
+        Dim totalMaintainancePriceValue As Long = a.ExecuteScalar("select ISNUll(SUM(Cast(m.pricetotal AS BIGINT)),0) as total FROM Maintenance m WHERE MONTH(m.indate) = " & dtp1.Value.Month & " AND YEAR(m.indate) = " & dtp1.Value.Year)
         btnTotalMaintainance.Text = "اجمالي صيانة + غيار زيت" & vbNewLine & vbNewLine & totalMaintainancePriceValue.ToString("N0") & " ل.ل"
         Return totalMaintainancePriceValue
     End Function
 
     Private Function getTotalPurhasesValue() As Long
-        Dim totalPurchaseValue As Long = a.ExecuteScalar("select ISNUll(SUM(p.pricetotal),0) as total from Purchases p WHERE MONTH(p.indate) = " & dtp1.Value.Month & " AND YEAR(p.indate) = " & dtp1.Value.Year)
+        Dim totalPurchaseValue As Long = a.ExecuteScalar("select ISNUll(SUM(Cast(p.pricetotal AS BIGINT)),0) as total from Purchases p WHERE MONTH(p.indate) = " & dtp1.Value.Month & " AND YEAR(p.indate) = " & dtp1.Value.Year)
         btnTotalPurchases.Text = "اجمالي شراء أصناف" & vbNewLine & vbNewLine & totalPurchaseValue.ToString("N0") & " ل.ل"
         Return totalPurchaseValue
     End Function
 
     Private Function getTotalFuelConsumptionValue() As Long
-        Dim totalFuelConsumptionValue As Long = a.ExecuteScalar("select ISNUll(SUM(fc.quantity),0)  FROM FuelConsumption fc Join Engine e ON fc.engineid=e.ID  WHERE MONTH(fc.outdate) = " & dtp1.Value.Month & " AND YEAR(fc.outdate) = " & dtp1.Value.Year)
+        Dim totalFuelConsumptionValue As Long = a.ExecuteScalar("select ISNUll(SUM(Cast(fc.quantity AS BIGINT)),0)  FROM FuelConsumption fc Join Engine e ON fc.engineid=e.ID  WHERE MONTH(fc.outdate) = " & dtp1.Value.Month & " AND YEAR(fc.outdate) = " & dtp1.Value.Year)
         btnTotalFuelConsumption.Text = "إجمالي إستهلاك محروقات / ليتر" & vbNewLine & vbNewLine & totalFuelConsumptionValue.ToString("N0") & " ليتر"
         Return totalFuelConsumptionValue
     End Function
