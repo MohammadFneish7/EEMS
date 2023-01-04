@@ -110,8 +110,8 @@ Public Class frmInvoice
                 year = DateTimePicker1.Value.Year
                 Dim ar As New Helper
                 ar.ds = New DataSet
-                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked), "dt")
-                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
+                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar), "dt")
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo)
                 frm.ShowDialog()
             End If
         End If
@@ -290,7 +290,9 @@ Public Class frmInvoice
 
     End Function
 
-    Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16, withCredits As Boolean, Optional ByVal orderByCust As Boolean = False, Optional ByVal creditsByCust As Boolean = False) As String
+    Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16,
+                                                    withCredits As Boolean, Optional ByVal orderByCust As Boolean = False,
+                                                    Optional creditsByCust As Boolean = False, Optional allToDollar As Boolean = False) As String
         Dim d As New Date(y, m, 1)
         d = d.AddMonths(1)
 
@@ -310,6 +312,12 @@ Public Class frmInvoice
             End If
         End If
 
+        Dim devideByDollarPricePrefix As String = "CAST("
+        Dim devideByDollarPrice As String = " AS Decimal(18,2))/ch.dollarprice"
+        If Not allToDollar Then
+            devideByDollarPricePrefix = String.Empty
+            devideByDollarPrice = String.Empty
+        End If
 
         Dim q1 As String = "SELECT r.ID AS [المعرّف], " &
                             "ch.ID AS [معرّف القيمة], " &
@@ -325,36 +333,37 @@ Public Class frmInvoice
                             " ch.currentvalue AS [القيمة الحاليّة], " &
                             " r.insurance AS [تأمين], "
 
-        Dim q2 As String = " (SELECT " &
+        Dim q2 As String = $" {devideByDollarPricePrefix}(SELECT " &
                            "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.regid = r.ID " &
                            " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
                            " - " &
                            " (SELECT ISNULL(SUM(pyy.pvalue),  0) " &
                            " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " &
                            " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
-                           " ) AS [مكسورات], "
+                           $" ){devideByDollarPrice} AS [مكسورات], "
 
         If creditsByCust Then
-            q2 = "(Select (SELECT ISNULL(SUM(coh.total),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & ")))) AS [مكسورات],"
+            q2 = $"{devideByDollarPricePrefix}(Select (SELECT ISNULL(SUM(coh.total),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & $")))){devideByDollarPrice} AS [مكسورات],"
             'q2 = " (SELECT " &
             '    " (SELECT ISNULL(SUM(coh.total),  0)-ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID " &
             '               " LEFT OUTER JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
             '               " ) AS [مكسورات], "
         End If
 
+
         Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &
                             " (b.code + ec.code) AS [رمز مفتاح], " &
-                            " ch.monthlyfee AS [رسم اشتراك], " &
+                            $" {devideByDollarPricePrefix}ch.monthlyfee{devideByDollarPrice} AS [رسم اشتراك], " &
                             " (ch.currentvalue-ch.previousvalue) AS [فرق عداد], " &
-                            " ch.kilowattprice AS [سعر الكيلو], " &
-                            " (((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue) AS [مطلوب كيلو], " &
-                            " total AS [المجموع], " &
-                            " discount AS [حسم], " &
-                            " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع], " &
-                            " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي], " &
+                            $" {devideByDollarPricePrefix}ch.kilowattprice{devideByDollarPrice} AS [سعر الكيلو], " &
+                            $" {devideByDollarPricePrefix}(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + roundvalue){devideByDollarPrice} AS [مطلوب كيلو], " &
+                            $" {devideByDollarPricePrefix}total{devideByDollarPrice} AS [المجموع], " &
+                            $" {devideByDollarPricePrefix}discount{devideByDollarPrice} AS [حسم], " &
+                            $" {devideByDollarPricePrefix}ISNULL(SUM(pyy.pvalue), 0){devideByDollarPrice}  AS [مدفوع], " &
+                            $" {devideByDollarPricePrefix}(total - ISNULL(SUM(pyy.pvalue), 0)){devideByDollarPrice} AS [باقي], " &
                             " ec.serial AS [سيريال العداد], " &
                             " ch.dollarPrice AS [سعر الصرف], " &
-                            " Format(ch.totaldollar,'N2') AS [مجموع دولار] " &
+                            " ch.totaldollar AS [مجموع دولار] " &
                         " FROM Registration r" &
                             " INNER JOIN Client c on r.clientid = c.ID" &
                             " INNER JOIN Package p on r.packageid = p.ID" &
@@ -368,6 +377,7 @@ Public Class frmInvoice
         Else
             q3 += " ORDER BY cl.fullname, b.code, ec.code"
         End If
+
         If withCredits Then
             Return q1 + q2 + q3
         Else

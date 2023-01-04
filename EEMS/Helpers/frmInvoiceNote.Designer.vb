@@ -30,6 +30,10 @@ Partial Class frmInvoiceNote
         Me.chkverbose = New System.Windows.Forms.CheckBox()
         Me.chkOrderByCust = New System.Windows.Forms.CheckBox()
         Me.chkCreditByCust = New System.Windows.Forms.CheckBox()
+        Me.chkdollarprice = New System.Windows.Forms.CheckBox()
+        Me.chkdollartotal = New System.Windows.Forms.CheckBox()
+        Me.chkalltodollar = New System.Windows.Forms.CheckBox()
+        Me.chkaddkilo = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -63,7 +67,7 @@ Partial Class frmInvoiceNote
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 168)
+        Me.Button1.Location = New System.Drawing.Point(15, 251)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(357, 36)
         Me.Button1.TabIndex = 3
@@ -73,18 +77,18 @@ Partial Class frmInvoiceNote
         'chkverbose
         '
         Me.chkverbose.AutoSize = True
-        Me.chkverbose.Location = New System.Drawing.Point(222, 90)
+        Me.chkverbose.Location = New System.Drawing.Point(221, 136)
         Me.chkverbose.Name = "chkverbose"
         Me.chkverbose.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkverbose.Size = New System.Drawing.Size(145, 17)
+        Me.chkverbose.Size = New System.Drawing.Size(146, 17)
         Me.chkverbose.TabIndex = 4
-        Me.chkverbose.Text = "طباعة التأمين والمكسورات"
+        Me.chkverbose.Text = "إضافة التأمين والمكسورات"
         Me.chkverbose.UseVisualStyleBackColor = True
         '
         'chkOrderByCust
         '
         Me.chkOrderByCust.AutoSize = True
-        Me.chkOrderByCust.Location = New System.Drawing.Point(249, 113)
+        Me.chkOrderByCust.Location = New System.Drawing.Point(249, 90)
         Me.chkOrderByCust.Name = "chkOrderByCust"
         Me.chkOrderByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkOrderByCust.Size = New System.Drawing.Size(118, 17)
@@ -95,7 +99,7 @@ Partial Class frmInvoiceNote
         'chkCreditByCust
         '
         Me.chkCreditByCust.AutoSize = True
-        Me.chkCreditByCust.Location = New System.Drawing.Point(166, 136)
+        Me.chkCreditByCust.Location = New System.Drawing.Point(166, 113)
         Me.chkCreditByCust.Name = "chkCreditByCust"
         Me.chkCreditByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkCreditByCust.Size = New System.Drawing.Size(201, 17)
@@ -103,12 +107,60 @@ Partial Class frmInvoiceNote
         Me.chkCreditByCust.Text = "جمع مكسورات الزبون من كل اشتراكاته"
         Me.chkCreditByCust.UseVisualStyleBackColor = True
         '
+        'chkdollarprice
+        '
+        Me.chkdollarprice.AutoSize = True
+        Me.chkdollarprice.Location = New System.Drawing.Point(233, 182)
+        Me.chkdollarprice.Name = "chkdollarprice"
+        Me.chkdollarprice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkdollarprice.Size = New System.Drawing.Size(134, 17)
+        Me.chkdollarprice.TabIndex = 7
+        Me.chkdollarprice.Text = "إضافة سعر صرف الدولار"
+        Me.chkdollarprice.UseVisualStyleBackColor = True
+        '
+        'chkdollartotal
+        '
+        Me.chkdollartotal.AutoSize = True
+        Me.chkdollartotal.Location = New System.Drawing.Point(238, 228)
+        Me.chkdollartotal.Name = "chkdollartotal"
+        Me.chkdollartotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkdollartotal.Size = New System.Drawing.Size(129, 17)
+        Me.chkdollartotal.TabIndex = 8
+        Me.chkdollartotal.Text = "إضافة المجموع بالدولار"
+        Me.chkdollartotal.UseVisualStyleBackColor = True
+        '
+        'chkalltodollar
+        '
+        Me.chkalltodollar.AutoSize = True
+        Me.chkalltodollar.Location = New System.Drawing.Point(93, 205)
+        Me.chkalltodollar.Name = "chkalltodollar"
+        Me.chkalltodollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkalltodollar.Size = New System.Drawing.Size(274, 17)
+        Me.chkalltodollar.TabIndex = 9
+        Me.chkalltodollar.Text = "تحويل كامل الفاتورة الى دولار على سعر صرف الفاتورة"
+        Me.chkalltodollar.UseVisualStyleBackColor = True
+        '
+        'chkaddkilo
+        '
+        Me.chkaddkilo.AutoSize = True
+        Me.chkaddkilo.Location = New System.Drawing.Point(250, 159)
+        Me.chkaddkilo.Name = "chkaddkilo"
+        Me.chkaddkilo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkaddkilo.Size = New System.Drawing.Size(117, 17)
+        Me.chkaddkilo.TabIndex = 10
+        Me.chkaddkilo.Text = "إضافة سعر الكيلوات"
+        Me.chkaddkilo.UseVisualStyleBackColor = True
+        '
         'frmInvoiceNote
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 216)
+        Me.ClientSize = New System.Drawing.Size(381, 302)
+        Me.Controls.Add(Me.chkaddkilo)
+        Me.Controls.Add(Me.chkalltodollar)
+        Me.Controls.Add(Me.chkdollartotal)
+        Me.Controls.Add(Me.chkdollarprice)
         Me.Controls.Add(Me.chkCreditByCust)
         Me.Controls.Add(Me.chkOrderByCust)
         Me.Controls.Add(Me.chkverbose)
@@ -134,4 +186,8 @@ Partial Class frmInvoiceNote
     Friend WithEvents chkverbose As System.Windows.Forms.CheckBox
     Friend WithEvents chkOrderByCust As CheckBox
     Friend WithEvents chkCreditByCust As CheckBox
+    Friend WithEvents chkdollarprice As CheckBox
+    Friend WithEvents chkdollartotal As CheckBox
+    Friend WithEvents chkalltodollar As CheckBox
+    Friend WithEvents chkaddkilo As CheckBox
 End Class

@@ -940,18 +940,18 @@ Partial Public Class DataSetInvoices
                     ByVal pvalue As String,  _
                     ByVal cvalue As String,  _
                     ByVal insure As Integer,  _
-                    ByVal credit As Integer,  _
+                    ByVal credit As Double,  _
                     ByVal notes As String,  _
                     ByVal cmonth As String,  _
                     ByVal specialcode As String,  _
-                    ByVal fee As Integer,  _
+                    ByVal fee As Double,  _
                     ByVal diff As Integer,  _
-                    ByVal kiloprice As Integer,  _
-                    ByVal kilono As Integer,  _
-                    ByVal total As Integer,  _
-                    ByVal discount As String,  _
-                    ByVal paid As Integer,  _
-                    ByVal remaining As Integer,  _
+                    ByVal kiloprice As Double,  _
+                    ByVal kilono As Double,  _
+                    ByVal total As Double,  _
+                    ByVal discount As Double,  _
+                    ByVal paid As Double,  _
+                    ByVal remaining As Double,  _
                     ByVal serial As String,  _
                     ByVal dollarprice As Integer,  _
                     ByVal totaldollar As Double) As invoicesdtRow
@@ -1041,7 +1041,7 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columncvalue)
             Me.columninsure = New Global.System.Data.DataColumn("insure", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columninsure)
-            Me.columncredit = New Global.System.Data.DataColumn("credit", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columncredit = New Global.System.Data.DataColumn("credit", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncredit)
             Me.columnnotes = New Global.System.Data.DataColumn("notes", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnotes)
@@ -1049,21 +1049,21 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columncmonth)
             Me.columnspecialcode = New Global.System.Data.DataColumn("specialcode", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnspecialcode)
-            Me.columnfee = New Global.System.Data.DataColumn("fee", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnfee = New Global.System.Data.DataColumn("fee", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnfee)
             Me.columndiff = New Global.System.Data.DataColumn("diff", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndiff)
-            Me.columnkiloprice = New Global.System.Data.DataColumn("kiloprice", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnkiloprice = New Global.System.Data.DataColumn("kiloprice", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkiloprice)
-            Me.columnkilono = New Global.System.Data.DataColumn("kilono", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnkilono = New Global.System.Data.DataColumn("kilono", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnkilono)
-            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columntotal = New Global.System.Data.DataColumn("total", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotal)
-            Me.columndiscount = New Global.System.Data.DataColumn("discount", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            Me.columndiscount = New Global.System.Data.DataColumn("discount", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columndiscount)
-            Me.columnpaid = New Global.System.Data.DataColumn("paid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnpaid = New Global.System.Data.DataColumn("paid", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpaid)
-            Me.columnremaining = New Global.System.Data.DataColumn("remaining", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnremaining = New Global.System.Data.DataColumn("remaining", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnremaining)
             Me.columnserial = New Global.System.Data.DataColumn("serial", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnserial)
@@ -1084,9 +1084,17 @@ Partial Public Class DataSetInvoices
             Me.columncvalue.Caption = "requiredkilopay"
             Me.columninsure.Caption = "fees"
             Me.columncredit.Caption = "total"
+            Me.columncredit.DefaultValue = CType(0R,Double)
             Me.columnnotes.Caption = "insurance"
             Me.columncmonth.Caption = "credits"
             Me.columnspecialcode.Caption = "collector"
+            Me.columnfee.DefaultValue = CType(0R,Double)
+            Me.columnkiloprice.DefaultValue = CType(0R,Double)
+            Me.columnkilono.DefaultValue = CType(0R,Double)
+            Me.columntotal.DefaultValue = CType(0R,Double)
+            Me.columndiscount.DefaultValue = CType(0R,Double)
+            Me.columnpaid.DefaultValue = CType(0R,Double)
+            Me.columnremaining.DefaultValue = CType(0R,Double)
             Me.columndollarprice.DefaultValue = CType(0,Integer)
             Me.columntotaldollar.DefaultValue = CType(0R,Double)
         End Sub
@@ -4243,10 +4251,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property credit() As Integer
+        Public Property credit() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.creditColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.creditColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'credit' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4303,10 +4311,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property fee() As Integer
+        Public Property fee() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.feeColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.feeColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'fee' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4333,10 +4341,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property kiloprice() As Integer
+        Public Property kiloprice() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.kilopriceColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.kilopriceColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'kiloprice' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4348,10 +4356,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property kilono() As Integer
+        Public Property kilono() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.kilonoColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.kilonoColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'kilono' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4363,10 +4371,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property total() As Integer
+        Public Property total() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.totalColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.totalColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'total' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4378,10 +4386,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property discount() As String
+        Public Property discount() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.discountColumn),String)
+                    Return CType(Me(Me.tableinvoicesdt.discountColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'discount' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4393,10 +4401,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property paid() As Integer
+        Public Property paid() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.paidColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.paidColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'paid' in table 'invoicesdt' is DBNull.", e)
                 End Try
@@ -4408,10 +4416,10 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property remaining() As Integer
+        Public Property remaining() As Double
             Get
                 Try 
-                    Return CType(Me(Me.tableinvoicesdt.remainingColumn),Integer)
+                    Return CType(Me(Me.tableinvoicesdt.remainingColumn),Double)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'remaining' in table 'invoicesdt' is DBNull.", e)
                 End Try

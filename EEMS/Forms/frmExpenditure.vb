@@ -3,6 +3,8 @@ Imports System.Threading
 Imports System.Globalization
 Imports DevExpress.XtraGrid
 Imports DevExpress.XtraEditors
+Imports DevExpress.XtraGrid.Views.Base
+Imports DevExpress.XtraGrid.Views.Grid
 
 Public Class frmExpenditure
 
@@ -29,6 +31,7 @@ Public Class frmExpenditure
         Try
             GridView1.Columns(0).SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Count
             GridView1.Columns(0).SummaryItem.DisplayFormat = "{0} أسطر"
+            GridView1.Columns(4).MaxWidth = 50
         Catch ex As Exception
         End Try
 
@@ -77,7 +80,7 @@ Public Class frmExpenditure
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim frm As New frmExpenditureEditor(True)
         Dim dr As DialogResult = frm.ShowDialog
-        If dr =DialogResult.OK Then
+        If dr = DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -85,9 +88,9 @@ Public Class frmExpenditure
     Private Sub loadData()
         a.ds = New DataSet
         If chkSelectAll.Checked Then
-            a.GetData("Select ID as المعرّف,expdate as [التاريخ],title as العنوان,amount as [القيمة ل.ل],party as الجهة,detail as تفصيل,paymentRef as [مرجعيّة فاتورة] FROM Expenditure ORDER BY expdate DESC")
+            a.GetData("Select ID as المعرّف,expdate as [التاريخ],title as العنوان,IIF(currency=0, amount, amount_dollar) as [القيمة],IIF(currency=0, 'ل.ل', '$') as [العُملة],party as الجهة,detail as تفصيل,paymentRef as [مرجعيّة فاتورة] FROM Expenditure ORDER BY expdate DESC")
         Else
-            a.GetData("Select ID as المعرّف,expdate as [التاريخ],title as العنوان,amount as [القيمة ل.ل],party as الجهة,detail as تفصيل,paymentRef as [مرجعيّة فاتورة] FROM Expenditure e where e.expdate >='" & dtp1.Value.ToShortDateString & "' and e.expdate <='" & dtp2.Value.ToShortDateString & "' ORDER BY expdate DESC")
+            a.GetData("Select ID as المعرّف,expdate as [التاريخ],title as العنوان,IIF(currency=0, amount, amount_dollar) as [القيمة],IIF(currency=0, 'ل.ل', '$') as [العُملة],party as الجهة,detail as تفصيل,paymentRef as [مرجعيّة فاتورة] FROM Expenditure e where e.expdate >='" & dtp1.Value.ToShortDateString & "' and e.expdate <='" & dtp2.Value.ToShortDateString & "' ORDER BY expdate DESC")
         End If
 
         bs.DataSource = a.ds.Tables(0)
@@ -103,7 +106,7 @@ Public Class frmExpenditure
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim frm As New frmExpenditureEditor(False)
         Dim dr As DialogResult = frm.ShowDialog
-        If dr =DialogResult.OK Then
+        If dr = DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -112,6 +115,15 @@ Public Class frmExpenditure
         Dim CompanyRepor As New frmCompanyReport
         CompanyRepor.ShowDialog()
     End Sub
+
+    Private Sub btnExchange_Click(sender As Object, e As EventArgs) Handles btnExchange.Click
+        Dim frm As New frmExchange()
+        Dim dr As DialogResult = frm.ShowDialog
+        If dr = DialogResult.OK Then
+            loadData()
+        End If
+    End Sub
+
 
     Private Sub btnExportExcell_Click(sender As Object, e As EventArgs) Handles btnExportExcell.Click
         If Not currentUser.hasPermision("dataexport") Then
@@ -136,9 +148,8 @@ Public Class frmExpenditure
 
     Private Sub GridView1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridView1.KeyDown
         If e.KeyCode = 46 Then
-
             Dim tok As New frmTokenizer
-            If tok.ShowDialog =DialogResult.OK Then
+            If tok.ShowDialog = DialogResult.OK Then
                 If Not tok.tokenAccepted Then
                     Return
                 End If
@@ -148,7 +159,7 @@ Public Class frmExpenditure
 
             Try
                 Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                If dr =DialogResult.Yes Then
+                If dr = DialogResult.Yes Then
                     Dim todeleteIds As String = "("
                     For Each row As Integer In GridView1.GetSelectedRows
                         todeleteIds = todeleteIds & GridView1.GetRowCellValue(row, GridView1.Columns(0)).ToString & ","
@@ -169,13 +180,18 @@ Public Class frmExpenditure
     End Sub
 
     Private Sub GridView1_SelectionChanged(sender As Object, e As DevExpress.Data.SelectionChangedEventArgs) Handles GridView1.SelectionChanged
-        Dim sum As Integer = 0
+        Dim sum As Long = 0
+        Dim sum_dollar As Decimal = 0
         For Each row As Integer In GridView1.GetSelectedRows
-            sum = sum + Integer.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(3)).ToString)
+            If GridView1.GetRowCellValue(row, GridView1.Columns(4)).ToString() = "$" Then
+                sum_dollar = sum_dollar + Decimal.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(3)).ToString)
+            Else
+                sum = sum + Decimal.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(3)).ToString)
+            End If
         Next
         Dim count As Integer = GridView1.GetSelectedRows.Count
         lblCount.Text = count.ToString("N0")
-        lblSum.Text = sum.ToString("N0") & " ل.ل"
+        lblSum.Text = sum.ToString("N0") & " ل.ل / " & sum_dollar.ToString("#,##0.##") & " $"
     End Sub
 
     Private Sub btnShowPrint_Click(sender As Object, e As EventArgs) Handles btnShowPrint.Click
@@ -223,21 +239,34 @@ Public Class frmExpenditure
             'e.DisplayText = e.Value & " ل.ل"
             e.Column.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
             e.Column.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-            e.Column.DisplayFormat.FormatString = "N0"
+            e.Column.DisplayFormat.FormatString = "#,##0.##"
         ElseIf index = 0 Then
             e.Column.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
         End If
     End Sub
 
+    Private Sub GridView1_RowCellStyle(sender As Object, e As Views.Grid.RowCellStyleEventArgs) Handles GridView1.RowCellStyle
+        If e.RowHandle >= 0 Then
+            If GridView1.IsRowSelected(e.RowHandle) Then
+                e.Appearance.BackColor = Color.FromArgb(245, 245, 245)
+            Else
+                If e.Column.AbsoluteIndex = 4 Then
+                    If GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(4)) = "$" Then
+                        e.Appearance.BackColor = Color.LightGreen
+                    Else
+                        e.Appearance.BackColor = Color.FromArgb(140, 245, 255)
+                    End If
+                Else
+                    If GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(3)) < 0 Then
+                        e.Appearance.BackColor = Color.FromArgb(255, 192, 192)
+                    Else
+                        e.Appearance.BackColor = Color.FromArgb(192, 255, 192)
+                    End If
+                End If
+            End If
+        End If
 
-    'Private Sub GridView1_RowCellStyle(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs) Handles GridView1.RowCellStyle
-    '    If e.RowHandle >= 0 Then
-    '        If GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(3)) < 0 Then
-    '            e.Appearance.BackColor = Color.FromArgb(255, 192, 192)
-    '        Else
-    '            e.Appearance.BackColor = Color.FromArgb(192, 255, 192)
-    '        End If
 
-    '    End If
-    'End Sub
+
+    End Sub
 End Class

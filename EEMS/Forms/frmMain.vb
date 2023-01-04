@@ -679,13 +679,13 @@ Public Class frmMain
             Dim Year As Integer = frmdtp.dtp.Value.Year
             Dim ar As New Helper
             ar.ds = New DataSet
-            ar.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True), "dt")
+            ar.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.alltodollar), "dt")
             If ar.ds.Tables(0).Rows.Count = 0 Then
                 MsgBox("لا يوجد فواتير لهذا الشهر لطباعتها")
                 Return
             End If
             If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose)
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo)
                 frm.ShowDialog()
             End If
         End If

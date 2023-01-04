@@ -132,7 +132,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         '
         'Area3
         '
-        Me.Area3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLine1, Me.XrLabel3, Me.XrLabel2, Me.XrLabel1, Me.motor1, Me.Text1, Me.notes1, Me.Text2, Me.client1, Me.Text3, Me.boxlocation1, Me.Text4, Me.specialcode1, Me.Text5, Me.ampere1, Me.Text6, Me.pvalue1, Me.Text7, Me.cvalue1, Me.Text8, Me.diff1, Me.Text9, Me.kiloprice1, Me.Text10, Me.kilono1, Me.Text11, Me.fee1, Me.Text12, Me.total1, Me.Text13, Me.cmonth1, Me.Text16, Me.collecter1, Me.cmonth2, Me.motor2, Me.client2, Me.specialcode2, Me.ampere2, Me.diff2, Me.kiloprice2, Me.total2, Me.Text26, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text17, Me.Text20, Me.Text21, Me.Text22, Me.Text24, Me.Text25, Me.Text35, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.discount1, Me.Text19, Me.Text42, Me.Text43, Me.discount2, Me.Text44, Me.Line2, Me.Line3, Me.Line4, Me.Line5, Me.Line8, Me.Line6, Me.Line9, Me.Line10, Me.Picture1, Me.Text18, Me.Line13, Me.Line15, Me.PrintDate1, Me.Line23, Me.Line25, Me.Line27, Me.Line28, Me.Line29, Me.Text46, Me.Line1, Me.Text14, Me.Text15, Me.mobile1, Me.dollarprice1, Me.Text51, Me.Text23, Me.boxlocation2, Me.serial1, Me.Text45})
+        Me.Area3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Line9, Me.Line8, Me.XrLine1, Me.XrLabel3, Me.XrLabel2, Me.XrLabel1, Me.motor1, Me.Text1, Me.notes1, Me.Text2, Me.client1, Me.Text3, Me.boxlocation1, Me.Text4, Me.specialcode1, Me.Text5, Me.ampere1, Me.Text6, Me.pvalue1, Me.Text7, Me.cvalue1, Me.Text8, Me.diff1, Me.Text9, Me.kiloprice1, Me.Text10, Me.kilono1, Me.Text11, Me.fee1, Me.Text12, Me.total1, Me.Text13, Me.cmonth1, Me.Text16, Me.collecter1, Me.cmonth2, Me.motor2, Me.client2, Me.specialcode2, Me.ampere2, Me.diff2, Me.kiloprice2, Me.total2, Me.Text26, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text17, Me.Text20, Me.Text21, Me.Text22, Me.Text24, Me.Text25, Me.Text35, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.discount1, Me.Text19, Me.Text42, Me.Text43, Me.discount2, Me.Text44, Me.Line2, Me.Line3, Me.Line4, Me.Line5, Me.Line6, Me.Line10, Me.Picture1, Me.Text18, Me.Line13, Me.Line15, Me.PrintDate1, Me.Line23, Me.Line25, Me.Line27, Me.Line28, Me.Line29, Me.Text46, Me.Line1, Me.Text14, Me.Text15, Me.mobile1, Me.dollarprice1, Me.Text51, Me.Text23, Me.boxlocation2, Me.serial1, Me.Text45})
         Me.Area3.HeightF = 369.0!
         Me.Area3.KeepTogether = True
         Me.Area3.Name = "Area3"
@@ -141,26 +141,28 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         '
         'XrLine1
         '
-        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 305.3749!)
+        Me.XrLine1.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 307.3749!)
         Me.XrLine1.Name = "XrLine1"
         Me.XrLine1.SizeF = New System.Drawing.SizeF(125.9583!, 12.5!)
+        Me.XrLine1.Tag = "totalsep"
         '
         'XrLabel3
         '
         Me.XrLabel3.BackColor = System.Drawing.Color.Silver
+        Me.XrLabel3.CanGrow = False
         Me.XrLabel3.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totaldollar]")})
-        Me.XrLabel3.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 311.3749!)
-        Me.XrLabel3.Multiline = True
+        Me.XrLabel3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 314.4999!)
         Me.XrLabel3.Name = "XrLabel3"
         Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(91.66666!, 20.63904!)
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(91.66669!, 20.63904!)
         Me.XrLabel3.StylePriority.UseBackColor = False
         Me.XrLabel3.StylePriority.UseFont = False
         Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Tag = "dollartotal"
         Me.XrLabel3.Text = "XrLabel3"
         Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.XrLabel3.TextFormatString = "{0:N0}"
+        Me.XrLabel3.TextFormatString = "{0:#,##0.##}"
         '
         'XrLabel2
         '
@@ -171,16 +173,18 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.XrLabel2.CanGrow = False
         Me.XrLabel2.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.XrLabel2.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 311.3749!)
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 314.4999!)
         Me.XrLabel2.Name = "XrLabel2"
         Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.XrLabel2.SizeF = New System.Drawing.SizeF(32.29169!, 20.63904!)
         Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Tag = "dollartotal"
         Me.XrLabel2.Text = "$"
         Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
         'XrLabel1
         '
+        Me.XrLabel1.CanGrow = False
         Me.XrLabel1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OrgInfodt].[OrgName]")})
         Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(600.0!, 91.66666!)
         Me.XrLabel1.Multiline = True
@@ -200,10 +204,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.motor1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[motor]")})
         Me.motor1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.motor1.ForeColor = System.Drawing.Color.Black
-        Me.motor1.LocationFloat = New DevExpress.Utils.PointFloat(538.1945!, 125.0!)
+        Me.motor1.LocationFloat = New DevExpress.Utils.PointFloat(529.1667!, 125.0!)
         Me.motor1.Name = "motor1"
         Me.motor1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.motor1.SizeF = New System.Drawing.SizeF(125.0!, 16.66667!)
+        Me.motor1.SizeF = New System.Drawing.SizeF(134.0278!, 16.66666!)
         Me.motor1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'Text1
@@ -234,10 +238,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.notes1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[notes]")})
         Me.notes1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.notes1.ForeColor = System.Drawing.Color.Black
-        Me.notes1.LocationFloat = New DevExpress.Utils.PointFloat(333.3333!, 86.80556!)
+        Me.notes1.LocationFloat = New DevExpress.Utils.PointFloat(327.0417!, 86.80555!)
         Me.notes1.Name = "notes1"
         Me.notes1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.notes1.SizeF = New System.Drawing.SizeF(262.5!, 34.02778!)
+        Me.notes1.SizeF = New System.Drawing.SizeF(268.7916!, 34.02778!)
         Me.notes1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight
         '
         'Text2
@@ -304,7 +308,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.boxlocation1.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 191.6667!)
         Me.boxlocation1.Name = "boxlocation1"
         Me.boxlocation1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.boxlocation1.SizeF = New System.Drawing.SizeF(141.6667!, 15.34722!)
+        Me.boxlocation1.SizeF = New System.Drawing.SizeF(150.0!, 15.34721!)
         Me.boxlocation1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Text4
@@ -335,10 +339,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.specialcode1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[specialcode]")})
         Me.specialcode1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.specialcode1.ForeColor = System.Drawing.Color.Black
-        Me.specialcode1.LocationFloat = New DevExpress.Utils.PointFloat(333.3333!, 186.8056!)
+        Me.specialcode1.LocationFloat = New DevExpress.Utils.PointFloat(327.0417!, 186.8056!)
         Me.specialcode1.Name = "specialcode1"
         Me.specialcode1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.specialcode1.SizeF = New System.Drawing.SizeF(108.3333!, 15.34722!)
+        Me.specialcode1.SizeF = New System.Drawing.SizeF(114.6249!, 15.34721!)
         Me.specialcode1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Text5
@@ -369,10 +373,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.ampere1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ampere]")})
         Me.ampere1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.ampere1.ForeColor = System.Drawing.Color.Black
-        Me.ampere1.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 186.8056!)
+        Me.ampere1.LocationFloat = New DevExpress.Utils.PointFloat(558.3333!, 186.8056!)
         Me.ampere1.Name = "ampere1"
         Me.ampere1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.ampere1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
+        Me.ampere1.SizeF = New System.Drawing.SizeF(105.2083!, 15.34721!)
         Me.ampere1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Text6
@@ -403,11 +407,12 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.pvalue1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[pvalue]")})
         Me.pvalue1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.pvalue1.ForeColor = System.Drawing.Color.Black
-        Me.pvalue1.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 208.3333!)
+        Me.pvalue1.LocationFloat = New DevExpress.Utils.PointFloat(558.3333!, 208.3333!)
         Me.pvalue1.Name = "pvalue1"
         Me.pvalue1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.pvalue1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
+        Me.pvalue1.SizeF = New System.Drawing.SizeF(105.2083!, 15.34721!)
         Me.pvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.pvalue1.TextFormatString = "{0:N0}"
         '
         'Text7
         '
@@ -437,11 +442,12 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.cvalue1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[cvalue]")})
         Me.cvalue1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.cvalue1.ForeColor = System.Drawing.Color.Black
-        Me.cvalue1.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 208.3333!)
+        Me.cvalue1.LocationFloat = New DevExpress.Utils.PointFloat(352.0417!, 208.3333!)
         Me.cvalue1.Name = "cvalue1"
         Me.cvalue1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.cvalue1.SizeF = New System.Drawing.SizeF(83.33334!, 15.34722!)
+        Me.cvalue1.SizeF = New System.Drawing.SizeF(89.62497!, 15.34721!)
         Me.cvalue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.cvalue1.TextFormatString = "{0:N0}"
         '
         'Text8
         '
@@ -471,11 +477,12 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.diff1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[diff]")})
         Me.diff1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.diff1.ForeColor = System.Drawing.Color.Black
-        Me.diff1.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 225.0!)
+        Me.diff1.LocationFloat = New DevExpress.Utils.PointFloat(558.3333!, 225.0!)
         Me.diff1.Name = "diff1"
         Me.diff1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.diff1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
+        Me.diff1.SizeF = New System.Drawing.SizeF(105.2083!, 15.34721!)
         Me.diff1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.diff1.TextFormatString = "{0:N0}"
         '
         'Text9
         '
@@ -505,12 +512,13 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.kiloprice1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[kiloprice]")})
         Me.kiloprice1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.kiloprice1.ForeColor = System.Drawing.Color.Black
-        Me.kiloprice1.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 250.0!)
+        Me.kiloprice1.LocationFloat = New DevExpress.Utils.PointFloat(558.3333!, 250.0!)
         Me.kiloprice1.Name = "kiloprice1"
         Me.kiloprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.kiloprice1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
+        Me.kiloprice1.SizeF = New System.Drawing.SizeF(105.2083!, 15.34721!)
+        Me.kiloprice1.Tag = "currencyval"
         Me.kiloprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.kiloprice1.TextFormatString = "{0:N0}"
+        Me.kiloprice1.TextFormatString = "{0:#,##0.##}"
         '
         'Text10
         '
@@ -540,12 +548,13 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.kilono1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[kilono]")})
         Me.kilono1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.kilono1.ForeColor = System.Drawing.Color.Black
-        Me.kilono1.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 250.0!)
+        Me.kilono1.LocationFloat = New DevExpress.Utils.PointFloat(352.0417!, 250.0!)
         Me.kilono1.Name = "kilono1"
         Me.kilono1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.kilono1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
+        Me.kilono1.SizeF = New System.Drawing.SizeF(89.62494!, 15.34721!)
+        Me.kilono1.Tag = "currencyval"
         Me.kilono1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.kilono1.TextFormatString = "{0:N0}"
+        Me.kilono1.TextFormatString = "{0:#,##0.##}"
         '
         'Text11
         '
@@ -575,12 +584,13 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.fee1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[fee]")})
         Me.fee1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.fee1.ForeColor = System.Drawing.Color.Black
-        Me.fee1.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 266.6667!)
+        Me.fee1.LocationFloat = New DevExpress.Utils.PointFloat(352.0417!, 266.6667!)
         Me.fee1.Name = "fee1"
         Me.fee1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.fee1.SizeF = New System.Drawing.SizeF(83.33331!, 15.34723!)
+        Me.fee1.SizeF = New System.Drawing.SizeF(89.62494!, 15.34723!)
+        Me.fee1.Tag = "currencyval"
         Me.fee1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.fee1.TextFormatString = "{0:N0}"
+        Me.fee1.TextFormatString = "{0:#,##0.##}"
         '
         'Text12
         '
@@ -608,15 +618,17 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.total1.BorderWidth = 1.0!
         Me.total1.CanGrow = False
         Me.total1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[total]")})
-        Me.total1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.total1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.total1.ForeColor = System.Drawing.Color.Black
-        Me.total1.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 289.5!)
+        Me.total1.LocationFloat = New DevExpress.Utils.PointFloat(358.3333!, 289.5002!)
         Me.total1.Name = "total1"
         Me.total1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.total1.SizeF = New System.Drawing.SizeF(91.66666!, 21.87491!)
+        Me.total1.SizeF = New System.Drawing.SizeF(91.66669!, 23.99966!)
+        Me.total1.StylePriority.UseFont = False
         Me.total1.StylePriority.UseTextAlignment = False
+        Me.total1.Tag = "liratotal"
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.total1.TextFormatString = "{0:N0}"
+        Me.total1.TextFormatString = "{0:#,##0.##}"
         '
         'Text13
         '
@@ -627,11 +639,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text13.CanGrow = False
         Me.Text13.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Text13.ForeColor = System.Drawing.Color.Black
-        Me.Text13.LocationFloat = New DevExpress.Utils.PointFloat(451.3889!, 289.5!)
+        Me.Text13.LocationFloat = New DevExpress.Utils.PointFloat(451.3889!, 289.5002!)
         Me.Text13.Name = "Text13"
         Me.Text13.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text13.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
-        Me.Text13.SizeF = New System.Drawing.SizeF(77.7778!, 42.51398!)
+        Me.Text13.SizeF = New System.Drawing.SizeF(77.7778!, 45.9165!)
         Me.Text13.StylePriority.UseTextAlignment = False
         Me.Text13.Text = "  المجموع:"
         Me.Text13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
@@ -680,10 +692,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.collecter1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[collecter]")})
         Me.collecter1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.collecter1.ForeColor = System.Drawing.Color.Black
-        Me.collecter1.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 66.66666!)
+        Me.collecter1.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 66.66665!)
         Me.collecter1.Name = "collecter1"
         Me.collecter1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.collecter1.SizeF = New System.Drawing.SizeF(141.6667!, 15.34722!)
+        Me.collecter1.SizeF = New System.Drawing.SizeF(150.0!, 15.34722!)
         Me.collecter1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'cmonth2
@@ -699,7 +711,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.cmonth2.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 91.66666!)
         Me.cmonth2.Name = "cmonth2"
         Me.cmonth2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.cmonth2.SizeF = New System.Drawing.SizeF(141.6667!, 15.34722!)
+        Me.cmonth2.SizeF = New System.Drawing.SizeF(150.0!, 15.34722!)
         Me.cmonth2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'motor2
@@ -715,7 +727,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.motor2.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 116.6667!)
         Me.motor2.Name = "motor2"
         Me.motor2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.motor2.SizeF = New System.Drawing.SizeF(141.6667!, 15.34722!)
+        Me.motor2.SizeF = New System.Drawing.SizeF(150.0!, 15.34721!)
         Me.motor2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'client2
@@ -731,7 +743,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.client2.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 141.6667!)
         Me.client2.Name = "client2"
         Me.client2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.client2.SizeF = New System.Drawing.SizeF(141.6667!, 15.34722!)
+        Me.client2.SizeF = New System.Drawing.SizeF(150.0!, 15.34721!)
         Me.client2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'specialcode2
@@ -747,7 +759,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.specialcode2.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 166.6667!)
         Me.specialcode2.Name = "specialcode2"
         Me.specialcode2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.specialcode2.SizeF = New System.Drawing.SizeF(141.6667!, 15.34722!)
+        Me.specialcode2.SizeF = New System.Drawing.SizeF(150.0!, 15.34721!)
         Me.specialcode2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'ampere2
@@ -763,7 +775,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.ampere2.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 216.6667!)
         Me.ampere2.Name = "ampere2"
         Me.ampere2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.ampere2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
+        Me.ampere2.SizeF = New System.Drawing.SizeF(125.0!, 15.3472!)
         Me.ampere2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'diff2
@@ -779,8 +791,9 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.diff2.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 241.6667!)
         Me.diff2.Name = "diff2"
         Me.diff2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.diff2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
+        Me.diff2.SizeF = New System.Drawing.SizeF(125.0!, 15.34721!)
         Me.diff2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.diff2.TextFormatString = "{0:N0}"
         '
         'kiloprice2
         '
@@ -795,8 +808,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.kiloprice2.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 266.6667!)
         Me.kiloprice2.Name = "kiloprice2"
         Me.kiloprice2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.kiloprice2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
+        Me.kiloprice2.SizeF = New System.Drawing.SizeF(125.0!, 15.34723!)
+        Me.kiloprice2.Tag = "currencyval"
         Me.kiloprice2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.kiloprice2.TextFormatString = "{0:#,##0.##}"
         '
         'total2
         '
@@ -808,11 +823,13 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.total2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[total]")})
         Me.total2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.total2.ForeColor = System.Drawing.Color.Black
-        Me.total2.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 316.6667!)
+        Me.total2.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 313.6667!)
         Me.total2.Name = "total2"
         Me.total2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.total2.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
+        Me.total2.SizeF = New System.Drawing.SizeF(125.0!, 15.34723!)
+        Me.total2.Tag = "currencyval"
         Me.total2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.total2.TextFormatString = "{0:#,##0.##}"
         '
         'Text26
         '
@@ -931,11 +948,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text32.CanGrow = False
         Me.Text32.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text32.ForeColor = System.Drawing.Color.Black
-        Me.Text32.LocationFloat = New DevExpress.Utils.PointFloat(191.6667!, 241.6667!)
+        Me.Text32.LocationFloat = New DevExpress.Utils.PointFloat(183.3334!, 241.6667!)
         Me.Text32.Name = "Text32"
         Me.Text32.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text32.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
-        Me.Text32.SizeF = New System.Drawing.SizeF(83.33334!, 15.34722!)
+        Me.Text32.SizeF = New System.Drawing.SizeF(91.6667!, 15.34721!)
         Me.Text32.StylePriority.UseTextAlignment = False
         Me.Text32.Text = "استهلاك (KWA):"
         Me.Text32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -967,7 +984,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text34.CanGrow = False
         Me.Text34.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text34.ForeColor = System.Drawing.Color.Black
-        Me.Text34.LocationFloat = New DevExpress.Utils.PointFloat(191.6667!, 316.6667!)
+        Me.Text34.LocationFloat = New DevExpress.Utils.PointFloat(191.6667!, 313.6667!)
         Me.Text34.Name = "Text34"
         Me.Text34.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text34.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
@@ -985,10 +1002,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text17.CanGrow = False
         Me.Text17.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text17.ForeColor = System.Drawing.Color.Black
-        Me.Text17.LocationFloat = New DevExpress.Utils.PointFloat(541.6667!, 250.0!)
+        Me.Text17.LocationFloat = New DevExpress.Utils.PointFloat(533.3333!, 250.0!)
         Me.Text17.Name = "Text17"
         Me.Text17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text17.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text17.Tag = "currencylbl"
         Me.Text17.Text = "ل.ل"
         Me.Text17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1001,7 +1019,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text20.CanGrow = False
         Me.Text20.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text20.ForeColor = System.Drawing.Color.Black
-        Me.Text20.LocationFloat = New DevExpress.Utils.PointFloat(333.3333!, 208.3333!)
+        Me.Text20.LocationFloat = New DevExpress.Utils.PointFloat(327.0417!, 208.3333!)
         Me.Text20.Name = "Text20"
         Me.Text20.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text20.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1017,7 +1035,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text21.CanGrow = False
         Me.Text21.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text21.ForeColor = System.Drawing.Color.Black
-        Me.Text21.LocationFloat = New DevExpress.Utils.PointFloat(541.6667!, 208.3333!)
+        Me.Text21.LocationFloat = New DevExpress.Utils.PointFloat(533.3333!, 208.3333!)
         Me.Text21.Name = "Text21"
         Me.Text21.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text21.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1033,7 +1051,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text22.CanGrow = False
         Me.Text22.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text22.ForeColor = System.Drawing.Color.Black
-        Me.Text22.LocationFloat = New DevExpress.Utils.PointFloat(541.6667!, 225.0!)
+        Me.Text22.LocationFloat = New DevExpress.Utils.PointFloat(533.3333!, 225.0!)
         Me.Text22.Name = "Text22"
         Me.Text22.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text22.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1049,10 +1067,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text24.CanGrow = False
         Me.Text24.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text24.ForeColor = System.Drawing.Color.Black
-        Me.Text24.LocationFloat = New DevExpress.Utils.PointFloat(333.3333!, 250.0!)
+        Me.Text24.LocationFloat = New DevExpress.Utils.PointFloat(327.0417!, 250.0!)
         Me.Text24.Name = "Text24"
         Me.Text24.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text24.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text24.Tag = "currencylbl"
         Me.Text24.Text = "ل.ل"
         Me.Text24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1065,10 +1084,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text25.CanGrow = False
         Me.Text25.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text25.ForeColor = System.Drawing.Color.Black
-        Me.Text25.LocationFloat = New DevExpress.Utils.PointFloat(333.3333!, 266.6667!)
+        Me.Text25.LocationFloat = New DevExpress.Utils.PointFloat(327.0417!, 266.6667!)
         Me.Text25.Name = "Text25"
         Me.Text25.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text25.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text25.Tag = "currencylbl"
         Me.Text25.Text = "ل.ل"
         Me.Text25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1081,11 +1101,12 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text35.CanGrow = False
         Me.Text35.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text35.ForeColor = System.Drawing.Color.Black
-        Me.Text35.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 289.4999!)
+        Me.Text35.LocationFloat = New DevExpress.Utils.PointFloat(326.0417!, 289.5!)
         Me.Text35.Name = "Text35"
         Me.Text35.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.Text35.SizeF = New System.Drawing.SizeF(32.29169!, 21.87497!)
+        Me.Text35.SizeF = New System.Drawing.SizeF(32.29169!, 23.99982!)
         Me.Text35.StylePriority.UseTextAlignment = False
+        Me.Text35.Tag = "liratotal"
         Me.Text35.Text = "ل.ل"
         Me.Text35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter
         '
@@ -1098,7 +1119,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text37.CanGrow = False
         Me.Text37.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text37.ForeColor = System.Drawing.Color.Black
-        Me.Text37.LocationFloat = New DevExpress.Utils.PointFloat(541.6667!, 186.8056!)
+        Me.Text37.LocationFloat = New DevExpress.Utils.PointFloat(533.3333!, 186.8056!)
         Me.Text37.Name = "Text37"
         Me.Text37.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text37.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1150,6 +1171,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text40.Name = "Text40"
         Me.Text40.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text40.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text40.Tag = "currencylbl"
         Me.Text40.Text = "ل.ل"
         Me.Text40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1162,10 +1184,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text41.CanGrow = False
         Me.Text41.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text41.ForeColor = System.Drawing.Color.Black
-        Me.Text41.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 316.6667!)
+        Me.Text41.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 313.6667!)
         Me.Text41.Name = "Text41"
         Me.Text41.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text41.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text41.Tag = "currencylbl"
         Me.Text41.Text = "ل.ل"
         Me.Text41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1182,8 +1205,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.discount1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 291.6667!)
         Me.discount1.Name = "discount1"
         Me.discount1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.discount1.SizeF = New System.Drawing.SizeF(116.6667!, 15.34722!)
+        Me.discount1.SizeF = New System.Drawing.SizeF(125.0!, 15.3472!)
+        Me.discount1.Tag = "currencyval"
         Me.discount1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.discount1.TextFormatString = "{0:#,##0.##}"
         '
         'Text19
         '
@@ -1198,6 +1223,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text19.Name = "Text19"
         Me.Text19.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text19.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text19.Tag = "currencylbl"
         Me.Text19.Text = "ل.ل"
         Me.Text19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1228,10 +1254,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text43.CanGrow = False
         Me.Text43.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text43.ForeColor = System.Drawing.Color.Black
-        Me.Text43.LocationFloat = New DevExpress.Utils.PointFloat(541.6667!, 300.0!)
+        Me.Text43.LocationFloat = New DevExpress.Utils.PointFloat(533.3333!, 300.0!)
         Me.Text43.Name = "Text43"
         Me.Text43.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text43.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text43.Tag = "currencylbl"
         Me.Text43.Text = "ل.ل"
         Me.Text43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1245,12 +1272,13 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.discount2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[discount]")})
         Me.discount2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.discount2.ForeColor = System.Drawing.Color.Black
-        Me.discount2.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 300.0!)
+        Me.discount2.LocationFloat = New DevExpress.Utils.PointFloat(558.3333!, 300.0!)
         Me.discount2.Name = "discount2"
         Me.discount2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.discount2.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
+        Me.discount2.SizeF = New System.Drawing.SizeF(105.2083!, 15.34726!)
+        Me.discount2.Tag = "currencyval"
         Me.discount2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.discount2.TextFormatString = "{0:N0}"
+        Me.discount2.TextFormatString = "{0:#,##0.##}"
         '
         'Text44
         '
@@ -1339,7 +1367,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Line8.LocationFloat = New DevExpress.Utils.PointFloat(529.1667!, 164.5833!)
         Me.Line8.Name = "Line8"
         Me.Line8.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Line8.SizeF = New System.Drawing.SizeF(2.0!, 168.75!)
+        Me.Line8.SizeF = New System.Drawing.SizeF(2.083313!, 171.875!)
         Me.Line8.StylePriority.UseBorders = False
         '
         'Line6
@@ -1368,7 +1396,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Line9.LocationFloat = New DevExpress.Utils.PointFloat(450.0!, 164.5833!)
         Me.Line9.Name = "Line9"
         Me.Line9.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Line9.SizeF = New System.Drawing.SizeF(2.0!, 168.75!)
+        Me.Line9.SizeF = New System.Drawing.SizeF(2.083344!, 171.875!)
         Me.Line9.StylePriority.UseBorders = False
         '
         'Line10
@@ -1383,7 +1411,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Line10.LocationFloat = New DevExpress.Utils.PointFloat(666.6667!, 121.5278!)
         Me.Line10.Name = "Line10"
         Me.Line10.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Line10.SizeF = New System.Drawing.SizeF(2.083313!, 210.4861!)
+        Me.Line10.SizeF = New System.Drawing.SizeF(2.083313!, 213.6111!)
         Me.Line10.StylePriority.UseBorders = False
         '
         'Picture1
@@ -1603,6 +1631,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text15.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
         Me.Text15.SizeF = New System.Drawing.SizeF(83.33334!, 15.34722!)
         Me.Text15.StylePriority.UseTextAlignment = False
+        Me.Text15.Tag = "dollarprice"
         Me.Text15.Text = "سعر صرف $:"
         Me.Text15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1632,10 +1661,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.dollarprice1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[dollarprice]")})
         Me.dollarprice1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.dollarprice1.ForeColor = System.Drawing.Color.Black
-        Me.dollarprice1.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 266.6667!)
+        Me.dollarprice1.LocationFloat = New DevExpress.Utils.PointFloat(558.3333!, 266.6667!)
         Me.dollarprice1.Name = "dollarprice1"
         Me.dollarprice1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.dollarprice1.SizeF = New System.Drawing.SizeF(96.875!, 15.34722!)
+        Me.dollarprice1.SizeF = New System.Drawing.SizeF(105.2083!, 15.34723!)
+        Me.dollarprice1.Tag = "dollarprice"
         Me.dollarprice1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         Me.dollarprice1.TextFormatString = "{0:N0}"
         '
@@ -1648,10 +1678,11 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Text51.CanGrow = False
         Me.Text51.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text51.ForeColor = System.Drawing.Color.Black
-        Me.Text51.LocationFloat = New DevExpress.Utils.PointFloat(541.6667!, 266.6667!)
+        Me.Text51.LocationFloat = New DevExpress.Utils.PointFloat(533.3333!, 266.6667!)
         Me.Text51.Name = "Text51"
         Me.Text51.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text51.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.Text51.Tag = "dollarprice"
         Me.Text51.Text = "ل.ل"
         Me.Text51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
@@ -1699,10 +1730,10 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.serial1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[serial]")})
         Me.serial1.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
         Me.serial1.ForeColor = System.Drawing.Color.Gray
-        Me.serial1.LocationFloat = New DevExpress.Utils.PointFloat(333.3333!, 225.0!)
+        Me.serial1.LocationFloat = New DevExpress.Utils.PointFloat(327.0417!, 225.0!)
         Me.serial1.Name = "serial1"
         Me.serial1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.serial1.SizeF = New System.Drawing.SizeF(108.3333!, 15.34722!)
+        Me.serial1.SizeF = New System.Drawing.SizeF(114.625!, 15.34721!)
         Me.serial1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Text45
@@ -1769,7 +1800,7 @@ Partial Public Class XtraInvoicesWithoutCreditReport
         Me.Box1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top
         Me.Box1.BorderWidth = 1.0!
         Me.Box1.EndBand = Me.Area3
-        Me.Box1.EndPointFloat = New DevExpress.Utils.PointFloat(325.0!, 333.3333!)
+        Me.Box1.EndPointFloat = New DevExpress.Utils.PointFloat(325.0!, 336.4583!)
         Me.Box1.Name = "Box1"
         Me.Box1.StartBand = Me.Area3
         Me.Box1.StartPointFloat = New DevExpress.Utils.PointFloat(325.0!, 58.33333!)

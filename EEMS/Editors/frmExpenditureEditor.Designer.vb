@@ -24,6 +24,9 @@ Partial Class frmExpenditureEditor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmExpenditureEditor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbcurrency = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.txttitle = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtdate = New System.Windows.Forms.DateTimePicker()
@@ -60,6 +63,9 @@ Partial Class frmExpenditureEditor
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.cmbcurrency)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.txttitle)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtdate)
@@ -76,10 +82,44 @@ Partial Class frmExpenditureEditor
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.GroupBox1.Size = New System.Drawing.Size(564, 156)
+        Me.GroupBox1.Size = New System.Drawing.Size(564, 187)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "التفصيل"
+        '
+        'cmbcurrency
+        '
+        Me.cmbcurrency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbcurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbcurrency.Enabled = False
+        Me.cmbcurrency.FormattingEnabled = True
+        Me.cmbcurrency.Items.AddRange(New Object() {"ل.ل", "$"})
+        Me.cmbcurrency.Location = New System.Drawing.Point(314, 84)
+        Me.cmbcurrency.MaxLength = 50
+        Me.cmbcurrency.Name = "cmbcurrency"
+        Me.cmbcurrency.Size = New System.Drawing.Size(178, 21)
+        Me.cmbcurrency.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(295, 88)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(11, 13)
+        Me.Label4.TabIndex = 27
+        Me.Label4.Text = "*"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(498, 88)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(35, 13)
+        Me.Label8.TabIndex = 26
+        Me.Label8.Text = "العُملة:"
         '
         'txttitle
         '
@@ -90,7 +130,7 @@ Partial Class frmExpenditureEditor
         Me.txttitle.MaxLength = 50
         Me.txttitle.Name = "txttitle"
         Me.txttitle.Size = New System.Drawing.Size(178, 21)
-        Me.txttitle.TabIndex = 25
+        Me.txttitle.TabIndex = 1
         '
         'Label3
         '
@@ -99,7 +139,7 @@ Partial Class frmExpenditureEditor
         Me.Label3.ForeColor = System.Drawing.Color.Red
         Me.Label3.Location = New System.Drawing.Point(295, 61)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(13, 13)
+        Me.Label3.Size = New System.Drawing.Size(11, 13)
         Me.Label3.TabIndex = 24
         Me.Label3.Text = "*"
         '
@@ -112,15 +152,15 @@ Partial Class frmExpenditureEditor
         Me.txtdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.txtdate.RightToLeftLayout = True
         Me.txtdate.Size = New System.Drawing.Size(178, 20)
-        Me.txtdate.TabIndex = 23
+        Me.txtdate.TabIndex = 0
         '
         'Label6
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(498, 113)
+        Me.Label6.Location = New System.Drawing.Point(498, 140)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(36, 13)
+        Me.Label6.Size = New System.Drawing.Size(34, 13)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "الجهة:"
         '
@@ -128,19 +168,19 @@ Partial Class frmExpenditureEditor
         '
         Me.txtparty.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtparty.BackColor = System.Drawing.Color.White
-        Me.txtparty.Location = New System.Drawing.Point(314, 110)
+        Me.txtparty.Location = New System.Drawing.Point(314, 137)
         Me.txtparty.MaxLength = 50
         Me.txtparty.Name = "txtparty"
         Me.txtparty.Size = New System.Drawing.Size(178, 20)
-        Me.txtparty.TabIndex = 3
+        Me.txtparty.TabIndex = 4
         '
         'Label5
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(498, 87)
+        Me.Label5.Location = New System.Drawing.Point(498, 114)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
+        Me.Label5.Size = New System.Drawing.Size(35, 13)
         Me.Label5.TabIndex = 21
         Me.Label5.Text = "القيمة:"
         '
@@ -148,20 +188,20 @@ Partial Class frmExpenditureEditor
         '
         Me.txtvalue.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtvalue.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtvalue.Location = New System.Drawing.Point(314, 84)
+        Me.txtvalue.Location = New System.Drawing.Point(314, 111)
         Me.txtvalue.MaxLength = 50
         Me.txtvalue.Name = "txtvalue"
         Me.txtvalue.Size = New System.Drawing.Size(178, 20)
-        Me.txtvalue.TabIndex = 2
+        Me.txtvalue.TabIndex = 3
         '
         'Label28
         '
         Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label28.AutoSize = True
         Me.Label28.ForeColor = System.Drawing.Color.Red
-        Me.Label28.Location = New System.Drawing.Point(295, 87)
+        Me.Label28.Location = New System.Drawing.Point(295, 114)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(13, 13)
+        Me.Label28.Size = New System.Drawing.Size(11, 13)
         Me.Label28.TabIndex = 18
         Me.Label28.Text = "*"
         '
@@ -172,7 +212,7 @@ Partial Class frmExpenditureEditor
         Me.Label27.ForeColor = System.Drawing.Color.Red
         Me.Label27.Location = New System.Drawing.Point(295, 35)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(13, 13)
+        Me.Label27.Size = New System.Drawing.Size(11, 13)
         Me.Label27.TabIndex = 17
         Me.Label27.Text = "*"
         '
@@ -182,7 +222,7 @@ Partial Class frmExpenditureEditor
         Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(213, 35)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(48, 13)
+        Me.Label17.Size = New System.Drawing.Size(45, 13)
         Me.Label17.TabIndex = 15
         Me.Label17.Text = "التفصيل:"
         '
@@ -193,8 +233,8 @@ Partial Class frmExpenditureEditor
         Me.txtdetails.MaxLength = 255
         Me.txtdetails.Multiline = True
         Me.txtdetails.Name = "txtdetails"
-        Me.txtdetails.Size = New System.Drawing.Size(242, 75)
-        Me.txtdetails.TabIndex = 4
+        Me.txtdetails.Size = New System.Drawing.Size(242, 102)
+        Me.txtdetails.TabIndex = 5
         '
         'Label2
         '
@@ -212,7 +252,7 @@ Partial Class frmExpenditureEditor
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(498, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(41, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "التاريخ:"
         '
@@ -230,7 +270,7 @@ Partial Class frmExpenditureEditor
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.Panel2)
         Me.GroupBox3.Controls.Add(Me.Label7)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 174)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 205)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.GroupBox3.Size = New System.Drawing.Size(564, 60)
@@ -344,7 +384,7 @@ Partial Class frmExpenditureEditor
         Me.Label30.ForeColor = System.Drawing.Color.Red
         Me.Label30.Location = New System.Drawing.Point(4, 1)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(13, 13)
+        Me.Label30.Size = New System.Drawing.Size(11, 13)
         Me.Label30.TabIndex = 18
         Me.Label30.Text = "*"
         '
@@ -365,11 +405,11 @@ Partial Class frmExpenditureEditor
         Me.btncancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btncancel.Image = Global.EEMS.My.Resources.Resources.close
         Me.btncancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btncancel.Location = New System.Drawing.Point(120, 240)
+        Me.btncancel.Location = New System.Drawing.Point(120, 271)
         Me.btncancel.Name = "btncancel"
         Me.btncancel.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btncancel.Size = New System.Drawing.Size(102, 29)
-        Me.btncancel.TabIndex = 5
+        Me.btncancel.TabIndex = 6
         Me.btncancel.Text = "خروج"
         Me.btncancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btncancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -380,11 +420,11 @@ Partial Class frmExpenditureEditor
         Me.btnsave.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnsave.Image = Global.EEMS.My.Resources.Resources.UpgradeReport_Success
         Me.btnsave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnsave.Location = New System.Drawing.Point(12, 240)
+        Me.btnsave.Location = New System.Drawing.Point(12, 271)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.btnsave.Size = New System.Drawing.Size(102, 29)
-        Me.btnsave.TabIndex = 6
+        Me.btnsave.TabIndex = 7
         Me.btnsave.Text = "حفظ"
         Me.btnsave.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnsave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
@@ -395,7 +435,7 @@ Partial Class frmExpenditureEditor
         Me.AcceptButton = Me.btnsave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(588, 277)
+        Me.ClientSize = New System.Drawing.Size(588, 312)
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.btnsave)
         Me.Controls.Add(Me.GroupBox3)
@@ -442,5 +482,7 @@ Partial Class frmExpenditureEditor
     Friend WithEvents txtdate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txttitle As System.Windows.Forms.ComboBox
-
+    Friend WithEvents cmbcurrency As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label8 As Label
 End Class

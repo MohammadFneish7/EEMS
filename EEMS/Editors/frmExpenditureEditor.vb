@@ -11,6 +11,7 @@ Public Class frmExpenditureEditor
 
         InitializeComponent()
 
+        cmbcurrency.SelectedIndex = 0
 
         a.ds = New DataSet
 
@@ -26,6 +27,8 @@ Public Class frmExpenditureEditor
         keywords.Add("شراء أصناف")
         keywords.Add("شراء محروقات")
         keywords.Add("صيانة")
+        keywords.Add("ليرة الى دولار")
+        keywords.Add("دولار الى ليرة")
 
         Dim keywordstr As String = "''"
         For Each item As String In keywords
@@ -60,7 +63,7 @@ Public Class frmExpenditureEditor
             MsgBox("الرجاء التأكد من تعبئة جميع الخانات المطلوبة.")
             Return
         End If
-        If Integer.Parse(txtvalue.Text.Trim) <= 0 Then
+        If Double.Parse(txtvalue.Text.Trim) <= 0 Then
             MsgBox("الرجاء التأكد من أن قيمة المبلغ اكبر من صفر.")
             Return
         End If
@@ -77,11 +80,21 @@ Public Class frmExpenditureEditor
             End If
         End If
 
+        Dim amount As Long = 0
+        Dim amount_dollar As Double = 0
+        Dim currency As Integer = 0
+        If cmbcurrency.SelectedIndex = 0 Then
+            amount = txtvalue.Text.Trim()
+        Else
+            amount_dollar = txtvalue.Text.Trim()
+            currency = 1
+        End If
+
 
         If out = False Then
-            a.Execute("insert into Expenditure(expdate,title,amount,party,detail) values('" & txtdate.Value & "','" & txttitle.Text.Trim & "'," & txtvalue.Text.Trim & ",'" & txtparty.Text.Trim & "','" & txtdetails.Text.Trim & "')")
+            a.Execute("insert into Expenditure(expdate,title,amount,amount_dollar,currency,party,detail) values('" & txtdate.Value & "','" & txttitle.Text.Trim & "'," & amount & "," & amount_dollar & "," & currency & ",'" & txtparty.Text.Trim & "','" & txtdetails.Text.Trim & "')")
         Else
-            a.Execute("insert into Expenditure(expdate,title,amount,party,detail) values('" & txtdate.Value & "','" & txttitle.Text.Trim & "',-" & txtvalue.Text.Trim & ",'" & txtparty.Text.Trim & "','" & txtdetails.Text.Trim & "')")
+            a.Execute("insert into Expenditure(expdate,title,amount,amount_dollar,currency,party,detail) values('" & txtdate.Value & "','" & txttitle.Text.Trim & "',-" & amount & ",-" & amount_dollar & "," & currency & ",'" & txtparty.Text.Trim & "','" & txtdetails.Text.Trim & "')")
         End If
 
         Me.DialogResult = DialogResult.OK
@@ -97,11 +110,14 @@ Public Class frmExpenditureEditor
 
     Private Sub btncancel_Click(sender As Object, e As EventArgs) Handles btncancel.Click
         Me.DialogResult = DialogResult.Ignore
-
     End Sub
 
     Private Sub txtphone_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtvalue.KeyPress
-        a.bindNumeric(sender, e)
+        If cmbcurrency.SelectedIndex = 0 Then
+            a.bindNumeric(sender, e)
+        Else
+            a.bindDouble(sender, e)
+        End If
     End Sub
 
     Private Sub ExpenditureEditor_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -111,6 +127,15 @@ Public Class frmExpenditureEditor
             Catch ex As Exception
                 ErrorDialog.showDlg(ex)
             End Try
+        End If
+    End Sub
+
+    Private Sub cmbcurrency_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcurrency.SelectedIndexChanged
+        If cmbcurrency.SelectedIndex = 1 Then
+            Dim val As String = txtvalue.Text
+            If Not String.IsNullOrWhiteSpace(val) Then
+                txtvalue.Text = Integer.Parse(val)
+            End If
         End If
     End Sub
 End Class

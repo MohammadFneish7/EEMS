@@ -70,7 +70,7 @@ Public Class frmDataViewer
     Private Sub GridView1_RowStyle(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs) Handles GridView1.RowStyle
         Try
             e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-            If lastIsTotal And GridView1.GetDataSourceRowIndex(e.RowHandle) = GridView1.RowCount - 1 And GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(0)).Equals("إجمالي") Then
+            If lastIsTotal And GridView1.GetDataSourceRowIndex(e.RowHandle) = GridView1.RowCount - 1 AndAlso GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(0)) <> Nothing AndAlso GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(0)).Equals("إجمالي") Then
                 e.Appearance.FontStyleDelta = FontStyle.Bold
             End If
         Catch ex As Exception

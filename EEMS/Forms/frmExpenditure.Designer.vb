@@ -41,6 +41,7 @@ Partial Class frmExpenditure
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnExchange = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.chkSelectAll = New System.Windows.Forms.CheckBox()
@@ -283,6 +284,7 @@ Partial Class frmExpenditure
         Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.btnExchange)
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Panel8)
         Me.GroupBox2.Controls.Add(Me.Panel7)
@@ -303,6 +305,21 @@ Partial Class frmExpenditure
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "المصروفات والمدخول"
+        '
+        'btnExchange
+        '
+        Me.btnExchange.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExchange.Image = Global.EEMS.My.Resources.Resources.exchange
+        Me.btnExchange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExchange.Location = New System.Drawing.Point(820, 28)
+        Me.btnExchange.Name = "btnExchange"
+        Me.btnExchange.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.btnExchange.Size = New System.Drawing.Size(121, 34)
+        Me.btnExchange.TabIndex = 54
+        Me.btnExchange.Text = "تحويل عملة"
+        Me.btnExchange.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExchange.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnExchange.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -418,7 +435,7 @@ Partial Class frmExpenditure
         Me.dgvData1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvData1.Location = New System.Drawing.Point(8, 69)
+        Me.dgvData1.Location = New System.Drawing.Point(8, 68)
         Me.dgvData1.MainView = Me.GridView1
         Me.dgvData1.Name = "dgvData1"
         Me.dgvData1.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemButtonEdit1, Me.RepositoryItemButtonEdit2})
@@ -463,9 +480,9 @@ Partial Class frmExpenditure
         'lblSum
         '
         Me.lblSum.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblSum.Location = New System.Drawing.Point(731, 372)
+        Me.lblSum.Location = New System.Drawing.Point(660, 372)
         Me.lblSum.Name = "lblSum"
-        Me.lblSum.Size = New System.Drawing.Size(99, 13)
+        Me.lblSum.Size = New System.Drawing.Size(170, 13)
         Me.lblSum.TabIndex = 43
         Me.lblSum.Text = "0"
         Me.lblSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -509,7 +526,7 @@ Partial Class frmExpenditure
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button4.Image = Global.EEMS.My.Resources.Resources.chart
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(818, 29)
+        Me.Button4.Location = New System.Drawing.Point(693, 29)
         Me.Button4.Name = "Button4"
         Me.Button4.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Button4.Size = New System.Drawing.Size(121, 34)
@@ -619,5 +636,5 @@ Partial Class frmExpenditure
     Friend WithEvents Panel8 As System.Windows.Forms.Panel
     Friend WithEvents Panel7 As System.Windows.Forms.Panel
     Friend WithEvents Button1 As System.Windows.Forms.Button
-
+    Friend WithEvents btnExchange As Button
 End Class

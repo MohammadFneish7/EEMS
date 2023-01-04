@@ -12,8 +12,12 @@ Public Class XtraReportViewer
     Dim isEmptyChReport As Boolean = False
     Dim isMonthlyReport As Boolean = False
     Dim verbose As Boolean = False
+    Dim dollarprice As Boolean = False
+    Dim dollartotal As Boolean = False
+    Dim alltodollar As Boolean = False
+    Dim addkilo As Boolean = False
 
-    Sub New(ByVal dt As DataTable, note As String, verbose As Boolean)
+    Sub New(ByVal dt As DataTable, note As String, verbose As Boolean, dollarprice As Boolean, dollartotal As Boolean, alltodollar As Boolean, addkilo As Boolean)
         'InitializeComponent()
         For i As Int32 = 0 To dt.Rows.Count - 1
             ds.invoicesdt.Rows.Add()
@@ -27,7 +31,10 @@ Public Class XtraReportViewer
             End If
         Next
         Me.verbose = verbose
-
+        Me.dollarprice = dollarprice
+        Me.dollartotal = dollartotal
+        Me.alltodollar = alltodollar
+        Me.addkilo = addkilo
         InitializeComponent()
     End Sub
 
@@ -163,6 +170,49 @@ Public Class XtraReportViewer
                 box.EndPointF = New PointF(box.EndPointF.X, box.EndPointF.Y + invoiceYOffset)
             Else
                 cont.LocationF = New PointF(cont.LocationF.X + invoiceXOffset, cont.LocationF.Y + invoiceYOffset)
+            End If
+
+            If Not dollarprice Then
+                If cont.Tag = "dollarprice" Then
+                    cont.Visible = False
+                End If
+            End If
+
+            If Not dollartotal Then
+                If cont.Tag = "dollartotal" Then
+                    cont.Visible = False
+                ElseIf cont.Tag = "dollartotalwithcredit" Then
+                    cont.Visible = False
+                ElseIf cont.Tag = "totalsep" Then
+                    cont.Visible = False
+                ElseIf cont.Tag = "liratotal" Then
+                    cont.HeightF = 46
+                ElseIf cont.Tag = "liratotalwithcredit" Then
+
+                End If
+            End If
+
+            If alltodollar Then
+                If cont.Tag = "currencylbl" Then
+                    cont.Text = "$"
+                ElseIf cont.Tag = "liratotal" Then
+                    cont.Visible = False
+                ElseIf cont.Tag = "liratotalwithcredit" Then
+                    cont.Visible = False
+                ElseIf cont.Tag = "totalsep" Then
+                    cont.Visible = False
+                ElseIf cont.Tag = "dollartotal" Then
+                    cont.LocationF = New PointF(cont.LocationF.X, cont.LocationF.Y - 25)
+                    cont.HeightF = 46
+                ElseIf cont.Tag = "dollartotalwithcredit" Then
+                    cont.LocationF = New PointF(cont.LocationF.X - 125, cont.LocationF.Y)
+                End If
+            End If
+
+            If Not addkilo Then
+                If cont.Name = "Text10" OrElse cont.Name = "Text17" OrElse cont.Name = "kiloprice1" Then
+                    cont.Visible = False
+                End If
             End If
         Next
     End Sub
