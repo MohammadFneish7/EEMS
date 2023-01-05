@@ -172,6 +172,15 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DataSetGeneralReport1 = New EEMS.DataSetGeneralReport()
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -330,8 +339,8 @@ Partial Public Class XtraGeneralMonthlyReport
         '
         'Area1
         '
-        Me.Area1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel1, Me.Text1, Me.selDate1, Me.Text2, Me.newAccounts1, Me.Text3, Me.endedAcounts1, Me.Text4, Me.activeAcounts1, Me.Text5, Me.workingHours1, Me.Text6, Me.sellKW1, Me.Text7, Me.totalKW1, Me.Text8, Me.totalFees1, Me.Text9, Me.totalRound1, Me.Text10, Me.totalDiscount1, Me.Text11, Me.countInvoices1, Me.Text12, Me.totalInvoices1, Me.Text13, Me.paidInvoices1, Me.Text14, Me.remainingInvoices1, Me.Text15, Me.totalInvoicesTillDate1, Me.Text16, Me.totalPaidInvoicesTillDate1, Me.Text17, Me.totalRemainInvoicesTillDate1, Me.Text18, Me.totalPastCredit1, Me.Text19, Me.totalItemsBuy1, Me.Text20, Me.totalFuelLeter1, Me.Text21, Me.totalFuelPrice1, Me.Text22, Me.totalMaintainancePrice1, Me.PrintDate1, Me.Picture1, Me.Text23, Me.Text24, Me.Text25, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text35, Me.Text36, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.Text42, Me.Text43, Me.Line1, Me.Line2, Me.Line3, Me.Line4, Me.Line8, Me.Line7, Me.Text44, Me.Text45, Me.Text46, Me.Text47, Me.Text48, Me.Text49, Me.boxInInvoices1, Me.boxInCredits1, Me.boxInInsurance1, Me.boxInOther1, Me.boxOuttotal1, Me.boxOutInsurance1, Me.Text26, Me.Text50, Me.Text51, Me.Text52, Me.Text53, Me.Text54, Me.Text55, Me.Text56, Me.Text57, Me.Text58, Me.Text59, Me.Text61, Me.Line12, Me.Line11, Me.Line5, Me.Line13, Me.Line10, Me.Text62, Me.boxNetLastMonth1, Me.Text63, Me.Text64, Me.boxNetThisMonth1, Me.Text65, Me.Line14, Me.Line15, Me.Line16, Me.Text66, Me.boxTotal1, Me.Text67, Me.Line24, Me.Line17, Me.Line25, Me.Line21, Me.Line22, Me.Line23, Me.Line26, Me.totalFuelConsumption1})
-        Me.Area1.HeightF = 663.0!
+        Me.Area1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel10, Me.XrLabel8, Me.XrLabel9, Me.XrLabel7, Me.XrLabel5, Me.XrLabel6, Me.XrLabel4, Me.XrLabel3, Me.XrLabel2, Me.XrLabel1, Me.Text1, Me.selDate1, Me.Text2, Me.newAccounts1, Me.Text3, Me.endedAcounts1, Me.Text4, Me.activeAcounts1, Me.Text5, Me.workingHours1, Me.Text6, Me.sellKW1, Me.Text7, Me.totalKW1, Me.Text8, Me.totalFees1, Me.Text9, Me.totalRound1, Me.Text10, Me.totalDiscount1, Me.Text11, Me.countInvoices1, Me.Text12, Me.totalInvoices1, Me.Text13, Me.paidInvoices1, Me.Text14, Me.remainingInvoices1, Me.Text15, Me.totalInvoicesTillDate1, Me.Text16, Me.totalPaidInvoicesTillDate1, Me.Text17, Me.totalRemainInvoicesTillDate1, Me.Text18, Me.totalPastCredit1, Me.Text19, Me.totalItemsBuy1, Me.Text20, Me.totalFuelLeter1, Me.Text21, Me.totalFuelPrice1, Me.Text22, Me.totalMaintainancePrice1, Me.PrintDate1, Me.Picture1, Me.Text23, Me.Text24, Me.Text25, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text35, Me.Text36, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.Text42, Me.Text43, Me.Line1, Me.Line2, Me.Line3, Me.Line4, Me.Line8, Me.Line7, Me.Text44, Me.Text45, Me.Text46, Me.Text47, Me.Text48, Me.Text49, Me.boxInInvoices1, Me.boxInCredits1, Me.boxInInsurance1, Me.boxInOther1, Me.boxOuttotal1, Me.boxOutInsurance1, Me.Text26, Me.Text50, Me.Text51, Me.Text52, Me.Text53, Me.Text54, Me.Text55, Me.Text56, Me.Text57, Me.Text58, Me.Text59, Me.Text61, Me.Line12, Me.Line11, Me.Line5, Me.Line13, Me.Line10, Me.Text62, Me.boxNetLastMonth1, Me.Text63, Me.Text64, Me.boxNetThisMonth1, Me.Text65, Me.Line14, Me.Line15, Me.Line16, Me.Text66, Me.boxTotal1, Me.Text67, Me.Line24, Me.Line17, Me.Line25, Me.Line21, Me.Line22, Me.Line23, Me.Line26, Me.totalFuelConsumption1})
+        Me.Area1.HeightF = 697.375!
         Me.Area1.KeepTogether = True
         Me.Area1.Name = "Area1"
         Me.Area1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -1716,7 +1725,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxInOther1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[boxInOther]")})
         Me.boxInOther1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.boxInOther1.ForeColor = System.Drawing.Color.Black
-        Me.boxInOther1.LocationFloat = New DevExpress.Utils.PointFloat(475.0!, 525.0!)
+        Me.boxInOther1.LocationFloat = New DevExpress.Utils.PointFloat(475.0!, 547.6528!)
         Me.boxInOther1.Name = "boxInOther1"
         Me.boxInOther1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxInOther1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
@@ -1733,7 +1742,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxOuttotal1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[boxOuttotal]")})
         Me.boxOuttotal1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.boxOuttotal1.ForeColor = System.Drawing.Color.Black
-        Me.boxOuttotal1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 458.3333!)
+        Me.boxOuttotal1.LocationFloat = New DevExpress.Utils.PointFloat(66.66673!, 500.6944!)
         Me.boxOuttotal1.Name = "boxOuttotal1"
         Me.boxOuttotal1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxOuttotal1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
@@ -1750,7 +1759,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxOutInsurance1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[boxOutInsurance]")})
         Me.boxOutInsurance1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.boxOutInsurance1.ForeColor = System.Drawing.Color.Black
-        Me.boxOutInsurance1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 483.3333!)
+        Me.boxOutInsurance1.LocationFloat = New DevExpress.Utils.PointFloat(66.66673!, 475.0!)
         Me.boxOutInsurance1.Name = "boxOutInsurance1"
         Me.boxOutInsurance1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxOutInsurance1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
@@ -1820,7 +1829,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text52.CanGrow = False
         Me.Text52.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.Text52.ForeColor = System.Drawing.Color.Black
-        Me.Text52.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 525.0!)
+        Me.Text52.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 547.6528!)
         Me.Text52.Name = "Text52"
         Me.Text52.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text52.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
@@ -1838,7 +1847,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text53.CanGrow = False
         Me.Text53.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.Text53.ForeColor = System.Drawing.Color.Black
-        Me.Text53.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 458.3333!)
+        Me.Text53.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 500.6944!)
         Me.Text53.Name = "Text53"
         Me.Text53.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text53.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
@@ -1856,7 +1865,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text54.CanGrow = False
         Me.Text54.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.Text54.ForeColor = System.Drawing.Color.Black
-        Me.Text54.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 483.3333!)
+        Me.Text54.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 475.0!)
         Me.Text54.Name = "Text54"
         Me.Text54.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text54.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
@@ -1922,7 +1931,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text58.CanGrow = False
         Me.Text58.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text58.ForeColor = System.Drawing.Color.Black
-        Me.Text58.LocationFloat = New DevExpress.Utils.PointFloat(450.0!, 525.0!)
+        Me.Text58.LocationFloat = New DevExpress.Utils.PointFloat(450.0!, 547.6528!)
         Me.Text58.Name = "Text58"
         Me.Text58.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text58.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1938,7 +1947,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text59.CanGrow = False
         Me.Text59.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text59.ForeColor = System.Drawing.Color.Black
-        Me.Text59.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 458.3333!)
+        Me.Text59.LocationFloat = New DevExpress.Utils.PointFloat(41.66673!, 500.6944!)
         Me.Text59.Name = "Text59"
         Me.Text59.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text59.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1954,7 +1963,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text61.CanGrow = False
         Me.Text61.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text61.ForeColor = System.Drawing.Color.Black
-        Me.Text61.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 483.3333!)
+        Me.Text61.LocationFloat = New DevExpress.Utils.PointFloat(41.66673!, 475.0!)
         Me.Text61.Name = "Text61"
         Me.Text61.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text61.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -1983,7 +1992,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line11.BorderWidth = 1.0!
         Me.Line11.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line11.ForeColor = System.Drawing.Color.Silver
-        Me.Line11.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 550.0!)
+        Me.Line11.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 572.8751!)
         Me.Line11.Name = "Line11"
         Me.Line11.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line11.SizeF = New System.Drawing.SizeF(771.7916!, 2.083313!)
@@ -1998,10 +2007,10 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line5.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line5.ForeColor = System.Drawing.Color.Silver
         Me.Line5.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line5.LocationFloat = New DevExpress.Utils.PointFloat(786.4583!, 441.6667!)
+        Me.Line5.LocationFloat = New DevExpress.Utils.PointFloat(786.4584!, 441.6667!)
         Me.Line5.Name = "Line5"
         Me.Line5.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Line5.SizeF = New System.Drawing.SizeF(2.0!, 108.3333!)
+        Me.Line5.SizeF = New System.Drawing.SizeF(2.083374!, 131.2083!)
         Me.Line5.StylePriority.UseBorders = False
         '
         'Line13
@@ -2016,7 +2025,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line13.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 441.6667!)
         Me.Line13.Name = "Line13"
         Me.Line13.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Line13.SizeF = New System.Drawing.SizeF(2.0!, 108.3333!)
+        Me.Line13.SizeF = New System.Drawing.SizeF(2.083334!, 131.2083!)
         Me.Line13.StylePriority.UseBorders = False
         '
         'Line10
@@ -2028,10 +2037,10 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line10.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line10.ForeColor = System.Drawing.Color.Silver
         Me.Line10.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line10.LocationFloat = New DevExpress.Utils.PointFloat(428.125!, 441.6667!)
+        Me.Line10.LocationFloat = New DevExpress.Utils.PointFloat(428.1251!, 441.6667!)
         Me.Line10.Name = "Line10"
         Me.Line10.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Line10.SizeF = New System.Drawing.SizeF(2.0!, 108.3333!)
+        Me.Line10.SizeF = New System.Drawing.SizeF(2.083344!, 131.2083!)
         Me.Line10.StylePriority.UseBorders = False
         '
         'Text62
@@ -2043,7 +2052,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text62.CanGrow = False
         Me.Text62.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.Text62.ForeColor = System.Drawing.Color.Black
-        Me.Text62.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 575.0!)
+        Me.Text62.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 601.2917!)
         Me.Text62.Name = "Text62"
         Me.Text62.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text62.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
@@ -2062,7 +2071,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxNetLastMonth1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[boxNetLastMonth]")})
         Me.boxNetLastMonth1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.boxNetLastMonth1.ForeColor = System.Drawing.Color.Black
-        Me.boxNetLastMonth1.LocationFloat = New DevExpress.Utils.PointFloat(475.0!, 575.0!)
+        Me.boxNetLastMonth1.LocationFloat = New DevExpress.Utils.PointFloat(475.0!, 601.2917!)
         Me.boxNetLastMonth1.Name = "boxNetLastMonth1"
         Me.boxNetLastMonth1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxNetLastMonth1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
@@ -2078,7 +2087,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text63.CanGrow = False
         Me.Text63.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text63.ForeColor = System.Drawing.Color.Black
-        Me.Text63.LocationFloat = New DevExpress.Utils.PointFloat(450.0!, 575.0!)
+        Me.Text63.LocationFloat = New DevExpress.Utils.PointFloat(450.0!, 601.2917!)
         Me.Text63.Name = "Text63"
         Me.Text63.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text63.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -2094,7 +2103,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text64.CanGrow = False
         Me.Text64.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.Text64.ForeColor = System.Drawing.Color.Black
-        Me.Text64.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 575.0!)
+        Me.Text64.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 601.2917!)
         Me.Text64.Name = "Text64"
         Me.Text64.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text64.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
@@ -2113,7 +2122,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxNetThisMonth1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[boxNetThisMonth]")})
         Me.boxNetThisMonth1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.boxNetThisMonth1.ForeColor = System.Drawing.Color.Black
-        Me.boxNetThisMonth1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 575.0!)
+        Me.boxNetThisMonth1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 601.2917!)
         Me.boxNetThisMonth1.Name = "boxNetThisMonth1"
         Me.boxNetThisMonth1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxNetThisMonth1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
@@ -2129,7 +2138,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text65.CanGrow = False
         Me.Text65.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text65.ForeColor = System.Drawing.Color.Black
-        Me.Text65.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 575.0!)
+        Me.Text65.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 601.2917!)
         Me.Text65.Name = "Text65"
         Me.Text65.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text65.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -2144,7 +2153,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line14.BorderWidth = 1.0!
         Me.Line14.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line14.ForeColor = System.Drawing.Color.Silver
-        Me.Line14.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 566.6667!)
+        Me.Line14.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 592.9584!)
         Me.Line14.Name = "Line14"
         Me.Line14.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line14.SizeF = New System.Drawing.SizeF(769.7917!, 2.0!)
@@ -2158,7 +2167,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line15.BorderWidth = 1.0!
         Me.Line15.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line15.ForeColor = System.Drawing.Color.Silver
-        Me.Line15.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 600.0!)
+        Me.Line15.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 626.2917!)
         Me.Line15.Name = "Line15"
         Me.Line15.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line15.SizeF = New System.Drawing.SizeF(770.7499!, 2.083313!)
@@ -2172,7 +2181,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line16.BorderWidth = 1.0!
         Me.Line16.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line16.ForeColor = System.Drawing.Color.Silver
-        Me.Line16.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 616.6667!)
+        Me.Line16.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 642.9584!)
         Me.Line16.Name = "Line16"
         Me.Line16.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line16.SizeF = New System.Drawing.SizeF(769.7917!, 2.0!)
@@ -2187,13 +2196,13 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text66.CanGrow = False
         Me.Text66.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.Text66.ForeColor = System.Drawing.Color.Black
-        Me.Text66.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 625.0!)
+        Me.Text66.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 651.2917!)
         Me.Text66.Name = "Text66"
         Me.Text66.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text66.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
         Me.Text66.SizeF = New System.Drawing.SizeF(205.2083!, 17.36111!)
         Me.Text66.StylePriority.UseTextAlignment = False
-        Me.Text66.Text = "صندوق الشهر الحالي:"
+        Me.Text66.Text = "صندوق تراكمي ليرة:"
         Me.Text66.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'boxTotal1
@@ -2206,7 +2215,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.boxTotal1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[boxTotal]")})
         Me.boxTotal1.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.boxTotal1.ForeColor = System.Drawing.Color.Black
-        Me.boxTotal1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 625.0!)
+        Me.boxTotal1.LocationFloat = New DevExpress.Utils.PointFloat(66.66666!, 651.2917!)
         Me.boxTotal1.Name = "boxTotal1"
         Me.boxTotal1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.boxTotal1.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
@@ -2222,7 +2231,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Text67.CanGrow = False
         Me.Text67.Font = New System.Drawing.Font("Arial", 10.0!)
         Me.Text67.ForeColor = System.Drawing.Color.Black
-        Me.Text67.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 625.0!)
+        Me.Text67.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 651.2917!)
         Me.Text67.Name = "Text67"
         Me.Text67.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text67.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
@@ -2237,7 +2246,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line24.BorderWidth = 1.0!
         Me.Line24.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line24.ForeColor = System.Drawing.Color.Silver
-        Me.Line24.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 650.0!)
+        Me.Line24.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 676.2917!)
         Me.Line24.Name = "Line24"
         Me.Line24.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line24.SizeF = New System.Drawing.SizeF(770.7499!, 2.083313!)
@@ -2252,7 +2261,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line17.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line17.ForeColor = System.Drawing.Color.Silver
         Me.Line17.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line17.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 566.6667!)
+        Me.Line17.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 592.9584!)
         Me.Line17.Name = "Line17"
         Me.Line17.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line17.SizeF = New System.Drawing.SizeF(2.0!, 33.33333!)
@@ -2267,7 +2276,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line25.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line25.ForeColor = System.Drawing.Color.Silver
         Me.Line25.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line25.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 616.6667!)
+        Me.Line25.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 642.9584!)
         Me.Line25.Name = "Line25"
         Me.Line25.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line25.SizeF = New System.Drawing.SizeF(2.0!, 33.33333!)
@@ -2282,7 +2291,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line21.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line21.ForeColor = System.Drawing.Color.Silver
         Me.Line21.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line21.LocationFloat = New DevExpress.Utils.PointFloat(785.4167!, 566.6667!)
+        Me.Line21.LocationFloat = New DevExpress.Utils.PointFloat(785.4167!, 592.9584!)
         Me.Line21.Name = "Line21"
         Me.Line21.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line21.SizeF = New System.Drawing.SizeF(2.0!, 33.33333!)
@@ -2297,7 +2306,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line22.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line22.ForeColor = System.Drawing.Color.Silver
         Me.Line22.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line22.LocationFloat = New DevExpress.Utils.PointFloat(428.125!, 567.7083!)
+        Me.Line22.LocationFloat = New DevExpress.Utils.PointFloat(428.125!, 594.0!)
         Me.Line22.Name = "Line22"
         Me.Line22.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line22.SizeF = New System.Drawing.SizeF(2.0!, 32.29167!)
@@ -2312,7 +2321,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line23.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line23.ForeColor = System.Drawing.Color.Silver
         Me.Line23.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line23.LocationFloat = New DevExpress.Utils.PointFloat(785.4167!, 616.6667!)
+        Me.Line23.LocationFloat = New DevExpress.Utils.PointFloat(785.4167!, 642.9584!)
         Me.Line23.Name = "Line23"
         Me.Line23.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line23.SizeF = New System.Drawing.SizeF(2.0!, 33.33333!)
@@ -2327,7 +2336,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Line26.Font = New System.Drawing.Font("Times New Roman", 9.75!)
         Me.Line26.ForeColor = System.Drawing.Color.Silver
         Me.Line26.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
-        Me.Line26.LocationFloat = New DevExpress.Utils.PointFloat(428.125!, 617.7083!)
+        Me.Line26.LocationFloat = New DevExpress.Utils.PointFloat(428.125!, 644.0!)
         Me.Line26.Name = "Line26"
         Me.Line26.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line26.SizeF = New System.Drawing.SizeF(2.0!, 32.29167!)
@@ -2456,6 +2465,155 @@ Partial Public Class XtraGeneralMonthlyReport
         '
         Me.BottomMarginBand1.HeightF = 25.0!
         Me.BottomMarginBand1.Name = "BottomMarginBand1"
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel2.CanGrow = False
+        Me.XrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalInFromDollar]")})
+        Me.XrLabel2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(475.0001!, 523.3055!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
+        Me.XrLabel2.StylePriority.UseBackColor = False
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Text = "XrLabel2"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrLabel2.TextFormatString = "{0:N0}"
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel3.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel3.BorderWidth = 1.0!
+        Me.XrLabel3.CanGrow = False
+        Me.XrLabel3.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.XrLabel3.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 523.3055!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(163.5417!, 17.36111!)
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "دولار الى ليرة:"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel4.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel4.BorderWidth = 1.0!
+        Me.XrLabel4.CanGrow = False
+        Me.XrLabel4.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.XrLabel4.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(450.0001!, 523.3055!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.XrLabel4.Text = "ل.ل"
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel5
+        '
+        Me.XrLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel5.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel5.BorderWidth = 1.0!
+        Me.XrLabel5.CanGrow = False
+        Me.XrLabel5.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.XrLabel5.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 450.0!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel5.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(205.2083!, 17.36111!)
+        Me.XrLabel5.StylePriority.UseTextAlignment = False
+        Me.XrLabel5.Text = "ليرة الى دولار:"
+        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel6
+        '
+        Me.XrLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel6.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel6.BorderWidth = 1.0!
+        Me.XrLabel6.CanGrow = False
+        Me.XrLabel6.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.XrLabel6.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(41.66673!, 450.0!)
+        Me.XrLabel6.Name = "XrLabel6"
+        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel6.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.XrLabel6.Text = "ل.ل"
+        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel7
+        '
+        Me.XrLabel7.CanGrow = False
+        Me.XrLabel7.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalOutToDollar]")})
+        Me.XrLabel7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(66.66673!, 450.0!)
+        Me.XrLabel7.Name = "XrLabel7"
+        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrLabel7.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
+        Me.XrLabel7.StylePriority.UseFont = False
+        Me.XrLabel7.StylePriority.UseTextAlignment = False
+        Me.XrLabel7.Text = "XrLabel7"
+        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrLabel7.TextFormatString = "{0:N0}"
+        '
+        'XrLabel8
+        '
+        Me.XrLabel8.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel8.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel8.BorderWidth = 1.0!
+        Me.XrLabel8.CanGrow = False
+        Me.XrLabel8.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.XrLabel8.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 651.2917!)
+        Me.XrLabel8.Name = "XrLabel8"
+        Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel8.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.XrLabel8.SizeF = New System.Drawing.SizeF(163.5417!, 17.36111!)
+        Me.XrLabel8.StylePriority.UseTextAlignment = False
+        Me.XrLabel8.Text = "صندوق تراكمي دولار:"
+        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel9
+        '
+        Me.XrLabel9.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel9.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel9.BorderWidth = 1.0!
+        Me.XrLabel9.CanGrow = False
+        Me.XrLabel9.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.XrLabel9.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(450.0001!, 651.2917!)
+        Me.XrLabel9.Name = "XrLabel9"
+        Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel9.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.XrLabel9.Text = "ل.ل"
+        Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel10
+        '
+        Me.XrLabel10.CanGrow = False
+        Me.XrLabel10.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AllNetDollar]")})
+        Me.XrLabel10.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(475.0001!, 651.2917!)
+        Me.XrLabel10.Name = "XrLabel10"
+        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
+        Me.XrLabel10.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
+        Me.XrLabel10.StylePriority.UseFont = False
+        Me.XrLabel10.StylePriority.UseTextAlignment = False
+        Me.XrLabel10.Text = "XrLabel10"
+        Me.XrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrLabel10.TextFormatString = "{0:#,##0.##}"
         '
         'XtraGeneralMonthlyReport
         '
@@ -2625,4 +2783,13 @@ Partial Public Class XtraGeneralMonthlyReport
     Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents TopMarginBand1 As DevExpress.XtraReports.UI.TopMarginBand
     Friend WithEvents BottomMarginBand1 As DevExpress.XtraReports.UI.BottomMarginBand
+    Friend WithEvents XrLabel10 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel8 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel9 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel7 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel5 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel6 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
 End Class

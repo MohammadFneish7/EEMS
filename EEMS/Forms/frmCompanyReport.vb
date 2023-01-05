@@ -208,9 +208,9 @@ Public Class frmCompanyReport
         Return AllNet
     End Function
 
-    Private Function getAllNetDollar() As Long
-        Dim AllNetDollar As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount_dollar AS BIGINT)),0) FROM Expenditure")
-        btnALLNetDollar.Text = "صندوق تراكمي دولار" & vbNewLine & vbNewLine & AllNetDollar.ToString("N0") & " $"
+    Private Function getAllNetDollar() As Double
+        Dim AllNetDollar As Double = a.ExecuteScalarDouble("SELECT IsNull(SUM(CAST(amount_dollar AS Decimal(18,2))),0) FROM Expenditure")
+        btnALLNetDollar.Text = "صندوق تراكمي دولار" & vbNewLine & vbNewLine & AllNetDollar.ToString("#,##0.##") & " $"
         Return AllNetDollar
     End Function
 
@@ -646,13 +646,13 @@ Public Class frmCompanyReport
         Dim totalOtherOut As Long = getTotalOtherOut(totalInsuranceOut, totalOutToDollar)
         Dim perviousMonthNet As Long = getPerviousMonthNet()
         Dim AllNet As Long = getAllNet()
-        Dim AllNetDollar As Long = getAllNetDollar()
+        Dim AllNetDollar As Double = getAllNetDollar()
         Dim currentMonthNet As Long = getCurrentMonthNet(totalInvoiceIn, totalcredit, totalOtherIn, totalInsuranceIn, totalOtherOut, totalInsuranceOut)
 
         ds.Clear()
         ds = New DataSetGeneralReport
         Dim dr As DataRow = ds.dtGeneral.NewRow
-        dr.ItemArray = New Object() {getArabicMonth(dtp1.Value.Month) & " / " & dtp1.Value.Year, newReg, inactiveReg, activeReg, workHours, sellKW, totalKW, totalFee, totalRound, totalDiscount, totalNumberOfInvoices, totalValueOfInvoices, totalPaidValueOfInvoices, totalRemValueOfInvoices, totalValueOfInvoicesTillNow, totalPaidValueOfInvoicesTillNow, totalRemValueOfInvoicesTillNow, totalCreditValueTillNow, totalPurchaseValue, totalFuelLiter, totalFuelPrice, totalFuelConsumptionValue, totalMaintainanceValue, totalInvoiceIn, totalcredit, totalInsuranceIn, totalOtherIn, Math.Abs(totalOtherOut), Math.Abs(totalInsuranceOut), currentMonthNet, perviousMonthNet, AllNet, totalInFromDollar, totalOutToDollar, AllNetDollar}
+        dr.ItemArray = New Object() {getArabicMonth(dtp1.Value.Month) & " / " & dtp1.Value.Year, newReg, inactiveReg, activeReg, workHours, sellKW, totalKW, totalFee, totalRound, totalDiscount, totalNumberOfInvoices, totalValueOfInvoices, totalPaidValueOfInvoices, totalRemValueOfInvoices, totalValueOfInvoicesTillNow, totalPaidValueOfInvoicesTillNow, totalRemValueOfInvoicesTillNow, totalCreditValueTillNow, totalPurchaseValue, totalFuelLiter, totalFuelPrice, totalFuelConsumptionValue, totalMaintainanceValue, totalInvoiceIn, totalcredit, totalInsuranceIn, totalOtherIn, Math.Abs(totalOtherOut), Math.Abs(totalInsuranceOut), currentMonthNet, perviousMonthNet, AllNet, totalInFromDollar, Math.Abs(totalOutToDollar), AllNetDollar}
         ds.dtGeneral.Rows.Add(dr)
 
     End Sub
