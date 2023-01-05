@@ -171,14 +171,26 @@ Public Class frmCompanyReport
         Return totalInsuranceOut
     End Function
 
-    Private Function getTotalOtherIn(totalInvoiceIn As Long, totalcredit As Long, totalInsuranceIn As Long) As Long
-        Dim totalOtherIn As Long = (a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.amount>0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInvoiceIn - totalcredit - totalInsuranceIn)
+    Private Function getTotalOutToDollar() As Long
+        Dim totalOutToDollar As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.title='ليرة الى دولار' and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
+        btntotalOutToDollar.Text = "ليرة الى دولار" & vbNewLine & vbNewLine & totalOutToDollar.ToString("N0") & " ل.ل"
+        Return totalOutToDollar
+    End Function
+
+    Private Function getTotalInFromDollar() As Long
+        Dim totalInFromDollar As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.title='دولار الى ليرة' and DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month)
+        btntotalInFromDollar.Text = "دولار الى ليرة" & vbNewLine & vbNewLine & totalInFromDollar.ToString("N0") & " ل.ل"
+        Return totalInFromDollar
+    End Function
+
+    Private Function getTotalOtherIn(totalInvoiceIn As Long, totalcredit As Long, totalInsuranceIn As Long, totalInFromDollar As Long) As Long
+        Dim totalOtherIn As Long = (a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.amount>0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInvoiceIn - totalcredit - totalInsuranceIn - totalInFromDollar)
         btnOtherIn.Text = "مداخيل اخرى" & vbNewLine & vbNewLine & totalOtherIn.ToString("N0") & " ل.ل"
         Return totalOtherIn
     End Function
 
-    Private Function getTotalOtherOut(totalInsuranceOut As Long) As Long
-        Dim totalOtherOut As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.amount<0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInsuranceOut
+    Private Function getTotalOtherOut(totalInsuranceOut As Long, totalOutToDollar As Long) As Long
+        Dim totalOtherOut As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure ex where ex.amount<0 AND DatePart(""yyyy"",ex.expdate)=" & dtp1.Value.Year & " AND DatePart(""m"",ex.expdate)=" & dtp1.Value.Month) - totalInsuranceOut - totalOutToDollar
         btnTotalOut.Text = "مصاريف اخرى" & vbNewLine & vbNewLine & totalOtherOut.ToString("N0") & " ل.ل"
         Return totalOtherOut
     End Function
@@ -194,6 +206,12 @@ Public Class frmCompanyReport
         Dim AllNet As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount AS BIGINT)),0) FROM Expenditure")
         btnALLNet.Text = "صندوق تراكمي" & vbNewLine & vbNewLine & AllNet.ToString("N0") & " ل.ل"
         Return AllNet
+    End Function
+
+    Private Function getAllNetDollar() As Long
+        Dim AllNetDollar As Long = a.ExecuteScalar("SELECT IsNull(SUM(CAST(amount_dollar AS BIGINT)),0) FROM Expenditure")
+        btnALLNetDollar.Text = "صندوق تراكمي دولار" & vbNewLine & vbNewLine & AllNetDollar.ToString("N0") & " $"
+        Return AllNetDollar
     End Function
 
     Private Function getCurrentMonthNet(totalInvoiceIn As Long, totalcredit As Long, totalOtherIn As Long, totalInsuranceIn As Long, totalOtherOut As Long, totalInsuranceOut As Long) As Long
@@ -620,16 +638,21 @@ Public Class frmCompanyReport
         Dim totalcredit As Long = getTotalcredit()
         Dim totalInsuranceIn As Long = getTotalInsuranceIn()
         Dim totalInsuranceOut As Long = getTotalInsuranceOut()
-        Dim totalOtherIn As Long = getTotalOtherIn(totalInvoiceIn, totalcredit, totalInsuranceIn)
-        Dim totalOtherOut As Long = getTotalOtherOut(totalInsuranceOut)
+
+        Dim totalInFromDollar As Long = getTotalInFromDollar()
+        Dim totalOutToDollar As Long = getTotalOutToDollar()
+
+        Dim totalOtherIn As Long = getTotalOtherIn(totalInvoiceIn, totalcredit, totalInsuranceIn, totalInFromDollar)
+        Dim totalOtherOut As Long = getTotalOtherOut(totalInsuranceOut, totalOutToDollar)
         Dim perviousMonthNet As Long = getPerviousMonthNet()
         Dim AllNet As Long = getAllNet()
+        Dim AllNetDollar As Long = getAllNetDollar()
         Dim currentMonthNet As Long = getCurrentMonthNet(totalInvoiceIn, totalcredit, totalOtherIn, totalInsuranceIn, totalOtherOut, totalInsuranceOut)
 
         ds.Clear()
         ds = New DataSetGeneralReport
         Dim dr As DataRow = ds.dtGeneral.NewRow
-        dr.ItemArray = New Object() {getArabicMonth(dtp1.Value.Month) & " / " & dtp1.Value.Year, newReg, inactiveReg, activeReg, workHours, sellKW, totalKW, totalFee, totalRound, totalDiscount, totalNumberOfInvoices, totalValueOfInvoices, totalPaidValueOfInvoices, totalRemValueOfInvoices, totalValueOfInvoicesTillNow, totalPaidValueOfInvoicesTillNow, totalRemValueOfInvoicesTillNow, totalCreditValueTillNow, totalPurchaseValue, totalFuelLiter, totalFuelPrice, totalFuelConsumptionValue, totalMaintainanceValue, totalInvoiceIn, totalcredit, totalInsuranceIn, totalOtherIn, Math.Abs(totalOtherOut), Math.Abs(totalInsuranceOut), currentMonthNet, perviousMonthNet, AllNet}
+        dr.ItemArray = New Object() {getArabicMonth(dtp1.Value.Month) & " / " & dtp1.Value.Year, newReg, inactiveReg, activeReg, workHours, sellKW, totalKW, totalFee, totalRound, totalDiscount, totalNumberOfInvoices, totalValueOfInvoices, totalPaidValueOfInvoices, totalRemValueOfInvoices, totalValueOfInvoicesTillNow, totalPaidValueOfInvoicesTillNow, totalRemValueOfInvoicesTillNow, totalCreditValueTillNow, totalPurchaseValue, totalFuelLiter, totalFuelPrice, totalFuelConsumptionValue, totalMaintainanceValue, totalInvoiceIn, totalcredit, totalInsuranceIn, totalOtherIn, Math.Abs(totalOtherOut), Math.Abs(totalInsuranceOut), currentMonthNet, perviousMonthNet, AllNet, totalInFromDollar, totalOutToDollar, AllNetDollar}
         ds.dtGeneral.Rows.Add(dr)
 
     End Sub

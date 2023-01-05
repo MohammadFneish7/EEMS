@@ -697,6 +697,12 @@ Partial Public Class DataSetGeneralReport
         
         Private columnboxTotal As Global.System.Data.DataColumn
         
+        Private columntotalInFromDollar As Global.System.Data.DataColumn
+        
+        Private columntotalOutToDollar As Global.System.Data.DataColumn
+        
+        Private columnAllNetDollar As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -989,6 +995,30 @@ Partial Public Class DataSetGeneralReport
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property totalInFromDollarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntotalInFromDollar
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property totalOutToDollarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntotalOutToDollar
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property AllNetDollarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAllNetDollar
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1057,9 +1087,12 @@ Partial Public Class DataSetGeneralReport
                     ByVal boxOutInsurance As Long,  _
                     ByVal boxNetThisMonth As Long,  _
                     ByVal boxNetLastMonth As Long,  _
-                    ByVal boxTotal As Long) As dtGeneralRow
+                    ByVal boxTotal As Long,  _
+                    ByVal totalInFromDollar As Long,  _
+                    ByVal totalOutToDollar As Long,  _
+                    ByVal AllNetDollar As Double) As dtGeneralRow
             Dim rowdtGeneralRow As dtGeneralRow = CType(Me.NewRow,dtGeneralRow)
-            Dim columnValuesArray() As Object = New Object() {selDate, newAccounts, endedAcounts, activeAcounts, workingHours, sellKW, totalKW, totalFees, totalRound, totalDiscount, countInvoices, totalInvoices, paidInvoices, remainingInvoices, totalInvoicesTillDate, totalPaidInvoicesTillDate, totalRemainInvoicesTillDate, totalPastCredit, totalItemsBuy, totalFuelLeter, totalFuelPrice, totalFuelConsumption, totalMaintainancePrice, boxInInvoices, boxInCredits, boxInInsurance, boxInOther, boxOuttotal, boxOutInsurance, boxNetThisMonth, boxNetLastMonth, boxTotal}
+            Dim columnValuesArray() As Object = New Object() {selDate, newAccounts, endedAcounts, activeAcounts, workingHours, sellKW, totalKW, totalFees, totalRound, totalDiscount, countInvoices, totalInvoices, paidInvoices, remainingInvoices, totalInvoicesTillDate, totalPaidInvoicesTillDate, totalRemainInvoicesTillDate, totalPastCredit, totalItemsBuy, totalFuelLeter, totalFuelPrice, totalFuelConsumption, totalMaintainancePrice, boxInInvoices, boxInCredits, boxInInsurance, boxInOther, boxOuttotal, boxOutInsurance, boxNetThisMonth, boxNetLastMonth, boxTotal, totalInFromDollar, totalOutToDollar, AllNetDollar}
             rowdtGeneralRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowdtGeneralRow)
             Return rowdtGeneralRow
@@ -1114,6 +1147,9 @@ Partial Public Class DataSetGeneralReport
             Me.columnboxNetThisMonth = MyBase.Columns("boxNetThisMonth")
             Me.columnboxNetLastMonth = MyBase.Columns("boxNetLastMonth")
             Me.columnboxTotal = MyBase.Columns("boxTotal")
+            Me.columntotalInFromDollar = MyBase.Columns("totalInFromDollar")
+            Me.columntotalOutToDollar = MyBase.Columns("totalOutToDollar")
+            Me.columnAllNetDollar = MyBase.Columns("AllNetDollar")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1183,6 +1219,12 @@ Partial Public Class DataSetGeneralReport
             MyBase.Columns.Add(Me.columnboxNetLastMonth)
             Me.columnboxTotal = New Global.System.Data.DataColumn("boxTotal", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnboxTotal)
+            Me.columntotalInFromDollar = New Global.System.Data.DataColumn("totalInFromDollar", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntotalInFromDollar)
+            Me.columntotalOutToDollar = New Global.System.Data.DataColumn("totalOutToDollar", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntotalOutToDollar)
+            Me.columnAllNetDollar = New Global.System.Data.DataColumn("AllNetDollar", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAllNetDollar)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4603,6 +4645,51 @@ Partial Public Class DataSetGeneralReport
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property totalInFromDollar() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabledtGeneral.totalInFromDollarColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'totalInFromDollar' in table 'dtGeneral' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledtGeneral.totalInFromDollarColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property totalOutToDollar() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tabledtGeneral.totalOutToDollarColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'totalOutToDollar' in table 'dtGeneral' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledtGeneral.totalOutToDollarColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property AllNetDollar() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tabledtGeneral.AllNetDollarColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'AllNetDollar' in table 'dtGeneral' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tabledtGeneral.AllNetDollarColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsselDateNull() As Boolean
             Return Me.IsNull(Me.tabledtGeneral.selDateColumn)
         End Function
@@ -4983,6 +5070,42 @@ Partial Public Class DataSetGeneralReport
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SetboxTotalNull()
             Me(Me.tabledtGeneral.boxTotalColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IstotalInFromDollarNull() As Boolean
+            Return Me.IsNull(Me.tabledtGeneral.totalInFromDollarColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SettotalInFromDollarNull()
+            Me(Me.tabledtGeneral.totalInFromDollarColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IstotalOutToDollarNull() As Boolean
+            Return Me.IsNull(Me.tabledtGeneral.totalOutToDollarColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SettotalOutToDollarNull()
+            Me(Me.tabledtGeneral.totalOutToDollarColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsAllNetDollarNull() As Boolean
+            Return Me.IsNull(Me.tabledtGeneral.AllNetDollarColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetAllNetDollarNull()
+            Me(Me.tabledtGeneral.AllNetDollarColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

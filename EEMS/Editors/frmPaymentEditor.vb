@@ -36,7 +36,6 @@ Public Class frmPaymentEditor
     End Sub
 
     Private Sub togglePayOption()
-
         If defaultPayOption = 0 Then
             rad1.Checked = True
         ElseIf defaultPayOption = 1 Then
@@ -47,6 +46,7 @@ Public Class frmPaymentEditor
             rad4.Checked = True
         End If
     End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Dim thisMonthCounterRequiredValueQuery As String = "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.ID =ch.ID)"
@@ -153,7 +153,12 @@ Public Class frmPaymentEditor
                 Return
             End If
 
-            payedAmmount = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
+            If chkmigratetodollarbox.Checked Then
+                payedAmmount = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
+            Else
+                payedAmmount = Integer.Parse(txtpayment.Text.Trim)
+            End If
+
 
             If payedAmmount > maxPay Then
                 MsgBox("لا يمكن ان تتخطّى قيمة الدفعة اجماي المبلغ الباقي المطلوب.")
@@ -269,7 +274,9 @@ Public Class frmPaymentEditor
 
     Private Sub txtpayment_Leave(sender As Object, e As EventArgs) Handles txtpayment.Leave
         Try
-            txtpayment.Text = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
+            If chkmigratetodollarbox.Checked Then
+                txtpayment.Text = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
+            End If
         Catch ex As Exception
 
         End Try

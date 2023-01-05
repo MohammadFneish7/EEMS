@@ -24,9 +24,32 @@ Public Class frmItemsPurchaseEditor
             MsgBox("لا يمكن شراء كمّيّة صفر من الصنف.")
             Return
         End If
+
+        If chkmigratetodollarbox.Checked Then
+            If String.IsNullOrEmpty(txtdollarprice.Text) OrElse Double.Parse(txtdollarprice.Text) <= 0 Then
+                MsgBox("الرجاء تحديد سعر الصرف للتحويل الى صندوق الدولار.")
+                Return
+            End If
+            If String.IsNullOrEmpty(txtpaymentdollar.Text) OrElse Double.Parse(txtpaymentdollar.Text) <= 0 Then
+                MsgBox("الرجاء تحديد القيمة بالدولار للتحويل الى صندوق الدولار.")
+                Return
+            End If
+            If Not verifyPaymentEquality() Then
+                MsgBox("الرجاء التأكد من أن القيمة بالليرة تساوي القيمة بالدولار ضرب سعر الصرف.")
+                Return
+            End If
+        End If
+
         a.ds = New DataSet
         Dim purid As Integer = a.Execute("insert into Purchases(indate,itemid,location,quantity,pricetotal,partyname,partyPhone,notes) values('" & txtOutDate.Value & "'," & txtItemID.Text.Trim & ",'" & txtlocation.Text.Trim & "'," & txtQuantity.Text.Trim & "," & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & txtPartyPhone.Text.Trim & "','" & txtNotes.Text.Trim & "')")
         a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & txtOutDate.Value.ToShortDateString & "','شراء أصناف',-" & txtpricetotal.Text.Trim & ",'" & txtParty.Text.Trim & "','" & "شراء " & txtQuantity.Text.Trim & " " & txtRemUnit.Text.Trim & " " & txtItemName.Text.Trim & "','ip" & purid & "')")
+
+        Dim payedAmmount = Integer.Parse(txtpricetotal.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpricetotal.Text.Trim))
+        If chkmigratetodollarbox.Checked Then
+            a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & txtOutDate.Value.ToShortDateString & "','دولار الى ليرة'," & payedAmmount & ",'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "','itpid" & purid & "')")
+            a.Execute("insert into Expenditure(expdate,title,amount_dollar,currency,party,detail,paymentRef) values('" & txtOutDate.Value.ToShortDateString & "','دولار الى ليرة'," & -txtpaymentdollar.Text.Trim & ",1,'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "','itpid" & purid & "')")
+        End If
+
         Me.DialogResult = DialogResult.OK
     End Sub
 
@@ -63,5 +86,74 @@ Public Class frmItemsPurchaseEditor
 
     Private Sub txtQuantity_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtQuantity.KeyPress, txtpricetotal.KeyPress
         a.bindNumeric(sender, e)
+    End Sub
+
+    Private Sub frmItemsPurchaseEditor_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtdollarprice.Text = SharedModule.dollarPrice
+    End Sub
+
+    Private Sub txtname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpricetotal.KeyPress, txtdollarprice.KeyPress
+        a.bindNumeric(sender, e)
+    End Sub
+
+    Private Sub txtpaymentdollar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpaymentdollar.KeyPress
+        a.bindDouble(sender, e)
+    End Sub
+
+    Private Function verifyPaymentEquality() As Boolean
+        Try
+            If Math.Abs(Integer.Parse(txtpricetotal.Text) - Double.Parse(txtpaymentdollar.Text * txtdollarprice.Text)) < 1000 Then
+                Return True
+            End If
+            Return False
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    Private Sub txtpaymentdollar_TextChanged(sender As Object, e As EventArgs) Handles txtpaymentdollar.TextChanged, txtpricetotal.TextChanged, txtdollarprice.TextChanged
+        RemoveHandler txtpricetotal.TextChanged, AddressOf txtpaymentdollar_TextChanged
+        RemoveHandler txtdollarprice.TextChanged, AddressOf txtpaymentdollar_TextChanged
+        RemoveHandler txtpaymentdollar.TextChanged, AddressOf txtpaymentdollar_TextChanged
+
+        Try
+            If sender Is txtpricetotal Then
+                txtpaymentdollar.Text = Double.Parse(txtpricetotal.Text / txtdollarprice.Text).ToString("0.##")
+            Else
+                If sender Is txtdollarprice Then
+                    txtpaymentdollar.Text = Double.Parse(txtpricetotal.Text / txtdollarprice.Text).ToString("0.##")
+                ElseIf sender Is txtpaymentdollar Then
+                    txtdollarprice.Text = CType(Double.Parse(txtpricetotal.Text / txtpaymentdollar.Text).ToString(), Integer)
+                End If
+
+                txtpricetotal.Text = Integer.Parse(txtpricetotal.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpricetotal.Text.Trim))
+            End If
+        Catch ex As Exception
+
+        Finally
+            AddHandler txtpricetotal.TextChanged, AddressOf txtpaymentdollar_TextChanged
+            AddHandler txtdollarprice.TextChanged, AddressOf txtpaymentdollar_TextChanged
+            AddHandler txtpaymentdollar.TextChanged, AddressOf txtpaymentdollar_TextChanged
+        End Try
+    End Sub
+
+    Private Sub chkmigratetodollarbox_CheckedChanged(sender As Object, e As EventArgs) Handles chkmigratetodollarbox.CheckedChanged
+        If chkmigratetodollarbox.Checked Then
+            txtdollarprice.Enabled = True
+            txtpaymentdollar.Enabled = True
+        Else
+            txtdollarprice.Enabled = False
+            txtpaymentdollar.Enabled = False
+        End If
+    End Sub
+
+    Private Sub txtpayment_Leave(sender As Object, e As EventArgs) Handles txtpricetotal.Leave
+        Try
+            If chkmigratetodollarbox.Checked Then
+                txtpricetotal.Text = Integer.Parse(txtpricetotal.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpricetotal.Text.Trim))
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
