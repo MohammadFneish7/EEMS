@@ -254,7 +254,7 @@ Public Class frmCompanyReport
         Next
     End Sub
 
-    Private Sub loadGeneralReport()
+    Private Sub loadGeneralDetailedReport()
         a.GetData("SELECT r.ID as [المعرّف],r.active as مفعّل,en.ename as [الموتور],b.location as [عنوان العلبة],c.clientname as [المشترك], c.phone as [هاتف], c.mobile as [خلوي], p.title as [نوع الاشتراك], p.ampere as [أمبير]," &
                        " cl.fullname as [الجابي],b.code as [رمز العلبة],ec.code as [الرمز في العلبة],(b.code + ec.code) as [رمز مفتاح]," &
                        " IsNull(Max(ch.currentvalue),0) as [مجموع كيلوات (كيلو)]," &
@@ -264,7 +264,9 @@ Public Class frmCompanyReport
                        " IsNull(SUM(discount),0) as [اجمالي حسومات ل.ل]," &
                        " IsNull(SUM(total),0) as [صافي ل.ل]," &
                        " (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS [اجمالي مدفوع ل.ل]," &
-                       " (IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID )) AS [باقي ل.ل]," &
+                       " (IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID )) AS [باقي ل.ل]," &
+                       " (SELECT COUNT(val) FROM (SELECT coh.id as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [عدد أشهر الكسر]," &
+                       " (SELECT SUM(val) FROM (SELECT coh.currentvalue-coh.previousvalue as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total,coh.currentvalue,coh.previousvalue HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [مجموع الكيلوات لأشهر الكسر]," &
                        " r.insurance as [له تأمين ل.ل]" &
                        " FROM Registration r,Client c,ElectricBox b,ECounter ec,CounterHistory ch,Package p,Engine en,Collector cl,ArabicMonth ar " &
                        " WHERE r.packageid = p.ID And ch.cmonth = ar.ID And r.counterid = ec.ID And ec.boxid = b.ID And r.clientid = c.ID And ch.regid = r.ID And b.engineid = en.ID And b.collectorid = cl.ID" &
@@ -735,38 +737,38 @@ Public Class frmCompanyReport
     End Function
 
     Private Function getCollectersReportQuery2() As String
-        Dim query As String = "SELECT 'اجمالي', " & _
-                                " 	ISNULL(SUM(B),0), " & _
-                                " 	ISNULL(SUM(E),0), " & _
-                                " 	ISNULL(SUM(C),0), " & _
-                                " 	ISNULL(SUM(F),0), " & _
-                                " 	ISNULL(SUM(C - F),0) " & _
-                                " FROM " & _
-                                " 	(Select cl.fullname AS A, " & _
-                                " 		Count(ch.ID) as B, " & _
-                                " 		sum(Cast(ch.total AS BIGINT)) as C " & _
-                                " 		FROM  ElectricBox b JOIN Collector cl   " & _
-                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " & _
-                                " 			ON ec.boxid=b.ID JOIN Registration r  " & _
-                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " & _
-                                " 			ON ch.regid=r.id " & _
-                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" & _
-                                " 		Group by cl.fullname " & _
-                                " 	) t1  " & _
-                                " LEFT JOIN " & _
-                                " 	(Select  cl.fullname AS D, " & _
-                                " 		Count(Distinct p.counterhistoryid) as E, " & _
-                                " 		SUM(pvalue) as F " & _
-                                " 		FROM  ElectricBox b JOIN Collector cl   " & _
-                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " & _
-                                " 			ON ec.boxid=b.ID JOIN Registration r  " & _
-                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " & _
-                                " 			ON ch.regid=r.id JOIN Payment p  " & _
-                                " 			ON p.counterhistoryid = ch.ID  " & _
-                                " 	 " & _
-                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" & _
-                                " 		Group by cl.fullname " & _
-                                " 	) t2  " & _
+        Dim query As String = "SELECT 'اجمالي', " &
+                                " 	ISNULL(SUM(B),0), " &
+                                " 	ISNULL(SUM(E),0), " &
+                                " 	ISNULL(SUM(C),0), " &
+                                " 	ISNULL(SUM(F),0), " &
+                                " 	ISNULL(SUM(C - F),0) " &
+                                " FROM " &
+                                " 	(Select cl.fullname AS A, " &
+                                " 		Count(ch.ID) as B, " &
+                                " 		sum(Cast(ch.total AS BIGINT)) as C " &
+                                " 		FROM  ElectricBox b JOIN Collector cl   " &
+                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " &
+                                " 			ON ec.boxid=b.ID JOIN Registration r  " &
+                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " &
+                                " 			ON ch.regid=r.id " &
+                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" &
+                                " 		Group by cl.fullname " &
+                                " 	) t1  " &
+                                " LEFT JOIN " &
+                                " 	(Select  cl.fullname AS D, " &
+                                " 		Count(Distinct p.counterhistoryid) as E, " &
+                                " 		SUM(pvalue) as F " &
+                                " 		FROM  ElectricBox b JOIN Collector cl   " &
+                                " 			ON b.collectorid=cl.id JOIN ECounter ec  " &
+                                " 			ON ec.boxid=b.ID JOIN Registration r  " &
+                                " 			ON r.counterid=ec.ID JOIN CounterHistory ch  " &
+                                " 			ON ch.regid=r.id JOIN Payment p  " &
+                                " 			ON p.counterhistoryid = ch.ID  " &
+                                " 	 " &
+                                "       WHERE  ch.cmonth=" & dtp1.Value.Month & " and ch.cyear=" & dtp1.Value.Year & "" &
+                                " 		Group by cl.fullname " &
+                                " 	) t2  " &
                                 " ON t1.A = t2.D "
         Return query
     End Function
@@ -831,7 +833,7 @@ Public Class frmCompanyReport
             Return
         End If
         Try
-            loadGeneralReport()
+            loadGeneralDetailedReport()
             Dim frm As New frmDataViewer("كشف عام تفصيلي", dtGeneralReport, False)
             frm.ShowDialog()
         Catch ex As Exception
