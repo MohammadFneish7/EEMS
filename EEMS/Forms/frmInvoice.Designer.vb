@@ -46,6 +46,7 @@ Partial Class frmInvoice
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.btnShowPrint = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnInvoicesReport = New System.Windows.Forms.Button()
@@ -200,7 +201,7 @@ Partial Class frmInvoice
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(3, 8)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(28, 16)
+        Me.Label2.Size = New System.Drawing.Size(27, 16)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "ل.ل"
         '
@@ -231,7 +232,7 @@ Partial Class frmInvoice
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label12.Location = New System.Drawing.Point(697, 8)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(24, 16)
+        Me.Label12.Size = New System.Drawing.Size(23, 16)
         Me.Label12.TabIndex = 14
         Me.Label12.Text = "س"
         '
@@ -264,7 +265,7 @@ Partial Class frmInvoice
         Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Label13.Location = New System.Drawing.Point(473, 9)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(27, 16)
+        Me.Label13.Size = New System.Drawing.Size(26, 16)
         Me.Label13.TabIndex = 11
         Me.Label13.Text = "KW"
         '
@@ -275,7 +276,7 @@ Partial Class frmInvoice
         Me.Label8.ForeColor = System.Drawing.Color.Blue
         Me.Label8.Location = New System.Drawing.Point(237, 8)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(28, 16)
+        Me.Label8.Size = New System.Drawing.Size(27, 16)
         Me.Label8.TabIndex = 8
         Me.Label8.Text = "ل.ل"
         '
@@ -330,6 +331,7 @@ Partial Class frmInvoice
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.btnShowPrint)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.btnInvoicesReport)
@@ -341,6 +343,21 @@ Partial Class frmInvoice
         Me.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.Panel1.Size = New System.Drawing.Size(1367, 100)
         Me.Panel1.TabIndex = 2
+        '
+        'Button2
+        '
+        Me.Button2.Enabled = False
+        Me.Button2.Image = Global.EEMS.My.Resources.Resources.whatsapp
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(387, 55)
+        Me.Button2.Name = "Button2"
+        Me.Button2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button2.Size = New System.Drawing.Size(135, 33)
+        Me.Button2.TabIndex = 37
+        Me.Button2.Text = "أرسال عبر الواتساب"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'btnShowPrint
         '
@@ -360,7 +377,7 @@ Partial Class frmInvoice
         '
         Me.Button3.Image = Global.EEMS.My.Resources.Resources.payment
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.Location = New System.Drawing.Point(387, 55)
+        Me.Button3.Location = New System.Drawing.Point(528, 55)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(138, 33)
         Me.Button3.TabIndex = 5
@@ -657,5 +674,5 @@ Partial Class frmInvoice
     Friend WithEvents RepositoryItemButtonEdit2 As DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit
     Friend WithEvents btnShowPrint As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
-
+    Friend WithEvents Button2 As Button
 End Class

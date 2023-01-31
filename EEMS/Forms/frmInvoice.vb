@@ -399,6 +399,31 @@ Public Class frmInvoice
         End If
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If WhatsappMessenger.isOpen Then
+            MessageBox.Show("يوجد عمليّة ارسال جارية حاليّاً الرجاء الانتظار")
+            Return
+        End If
+
+        Dim msges As New List(Of WAMessage)
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
+        Dim frm As New WhatsappMessenger(msges)
+        frm.Show()
+    End Sub
+
     Private Sub frmInvoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not isPaymentVerified Then
             GridView1.OptionsSelection.MultiSelect = False

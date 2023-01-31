@@ -1077,7 +1077,7 @@ Public Class frmCompanyReport
                             IsNull(SUM(discount),0) as netDiscount, 
                             IsNull(SUM(total),0) as netNet,
                             (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS totalPaid, 
-                            (SELECT IsNull(SUM(total),0) - IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & ") AS remLastMonth, 
+                            (SELECT IsNull(total,0) - IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY total) AS remLastMonth, 
                             IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS totalRem, 
                             r.insurance as cInsurance
                             from CounterHistory ch join Registration r  on ch.regid = r.id join Client c on r.clientid=c.ID
