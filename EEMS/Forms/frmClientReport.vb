@@ -1,4 +1,5 @@
-﻿Imports EEMS.SqlDBHelper
+﻿Imports DevExpress.Data.Helpers
+Imports EEMS.SqlDBHelper
 
 Public Class frmClientReport
 
@@ -17,7 +18,7 @@ Public Class frmClientReport
         Me.cid = cid
         If cid < 0 Then
             MsgBox("خطأ في رقم المشترك.")
-            Me.DialogResult =DialogResult.Ignore
+            Me.DialogResult = DialogResult.Ignore
         End If
         txtName.Text = clientname_
 
@@ -280,17 +281,26 @@ Public Class frmClientReport
             'End If
             Try
                 Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                If dr =DialogResult.Yes Then
+                If dr = DialogResult.Yes Then
                     If MsgBox("ملاحظة: سوف يتم حذف الدفعة من حساب المؤسّسة ايضاً." & vbNewLine & "هل تريد المتابعة؟", MsgBoxStyle.YesNo) = MsgBoxResult.No Then
                         Return
                     End If
                     Dim listToRemove As DataGridViewSelectedRowCollection = dgvPayments.SelectedRows
                     Dim todeleteIds As String = "("
                     Dim todeleteIdsstr As String = "('"
+                    Dim count As Integer = 0
                     For Each row As DataGridViewRow In dgvPayments.SelectedRows
+                        count += 1
                         todeleteIds = todeleteIds & row.Cells(1).Value.ToString & ","
                         todeleteIdsstr = todeleteIdsstr & "py" & row.Cells(1).Value.ToString & "','"
                     Next
+
+                    Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
+                    If foundWithPayRef <> count Then
+                        MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
+                        Return
+                    End If
+
                     If todeleteIds.Length > 1 Then
                         todeleteIds = todeleteIds.Remove(todeleteIds.Length - 1, 1)
                         todeleteIdsstr = todeleteIdsstr.Remove(todeleteIdsstr.Length - 2, 2)

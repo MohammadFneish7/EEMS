@@ -34,6 +34,7 @@ Partial Class frmInvoiceNote
         Me.chkdollartotal = New System.Windows.Forms.CheckBox()
         Me.chkalltodollar = New System.Windows.Forms.CheckBox()
         Me.chkaddkilo = New System.Windows.Forms.CheckBox()
+        Me.chkadddiscount = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -67,7 +68,7 @@ Partial Class frmInvoiceNote
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 251)
+        Me.Button1.Location = New System.Drawing.Point(15, 274)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(357, 36)
         Me.Button1.TabIndex = 3
@@ -110,7 +111,7 @@ Partial Class frmInvoiceNote
         'chkdollarprice
         '
         Me.chkdollarprice.AutoSize = True
-        Me.chkdollarprice.Location = New System.Drawing.Point(233, 182)
+        Me.chkdollarprice.Location = New System.Drawing.Point(233, 205)
         Me.chkdollarprice.Name = "chkdollarprice"
         Me.chkdollarprice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkdollarprice.Size = New System.Drawing.Size(134, 17)
@@ -121,7 +122,7 @@ Partial Class frmInvoiceNote
         'chkdollartotal
         '
         Me.chkdollartotal.AutoSize = True
-        Me.chkdollartotal.Location = New System.Drawing.Point(238, 228)
+        Me.chkdollartotal.Location = New System.Drawing.Point(238, 251)
         Me.chkdollartotal.Name = "chkdollartotal"
         Me.chkdollartotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkdollartotal.Size = New System.Drawing.Size(129, 17)
@@ -132,7 +133,7 @@ Partial Class frmInvoiceNote
         'chkalltodollar
         '
         Me.chkalltodollar.AutoSize = True
-        Me.chkalltodollar.Location = New System.Drawing.Point(93, 205)
+        Me.chkalltodollar.Location = New System.Drawing.Point(93, 228)
         Me.chkalltodollar.Name = "chkalltodollar"
         Me.chkalltodollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkalltodollar.Size = New System.Drawing.Size(274, 17)
@@ -151,12 +152,24 @@ Partial Class frmInvoiceNote
         Me.chkaddkilo.Text = "إضافة سعر الكيلوات"
         Me.chkaddkilo.UseVisualStyleBackColor = True
         '
+        'chkadddiscount
+        '
+        Me.chkadddiscount.AutoSize = True
+        Me.chkadddiscount.Location = New System.Drawing.Point(260, 182)
+        Me.chkadddiscount.Name = "chkadddiscount"
+        Me.chkadddiscount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkadddiscount.Size = New System.Drawing.Size(107, 17)
+        Me.chkadddiscount.TabIndex = 11
+        Me.chkadddiscount.Text = "إضافة قيمة الحسم"
+        Me.chkadddiscount.UseVisualStyleBackColor = True
+        '
         'frmInvoiceNote
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 302)
+        Me.ClientSize = New System.Drawing.Size(381, 322)
+        Me.Controls.Add(Me.chkadddiscount)
         Me.Controls.Add(Me.chkaddkilo)
         Me.Controls.Add(Me.chkalltodollar)
         Me.Controls.Add(Me.chkdollartotal)
@@ -190,4 +203,5 @@ Partial Class frmInvoiceNote
     Friend WithEvents chkdollartotal As CheckBox
     Friend WithEvents chkalltodollar As CheckBox
     Friend WithEvents chkaddkilo As CheckBox
+    Friend WithEvents chkadddiscount As CheckBox
 End Class

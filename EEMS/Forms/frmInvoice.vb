@@ -111,7 +111,7 @@ Public Class frmInvoice
                 Dim ar As New Helper
                 ar.ds = New DataSet
                 ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar), "dt")
-                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo)
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo, frmInvoicenote.adddiscount)
                 frm.ShowDialog()
             End If
         End If

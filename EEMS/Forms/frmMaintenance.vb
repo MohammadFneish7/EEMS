@@ -57,10 +57,19 @@ Public Class frmMaintenance
             If dr =DialogResult.Yes Then
                 Dim todeleteIds As String = "("
                 Dim todeleteIdsstr As String = "('"
+                Dim count As Integer = 0
                 For Each row As Integer In GridView1.GetSelectedRows
+                    count += 1
                     todeleteIds = todeleteIds & GridView1.GetRowCellValue(row, GridView1.Columns(0)).ToString & ","
                     todeleteIdsstr = todeleteIdsstr & "mc" & GridView1.GetRowCellValue(row, GridView1.Columns(0)).ToString & "','"
                 Next
+
+                Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
+                If foundWithPayRef <> count Then
+                    MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
+                    Return
+                End If
+
                 If todeleteIds.Length > 1 Then
                     todeleteIds = todeleteIds.Remove(todeleteIds.Length - 1, 1)
                     todeleteIdsstr = todeleteIdsstr.Remove(todeleteIdsstr.Length - 2, 2)

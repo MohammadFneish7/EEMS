@@ -163,8 +163,8 @@ Public Class frmMain
     End Sub
 
     Private Sub fillChart2()
-        Dim activeReg As Integer = a.ExecuteScalar("SELECT COUNT(ID) FROM Registration r WHERE active=1 and r.registrationdate<= '" & New Date(txtMonth.Value.Year, txtMonth.Value.Month, System.DateTime.DaysInMonth(txtMonth.Value.Year, txtMonth.Value.Month)).ToShortDateString & "'")
-        Dim inactiveReg As Integer = a.ExecuteScalar("SELECT COUNT(*) FROM Registration WHERE DatePart(""yyyy"",enddate)=" & txtMonth.Value.Year & " AND DatePart(""m"",enddate)=" & txtMonth.Value.Month & " and active=0")
+        Dim activeReg As Integer = a.ExecuteScalar("SELECT COUNT(ID) FROM Registration WHERE active=1")
+        Dim inactiveReg As Integer = a.ExecuteScalar("SELECT COUNT(*) FROM Registration WHERE active=0")
         Dim xvalues As New List(Of String)
         xvalues.AddRange({"اشتراك مفعّل", "اشتراك غير مفعّل"})
         Dim yvalues As New List(Of Integer)
@@ -685,7 +685,7 @@ Public Class frmMain
                 Return
             End If
             If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
-                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo)
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo, frmInvoicenote.adddiscount)
                 frm.ShowDialog()
             End If
         End If
