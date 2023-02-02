@@ -1497,7 +1497,12 @@
     <None Include="constring">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Queries\Database Build Query.sql" />
+    <Content Include="Queries\Database Build Query.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\Set Dollar Price.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Requirments\DevExpressLocalizedResources_2021.2_ar.exe" />
     <Content Include="ar\DevExpress.Blazor.Reporting.v21.2.Viewer.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
