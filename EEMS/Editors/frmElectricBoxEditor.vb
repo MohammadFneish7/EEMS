@@ -43,22 +43,22 @@ Public Class frmElectricBoxEditor
             '    a.Execute("update electricbox set code ='" & s2 & "-" & values(i) & "' where id=" & row.Item(0))
             'Next
 
-            a.ds = New DataSet
-            a.GetData("Select distinct code from ElectricBox")
-            For Each row As DataRow In a.ds.Tables(0).Rows
-                Try
+            Try
+                a.ds = New DataSet
+                a.GetData("Select distinct code from ElectricBox")
+                For Each row As DataRow In a.ds.Tables(0).Rows
                     Dim s As String = row.Item(0).ToString
                     Dim i As Integer = lettersList.IndexOf(s.Substring(0, 1).Trim.ToUpper)
                     If i > -1 Then
-                        Dim val As Integer = Integer.Parse(s.Substring(2, s.Length - 2))
+                        Dim val As Integer = Double.Parse(s.Substring(2, s.Length - 2))
                         If val > values(i) Then
                             values(i) = val
                         End If
                     End If
-                Catch ex As Exception
-                    ErrorDialog.showDlg(ex)
-                End Try
-            Next
+                Next
+            Catch ex As Exception
+                ErrorDialog.showDlg(ex)
+            End Try
         End If
 
         'Dim disabledCellStyle As New DataGridViewCellStyle
@@ -85,7 +85,7 @@ Public Class frmElectricBoxEditor
             Return
         End If
         If add = False Then
-            a.Execute("Update ElectricBox Set code='" & txtEngine.Text.Trim & "-" & txtcode.Text.Trim & "',location='" & txtaddress.Text.Trim & "',collectorid='" & txtcollectorid.Text.Trim & "',engineid='" & txtengineid.Text.Trim & "',notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
+            a.Execute("Update ElectricBox Set location='" & txtaddress.Text.Trim & "',collectorid='" & txtcollectorid.Text.Trim & "',engineid='" & txtengineid.Text.Trim & "',notes='" & txtnotes.Text.Trim & "' Where ID=" & id)
             For Each row As DataGridViewRow In dgvdata.Rows
                 a.Execute("Update ECounter set active = " & getBit(row.Cells(3).Value.ToString) & " where ID=" & row.Cells(0).Value.ToString)
             Next
@@ -192,7 +192,7 @@ Public Class frmElectricBoxEditor
     End Sub
 
     Private Sub txtcode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcode.KeyPress
-        a.bindNumeric(sender, e)
+        a.bindDouble(sender, e)
     End Sub
 
     Private Sub txtEngine_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles txtEngine.MouseDoubleClick

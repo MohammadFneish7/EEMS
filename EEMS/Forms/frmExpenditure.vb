@@ -148,7 +148,7 @@ Public Class frmExpenditure
 
     Private Sub GridView1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridView1.KeyDown
         If e.KeyCode = 46 Then
-            Dim tok As New frmTokenizer
+            Dim tok As New frmTokenizer(SharedModule.currentUser.getUsername())
             If tok.ShowDialog = DialogResult.OK Then
                 If Not tok.tokenAccepted Then
                     Return

@@ -618,7 +618,7 @@ Public Class frmMain
     End Sub
 
     Private Sub SQLToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SQLToolStripMenuItem.Click
-        Dim tok As New frmTokenizer
+        Dim tok As New frmTokenizer(SharedModule.currentUser.getUsername())
         If tok.ShowDialog =DialogResult.OK Then
             If tok.tokenAccepted Then
                 Dim frm As New frmSqlExecuter
@@ -723,7 +723,7 @@ Public Class frmMain
     End Sub
 
     Private Sub تجديدالخدمةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles تجديدالخدمةToolStripMenuItem.Click
-        Dim tok As New frmTokenizer
+        Dim tok As New frmTokenizer("MOHAMMADFNEISHTOKEN")
         If tok.ShowDialog =DialogResult.OK Then
             If tok.tokenAccepted Then
                 Dim frm As New frmValidityRenual
@@ -738,7 +738,7 @@ Public Class frmMain
             Return
         End If
 
-        Dim tok As New frmTokenizer
+        Dim tok As New frmTokenizer(SharedModule.currentUser.getUsername())
         If tok.ShowDialog = DialogResult.OK Then
             If Not tok.tokenAccepted Then
                 Return

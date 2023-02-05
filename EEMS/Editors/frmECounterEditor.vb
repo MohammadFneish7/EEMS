@@ -167,7 +167,7 @@ Public Class frmECounterEditor
     End Sub
 
     Private Sub btneditval_Click(sender As Object, e As EventArgs) Handles btneditval.Click
-        Dim tok As New frmTokenizer
+        Dim tok As New frmTokenizer(SharedModule.currentUser.getUsername())
         If tok.ShowDialog = DialogResult.OK Then
             If tok.tokenAccepted Then
                 txtcurrentval.Enabled = True

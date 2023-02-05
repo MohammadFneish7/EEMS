@@ -198,6 +198,7 @@ Partial Class frmMain
         Me.كسرواتماقبلالبرنامجToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ادارةToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تعديلسعرالكيلواتToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.تعديلرسمالإشتراكToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تعديلسعرصرفالدولارToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.استيرادمناكسيلToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.تصحيحكسرالألفToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -245,7 +246,6 @@ Partial Class frmMain
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.lblPayment = New System.Windows.Forms.Label()
-        Me.تعديلرسمالإشتراكToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.ChartControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(XyDiagram1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Series1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1111,113 +1111,113 @@ Partial Class frmMain
         '
         Me.المولداتToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__39_
         Me.المولداتToolStripMenuItem.Name = "المولداتToolStripMenuItem"
-        Me.المولداتToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.المولداتToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.المولداتToolStripMenuItem.Text = "المولّدات"
         '
         'علبالكهرباءToolStripMenuItem
         '
         Me.علبالكهرباءToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__35_
         Me.علبالكهرباءToolStripMenuItem.Name = "علبالكهرباءToolStripMenuItem"
-        Me.علبالكهرباءToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.علبالكهرباءToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.علبالكهرباءToolStripMenuItem.Text = " علب الكهرباء"
         '
         'عداداتالكهرباءToolStripMenuItem
         '
         Me.عداداتالكهرباءToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__21_
         Me.عداداتالكهرباءToolStripMenuItem.Name = "عداداتالكهرباءToolStripMenuItem"
-        Me.عداداتالكهرباءToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.عداداتالكهرباءToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.عداداتالكهرباءToolStripMenuItem.Text = " عدادات الكهرباء"
         '
         'ملفالجباتToolStripMenuItem
         '
         Me.ملفالجباتToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__31_
         Me.ملفالجباتToolStripMenuItem.Name = "ملفالجباتToolStripMenuItem"
-        Me.ملفالجباتToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ملفالجباتToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ملفالجباتToolStripMenuItem.Text = " ملف الجباة"
         '
         'انواعالاشتراكاتToolStripMenuItem
         '
         Me.انواعالاشتراكاتToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__27_
         Me.انواعالاشتراكاتToolStripMenuItem.Name = "انواعالاشتراكاتToolStripMenuItem"
-        Me.انواعالاشتراكاتToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.انواعالاشتراكاتToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.انواعالاشتراكاتToolStripMenuItem.Text = " انواع الاشتراكات"
         '
         'tsmiInventory
         '
         Me.tsmiInventory.Image = Global.EEMS.My.Resources.Resources.stock16
         Me.tsmiInventory.Name = "tsmiInventory"
-        Me.tsmiInventory.Size = New System.Drawing.Size(186, 22)
+        Me.tsmiInventory.Size = New System.Drawing.Size(193, 22)
         Me.tsmiInventory.Text = "مخزن الأصناف"
         '
         'tsmiFuel
         '
         Me.tsmiFuel.Image = Global.EEMS.My.Resources.Resources.fuelInven16
         Me.tsmiFuel.Name = "tsmiFuel"
-        Me.tsmiFuel.Size = New System.Drawing.Size(186, 22)
+        Me.tsmiFuel.Size = New System.Drawing.Size(193, 22)
         Me.tsmiFuel.Text = "ملف المحروقات"
         '
         'tsmiMaintainance
         '
         Me.tsmiMaintainance.Image = Global.EEMS.My.Resources.Resources.settings
         Me.tsmiMaintainance.Name = "tsmiMaintainance"
-        Me.tsmiMaintainance.Size = New System.Drawing.Size(186, 22)
+        Me.tsmiMaintainance.Size = New System.Drawing.Size(193, 22)
         Me.tsmiMaintainance.Text = "صيانة وغيار زيت"
         '
         'ملفالزبائنToolStripMenuItem
         '
         Me.ملفالزبائنToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__33_
         Me.ملفالزبائنToolStripMenuItem.Name = "ملفالزبائنToolStripMenuItem"
-        Me.ملفالزبائنToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ملفالزبائنToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ملفالزبائنToolStripMenuItem.Text = " ملف الزبائن"
         '
         'الاشتراكاتToolStripMenuItem
         '
         Me.الاشتراكاتToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__19_
         Me.الاشتراكاتToolStripMenuItem.Name = "الاشتراكاتToolStripMenuItem"
-        Me.الاشتراكاتToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.الاشتراكاتToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.الاشتراكاتToolStripMenuItem.Text = "الاشتراكات"
         '
         'ساعاتالتغذيةToolStripMenuItem
         '
         Me.ساعاتالتغذيةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__15_
         Me.ساعاتالتغذيةToolStripMenuItem.Name = "ساعاتالتغذيةToolStripMenuItem"
-        Me.ساعاتالتغذيةToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ساعاتالتغذيةToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ساعاتالتغذيةToolStripMenuItem.Text = " ساعات التغذية"
         '
         'ادخالالعداداتToolStripMenuItem
         '
         Me.ادخالالعداداتToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__11_
         Me.ادخالالعداداتToolStripMenuItem.Name = "ادخالالعداداتToolStripMenuItem"
-        Me.ادخالالعداداتToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.ادخالالعداداتToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.ادخالالعداداتToolStripMenuItem.Text = " ادخال العدّادات"
         '
         'كشفالفواتيرToolStripMenuItem
         '
         Me.كشفالفواتيرToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__41_
         Me.كشفالفواتيرToolStripMenuItem.Name = "كشفالفواتيرToolStripMenuItem"
-        Me.كشفالفواتيرToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.كشفالفواتيرToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.كشفالفواتيرToolStripMenuItem.Text = " كشف الفواتير"
         '
         'حسابالمؤسسةToolStripMenuItem
         '
         Me.حسابالمؤسسةToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__9_
         Me.حسابالمؤسسةToolStripMenuItem.Name = "حسابالمؤسسةToolStripMenuItem"
-        Me.حسابالمؤسسةToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.حسابالمؤسسةToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.حسابالمؤسسةToolStripMenuItem.Text = " حساب المؤسسة"
         '
         'الكشفالعامToolStripMenuItem
         '
         Me.الكشفالعامToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.icon__5_
         Me.الكشفالعامToolStripMenuItem.Name = "الكشفالعامToolStripMenuItem"
-        Me.الكشفالعامToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
+        Me.الكشفالعامToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
         Me.الكشفالعامToolStripMenuItem.Text = " الكشف العام"
         '
         'كسرواتماقبلالبرنامجToolStripMenuItem
         '
         Me.كسرواتماقبلالبرنامجToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.accountingbook
         Me.كسرواتماقبلالبرنامجToolStripMenuItem.Name = "كسرواتماقبلالبرنامجToolStripMenuItem"
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Size = New System.Drawing.Size(186, 22)
-        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Text = "كسروات ما قبل البرنامج"
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Size = New System.Drawing.Size(193, 22)
+        Me.كسرواتماقبلالبرنامجToolStripMenuItem.Text = "مكسروات ما قبل البرنامج"
         '
         'ادارةToolStripMenuItem
         '
@@ -1233,6 +1233,13 @@ Partial Class frmMain
         Me.تعديلسعرالكيلواتToolStripMenuItem.Name = "تعديلسعرالكيلواتToolStripMenuItem"
         Me.تعديلسعرالكيلواتToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
         Me.تعديلسعرالكيلواتToolStripMenuItem.Text = "تعديل سعر الكيلوات"
+        '
+        'تعديلرسمالإشتراكToolStripMenuItem
+        '
+        Me.تعديلرسمالإشتراكToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.keyboard
+        Me.تعديلرسمالإشتراكToolStripMenuItem.Name = "تعديلرسمالإشتراكToolStripMenuItem"
+        Me.تعديلرسمالإشتراكToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
+        Me.تعديلرسمالإشتراكToolStripMenuItem.Text = "تعديل رسم الإشتراك"
         '
         'تعديلسعرصرفالدولارToolStripMenuItem
         '
@@ -1791,13 +1798,6 @@ Partial Class frmMain
         Me.lblPayment.Text = "Label11"
         Me.lblPayment.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.lblPayment.Visible = False
-        '
-        'تعديلرسمالإشتراكToolStripMenuItem
-        '
-        Me.تعديلرسمالإشتراكToolStripMenuItem.Image = Global.EEMS.My.Resources.Resources.keyboard
-        Me.تعديلرسمالإشتراكToolStripMenuItem.Name = "تعديلرسمالإشتراكToolStripMenuItem"
-        Me.تعديلرسمالإشتراكToolStripMenuItem.Size = New System.Drawing.Size(205, 22)
-        Me.تعديلرسمالإشتراكToolStripMenuItem.Text = "تعديل رسم الإشتراك"
         '
         'frmMain
         '

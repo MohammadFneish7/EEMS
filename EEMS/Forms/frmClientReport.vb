@@ -289,23 +289,25 @@ Public Class frmClientReport
                     Dim todeleteIds As String = "("
                     Dim todeleteIdsstr As String = "('"
                     Dim count As Integer = 0
+
                     For Each row As DataGridViewRow In dgvPayments.SelectedRows
                         count += 1
                         todeleteIds = todeleteIds & row.Cells(1).Value.ToString & ","
                         todeleteIdsstr = todeleteIdsstr & "py" & row.Cells(1).Value.ToString & "','"
                     Next
 
-                    Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
-                    If foundWithPayRef <> count Then
-                        MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
-                        Return
-                    End If
-
                     If todeleteIds.Length > 1 Then
                         todeleteIds = todeleteIds.Remove(todeleteIds.Length - 1, 1)
                         todeleteIdsstr = todeleteIdsstr.Remove(todeleteIdsstr.Length - 2, 2)
                         todeleteIds = todeleteIds & ")"
                         todeleteIdsstr = todeleteIdsstr & ")"
+
+                        Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
+                        If foundWithPayRef <> count Then
+                            MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
+                            Return
+                        End If
+
                         a.Execute("DELETE FROM Payment Where ID in " & todeleteIds)
                         a.Execute("DELETE FROM Expenditure Where paymentRef in " & todeleteIdsstr)
                         For Each i As DataGridViewRow In listToRemove
@@ -332,7 +334,7 @@ Public Class frmClientReport
 
     Private Sub txtName_DoubleClick(sender As Object, e As EventArgs) Handles txtName.DoubleClick
         Dim frm1 As New frmChooser(CLIENT_CHOOSER)
-        If frm1.ShowDialog() =DialogResult.OK Then
+        If frm1.ShowDialog() = DialogResult.OK Then
             If frm1.dgvData.SelectedRows.Count > 0 Then
                 cid = frm1.dgvData.SelectedRows(0).Cells(0).Value.ToString
                 clientname = frm1.dgvData.SelectedRows(0).Cells(1).Value.ToString

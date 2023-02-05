@@ -35,7 +35,7 @@ Public Class frmMaintenance
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim frm As New frmMaintenanceEditor
         Dim dr As DialogResult = frm.ShowDialog
-        If dr =DialogResult.OK Then
+        If dr = DialogResult.OK Then
             loadData()
         End If
     End Sub
@@ -54,7 +54,7 @@ Public Class frmMaintenance
         End If
         Try
             Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-            If dr =DialogResult.Yes Then
+            If dr = DialogResult.Yes Then
                 Dim todeleteIds As String = "("
                 Dim todeleteIdsstr As String = "('"
                 Dim count As Integer = 0
@@ -64,17 +64,18 @@ Public Class frmMaintenance
                     todeleteIdsstr = todeleteIdsstr & "mc" & GridView1.GetRowCellValue(row, GridView1.Columns(0)).ToString & "','"
                 Next
 
-                Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
-                If foundWithPayRef <> count Then
-                    MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
-                    Return
-                End If
-
                 If todeleteIds.Length > 1 Then
                     todeleteIds = todeleteIds.Remove(todeleteIds.Length - 1, 1)
                     todeleteIdsstr = todeleteIdsstr.Remove(todeleteIdsstr.Length - 2, 2)
                     todeleteIds = todeleteIds & ")"
                     todeleteIdsstr = todeleteIdsstr & ")"
+
+                    Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
+                    If foundWithPayRef <> count Then
+                        MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
+                        Return
+                    End If
+
                     a.Execute("DELETE FROM Maintenance Where ID in " & todeleteIds)
                     a.Execute("DELETE FROM Expenditure Where paymentRef in " & todeleteIdsstr)
                 End If
@@ -127,7 +128,7 @@ Public Class frmMaintenance
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
             Return
         End If
-        
+
         Dim frmexport As New frmCustomExportHandler(dgvData1)
         frmexport.ShowDialog()
     End Sub
