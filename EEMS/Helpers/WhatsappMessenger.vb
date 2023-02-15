@@ -1,4 +1,5 @@
 ﻿Imports DevExpress.CodeParser
+Imports DevExpress.Mvvm
 Imports OpenQA.Selenium
 Imports WhatsappAgent
 
@@ -7,10 +8,9 @@ Public Class WhatsappMessenger
     Public Shared isOpen As Boolean = False
 
     Private messages_ As List(Of WAMessage)
-    Private Messagner As Messegner
-    Sub New(Messages As List(Of WAMessage))
+    Private WithEvents Messagner_ As Messegner
 
-        ' This call is required by the designer.
+    Sub New(Messages As List(Of WAMessage))
         InitializeComponent()
         messages_ = Messages
         ProgressBar1.Maximum = messages_.Count
@@ -18,21 +18,35 @@ Public Class WhatsappMessenger
         BackgroundWorker1.RunWorkerAsync()
     End Sub
 
+    Private Sub Messegner_OnDisposed() Handles Messagner_.OnDisposed
+        TextBox1.Invoke(Sub() TextBox1.AppendLine("تم اغلاق المُتصفّح"))
+    End Sub
+
+    Private Sub Messegner_OnQRReady(qrbmp As Image) Handles Messagner_.OnQRReady
+        pbox.Image = qrbmp
+        Panel1.Invoke(Sub() Panel1.Visible = True)
+    End Sub
+
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
-            Messagner = New Messegner()
+            Messagner_ = New Messegner(hideWindow:=True)
+            Messagner_?.Login()
         Catch ex As Exception
-            BackgroundWorker1.ReportProgress(0, "فشلت عمليّة الارسال، تم اغلاق المُتصفّح." & vbNewLine & ex.Message)
+            BackgroundWorker1.ReportProgress(0, "فشلت عمليّة تسجيل الدخول." & vbNewLine & ex.Message)
             Return
+        Finally
+            Panel1.Invoke(Sub() Panel1.Visible = False)
         End Try
-
 
         Dim count As Integer = 0
         Dim browserClosed As Boolean = False
         For Each msg As WAMessage In messages_
             Try
+                If Messagner_?.IsDisposed Then
+                    Throw New NoSuchWindowException()
+                End If
                 BackgroundWorker1.ReportProgress(count, "جاري ارسال فاتورة '" & msg.Username & "' (" + msg.Mobile + ")...")
-                Messagner.SendMessage(msg.Mobile, msg.Message)
+                Messagner_?.SendMessage(msg.Mobile, msg.Message)
                 count += 1
                 BackgroundWorker1.ReportProgress(count, "")
             Catch ex As Exception
@@ -50,11 +64,11 @@ Public Class WhatsappMessenger
         If Not browserClosed Then
             Try
                 BackgroundWorker1.ReportProgress(count, "جاري تسجيل الخروج...")
-                Messagner.Logout()
+                Messagner_?.Logout()
             Catch ex As Exception
 
             Finally
-                BackgroundWorker1.ReportProgress(count, "تمّت العمليّة بنجاح.")
+                BackgroundWorker1.ReportProgress(count, "انتهت عمليّة الارسال")
             End Try
         End If
     End Sub
@@ -63,7 +77,7 @@ Public Class WhatsappMessenger
         ProgressBar1.Style = ProgressBarStyle.Blocks
         ProgressBar1.Value = e.ProgressPercentage
         lblprog.Text = e.ProgressPercentage & "/" & messages_.Count
-        TextBox1.Text &= e.UserState
+        TextBox1.AppendLine(e.UserState)
     End Sub
 
     Private Sub WhatsappMessenger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -76,7 +90,7 @@ Public Class WhatsappMessenger
 
     Private Sub WhatsappMessenger_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Try
-            Messagner.Dispose()
+            Messagner_?.Dispose()
         Catch ex As Exception
 
         End Try

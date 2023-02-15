@@ -1,5 +1,7 @@
 ﻿Imports EEMS.SqlDBHelper
 Imports DevExpress.XtraCharts
+Imports System.IO
+Imports System.Reflection
 
 Public Class frmMain
 
@@ -14,18 +16,9 @@ Public Class frmMain
         SharedModule.currentUser = New User(username, pass)
         Me.Text = "الصفحة الرئيسيّة" & " : " & user & " : " & orgname
 
-        'TODO: This line of code loads data into the 'EEMSDataSet.Engine' table. You can move, or remove it, as needed.
-        'Me.EngineTableAdapter.Fill(Me.EEMSDataSet.Engine)
         a.ds = New DataSet
         Try
             readNotes()
-            'TableLayoutPanel1.RowStyles.Clear()
-            'For i As Int16 = 0 To TableLayoutPanel1.RowCount - 1
-            '    Dim trs As New RowStyle()
-            '    trs.SizeType = SizeType.Percent
-            '    trs.Height = CSng(100 / TableLayoutPanel1.RowCount)
-            '    TableLayoutPanel1.ColumnStyles.Add(trs)
-            'Next
             TableLayoutPanel2.ColumnStyles.Clear()
             For i As Int16 = 0 To TableLayoutPanel2.ColumnCount - 1
                 Dim tcs As New ColumnStyle()
@@ -59,10 +52,27 @@ Public Class frmMain
         Catch ex As Exception
 
         End Try
+
+        doBackupIfNeeded()
     End Sub
 
-    Sub New()
-        InitializeComponent()
+    Private Sub doBackupIfNeeded()
+        Try
+            Dim path As String = Directory.GetParent(Assembly.GetExecutingAssembly().FullName).FullName + "\backups"
+            If Not Directory.Exists(path) Then
+                Directory.CreateDirectory(path)
+            End If
+            Dim files = Directory.GetFiles(path, "*.bak")
+            For Each file As String In files
+                Dim fi As New FileInfo(file)
+                If DateTime.Now - fi.CreationTime > TimeSpan.FromDays(10) OrElse fi.CreationTime.Date.ToShortDateString().Equals(DateTime.Now.ToShortDateString()) Then
+                    fi.Delete()
+                End If
+            Next
+            backup(path)
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
     End Sub
 
     Private Sub readNotes()
@@ -114,7 +124,7 @@ Public Class frmMain
                     mp.PlayLooping()
                 Catch ex As Exception
                 End Try
-               
+
                 MessageBox.Show(row.SubItems(3).Text, "مذكّرة", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Try
                     mp.Stop()
@@ -318,7 +328,7 @@ Public Class frmMain
     Private Sub ListView1_DoubleClick(sender As Object, e As EventArgs) Handles ListView1.DoubleClick
         If ListView1.SelectedItems.Count > 0 Then
             Dim frm As New frmNotes(ListView1.SelectedItems(0).SubItems(1).Text)
-            If frm.ShowDialog =DialogResult.OK Then
+            If frm.ShowDialog = DialogResult.OK Then
                 readNotes()
             End If
         End If
@@ -381,7 +391,7 @@ Public Class frmMain
 
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         Dim frm As New frmNotes(-1)
-        If frm.ShowDialog() =DialogResult.OK Then
+        If frm.ShowDialog() = DialogResult.OK Then
             readNotes()
         End If
     End Sub
@@ -492,14 +502,24 @@ Public Class frmMain
             Return
         End If
         Dim dlg As New FolderBrowserDialog
-        If dlg.ShowDialog =DialogResult.OK Then
+        If dlg.ShowDialog = DialogResult.OK Then
+            Try
+                backup(dlg.SelectedPath)
+                MsgBox("تمت العمليّة بنجاح")
+            Catch ex As Exception
+                ErrorDialog.showDlg(ex)
+            End Try
+        End If
 
-            Dim backupQuery As String = "DECLARE @name VARCHAR(50) " &
+    End Sub
+
+    Private Sub backup(path As String)
+        Dim backupQuery As String = "DECLARE @name VARCHAR(50) " &
                                    " DECLARE @path VARCHAR(256) " &
                                    " DECLARE @fileName VARCHAR(256) " &
                                    " DECLARE @fileDate VARCHAR(20) " &
                                    " " &
-                                   " SET @path = '" & dlg.SelectedPath & "\' " &
+                                   " SET @path = '" & path & "\' " &
                                    " " &
                                    " SELECT @fileDate = CONVERT(VARCHAR(20),GETDATE(),112) " &
                                    " " &
@@ -513,7 +533,8 @@ Public Class frmMain
                                    " " &
                                    " WHILE @@FETCH_STATUS = 0   " &
                                    " BEGIN   " &
-                                   "    SET @fileName = @path + @name + '_' + @fileDate + '.BAK'  " &
+                                   "    SET @fileName = @path + @name + '_' + @fileDate + '.bak
+                                   '  " &
                                    "    BACKUP DATABASE @name TO DISK = @fileName  " &
                                    " " &
                                    "    FETCH NEXT FROM db_cursor INTO @name   " &
@@ -522,16 +543,8 @@ Public Class frmMain
                                    " " &
                                    " CLOSE db_cursor " &
                                    " DEALLOCATE db_cursor"
-            Try
-                a.Execute(backupQuery)
-                MsgBox("تمت العمليّة بنجاح")
-            Catch ex As Exception
-                ErrorDialog.showDlg(ex)
-            End Try
-        End If
-
+        a.Execute(backupQuery)
     End Sub
-
 
     Private Sub إضافةحسملمجموعةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles إضافةحسملمجموعةToolStripMenuItem.Click
         If Not currentUser.hasPermision("adddiscount") Then
@@ -837,5 +850,9 @@ Public Class frmMain
 
     Private Sub frmMain_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Application.Exit()
+    End Sub
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        doBackupIfNeeded()
     End Sub
 End Class

@@ -169,7 +169,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADo
-        CQAAAk1TRnQBSQFMAgEBAgEAAVgBAwFYAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBAgEAAWgBAwFoAQMBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -220,118 +220,118 @@
   <metadata name="ChartBarController1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>997, 17</value>
   </metadata>
-  <data name="CreateRotatedFullStackedBarChartItem1.Description" xml:space="preserve">
+  <data name="CreateRotatedFullStackedBarChartItem2.Description" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.</value>
   </data>
-  <data name="CreateRotatedFullStackedBarChartItem1.Hint" xml:space="preserve">
+  <data name="CreateRotatedFullStackedBarChartItem2.Hint" xml:space="preserve">
     <value>Compare the percentage each value contributes to a total across categories using horizontal rectangles.
 
 Use it when the values on the chart represent durations or when the category text is very long.</value>
   </data>
-  <data name="CreateArea3DChartItem1.Description" xml:space="preserve">
+  <data name="CreateArea3DChartItem2.Description" xml:space="preserve">
     <value>Displays data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area.
 
 Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="CreateArea3DChartItem1.Hint" xml:space="preserve">
+  <data name="CreateArea3DChartItem2.Hint" xml:space="preserve">
     <value>Displays data as filled areas on a diagram, with each data point displayed as a peak or hollow in the area.
 
 Use it when you need to show trends for several series on the same diagram, and also show the relationship of the parts to the whole.</value>
   </data>
-  <data name="CreateFullStackedArea3DChartItem1.Description" xml:space="preserve">
+  <data name="CreateFullStackedArea3DChartItem2.Description" xml:space="preserve">
     <value>Displays data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.</value>
   </data>
-  <data name="CreateFullStackedArea3DChartItem1.Hint" xml:space="preserve">
+  <data name="CreateFullStackedArea3DChartItem2.Hint" xml:space="preserve">
     <value>Displays data as areas on a diagram, so that the value of each data point is stacked with all the other corresponding data points' values.
 
 Use it for comparing the percentage values of several series for the same point arguments.</value>
   </data>
-  <data name="CreateFunnelChartItem1.Description" xml:space="preserve">
+  <data name="CreateFunnelChartItem2.Description" xml:space="preserve">
     <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
   </data>
-  <data name="CreateFunnelChartItem1.Hint" xml:space="preserve">
+  <data name="CreateFunnelChartItem2.Hint" xml:space="preserve">
     <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
   </data>
-  <data name="CreateFunnel3DChartItem1.Description" xml:space="preserve">
+  <data name="CreateFunnel3DChartItem2.Description" xml:space="preserve">
     <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
   </data>
-  <data name="CreateFunnel3DChartItem1.Hint" xml:space="preserve">
+  <data name="CreateFunnel3DChartItem2.Hint" xml:space="preserve">
     <value>Displays a wide area at the top, indicating the total points' value, while other areas are proportionally smaller.
 
 Use it when it is necessary to represent stages in a sales process, show the amount of potential revenue for each stage, as well as identify potential problem areas in an organization's sales processes.</value>
   </data>
-  <data name="CreateStockChartItem1.Description" xml:space="preserve">
+  <data name="CreateStockChartItem2.Description" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="CreateStockChartItem1.Hint" xml:space="preserve">
+  <data name="CreateStockChartItem2.Hint" xml:space="preserve">
     <value>Show variation in stock prices over the course of a day. The Open and Close prices are represented by left and right lines on each point, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="CreateCandleStickChartItem1.Description" xml:space="preserve">
+  <data name="CreateCandleStickChartItem2.Description" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="CreateCandleStickChartItem1.Hint" xml:space="preserve">
+  <data name="CreateCandleStickChartItem2.Hint" xml:space="preserve">
     <value>Show the variation in the price of stock over the course of a day. The Open and Close prices are represented by a filled rectangle, and the Low and High prices are represented by the bottom and top values of the vertical line which is shown at each point.</value>
   </data>
-  <data name="CreateRadarRangeAreaChartItem1.Description" xml:space="preserve">
+  <data name="CreateRadarRangeAreaChartItem2.Description" xml:space="preserve">
     <value>Displays series on a circular diagram on the basis of angles as filled areas, defined by data points with two values that are minimum and maximum limits. Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateRadarRangeAreaChartItem1.Hint" xml:space="preserve">
+  <data name="CreateRadarRangeAreaChartItem2.Hint" xml:space="preserve">
     <value>Displays series on a circular diagram on the basis of angles as filled areas, defined by data points with two values that are minimum and maximum limits. Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateScatterRadarLineChartItem1.Description" xml:space="preserve">
+  <data name="CreateScatterRadarLineChartItem2.Description" xml:space="preserve">
     <value>Displays data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="CreateScatterRadarLineChartItem1.Hint" xml:space="preserve">
+  <data name="CreateScatterRadarLineChartItem2.Hint" xml:space="preserve">
     <value>Displays data as a line on a circular grid that has multiple axis along which data can be plotted. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="CreatePolarRangeAreaChartItem1.Description" xml:space="preserve">
+  <data name="CreatePolarRangeAreaChartItem2.Description" xml:space="preserve">
     <value>Displays series on a circular diagram as filled areas, defined by data points with two values that are minimum and maximum limits. Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreatePolarRangeAreaChartItem1.Hint" xml:space="preserve">
+  <data name="CreatePolarRangeAreaChartItem2.Hint" xml:space="preserve">
     <value>Displays series on a circular diagram as filled areas, defined by data points with two values that are minimum and maximum limits. Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateScatterPolarLineChartItem1.Description" xml:space="preserve">
+  <data name="CreateScatterPolarLineChartItem2.Description" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="CreateScatterPolarLineChartItem1.Hint" xml:space="preserve">
+  <data name="CreateScatterPolarLineChartItem2.Hint" xml:space="preserve">
     <value>Show trends for several series and compare their values for the same point arguments on a circular diagram on the basis of angles. The series points are drawn in the circular grid in the same order that they have in the series point collection.</value>
   </data>
-  <data name="CreateRangeAreaChartItem1.Description" xml:space="preserve">
+  <data name="CreateRangeAreaChartItem2.Description" xml:space="preserve">
     <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
 
 Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateRangeAreaChartItem1.Hint" xml:space="preserve">
+  <data name="CreateRangeAreaChartItem2.Hint" xml:space="preserve">
     <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
 
 Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateRangeArea3DChartItem1.Description" xml:space="preserve">
+  <data name="CreateRangeArea3DChartItem2.Description" xml:space="preserve">
     <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
 
 Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateRangeArea3DChartItem1.Hint" xml:space="preserve">
+  <data name="CreateRangeArea3DChartItem2.Hint" xml:space="preserve">
     <value>Displays series as filled areas on a diagram, defined by data points with two values that are minimum and maximum limits.
 
 Use it when you need to accentuate the delta between the start and end values.</value>
   </data>
-  <data name="CreateSideBySideGanttChartItem1.Description" xml:space="preserve">
+  <data name="CreateSideBySideGanttChartItem2.Description" xml:space="preserve">
     <value>Displays horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.</value>
   </data>
-  <data name="CreateSideBySideGanttChartItem1.Hint" xml:space="preserve">
+  <data name="CreateSideBySideGanttChartItem2.Hint" xml:space="preserve">
     <value>Displays horizontal bars along the time axis. Each bar represents a separate event with the start and end values, hence these charts are used to track different activities during the time frame.
 
 Use it when it's necessary to show activity bars from different series one above another, to compare their duration.</value>
@@ -361,6 +361,9 @@ Use it when it's necessary to show activity bars from different series one above
         AABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="Timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1157, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>88</value>
   </metadata>

@@ -9,6 +9,13 @@ Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtusername.Text = My.Settings.lastuser
         Version.Text = String.Format("v {0}", My.Application.Info.Version.ToString)
+
+        If Debugger.IsAttached Then
+            txtusername.Text = "admin"
+            My.Settings.lastuser = txtusername.Text.Trim
+            Me.Hide()
+            runMain(txtusername.Text.Trim)
+        End If
     End Sub
 
 
