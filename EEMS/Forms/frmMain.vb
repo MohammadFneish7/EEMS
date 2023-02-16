@@ -533,8 +533,7 @@ Public Class frmMain
                                    " " &
                                    " WHILE @@FETCH_STATUS = 0   " &
                                    " BEGIN   " &
-                                   "    SET @fileName = @path + @name + '_' + @fileDate + '.bak
-                                   '  " &
+                                   "    SET @fileName = @path + @name + '_' + @fileDate + '.bak'  " &
                                    "    BACKUP DATABASE @name TO DISK = @fileName  " &
                                    " " &
                                    "    FETCH NEXT FROM db_cursor INTO @name   " &
