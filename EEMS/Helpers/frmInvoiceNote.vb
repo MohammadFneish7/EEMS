@@ -5,6 +5,7 @@
     Public alltodollar As Boolean = False
     Public addkilo As Boolean = False
     Public adddiscount As Boolean = False
+    Public creditsindollar As Boolean = False
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         lblcount.Text = TextBox1.Text.Length
     End Sub
@@ -28,6 +29,9 @@
         If chkadddiscount.Checked Then
             adddiscount = True
         End If
+        If chkcreditsindollar.Checked Then
+            creditsindollar = True
+        End If
         TextBox1.Text = If(String.IsNullOrEmpty(TextBox1.Text), "", TextBox1.Text.Replace(vbNewLine, " "))
         Me.DialogResult =DialogResult.OK
     End Sub
@@ -36,9 +40,13 @@
         If chkalltodollar.Checked Then
             chkdollartotal.Checked = True
             chkdollartotal.Enabled = False
+            chkcreditsindollar.Checked = True
+            chkcreditsindollar.Enabled = False
         Else
             chkdollartotal.Checked = False
             chkdollartotal.Enabled = True
+            chkcreditsindollar.Checked = False
+            chkcreditsindollar.Enabled = True
         End If
     End Sub
 End Class

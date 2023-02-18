@@ -17,8 +17,9 @@ Public Class XtraReportViewer
     Dim alltodollar As Boolean = False
     Dim addkilo As Boolean = False
     Dim adddiscount As Boolean = False
+    Dim creditsindollar As Boolean = False
 
-    Sub New(ByVal dt As DataTable, note As String, verbose As Boolean, dollarprice As Boolean, dollartotal As Boolean, alltodollar As Boolean, addkilo As Boolean, adddiscount As Boolean)
+    Sub New(ByVal dt As DataTable, note As String, verbose As Boolean, dollarprice As Boolean, dollartotal As Boolean, alltodollar As Boolean, addkilo As Boolean, adddiscount As Boolean, creditsindollar As Boolean)
         'InitializeComponent()
         For i As Int32 = 0 To dt.Rows.Count - 1
             ds.invoicesdt.Rows.Add()
@@ -37,6 +38,7 @@ Public Class XtraReportViewer
         Me.alltodollar = alltodollar
         Me.addkilo = addkilo
         Me.adddiscount = adddiscount
+        Me.creditsindollar = creditsindollar
         InitializeComponent()
     End Sub
 
@@ -191,6 +193,18 @@ Public Class XtraReportViewer
                     cont.HeightF = 46
                 ElseIf cont.Tag = "liratotalwithcredit" Then
 
+                End If
+            End If
+
+            If alltodollar Or creditsindollar Then
+                If cont.Name = "lblcreditcurrency" Then
+                    cont.Text = "$"
+                End If
+            End If
+
+            If Not alltodollar And creditsindollar Then
+                If cont.Name = "Text45" Or cont.Name = "net_1" Or cont.Name = "Text48" Then
+                    cont.Visible = False
                 End If
             End If
 

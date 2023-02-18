@@ -86,7 +86,7 @@ Partial Public Class XtraInvoicesReport
         Me.Text24 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text25 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text35 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.Text36 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblcreditcurrency = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text37 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text38 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text39 = New DevExpress.XtraReports.UI.XRLabel()
@@ -151,7 +151,7 @@ Partial Public Class XtraInvoicesReport
         '
         'Area3
         '
-        Me.Area3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3, Me.XrLabel2, Me.XrLine4, Me.XrLine2, Me.XrLine1, Me.XrLabel1, Me.motor1, Me.Text1, Me.notes1, Me.Text2, Me.client1, Me.Text3, Me.boxlocation1, Me.Text4, Me.specialcode1, Me.Text5, Me.ampere1, Me.Text6, Me.pvalue1, Me.Text7, Me.cvalue1, Me.Text8, Me.diff1, Me.Text9, Me.kiloprice1, Me.Text10, Me.kilono1, Me.Text11, Me.fee1, Me.Text12, Me.total1, Me.Text13, Me.insure1, Me.Text14, Me.credit1, Me.Text15, Me.cmonth1, Me.Text16, Me.collecter1, Me.cmonth2, Me.motor2, Me.client2, Me.specialcode2, Me.ampere2, Me.diff2, Me.kiloprice2, Me.total2, Me.Text26, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text17, Me.Text20, Me.Text21, Me.Text22, Me.Text23, Me.Text24, Me.Text25, Me.Text35, Me.Text36, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.discount1, Me.Text19, Me.Text42, Me.discountcur, Me.discount2, Me.discountlbl, Me.Line2, Me.Line3, Me.Line4, Me.Line5, Me.Line6, Me.Line7, Me.Line8, Me.Line9, Me.Line10, Me.Picture1, Me.Text18, Me.Line13, Me.Line15, Me.PrintDate1, Me.Line23, Me.Line25, Me.Line27, Me.Line28, Me.Line29, Me.Text46, Me.net_1, Me.Text48, Me.Line1, Me.Line11, Me.Text47, Me.mobile1, Me.Line12, Me.Text49, Me.dollarprice1, Me.Text51, Me.Text50, Me.boxlocation2, Me.serial1, Me.Text55, Me.Text52, Me.credit2, Me.Text53, Me.Text45})
+        Me.Area3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3, Me.XrLabel2, Me.XrLine4, Me.XrLine2, Me.XrLine1, Me.XrLabel1, Me.motor1, Me.Text1, Me.notes1, Me.Text2, Me.client1, Me.Text3, Me.boxlocation1, Me.Text4, Me.specialcode1, Me.Text5, Me.ampere1, Me.Text6, Me.pvalue1, Me.Text7, Me.cvalue1, Me.Text8, Me.diff1, Me.Text9, Me.kiloprice1, Me.Text10, Me.kilono1, Me.Text11, Me.fee1, Me.Text12, Me.total1, Me.Text13, Me.insure1, Me.Text14, Me.credit1, Me.Text15, Me.cmonth1, Me.Text16, Me.collecter1, Me.cmonth2, Me.motor2, Me.client2, Me.specialcode2, Me.ampere2, Me.diff2, Me.kiloprice2, Me.total2, Me.Text26, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text17, Me.Text20, Me.Text21, Me.Text22, Me.Text23, Me.Text24, Me.Text25, Me.Text35, Me.lblcreditcurrency, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.discount1, Me.Text19, Me.Text42, Me.discountcur, Me.discount2, Me.discountlbl, Me.Line2, Me.Line3, Me.Line4, Me.Line5, Me.Line6, Me.Line7, Me.Line8, Me.Line9, Me.Line10, Me.Picture1, Me.Text18, Me.Line13, Me.Line15, Me.PrintDate1, Me.Line23, Me.Line25, Me.Line27, Me.Line28, Me.Line29, Me.Text46, Me.net_1, Me.Text48, Me.Line1, Me.Line11, Me.Text47, Me.mobile1, Me.Line12, Me.Text49, Me.dollarprice1, Me.Text51, Me.Text50, Me.boxlocation2, Me.serial1, Me.Text55, Me.Text52, Me.credit2, Me.Text53, Me.Text45})
         Me.Area3.HeightF = 363.0!
         Me.Area3.KeepTogether = True
         Me.Area3.Name = "Area3"
@@ -1253,22 +1253,22 @@ Partial Public Class XtraInvoicesReport
         Me.Text35.Text = "ل.ل"
         Me.Text35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
-        'Text36
+        'lblcreditcurrency
         '
-        Me.Text36.BackColor = System.Drawing.Color.Transparent
-        Me.Text36.BorderColor = System.Drawing.Color.Black
-        Me.Text36.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.Text36.BorderWidth = 1.0!
-        Me.Text36.CanGrow = False
-        Me.Text36.Font = New System.Drawing.Font("Arial", 10.0!)
-        Me.Text36.ForeColor = System.Drawing.Color.Black
-        Me.Text36.LocationFloat = New DevExpress.Utils.PointFloat(491.6667!, 314.6667!)
-        Me.Text36.Name = "Text36"
-        Me.Text36.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.Text36.SizeF = New System.Drawing.SizeF(23.95834!, 15.34723!)
-        Me.Text36.Tag = "currencylbl"
-        Me.Text36.Text = "ل.ل"
-        Me.Text36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.lblcreditcurrency.BackColor = System.Drawing.Color.Transparent
+        Me.lblcreditcurrency.BorderColor = System.Drawing.Color.Black
+        Me.lblcreditcurrency.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.lblcreditcurrency.BorderWidth = 1.0!
+        Me.lblcreditcurrency.CanGrow = False
+        Me.lblcreditcurrency.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.lblcreditcurrency.ForeColor = System.Drawing.Color.Black
+        Me.lblcreditcurrency.LocationFloat = New DevExpress.Utils.PointFloat(491.6667!, 314.6667!)
+        Me.lblcreditcurrency.Name = "lblcreditcurrency"
+        Me.lblcreditcurrency.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.lblcreditcurrency.SizeF = New System.Drawing.SizeF(23.95834!, 15.34723!)
+        Me.lblcreditcurrency.Tag = "currencylbl"
+        Me.lblcreditcurrency.Text = "ل.ل"
+        Me.lblcreditcurrency.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Text37
         '
@@ -2223,7 +2223,7 @@ Partial Public Class XtraInvoicesReport
     Friend WithEvents Text24 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents Text25 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents Text35 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents Text36 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblcreditcurrency As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents Text37 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents Text38 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents Text39 As DevExpress.XtraReports.UI.XRLabel

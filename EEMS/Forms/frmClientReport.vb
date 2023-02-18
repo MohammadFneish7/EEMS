@@ -57,12 +57,15 @@ Public Class frmClientReport
             Dim ri As RegInfo
             Dim rowItem1 As Integer = If(String.IsNullOrEmpty(row.Item(1).ToString()), 0, Integer.Parse(row.Item(1).ToString()))
             Dim rowItem9 As Integer = If(String.IsNullOrEmpty(row.Item(9).ToString()), 0, Integer.Parse(row.Item(9).ToString()))
+            Dim rowItem10 As Double = If(String.IsNullOrEmpty(row.Item(9).ToString()), 0, Double.Parse(row.Item(14).ToString()))
             If regInfos.ContainsKey(rowItem1) Then
                 ri = regInfos.Item(rowItem1)
                 ri.sumcredit += rowItem9
+                ri.remainingDollar += rowItem10
             Else
                 ri = New RegInfo
                 ri.sumcredit = rowItem9
+                ri.remainingDollar = rowItem10
                 regInfos.Add(rowItem1, ri)
             End If
             ri.remaining = ri.sumcredit - ri.sumpayed
@@ -142,11 +145,13 @@ Public Class frmClientReport
             Dim sumrequiredstr As String = ri.sumcredit.ToString("N0")
             Dim sumpayedstr As String = ri.sumpayed.ToString("N0")
             Dim sumremainstr As String = ri.remaining.ToString("N0")
+            Dim sumremaindollarstr As String = ri.remainingDollar.ToString("N2")
 
             lblhrid.Text = "معرّف الاشتراك" & vbNewLine & dgvRegistration.SelectedRows(0).Cells(0).Value.ToString
             lblhcredit.Text = "مطلوب" & vbNewLine & sumrequiredstr & " ل.ل"
             lblhpayed.Text = "مدفوع" & vbNewLine & sumpayedstr & " ل.ل"
             lblhrem.Text = "باقي" & vbNewLine & sumremainstr & " ل.ل"
+            lblhremdollar.Text = "باقي" & vbNewLine & sumremaindollarstr & " $"
 
             'lbl1.Text = "اجمالي المطلوب = " & ri.sumcredit.ToString("N0") & " | اجمالي المدفوع = " & ri.sumpayed.ToString("N0") & " | الباقي = " & ri.remaining.ToString("N0")
             lbl2.Text = "إجمالي مطلوب = " & ri.sumcredit.ToString("N0") & " ل.ل"
@@ -366,4 +371,5 @@ Class RegInfo
     Public sumcredit As Integer = 0
     Public sumpayed As Integer = 0
     Public remaining As Integer = 0
+    Public remainingDollar As Double = 0
 End Class

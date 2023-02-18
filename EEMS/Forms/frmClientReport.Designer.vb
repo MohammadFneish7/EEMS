@@ -54,6 +54,7 @@ Partial Class frmClientReport
         Me.lblhrem = New System.Windows.Forms.Label()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblhremdollar = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvRegistration, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -398,17 +399,20 @@ Partial Class frmClientReport
         '
         Me.TableLayoutPanel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 5
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.lblhrid, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.lblhcredit, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.lblhpayed, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.lblhrem, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.txtName, 4, 0)
+        Me.TableLayoutPanel1.ColumnCount = 7
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.lblhremdollar, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblhrid, 4, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblhcredit, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblhpayed, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.lblhrem, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.txtName, 5, 0)
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(173, 12)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
@@ -422,10 +426,10 @@ Partial Class frmClientReport
         Me.lblhrid.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblhrid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblhrid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblhrid.Location = New System.Drawing.Point(501, 0)
+        Me.lblhrid.Location = New System.Drawing.Point(543, 0)
         Me.lblhrid.Name = "lblhrid"
         Me.lblhrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblhrid.Size = New System.Drawing.Size(160, 33)
+        Me.lblhrid.Size = New System.Drawing.Size(129, 33)
         Me.lblhrid.TabIndex = 4
         Me.lblhrid.Text = "معرّف الاشتراك" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "0"
         Me.lblhrid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -436,10 +440,10 @@ Partial Class frmClientReport
         Me.lblhcredit.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblhcredit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblhcredit.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblhcredit.Location = New System.Drawing.Point(335, 0)
+        Me.lblhcredit.Location = New System.Drawing.Point(408, 0)
         Me.lblhcredit.Name = "lblhcredit"
         Me.lblhcredit.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblhcredit.Size = New System.Drawing.Size(160, 33)
+        Me.lblhcredit.Size = New System.Drawing.Size(129, 33)
         Me.lblhcredit.TabIndex = 3
         Me.lblhcredit.Text = "مطلوب" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "0 ل.ل"
         Me.lblhcredit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -450,10 +454,10 @@ Partial Class frmClientReport
         Me.lblhpayed.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblhpayed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblhpayed.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblhpayed.Location = New System.Drawing.Point(169, 0)
+        Me.lblhpayed.Location = New System.Drawing.Point(273, 0)
         Me.lblhpayed.Name = "lblhpayed"
         Me.lblhpayed.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblhpayed.Size = New System.Drawing.Size(160, 33)
+        Me.lblhpayed.Size = New System.Drawing.Size(129, 33)
         Me.lblhpayed.TabIndex = 2
         Me.lblhpayed.Text = "مدفوع" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "0 ل.ل"
         Me.lblhpayed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -464,10 +468,10 @@ Partial Class frmClientReport
         Me.lblhrem.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.lblhrem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblhrem.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lblhrem.Location = New System.Drawing.Point(3, 0)
+        Me.lblhrem.Location = New System.Drawing.Point(138, 0)
         Me.lblhrem.Name = "lblhrem"
         Me.lblhrem.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblhrem.Size = New System.Drawing.Size(160, 33)
+        Me.lblhrem.Size = New System.Drawing.Size(129, 33)
         Me.lblhrem.TabIndex = 1
         Me.lblhrem.Text = "باقي" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "0 ل.ل"
         Me.lblhrem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -477,12 +481,12 @@ Partial Class frmClientReport
         Me.txtName.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtName.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtName.Location = New System.Drawing.Point(667, 3)
+        Me.txtName.Location = New System.Drawing.Point(678, 3)
         Me.txtName.Multiline = True
         Me.txtName.Name = "txtName"
         Me.txtName.ReadOnly = True
         Me.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.txtName.Size = New System.Drawing.Size(161, 27)
+        Me.txtName.Size = New System.Drawing.Size(129, 27)
         Me.txtName.TabIndex = 5
         Me.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -498,6 +502,20 @@ Partial Class frmClientReport
         Me.Label2.Size = New System.Drawing.Size(26, 20)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "F1"
+        '
+        'lblhremdollar
+        '
+        Me.lblhremdollar.AutoSize = True
+        Me.lblhremdollar.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblhremdollar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblhremdollar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lblhremdollar.Location = New System.Drawing.Point(3, 0)
+        Me.lblhremdollar.Name = "lblhremdollar"
+        Me.lblhremdollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblhremdollar.Size = New System.Drawing.Size(129, 33)
+        Me.lblhremdollar.TabIndex = 6
+        Me.lblhremdollar.Text = "باقي" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "0 $"
+        Me.lblhremdollar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmClientReport
         '
@@ -569,4 +587,5 @@ Partial Class frmClientReport
     Friend WithEvents lblhrem As System.Windows.Forms.Label
     Friend WithEvents txtName As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents lblhremdollar As Label
 End Class

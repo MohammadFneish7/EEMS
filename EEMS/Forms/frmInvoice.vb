@@ -110,8 +110,8 @@ Public Class frmInvoice
                 year = DateTimePicker1.Value.Year
                 Dim ar As New Helper
                 ar.ds = New DataSet
-                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar), "dt")
-                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo, frmInvoicenote.adddiscount)
+                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar), "dt")
+                Dim frm As New XtraReportViewer(ar.ds.Tables("dt"), frmInvoicenote.TextBox1.Text.Trim, frmInvoicenote.verbose, frmInvoicenote.dollarprice, frmInvoicenote.dollartotal, frmInvoicenote.alltodollar, frmInvoicenote.addkilo, frmInvoicenote.adddiscount, frmInvoicenote.creditsindollar)
                 frm.ShowDialog()
             End If
         End If
@@ -292,7 +292,7 @@ Public Class frmInvoice
 
     Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16,
                                                     withCredits As Boolean, Optional ByVal orderByCust As Boolean = False,
-                                                    Optional creditsByCust As Boolean = False, Optional allToDollar As Boolean = False) As String
+                                                    Optional creditsByCust As Boolean = False, Optional allToDollar As Boolean = False, Optional creditsIndollars As Boolean = False) As String
         Dim d As New Date(y, m, 1)
         d = d.AddMonths(1)
 
@@ -333,22 +333,36 @@ Public Class frmInvoice
                             " ch.currentvalue AS [القيمة الحاليّة], " &
                             " r.insurance AS [تأمين], "
 
-        Dim q2 As String = $" {devideByDollarPricePrefix}(SELECT " &
+        Dim q2 As String = String.Empty
+
+        If allToDollar Or creditsIndollars Then
+            q2 = $"CAST((SELECT " &
+                           "(SELECT SUM(total/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)) FROM CounterHistory coh WHERE coh.regid = r.ID " &
+                           " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
+                           " - " &
+                           " (SELECT ISNULL(SUM(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),  0) " &
+                           " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " &
+                           " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
+                           $" ) AS Decimal(18,2)) AS [مكسورات], "
+
+            If creditsByCust Then
+                q2 = $"(Select CAST((SELECT ISNULL(SUM(coh.total/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & $"))) AS Decimal(18,2))) AS [مكسورات],"
+            End If
+        Else
+            q2 = $"(SELECT " &
                            "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.regid = r.ID " &
                            " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
                            " - " &
                            " (SELECT ISNULL(SUM(pyy.pvalue),  0) " &
                            " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " &
                            " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
-                           $" ){devideByDollarPrice} AS [مكسورات], "
+                           $" ) AS [مكسورات], "
 
-        If creditsByCust Then
-            q2 = $"{devideByDollarPricePrefix}(Select (SELECT ISNULL(SUM(coh.total),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & $")))){devideByDollarPrice} AS [مكسورات],"
-            'q2 = " (SELECT " &
-            '    " (SELECT ISNULL(SUM(coh.total),  0)-ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID " &
-            '               " LEFT OUTER JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
-            '               " ) AS [مكسورات], "
+            If creditsByCust Then
+                q2 = $"(Select (SELECT ISNULL(SUM(coh.total),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & $")))) AS [مكسورات],"
+            End If
         End If
+
 
 
         Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &

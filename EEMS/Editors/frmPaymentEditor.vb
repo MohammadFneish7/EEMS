@@ -220,7 +220,17 @@ Public Class frmPaymentEditor
                 End If
             Next
 
-            Dim payid As Integer = a.Execute("insert into Payment(counterhistoryid,pdate,pvalue,notes,collector) values(" & chID & ",'" & dtp.Value & "'," & payedAmmount & ",'" & txtnotes.Text.Trim & "','" & collecname & "')")
+            Dim note As String
+            If chkmigratetodollarbox.Checked Then
+                note = $"تم تحويل الدفعة الى صندوق الدولار بقيمة {Double.Parse(txtpaymentdollar.Text.Trim).ToString("#,##0.##")} دولار على سعر صرف {Double.Parse(txtdollarprice.Text).ToString("#,##0.##")}"
+                If Not String.IsNullOrEmpty(txtnotes.Text) Then
+                    note = note & " / " & txtnotes.Text.Trim
+                End If
+            Else
+                note = txtnotes.Text.Trim
+            End If
+
+            Dim payid As Integer = a.Execute("insert into Payment(counterhistoryid,pdate,pvalue,notes,collector) values(" & chID & ",'" & dtp.Value & "'," & payedAmmount & ",'" & note & "','" & collecname & "')")
             a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','" & intitle & "'," & payedAmmount & ",'" & name & "','" & "اشتراك رقم " & regsid & "','py" & payid & "')")
             If chkmigratetodollarbox.Checked Then
                 a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','ليرة الى دولار'," & -payedAmmount & ",'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "','py" & payid & "')")

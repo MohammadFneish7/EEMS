@@ -35,6 +35,7 @@ Partial Class frmInvoiceNote
         Me.chkalltodollar = New System.Windows.Forms.CheckBox()
         Me.chkaddkilo = New System.Windows.Forms.CheckBox()
         Me.chkadddiscount = New System.Windows.Forms.CheckBox()
+        Me.chkcreditsindollar = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -68,7 +69,7 @@ Partial Class frmInvoiceNote
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 274)
+        Me.Button1.Location = New System.Drawing.Point(15, 310)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(357, 36)
         Me.Button1.TabIndex = 3
@@ -78,7 +79,7 @@ Partial Class frmInvoiceNote
         'chkverbose
         '
         Me.chkverbose.AutoSize = True
-        Me.chkverbose.Location = New System.Drawing.Point(221, 136)
+        Me.chkverbose.Location = New System.Drawing.Point(221, 159)
         Me.chkverbose.Name = "chkverbose"
         Me.chkverbose.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkverbose.Size = New System.Drawing.Size(146, 17)
@@ -100,7 +101,7 @@ Partial Class frmInvoiceNote
         'chkCreditByCust
         '
         Me.chkCreditByCust.AutoSize = True
-        Me.chkCreditByCust.Location = New System.Drawing.Point(166, 113)
+        Me.chkCreditByCust.Location = New System.Drawing.Point(166, 182)
         Me.chkCreditByCust.Name = "chkCreditByCust"
         Me.chkCreditByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkCreditByCust.Size = New System.Drawing.Size(201, 17)
@@ -111,40 +112,46 @@ Partial Class frmInvoiceNote
         'chkdollarprice
         '
         Me.chkdollarprice.AutoSize = True
+        Me.chkdollarprice.BackColor = System.Drawing.Color.White
+        Me.chkdollarprice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.chkdollarprice.Location = New System.Drawing.Point(233, 205)
         Me.chkdollarprice.Name = "chkdollarprice"
         Me.chkdollarprice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkdollarprice.Size = New System.Drawing.Size(134, 17)
         Me.chkdollarprice.TabIndex = 7
         Me.chkdollarprice.Text = "إضافة سعر صرف الدولار"
-        Me.chkdollarprice.UseVisualStyleBackColor = True
+        Me.chkdollarprice.UseVisualStyleBackColor = False
         '
         'chkdollartotal
         '
         Me.chkdollartotal.AutoSize = True
+        Me.chkdollartotal.BackColor = System.Drawing.Color.White
+        Me.chkdollartotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.chkdollartotal.Location = New System.Drawing.Point(238, 251)
         Me.chkdollartotal.Name = "chkdollartotal"
         Me.chkdollartotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkdollartotal.Size = New System.Drawing.Size(129, 17)
         Me.chkdollartotal.TabIndex = 8
         Me.chkdollartotal.Text = "إضافة المجموع بالدولار"
-        Me.chkdollartotal.UseVisualStyleBackColor = True
+        Me.chkdollartotal.UseVisualStyleBackColor = False
         '
         'chkalltodollar
         '
         Me.chkalltodollar.AutoSize = True
-        Me.chkalltodollar.Location = New System.Drawing.Point(93, 228)
+        Me.chkalltodollar.BackColor = System.Drawing.Color.White
+        Me.chkalltodollar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.chkalltodollar.Location = New System.Drawing.Point(93, 274)
         Me.chkalltodollar.Name = "chkalltodollar"
         Me.chkalltodollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkalltodollar.Size = New System.Drawing.Size(274, 17)
         Me.chkalltodollar.TabIndex = 9
         Me.chkalltodollar.Text = "تحويل كامل الفاتورة الى دولار على سعر صرف الفاتورة"
-        Me.chkalltodollar.UseVisualStyleBackColor = True
+        Me.chkalltodollar.UseVisualStyleBackColor = False
         '
         'chkaddkilo
         '
         Me.chkaddkilo.AutoSize = True
-        Me.chkaddkilo.Location = New System.Drawing.Point(250, 159)
+        Me.chkaddkilo.Location = New System.Drawing.Point(250, 113)
         Me.chkaddkilo.Name = "chkaddkilo"
         Me.chkaddkilo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkaddkilo.Size = New System.Drawing.Size(117, 17)
@@ -155,7 +162,7 @@ Partial Class frmInvoiceNote
         'chkadddiscount
         '
         Me.chkadddiscount.AutoSize = True
-        Me.chkadddiscount.Location = New System.Drawing.Point(260, 182)
+        Me.chkadddiscount.Location = New System.Drawing.Point(260, 136)
         Me.chkadddiscount.Name = "chkadddiscount"
         Me.chkadddiscount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkadddiscount.Size = New System.Drawing.Size(107, 17)
@@ -163,12 +170,26 @@ Partial Class frmInvoiceNote
         Me.chkadddiscount.Text = "إضافة قيمة الحسم"
         Me.chkadddiscount.UseVisualStyleBackColor = True
         '
+        'chkcreditsindollar
+        '
+        Me.chkcreditsindollar.AutoSize = True
+        Me.chkcreditsindollar.BackColor = System.Drawing.Color.White
+        Me.chkcreditsindollar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.chkcreditsindollar.Location = New System.Drawing.Point(97, 228)
+        Me.chkcreditsindollar.Name = "chkcreditsindollar"
+        Me.chkcreditsindollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkcreditsindollar.Size = New System.Drawing.Size(270, 17)
+        Me.chkcreditsindollar.TabIndex = 12
+        Me.chkcreditsindollar.Text = "إحتساب المكسورات بالدولار بحسب سعر صرف كل شهر"
+        Me.chkcreditsindollar.UseVisualStyleBackColor = False
+        '
         'frmInvoiceNote
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 322)
+        Me.ClientSize = New System.Drawing.Size(381, 358)
+        Me.Controls.Add(Me.chkcreditsindollar)
         Me.Controls.Add(Me.chkadddiscount)
         Me.Controls.Add(Me.chkaddkilo)
         Me.Controls.Add(Me.chkalltodollar)
@@ -204,4 +225,5 @@ Partial Class frmInvoiceNote
     Friend WithEvents chkalltodollar As CheckBox
     Friend WithEvents chkaddkilo As CheckBox
     Friend WithEvents chkadddiscount As CheckBox
+    Friend WithEvents chkcreditsindollar As CheckBox
 End Class
