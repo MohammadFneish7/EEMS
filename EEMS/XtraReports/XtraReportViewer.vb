@@ -197,7 +197,7 @@ Public Class XtraReportViewer
             End If
 
             If alltodollar Or creditsindollar Then
-                If cont.Name = "lblcreditcurrency" Then
+                If cont.Name = "lblcreditcurrency" Or cont.Name = "Text52" Then
                     cont.Text = "$"
                 End If
             End If

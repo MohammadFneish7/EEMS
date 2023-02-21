@@ -3,15 +3,19 @@ Imports EEMS.SqlDBHelper
 
 Public Class frmPaymentEditor
 
+    Public payedAmmount As Integer = 0
+
     Dim chID As Integer = -2
     Dim regID As Integer = -2
     Dim a As New Helper
     Dim leftPayments As Long = 0
+    Dim leftPaymentsdollar As Double = 0
+    Dim dollarpricethen As Long = 0
+    Dim dollarpricenow As Long = 0
     Dim maxPay As Integer = 0
     Dim indate As Date
     Dim collector As String = ""
     Dim clientName As String = ""
-    Public payedAmmount As Integer = 0
 
     Sub New(chid_ As Integer, inDate As Date, collector As String, clientName_ As String, regID_ As Integer, forMonth As String)
         InitializeComponent()
@@ -26,7 +30,7 @@ Public Class frmPaymentEditor
         txtCollector.Text = collector.Trim
         txtClientName.Text = clientName_
         txtMonth.Text = forMonth
-        txtdollarprice.Text = SharedModule.dollarPrice
+        dollarpricenow = SharedModule.dollarPrice
 
         If chid_ < 0 Then
             MsgBox("خطأ في رقم الملف.")
@@ -55,12 +59,19 @@ Public Class frmPaymentEditor
 
             a.ds = New DataSet
             leftPayments = a.ExecuteScalar("SELECT " & thisMonthTotalRequiredValueQuery & " FROM CounterHistory ch WHERE ch.ID=" & chID)
+            dollarpricethen = a.ExecuteScalar("SELECT dollarprice FROM CounterHistory ch WHERE ch.ID=" & chID)
+            leftPaymentsdollar = leftPayments / dollarpricethen 'Convert.ToDouble(String.Format("{0:0.00}", leftPayments / dollarpricethen))
             maxPay = leftPayments
             If leftPayments = 0 Then
                 MsgBox("تم تسديد كامل حساب الشهر الحالي لهذا الاشتراك.")
                 Me.DialogResult = DialogResult.Ignore
             End If
             txtleftp.Text = leftPayments.ToString("N0")
+            txtleftpdollar.Text = leftPaymentsdollar.ToString("N2")
+            cmbcalculationmethod.Items.Add("على سعر الصرف حين تحرير الفاتورة (" + dollarpricethen.ToString("N0") + " ل.ل)")
+            cmbcalculationmethod.Items.Add("على سعر الصرف اليوم (" + dollarpricenow.ToString("N0") + " ل.ل)")
+            cmbcalculationmethod.SelectedIndex = 0
+            cmbcurrency.SelectedIndex = 0
             txtpayment.SelectAll()
         Catch ex As Exception
             MessageBox.Show("فشل اثناء محاولة تحميل البيانات." & vbNewLine & "تم الغاء العمليّة." & vbNewLine & ex.Message, "فشل", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -74,62 +85,19 @@ Public Class frmPaymentEditor
         pay(False)
     End Sub
 
-
     Private Function checkEmpty() As Boolean
-        If txtpayment.Text.Trim.Length = 0 OrElse Integer.Parse(txtpayment.Text) = 0 Then
+        If txtpayment.Text.Trim.Length = 0 OrElse Double.Parse(txtpayment.Text) = 0 Then
             Return True
         End If
         Return False
     End Function
 
-    Private Sub btncancel_Click(sender As Object, e As EventArgs)
-        Me.DialogResult = DialogResult.Ignore
-
-    End Sub
-
-    Private Sub txtname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpayment.KeyPress, txtdollarprice.KeyPress
-        a.bindNumeric(sender, e)
-    End Sub
-
-    Private Sub txtpaymentdollar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpaymentdollar.KeyPress
-        a.bindDouble(sender, e)
-    End Sub
-
-    Private Function verifyPaymentEquality() As Boolean
-        Try
-            If Math.Abs(Integer.Parse(txtpayment.Text) - Double.Parse(txtpaymentdollar.Text * txtdollarprice.Text)) < 1000 Then
-                Return True
-            End If
-            Return False
-        Catch ex As Exception
-            Return False
-        End Try
-    End Function
-
-    Private Sub txtpaymentdollar_TextChanged(sender As Object, e As EventArgs) Handles txtpaymentdollar.TextChanged, txtpayment.TextChanged, txtdollarprice.TextChanged
-        RemoveHandler txtpayment.TextChanged, AddressOf txtpaymentdollar_TextChanged
-        RemoveHandler txtdollarprice.TextChanged, AddressOf txtpaymentdollar_TextChanged
-        RemoveHandler txtpaymentdollar.TextChanged, AddressOf txtpaymentdollar_TextChanged
-
-        Try
-            If sender Is txtpayment Then
-                txtpaymentdollar.Text = Double.Parse(txtpayment.Text / txtdollarprice.Text).ToString("0.##")
-            Else
-                If sender Is txtdollarprice Then
-                    txtpaymentdollar.Text = Double.Parse(txtpayment.Text / txtdollarprice.Text).ToString("0.##")
-                ElseIf sender Is txtpaymentdollar Then
-                    txtdollarprice.Text = CType(Double.Parse(txtpayment.Text / txtpaymentdollar.Text).ToString(), Integer)
-                End If
-
-                txtpayment.Text = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
-            End If
-        Catch ex As Exception
-
-        Finally
-            AddHandler txtpayment.TextChanged, AddressOf txtpaymentdollar_TextChanged
-            AddHandler txtdollarprice.TextChanged, AddressOf txtpaymentdollar_TextChanged
-            AddHandler txtpaymentdollar.TextChanged, AddressOf txtpaymentdollar_TextChanged
-        End Try
+    Private Sub txtname_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpayment.KeyPress
+        If cmbcurrency.SelectedIndex = 0 Then
+            a.bindNumeric(sender, e)
+        Else
+            a.bindDouble(sender, e)
+        End If
     End Sub
 
     Private Sub PaymentEditor_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -153,15 +121,33 @@ Public Class frmPaymentEditor
                 Return
             End If
 
-            If chkmigratetodollarbox.Checked Then
-                payedAmmount = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
+
+            payedAmmount = 0
+            Dim ActualPayedAmmount As Integer = 0
+            Dim payedAmmountDollar As Double = 0
+            Dim payedAmmountCalculationExplain = ""
+
+            If cmbcurrency.SelectedIndex = 0 Then
+                If cmbcalculationmethod.SelectedIndex = 0 Then
+                    payedAmmount = Integer.Parse(txtpayment.Text.Trim)
+                    ActualPayedAmmount = payedAmmount
+                    payedAmmountCalculationExplain = $"{payedAmmount} > {maxPay}"
+                Else
+                    ActualPayedAmmount = Integer.Parse(txtpayment.Text.Trim)
+                    payedAmmount = (ActualPayedAmmount / dollarpricenow) * dollarpricethen
+                    payedAmmount += SharedModule.getRoundThousand(payedAmmount)
+                    payedAmmountCalculationExplain = $"({ActualPayedAmmount}/{dollarpricenow})*{dollarpricethen}={payedAmmount} > {maxPay}"
+                End If
             Else
-                payedAmmount = Integer.Parse(txtpayment.Text.Trim)
+                payedAmmountDollar = Double.Parse(txtpayment.Text.Trim)
+                payedAmmount = payedAmmountDollar * dollarpricethen
+                payedAmmount += SharedModule.getRoundThousand(payedAmmount)
+                payedAmmountCalculationExplain = $"{payedAmmountDollar}*{dollarpricethen}={payedAmmount} > {maxPay}"
+                ActualPayedAmmount = payedAmmount
             End If
 
-
             If payedAmmount > maxPay Then
-                MsgBox("لا يمكن ان تتخطّى قيمة الدفعة اجماي المبلغ الباقي المطلوب.")
+                MsgBox("لا يمكن ان تتخطّى قيمة الدفعة اجماي المبلغ الباقي المطلوب." & $"{vbNewLine}{payedAmmountCalculationExplain}")
                 Return
             End If
 
@@ -173,21 +159,6 @@ Public Class frmPaymentEditor
             If dtp.Value > Date.Now Then
                 MsgBox("لا يمكن ادخال الدفعة بتاريخ مستقبلي.")
                 Return
-            End If
-
-            If chkmigratetodollarbox.Checked Then
-                If String.IsNullOrEmpty(txtdollarprice.Text) OrElse Double.Parse(txtdollarprice.Text) <= 0 Then
-                    MsgBox("الرجاء تحديد سعر الصرف للتحويل الى صندوق الدولار.")
-                    Return
-                End If
-                If String.IsNullOrEmpty(txtpaymentdollar.Text) OrElse Double.Parse(txtpaymentdollar.Text) <= 0 Then
-                    MsgBox("الرجاء تحديد القيمة بالدولار للتحويل الى صندوق الدولار.")
-                    Return
-                End If
-                If Not verifyPaymentEquality() Then
-                    MsgBox("الرجاء التأكد من أن القيمة بالليرة تساوي القيمة بالدولار ضرب سعر الصرف.")
-                    Return
-                End If
             End If
 
             Dim name As String = "Unkown"
@@ -221,20 +192,31 @@ Public Class frmPaymentEditor
             Next
 
             Dim note As String
-            If chkmigratetodollarbox.Checked Then
-                note = $"تم تحويل الدفعة الى صندوق الدولار بقيمة {Double.Parse(txtpaymentdollar.Text.Trim).ToString("#,##0.##")} دولار على سعر صرف {Double.Parse(txtdollarprice.Text).ToString("#,##0.##")}"
+            If cmbcurrency.SelectedIndex = 1 Then
+                note = $"تم تحويل الدفعة الى صندوق الدولار بقيمة {payedAmmountDollar.ToString("#,##0.##")} دولار على سعر صرف {dollarpricethen.ToString("N0")}"
                 If Not String.IsNullOrEmpty(txtnotes.Text) Then
                     note = note & " / " & txtnotes.Text.Trim
                 End If
             Else
-                note = txtnotes.Text.Trim
+                If cmbcalculationmethod.SelectedIndex = 1 Then
+                    note = $"قبض {ActualPayedAmmount.ToString("N2")} ل.ل على سعر صرف {dollarpricenow.ToString("N0")} تم تدويرها الى {payedAmmount.ToString("N2")} ل.ل على سعر صرف {dollarpricethen.ToString("N0")}"
+                    If Not String.IsNullOrEmpty(txtnotes.Text) Then
+                        note = note & " / " & txtnotes.Text.Trim
+                    End If
+                Else
+                    note = txtnotes.Text.Trim
+                End If
             End If
 
             Dim payid As Integer = a.Execute("insert into Payment(counterhistoryid,pdate,pvalue,notes,collector) values(" & chID & ",'" & dtp.Value & "'," & payedAmmount & ",'" & note & "','" & collecname & "')")
             a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','" & intitle & "'," & payedAmmount & ",'" & name & "','" & "اشتراك رقم " & regsid & "','py" & payid & "')")
-            If chkmigratetodollarbox.Checked Then
-                a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','ليرة الى دولار'," & -payedAmmount & ",'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "','py" & payid & "')")
-                a.Execute("insert into Expenditure(expdate,title,amount_dollar,currency,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','ليرة الى دولار'," & txtpaymentdollar.Text.Trim & ",1,'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "','py" & payid & "')")
+            If ActualPayedAmmount - payedAmmount <> 0 Then
+                a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','فرق سعر صرف دولار من قبض الفاتورة'," & (ActualPayedAmmount - payedAmmount) & ",'" & name & "','" & "اشتراك رقم " & regsid & "','py" & payid & "')")
+            End If
+
+            If cmbcurrency.SelectedIndex = 1 Then
+                a.Execute("insert into Expenditure(expdate,title,amount,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','ليرة الى دولار'," & -payedAmmount & ",'','على سعر صرف " & dollarpricethen.ToString("N2") & "','py" & payid & "')")
+                a.Execute("insert into Expenditure(expdate,title,amount_dollar,currency,party,detail,paymentRef) values('" & dtp.Value.ToShortDateString & "','ليرة الى دولار'," & payedAmmountDollar & ",1,'','على سعر صرف " & dollarpricethen.ToString("N2") & "','py" & payid & "')")
             End If
 
             Try
@@ -272,23 +254,15 @@ Public Class frmPaymentEditor
         End Try
     End Sub
 
-    Private Sub chkmigratetodollarbox_CheckedChanged(sender As Object, e As EventArgs) Handles chkmigratetodollarbox.CheckedChanged
-        If chkmigratetodollarbox.Checked Then
-            txtdollarprice.Enabled = True
-            txtpaymentdollar.Enabled = True
+    Private Sub cmbcurrency_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcurrency.SelectedIndexChanged
+        If cmbcurrency.SelectedIndex = 0 Then
+            Label11.Text = "ل.ل"
+            cmbcalculationmethod.Enabled = True
         Else
-            txtdollarprice.Enabled = False
-            txtpaymentdollar.Enabled = False
+            Label11.Text = "$"
+            cmbcalculationmethod.SelectedIndex = 0
+            cmbcalculationmethod.Enabled = False
         End If
     End Sub
 
-    Private Sub txtpayment_Leave(sender As Object, e As EventArgs) Handles txtpayment.Leave
-        Try
-            If chkmigratetodollarbox.Checked Then
-                txtpayment.Text = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
 End Class

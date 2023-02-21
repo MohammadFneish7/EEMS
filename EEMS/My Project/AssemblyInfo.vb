@@ -10,11 +10,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("EEMS")> 
-<Assembly: AssemblyDescription("A system developed by MDev Technologies Inc. aims to aid managing any paid electric engine registered-service system where it covers almost all functionalities needed to manage all of the companies assets and and resources. Version 1.2 provides a stable and verified release of EEMS where it had added alot of new features and bugs fixes after a long testing and debugging time scale with the help of our customers. For further information, please feel free to contact us at anytime throughout the mobile number or our official email provided next: 0096170434962 - mohammadfneish7@gmail.com.")> 
+<Assembly: AssemblyTitle("EEMS")>
+<Assembly: AssemblyDescription("A system developed by MDev Technologies Inc. aims to aid managing any paid electric engine registered-service system where it covers almost all functionalities needed to manage all of the companies assets and and resources. For further information, please feel free to contact us at anytime throughout the mobile number or our official email provided next: 0096170434962 - mohammadfneish7@gmail.com.")>
 <Assembly: AssemblyCompany("MDev Technologies")> 
 <Assembly: AssemblyProduct("Electric Engine Management System")>
-<Assembly: AssemblyCopyright("Copyright ©  2022")>
+<Assembly: AssemblyCopyright("Copyright ©  2023")>
 <Assembly: AssemblyTrademark("EEMS")> 
 
 <Assembly: ComVisible(False)> 
@@ -33,7 +33,7 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("3.0.4.0")>
-<Assembly: AssemblyFileVersion("3.0.4.0")>
+<Assembly: AssemblyVersion("3.0.6.0")>
+<Assembly: AssemblyFileVersion("3.0.6.0")>
 
 <Assembly: NeutralResourcesLanguageAttribute("ar")> 

@@ -29,6 +29,7 @@ Public Class frmExpenditureEditor
         keywords.Add("صيانة")
         keywords.Add("ليرة الى دولار")
         keywords.Add("دولار الى ليرة")
+        keywords.Add("فرق سعر صرف دولار من قبض الفاتورة")
 
         Dim keywordstr As String = "''"
         For Each item As String In keywords

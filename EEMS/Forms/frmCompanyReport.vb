@@ -214,8 +214,8 @@ Public Class frmCompanyReport
         Return AllNetDollar
     End Function
 
-    Private Function getCurrentMonthNet(totalInvoiceIn As Long, totalcredit As Long, totalOtherIn As Long, totalInsuranceIn As Long, totalOtherOut As Long, totalInsuranceOut As Long) As Long
-        Dim currentMonthNet As Long = totalInvoiceIn + totalcredit + totalOtherIn + totalInsuranceIn + totalOtherOut + totalInsuranceOut
+    Private Function getCurrentMonthNet(totalInvoiceIn As Long, totalcredit As Long, totalOtherIn As Long, totalInsuranceIn As Long, totalOtherOut As Long, totalInsuranceOut As Long, totalInFromDollar As Long, totalOutToDollar As Long) As Long
+        Dim currentMonthNet As Long = totalInvoiceIn + totalcredit + totalOtherIn + totalInsuranceIn + totalOtherOut + totalInsuranceOut + totalInFromDollar + totalOutToDollar
         btnTotal.Text = "رصيد إجمالي" & vbNewLine & vbNewLine & currentMonthNet.ToString("N0") & " ل.ل"
         Return currentMonthNet
     End Function
@@ -649,7 +649,7 @@ Public Class frmCompanyReport
         Dim perviousMonthNet As Long = getPerviousMonthNet()
         Dim AllNet As Long = getAllNet()
         Dim AllNetDollar As Double = getAllNetDollar()
-        Dim currentMonthNet As Long = getCurrentMonthNet(totalInvoiceIn, totalcredit, totalOtherIn, totalInsuranceIn, totalOtherOut, totalInsuranceOut)
+        Dim currentMonthNet As Long = getCurrentMonthNet(totalInvoiceIn, totalcredit, totalOtherIn, totalInsuranceIn, totalOtherOut, totalInsuranceOut, totalInFromDollar, totalOutToDollar)
 
         ds.Clear()
         ds = New DataSetGeneralReport

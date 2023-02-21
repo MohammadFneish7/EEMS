@@ -78,8 +78,9 @@ Partial Class frmInvoiceNote
         '
         'chkverbose
         '
+        Me.chkverbose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkverbose.AutoSize = True
-        Me.chkverbose.Location = New System.Drawing.Point(221, 159)
+        Me.chkverbose.Location = New System.Drawing.Point(216, 159)
         Me.chkverbose.Name = "chkverbose"
         Me.chkverbose.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkverbose.Size = New System.Drawing.Size(146, 17)
@@ -89,8 +90,9 @@ Partial Class frmInvoiceNote
         '
         'chkOrderByCust
         '
+        Me.chkOrderByCust.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkOrderByCust.AutoSize = True
-        Me.chkOrderByCust.Location = New System.Drawing.Point(249, 90)
+        Me.chkOrderByCust.Location = New System.Drawing.Point(244, 90)
         Me.chkOrderByCust.Name = "chkOrderByCust"
         Me.chkOrderByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkOrderByCust.Size = New System.Drawing.Size(118, 17)
@@ -100,8 +102,9 @@ Partial Class frmInvoiceNote
         '
         'chkCreditByCust
         '
+        Me.chkCreditByCust.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkCreditByCust.AutoSize = True
-        Me.chkCreditByCust.Location = New System.Drawing.Point(166, 182)
+        Me.chkCreditByCust.Location = New System.Drawing.Point(161, 182)
         Me.chkCreditByCust.Name = "chkCreditByCust"
         Me.chkCreditByCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkCreditByCust.Size = New System.Drawing.Size(201, 17)
@@ -111,10 +114,11 @@ Partial Class frmInvoiceNote
         '
         'chkdollarprice
         '
+        Me.chkdollarprice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkdollarprice.AutoSize = True
         Me.chkdollarprice.BackColor = System.Drawing.Color.White
         Me.chkdollarprice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.chkdollarprice.Location = New System.Drawing.Point(233, 205)
+        Me.chkdollarprice.Location = New System.Drawing.Point(228, 205)
         Me.chkdollarprice.Name = "chkdollarprice"
         Me.chkdollarprice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkdollarprice.Size = New System.Drawing.Size(134, 17)
@@ -124,10 +128,11 @@ Partial Class frmInvoiceNote
         '
         'chkdollartotal
         '
+        Me.chkdollartotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkdollartotal.AutoSize = True
         Me.chkdollartotal.BackColor = System.Drawing.Color.White
         Me.chkdollartotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.chkdollartotal.Location = New System.Drawing.Point(238, 251)
+        Me.chkdollartotal.Location = New System.Drawing.Point(233, 251)
         Me.chkdollartotal.Name = "chkdollartotal"
         Me.chkdollartotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkdollartotal.Size = New System.Drawing.Size(129, 17)
@@ -137,10 +142,11 @@ Partial Class frmInvoiceNote
         '
         'chkalltodollar
         '
+        Me.chkalltodollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkalltodollar.AutoSize = True
         Me.chkalltodollar.BackColor = System.Drawing.Color.White
         Me.chkalltodollar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.chkalltodollar.Location = New System.Drawing.Point(93, 274)
+        Me.chkalltodollar.Location = New System.Drawing.Point(88, 274)
         Me.chkalltodollar.Name = "chkalltodollar"
         Me.chkalltodollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkalltodollar.Size = New System.Drawing.Size(274, 17)
@@ -150,8 +156,9 @@ Partial Class frmInvoiceNote
         '
         'chkaddkilo
         '
+        Me.chkaddkilo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkaddkilo.AutoSize = True
-        Me.chkaddkilo.Location = New System.Drawing.Point(250, 113)
+        Me.chkaddkilo.Location = New System.Drawing.Point(245, 113)
         Me.chkaddkilo.Name = "chkaddkilo"
         Me.chkaddkilo.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkaddkilo.Size = New System.Drawing.Size(117, 17)
@@ -161,8 +168,9 @@ Partial Class frmInvoiceNote
         '
         'chkadddiscount
         '
+        Me.chkadddiscount.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkadddiscount.AutoSize = True
-        Me.chkadddiscount.Location = New System.Drawing.Point(260, 136)
+        Me.chkadddiscount.Location = New System.Drawing.Point(255, 136)
         Me.chkadddiscount.Name = "chkadddiscount"
         Me.chkadddiscount.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkadddiscount.Size = New System.Drawing.Size(107, 17)
@@ -172,10 +180,11 @@ Partial Class frmInvoiceNote
         '
         'chkcreditsindollar
         '
+        Me.chkcreditsindollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkcreditsindollar.AutoSize = True
         Me.chkcreditsindollar.BackColor = System.Drawing.Color.White
         Me.chkcreditsindollar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.chkcreditsindollar.Location = New System.Drawing.Point(97, 228)
+        Me.chkcreditsindollar.Location = New System.Drawing.Point(92, 228)
         Me.chkcreditsindollar.Name = "chkcreditsindollar"
         Me.chkcreditsindollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.chkcreditsindollar.Size = New System.Drawing.Size(270, 17)
