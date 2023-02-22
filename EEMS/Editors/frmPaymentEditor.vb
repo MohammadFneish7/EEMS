@@ -3,7 +3,7 @@ Imports EEMS.SqlDBHelper
 
 Public Class frmPaymentEditor
 
-    Public payedAmmount As Integer = 0
+    Public payedAmmount As Long = 0
 
     Dim chID As Integer = -2
     Dim regID As Integer = -2
@@ -12,7 +12,7 @@ Public Class frmPaymentEditor
     Dim leftPaymentsdollar As Double = 0
     Dim dollarpricethen As Long = 0
     Dim dollarpricenow As Long = 0
-    Dim maxPay As Integer = 0
+    Dim maxPay As Long = 0
     Dim indate As Date
     Dim collector As String = ""
     Dim clientName As String = ""
@@ -68,9 +68,8 @@ Public Class frmPaymentEditor
             End If
             txtleftp.Text = leftPayments.ToString("N0")
             txtleftpdollar.Text = leftPaymentsdollar.ToString("N2")
-            cmbcalculationmethod.Items.Add("على سعر الصرف حين تحرير الفاتورة (" + dollarpricethen.ToString("N0") + " ل.ل)")
-            cmbcalculationmethod.Items.Add("على سعر الصرف اليوم (" + dollarpricenow.ToString("N0") + " ل.ل)")
-            cmbcalculationmethod.SelectedIndex = 0
+            txtdollarpriceold.Text = dollarpricethen.ToString("N0")
+            chklirainsteaddollar.Text = chklirainsteaddollar.Text & " (" + dollarpricenow.ToString("N0") + " ل.ل)"
             cmbcurrency.SelectedIndex = 0
             txtpayment.SelectAll()
         Catch ex As Exception
@@ -123,27 +122,35 @@ Public Class frmPaymentEditor
 
 
             payedAmmount = 0
-            Dim ActualPayedAmmount As Integer = 0
+            Dim ActualPayedAmmount As Long = 0
             Dim payedAmmountDollar As Double = 0
             Dim payedAmmountCalculationExplain = ""
 
             If cmbcurrency.SelectedIndex = 0 Then
-                If cmbcalculationmethod.SelectedIndex = 0 Then
-                    payedAmmount = Integer.Parse(txtpayment.Text.Trim)
+                If Not chklirainsteaddollar.Checked Then
+                    payedAmmount = Long.Parse(txtpayment.Text.Trim)
                     ActualPayedAmmount = payedAmmount
                     payedAmmountCalculationExplain = $"{payedAmmount} > {maxPay}"
                 Else
-                    ActualPayedAmmount = Integer.Parse(txtpayment.Text.Trim)
+                    ActualPayedAmmount = Long.Parse(txtpayment.Text.Trim)
                     payedAmmount = (ActualPayedAmmount / dollarpricenow) * dollarpricethen
                     payedAmmount += SharedModule.getRoundThousand(payedAmmount)
                     payedAmmountCalculationExplain = $"({ActualPayedAmmount}/{dollarpricenow})*{dollarpricethen}={payedAmmount} > {maxPay}"
                 End If
             Else
                 payedAmmountDollar = Double.Parse(txtpayment.Text.Trim)
-                payedAmmount = payedAmmountDollar * dollarpricethen
-                payedAmmount += SharedModule.getRoundThousand(payedAmmount)
+                If Math.Round(leftPaymentsdollar, 2) = Math.Round(payedAmmountDollar, 2) Then
+                    payedAmmount = leftPayments
+                Else
+                    payedAmmount = payedAmmountDollar * dollarpricethen
+                    payedAmmount += SharedModule.getRoundThousand(payedAmmount)
+                End If
                 payedAmmountCalculationExplain = $"{payedAmmountDollar}*{dollarpricethen}={payedAmmount} > {maxPay}"
                 ActualPayedAmmount = payedAmmount
+            End If
+
+            If Math.Abs(payedAmmount - maxPay) <= 1000 Then
+                payedAmmount = maxPay
             End If
 
             If payedAmmount > maxPay Then
@@ -198,7 +205,7 @@ Public Class frmPaymentEditor
                     note = note & " / " & txtnotes.Text.Trim
                 End If
             Else
-                If cmbcalculationmethod.SelectedIndex = 1 Then
+                If chklirainsteaddollar.Checked Then
                     note = $"قبض {ActualPayedAmmount.ToString("N2")} ل.ل على سعر صرف {dollarpricenow.ToString("N0")} تم تدويرها الى {payedAmmount.ToString("N2")} ل.ل على سعر صرف {dollarpricethen.ToString("N0")}"
                     If Not String.IsNullOrEmpty(txtnotes.Text) Then
                         note = note & " / " & txtnotes.Text.Trim
@@ -257,12 +264,22 @@ Public Class frmPaymentEditor
     Private Sub cmbcurrency_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbcurrency.SelectedIndexChanged
         If cmbcurrency.SelectedIndex = 0 Then
             Label11.Text = "ل.ل"
-            cmbcalculationmethod.Enabled = True
+            chklirainsteaddollar.Enabled = True
         Else
             Label11.Text = "$"
-            cmbcalculationmethod.SelectedIndex = 0
-            cmbcalculationmethod.Enabled = False
+            chklirainsteaddollar.Checked = False
+            chklirainsteaddollar.Enabled = False
         End If
+        txtpayment.Text = "0"
     End Sub
 
+    Private Sub chklirainsteaddollar_CheckedChanged(sender As Object, e As EventArgs) Handles chklirainsteaddollar.CheckedChanged
+        If chklirainsteaddollar.Checked Then
+            Dim temp As Long = Double.Parse(leftPaymentsdollar * dollarpricenow)
+            temp = temp + SharedModule.getRoundThousand(temp)
+            txtleftp.Text = (temp).ToString("N0")
+        Else
+            txtleftp.Text = leftPayments.ToString("N0")
+        End If
+    End Sub
 End Class

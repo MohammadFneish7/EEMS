@@ -233,6 +233,7 @@ Partial Class frmClientReport
         Me.dgvPayments.BackgroundColor = System.Drawing.Color.White
         Me.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvPayments.Location = New System.Drawing.Point(11, 57)
+        Me.dgvPayments.MultiSelect = False
         Me.dgvPayments.Name = "dgvPayments"
         Me.dgvPayments.ReadOnly = True
         Me.dgvPayments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect

@@ -275,16 +275,6 @@ Public Class frmClientReport
                 MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
                 Return
             End If
-            'Dim ml As New MasterLogin
-            'Dim d As DialogResult = ml.ShowDialog()
-            'If d =DialogResult.OK Then
-            '    If Not ml.PasswordTextBox.Text.Trim.ToUpper.Equals("ADMINUNLOCK") Then
-            '        MsgBox("invalid password")
-            '        Return
-            '    End If
-            'Else
-            '    Return
-            'End If
             Try
                 Dim dr As DialogResult = MessageBox.Show("تنبيه: ان حذف اي سطر قد يؤدي الى فقدان المعلومات المرتبطة به." & vbNewLine & "هل تريد المتابعة؟", "تنبيه", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
                 If dr = DialogResult.Yes Then
@@ -309,7 +299,7 @@ Public Class frmClientReport
                         todeleteIdsstr = todeleteIdsstr & ")"
 
                         Dim foundWithPayRef = a.ExecuteScalar("SELECT COUNT(*) FROM Expenditure Where paymentRef in " & todeleteIdsstr)
-                        If foundWithPayRef <> count Then
+                        If foundWithPayRef = 0 Then
                             MsgBox("لا يمكن حذف الأسطر المُحدّدة لعدم وجود سطر موازي لها في حساب المؤسّسة.")
                             Return
                         End If
