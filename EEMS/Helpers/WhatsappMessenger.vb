@@ -9,13 +9,19 @@ Public Class WhatsappMessenger
 
     Private messages_ As List(Of WAMessage)
     Private WithEvents Messagner_ As Messegner
+    Private logoutWhenDone_ As Boolean
+    Private starttime As DateTime
+    Private a As New SqlDBHelper.Helper
 
-    Sub New(Messages As List(Of WAMessage))
+    Sub New(Messages As List(Of WAMessage), Optional ByVal logoutWhenDone As Boolean = False)
         InitializeComponent()
         messages_ = Messages
         ProgressBar1.Maximum = messages_.Count
         lblprog.Text = "0/" & messages_.Count
         BackgroundWorker1.RunWorkerAsync()
+        logoutWhenDone_ = logoutWhenDone
+        starttime = DateTime.Now
+        Timer1.Start()
     End Sub
 
     Private Sub Messegner_OnDisposed() Handles Messagner_.OnDisposed
@@ -30,7 +36,7 @@ Public Class WhatsappMessenger
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorker1.DoWork
         Try
             Messagner_ = New Messegner(hideWindow:=True)
-            Messagner_?.Login()
+            Messagner_?.Login(200)
         Catch ex As Exception
             BackgroundWorker1.ReportProgress(0, "فشلت عمليّة تسجيل الدخول." & vbNewLine & ex.Message)
             Return
@@ -46,9 +52,17 @@ Public Class WhatsappMessenger
                     Throw New NoSuchWindowException()
                 End If
                 BackgroundWorker1.ReportProgress(count, "جاري ارسال فاتورة '" & msg.Username & "' (" + msg.Mobile + ")...")
-                Messagner_?.SendMessage(msg.Mobile, msg.Message)
+                If Debugger.IsAttached Then
+                    msg.Mobile = "70434962"
+                End If
+                Messagner_?.SendMessage(msg.Mobile, msg.Message, ticks_timeout:=20, wait_after_send:=2)
                 count += 1
                 BackgroundWorker1.ReportProgress(count, "")
+                Try
+                    a.ExecuteNoReturn($"update CounterHistory set whatsappmsgsent=1 where ID={msg.Id}")
+                Catch ex As Exception
+
+                End Try
             Catch ex As Exception
                 If TypeOf ex Is NoSuchWindowException Then
                     BackgroundWorker1.ReportProgress(count, "فشلت عمليّة الارسال، تم اغلاق المُتصفّح.")
@@ -63,8 +77,10 @@ Public Class WhatsappMessenger
 
         If Not browserClosed Then
             Try
-                BackgroundWorker1.ReportProgress(count, "جاري تسجيل الخروج...")
-                Messagner_?.Logout()
+                If logoutWhenDone_ Then
+                    BackgroundWorker1.ReportProgress(count, "جاري تسجيل الخروج...")
+                    Messagner_?.Logout()
+                End If
             Catch ex As Exception
 
             Finally
@@ -82,6 +98,7 @@ Public Class WhatsappMessenger
 
     Private Sub WhatsappMessenger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         isOpen = True
+        TextBox1.Select(0, 0)
     End Sub
 
     Private Sub WhatsappMessenger_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -95,4 +112,16 @@ Public Class WhatsappMessenger
 
         End Try
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim passedts = DateTime.Now - starttime
+        lbltime.Text = parseTime01(passedts.Hours) & ":" & parseTime01(passedts.Minutes) & ":" & parseTime01(passedts.Seconds)
+    End Sub
+
+    Private Function parseTime01(comp As Integer) As String
+        If comp < 10 Then
+            Return "0" & comp
+        End If
+        Return comp
+    End Function
 End Class

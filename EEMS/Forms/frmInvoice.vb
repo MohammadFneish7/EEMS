@@ -4,7 +4,7 @@ Imports Microsoft.Office.Interop.Excel
 Imports EEMS.SqlDBHelper
 Imports DevExpress.XtraEditors.Controls
 Imports DevExpress.XtraGrid.Views.Grid
-
+Imports System.Text.RegularExpressions
 
 Public Class frmInvoice
 
@@ -273,6 +273,7 @@ Public Class frmInvoice
                             " discount AS [حسم ل.ل], " &
                             " ISNULL(SUM(pyy.pvalue), 0)  AS [مدفوع ل.ل], " &
                             " total - ISNULL(SUM(pyy.pvalue), 0) AS [باقي ل.ل] " &
+                            $"{If(Not forReport, ", ch.whatsappmsgsent [WA] ", "")}" &
                         " FROM Registration r" &
                             " INNER JOIN Client c on r.clientid = c.ID" &
                             " INNER JOIN Package p on r.packageid = p.ID" &
@@ -280,7 +281,7 @@ Public Class frmInvoice
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
                         " GROUP BY r.ID, ch.ID, r.active, en.ename, b.location, c.clientname, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
-                                " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" &
+                                $" ch.currentvalue, r.insurance {If(Not forReport, ", ch.whatsappmsgsent", "")}, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount" &
                         " ORDER BY cl.fullname, b.code, ec.code"
         If withCredits Then
             Return q1 + q2 + q3
@@ -292,7 +293,8 @@ Public Class frmInvoice
 
     Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16,
                                                     withCredits As Boolean, Optional ByVal orderByCust As Boolean = False,
-                                                    Optional creditsByCust As Boolean = False, Optional allToDollar As Boolean = False, Optional creditsIndollars As Boolean = False) As String
+                                                    Optional creditsByCust As Boolean = False, Optional allToDollar As Boolean = False,
+                                                    Optional creditsIndollars As Boolean = False, Optional forWhatsapp As Boolean = False) As String
         Dim d As New Date(y, m, 1)
         d = d.AddMonths(1)
 
@@ -325,7 +327,7 @@ Public Class frmInvoice
                             " b.code AS [رمز العلبة], " &
                             " b.location AS [عنوان العلبة], " &
                             " c.clientname AS [المشترك], " &
-                            " c.mobile AS [رقم الهاتف], " &
+                            $" c.mobile{ If(forWhatsapp, "+' '+c.phone", "") } AS [رقم الهاتف], " &
                             " p.title AS [أمبير], " &
                             " ec.code AS [الرمز في العلبة]," &
                             " cl.fullname AS [الجابي], " &
@@ -384,7 +386,7 @@ Public Class frmInvoice
                             " INNER JOIN (CounterHistory ch INNER JOIN ArabicMonth ar on ch.cmonth = ar.id LEFT OUTER JOIN Payment pyy on pyy.counterhistoryid = ch.ID) on r.ID = ch.regid " &
                             " INNER JOIN (ECounter ec INNER JOIN (ElectricBox b INNER JOIN Engine en on b.engineid = en.ID INNER JOIN Collector cl on b.collectorid = cl.ID) on ec.boxid = b.ID) on r.counterid = ec.ID" &
                         " WHERE  ch.cmonth = " & m & " and ch.cyear= " & y & " AND r.registrationdate < '" & d.ToShortDateString & "' " & whereInSelected &
-                        " GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, c.mobile, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
+                        $" GROUP BY r.ID, ch.ID, c.id, r.active, en.ename, b.location, c.clientname, c.mobile{ If(forWhatsapp, "+' '+c.phone", "") }, p.title, cl.fullname, b.code, ec.code, ch.previousvalue, " &
                                 " ch.currentvalue, r.insurance, ch.notes, ar.caption, ch.cyear, ch.monthlyfee, ch.kilowattprice, ch.roundvalue, ch.total, ch.discount, ec.serial, ch.dollarPrice,ch.totaldollar"
         If orderByCust Then
             q3 += " ORDER BY c.clientname"
@@ -419,24 +421,97 @@ Public Class frmInvoice
             Return
         End If
 
+        If Not currentUser.hasPermision("invoicesprint") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+
         Dim msges As New List(Of WAMessage)
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        msges.Add(New WAMessage("Mohammad", "70434962", "رقم الفاتورة: 50" & vbNewLine & "القيمة: 120,000"))
-        Dim frm As New WhatsappMessenger(msges)
-        frm.Show()
+
+        If GridView1.GetSelectedRows.Count > 0 Then
+            Dim frmInvoicenote As New frmInvoiceNote
+            If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+                month = DateTimePicker1.Value.Month
+                year = DateTimePicker1.Value.Year
+                Dim ar As New Helper
+                ar.ds = New DataSet
+                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, True), "dt")
+
+                For Each row As DataRow In ar.ds.Tables("dt").Rows
+                    Try
+                        If Not String.IsNullOrEmpty(row.Item(7)) And Not row.Item(7).Equals(DBNull.Value) Then
+                            Dim match = Regex.Match(row.Item(7).ToString(), "[0-9]{2}[\-\/\\ ]{0,1}[0-9]{6}")
+                            If match.Success Then
+                                Dim numericPhone = New String(match.Value.Where(Function(c) Char.IsDigit(c)).ToArray())
+                                Dim tempMsg As New List(Of String)
+                                tempMsg.Add($"*عن شهر:* {row.Item(16)}")
+                                tempMsg.Add($"*اسم المشترك:* {row.Item(6)}")
+                                tempMsg.Add($"*اشتراك امبيراج:* {row.Item(8)}")
+                                tempMsg.Add($"*رسم اشتراك:* {If(frmInvoicenote.alltodollar, asdbl(row.Item(18)), asint(row.Item(18)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                                tempMsg.Add($"*إستهلاك كيلوات:* {asint(row.Item(19))}")
+                                If frmInvoicenote.addkilo Then
+                                    tempMsg.Add($"*سعر الكيلو:* {If(frmInvoicenote.alltodollar, asdbl(row.Item(20)), asint(row.Item(20)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                                End If
+                                tempMsg.Add($"*رسم كيلوات:* {If(frmInvoicenote.alltodollar, asdbl(row.Item(21)), asint(row.Item(21)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                                If frmInvoicenote.adddiscount Then
+                                    tempMsg.Add($"*قيمة الحسم:* {If(frmInvoicenote.alltodollar, asdbl(row.Item(23)), asint(row.Item(23)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                                End If
+                                If frmInvoicenote.dollarprice Then
+                                    tempMsg.Add($"*سعر الصرف:* {asint(row.Item(27))} ل.ل")
+                                End If
+                                If frmInvoicenote.alltodollar Then
+                                    tempMsg.Add($"*المجموع:* {asdbl(row.Item(28))} $")
+                                ElseIf frmInvoicenote.dollartotal Then
+                                    tempMsg.Add($"*المجموع:* {asint(row.Item(22))} ل.ل = {asdbl(row.Item(28))} $")
+                                Else
+                                    tempMsg.Add($"*المجموع:* {asint(row.Item(22))} ل.ل")
+                                End If
+                                If frmInvoicenote.verbose Then
+                                    tempMsg.Add($"*مبلغ التأمين:* {asint(row.Item(13))} ل.ل")
+                                    If frmInvoicenote.alltodollar Or frmInvoicenote.creditsindollar Then
+                                        tempMsg.Add($"*إجمالي:* {asdbl(Double.Parse(row.Item(14)) + Double.Parse(row.Item(28)))} $")
+                                        tempMsg.Add($"*مكسورات:* {asdbl(row.Item(14))} $")
+                                    Else
+                                        tempMsg.Add($"*مكسورات:* {asint(row.Item(14))} ل.ل")
+                                        tempMsg.Add($"*إجمالي:* {asint(Double.Parse(row.Item(14)) + Double.Parse(row.Item(22)))} ل.ل")
+                                    End If
+                                End If
+                                If Not String.IsNullOrEmpty(frmInvoicenote.TextBox1.Text) Then
+                                    tempMsg.Add($"{vbNewLine}*ملاحظة:* {frmInvoicenote.TextBox1.Text.Trim}")
+                                End If
+                                msges.Add(New WAMessage(row.Item(1), row.Item(6), numericPhone, String.Join(vbNewLine, tempMsg)))
+                            End If
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+                Next
+            End If
+
+            If msges.Count > 0 Then
+                Dim frm As New WhatsappMessenger(msges)
+                frm.Show()
+            Else
+                MsgBox("عدد الفواتير الصالحة للإرسال يساوي صفر، تم الغاء العمليّة.")
+            End If
+        End If
     End Sub
+
+    Private Function asint(ByVal i As Object) As String
+        Try
+            Return Double.Parse(i).ToString("N0")
+        Catch ex As Exception
+            Return "" & i
+        End Try
+    End Function
+
+    Private Function asdbl(ByVal i As Object) As String
+        Try
+            Return Double.Parse(i).ToString("#,##0.##")
+        Catch ex As Exception
+            Return "" & i
+        End Try
+    End Function
 
     Private Sub frmInvoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not isPaymentVerified Then

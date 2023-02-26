@@ -1,5 +1,15 @@
 ﻿Public Class WAMessage
 
+    Private Id_ As String
+    Public Property Id() As String
+        Get
+            Return Id_
+        End Get
+        Set(ByVal value As String)
+            Id_ = value
+        End Set
+    End Property
+
     Private Username_ As String
     Public Property Username() As String
         Get
@@ -30,7 +40,8 @@
         End Set
     End Property
 
-    Sub New(Username As String, Mobile As String, Message As String)
+    Sub New(Id As String, Username As String, Mobile As String, Message As String)
+        Id_ = Id
         Username_ = Username
         Mobile_ = Mobile
         Message_ = Message

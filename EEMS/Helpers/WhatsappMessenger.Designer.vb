@@ -22,6 +22,7 @@ Partial Class WhatsappMessenger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(WhatsappMessenger))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
@@ -30,6 +31,8 @@ Partial Class WhatsappMessenger
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.pbox = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lbltime = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.pbox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -70,7 +73,7 @@ Partial Class WhatsappMessenger
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(390, 300)
+        Me.TextBox1.Size = New System.Drawing.Size(390, 275)
         Me.TextBox1.TabIndex = 2
         Me.TextBox1.Text = "جاري تسجيل الدخول، الرجاء مسح الرمز عند ظهوره..."
         '
@@ -113,12 +116,27 @@ Partial Class WhatsappMessenger
         Me.Panel1.TabIndex = 5
         Me.Panel1.Visible = False
         '
+        'lbltime
+        '
+        Me.lbltime.AutoSize = True
+        Me.lbltime.Location = New System.Drawing.Point(12, 358)
+        Me.lbltime.Name = "lbltime"
+        Me.lbltime.Size = New System.Drawing.Size(49, 13)
+        Me.lbltime.TabIndex = 6
+        Me.lbltime.Text = "00:00:00"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 1000
+        '
         'WhatsappMessenger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(414, 380)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.lbltime)
         Me.Controls.Add(Me.lblprog)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ProgressBar1)
@@ -143,4 +161,6 @@ Partial Class WhatsappMessenger
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents pbox As PictureBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents lbltime As Label
+    Friend WithEvents Timer1 As Timer
 End Class

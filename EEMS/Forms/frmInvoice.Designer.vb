@@ -346,7 +346,6 @@ Partial Class frmInvoice
         '
         'Button2
         '
-        Me.Button2.Enabled = False
         Me.Button2.Image = Global.EEMS.My.Resources.Resources.whatsapp
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(387, 55)

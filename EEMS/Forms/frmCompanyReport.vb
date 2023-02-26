@@ -111,8 +111,8 @@ Public Class frmCompanyReport
         Return totalRemValueOfInvoicesTillNow
     End Function
 
-    Private Function getTotalCreditValueTillNow(totalRemValueOfInvoicesTillNow As Int64, totalRemValueOfInvoices As Long) As Long
-        Dim totalCreditValue As Int64 = totalRemValueOfInvoicesTillNow - totalRemValueOfInvoices
+    Private Function getTotalCreditValueTillNow(totalRemValueOfInvoicesTillNow As Int64, totalValueOfInvoices As Long) As Long
+        Dim totalCreditValue As Int64 = totalRemValueOfInvoicesTillNow - totalValueOfInvoices
         btnTotalCredit.Text = "اجمالي كسورات الاشهر السابقة" & vbNewLine & vbNewLine & totalCreditValue.ToString("N0") & " ل.ل"
         Return totalCreditValue
     End Function
@@ -265,6 +265,7 @@ Public Class frmCompanyReport
                        " IsNull(SUM(total),0) as [صافي ل.ل]," &
                        " (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS [اجمالي مدفوع ل.ل]," &
                        " (IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID )) AS [باقي ل.ل]," &
+                       " IsNull(Cast(IsNull(SUM(total/Cast(IIF(dollarPrice>0,dollarPrice, -1) as Float)),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS [باقي $], " &
                        " (SELECT COUNT(val) FROM (SELECT coh.id as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [عدد أشهر الكسر]," &
                        " (SELECT SUM(val) FROM (SELECT coh.currentvalue-coh.previousvalue as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total,coh.currentvalue,coh.previousvalue HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [مجموع الكيلوات لأشهر الكسر]," &
                        " r.insurance as [له تأمين ل.ل]" &
@@ -629,7 +630,7 @@ Public Class frmCompanyReport
         Dim totalValueOfInvoicesTillNow As Int64 = getTotalValueOfInvoicesTillNow()
         Dim totalPaidValueOfInvoicesTillNow As Long = getTotalPaidValueOfInvoicesTillNow()
         Dim totalRemValueOfInvoicesTillNow As Int64 = getTotalRemValueOfInvoicesTillNow(totalValueOfInvoicesTillNow, totalPaidValueOfInvoicesTillNow)
-        Dim totalCreditValueTillNow As Int64 = getTotalCreditValueTillNow(totalRemValueOfInvoicesTillNow, totalRemValueOfInvoices)
+        Dim totalCreditValueTillNow As Int64 = getTotalCreditValueTillNow(totalRemValueOfInvoicesTillNow, totalValueOfInvoices)
         Dim totalPurchaseValue As Long = getTotalPurhasesValue()
         Dim totalFuelLiter As Long = getTotalFuelPurhasesLetersValue()
         Dim totalFuelPrice As Long = getTotalFuelPurhasesPriceValue()
