@@ -208,6 +208,27 @@ Public Class XtraReportViewer
                 End If
             End If
 
+            'If Not (alltodollar Or (dollartotal And creditsindollar)) Then
+            '    If cont.Name = "Text45" Or cont.Name = "net_1" Or cont.Name = "Text48" Then
+            '        cont.Visible = False
+            '    End If
+            'Else
+            'For Each cf In rptDoc.CalculatedFields
+            '    If cf.Name = "net_1" Then
+            '        cf.Expression = "[totaldollar]+[credits]"
+            '        Exit For
+            '    End If
+            'Next
+
+            'If cont.Name = "net_1" Then
+            '    Dim a = Double.Parse(CType(rptDoc.FindControl("totaldollarvlue", True), XRLabel).Summary.GetResult())
+            '    Dim b = Double.Parse(CType(rptDoc.FindControl("credit1", True), XRLabel).Summary.GetResult())
+            '    cont.Text = a + b
+            'ElseIf cont.Name = "Text48" Then
+            '    cont.Text = "$"
+            'End If
+            'End If
+
             If alltodollar Then
                 If cont.Tag = "currencylbl" Then
                     cont.Text = "$"

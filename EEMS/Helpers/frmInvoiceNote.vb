@@ -6,6 +6,9 @@
     Public addkilo As Boolean = False
     Public adddiscount As Boolean = False
     Public creditsindollar As Boolean = False
+    Public hideWhatsappWindow As Boolean = True
+
+
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         lblcount.Text = TextBox1.Text.Length
     End Sub
@@ -47,6 +50,13 @@
             chkdollartotal.Enabled = True
             chkcreditsindollar.Checked = False
             chkcreditsindollar.Enabled = True
+        End If
+    End Sub
+
+    Private Sub TextBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyDown
+        If e.KeyCode = Keys.F12 Then
+            hideWhatsappWindow = False
+            Label1.ForeColor = Color.Green
         End If
     End Sub
 End Class

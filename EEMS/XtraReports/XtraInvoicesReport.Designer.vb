@@ -22,7 +22,7 @@ Partial Public Class XtraInvoicesReport
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XtraInvoicesReport))
         Dim XrSummary1 As DevExpress.XtraReports.UI.XRSummary = New DevExpress.XtraReports.UI.XRSummary()
         Me.Area3 = New DevExpress.XtraReports.UI.DetailBand()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.totaldollarvlue = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLine4 = New DevExpress.XtraReports.UI.XRLine()
         Me.XrLine2 = New DevExpress.XtraReports.UI.XRLine()
@@ -151,28 +151,28 @@ Partial Public Class XtraInvoicesReport
         '
         'Area3
         '
-        Me.Area3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel3, Me.XrLabel2, Me.XrLine4, Me.XrLine2, Me.XrLine1, Me.XrLabel1, Me.motor1, Me.Text1, Me.notes1, Me.Text2, Me.client1, Me.Text3, Me.boxlocation1, Me.Text4, Me.specialcode1, Me.Text5, Me.ampere1, Me.Text6, Me.pvalue1, Me.Text7, Me.cvalue1, Me.Text8, Me.diff1, Me.Text9, Me.kiloprice1, Me.Text10, Me.kilono1, Me.Text11, Me.fee1, Me.Text12, Me.total1, Me.Text13, Me.insure1, Me.Text14, Me.credit1, Me.Text15, Me.cmonth1, Me.Text16, Me.collecter1, Me.cmonth2, Me.motor2, Me.client2, Me.specialcode2, Me.ampere2, Me.diff2, Me.kiloprice2, Me.total2, Me.Text26, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text17, Me.Text20, Me.Text21, Me.Text22, Me.Text23, Me.Text24, Me.Text25, Me.Text35, Me.lblcreditcurrency, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.discount1, Me.Text19, Me.Text42, Me.discountcur, Me.discount2, Me.discountlbl, Me.Line2, Me.Line3, Me.Line4, Me.Line5, Me.Line6, Me.Line7, Me.Line8, Me.Line9, Me.Line10, Me.Picture1, Me.Text18, Me.Line13, Me.Line15, Me.PrintDate1, Me.Line23, Me.Line25, Me.Line27, Me.Line28, Me.Line29, Me.Text46, Me.net_1, Me.Text48, Me.Line1, Me.Line11, Me.Text47, Me.mobile1, Me.Line12, Me.Text49, Me.dollarprice1, Me.Text51, Me.Text50, Me.boxlocation2, Me.serial1, Me.Text55, Me.Text52, Me.credit2, Me.Text53, Me.Text45})
+        Me.Area3.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.totaldollarvlue, Me.XrLabel2, Me.XrLine4, Me.XrLine2, Me.XrLine1, Me.XrLabel1, Me.motor1, Me.Text1, Me.notes1, Me.Text2, Me.client1, Me.Text3, Me.boxlocation1, Me.Text4, Me.specialcode1, Me.Text5, Me.ampere1, Me.Text6, Me.pvalue1, Me.Text7, Me.cvalue1, Me.Text8, Me.diff1, Me.Text9, Me.kiloprice1, Me.Text10, Me.kilono1, Me.Text11, Me.fee1, Me.Text12, Me.total1, Me.Text13, Me.insure1, Me.Text14, Me.credit1, Me.Text15, Me.cmonth1, Me.Text16, Me.collecter1, Me.cmonth2, Me.motor2, Me.client2, Me.specialcode2, Me.ampere2, Me.diff2, Me.kiloprice2, Me.total2, Me.Text26, Me.Text27, Me.Text28, Me.Text29, Me.Text30, Me.Text31, Me.Text32, Me.Text33, Me.Text34, Me.Text17, Me.Text20, Me.Text21, Me.Text22, Me.Text23, Me.Text24, Me.Text25, Me.Text35, Me.lblcreditcurrency, Me.Text37, Me.Text38, Me.Text39, Me.Text40, Me.Text41, Me.discount1, Me.Text19, Me.Text42, Me.discountcur, Me.discount2, Me.discountlbl, Me.Line2, Me.Line3, Me.Line4, Me.Line5, Me.Line6, Me.Line7, Me.Line8, Me.Line9, Me.Line10, Me.Picture1, Me.Text18, Me.Line13, Me.Line15, Me.PrintDate1, Me.Line23, Me.Line25, Me.Line27, Me.Line28, Me.Line29, Me.Text46, Me.net_1, Me.Text48, Me.Line1, Me.Line11, Me.Text47, Me.mobile1, Me.Line12, Me.Text49, Me.dollarprice1, Me.Text51, Me.Text50, Me.boxlocation2, Me.serial1, Me.Text55, Me.Text52, Me.credit2, Me.Text53, Me.Text45})
         Me.Area3.HeightF = 363.0!
         Me.Area3.KeepTogether = True
         Me.Area3.Name = "Area3"
         Me.Area3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Area3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
-        'XrLabel3
+        'totaldollarvlue
         '
-        Me.XrLabel3.CanGrow = False
-        Me.XrLabel3.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totaldollar]")})
-        Me.XrLabel3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(467.2777!, 290.5!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(70.38898!, 15.34723!)
-        Me.XrLabel3.StylePriority.UseFont = False
-        Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Tag = "dollartotalwithcredit"
-        Me.XrLabel3.Text = "XrLabel3"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
-        Me.XrLabel3.TextFormatString = "{0:#,##0.##}"
+        Me.totaldollarvlue.CanGrow = False
+        Me.totaldollarvlue.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totaldollar]")})
+        Me.totaldollarvlue.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.totaldollarvlue.LocationFloat = New DevExpress.Utils.PointFloat(467.2777!, 290.5!)
+        Me.totaldollarvlue.Name = "totaldollarvlue"
+        Me.totaldollarvlue.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.totaldollarvlue.SizeF = New System.Drawing.SizeF(70.38898!, 15.34723!)
+        Me.totaldollarvlue.StylePriority.UseFont = False
+        Me.totaldollarvlue.StylePriority.UseTextAlignment = False
+        Me.totaldollarvlue.Tag = "dollartotalwithcredit"
+        Me.totaldollarvlue.Text = "totaldollarvlue"
+        Me.totaldollarvlue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft
+        Me.totaldollarvlue.TextFormatString = "{0:#,##0.##}"
         '
         'XrLabel2
         '
@@ -2288,5 +2288,5 @@ Partial Public Class XtraInvoicesReport
     Friend WithEvents XrLine4 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents XrLine2 As DevExpress.XtraReports.UI.XRLine
     Friend WithEvents XrLine1 As DevExpress.XtraReports.UI.XRLine
-    Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents totaldollarvlue As DevExpress.XtraReports.UI.XRLabel
 End Class

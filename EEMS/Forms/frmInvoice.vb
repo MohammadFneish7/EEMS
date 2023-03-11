@@ -65,10 +65,10 @@ Public Class frmInvoice
 
     Private Sub calculateStats()
         Try
-            Dim soldkilo As Integer = a.ExecuteScalar("SELECT IsNull(SUM((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
-            Dim kiloprofit As Integer = a.ExecuteScalar("SELECT IsNull(SUM(((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))*Cast(ch.kilowattprice AS BIGINT))+Cast(roundvalue AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
-            Dim fees As Integer = a.ExecuteScalar("SELECT IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
-            Dim workinghours As Integer = a.ExecuteScalar("SELECT IsNull(MAX(workinghours),0) FROM EngineWorkingHours WHERE cmonth =" & month & " and cyear=" & year)
+            Dim soldkilo As Long = a.ExecuteScalar("SELECT IsNull(SUM((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim kiloprofit As Long = a.ExecuteScalar("SELECT IsNull(SUM(((Cast(ch.currentvalue AS BIGINT)-Cast(ch.previousvalue AS BIGINT))*Cast(ch.kilowattprice AS BIGINT))+Cast(roundvalue AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim fees As Long = a.ExecuteScalar("SELECT IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) As exp1 FROM Registration r,CounterHistory ch WHERE ch.regid = r.ID and ch.cmonth =" & month & " and ch.cyear=" & year)
+            Dim workinghours As Long = a.ExecuteScalar("SELECT IsNull(MAX(workinghours),0) FROM EngineWorkingHours WHERE cmonth =" & month & " and cyear=" & year)
             lblsoldKilo.Text = soldkilo.ToString("N0")
             lblkilopayments.Text = kiloprofit.ToString("N0")
             lblfees.Text = fees.ToString("N0")
@@ -469,10 +469,13 @@ Public Class frmInvoice
                                 If frmInvoicenote.verbose Then
                                     tempMsg.Add($"*مبلغ التأمين:* {asint(row.Item(13))} ل.ل")
                                     If frmInvoicenote.alltodollar Or frmInvoicenote.creditsindollar Then
-                                        tempMsg.Add($"*إجمالي:* {asdbl(Double.Parse(row.Item(14)) + Double.Parse(row.Item(28)))} $")
                                         tempMsg.Add($"*مكسورات:* {asdbl(row.Item(14))} $")
                                     Else
                                         tempMsg.Add($"*مكسورات:* {asint(row.Item(14))} ل.ل")
+                                    End If
+                                    If frmInvoicenote.alltodollar Or (frmInvoicenote.dollartotal And frmInvoicenote.creditsindollar) Then
+                                        tempMsg.Add($"*إجمالي:* {asdbl(Double.Parse(row.Item(14)) + Double.Parse(row.Item(28)))} $")
+                                    ElseIf Not frmInvoicenote.creditsindollar Then
                                         tempMsg.Add($"*إجمالي:* {asint(Double.Parse(row.Item(14)) + Double.Parse(row.Item(22)))} ل.ل")
                                     End If
                                 End If
@@ -489,7 +492,7 @@ Public Class frmInvoice
             End If
 
             If msges.Count > 0 Then
-                Dim frm As New WhatsappMessenger(msges)
+                Dim frm As New WhatsappMessenger(msges, frmInvoicenote.hideWhatsappWindow)
                 frm.Show()
             Else
                 MsgBox("عدد الفواتير الصالحة للإرسال يساوي صفر، تم الغاء العمليّة.")
