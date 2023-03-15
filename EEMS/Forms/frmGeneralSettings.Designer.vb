@@ -255,11 +255,13 @@ Partial Class frmGeneralSettings
         'numDollar
         '
         Me.numDollar.Location = New System.Drawing.Point(367, 163)
-        Me.numDollar.Maximum = New Decimal(New Integer() {100000, 0, 0, 0})
+        Me.numDollar.Maximum = New Decimal(New Integer() {1215752191, 23, 0, 0})
+        Me.numDollar.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.numDollar.Name = "numDollar"
         Me.numDollar.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.numDollar.Size = New System.Drawing.Size(241, 20)
         Me.numDollar.TabIndex = 73
+        Me.numDollar.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label8
         '

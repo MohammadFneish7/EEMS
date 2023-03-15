@@ -722,7 +722,7 @@ Public Class frmCompanyReport
                                 " LEFT JOIN " &
                                 " 	(Select  cl.fullname AS D, " &
                                 " 		Count(Distinct p.counterhistoryid) as E, " &
-                                " 		SUM(pvalue) as F " &
+                                " 		sum(Cast(pvalue AS BIGINT)) as F " &
                                 " 		FROM  ElectricBox b JOIN Collector cl   " &
                                 " 			ON b.collectorid=cl.id JOIN ECounter ec  " &
                                 " 			ON ec.boxid=b.ID JOIN Registration r  " &
@@ -759,7 +759,7 @@ Public Class frmCompanyReport
                                 " LEFT JOIN " &
                                 " 	(Select  cl.fullname AS D, " &
                                 " 		Count(Distinct p.counterhistoryid) as E, " &
-                                " 		SUM(pvalue) as F " &
+                                " 		SUM(Cast(pvalue AS BIGINT)) as F " &
                                 " 		FROM  ElectricBox b JOIN Collector cl   " &
                                 " 			ON b.collectorid=cl.id JOIN ECounter ec  " &
                                 " 			ON ec.boxid=b.ID JOIN Registration r  " &
