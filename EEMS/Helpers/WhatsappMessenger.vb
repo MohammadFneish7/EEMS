@@ -59,6 +59,9 @@ Public Class WhatsappMessenger
                 If Debugger.IsAttached Then
                     msg.Mobile = "81184149"
                 End If
+                If msg.Mobile.StartsWith("0") Then
+                    msg.Mobile = msg.Mobile.Substring(1)
+                End If
                 Messagner_?.SendMessage(msg.Mobile, msg.Message, load_timeout:=60, ticks_timeout:=60, wait_after_send:=2)
                 count += 1
                 BackgroundWorker1.ReportProgress(count, "")

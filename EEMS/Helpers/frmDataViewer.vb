@@ -43,6 +43,9 @@ Public Class frmDataViewer
             If GridColumn.ColumnType.ToString.Contains("Int") Then
                 GridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
                 GridColumn.DisplayFormat.FormatString = "n0"
+            ElseIf GridColumn.ColumnType.ToString.Contains("Decimal") Then
+                GridColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+                GridColumn.DisplayFormat.FormatString = "#,##0.##"
             End If
         Next
 

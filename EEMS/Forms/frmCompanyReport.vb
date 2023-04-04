@@ -850,11 +850,15 @@ Public Class frmCompanyReport
         Try
             Dim Month As Int16 = dtp1.Value.Month
             Dim Year As Int16 = dtp1.Value.Year
-            Dim ac As New Helper
-            ac.ds = New DataSet
-            ac.GetData(frmInvoice.getInvoiceQuery(Month, Year, True), "dti")
-            Dim frm As New frmDataViewer("كشف الفواتير + المكسورات", ac.ds.Tables("dti"), False)
-            frm.ShowDialog()
+
+            Dim frmInvoicenote As New frmInvoiceNote
+            If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+                Dim ac As New Helper
+                ac.ds = New DataSet
+                ac.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, True, False), "dti")
+                Dim frm As New frmDataViewer("معاينة داتا الطباعة", ac.ds.Tables("dti"), False)
+                frm.ShowDialog()
+            End If
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
         End Try
@@ -918,6 +922,24 @@ Public Class frmCompanyReport
         Try
             loadMaintainanceReport()
             Dim frm As New frmDataViewer("كشف صيانة حسب المولّد", dtMaintainance, True)
+            frm.ShowDialog()
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        If Not currentUser.hasPermision("reportview") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Try
+            Dim Month As Int16 = dtp1.Value.Month
+            Dim Year As Int16 = dtp1.Value.Year
+            Dim ac As New Helper
+            ac.ds = New DataSet
+            ac.GetData(frmInvoice.getInvoiceQuery(Month, Year, True), "dti")
+            Dim frm As New frmDataViewer("كشف الفواتير + المكسورات", ac.ds.Tables("dti"), False)
             frm.ShowDialog()
         Catch ex As Exception
             ErrorDialog.showDlg(ex)

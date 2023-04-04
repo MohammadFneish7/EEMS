@@ -19,6 +19,7 @@ Public Class frmInvoice
 
         ' This call is required by the designer.
         InitializeComponent()
+        DateTimePicker1.Value = New Date(DateTime.Now.Year, DateTime.Now.Month, 1)
 
         loadData()
 
@@ -294,7 +295,8 @@ Public Class frmInvoice
     Public Shared Function getInvoiceQueryForReport(selectedOnly As Boolean, GridView1 As GridView, m As Int16, y As Int16,
                                                     withCredits As Boolean, Optional ByVal orderByCust As Boolean = False,
                                                     Optional creditsByCust As Boolean = False, Optional allToDollar As Boolean = False,
-                                                    Optional creditsIndollars As Boolean = False, Optional forWhatsapp As Boolean = False) As String
+                                                    Optional creditsIndollars As Boolean = False, Optional forWhatsapp As Boolean = False,
+                                                    Optional addCounterSerial As Boolean = True) As String
         Dim d As New Date(y, m, 1)
         d = d.AddMonths(1)
 
@@ -365,7 +367,10 @@ Public Class frmInvoice
             End If
         End If
 
-
+        Dim counterserial As String = ""
+        If addCounterSerial Then
+            counterserial = " ec.serial AS [سيريال العداد], "
+        End If
 
         Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &
                             " (b.code + ec.code) AS [رمز مفتاح], " &
@@ -377,7 +382,7 @@ Public Class frmInvoice
                             $" {devideByDollarPricePrefix}discount{devideByDollarPrice} AS [حسم], " &
                             $" {devideByDollarPricePrefix}ISNULL(SUM(pyy.pvalue), 0){devideByDollarPrice}  AS [مدفوع], " &
                             $" {devideByDollarPricePrefix}(total - ISNULL(SUM(pyy.pvalue), 0)){devideByDollarPrice} AS [باقي], " &
-                            " ec.serial AS [سيريال العداد], " &
+                            $" {counterserial} " &
                             " ch.dollarPrice AS [سعر الصرف], " &
                             " ch.totaldollar AS [مجموع دولار] " &
                         " FROM Registration r" &
@@ -482,7 +487,7 @@ Public Class frmInvoice
                                 If Not String.IsNullOrEmpty(frmInvoicenote.TextBox1.Text) Then
                                     tempMsg.Add($"{vbNewLine}*ملاحظة:* {frmInvoicenote.TextBox1.Text.Trim}")
                                 End If
-                                msges.Add(New WAMessage(row.Item(1), row.Item(6), numericPhone, String.Join(vbNewLine, tempMsg)))
+                                msges.Add(New WAMessage(row.Item(1), row.Item(6), numericPhone.Trim(), String.Join(vbNewLine, tempMsg)))
                             End If
                         End If
                     Catch ex As Exception
