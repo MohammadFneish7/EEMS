@@ -691,7 +691,7 @@ Public Class frmMain
             Dim Year As Integer = frmdtp.dtp.Value.Year
             Dim ar As New Helper
             ar.ds = New DataSet
-            ar.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar), "dt")
+            ar.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, roundTotalDollar:=frmInvoicenote.roundTotalDollar), "dt")
             If ar.ds.Tables(0).Rows.Count = 0 Then
                 MsgBox("لا يوجد فواتير لهذا الشهر لطباعتها")
                 Return

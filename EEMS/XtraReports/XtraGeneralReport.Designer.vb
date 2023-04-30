@@ -65,7 +65,7 @@ Partial Public Class XtraGeneralReport
         Me.PrintDate1.BorderColor = System.Drawing.Color.Black
         Me.PrintDate1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.PrintDate1.BorderWidth = 1.0!
-        Me.PrintDate1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.PrintDate1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.PrintDate1.ForeColor = System.Drawing.Color.Black
         Me.PrintDate1.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 33.33333!)
         Me.PrintDate1.Name = "PrintDate1"
@@ -83,7 +83,7 @@ Partial Public Class XtraGeneralReport
         Me.title1.BorderWidth = 1.0!
         Me.title1.CanGrow = False
         Me.title1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[title]")})
-        Me.title1.Font = New System.Drawing.Font("Times New Roman", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.title1.Font = New DevExpress.Drawing.DXFont("Times New Roman", 14.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.title1.ForeColor = System.Drawing.Color.Black
         Me.title1.LocationFloat = New DevExpress.Utils.PointFloat(334.375!, 23.68056!)
         Me.title1.Name = "title1"
@@ -97,7 +97,7 @@ Partial Public Class XtraGeneralReport
         Me.Picture1.BorderColor = System.Drawing.Color.Black
         Me.Picture1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Picture1.BorderWidth = 1.0!
-        Me.Picture1.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Picture1.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Picture1.ForeColor = System.Drawing.Color.Black
         Me.Picture1.ImageSource = New DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("Picture1.ImageSource"))
         Me.Picture1.LocationFloat = New DevExpress.Utils.PointFloat(744.7917!, 25.0!)
@@ -113,7 +113,7 @@ Partial Public Class XtraGeneralReport
         Me.Text22.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text22.BorderWidth = 1.0!
         Me.Text22.CanGrow = False
-        Me.Text22.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.Text22.Font = New DevExpress.Drawing.DXFont("Arial", 9.0!)
         Me.Text22.ForeColor = System.Drawing.Color.Black
         Me.Text22.LocationFloat = New DevExpress.Utils.PointFloat(586.4583!, 41.66667!)
         Me.Text22.Name = "Text22"
@@ -129,7 +129,7 @@ Partial Public Class XtraGeneralReport
         Me.Text23.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text23.BorderWidth = 1.0!
         Me.Text23.CanGrow = False
-        Me.Text23.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.Text23.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.Text23.ForeColor = System.Drawing.Color.Black
         Me.Text23.LocationFloat = New DevExpress.Utils.PointFloat(125.0!, 33.33333!)
         Me.Text23.Name = "Text23"
@@ -155,7 +155,7 @@ Partial Public Class XtraGeneralReport
         Me.detial1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.detial1.BorderWidth = 1.0!
         Me.detial1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[detial]")})
-        Me.detial1.Font = New System.Drawing.Font("Times New Roman", 14.0!)
+        Me.detial1.Font = New DevExpress.Drawing.DXFont("Times New Roman", 14.0!)
         Me.detial1.ForeColor = System.Drawing.Color.Black
         Me.detial1.LocationFloat = New DevExpress.Utils.PointFloat(25.0!, 25.0!)
         Me.detial1.Multiline = True
@@ -173,7 +173,7 @@ Partial Public Class XtraGeneralReport
         Me.note1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.note1.BorderWidth = 1.0!
         Me.note1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[note]")})
-        Me.note1.Font = New System.Drawing.Font("Times New Roman", 14.0!)
+        Me.note1.Font = New DevExpress.Drawing.DXFont("Times New Roman", 14.0!)
         Me.note1.ForeColor = System.Drawing.Color.Black
         Me.note1.LocationFloat = New DevExpress.Utils.PointFloat(25.0!, 91.66666!)
         Me.note1.Multiline = True
@@ -191,7 +191,7 @@ Partial Public Class XtraGeneralReport
         Me.other1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.other1.BorderWidth = 1.0!
         Me.other1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[other]")})
-        Me.other1.Font = New System.Drawing.Font("Times New Roman", 14.0!)
+        Me.other1.Font = New DevExpress.Drawing.DXFont("Times New Roman", 14.0!)
         Me.other1.ForeColor = System.Drawing.Color.Black
         Me.other1.LocationFloat = New DevExpress.Utils.PointFloat(25.0!, 158.3333!)
         Me.other1.Multiline = True
@@ -225,7 +225,7 @@ Partial Public Class XtraGeneralReport
         Me.Text5.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text5.BorderWidth = 1.0!
         Me.Text5.CanGrow = False
-        Me.Text5.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.Text5.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
         Me.Text5.ForeColor = System.Drawing.Color.Black
         Me.Text5.LocationFloat = New DevExpress.Utils.PointFloat(250.0!, 8.333333!)
         Me.Text5.Name = "Text5"
@@ -243,7 +243,7 @@ Partial Public Class XtraGeneralReport
         Me.Text6.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text6.BorderWidth = 1.0!
         Me.Text6.CanGrow = False
-        Me.Text6.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.Text6.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.Text6.ForeColor = System.Drawing.Color.Black
         Me.Text6.LocationFloat = New DevExpress.Utils.PointFloat(33.33333!, 8.333333!)
         Me.Text6.Name = "Text6"
@@ -285,7 +285,7 @@ Partial Public Class XtraGeneralReport
         Me.DataMember = "general"
         Me.DataSource = Me.DataSetInvoices1
         Me.Landscape = True
-        Me.Margins = New System.Drawing.Printing.Margins(0, 0, 25, 25)
+        Me.Margins = New DevExpress.Drawing.DXMargins(0, 0, 25, 25)
         Me.PageHeight = 583
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A5

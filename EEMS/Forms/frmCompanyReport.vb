@@ -265,7 +265,7 @@ Public Class frmCompanyReport
                        " IsNull(SUM(total),0) as [صافي ل.ل]," &
                        " (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS [اجمالي مدفوع ل.ل]," &
                        " (IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID )) AS [باقي ل.ل]," &
-                       " IsNull(Cast(IsNull(SUM(total/Cast(IIF(dollarPrice>0,dollarPrice, -1) as Float)),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS [باقي $], " &
+                       " IsNull(Cast(IsNull(SUM(totaldollar),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS [باقي $], " &
                        " (SELECT COUNT(val) FROM (SELECT coh.id as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [عدد أشهر الكسر]," &
                        " (SELECT SUM(val) FROM (SELECT coh.currentvalue-coh.previousvalue as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total,coh.currentvalue,coh.previousvalue HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [مجموع الكيلوات لأشهر الكسر]," &
                        " r.insurance as [له تأمين ل.ل]" &
@@ -273,6 +273,11 @@ Public Class frmCompanyReport
                        " WHERE r.packageid = p.ID And ch.cmonth = ar.ID And r.counterid = ec.ID And ec.boxid = b.ID And r.clientid = c.ID And ch.regid = r.ID And b.engineid = en.ID And b.collectorid = cl.ID" &
                        " GROUP BY r.ID,r.active,en.ename,b.location,c.clientname, c.phone, c.mobile,p.title, p.ampere,cl.fullname,b.code,ec.code,r.insurance,(b.code + ec.code)", "dt1")
         dtGeneralReport.Clear()
+        For Each r As DataRow In a.ds.Tables("dt1").Rows
+            If Math.Abs(Decimal.Parse(r.Item(21))) < 0.1 Then
+                r.Item(21) = 0
+            End If
+        Next
         dtGeneralReport.Merge(a.ds.Tables("dt1"))
     End Sub
 
@@ -855,7 +860,7 @@ Public Class frmCompanyReport
             If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
                 Dim ac As New Helper
                 ac.ds = New DataSet
-                ac.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, True, False), "dti")
+                ac.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, True, False, frmInvoicenote.roundTotalDollar), "dti")
                 Dim frm As New frmDataViewer("معاينة داتا الطباعة", ac.ds.Tables("dti"), False)
                 frm.ShowDialog()
             End If
@@ -1091,7 +1096,7 @@ Public Class frmCompanyReport
             Dim ac As New Helper
             ac.ds = New DataSet
             ac.GetData("select cname as [المشترك],cphone as [هاتف], cmobile as [خلوي], Count(rid) as [عدد الإشتراكات], Sum(sumKilo) as [مجموع كيلوات (كيلو)], Sum(sumKiloAndRound) as [اجمالي كيلوات + تدوير ل.ل], Sum(netFees) as [اجمالي رسوم ل.ل], Sum(netRequired) as [اجمالي مطلوب ل.ل],
-                        Sum(netDiscount) as [اجمالي حسومات ل.ل], Sum(netNet) as [صافي ل.ل], Sum(totalPaid) as  [اجمالي مدفوع ل.ل], Sum(remLastMonth) as  [باقي من الشهر الماضي ل.ل], Sum(totalRem) as  [باقي من كل الأشهر ل.ل], Sum(remLastMonthdollar) as  [باقي من الشهر الماضي $], Sum(totalRemdollar) as [باقي من كل الأشهر $], IsNull(Sum(cInsurance),0) as [له تأمين ل.ل]  from (
+                        Sum(netDiscount) as [اجمالي حسومات ل.ل], Sum(netNet) as [صافي ل.ل], Sum(totalPaid) as  [اجمالي مدفوع ل.ل], Sum(remLastMonth) as  [باقي من الشهر الماضي ل.ل], Sum(totalRem) as  [باقي من كل الأشهر ل.ل], IIF(ABS(Sum(remLastMonthdollar))>=0.1,Sum(remLastMonthdollar),0) as  [باقي من الشهر الماضي $], IIF(ABS(Sum(totalRemdollar))>=0.1,Sum(totalRemdollar),0) as [باقي من كل الأشهر $], IsNull(Sum(cInsurance),0) as [له تأمين ل.ل]  from (
                         SELECT r.id as rid,c.id as cid, c.clientname as cname, c.phone as cphone, c.mobile as cmobile,
                             IsNull(Max(ch.currentvalue),0) as sumKilo, 
                             IsNull(Sum(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue),0) as sumKiloAndRound,
@@ -1101,9 +1106,9 @@ Public Class frmCompanyReport
                             IsNull(SUM(total),0) as netNet,
                             (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS totalPaid, 
                             IsNull((SELECT IsNull(total,0) - IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY total),0) AS remLastMonth, 
-                            Cast(IsNull((SELECT IsNull(total/Cast(IIF(dollarPrice>0,dollarPrice, -1) as Float),0) - IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY coh.total, coh.dollarprice),0) AS DECIMAL(18,2)) AS remLastMonthdollar, 
+                            Cast(IsNull((SELECT IsNull(totaldollar,0) - IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY coh.totaldollar, coh.dollarprice),0) AS DECIMAL(18,2)) AS remLastMonthdollar, 
                             IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS totalRem, 
-                            IsNull(Cast(IsNull(SUM(total/Cast(IIF(dollarPrice>0,dollarPrice, -1) as Float)),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS totalRemdollar, 
+                            IsNull(Cast(IsNull(SUM(totaldollar),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS totalRemdollar, 
                             r.insurance as cInsurance
                             from CounterHistory ch join Registration r  on ch.regid = r.id join Client c on r.clientid=c.ID
 	                        group by r.ID,c.id, r.insurance,c.clientname, c.phone, c.mobile

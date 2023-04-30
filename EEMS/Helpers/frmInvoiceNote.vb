@@ -7,7 +7,7 @@
     Public adddiscount As Boolean = False
     Public creditsindollar As Boolean = False
     Public hideWhatsappWindow As Boolean = True
-
+    Public roundTotalDollar As Boolean = True
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
         lblcount.Text = TextBox1.Text.Length
@@ -34,6 +34,9 @@
         End If
         If chkcreditsindollar.Checked Then
             creditsindollar = True
+        End If
+        If chkroundtotal.Checked Then
+            roundTotalDollar = True
         End If
         TextBox1.Text = If(String.IsNullOrEmpty(TextBox1.Text), "", TextBox1.Text.Replace(vbNewLine, " "))
         Me.DialogResult =DialogResult.OK

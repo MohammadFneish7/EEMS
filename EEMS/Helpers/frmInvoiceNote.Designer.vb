@@ -36,6 +36,7 @@ Partial Class frmInvoiceNote
         Me.chkaddkilo = New System.Windows.Forms.CheckBox()
         Me.chkadddiscount = New System.Windows.Forms.CheckBox()
         Me.chkcreditsindollar = New System.Windows.Forms.CheckBox()
+        Me.chkroundtotal = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -69,7 +70,7 @@ Partial Class frmInvoiceNote
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(15, 310)
+        Me.Button1.Location = New System.Drawing.Point(15, 321)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(357, 36)
         Me.Button1.TabIndex = 3
@@ -192,12 +193,27 @@ Partial Class frmInvoiceNote
         Me.chkcreditsindollar.Text = "إحتساب المكسورات بالدولار بحسب سعر صرف كل شهر"
         Me.chkcreditsindollar.UseVisualStyleBackColor = False
         '
+        'chkroundtotal
+        '
+        Me.chkroundtotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkroundtotal.AutoSize = True
+        Me.chkroundtotal.BackColor = System.Drawing.Color.White
+        Me.chkroundtotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.chkroundtotal.Location = New System.Drawing.Point(248, 297)
+        Me.chkroundtotal.Name = "chkroundtotal"
+        Me.chkroundtotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkroundtotal.Size = New System.Drawing.Size(114, 17)
+        Me.chkroundtotal.TabIndex = 13
+        Me.chkroundtotal.Text = "تدوير مجموع الدولار"
+        Me.chkroundtotal.UseVisualStyleBackColor = False
+        '
         'frmInvoiceNote
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(381, 358)
+        Me.ClientSize = New System.Drawing.Size(381, 369)
+        Me.Controls.Add(Me.chkroundtotal)
         Me.Controls.Add(Me.chkcreditsindollar)
         Me.Controls.Add(Me.chkadddiscount)
         Me.Controls.Add(Me.chkaddkilo)
@@ -235,4 +251,5 @@ Partial Class frmInvoiceNote
     Friend WithEvents chkaddkilo As CheckBox
     Friend WithEvents chkadddiscount As CheckBox
     Friend WithEvents chkcreditsindollar As CheckBox
+    Friend WithEvents chkroundtotal As CheckBox
 End Class

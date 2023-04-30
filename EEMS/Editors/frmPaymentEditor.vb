@@ -53,14 +53,18 @@ Public Class frmPaymentEditor
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
+            a.ds = New DataSet
+            dollarpricethen = a.ExecuteScalar("SELECT dollarprice FROM CounterHistory ch WHERE ch.ID=" & chID)
+
             Dim thisMonthCounterRequiredValueQuery As String = "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.ID =ch.ID)"
+            Dim thisMonthCounterRequiredDollarValueQuery As String = "(SELECT SUM(totaldollar) FROM CounterHistory coh WHERE coh.ID =ch.ID)"
             Dim thisMonthCounterPayedValueQuery As String = "(SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.ID =ch.ID)"
             Dim thisMonthTotalRequiredValueQuery As String = "(" & thisMonthCounterRequiredValueQuery & " - " & thisMonthCounterPayedValueQuery & ") AS [باقي]"
+            Dim thisMonthTotalRequiredDollarValueQuery As String = "(" & thisMonthCounterRequiredDollarValueQuery & " - Cast((" & thisMonthCounterPayedValueQuery & "/" & dollarpricethen & ") as Decimal(18,2))) AS [باقي]"
 
-            a.ds = New DataSet
+
             leftPayments = a.ExecuteScalar("SELECT " & thisMonthTotalRequiredValueQuery & " FROM CounterHistory ch WHERE ch.ID=" & chID)
-            dollarpricethen = a.ExecuteScalar("SELECT dollarprice FROM CounterHistory ch WHERE ch.ID=" & chID)
-            leftPaymentsdollar = leftPayments / dollarpricethen 'Convert.ToDouble(String.Format("{0:0.00}", leftPayments / dollarpricethen))
+            leftPaymentsdollar = a.ExecuteScalarDouble("SELECT " & thisMonthTotalRequiredDollarValueQuery & " FROM CounterHistory ch WHERE ch.ID=" & chID)
             maxPay = leftPayments
             If leftPayments = 0 Then
                 MsgBox("تم تسديد كامل حساب الشهر الحالي لهذا الاشتراك.")

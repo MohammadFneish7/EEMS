@@ -133,7 +133,7 @@ Partial Public Class XtraClientAccountReport
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.Text18.BorderWidth = 1.0!
         Me.Text18.CanGrow = False
-        Me.Text18.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text18.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text18.ForeColor = System.Drawing.Color.Black
         Me.Text18.LocationFloat = New DevExpress.Utils.PointFloat(650.0!, 16.66667!)
         Me.Text18.Name = "Text18"
@@ -160,7 +160,7 @@ Partial Public Class XtraClientAccountReport
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.Text20.BorderWidth = 1.0!
         Me.Text20.CanGrow = False
-        Me.Text20.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text20.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text20.ForeColor = System.Drawing.Color.Black
         Me.Text20.LocationFloat = New DevExpress.Utils.PointFloat(650.0!, 16.66667!)
         Me.Text20.Name = "Text20"
@@ -202,7 +202,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text1.BorderWidth = 1.0!
         Me.Text1.CanGrow = False
-        Me.Text1.Font = New System.Drawing.Font("Arial", 14.0!, System.Drawing.FontStyle.Bold)
+        Me.Text1.Font = New DevExpress.Drawing.DXFont("Arial", 14.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text1.ForeColor = System.Drawing.Color.Black
         Me.Text1.LocationFloat = New DevExpress.Utils.PointFloat(325.0!, 25.0!)
         Me.Text1.Name = "Text1"
@@ -217,7 +217,7 @@ Partial Public Class XtraClientAccountReport
         Me.PrintDate1.BorderColor = System.Drawing.Color.Black
         Me.PrintDate1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.PrintDate1.BorderWidth = 1.0!
-        Me.PrintDate1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.PrintDate1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.PrintDate1.ForeColor = System.Drawing.Color.Black
         Me.PrintDate1.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 33.33333!)
         Me.PrintDate1.Name = "PrintDate1"
@@ -234,7 +234,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text2.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text2.BorderWidth = 1.0!
         Me.Text2.CanGrow = False
-        Me.Text2.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text2.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text2.ForeColor = System.Drawing.Color.Black
         Me.Text2.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 125.0!)
         Me.Text2.Name = "Text2"
@@ -254,7 +254,7 @@ Partial Public Class XtraClientAccountReport
         Me.clientid1.BorderWidth = 1.0!
         Me.clientid1.CanGrow = False
         Me.clientid1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[clientid]")})
-        Me.clientid1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.clientid1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.clientid1.ForeColor = System.Drawing.Color.Black
         Me.clientid1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 125.0!)
         Me.clientid1.Name = "clientid1"
@@ -270,7 +270,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text3.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text3.BorderWidth = 1.0!
         Me.Text3.CanGrow = False
-        Me.Text3.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text3.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text3.ForeColor = System.Drawing.Color.Black
         Me.Text3.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 175.0!)
         Me.Text3.Name = "Text3"
@@ -290,7 +290,7 @@ Partial Public Class XtraClientAccountReport
         Me.nickname1.BorderWidth = 1.0!
         Me.nickname1.CanGrow = False
         Me.nickname1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[nickname]")})
-        Me.nickname1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.nickname1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.nickname1.ForeColor = System.Drawing.Color.Black
         Me.nickname1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 175.0!)
         Me.nickname1.Name = "nickname1"
@@ -306,7 +306,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text4.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text4.BorderWidth = 1.0!
         Me.Text4.CanGrow = False
-        Me.Text4.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text4.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text4.ForeColor = System.Drawing.Color.Black
         Me.Text4.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 200.0!)
         Me.Text4.Name = "Text4"
@@ -326,7 +326,7 @@ Partial Public Class XtraClientAccountReport
         Me.mothername1.BorderWidth = 1.0!
         Me.mothername1.CanGrow = False
         Me.mothername1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[mothername]")})
-        Me.mothername1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.mothername1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.mothername1.ForeColor = System.Drawing.Color.Black
         Me.mothername1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 200.0!)
         Me.mothername1.Name = "mothername1"
@@ -342,7 +342,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text5.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text5.BorderWidth = 1.0!
         Me.Text5.CanGrow = False
-        Me.Text5.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text5.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text5.ForeColor = System.Drawing.Color.Black
         Me.Text5.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 125.0!)
         Me.Text5.Name = "Text5"
@@ -362,7 +362,7 @@ Partial Public Class XtraClientAccountReport
         Me.address1.BorderWidth = 1.0!
         Me.address1.CanGrow = False
         Me.address1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[address]")})
-        Me.address1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.address1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.address1.ForeColor = System.Drawing.Color.Black
         Me.address1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 125.0!)
         Me.address1.Name = "address1"
@@ -378,7 +378,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text6.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text6.BorderWidth = 1.0!
         Me.Text6.CanGrow = False
-        Me.Text6.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text6.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text6.ForeColor = System.Drawing.Color.Black
         Me.Text6.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 150.0!)
         Me.Text6.Name = "Text6"
@@ -398,7 +398,7 @@ Partial Public Class XtraClientAccountReport
         Me.phone1.BorderWidth = 1.0!
         Me.phone1.CanGrow = False
         Me.phone1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[phone]")})
-        Me.phone1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.phone1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.phone1.ForeColor = System.Drawing.Color.Black
         Me.phone1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 150.0!)
         Me.phone1.Name = "phone1"
@@ -414,7 +414,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text7.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text7.BorderWidth = 1.0!
         Me.Text7.CanGrow = False
-        Me.Text7.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text7.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text7.ForeColor = System.Drawing.Color.Black
         Me.Text7.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 175.0!)
         Me.Text7.Name = "Text7"
@@ -434,7 +434,7 @@ Partial Public Class XtraClientAccountReport
         Me.mobile1.BorderWidth = 1.0!
         Me.mobile1.CanGrow = False
         Me.mobile1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[mobile]")})
-        Me.mobile1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.mobile1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.mobile1.ForeColor = System.Drawing.Color.Black
         Me.mobile1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 175.0!)
         Me.mobile1.Name = "mobile1"
@@ -452,7 +452,7 @@ Partial Public Class XtraClientAccountReport
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.Text8.BorderWidth = 1.0!
         Me.Text8.CanGrow = False
-        Me.Text8.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text8.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text8.ForeColor = System.Drawing.Color.Black
         Me.Text8.LocationFloat = New DevExpress.Utils.PointFloat(652.7778!, 91.66666!)
         Me.Text8.Name = "Text8"
@@ -470,7 +470,7 @@ Partial Public Class XtraClientAccountReport
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.Text9.BorderWidth = 1.0!
         Me.Text9.CanGrow = False
-        Me.Text9.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text9.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text9.ForeColor = System.Drawing.Color.Black
         Me.Text9.LocationFloat = New DevExpress.Utils.PointFloat(650.0!, 233.3333!)
         Me.Text9.Name = "Text9"
@@ -486,7 +486,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text10.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text10.BorderWidth = 1.0!
         Me.Text10.CanGrow = False
-        Me.Text10.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text10.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text10.ForeColor = System.Drawing.Color.Black
         Me.Text10.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 150.0!)
         Me.Text10.Name = "Text10"
@@ -506,7 +506,7 @@ Partial Public Class XtraClientAccountReport
         Me.cname1.BorderWidth = 1.0!
         Me.cname1.CanGrow = False
         Me.cname1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[clientdt].[cname]")})
-        Me.cname1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.cname1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.cname1.ForeColor = System.Drawing.Color.Black
         Me.cname1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 150.0!)
         Me.cname1.Name = "cname1"
@@ -522,7 +522,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text11.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text11.BorderWidth = 1.0!
         Me.Text11.CanGrow = False
-        Me.Text11.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text11.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text11.ForeColor = System.Drawing.Color.Black
         Me.Text11.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 266.6667!)
         Me.Text11.Name = "Text11"
@@ -542,7 +542,7 @@ Partial Public Class XtraClientAccountReport
         Me.rID1.BorderWidth = 1.0!
         Me.rID1.CanGrow = False
         Me.rID1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[rID]")})
-        Me.rID1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.rID1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.rID1.ForeColor = System.Drawing.Color.Black
         Me.rID1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 266.6667!)
         Me.rID1.Name = "rID1"
@@ -558,7 +558,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text12.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text12.BorderWidth = 1.0!
         Me.Text12.CanGrow = False
-        Me.Text12.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text12.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text12.ForeColor = System.Drawing.Color.Black
         Me.Text12.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 291.6667!)
         Me.Text12.Name = "Text12"
@@ -578,7 +578,7 @@ Partial Public Class XtraClientAccountReport
         Me.ractive1.BorderWidth = 1.0!
         Me.ractive1.CanGrow = False
         Me.ractive1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[ractive]")})
-        Me.ractive1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.ractive1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.ractive1.ForeColor = System.Drawing.Color.Black
         Me.ractive1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 291.6667!)
         Me.ractive1.Name = "ractive1"
@@ -594,7 +594,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text14.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text14.BorderWidth = 1.0!
         Me.Text14.CanGrow = False
-        Me.Text14.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text14.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text14.ForeColor = System.Drawing.Color.Black
         Me.Text14.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 341.6667!)
         Me.Text14.Name = "Text14"
@@ -614,7 +614,7 @@ Partial Public Class XtraClientAccountReport
         Me.enddate1.BorderWidth = 1.0!
         Me.enddate1.CanGrow = False
         Me.enddate1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[enddate]")})
-        Me.enddate1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.enddate1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.enddate1.ForeColor = System.Drawing.Color.Black
         Me.enddate1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 341.6667!)
         Me.enddate1.Name = "enddate1"
@@ -630,7 +630,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text15.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text15.BorderWidth = 1.0!
         Me.Text15.CanGrow = False
-        Me.Text15.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text15.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text15.ForeColor = System.Drawing.Color.Black
         Me.Text15.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 266.6667!)
         Me.Text15.Name = "Text15"
@@ -650,7 +650,7 @@ Partial Public Class XtraClientAccountReport
         Me.ampere1.BorderWidth = 1.0!
         Me.ampere1.CanGrow = False
         Me.ampere1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[ampere]")})
-        Me.ampere1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.ampere1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.ampere1.ForeColor = System.Drawing.Color.Black
         Me.ampere1.LocationFloat = New DevExpress.Utils.PointFloat(258.3333!, 266.6667!)
         Me.ampere1.Name = "ampere1"
@@ -666,7 +666,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text16.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text16.BorderWidth = 1.0!
         Me.Text16.CanGrow = False
-        Me.Text16.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text16.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text16.ForeColor = System.Drawing.Color.Black
         Me.Text16.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 291.6667!)
         Me.Text16.Name = "Text16"
@@ -686,7 +686,7 @@ Partial Public Class XtraClientAccountReport
         Me.code1.BorderWidth = 1.0!
         Me.code1.CanGrow = False
         Me.code1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[code]")})
-        Me.code1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.code1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.code1.ForeColor = System.Drawing.Color.Black
         Me.code1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 291.6667!)
         Me.code1.Name = "code1"
@@ -702,7 +702,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text17.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text17.BorderWidth = 1.0!
         Me.Text17.CanGrow = False
-        Me.Text17.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text17.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text17.ForeColor = System.Drawing.Color.Black
         Me.Text17.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 341.6667!)
         Me.Text17.Name = "Text17"
@@ -722,7 +722,7 @@ Partial Public Class XtraClientAccountReport
         Me.eccode1.BorderWidth = 1.0!
         Me.eccode1.CanGrow = False
         Me.eccode1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[eccode]")})
-        Me.eccode1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.eccode1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.eccode1.ForeColor = System.Drawing.Color.Black
         Me.eccode1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 341.6667!)
         Me.eccode1.Name = "eccode1"
@@ -738,7 +738,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text19.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text19.BorderWidth = 1.0!
         Me.Text19.CanGrow = False
-        Me.Text19.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text19.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text19.ForeColor = System.Drawing.Color.Black
         Me.Text19.LocationFloat = New DevExpress.Utils.PointFloat(316.6667!, 316.6667!)
         Me.Text19.Name = "Text19"
@@ -758,7 +758,7 @@ Partial Public Class XtraClientAccountReport
         Me.location1.BorderWidth = 1.0!
         Me.location1.CanGrow = False
         Me.location1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[location]")})
-        Me.location1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.location1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.location1.ForeColor = System.Drawing.Color.Black
         Me.location1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 316.6667!)
         Me.location1.Name = "location1"
@@ -774,7 +774,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text13.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text13.BorderWidth = 1.0!
         Me.Text13.CanGrow = False
-        Me.Text13.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text13.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text13.ForeColor = System.Drawing.Color.Black
         Me.Text13.LocationFloat = New DevExpress.Utils.PointFloat(683.3333!, 316.6667!)
         Me.Text13.Name = "Text13"
@@ -794,7 +794,7 @@ Partial Public Class XtraClientAccountReport
         Me.registrationdate1.BorderWidth = 1.0!
         Me.registrationdate1.CanGrow = False
         Me.registrationdate1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[registrationdate]")})
-        Me.registrationdate1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.registrationdate1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.registrationdate1.ForeColor = System.Drawing.Color.Black
         Me.registrationdate1.LocationFloat = New DevExpress.Utils.PointFloat(433.3333!, 316.6667!)
         Me.registrationdate1.Name = "registrationdate1"
@@ -810,7 +810,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text21.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text21.BorderWidth = 1.0!
         Me.Text21.CanGrow = False
-        Me.Text21.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text21.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text21.ForeColor = System.Drawing.Color.Black
         Me.Text21.LocationFloat = New DevExpress.Utils.PointFloat(150.0!, 266.6667!)
         Me.Text21.Name = "Text21"
@@ -830,7 +830,7 @@ Partial Public Class XtraClientAccountReport
         Me.insurance1.BorderWidth = 1.0!
         Me.insurance1.CanGrow = False
         Me.insurance1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[registrationdt].[insurance]")})
-        Me.insurance1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.insurance1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.insurance1.ForeColor = System.Drawing.Color.Black
         Me.insurance1.LocationFloat = New DevExpress.Utils.PointFloat(50.0!, 266.6667!)
         Me.insurance1.Name = "insurance1"
@@ -846,7 +846,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text22.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text22.BorderWidth = 1.0!
         Me.Text22.CanGrow = False
-        Me.Text22.Font = New System.Drawing.Font("Arial", 9.0!)
+        Me.Text22.Font = New DevExpress.Drawing.DXFont("Arial", 9.0!)
         Me.Text22.ForeColor = System.Drawing.Color.Black
         Me.Text22.LocationFloat = New DevExpress.Utils.PointFloat(566.6667!, 33.33333!)
         Me.Text22.Name = "Text22"
@@ -862,7 +862,7 @@ Partial Public Class XtraClientAccountReport
         Me.Picture3.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Picture3.BorderWidth = 1.0!
         Me.Picture3.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[OrgInfodt].[imageurl]")})
-        Me.Picture3.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Picture3.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Picture3.ForeColor = System.Drawing.Color.Black
         Me.Picture3.ImageUrl = "[OrgInfodt].[imageurl]"
         Me.Picture3.LocationFloat = New DevExpress.Utils.PointFloat(725.0!, 16.66667!)
@@ -878,7 +878,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text23.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text23.BorderWidth = 1.0!
         Me.Text23.CanGrow = False
-        Me.Text23.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.Text23.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.Text23.ForeColor = System.Drawing.Color.Black
         Me.Text23.LocationFloat = New DevExpress.Utils.PointFloat(108.3333!, 33.33333!)
         Me.Text23.Name = "Text23"
@@ -895,7 +895,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line1.BorderColor = System.Drawing.Color.Silver
         Me.Line1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line1.BorderWidth = 1.0!
-        Me.Line1.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line1.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line1.ForeColor = System.Drawing.Color.Silver
         Me.Line1.LocationFloat = New DevExpress.Utils.PointFloat(17.625!, 143.75!)
         Me.Line1.Name = "Line1"
@@ -909,7 +909,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line2.BorderColor = System.Drawing.Color.Silver
         Me.Line2.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line2.BorderWidth = 1.0!
-        Me.Line2.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line2.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line2.ForeColor = System.Drawing.Color.Silver
         Me.Line2.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 166.6667!)
         Me.Line2.Name = "Line2"
@@ -923,7 +923,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line3.BorderColor = System.Drawing.Color.Silver
         Me.Line3.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line3.BorderWidth = 1.0!
-        Me.Line3.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line3.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line3.ForeColor = System.Drawing.Color.Silver
         Me.Line3.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 191.6667!)
         Me.Line3.Name = "Line3"
@@ -937,7 +937,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line4.BorderColor = System.Drawing.Color.Silver
         Me.Line4.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line4.BorderWidth = 1.0!
-        Me.Line4.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line4.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line4.ForeColor = System.Drawing.Color.Silver
         Me.Line4.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 216.6667!)
         Me.Line4.Name = "Line4"
@@ -951,7 +951,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line5.BorderColor = System.Drawing.Color.Silver
         Me.Line5.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line5.BorderWidth = 1.0!
-        Me.Line5.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line5.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line5.ForeColor = System.Drawing.Color.Silver
         Me.Line5.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 283.3333!)
         Me.Line5.Name = "Line5"
@@ -965,7 +965,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line6.BorderColor = System.Drawing.Color.Silver
         Me.Line6.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line6.BorderWidth = 1.0!
-        Me.Line6.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line6.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line6.ForeColor = System.Drawing.Color.Silver
         Me.Line6.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 308.3333!)
         Me.Line6.Name = "Line6"
@@ -979,7 +979,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line7.BorderColor = System.Drawing.Color.Silver
         Me.Line7.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line7.BorderWidth = 1.0!
-        Me.Line7.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line7.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line7.ForeColor = System.Drawing.Color.Silver
         Me.Line7.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 333.3333!)
         Me.Line7.Name = "Line7"
@@ -993,7 +993,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line8.BorderColor = System.Drawing.Color.Silver
         Me.Line8.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line8.BorderWidth = 1.0!
-        Me.Line8.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line8.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line8.ForeColor = System.Drawing.Color.Silver
         Me.Line8.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 358.3333!)
         Me.Line8.Name = "Line8"
@@ -1007,7 +1007,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line9.BorderColor = System.Drawing.Color.Silver
         Me.Line9.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line9.BorderWidth = 1.0!
-        Me.Line9.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line9.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line9.ForeColor = System.Drawing.Color.Silver
         Me.Line9.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 261.1111!)
         Me.Line9.Name = "Line9"
@@ -1021,7 +1021,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line10.BorderColor = System.Drawing.Color.Silver
         Me.Line10.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line10.BorderWidth = 1.0!
-        Me.Line10.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line10.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line10.ForeColor = System.Drawing.Color.Silver
         Me.Line10.LocationFloat = New DevExpress.Utils.PointFloat(18.66666!, 120.8333!)
         Me.Line10.Name = "Line10"
@@ -1035,7 +1035,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line11.BorderColor = System.Drawing.Color.Silver
         Me.Line11.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line11.BorderWidth = 1.0!
-        Me.Line11.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line11.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line11.ForeColor = System.Drawing.Color.Silver
         Me.Line11.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line11.LocationFloat = New DevExpress.Utils.PointFloat(784.375!, 120.8333!)
@@ -1050,7 +1050,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line12.BorderColor = System.Drawing.Color.Silver
         Me.Line12.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line12.BorderWidth = 1.0!
-        Me.Line12.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line12.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line12.ForeColor = System.Drawing.Color.Silver
         Me.Line12.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line12.LocationFloat = New DevExpress.Utils.PointFloat(425.0!, 120.8333!)
@@ -1065,7 +1065,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line13.BorderColor = System.Drawing.Color.Silver
         Me.Line13.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line13.BorderWidth = 1.0!
-        Me.Line13.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line13.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line13.ForeColor = System.Drawing.Color.Silver
         Me.Line13.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line13.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 120.8333!)
@@ -1080,7 +1080,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line14.BorderColor = System.Drawing.Color.Silver
         Me.Line14.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line14.BorderWidth = 1.0!
-        Me.Line14.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line14.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line14.ForeColor = System.Drawing.Color.Silver
         Me.Line14.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line14.LocationFloat = New DevExpress.Utils.PointFloat(783.3333!, 261.1111!)
@@ -1095,7 +1095,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line15.BorderColor = System.Drawing.Color.Silver
         Me.Line15.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line15.BorderWidth = 1.0!
-        Me.Line15.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line15.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line15.ForeColor = System.Drawing.Color.Silver
         Me.Line15.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line15.LocationFloat = New DevExpress.Utils.PointFloat(425.0!, 261.1111!)
@@ -1110,7 +1110,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line16.BorderColor = System.Drawing.Color.Silver
         Me.Line16.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line16.BorderWidth = 1.0!
-        Me.Line16.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line16.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line16.ForeColor = System.Drawing.Color.Silver
         Me.Line16.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line16.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 261.1111!)
@@ -1125,7 +1125,7 @@ Partial Public Class XtraClientAccountReport
         Me.Line17.BorderColor = System.Drawing.Color.Silver
         Me.Line17.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line17.BorderWidth = 1.0!
-        Me.Line17.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line17.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line17.ForeColor = System.Drawing.Color.Silver
         Me.Line17.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical
         Me.Line17.LocationFloat = New DevExpress.Utils.PointFloat(230.2083!, 261.1111!)
@@ -1153,7 +1153,7 @@ Partial Public Class XtraClientAccountReport
         'XrLabel2
         '
         Me.XrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[creditdt].[CalculatedField1]")})
-        Me.XrLabel2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.XrLabel2.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
         Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(72.91673!, 16.66667!)
         Me.XrLabel2.Multiline = True
         Me.XrLabel2.Name = "XrLabel2"
@@ -1170,7 +1170,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text24.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text24.BorderWidth = 1.0!
         Me.Text24.CanGrow = False
-        Me.Text24.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text24.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text24.ForeColor = System.Drawing.Color.Black
         Me.Text24.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 16.66667!)
         Me.Text24.Name = "Text24"
@@ -1186,7 +1186,7 @@ Partial Public Class XtraClientAccountReport
         Me.Text25.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text25.BorderWidth = 1.0!
         Me.Text25.CanGrow = False
-        Me.Text25.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Text25.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text25.ForeColor = System.Drawing.Color.Black
         Me.Text25.LocationFloat = New DevExpress.Utils.PointFloat(200.0!, 16.66667!)
         Me.Text25.Name = "Text25"
@@ -1210,7 +1210,7 @@ Partial Public Class XtraClientAccountReport
         Me.PageNumber1.BorderColor = System.Drawing.Color.Black
         Me.PageNumber1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.PageNumber1.BorderWidth = 1.0!
-        Me.PageNumber1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.PageNumber1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.PageNumber1.ForeColor = System.Drawing.Color.Black
         Me.PageNumber1.LocationFloat = New DevExpress.Utils.PointFloat(350.0!, 25.0!)
         Me.PageNumber1.Name = "PageNumber1"
@@ -1267,7 +1267,7 @@ Partial Public Class XtraClientAccountReport
         Me.CrossBandControls.AddRange(New DevExpress.XtraReports.UI.XRCrossBandControl() {Me.Box1})
         Me.DataMember = "clientdt"
         Me.DataSource = Me.DataSetInvoices1
-        Me.Margins = New System.Drawing.Printing.Margins(25, 0, 25, 25)
+        Me.Margins = New DevExpress.Drawing.DXMargins(25, 0, 25, 25)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4

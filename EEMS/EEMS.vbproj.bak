@@ -11,7 +11,7 @@
     <AssemblyName>EEMS</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -28,6 +28,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,169 +72,185 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dashboard.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dashboard.v21.2.Win, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Map.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Map.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Mvvm.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Mvvm.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.BaseImpl.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.TreeMap.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.TreeMap.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v20.1.Presets, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.2.Presets, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.2.Win, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraMap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraMap.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core.Desktop, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v20.1.Reporting, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v20.1.Reporting.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Reporting, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Reporting.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeMap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeMap.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeMap.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="RandomUserAgent, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RandomUserAgent.1.1.2\lib\netstandard2.0\RandomUserAgent.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Services" />
@@ -242,6 +260,15 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.8.1\lib\net48\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.4.8.1\lib\net48\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WhatsappAgent, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WhatsappAgent.1.1.4\lib\netstandard2.0\WhatsappAgent.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -305,6 +332,12 @@
     <Compile Include="Editors\frmEditPermissions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Editors\frmExchange.Designer.vb">
+      <DependentUpon>frmExchange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\frmExchange.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmClientsCreditDetails.Designer.vb">
       <DependentUpon>frmClientsCreditDetails.vb</DependentUpon>
     </Compile>
@@ -315,12 +348,6 @@
       <DependentUpon>frmEmptyCHExport.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmEmptyCHExport.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\frmMonthlyReportViewer.Designer.vb">
-      <DependentUpon>frmMonthlyReportViewer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\frmMonthlyReportViewer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmMaintenance.Designer.vb">
@@ -401,6 +428,12 @@
     <Compile Include="Forms\frmUsersManagement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Helpers\frmChangeDollarPrice.Designer.vb">
+      <DependentUpon>frmChangeDollarPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmChangeDollarPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helpers\CustomMsgDialog.Designer.vb">
       <DependentUpon>CustomMsgDialog.vb</DependentUpon>
     </Compile>
@@ -411,6 +444,12 @@
       <DependentUpon>ErrorDialog.vb</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ErrorDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpers\frmChangeMonthlyFeePrice.Designer.vb">
+      <DependentUpon>frmChangeMonthlyFeePrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmChangeMonthlyFeePrice.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Helpers\frmCorrectRoundValue.Designer.vb">
@@ -437,6 +476,12 @@
     <Compile Include="Helpers\frmCustomPrinterHandler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Helpers\frmDateChooser.Designer.vb">
+      <DependentUpon>frmDateChooser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\frmDateChooser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Helpers\frmDateSelector.Designer.vb">
       <DependentUpon>frmDateSelector.vb</DependentUpon>
     </Compile>
@@ -461,7 +506,13 @@
     <Compile Include="Helpers\frmValidityRenual.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\ChartBuilder.vb" />
+    <Compile Include="Helpers\WhatsappMessenger.Designer.vb">
+      <DependentUpon>WhatsappMessenger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\WhatsappMessenger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shared\ChartBuilder.vb" />
     <Compile Include="Forms\frmDiscountHandler.Designer.vb">
       <DependentUpon>frmDiscountHandler.vb</DependentUpon>
     </Compile>
@@ -498,90 +549,32 @@
     <Compile Include="Helpers\frmGeneralPerposeInput.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\ValidityChecher.vb" />
-    <Compile Include="Modules\XtraGridCustomPrinter.vb" />
-    <Compile Include="Reports\ClientsCreditsReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientsCreditsReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\AmpereReport.vb">
-      <DependentUpon>AmpereReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\AmperePerEngineReport.vb">
-      <DependentUpon>AmperePerEngineReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\EngineEfficiencyReport.vb">
-      <DependentUpon>EngineEfficiencyReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\MaintainanceReport.vb">
-      <DependentUpon>MaintainanceReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\WorkingHoursReport.vb">
-      <DependentUpon>WorkingHoursReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\FuelConsumptionReport.vb">
-      <DependentUpon>FuelConsumptionReport.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\DataSetGeneralReport.Designer.vb">
+    <Compile Include="Shared\TextBoxExtensions.vb" />
+    <Compile Include="Shared\ValidityChecher.vb" />
+    <Compile Include="Shared\WAMessage.vb" />
+    <Compile Include="Shared\XtraGridCustomPrinter.vb" />
+    <Compile Include="Datasets\DataSetGeneralReport.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DataSetGeneralReport.vb">
+    <Compile Include="Datasets\DataSetGeneralReport.vb">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\GeneralMonthlyReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GeneralMonthlyReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\InvoicesWithoutCredit.vb">
-      <DependentUpon>InvoicesWithoutCredit.rpt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\emptyCouterHistory.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>emptyCouterHistory.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\DataSetInvoices.Designer.vb">
+    <Compile Include="Datasets\DataSetInvoices.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Modules\CryptoSys.vb" />
+    <Compile Include="Shared\CryptoSys.vb" />
     <Compile Include="Forms\frmChangePass.designer.vb">
       <DependentUpon>frmChangePass.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmChangePass.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\User.vb" />
-    <Compile Include="Modules\SqlDBHelper.vb" />
+    <Compile Include="Shared\User.vb" />
+    <Compile Include="Shared\SqlDBHelper.vb" />
     <Compile Include="Editors\frmClientEditor.Designer.vb">
       <DependentUpon>frmClientEditor.vb</DependentUpon>
     </Compile>
@@ -642,8 +635,8 @@
     <Compile Include="Editors\frmCollectorEditor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modules\MSAccessDBHelper.vb" />
-    <Compile Include="Modules\ExcelExporter.vb" />
+    <Compile Include="Shared\MSAccessDBHelper.vb" />
+    <Compile Include="Shared\ExcelExporter.vb" />
     <Compile Include="Forms\frmClientReport.Designer.vb">
       <DependentUpon>frmClientReport.vb</DependentUpon>
     </Compile>
@@ -786,6 +779,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -797,13 +791,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reports\ClientAccountReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ClientAccountReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\DataSetInvoices.vb">
+    <Compile Include="Datasets\DataSetInvoices.vb">
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </Compile>
     <Compile Include="Helpers\frmCurrentPayments.Designer.vb">
@@ -812,30 +800,120 @@
     <Compile Include="Helpers\frmCurrentPayments.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmReportViewer.Designer.vb">
-      <DependentUpon>frmReportViewer.vb</DependentUpon>
+    <Compile Include="Shared\SharedModule.vb" />
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmReportViewer.vb">
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmperePerEngineReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_AmperePerEngineReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmperePerEngineReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmpereReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_AmpereReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmpereReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_EngineEfficiencyReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExependitureIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_FuelConsumptionReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_FuelConsumptionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_FuelConsumptionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ItemPuchasesReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ItemPuchasesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ItemPuchasesReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_MaintainanceReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_MaintainanceReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_MaintainanceReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_WorkingHoursReport.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_WorkingHoursReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_WorkingHoursReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport.Designer.vb">
+      <DependentUpon>XtraClientAccountReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_CreditSubReport.Designer.vb">
+      <DependentUpon>XtraClientAccountReport_CreditSubReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_CreditSubReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_PaymentSubReport.Designer.vb">
+      <DependentUpon>XtraClientAccountReport_PaymentSubReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientAccountReport_PaymentSubReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientsCreditsReport.Designer.vb">
+      <DependentUpon>XtraClientsCreditsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraClientsCreditsReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraEmptyCouterHistoryReport.Designer.vb">
+      <DependentUpon>XtraEmptyCouterHistoryReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraEmptyCouterHistoryReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraGeneralReport.Designer.vb">
+      <DependentUpon>XtraGeneralReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraGeneralReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesReport.Designer.vb">
+      <DependentUpon>XtraInvoicesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesWithoutCreditReport.Designer.vb">
+      <DependentUpon>XtraInvoicesWithoutCreditReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraInvoicesWithoutCreditReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\XtraReportViewer.Designer.vb">
+      <DependentUpon>XtraReportViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\XtraReportViewer.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reports\GeneralReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GeneralReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\Invoices.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Invoices.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Modules\SharedModule.vb" />
-    <Compile Include="Reports\ItemPuchasesReport.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ItemPuchasesReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -874,14 +952,15 @@
     <EmbeddedResource Include="Editors\frmEditPermissions.resx">
       <DependentUpon>frmEditPermissions.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Editors\frmExchange.resx">
+      <DependentUpon>frmExchange.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmClientsCreditDetails.resx">
       <DependentUpon>frmClientsCreditDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEmptyCHExport.resx">
       <DependentUpon>frmEmptyCHExport.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMonthlyReportViewer.resx">
-      <DependentUpon>frmMonthlyReportViewer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMaintenance.resx">
       <DependentUpon>frmMaintenance.vb</DependentUpon>
@@ -934,11 +1013,17 @@
     <EmbeddedResource Include="Forms\frmUsersManagement.resx">
       <DependentUpon>frmUsersManagement.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmChangeDollarPrice.resx">
+      <DependentUpon>frmChangeDollarPrice.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Helpers\CustomMsgDialog.resx">
       <DependentUpon>CustomMsgDialog.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\ErrorDialog.resx">
       <DependentUpon>ErrorDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmChangeMonthlyFeePrice.resx">
+      <DependentUpon>frmChangeMonthlyFeePrice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmCorrectRoundValue.resx">
       <DependentUpon>frmCorrectRoundValue.vb</DependentUpon>
@@ -951,6 +1036,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmCustomPrinterHandler.resx">
       <DependentUpon>frmCustomPrinterHandler.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\frmDateChooser.resx">
+      <DependentUpon>frmDateChooser.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmDateSelector.resx">
       <DependentUpon>frmDateSelector.vb</DependentUpon>
@@ -1074,6 +1162,9 @@
     <EmbeddedResource Include="Helpers\frmValidityRenual.resx">
       <DependentUpon>frmValidityRenual.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Helpers\WhatsappMessenger.resx">
+      <DependentUpon>WhatsappMessenger.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -1081,74 +1172,71 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ClientAccountReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ClientAccountReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ClientsCreditsReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ClientsCreditsReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AmpereReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AmpereReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AmperePerEngineReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>AmperePerEngineReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\EngineEfficiencyReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>EngineEfficiencyReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MaintainanceReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>MaintainanceReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\WorkingHoursReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>WorkingHoursReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\FuelConsumptionReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>FuelConsumptionReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\GeneralMonthlyReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>GeneralMonthlyReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\InvoicesWithoutCredit.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>InvoicesWithoutCredit.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\emptyCouterHistory.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>emptyCouterHistory.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Helpers\frmCurrentPayments.resx">
       <DependentUpon>frmCurrentPayments.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmReportViewer.resx">
-      <DependentUpon>frmReportViewer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\GeneralReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>GeneralReport.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Invoices.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Invoices.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmChangePass.resx">
       <DependentUpon>frmChangePass.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ItemPuchasesReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ItemPuchasesReport.vb</LastGenOutput>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmperePerEngineReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_AmperePerEngineReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_AmpereReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_AmpereReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_EngineEfficiencyReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExependitureIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureOut.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_FuelConsumptionReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_FuelConsumptionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ItemPuchasesReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ItemPuchasesReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_MaintainanceReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_MaintainanceReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_WorkingHoursReport.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_WorkingHoursReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientAccountReport.resx">
+      <DependentUpon>XtraClientAccountReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientAccountReport_CreditSubReport.resx">
+      <DependentUpon>XtraClientAccountReport_CreditSubReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientAccountReport_PaymentSubReport.resx">
+      <DependentUpon>XtraClientAccountReport_PaymentSubReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraClientsCreditsReport.resx">
+      <DependentUpon>XtraClientsCreditsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraEmptyCouterHistoryReport.resx">
+      <DependentUpon>XtraEmptyCouterHistoryReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraGeneralReport.resx">
+      <DependentUpon>XtraGeneralReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraInvoicesReport.resx">
+      <DependentUpon>XtraInvoicesReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraInvoicesWithoutCreditReport.resx">
+      <DependentUpon>XtraInvoicesWithoutCreditReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\XtraReportViewer.resx">
+      <DependentUpon>XtraReportViewer.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Modules\ClassDiagram1.cd" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -1164,28 +1252,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Reports\DataSetGeneralReport.xsc">
+    <None Include="Datasets\DataSetGeneralReport.xsc">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetGeneralReport.xsd">
+    <None Include="Datasets\DataSetGeneralReport.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetGeneralReport.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Reports\DataSetGeneralReport.xss">
+    <None Include="Datasets\DataSetGeneralReport.xss">
       <DependentUpon>DataSetGeneralReport.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetInvoices.xsc">
+    <None Include="Datasets\DataSetInvoices.xsc">
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSetInvoices.xsd">
+    <None Include="Datasets\DataSetInvoices.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetInvoices.Designer.vb</LastGenOutput>
     </None>
-    <None Include="Reports\DataSetInvoices.xss">
+    <None Include="Datasets\DataSetInvoices.xss">
       <DependentUpon>DataSetInvoices.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Resources\Business Man Blue.png" />
   </ItemGroup>
   <ItemGroup>
@@ -1426,6 +1515,418 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bokehlicia-Captiva-Launcher-bfb.ico" />
+    <None Include="whatsapp.png" />
+    <None Include="Resources\exchange.png" />
+    <None Include="constring">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Queries\Database Build Query.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\Set Dollar Price.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Requirments\DevExpressLocalizedResources_2021.2_ar.exe" />
+    <Content Include="ar\DevExpress.Blazor.Reporting.v21.2.Viewer.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Blazor.RichEdit.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Blazor.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Charts.Designer.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Dashboard.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Dashboard.v21.2.Web.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Dashboard.v21.2.Win.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Data.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.DataAccess.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.DataAccess.v21.2.UI.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Diagram.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Dialogs.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.EntityFrameworkCore.Security.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.AuditTrail.Xpo.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Blazor.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Chart.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.CloneObject.Xpo.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Dashboards.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Dashboards.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Dashboards.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Blazor.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Kpi.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Maps.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Notifications.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Notifications.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Objects.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Office.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Office.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.PivotChart.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.PivotChart.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.PivotChart.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.PivotGrid.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.PivotGrid.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Reports.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Reports.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Reports.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Blazor.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Scheduler.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Scheduler.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Scheduler.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ScriptRecorder.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ScriptRecorder.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Security.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Security.Xpo.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.StateMachine.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Validation.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Validation.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.ViewVariantsModule.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Workflow.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ExpressApp.Workflow.Win.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Map.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Mvvm.v21.2.DataModel.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Office.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Pdf.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Persistent.Base.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.PivotGrid.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Printing.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.ReportServer.v21.2.Localization.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.RichEdit.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Snap.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Snap.v21.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Snap.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Sparkline.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Spreadsheet.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Utils.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Utils.v21.2.UI.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxDiagram.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxGantt.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxHtmlEditor.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxRichEdit.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxScheduler.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxSpellChecker.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxSpreadsheet.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.ASPxTreeList.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.Resources.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Web.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Charts.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.CodeView.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Controls.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Core.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Docking.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.DocumentViewer.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Gantt.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Gauges.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Grid.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.LayoutControl.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.NavBar.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.PdfViewer.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Printing.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.PropertyGrid.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.ReportDesigner.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Ribbon.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.RichEdit.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Scheduler.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Scheduling.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.SpellChecker.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpf.Spreadsheet.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.Xpo.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraBars.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraCharts.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraCharts.v21.2.Wizard.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraEditors.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraGantt.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraGauges.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraGauges.v21.2.Presets.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraGrid.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraLayout.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraNavBar.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraPdfViewer.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraPivotGrid.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraPrinting.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraReports.v21.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraReports.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraReports.v21.2.Web.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraRichEdit.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraScheduler.v21.2.Core.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraScheduler.v21.2.Extensions.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraScheduler.v21.2.Reporting.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraScheduler.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraSpellChecker.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraSpreadsheet.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraTreeList.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraVerticalGrid.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ar\DevExpress.XtraWizard.v21.2.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Requirments\Read me.txt" />
     <None Include="Logo\logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1520,6 +2021,15 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\WhatsappAgent.1.1.4\build\WhatsappAgent.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\WhatsappAgent.1.1.4\build\WhatsappAgent.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.8.1\build\Selenium.WebDriver.targets')" />
+  <Import Project="..\packages\WhatsappAgent.1.1.4\build\WhatsappAgent.targets" Condition="Exists('..\packages\WhatsappAgent.1.1.4\build\WhatsappAgent.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
