@@ -58,9 +58,9 @@ Public Class frmPaymentEditor
 
             Dim thisMonthCounterRequiredValueQuery As String = "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.ID =ch.ID)"
             Dim thisMonthCounterRequiredDollarValueQuery As String = "(SELECT SUM(totaldollar) FROM CounterHistory coh WHERE coh.ID =ch.ID)"
-            Dim thisMonthCounterPayedValueQuery As String = "(SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.ID =ch.ID)"
+            Dim thisMonthCounterPayedValueQuery As String = "(SELECT IsNull(Cast(Sum(pyy.pvalue) as Decimal(18,2)),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.ID =ch.ID)"
             Dim thisMonthTotalRequiredValueQuery As String = "(" & thisMonthCounterRequiredValueQuery & " - " & thisMonthCounterPayedValueQuery & ") AS [باقي]"
-            Dim thisMonthTotalRequiredDollarValueQuery As String = "(" & thisMonthCounterRequiredDollarValueQuery & " - Cast((" & thisMonthCounterPayedValueQuery & "/" & dollarpricethen & ") as Decimal(18,2))) AS [باقي]"
+            Dim thisMonthTotalRequiredDollarValueQuery As String = "(" & thisMonthCounterRequiredDollarValueQuery & " -(" & thisMonthCounterPayedValueQuery & "/" & dollarpricethen & ")) AS [باقي]"
 
 
             leftPayments = a.ExecuteScalar("SELECT " & thisMonthTotalRequiredValueQuery & " FROM CounterHistory ch WHERE ch.ID=" & chID)

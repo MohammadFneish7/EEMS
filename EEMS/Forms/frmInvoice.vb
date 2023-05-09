@@ -356,10 +356,10 @@ Public Class frmInvoice
                            " (SELECT ISNULL(SUM(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),  0) " &
                            " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " &
                            " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
-                           $" ) AS Decimal(18,1)) as [مكسورات], "
+                           $" ) AS Decimal(18,2)) as [مكسورات], "
 
             If creditsByCust Then
-                q2 = $"(Select CAST((SELECT ISNULL(SUM(coh.totaldollar), 0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & $"))) AS Decimal(18,1))) as [مكسورات], "
+                q2 = $"(Select CAST((SELECT ISNULL(SUM(coh.totaldollar), 0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) - (SELECT ISNULL(SUM(pay.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),  0) FROM Client cli Join Registration reg on reg.clientid=cli.id Join CounterHistory coh on coh.regid = reg.ID JOIN Payment pay on pay.counterhistoryid = coh.ID Where cli.id=c.id AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & $"))) AS Decimal(18,2))) as [مكسورات], "
             End If
 
             'q2 = $"(Select IIF(maksurat<0.1,0,maksurat) from ({q2})) as [مكسورات], "
