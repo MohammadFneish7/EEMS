@@ -83,8 +83,6 @@ Public Class frmInvoiceNote
         End Try
     End Sub
 
-
-
     Private Sub chkalltodollar_CheckedChanged(sender As Object, e As EventArgs) Handles chkalltodollar.CheckedChanged
         If chkalltodollar.Checked Then
             chkdollartotal.Checked = True
