@@ -365,8 +365,6 @@ Public Class frmInvoice
             counterserial = " ec.serial AS [سيريال العداد], "
         End If
 
-
-
         Dim q3 As String = " ch.notes AS [ملاحظات], ar.caption  + '-' + CAST(ch.cyear AS nvarchar(10))  AS [شهر], " &
                             " (b.code + ec.code) AS [رمز مفتاح], " &
                             $" {devideByDollarPricePrefix}ch.monthlyfee{devideByDollarPrice} AS [رسم اشتراك], " &

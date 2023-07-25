@@ -42,13 +42,17 @@ Public NotInheritable Class frmSplashScreen
         Dim lcs5 As String = hash.Substring(20, 5)
         Dim license As String = lcs1 + "-" + lcs2 + "-" + lcs3 + "-" + lcs4 + "-" + lcs5
         If a.verifyLicense(license) Then
-            frmLogin.Show()
-            Me.Close()
+            Try
+                frmLogin?.Show()
+                Me.Close()
+            Catch ex As Exception
+
+            End Try
         Else
             Dim frm As New frmLicenseEnter(license, serial)
 
             If frm.ShowDialog =DialogResult.OK Then
-                frmLogin.Show()
+                frmLogin?.Show()
                 Me.Close()
             Else
                 Me.Close()

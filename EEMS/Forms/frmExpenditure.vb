@@ -265,8 +265,5 @@ Public Class frmExpenditure
                 End If
             End If
         End If
-
-
-
     End Sub
 End Class
