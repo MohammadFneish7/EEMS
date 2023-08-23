@@ -258,14 +258,14 @@ Public Class frmCompanyReport
         a.GetData("SELECT r.ID as [المعرّف],r.active as مفعّل,en.ename as [الموتور],b.location as [عنوان العلبة],c.clientname as [المشترك], c.phone as [هاتف], c.mobile as [خلوي], p.title as [نوع الاشتراك], p.ampere as [أمبير]," &
                        " cl.fullname as [الجابي],b.code as [رمز العلبة],ec.code as [الرمز في العلبة],(b.code + ec.code) as [رمز مفتاح]," &
                        " IsNull(Max(ch.currentvalue),0) as [مجموع كيلوات (كيلو)]," &
-                       " IsNull(Sum(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue),0) as [اجمالي كيلوات + تدوير ل.ل]," &
+                       " IsNull(Sum(cast(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue as bigint)),0) as [اجمالي كيلوات + تدوير ل.ل]," &
                        " IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) as [اجمالي رسوم ل.ل]," &
-                       " IsNull(SUM(total + discount),0) as [اجمالي مطلوب ل.ل]," &
+                       " IsNull(SUM(Cast(total AS BIGINT) + discount),0) as [اجمالي مطلوب ل.ل]," &
                        " IsNull(SUM(discount),0) as [اجمالي حسومات ل.ل]," &
-                       " IsNull(SUM(total),0) as [صافي ل.ل]," &
-                       " (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS [اجمالي مدفوع ل.ل]," &
-                       " (IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID )) AS [باقي ل.ل]," &
-                       " IsNull(Cast(IsNull(SUM(totaldollar),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS [باقي $], " &
+                       " IsNull(SUM(Cast(total AS BIGINT)),0) as [صافي ل.ل]," &
+                       " (SELECT IsNull(Sum(Cast(pyy.pvalue AS BIGINT)),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS [اجمالي مدفوع ل.ل]," &
+                       " (IsNull(SUM(Cast(total AS BIGINT)),0) - (SELECT IsNull(Sum(Cast(pyy.pvalue AS BIGINT)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID )) AS [باقي ل.ل]," &
+                       " IsNull(Cast(IsNull(SUM(totaldollar),0) - (SELECT IsNull(Sum(Cast(pyy.pvalue AS BIGINT)/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS [باقي $], " &
                        " (SELECT COUNT(val) FROM (SELECT coh.id as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [عدد أشهر الكسر]," &
                        " (SELECT SUM(val) FROM (SELECT coh.currentvalue-coh.previousvalue as val FROM CounterHistory coh left OUTER JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID group by coh.ID,coh.total,coh.currentvalue,coh.previousvalue HAVING (IsNull(coh.total,0) - IsNull(Sum(pyy.pvalue),0))>0) as A) AS [مجموع الكيلوات لأشهر الكسر]," &
                        " r.insurance as [له تأمين ل.ل]" &
@@ -446,21 +446,23 @@ Public Class frmCompanyReport
 
     Private Sub loadEngineEfficiencyALLReport()
         a.ds = New DataSet
-        a.GetData("Select A as [اسم المولّد], KW as [مجموع كيلوات KW], KWP as [إجمالي كيلوات ل.ل], MF as [إجمالي رسوم ل.ل], DIS as [إجمالي حسومات ل.ل], RND as [إجمالي تدوير ل.ل], totalInvoice as [اجمالي قيمة الفواتير ل.ل], fcQuantity as [استهلاك وقود / ليتر],maintain as [اجمالي صيانة + غيار زيت ل.ل]  From (" &
-                    " (select e1.ename as 'A', ISNUll(SUM(fc.quantity),0) as fcQuantity, ISNUll(SUM(m.pricetotal),0) as maintain" &
-                    " FROM Engine e1" &
-                    " left outer Join FuelConsumption fc on fc.engineid = e1.id " &
-                    " left outer Join Maintenance m on  m.engineid = e1.id " &
-                    " Group By e1.ename) t1" &
-                    " Left outer Join" &
-                    " (select e2.ename as 'B', ISNUll(SUM(ch2.currentvalue - ch2.previousvalue),0) as KW, ISNUll(SUM((ch2.currentvalue - ch2.previousvalue) * kilowattprice),0) as KWP, ISNUll(SUM(ch2.monthlyfee),0) as MF, ISNUll(SUM(ch2.discount),0) as DIS, ISNUll(SUM(ch2.roundvalue),0) as RND, ISNUll(SUM(ch2.total),0) as totalInvoice" &
-                    " FROM Engine e2" &
-                    " Left Join ElectricBox eb2 On eb2.engineid = e2.id" &
-                    " 		Left join ECounter ec2 on ec2.boxid = eb2.ID" &
-                    " 				Left join Registration r2 on r2.counterid=ec2.ID" &
-                    " 					Left join CounterHistory ch2 on ch2.regid = r2.id" &
-                    " Group By e2.ename) t2" &
-                    " On t1.A = t2.B)", "dt18")
+        a.GetData("Select A as [اسم المولّد], KW as [مجموع كيلوات KW], KWP as [إجمالي كيلوات ل.ل], MF as [إجمالي رسوم ل.ل], DIS as [إجمالي حسومات ل.ل], " &
+                    "RND as [إجمالي تدوير ل.ل], totalInvoice as [اجمالي قيمة الفواتير ل.ل], fcQuantity as [استهلاك وقود / ليتر],maintain as [اجمالي صيانة + غيار زيت ل.ل]  " &
+                    "From ( " &
+                    "	(select e1.ename as 'A', ISNUll(SUM(cast(fc.quantity as bigint)),0) as fcQuantity, ISNUll(SUM(Cast(m.pricetotal as bigint)),0) as maintain " &
+                    "	FROM Engine e1 " &
+                    "	left outer Join FuelConsumption fc on fc.engineid = e1.id  " &
+                    "	left outer Join Maintenance m on  m.engineid = e1.id  " &
+                    "	Group By e1.ename) t1 " &
+                    "Left outer Join " &
+                    "	(select e2.ename as 'B', ISNUll(SUM(cast(ch2.currentvalue - ch2.previousvalue as bigint)),0) as KW, ISNUll(SUM(cast((ch2.currentvalue - ch2.previousvalue) * kilowattprice as bigint)),0) as KWP, " &
+                    "	ISNUll(SUM(cast(ch2.monthlyfee as bigint)),0) as MF, ISNUll(SUM(ch2.discount),0) as DIS, ISNUll(SUM(ch2.roundvalue),0) as RND, ISNUll(SUM(cast(ch2.total as bigint)),0) as totalInvoice " &
+                    "	FROM Engine e2 Left Join ElectricBox eb2 On eb2.engineid = e2.id " &
+                    "	Left join ECounter ec2 on ec2.boxid = eb2.ID " &
+                    "	Left join Registration r2 on r2.counterid=ec2.ID " &
+                    "	Left join CounterHistory ch2 on ch2.regid = r2.id " &
+                    "	Group By e2.ename) t2 " &
+                    "On t1.A = t2.B)", "dt18")
 
         dtEngineEfficiency.Clear()
         dtEngineEfficiency.Merge(a.ds.Tables("dt18"))
@@ -1095,20 +1097,20 @@ Public Class frmCompanyReport
 
             Dim ac As New Helper
             ac.ds = New DataSet
-            ac.GetData("select cname as [المشترك],cphone as [هاتف], cmobile as [خلوي], Count(rid) as [عدد الإشتراكات], Sum(sumKilo) as [مجموع كيلوات (كيلو)], Sum(sumKiloAndRound) as [اجمالي كيلوات + تدوير ل.ل], Sum(netFees) as [اجمالي رسوم ل.ل], Sum(netRequired) as [اجمالي مطلوب ل.ل],
+            ac.GetData("select cname as [المشترك],cphone as [هاتف], cmobile as [خلوي], Count(rid) as [عدد الإشتراكات], Sum(sumKilo) as [مجموع كيلوات (كيلو)], Sum(Cast(sumKiloAndRound AS BIGINT)) as [اجمالي كيلوات + تدوير ل.ل], Sum(netFees) as [اجمالي رسوم ل.ل], Sum(netRequired) as [اجمالي مطلوب ل.ل],
                         Sum(netDiscount) as [اجمالي حسومات ل.ل], Sum(netNet) as [صافي ل.ل], Sum(totalPaid) as  [اجمالي مدفوع ل.ل], Sum(remLastMonth) as  [باقي من الشهر الماضي ل.ل], Sum(totalRem) as  [باقي من كل الأشهر ل.ل], IIF(ABS(Sum(remLastMonthdollar))>=0.1,Sum(remLastMonthdollar),0) as  [باقي من الشهر الماضي $], IIF(ABS(Sum(totalRemdollar))>=0.1,Sum(totalRemdollar),0) as [باقي من كل الأشهر $], IsNull(Sum(cInsurance),0) as [له تأمين ل.ل]  from (
                         SELECT r.id as rid,c.id as cid, c.clientname as cname, c.phone as cphone, c.mobile as cmobile,
                             IsNull(Max(ch.currentvalue),0) as sumKilo, 
-                            IsNull(Sum(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue),0) as sumKiloAndRound,
+                            IsNull(Sum(cast(((ch.currentvalue - ch.previousvalue) * ch.kilowattprice) + ch.roundvalue as bigint)),0) as sumKiloAndRound,
                             IsNull(sum(Cast(ch.monthlyfee AS BIGINT)),0) as netFees, 
-                            IsNull(SUM(total + discount),0) as netRequired, 
+                            IsNull(SUM(Cast(total AS BIGINT) + Cast(discount AS BIGINT)),0) as netRequired, 
                             IsNull(SUM(discount),0) as netDiscount, 
-                            IsNull(SUM(total),0) as netNet,
-                            (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS totalPaid, 
-                            IsNull((SELECT IsNull(total,0) - IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY total),0) AS remLastMonth, 
-                            Cast(IsNull((SELECT IsNull(totaldollar,0) - IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY coh.totaldollar, coh.dollarprice),0) AS DECIMAL(18,2)) AS remLastMonthdollar, 
-                            IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS totalRem, 
-                            IsNull(Cast(IsNull(SUM(totaldollar),0) - (SELECT IsNull(Sum(pyy.pvalue/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS totalRemdollar, 
+                            IsNull(SUM(Cast(total AS BIGINT)),0) as netNet,
+                            (SELECT IsNull(Sum(Cast(pyy.pvalue AS BIGINT)),0) FROM CounterHistory coh,Payment pyy WHERE pyy.counterhistoryid=coh.ID and coh.regid=r.ID) AS totalPaid, 
+                            IsNull((SELECT IsNull(Cast(total AS BIGINT),0) - IsNull(Sum(Cast(pyy.pvalue AS BIGINT)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY total),0) AS remLastMonth, 
+                            Cast(IsNull((SELECT IsNull(totaldollar,0) - IsNull(Sum(Cast(pyy.pvalue AS BIGINT)/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID and coh.cmonth=" & Now.AddMonths(-1).Month & " and coh.cyear=" & Now.AddMonths(-1).Year & " GROUP BY coh.totaldollar, coh.dollarprice),0) AS DECIMAL(18,2)) AS remLastMonthdollar, 
+                            IsNull(SUM(Cast(total AS BIGINT)),0) - (SELECT IsNull(Sum(Cast(pyy.pvalue AS BIGINT)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS totalRem, 
+                            IsNull(Cast(IsNull(SUM(totaldollar),0) - (SELECT IsNull(Sum(Cast(pyy.pvalue AS BIGINT)/Cast(IIF(coh.dollarPrice>0,coh.dollarPrice, -1) as Float)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS DECIMAL(18,2)),0) AS totalRemdollar, 
                             r.insurance as cInsurance
                             from CounterHistory ch join Registration r  on ch.regid = r.id join Client c on r.clientid=c.ID
 	                        group by r.ID,c.id, r.insurance,c.clientname, c.phone, c.mobile

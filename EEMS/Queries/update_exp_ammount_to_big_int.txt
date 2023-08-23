@@ -1,0 +1,6 @@
+﻿use eems_new
+alter table Expenditure alter column Amount bigint NUll 
+GO
+
+ALTER TABLE [dbo].[Expenditure] ADD  DEFAULT ((0)) FOR [amount]
+GO

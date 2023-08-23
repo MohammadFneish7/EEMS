@@ -9,6 +9,17 @@ Public Class frmGeneralSettings
 
         ' This call is required by the designer.
         InitializeComponent()
+        If Not currentUser.hasPermision("admin") Then
+            txtname.Enabled = False
+            txtnote1.Enabled = False
+            txtnote2.Enabled = False
+            txtnote3.Enabled = False
+            NumericUpDown1.Enabled = False
+            NumericUpDown2.Enabled = False
+            ComboBox1.Enabled = False
+            ColorPickEdit1.Enabled = False
+        End If
+
         cmblang.SelectedIndex = 0
         ComboBox1.SelectedIndex = 0
         ' Add any initialization after the InitializeComponent() call.

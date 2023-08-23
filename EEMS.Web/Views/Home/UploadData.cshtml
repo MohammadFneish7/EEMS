@@ -1,0 +1,19 @@
+﻿@model FileUpload
+@{
+    ViewData["Title"] = "UploadData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="text-center">
+    <form asp-action="UploadData" enctype="multipart/form-data">
+        <div class="mb-3">
+            <input class="form-control" type="file" asp-for="File">
+        </div>
+        <input type="submit" value="تحميل الملف" class="btn btn-primary" />
+        <div style ="margin-top: 20px;" class="text-danger">@ViewData["error"]</div>
+    </form>
+
+    <div class="text-primary" style="margin-top: 20px;">
+        @ViewData["data"]
+    </div>
+</div>
+

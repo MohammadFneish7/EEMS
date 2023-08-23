@@ -83,11 +83,11 @@ Public Class frmChooser
             ElseIf options = CLIENT_CHOOSER Then
                 bs.Filter = "[الاسم الثلاثي] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = BOX_CHOOSER Then
-                bs.Filter = "الرمز LIKE '%" & TextBox1.Text & "%'"
+                bs.Filter = "العنوان LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = COUNTER_ACTIVE_CHOOSER Then
-                bs.Filter = "[رمز العلبة] LIKE '%" & TextBox1.Text & "%'"
+                bs.Filter = "[رقم العداد] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = COUNTER_NOT_ACTIVE_CHOOSER Then
-                bs.Filter = "[رمز العلبة] LIKE '%" & TextBox1.Text & "%'"
+                bs.Filter = "[رقم العداد] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = PACKAGE_CHOOSER Then
                 bs.Filter = "امبير LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = REGISTRATION_CHOOSER Then

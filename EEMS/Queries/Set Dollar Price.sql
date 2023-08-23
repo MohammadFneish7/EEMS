@@ -7415,8 +7415,12 @@ FROM (VALUES
 (Convert(DATETIME,'2023-02-01 17:43:45',120),62500),
 (Convert(DATETIME,'2023-02-01 17:48:42',120),63300),
 (Convert(DATETIME,'2023-02-01 18:51:26',120),63000),
-(Convert(DATETIME,'2023-02-01 20:53:22',120),64000),
-(Convert(DATETIME,'2023-02-01 21:16:54',120),64500)) AS t(col1, col2)
+(Convert(DATETIME,'2023-03-01 20:53:22',120),74000),
+(Convert(DATETIME,'2023-04-01 20:53:22',120),84000),
+(Convert(DATETIME,'2023-05-01 20:53:22',120),100000),
+(Convert(DATETIME,'2023-06-01 20:53:22',120),95000),
+(Convert(DATETIME,'2023-07-01 20:53:22',120),90000),
+(Convert(DATETIME,'2023-08-01 21:16:54',120),90000)) AS t(col1, col2)
 
 update [dbo].CounterHistory set dollarprice = te.maxi
 from [dbo].CounterHistory ch , (select DATEPART(month,t.expdate) as mon, DATEPART(year,t.expdate) as ye, max(amount) as maxi from [dbo].[tbd] t group by DATEPART(month,t.expdate), DATEPART(year,t.expdate)) as te(mon,ye,maxi)

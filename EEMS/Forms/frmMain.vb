@@ -574,10 +574,6 @@ Public Class frmMain
     End Sub
 
     Private Sub إعداداتعامةToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles إعداداتعامةToolStripMenuItem.Click
-        If Not currentUser.hasPermision("admin") Then
-            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
-            Return
-        End If
         Dim frm As New frmGeneralSettings
         frm.ShowDialog()
         Try

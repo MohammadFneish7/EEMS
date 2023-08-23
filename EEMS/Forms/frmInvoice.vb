@@ -5,6 +5,10 @@ Imports EEMS.SqlDBHelper
 Imports DevExpress.XtraEditors.Controls
 Imports DevExpress.XtraGrid.Views.Grid
 Imports System.Text.RegularExpressions
+Imports Newtonsoft.Json
+Imports System.IO
+Imports System.Text
+Imports System.IO.Compression
 
 Public Class frmInvoice
 
@@ -253,10 +257,10 @@ Public Class frmInvoice
                             " r.insurance AS [تأمين ل.ل], "
 
         Dim q2 As String = " (SELECT " &
-                            "(SELECT SUM(total) FROM CounterHistory coh WHERE coh.regid = r.ID " &
+                            "(SELECT SUM(Cast(total as bigint)) FROM CounterHistory coh WHERE coh.regid = r.ID " &
                             " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
                             " - " &
-                            " (SELECT ISNULL(SUM(pyy.pvalue),  0) " &
+                            " (SELECT ISNULL(SUM(Cast(pyy.pvalue as bigint)),  0) " &
                             " FROM CounterHistory coh JOIN Payment pyy on pyy.counterhistoryid = coh.ID WHERE coh.regid = r.ID " &
                             " AND (coh.cyear < " & y & " OR (coh.cmonth < " & m & " and coh.cyear = " & y & "))) " &
                             " ) AS [مكسورات ل.ل], "
@@ -413,6 +417,96 @@ Public Class frmInvoice
         End If
     End Sub
 
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        If Not currentUser.hasPermision("invoicesprint") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+
+        Dim msges As New List(Of APIInvoice)
+
+        If GridView1.GetSelectedRows.Count > 0 Then
+            Dim frmInvoicenote As New frmInvoiceNote
+            If frmInvoicenote.ShowDialog = System.Windows.Forms.DialogResult.OK Then
+                month = DateTimePicker1.Value.Month
+                year = DateTimePicker1.Value.Year
+                Dim ar As New Helper
+                ar.ds = New DataSet
+                ar.GetData(getInvoiceQueryForReport(True, GridView1, month, year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, True, True, frmInvoicenote.roundTotalDollar), "dt")
+                Dim crypto As New CryptoSys()
+                For Each row As DataRow In ar.ds.Tables("dt").Rows
+                    Try
+                        Dim inv As New APIInvoice()
+                        inv.PartitionKey = ""
+                        inv.RowKey = $"{Crc32.ComputeChecksum(Encoding.UTF8.GetBytes(row.Item(0)))}-{year}-{month}"
+                        inv.Data.Add("عن شهر", row.Item(16))
+                        inv.Data.Add("اسم المشترك", row.Item(6))
+                        inv.Data.Add("اشتراك امبيراج", row.Item(8))
+                        inv.Data.Add("رسم اشتراك", $"{If(frmInvoicenote.alltodollar, asdbl(row.Item(18)), asint(row.Item(18)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                        inv.Data.Add("إستهلاك كيلوات", asint(row.Item(19)))
+                        If frmInvoicenote.addkilo Then
+                            inv.Data.Add("سعر الكيلو", $"{If(frmInvoicenote.alltodollar, asdbl(row.Item(20)), asint(row.Item(20)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                        End If
+                        inv.Data.Add("رسم كيلوات", $"{If(frmInvoicenote.alltodollar, asdbl(row.Item(21)), asint(row.Item(21)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                        If frmInvoicenote.adddiscount Then
+                            inv.Data.Add("قيمة الحسم", $"{If(frmInvoicenote.alltodollar, asdbl(row.Item(23)), asint(row.Item(23)))} {If(frmInvoicenote.alltodollar, "$", "ل.ل")}")
+                        End If
+                        If frmInvoicenote.dollarprice Then
+                            inv.Data.Add("سعر الصرف", $"{asint(row.Item(27))} ل.ل")
+                        End If
+                        If frmInvoicenote.alltodollar Then
+                            inv.Data.Add("المجموع", $"{asdbl(row.Item(28))} $")
+                        ElseIf frmInvoicenote.dollartotal Then
+                            inv.Data.Add("المجموع", $"{asint(row.Item(22))} ل.ل = {asdbl(row.Item(28))} $")
+                        Else
+                            inv.Data.Add("المجموع", $"{asint(row.Item(22))} ل.ل")
+                        End If
+                        If frmInvoicenote.verbose Then
+                            inv.Data.Add("مبلغ التأمين", $"{asint(row.Item(13))} ل.ل")
+                            If frmInvoicenote.alltodollar Or frmInvoicenote.creditsindollar Then
+                                inv.Data.Add("مكسورات", $"{asdbl(row.Item(14))} $")
+                            Else
+                                inv.Data.Add("مكسورات", $"{asint(row.Item(14))} ل.ل")
+                            End If
+                            If frmInvoicenote.alltodollar Or (frmInvoicenote.dollartotal And frmInvoicenote.creditsindollar) Then
+                                inv.Data.Add("إجمالي", $"{asdbl(Double.Parse(row.Item(14)) + Double.Parse(row.Item(28)))} $")
+                            ElseIf Not frmInvoicenote.creditsindollar Then
+                                inv.Data.Add("إجمالي", $"{asint(Double.Parse(row.Item(14)) + Double.Parse(row.Item(22)))} ل.ل")
+                            End If
+                        End If
+                        If Not String.IsNullOrEmpty(frmInvoicenote.TextBox1.Text) Then
+                            inv.Data.Add($"ملاحظة", frmInvoicenote.TextBox1.Text.Trim())
+                        End If
+                        msges.Add(inv)
+                    Catch ex As Exception
+
+                    End Try
+                Next
+
+                If msges.Count > 0 Then
+                    Dim str = JsonConvert.SerializeObject(msges)
+                    Dim dlg As New SaveFileDialog()
+                    dlg.FileName = $"فواتيير-{month}-{year}.inv"
+                    If dlg.ShowDialog() = DialogResult.OK Then
+                        File.WriteAllBytes(dlg.FileName, Compress(Encoding.UTF8.GetBytes(str)))
+                        MsgBox("تمّت العمليّة بنجاح")
+                    End If
+                Else
+                    MsgBox("عدد الفواتير الصالحة للتصدير يساوي صفر، تم الغاء العمليّة.")
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Function Compress(data As Byte()) As Byte()
+        Dim output As New MemoryStream()
+        Using dstream As New DeflateStream(output, CompressionLevel.Optimal)
+            dstream.Write(data, 0, data.Length)
+        End Using
+        Return output.ToArray()
+    End Function
+
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If WhatsappMessenger.isOpen Then
             MessageBox.Show("يوجد عمليّة ارسال جارية حاليّاً الرجاء الانتظار")
@@ -487,13 +581,13 @@ Public Class frmInvoice
 
                     End Try
                 Next
-            End If
 
-            If msges.Count > 0 Then
-                Dim frm As New WhatsappMessenger(msges, frmInvoicenote.hideWhatsappWindow)
-                frm.Show()
-            Else
-                MsgBox("عدد الفواتير الصالحة للإرسال يساوي صفر، تم الغاء العمليّة.")
+                If msges.Count > 0 Then
+                    Dim frm As New WhatsappMessenger(msges, frmInvoicenote.hideWhatsappWindow)
+                    frm.Show()
+                Else
+                    MsgBox("عدد الفواتير الصالحة للإرسال يساوي صفر، تم الغاء العمليّة.")
+                End If
             End If
         End If
     End Sub

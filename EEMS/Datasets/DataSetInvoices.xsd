@@ -43,7 +43,8 @@
               <xs:element name="remaining" msprop:Generator_ColumnPropNameInTable="remainingColumn" msprop:Generator_ColumnPropNameInRow="remaining" msprop:Generator_UserColumnName="remaining" msprop:Generator_ColumnVarNameInTable="columnremaining" type="xs:double" default="0" minOccurs="0" />
               <xs:element name="serial" msprop:Generator_ColumnPropNameInTable="serialColumn" msprop:Generator_ColumnPropNameInRow="serial" msprop:Generator_UserColumnName="serial" msprop:Generator_ColumnVarNameInTable="columnserial" type="xs:string" minOccurs="0" />
               <xs:element name="dollarprice" msprop:Generator_ColumnPropNameInTable="dollarpriceColumn" msprop:Generator_ColumnPropNameInRow="dollarprice" msprop:Generator_UserColumnName="dollarprice" msprop:Generator_ColumnVarNameInTable="columndollarprice" type="xs:int" default="0" minOccurs="0" />
-              <xs:element name="totaldollar" msprop:Generator_UserColumnName="totaldollar" msprop:Generator_ColumnPropNameInTable="totaldollarColumn" msprop:Generator_ColumnPropNameInRow="totaldollar" msprop:Generator_ColumnVarNameInTable="columntotaldollar" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="totaldollar" msprop:Generator_ColumnPropNameInTable="totaldollarColumn" msprop:Generator_ColumnPropNameInRow="totaldollar" msprop:Generator_UserColumnName="totaldollar" msprop:Generator_ColumnVarNameInTable="columntotaldollar" type="xs:double" default="0" minOccurs="0" />
+              <xs:element name="appurl" msprop:Generator_ColumnPropNameInRow="appurl" msprop:Generator_ColumnPropNameInTable="appurlColumn" msprop:Generator_ColumnVarNameInTable="columnappurl" msprop:Generator_UserColumnName="appurl" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

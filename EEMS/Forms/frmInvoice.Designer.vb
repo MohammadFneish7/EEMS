@@ -68,6 +68,7 @@ Partial Class frmInvoice
         Me.Label7 = New System.Windows.Forms.Label()
         Me.DataSetInvoices = New EEMS.DataSetInvoices()
         Me.InvoicesdtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvData1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -331,6 +332,7 @@ Partial Class frmInvoice
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.btnShowPrint)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -376,7 +378,7 @@ Partial Class frmInvoice
         '
         Me.Button3.Image = Global.EEMS.My.Resources.Resources.payment
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.Location = New System.Drawing.Point(528, 55)
+        Me.Button3.Location = New System.Drawing.Point(669, 55)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(138, 33)
         Me.Button3.TabIndex = 5
@@ -597,6 +599,20 @@ Partial Class frmInvoice
         Me.InvoicesdtBindingSource.DataMember = "invoicesdt"
         Me.InvoicesdtBindingSource.DataSource = Me.DataSetInvoices
         '
+        'Button4
+        '
+        Me.Button4.Image = Global.EEMS.My.Resources.Resources.Action_Navigation_History_Back
+        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button4.Location = New System.Drawing.Point(528, 55)
+        Me.Button4.Name = "Button4"
+        Me.Button4.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button4.Size = New System.Drawing.Size(135, 33)
+        Me.Button4.TabIndex = 38
+        Me.Button4.Text = "تصدير للخادم"
+        Me.Button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -674,4 +690,5 @@ Partial Class frmInvoice
     Friend WithEvents btnShowPrint As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button4 As Button
 End Class

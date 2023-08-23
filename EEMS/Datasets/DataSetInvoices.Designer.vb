@@ -621,6 +621,8 @@ Partial Public Class DataSetInvoices
         
         Private columntotaldollar As Global.System.Data.DataColumn
         
+        Private columnappurl As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -889,6 +891,14 @@ Partial Public Class DataSetInvoices
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property appurlColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnappurl
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -954,9 +964,10 @@ Partial Public Class DataSetInvoices
                     ByVal remaining As Double,  _
                     ByVal serial As String,  _
                     ByVal dollarprice As Integer,  _
-                    ByVal totaldollar As Double) As invoicesdtRow
+                    ByVal totaldollar As Double,  _
+                    ByVal appurl As String) As invoicesdtRow
             Dim rowinvoicesdtRow As invoicesdtRow = CType(Me.NewRow,invoicesdtRow)
-            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, mobile, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining, serial, dollarprice, totaldollar}
+            Dim columnValuesArray() As Object = New Object() {idone, idtwo, active, motor, boxcode, boxlocation, client, mobile, ampere, ecode, collecter, pvalue, cvalue, insure, credit, notes, cmonth, specialcode, fee, diff, kiloprice, kilono, total, discount, paid, remaining, serial, dollarprice, totaldollar, appurl}
             rowinvoicesdtRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowinvoicesdtRow)
             Return rowinvoicesdtRow
@@ -1008,6 +1019,7 @@ Partial Public Class DataSetInvoices
             Me.columnserial = MyBase.Columns("serial")
             Me.columndollarprice = MyBase.Columns("dollarprice")
             Me.columntotaldollar = MyBase.Columns("totaldollar")
+            Me.columnappurl = MyBase.Columns("appurl")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1071,6 +1083,8 @@ Partial Public Class DataSetInvoices
             MyBase.Columns.Add(Me.columndollarprice)
             Me.columntotaldollar = New Global.System.Data.DataColumn("totaldollar", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntotaldollar)
+            Me.columnappurl = New Global.System.Data.DataColumn("appurl", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnappurl)
             Me.columnidone.Caption = "engine"
             Me.columnidtwo.Caption = "cmonth"
             Me.columnactive.Caption = "notes"
@@ -4476,6 +4490,21 @@ Partial Public Class DataSetInvoices
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property appurl() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableinvoicesdt.appurlColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'appurl' in table 'invoicesdt' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableinvoicesdt.appurlColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function IsidoneNull() As Boolean
             Return Me.IsNull(Me.tableinvoicesdt.idoneColumn)
         End Function
@@ -4820,6 +4849,18 @@ Partial Public Class DataSetInvoices
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub SettotaldollarNull()
             Me(Me.tableinvoicesdt.totaldollarColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsappurlNull() As Boolean
+            Return Me.IsNull(Me.tableinvoicesdt.appurlColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetappurlNull()
+            Me(Me.tableinvoicesdt.appurlColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     

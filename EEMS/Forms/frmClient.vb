@@ -58,7 +58,7 @@ Public Class frmClient
         a.GetData("SELECT c.ID as [معرّف المشترك],c.clientname as [الاسم الثلاثي],c.clientnickname AS [اللقب],c.clientmothername AS [اسم الام],c.caddress AS [العنوان],c.phone AS [الهاتف],c.mobile AS [الخليوي] FROM Client c")
         a.GetData("select cid
                 from (
-	                SELECT r.id as rid,c.id as cid, c.clientname as cname, c.phone as cphone, c.mobile as cmobile, IsNull(SUM(total),0) - (SELECT IsNull(Sum(pyy.pvalue),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS totalRem
+	                SELECT r.id as rid,c.id as cid, c.clientname as cname, c.phone as cphone, c.mobile as cmobile, IsNull(SUM(Cast(total as bigint)),0) - (SELECT IsNull(Sum(Cast(pyy.pvalue as bigint)),0) FROM CounterHistory coh left outer JOIN Payment pyy on pyy.counterhistoryid=coh.ID WHERE coh.regid=r.ID) AS totalRem
 	                from CounterHistory ch join Registration r  on ch.regid = r.id join Client c on r.clientid=c.ID
 	                group by r.ID,c.id, r.insurance,c.clientname, c.phone, c.mobile
                 ) as innertable 

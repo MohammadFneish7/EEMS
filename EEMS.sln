@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29424.173
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EEMS", "EEMS\EEMS.vbproj", "{A40AF51F-E6FA-4FAD-A39D-326979FCE6BF}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EEMS Licenser", "EEMS Licenser\EEMS Licenser.vbproj", "{5AD28121-7B5C-40EC-8318-B13D6B46BDE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EEMS.Web", "EEMS.Web\EEMS.Web.csproj", "{E0E8475B-8150-497C-B68A-431EAFA4D2A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5AD28121-7B5C-40EC-8318-B13D6B46BDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AD28121-7B5C-40EC-8318-B13D6B46BDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AD28121-7B5C-40EC-8318-B13D6B46BDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

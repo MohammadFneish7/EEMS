@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Reflection
+Imports System.Text
 Imports DevExpress.XtraReports.UI
 Imports EEMS.SqlDBHelper
 
@@ -21,6 +22,14 @@ Public Class XtraReportViewer
 
     Sub New(ByVal dt As DataTable, note As String, verbose As Boolean, dollarprice As Boolean, dollartotal As Boolean, alltodollar As Boolean, addkilo As Boolean, adddiscount As Boolean, creditsindollar As Boolean)
         'InitializeComponent()
+        Dim appurl As String = Nothing
+
+        Try
+            Dim path As String = Directory.GetParent(Assembly.GetExecutingAssembly().FullName).FullName + "\appurl"
+            appurl = File.ReadAllText(path).Trim()
+        Catch ex As Exception
+
+        End Try
         For i As Int32 = 0 To dt.Rows.Count - 1
             ds.invoicesdt.Rows.Add()
             ds.invoicesdt.Rows(i).ItemArray = dt(i).ItemArray
@@ -30,6 +39,9 @@ Public Class XtraReportViewer
                 row.Item(15) = note
             Else
                 row.Item(15) = ""
+            End If
+            If Not String.IsNullOrEmpty(appurl) Then
+                row.Item(29) = appurl.Replace("{clientid}", Crc32.ComputeChecksum(Encoding.UTF8.GetBytes(row.Item(0))).ToString())
             End If
         Next
         Me.verbose = verbose
