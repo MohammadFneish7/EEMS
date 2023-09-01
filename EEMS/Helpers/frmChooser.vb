@@ -83,7 +83,7 @@ Public Class frmChooser
             ElseIf options = CLIENT_CHOOSER Then
                 bs.Filter = "[الاسم الثلاثي] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = BOX_CHOOSER Then
-                bs.Filter = "العنوان LIKE '%" & TextBox1.Text & "%'"
+                bs.Filter = "العنوان LIKE '%" & TextBox1.Text & "%' or الرمز LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = COUNTER_ACTIVE_CHOOSER Then
                 bs.Filter = "[رقم العداد] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = COUNTER_NOT_ACTIVE_CHOOSER Then
