@@ -68,7 +68,7 @@ Public Class frmExchange
 
     Private Function verifyPaymentEquality() As Boolean
         Try
-            If Math.Abs(Integer.Parse(txtpayment.Text) - Double.Parse(txtpaymentdollar.Text * txtdollarprice.Text)) < 1000 Then
+            If Math.Abs(Double.Parse(txtpayment.Text) - Double.Parse(txtpaymentdollar.Text * txtdollarprice.Text)) < 1000 Then
                 Return True
             End If
             Return False
@@ -105,7 +105,7 @@ Public Class frmExchange
                 sign = 1
             End If
 
-            Dim payedAmmount = Integer.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpayment.Text.Trim))
+            Dim payedAmmount = Long.Parse(txtpayment.Text.Trim) + SharedModule.getRoundThousand(Long.Parse(txtpayment.Text.Trim))
 
             a.Execute("insert into Expenditure(expdate,title,amount,party,detail) values('" & DateTime.Now.ToShortDateString & "','" & cmbtype.SelectedItem & "'," & (sign * payedAmmount) & ",'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "')")
             a.Execute("insert into Expenditure(expdate,title,amount_dollar,currency,party,detail) values('" & DateTime.Now.ToShortDateString & "','" & cmbtype.SelectedItem & "'," & (-1 * sign * txtpaymentdollar.Text.Trim) & ",1,'','على سعر صرف " & Double.Parse(txtdollarprice.Text).ToString("#,##0.##") & "')")

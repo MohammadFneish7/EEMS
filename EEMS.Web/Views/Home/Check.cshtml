@@ -8,7 +8,14 @@
     <form asp-action="Check">
         <div class="input-group mb-3" name="div-group">
             <span class="input-group-text" id="group">التبعيّة</span>
-            <input name="group" type="text" class="form-control" aria-label="group" aria-describedby="group" asp-for="Group" value="@ViewData["group"]">
+            <input name="group-hidden" type="hidden" value="@ViewData["group"]">
+            <select name="group" type="text" class="form-select" aria-label="group" aria-describedby="group" asp-for="Group">
+                <option value="kfrseer">كفرصير</option>
+                <option value="majdal">مجدل سلم</option>
+                <option value="ayta">عيتا</option>
+                <option value="kana">قانا</option>
+                <option value="mawla">اشتراك المولى</option>
+            </select>
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="clientid">رمز المستخدم</span>
@@ -19,7 +26,7 @@
             <select class="form-select" aria-label="year" aria-describedby="year" asp-for="Year">
                 @{
                     for(int i=2023; i<2040;i++){
-                           <option value="@i">@i</option>
+                                       <option value="@i">@i</option>
                     }
                 }
             </select>
@@ -30,7 +37,7 @@
                 @{
                     for (int i = 1; i <= 12; i++)
                     {
-                           <option value="@i">@i</option>
+                                       <option value="@i">@i</option>
                     }
                 }
             </select>
@@ -62,8 +69,16 @@
     }
     <script>
         $(document).ready(function () {
-            if ($('[name="group"]').val() != null && $('[name="group"]').val().trim().length > 0) {
-                $('[name="div-group"]').css('display', 'none');
+            $('[name="group"]').on('change', ()=>{
+                Cookies.set('group', $('[name="group"]').val());
+            });
+            var group = $('[name="group-hidden"]').val();
+            if (group == null || group.trim().length == 0) {
+                group = Cookies.get('group')
+            }
+
+            if (group != null && group.trim().length > 0) {
+                $('[name="group"]').val(group);
             }
         });
     </script>

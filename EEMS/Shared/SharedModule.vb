@@ -113,7 +113,7 @@ Module SharedModule
         Next
     End Sub
 
-    Public Function getRoundThousand(ByVal i As Integer) As Integer
+    Public Function getRoundThousand(ByVal i As Long) As Integer
         If roundToThousand = 2 Then
             Return 0
         End If
