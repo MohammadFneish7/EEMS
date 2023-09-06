@@ -257,7 +257,7 @@ Public Class frmClientReport
         Dim dr As DialogResult = frmDiscount.ShowDialog
         If dr = System.Windows.Forms.DialogResult.OK Then
             Try
-                Dim dis As Integer = frmDiscount.txtDiscount.Text
+                Dim dis As Long = frmDiscount.txtDiscount.Text
                 a.ExecuteNoReturn("update CounterHistory set discount=" & dis & " where ID=" & dgvCredits.SelectedRows(0).Cells(0).Value)
                 loadData()
                 dgvRegistration_SelectionChanged(sender, e)

@@ -16,7 +16,7 @@ Public Class frmDiscount
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            If Integer.Parse(txtRequired.Text) <> 0 And (Integer.Parse(txtRequired.Text) < Integer.Parse(txtDiscount.Text)) Then
+            If Long.Parse(txtRequired.Text) <> 0 And (Long.Parse(txtRequired.Text) < Long.Parse(txtDiscount.Text)) Then
                 MsgBox("قيمة الحسم يجب ان تكون اكبر او تساوي المبلغ المطلوب.")
                 Return
             End If

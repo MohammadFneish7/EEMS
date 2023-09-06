@@ -1,4 +1,5 @@
-﻿Imports EEMS.SqlDBHelper
+﻿Imports System.Text
+Imports EEMS.SqlDBHelper
 
 Public Class frmCompanyReport
 
@@ -863,6 +864,10 @@ Public Class frmCompanyReport
                 Dim ac As New Helper
                 ac.ds = New DataSet
                 ac.GetData(frmInvoice.getInvoiceQueryForReport(False, Nothing, Month, Year, True, frmInvoicenote.chkOrderByCust.Checked, frmInvoicenote.chkCreditByCust.Checked, frmInvoicenote.alltodollar, frmInvoicenote.creditsindollar, True, False, frmInvoicenote.roundTotalDollar), "dti")
+                ac.ds.Tables("dti").Columns.Add("رمز المستخدم")
+                For Each row As DataRow In ac.ds.Tables("dti").Rows
+                    row.Item(row.ItemArray.Length - 1) = Crc32.ComputeChecksum(Encoding.UTF8.GetBytes(row.Item(0))).ToString()
+                Next
                 Dim frm As New frmDataViewer("معاينة داتا الطباعة", ac.ds.Tables("dti"), False)
                 frm.ShowDialog()
             End If

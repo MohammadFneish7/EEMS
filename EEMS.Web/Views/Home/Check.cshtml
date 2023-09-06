@@ -19,14 +19,14 @@
         </div>
         <div class="input-group mb-3">
           <span class="input-group-text" id="clientid">رمز المستخدم</span>
-            <input type="text" class="form-control" aria-label="clientid" aria-describedby="clientid" asp-for="ClientId" value="@ViewData["clientid"]">
+            <input name="input-clientid" type="text" class="form-control" aria-label="clientid" aria-describedby="clientid" asp-for="ClientId" value="@ViewData["clientid"]">
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="year">السنة</span>
             <select class="form-select" aria-label="year" aria-describedby="year" asp-for="Year">
                 @{
                     for(int i=2023; i<2040;i++){
-                                       <option value="@i">@i</option>
+                                           <option value="@i">@i</option>
                     }
                 }
             </select>
@@ -37,7 +37,7 @@
                 @{
                     for (int i = 1; i <= 12; i++)
                     {
-                                       <option value="@i">@i</option>
+                                           <option value="@i">@i</option>
                     }
                 }
             </select>
@@ -72,13 +72,20 @@
             $('[name="group"]').on('change', ()=>{
                 Cookies.set('group', $('[name="group"]').val());
             });
+            $('[name="input-clientid"]').on('change', () => {
+                Cookies.set('clientid', $('[name="input-clientid"]').val());
+            });
             var group = $('[name="group-hidden"]').val();
             if (group == null || group.trim().length == 0) {
-                group = Cookies.get('group')
+                group = Cookies.get('group');
             }
 
             if (group != null && group.trim().length > 0) {
                 $('[name="group"]').val(group);
+            }
+            var clientid = Cookies.get('clientid');
+            if (clientid != null && clientid.trim().length > 0) {
+                $('[name="input-clientid"]').val(clientid);
             }
         });
     </script>

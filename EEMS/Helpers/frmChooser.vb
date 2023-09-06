@@ -95,7 +95,7 @@ Public Class frmChooser
             ElseIf options = BULK_DISCOUNT_CHOOSER Then
                 bs.Filter = "[اسم اللائحة] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = ITEM_CHOOSER Then
-                bs.Filter = "[اسم الصنف] LIKE '%" & TextBox1.Text & "%'"
+                bs.Filter = "[الصنف] LIKE '%" & TextBox1.Text & "%'"
             ElseIf options = TANK_CHOOSER Then
                 bs.Filter = "[اسم الخزّان] LIKE '%" & TextBox1.Text & "%'"
             End If

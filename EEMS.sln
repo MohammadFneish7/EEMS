@@ -7,7 +7,9 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EEMS", "EEMS\EEMS.vbproj", 
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EEMS Licenser", "EEMS Licenser\EEMS Licenser.vbproj", "{5AD28121-7B5C-40EC-8318-B13D6B46BDE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EEMS.Web", "EEMS.Web\EEMS.Web.csproj", "{E0E8475B-8150-497C-B68A-431EAFA4D2A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EEMS.Web", "EEMS.Web\EEMS.Web.csproj", "{E0E8475B-8150-497C-B68A-431EAFA4D2A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{4FFEF94F-BFE3-4762-84A2-BF03AD559069}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0E8475B-8150-497C-B68A-431EAFA4D2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFEF94F-BFE3-4762-84A2-BF03AD559069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFEF94F-BFE3-4762-84A2-BF03AD559069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFEF94F-BFE3-4762-84A2-BF03AD559069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFEF94F-BFE3-4762-84A2-BF03AD559069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

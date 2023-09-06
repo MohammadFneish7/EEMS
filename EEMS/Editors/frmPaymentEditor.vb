@@ -13,21 +13,17 @@ Public Class frmPaymentEditor
     Dim dollarpricethen As Long = 0
     Dim dollarpricenow As Long = 0
     Dim maxPay As Long = 0
-    Dim indate As Date
-    Dim collector As String = ""
     Dim clientName As String = ""
 
     Sub New(chid_ As Integer, inDate As Date, collector As String, clientName_ As String, regID_ As Integer, forMonth As String)
         InitializeComponent()
 
         Me.chID = chid_
-        Me.indate = inDate
-        Me.collector = collector
         Me.regID = regID_
         Me.clientName = clientName_
         Me.dtp.Value = inDate
 
-        txtCollector.Text = collector.Trim
+        txtCollector.Text = collector.Trim()
         txtClientName.Text = clientName_
         txtMonth.Text = forMonth
         dollarpricenow = SharedModule.dollarPrice

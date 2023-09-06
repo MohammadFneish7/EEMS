@@ -9,6 +9,7 @@ Imports Newtonsoft.Json
 Imports System.IO
 Imports System.Text
 Imports System.IO.Compression
+Imports DevExpress.XtraGrid
 
 Public Class frmInvoice
 
@@ -34,8 +35,10 @@ Public Class frmInvoice
         End Try
 
         addButtonToGridView(dgvData1, GridView1, "اضافة دفعة", My.Resources.payment, 0, 50, AddressOf btnPayPressed)
+        addButtonToGridView(dgvData1, GridView1, "اضافة حسم", My.Resources.Pencil16, 0, 50, AddressOf btnDiscountPressed)
         Dim exceptionList As New List(Of Integer)
         exceptionList.Add(0)
+        exceptionList.Add(1)
         disableGridView(GridView1, exceptionList)
 
         inTime = Date.Now
@@ -122,6 +125,26 @@ Public Class frmInvoice
         End If
     End Sub
 
+    Private Sub btnDiscountPressed(sender As Object, e As ButtonPressedEventArgs)
+        If Not currentUser.hasPermision("adddiscount") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Dim initialdiscount = GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(23))
+        Dim frmDiscount As New frmDiscount(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(25)), initialdiscount)
+        Dim dr As DialogResult = frmDiscount.ShowDialog
+        If dr = System.Windows.Forms.DialogResult.OK Then
+            Try
+                Dim dis As Long = frmDiscount.txtDiscount.Text
+                a.ExecuteNoReturn("update CounterHistory set discount=" & dis & " where ID=" & GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(3)))
+                GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(23), dis)
+                GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(25), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(25)) + initialdiscount - dis)
+            Catch ex As Exception
+                ErrorDialog.showDlg(ex)
+            End Try
+        End If
+    End Sub
+
     Private Sub btnPayPressed(sender As Object, e As ButtonPressedEventArgs)
         If Not currentUser.hasPermision("addpayment") Then
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
@@ -129,28 +152,15 @@ Public Class frmInvoice
         End If
 
         If GridView1.GetSelectedRows.Count > 0 Then
-            Dim frm As New frmPaymentEditor(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2)), inTime, GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(8)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(6)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(15)))
+            Dim frm As New frmPaymentEditor(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(3)), inTime, GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(9)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(7)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2)), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(16)))
             Dim dr As DialogResult = frm.ShowDialog
             If dr = System.Windows.Forms.DialogResult.OK Then
                 Dim amount As Integer = frm.payedAmmount
-                GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(23), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(23)) + amount)
-                GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(24), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(24)) - amount)
-                'Dim payed As Integer = frm.payedAmmount
-                'For Each row As DataRow In a.ds.Tables("dti").Rows
-                '    If row.Item(0).ToString.Equals(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1))) Then
-                '        row.Item(23) = Integer.Parse(row.Item(23)) + payed
-                '        row.Item(24) = Integer.Parse(row.Item(24)) + payed
-                '        GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(23), Integer.Parse(row.Item(23)) + payed)
-                '        GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(24), Integer.Parse(row.Item(24)) + payed)
-                '        Exit For
-                '    End If
-                'Next
-                'loadData()
+                GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(24), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(24)) + amount)
+                GridView1.SetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(25), GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(25)) - amount)
             End If
         End If
     End Sub
-
-
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If Not currentUser.hasPermision("reportview") Then
@@ -185,7 +195,7 @@ Public Class frmInvoice
             Return
         End If
 
-        Dim LastInsertDate As Integer() = getLastCounterHistoryInsertDate(Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1)).ToString))
+        Dim LastInsertDate As Integer() = getLastCounterHistoryInsertDate(Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2)).ToString))
         If DateTimePicker1.Value.Year < LastInsertDate(0) Or (DateTimePicker1.Value.Year = LastInsertDate(0) And DateTimePicker1.Value.Month < LastInsertDate(1)) Then
             MsgBox("لا يمكنك تعديل قيمة العداد لهذا الشهر لأنه تم ادخال عداد الشهر الذي يليه.")
             Return
@@ -193,17 +203,17 @@ Public Class frmInvoice
         If GridView1.Columns.IndexOf(e.Column) < 0 OrElse e.RowHandle < 0 Then
             Return
         End If
-        Dim CounterHistoryEditDialog As New frmCounterHistoryEditDialog(Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(11))), Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(12))))
+        Dim CounterHistoryEditDialog As New frmCounterHistoryEditDialog(Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(12))), Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(13))))
         Dim dr As DialogResult = CounterHistoryEditDialog.ShowDialog
         If dr = System.Windows.Forms.DialogResult.OK Then
             Try
-                Dim oldVal As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(11)))
+                Dim oldVal As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(12)))
                 Dim newVal As Integer = CounterHistoryEditDialog.txtNew.Text.Trim
-                Dim kwPice As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(19)))
-                Dim fee As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(17)))
+                Dim kwPice As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(20)))
+                Dim fee As Integer = Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(18)))
                 Dim round As Integer = getRoundThousand(((newVal - oldVal) * kwPice) + fee)
-                a.ExecuteNoReturn("update CounterHistory set currentvalue=" & newVal & ", roundvalue=" & round & " where ID=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2))))
-                a.ExecuteNoReturn("update ECounter set currentvalue=" & newVal & " where id in (select ec.id from ECounter ec join Registration r on r.counterid = ec.id where r.id=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(1))) & " and r.active=1)")
+                a.ExecuteNoReturn("update CounterHistory set currentvalue=" & newVal & ", roundvalue=" & round & " where ID=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(3))))
+                a.ExecuteNoReturn("update ECounter set currentvalue=" & newVal & " where id in (select ec.id from ECounter ec join Registration r on r.counterid = ec.id where r.id=" & Integer.Parse(GridView1.GetRowCellValue(GridView1.GetSelectedRows(0), GridView1.Columns(2))) & " and r.active=1)")
                 loadData()
             Catch ex As Exception
                 ErrorDialog.showDlg(ex)
@@ -234,7 +244,7 @@ Public Class frmInvoice
         If forReport Then
             whereInSelected = " AND r.ID in ("
             For Each row As Integer In GridView1.GetSelectedRows
-                whereInSelected = whereInSelected & Integer.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(1)).ToString) & ","
+                whereInSelected = whereInSelected & Integer.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(2)).ToString) & ","
             Next
             If whereInSelected.Equals(" AND r.ID in (") Then
                 whereInSelected = String.Empty
@@ -311,7 +321,7 @@ Public Class frmInvoice
             whereInSelected = " AND r.ID in ("
 
             For Each row As Integer In GridView1.GetSelectedRows
-                whereInSelected = whereInSelected & Integer.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(1)).ToString) & ","
+                whereInSelected = whereInSelected & Integer.Parse(GridView1.GetRowCellValue(row, GridView1.Columns(2)).ToString) & ","
             Next
             If whereInSelected.Equals(" AND r.ID in (") Then
                 whereInSelected = String.Empty
@@ -406,7 +416,7 @@ Public Class frmInvoice
 
     Private Sub GridView1_CustomColumnDisplayText(sender As Object, e As DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs) Handles GridView1.CustomColumnDisplayText
         Dim index As Int16 = GridView1.Columns.IndexOf(e.Column)
-        Dim indecies As Int16() = {7, 11, 12, 13, 17, 18, 19, 20, 21, 22, 23, 24}
+        Dim indecies As Int16() = {8, 12, 13, 14, 18, 19, 20, 21, 22, 23, 24, 25}
         If indecies.Contains(index) Then
             'e.DisplayText = e.Value & " ل.ل"
             e.Column.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
@@ -414,6 +424,18 @@ Public Class frmInvoice
             e.Column.DisplayFormat.FormatString = "N0"
         ElseIf index = 1 OrElse index = 2 Then
             e.Column.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
+        End If
+    End Sub
+
+    Private Sub GridView1_RowCellStyle(sender As Object, e As Views.Grid.RowCellStyleEventArgs) Handles GridView1.RowCellStyle
+        If e.RowHandle >= 0 Then
+            If GridView1.IsRowSelected(e.RowHandle) Then
+                e.Appearance.BackColor = Color.FromArgb(200, 255, 255)
+            Else
+                If GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(25)) > 0 Then
+                    e.Appearance.BackColor = Color.FromArgb(255, 200, 200)
+                End If
+            End If
         End If
     End Sub
 

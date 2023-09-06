@@ -91,7 +91,6 @@ Partial Class frmExpenditureEditor
         '
         Me.cmbcurrency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbcurrency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbcurrency.Enabled = False
         Me.cmbcurrency.FormattingEnabled = True
         Me.cmbcurrency.Items.AddRange(New Object() {"ل.ل", "$"})
         Me.cmbcurrency.Location = New System.Drawing.Point(314, 84)

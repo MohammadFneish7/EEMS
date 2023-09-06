@@ -163,7 +163,7 @@ Public Class frmClient
     Private Sub GridView1_RowCellStyle(sender As Object, e As Views.Grid.RowCellStyleEventArgs) Handles GridView1.RowCellStyle
         If e.RowHandle >= 0 Then
             If GridView1.IsRowSelected(e.RowHandle) Then
-                e.Appearance.BackColor = Color.FromArgb(245, 245, 245)
+                e.Appearance.BackColor = Color.FromArgb(200, 255, 255)
             Else
                 If creditedClientIds.Contains(Integer.Parse(GridView1.GetRowCellValue(e.RowHandle, GridView1.Columns(2)))) Then
                     e.Appearance.BackColor = Color.FromArgb(255, 200, 200)
