@@ -1,0 +1,46 @@
+﻿@model DataDump
+@{
+    ViewData["Title"] = "Dump Data";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <form asp-action="DumpData">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="year">السنة</span>
+            <select class="form-select" aria-label="year" aria-describedby="year" asp-for="Year">
+                @{
+                    for(int i=2023; i<2040;i++){
+                                           <option value="@i">@i</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="month">الشهر</span>
+            <select class="form-select" aria-label="month" aria-describedby="month" asp-for="Month">
+                @{
+                    for (int i = 1; i <= 12; i++)
+                    {
+                                           <option value="@i">@i</option>
+                    }
+                }
+            </select>
+        </div>
+        <input type="submit" value="تحميل نسخة" class="btn btn-primary" />
+        <div class="text-danger" style="margin-top: 20px;">@ViewData["error"]</div>
+    </form>
+
+    <div class="text-primary" style="margin-top: 20px;">
+        @ViewData["data"]
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+    </script>
+}
+

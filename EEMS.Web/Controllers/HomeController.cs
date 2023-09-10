@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.IO.Compression;
+using System.Net;
+using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text;
 
@@ -62,6 +64,7 @@ namespace EEMS.Web.Controllers
                         foreach (var inv in invoices)
                         {
                             inv.PartitionKey = User?.Identity?.Name?.Split("@")[0];
+                            inv.Cdate = $"{inv.RowKey.Split("-")[1]}-{inv.RowKey.Split("-")[2]}";
                         }
                         var invgroups = invoices.Select((x, i) => new { Index = i, Value = x }).GroupBy(x => x.Index / 100).Select(x => x.Select(v => v.Value).ToList()).ToList();
                         foreach(var group in invgroups)
@@ -87,6 +90,55 @@ namespace EEMS.Web.Controllers
                     ViewData["error"] = ex.Message;
                 else
                     ViewData["error"] = "فشل أثناء قراءة الملف، الرجاء التأكد من صحّة الملف.";
+            }
+            return View();
+        }
+
+        [Authorize(Roles = "api.writer")]
+        [Route("/DumpData")]
+        public IActionResult DumpData()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "api.writer")]
+        [HttpPost]
+        [Route("/DumpData")]
+        public async Task<IActionResult> DumpData([Bind("Year,Month")] DataDump dataDump)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var username = User?.Identity?.Name?.Split("@")[0];
+                    Query query = new Query(ATS.Enums.QueryOperator.And);
+                    query.AddCondition(new QueryCondition("PartitionKey", ATS.Enums.QueryComparison.Equal, username));
+                    query.AddCondition(new QueryCondition("Cdate", ATS.Enums.QueryComparison.Equal, $"{dataDump.Year}-{dataDump.Month}".ToLower()));
+
+                    var invoices = await _aTSRepository.ManyAsync(query.Build());
+                    if (invoices == null || invoices.Entities==null || invoices.Entities.Count==0)
+                        throw new Exception("لا يوجد فواتير لهذا الشهر");
+                    else
+                    {
+                        string data = string.Join(",",invoices.Entities[0].Data.Keys.Select(k =>$"\"{k}\"").ToList());
+                        foreach(var inv in invoices.Entities)
+                        {
+                            data += "\n" + string.Join(",", inv.Data.Values.Select(v => $"\"{v}\"").ToList());
+                        }
+                        var stream = new MemoryStream(Encoding.UTF8.GetBytes(data));
+
+                        return File(stream, "text/csv", $"{username}-{dataDump.Year}-{dataDump.Month}.csv");
+                    }
+                }
+                else
+                {
+                    throw new IOException("الرجاء التأكد من تعبئة المعلومات المطلوبة.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ViewData["error"] = "فشل أثناء تحضير الملف.";
             }
             return View();
         }

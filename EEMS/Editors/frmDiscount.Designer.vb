@@ -37,7 +37,7 @@ Partial Class frmDiscount
         Me.txtRequired.Name = "txtRequired"
         Me.txtRequired.ReadOnly = True
         Me.txtRequired.Size = New System.Drawing.Size(254, 20)
-        Me.txtRequired.TabIndex = 0
+        Me.txtRequired.TabIndex = 1
         Me.txtRequired.Text = "0"
         Me.txtRequired.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -47,7 +47,7 @@ Partial Class frmDiscount
         Me.Label1.Location = New System.Drawing.Point(226, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "مطلوب:"
         '
@@ -58,7 +58,7 @@ Partial Class frmDiscount
         Me.txtDiscount.MaxLength = 50
         Me.txtDiscount.Name = "txtDiscount"
         Me.txtDiscount.Size = New System.Drawing.Size(254, 20)
-        Me.txtDiscount.TabIndex = 2
+        Me.txtDiscount.TabIndex = 0
         Me.txtDiscount.Text = "0"
         Me.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -77,7 +77,7 @@ Partial Class frmDiscount
         Me.Label2.Location = New System.Drawing.Point(231, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label2.Size = New System.Drawing.Size(38, 13)
+        Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "حسم:"
         '
@@ -87,7 +87,7 @@ Partial Class frmDiscount
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(17, 75)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(25, 13)
+        Me.Label15.Size = New System.Drawing.Size(24, 13)
         Me.Label15.TabIndex = 24
         Me.Label15.Text = "ل.ل"
         '

@@ -34,8 +34,8 @@ Public Class frmInvoice
         Catch ex As Exception
         End Try
 
-        addButtonToGridView(dgvData1, GridView1, "اضافة دفعة", My.Resources.payment, 0, 50, AddressOf btnPayPressed)
         addButtonToGridView(dgvData1, GridView1, "اضافة حسم", My.Resources.Pencil16, 0, 50, AddressOf btnDiscountPressed)
+        addButtonToGridView(dgvData1, GridView1, "اضافة دفعة", My.Resources.payment, 0, 50, AddressOf btnPayPressed)
         Dim exceptionList As New List(Of Integer)
         exceptionList.Add(0)
         exceptionList.Add(1)

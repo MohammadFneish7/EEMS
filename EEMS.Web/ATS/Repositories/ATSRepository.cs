@@ -381,7 +381,7 @@ namespace EEMS.Web.ATS.Repositories
 
             Type type = typeof(T);
 
-            T t = (T)Activator.CreateInstance(type, dynamicTableEntity.RowKey);
+            T t = (T)Activator.CreateInstance(type);
 
             foreach (KeyValuePair<string, EntityProperty> prop in dynamicTableEntity.Properties)
             {

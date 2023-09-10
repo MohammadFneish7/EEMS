@@ -4,6 +4,7 @@ namespace EEMS.Web.ATS.Objects
 {
     public class Invoice : ExtendedTableEntity
     {
+        public string Cdate { get; set; }
         public Dictionary<string,string> Data { get; set; }
 
         public Invoice()
