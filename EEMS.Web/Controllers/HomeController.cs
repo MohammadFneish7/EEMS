@@ -155,13 +155,13 @@ namespace EEMS.Web.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("/Check")]
-        public async Task<IActionResult> Check([Bind("Group,ClientId,Year,Month")] InvoiceCheck invoiceCheck)
+        public async Task<IActionResult> Check([Bind("Group,Year,Month,CustId")] InvoiceCheck invoiceCheck)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var invoice = await _aTSRepository.SingleAsync(invoiceCheck.Group.ToLower(), $"{invoiceCheck.ClientId}-{invoiceCheck.Year}-{invoiceCheck.Month}".ToLower());
+                    var invoice = await _aTSRepository.SingleAsync(invoiceCheck.Group.ToLower(), $"{invoiceCheck.CustId}-{invoiceCheck.Year}-{invoiceCheck.Month}".ToLower());
                     if (invoice == null)
                         throw new Exception("الفاتورة المطلوبة غير موجودة");
                     else
@@ -177,7 +177,7 @@ namespace EEMS.Web.Controllers
                 ViewData["error"] = ex.Message;
             }
             ViewData["group"] = invoiceCheck.Group;
-            ViewData["clientid"] = invoiceCheck.ClientId;
+            ViewData["clientid"] = invoiceCheck.CustId;
             return View(invoiceCheck);
         }
 

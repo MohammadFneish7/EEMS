@@ -3,13 +3,14 @@
     ViewData["Title"] = "Check";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <div class="text-center">
     <form asp-action="Check">
         <div class="input-group mb-3" name="div-group">
-            <span class="input-group-text" id="group">التبعيّة</span>
+            <span class="input-group-text" id="grouplbl">التبعيّة</span>
             <input name="group-hidden" type="hidden" value="@ViewData["group"]">
-            <select name="group" type="text" class="form-select" aria-label="group" aria-describedby="group" asp-for="Group">
+            <select name="group" type="text" class="form-select" aria-label="grouplbl" aria-describedby="grouplbl" asp-for="Group" required>
                 <option value="kfrseer">كفرصير</option>
                 <option value="majdal">مجدل سلم</option>
                 <option value="ayta">عيتا</option>
@@ -18,45 +19,47 @@
             </select>
         </div>
         <div class="input-group mb-3">
-          <span class="input-group-text" id="clientid">رمز المستخدم</span>
-            <input name="input-clientid" type="text" class="form-control" aria-label="clientid" aria-describedby="clientid" asp-for="ClientId" value="@ViewData["clientid"]">
+            <span class="input-group-text" id="clientidlbl">رمز المستخدم</span>
+            <input class="form-control" aria-label="clientidlbl" aria-describedby="clientidlbl" asp-for="CustId" value="@ViewData["CustId"]" required />
         </div>
         <div class="input-group mb-3">
-            <span class="input-group-text" id="year">السنة</span>
-            <select class="form-select" aria-label="year" aria-describedby="year" asp-for="Year">
+            <span class="input-group-text" id="yearlbl">السنة</span>
+            <select class="form-select" aria-label="yearlbl" aria-describedby="yearlbl" asp-for="Year" required>
                 @{
-                    for(int i=2023; i<2040;i++){
-                                           <option value="@i">@i</option>
+                    for (int i = 2023; i < 2040; i++)
+                    {
+                        <option value="@i">@i</option>
                     }
                 }
             </select>
         </div>
         <div class="input-group mb-3">
-            <span class="input-group-text" id="month">الشهر</span>
-            <select class="form-select" aria-label="month" aria-describedby="month" asp-for="Month">
+            <span class="input-group-text" id="monthlbl">الشهر</span>
+            <select class="form-select" aria-label="monthlbl" aria-describedby="monthlbl" asp-for="Month" required>
                 @{
                     for (int i = 1; i <= 12; i++)
                     {
-                                           <option value="@i">@i</option>
+                        <option value="@i">@i</option>
                     }
                 }
             </select>
         </div>
-        <input type="submit" value="طلب الفاتورة" class="btn btn-primary"/>
+        <input type="submit" value="طلب الفاتورة" class="btn btn-primary" />
         <div class="text-danger" style="margin-top: 20px;">@ViewData["error"]</div>
     </form>
 
     <div class="text-primary" style="margin-top: 20px;">
-        @if (@ViewData["data"]!=null){
+        @if (@ViewData["data"] != null)
+        {
             <table class="table table-striped" style="border: 1px solid #dee2e6;">
                 <tbody>
-                @foreach (var k in ((Dictionary<string, string>)@ViewData["data"]).Keys)
-                {
-                    <tr>
+                    @foreach (var k in ((Dictionary<string, string>)@ViewData["data"]).Keys)
+                    {
+                        <tr>
                             <td style="font-weight: bold;">@k</td>
                             <td>@(((Dictionary<string, string>)ViewData["data"]).GetValueOrDefault(k))</td>
-                    </tr>
-                }
+                        </tr>
+                    }
                 </tbody>
             </table>
         }
@@ -69,11 +72,11 @@
     }
     <script>
         $(document).ready(function () {
-            $('[name="group"]').on('change', ()=>{
+            $('[name="group"]').on('change', () => {
                 Cookies.set('group', $('[name="group"]').val());
             });
-            $('[name="input-clientid"]').on('change', () => {
-                Cookies.set('clientid', $('[name="input-clientid"]').val());
+            $('#CustId').on('change', () => {
+                Cookies.set('CustId', $('#CustId').val());
             });
             var group = $('[name="group-hidden"]').val();
             if (group == null || group.trim().length == 0) {
@@ -83,9 +86,9 @@
             if (group != null && group.trim().length > 0) {
                 $('[name="group"]').val(group);
             }
-            var clientid = Cookies.get('clientid');
-            if (clientid != null && clientid.trim().length > 0) {
-                $('[name="input-clientid"]').val(clientid);
+            var CustId = Cookies.get('CustId');
+            if (CustId != null && CustId.trim().length > 0 && ($('#CustId').val() == null || $('#CustId').val().trim().length == 0)) {
+                $('#CustId').val(CustId);
             }
         });
     </script>
