@@ -40,6 +40,15 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DetailSection8 = New DevExpress.XtraReports.UI.SubBand()
         Me.Subreport9 = New DevExpress.XtraReports.UI.XRSubreport()
         Me.Area1 = New DevExpress.XtraReports.UI.ReportHeaderBand()
+        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.Text1 = New DevExpress.XtraReports.UI.XRLabel()
         Me.selDate1 = New DevExpress.XtraReports.UI.XRLabel()
@@ -172,15 +181,10 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.DataSetGeneralReport1 = New EEMS.DataSetGeneralReport()
         Me.TopMarginBand1 = New DevExpress.XtraReports.UI.TopMarginBand()
         Me.BottomMarginBand1 = New DevExpress.XtraReports.UI.BottomMarginBand()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel5 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel6 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel10 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.DetailSection9 = New DevExpress.XtraReports.UI.SubBand()
+        Me.Subreport10 = New DevExpress.XtraReports.UI.XRSubreport()
+        Me.DetailSection10 = New DevExpress.XtraReports.UI.SubBand()
+        Me.XrSubreport1 = New DevExpress.XtraReports.UI.XRSubreport()
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
@@ -189,7 +193,7 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Area3.HeightF = 0!
         Me.Area3.Name = "Area3"
         Me.Area3.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
-        Me.Area3.SubBands.AddRange(New DevExpress.XtraReports.UI.SubBand() {Me.Section3, Me.DetailSection1, Me.DetailSection2, Me.DetailSection3, Me.DetailSection4, Me.DetailSection5, Me.DetailSection6, Me.DetailSection7, Me.DetailSection8})
+        Me.Area3.SubBands.AddRange(New DevExpress.XtraReports.UI.SubBand() {Me.Section3, Me.DetailSection1, Me.DetailSection2, Me.DetailSection3, Me.DetailSection4, Me.DetailSection5, Me.DetailSection6, Me.DetailSection7, Me.DetailSection8, Me.DetailSection9, Me.DetailSection10})
         Me.Area3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Section3
@@ -318,7 +322,7 @@ Partial Public Class XtraGeneralMonthlyReport
         '
         Me.Subreport8.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 16.66667!)
         Me.Subreport8.Name = "Subreport8"
-        Me.Subreport8.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExependitureIn()
+        Me.Subreport8.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExpenditureIn()
         Me.Subreport8.SizeF = New System.Drawing.SizeF(769.4445!, 50.0!)
         '
         'DetailSection8
@@ -345,6 +349,155 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.Area1.Name = "Area1"
         Me.Area1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Area1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel10
+        '
+        Me.XrLabel10.CanGrow = False
+        Me.XrLabel10.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AllNetDollar]")})
+        Me.XrLabel10.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
+        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(475.0001!, 651.2917!)
+        Me.XrLabel10.Name = "XrLabel10"
+        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel10.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
+        Me.XrLabel10.StylePriority.UseFont = False
+        Me.XrLabel10.StylePriority.UseTextAlignment = False
+        Me.XrLabel10.Text = "XrLabel10"
+        Me.XrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrLabel10.TextFormatString = "{0:#,##0.##}"
+        '
+        'XrLabel8
+        '
+        Me.XrLabel8.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel8.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel8.BorderWidth = 1.0!
+        Me.XrLabel8.CanGrow = False
+        Me.XrLabel8.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
+        Me.XrLabel8.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 651.2917!)
+        Me.XrLabel8.Name = "XrLabel8"
+        Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel8.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.XrLabel8.SizeF = New System.Drawing.SizeF(163.5417!, 17.36111!)
+        Me.XrLabel8.StylePriority.UseTextAlignment = False
+        Me.XrLabel8.Text = "صندوق تراكمي دولار:"
+        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel9
+        '
+        Me.XrLabel9.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel9.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel9.BorderWidth = 1.0!
+        Me.XrLabel9.CanGrow = False
+        Me.XrLabel9.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
+        Me.XrLabel9.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(450.0001!, 651.2917!)
+        Me.XrLabel9.Name = "XrLabel9"
+        Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel9.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.XrLabel9.Text = "ل.ل"
+        Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel7
+        '
+        Me.XrLabel7.CanGrow = False
+        Me.XrLabel7.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalOutToDollar]")})
+        Me.XrLabel7.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
+        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(66.66673!, 450.0!)
+        Me.XrLabel7.Name = "XrLabel7"
+        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel7.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
+        Me.XrLabel7.StylePriority.UseFont = False
+        Me.XrLabel7.StylePriority.UseTextAlignment = False
+        Me.XrLabel7.Text = "XrLabel7"
+        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrLabel7.TextFormatString = "{0:N0}"
+        '
+        'XrLabel5
+        '
+        Me.XrLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel5.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel5.BorderWidth = 1.0!
+        Me.XrLabel5.CanGrow = False
+        Me.XrLabel5.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
+        Me.XrLabel5.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 450.0!)
+        Me.XrLabel5.Name = "XrLabel5"
+        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel5.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.XrLabel5.SizeF = New System.Drawing.SizeF(205.2083!, 17.36111!)
+        Me.XrLabel5.StylePriority.UseTextAlignment = False
+        Me.XrLabel5.Text = "ليرة الى دولار:"
+        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel6
+        '
+        Me.XrLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel6.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel6.BorderWidth = 1.0!
+        Me.XrLabel6.CanGrow = False
+        Me.XrLabel6.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
+        Me.XrLabel6.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(41.66673!, 450.0!)
+        Me.XrLabel6.Name = "XrLabel6"
+        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel6.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.XrLabel6.Text = "ل.ل"
+        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel4
+        '
+        Me.XrLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel4.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel4.BorderWidth = 1.0!
+        Me.XrLabel4.CanGrow = False
+        Me.XrLabel4.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
+        Me.XrLabel4.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(450.0001!, 523.3055!)
+        Me.XrLabel4.Name = "XrLabel4"
+        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel4.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
+        Me.XrLabel4.Text = "ل.ل"
+        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel3
+        '
+        Me.XrLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel3.BorderColor = System.Drawing.Color.Black
+        Me.XrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None
+        Me.XrLabel3.BorderWidth = 1.0!
+        Me.XrLabel3.CanGrow = False
+        Me.XrLabel3.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
+        Me.XrLabel3.ForeColor = System.Drawing.Color.Black
+        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 523.3055!)
+        Me.XrLabel3.Name = "XrLabel3"
+        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel3.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
+        Me.XrLabel3.SizeF = New System.Drawing.SizeF(163.5417!, 17.36111!)
+        Me.XrLabel3.StylePriority.UseTextAlignment = False
+        Me.XrLabel3.Text = "دولار الى ليرة:"
+        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel2
+        '
+        Me.XrLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.XrLabel2.CanGrow = False
+        Me.XrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalInFromDollar]")})
+        Me.XrLabel2.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
+        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(475.0001!, 523.3055!)
+        Me.XrLabel2.Name = "XrLabel2"
+        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
+        Me.XrLabel2.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
+        Me.XrLabel2.StylePriority.UseBackColor = False
+        Me.XrLabel2.StylePriority.UseFont = False
+        Me.XrLabel2.StylePriority.UseTextAlignment = False
+        Me.XrLabel2.Text = "XrLabel2"
+        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.XrLabel2.TextFormatString = "{0:N0}"
         '
         'XrLabel1
         '
@@ -2466,154 +2619,29 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.BottomMarginBand1.HeightF = 25.0!
         Me.BottomMarginBand1.Name = "BottomMarginBand1"
         '
-        'XrLabel2
+        'DetailSection9
         '
-        Me.XrLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel2.CanGrow = False
-        Me.XrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalInFromDollar]")})
-        Me.XrLabel2.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(475.0001!, 523.3055!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
-        Me.XrLabel2.StylePriority.UseBackColor = False
-        Me.XrLabel2.StylePriority.UseFont = False
-        Me.XrLabel2.StylePriority.UseTextAlignment = False
-        Me.XrLabel2.Text = "XrLabel2"
-        Me.XrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.XrLabel2.TextFormatString = "{0:N0}"
+        Me.DetailSection9.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.Subreport10})
+        Me.DetailSection9.Name = "DetailSection9"
         '
-        'XrLabel3
+        'Subreport10
         '
-        Me.XrLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel3.BorderColor = System.Drawing.Color.Black
-        Me.XrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel3.BorderWidth = 1.0!
-        Me.XrLabel3.CanGrow = False
-        Me.XrLabel3.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
-        Me.XrLabel3.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel3.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 523.3055!)
-        Me.XrLabel3.Name = "XrLabel3"
-        Me.XrLabel3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel3.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
-        Me.XrLabel3.SizeF = New System.Drawing.SizeF(163.5417!, 17.36111!)
-        Me.XrLabel3.StylePriority.UseTextAlignment = False
-        Me.XrLabel3.Text = "دولار الى ليرة:"
-        Me.XrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.Subreport10.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 19.41666!)
+        Me.Subreport10.Name = "Subreport10"
+        Me.Subreport10.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExpenditureDollarIn()
+        Me.Subreport10.SizeF = New System.Drawing.SizeF(769.4446!, 62.58334!)
         '
-        'XrLabel4
+        'DetailSection10
         '
-        Me.XrLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel4.BorderColor = System.Drawing.Color.Black
-        Me.XrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel4.BorderWidth = 1.0!
-        Me.XrLabel4.CanGrow = False
-        Me.XrLabel4.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
-        Me.XrLabel4.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel4.LocationFloat = New DevExpress.Utils.PointFloat(450.0001!, 523.3055!)
-        Me.XrLabel4.Name = "XrLabel4"
-        Me.XrLabel4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel4.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
-        Me.XrLabel4.Text = "ل.ل"
-        Me.XrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        Me.DetailSection10.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrSubreport1})
+        Me.DetailSection10.Name = "DetailSection10"
         '
-        'XrLabel5
+        'XrSubreport1
         '
-        Me.XrLabel5.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel5.BorderColor = System.Drawing.Color.Black
-        Me.XrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel5.BorderWidth = 1.0!
-        Me.XrLabel5.CanGrow = False
-        Me.XrLabel5.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
-        Me.XrLabel5.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel5.LocationFloat = New DevExpress.Utils.PointFloat(208.3333!, 450.0!)
-        Me.XrLabel5.Name = "XrLabel5"
-        Me.XrLabel5.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel5.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
-        Me.XrLabel5.SizeF = New System.Drawing.SizeF(205.2083!, 17.36111!)
-        Me.XrLabel5.StylePriority.UseTextAlignment = False
-        Me.XrLabel5.Text = "ليرة الى دولار:"
-        Me.XrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'XrLabel6
-        '
-        Me.XrLabel6.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel6.BorderColor = System.Drawing.Color.Black
-        Me.XrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel6.BorderWidth = 1.0!
-        Me.XrLabel6.CanGrow = False
-        Me.XrLabel6.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
-        Me.XrLabel6.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel6.LocationFloat = New DevExpress.Utils.PointFloat(41.66673!, 450.0!)
-        Me.XrLabel6.Name = "XrLabel6"
-        Me.XrLabel6.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel6.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
-        Me.XrLabel6.Text = "ل.ل"
-        Me.XrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'XrLabel7
-        '
-        Me.XrLabel7.CanGrow = False
-        Me.XrLabel7.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[totalOutToDollar]")})
-        Me.XrLabel7.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
-        Me.XrLabel7.LocationFloat = New DevExpress.Utils.PointFloat(66.66673!, 450.0!)
-        Me.XrLabel7.Name = "XrLabel7"
-        Me.XrLabel7.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel7.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
-        Me.XrLabel7.StylePriority.UseFont = False
-        Me.XrLabel7.StylePriority.UseTextAlignment = False
-        Me.XrLabel7.Text = "XrLabel7"
-        Me.XrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.XrLabel7.TextFormatString = "{0:N0}"
-        '
-        'XrLabel8
-        '
-        Me.XrLabel8.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel8.BorderColor = System.Drawing.Color.Black
-        Me.XrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel8.BorderWidth = 1.0!
-        Me.XrLabel8.CanGrow = False
-        Me.XrLabel8.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
-        Me.XrLabel8.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel8.LocationFloat = New DevExpress.Utils.PointFloat(616.6667!, 651.2917!)
-        Me.XrLabel8.Name = "XrLabel8"
-        Me.XrLabel8.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel8.RightToLeft = DevExpress.XtraReports.UI.RightToLeft.Yes
-        Me.XrLabel8.SizeF = New System.Drawing.SizeF(163.5417!, 17.36111!)
-        Me.XrLabel8.StylePriority.UseTextAlignment = False
-        Me.XrLabel8.Text = "صندوق تراكمي دولار:"
-        Me.XrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'XrLabel9
-        '
-        Me.XrLabel9.BackColor = System.Drawing.Color.Transparent
-        Me.XrLabel9.BorderColor = System.Drawing.Color.Black
-        Me.XrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None
-        Me.XrLabel9.BorderWidth = 1.0!
-        Me.XrLabel9.CanGrow = False
-        Me.XrLabel9.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
-        Me.XrLabel9.ForeColor = System.Drawing.Color.Black
-        Me.XrLabel9.LocationFloat = New DevExpress.Utils.PointFloat(450.0001!, 651.2917!)
-        Me.XrLabel9.Name = "XrLabel9"
-        Me.XrLabel9.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.XrLabel9.SizeF = New System.Drawing.SizeF(25.0!, 15.34722!)
-        Me.XrLabel9.Text = "ل.ل"
-        Me.XrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        '
-        'XrLabel10
-        '
-        Me.XrLabel10.CanGrow = False
-        Me.XrLabel10.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AllNetDollar]")})
-        Me.XrLabel10.Font = New DevExpress.Drawing.DXFont("Arial", 9.75!, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, New DevExpress.Drawing.DXFontAdditionalProperty() {New DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", CType(0, Byte))})
-        Me.XrLabel10.LocationFloat = New DevExpress.Utils.PointFloat(475.0001!, 651.2917!)
-        Me.XrLabel10.Name = "XrLabel10"
-        Me.XrLabel10.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96.0!)
-        Me.XrLabel10.SizeF = New System.Drawing.SizeF(138.5417!, 15.34722!)
-        Me.XrLabel10.StylePriority.UseFont = False
-        Me.XrLabel10.StylePriority.UseTextAlignment = False
-        Me.XrLabel10.Text = "XrLabel10"
-        Me.XrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.XrLabel10.TextFormatString = "{0:#,##0.##}"
+        Me.XrSubreport1.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 21.99999!)
+        Me.XrSubreport1.Name = "XrSubreport1"
+        Me.XrSubreport1.ReportSource = New EEMS.XtraGeneralMonthlyReport_ExpenditureDollarOut()
+        Me.XrSubreport1.SizeF = New System.Drawing.SizeF(769.4446!, 62.83336!)
         '
         'XtraGeneralMonthlyReport
         '
@@ -2621,11 +2649,11 @@ Partial Public Class XtraGeneralMonthlyReport
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.DataSetGeneralReport1})
         Me.DataMember = "dtGeneral"
         Me.DataSource = Me.DataSetGeneralReport1
-        Me.Margins = New DevExpress.Drawing.DXMargins(11, 1, 25, 25)
+        Me.Margins = New DevExpress.Drawing.DXMargins(11.0!, 1.0!, 25.0!, 25.0!)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.Version = "21.2"
+        Me.Version = "22.2"
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
@@ -2792,4 +2820,8 @@ Partial Public Class XtraGeneralMonthlyReport
     Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents DetailSection9 As DevExpress.XtraReports.UI.SubBand
+    Friend WithEvents Subreport10 As DevExpress.XtraReports.UI.XRSubreport
+    Friend WithEvents DetailSection10 As DevExpress.XtraReports.UI.SubBand
+    Friend WithEvents XrSubreport1 As DevExpress.XtraReports.UI.XRSubreport
 End Class

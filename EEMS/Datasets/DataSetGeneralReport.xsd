@@ -47,9 +47,9 @@
               <xs:element name="boxNetThisMonth" msprop:Generator_ColumnPropNameInTable="boxNetThisMonthColumn" msprop:Generator_ColumnPropNameInRow="boxNetThisMonth" msprop:Generator_UserColumnName="boxNetThisMonth" msprop:Generator_ColumnVarNameInTable="columnboxNetThisMonth" type="xs:long" minOccurs="0" />
               <xs:element name="boxNetLastMonth" msprop:Generator_ColumnPropNameInTable="boxNetLastMonthColumn" msprop:Generator_ColumnPropNameInRow="boxNetLastMonth" msprop:Generator_UserColumnName="boxNetLastMonth" msprop:Generator_ColumnVarNameInTable="columnboxNetLastMonth" type="xs:long" minOccurs="0" />
               <xs:element name="boxTotal" msprop:Generator_ColumnPropNameInTable="boxTotalColumn" msprop:Generator_ColumnPropNameInRow="boxTotal" msprop:Generator_UserColumnName="boxTotal" msprop:Generator_ColumnVarNameInTable="columnboxTotal" type="xs:long" minOccurs="0" />
-              <xs:element name="totalInFromDollar" msprop:Generator_ColumnPropNameInRow="totalInFromDollar" msprop:Generator_ColumnPropNameInTable="totalInFromDollarColumn" msprop:Generator_ColumnVarNameInTable="columntotalInFromDollar" msprop:Generator_UserColumnName="totalInFromDollar" type="xs:long" minOccurs="0" />
-              <xs:element name="totalOutToDollar" msprop:Generator_ColumnPropNameInRow="totalOutToDollar" msprop:Generator_ColumnPropNameInTable="totalOutToDollarColumn" msprop:Generator_ColumnVarNameInTable="columntotalOutToDollar" msprop:Generator_UserColumnName="totalOutToDollar" type="xs:long" minOccurs="0" />
-              <xs:element name="AllNetDollar" msprop:Generator_ColumnPropNameInRow="AllNetDollar" msprop:Generator_ColumnPropNameInTable="AllNetDollarColumn" msprop:Generator_ColumnVarNameInTable="columnAllNetDollar" msprop:Generator_UserColumnName="AllNetDollar" type="xs:double" minOccurs="0" />
+              <xs:element name="totalInFromDollar" msprop:Generator_UserColumnName="totalInFromDollar" msprop:Generator_ColumnPropNameInTable="totalInFromDollarColumn" msprop:Generator_ColumnPropNameInRow="totalInFromDollar" msprop:Generator_ColumnVarNameInTable="columntotalInFromDollar" type="xs:long" minOccurs="0" />
+              <xs:element name="totalOutToDollar" msprop:Generator_UserColumnName="totalOutToDollar" msprop:Generator_ColumnPropNameInTable="totalOutToDollarColumn" msprop:Generator_ColumnPropNameInRow="totalOutToDollar" msprop:Generator_ColumnVarNameInTable="columntotalOutToDollar" type="xs:long" minOccurs="0" />
+              <xs:element name="AllNetDollar" msprop:Generator_UserColumnName="AllNetDollar" msprop:Generator_ColumnPropNameInTable="AllNetDollarColumn" msprop:Generator_ColumnPropNameInRow="AllNetDollar" msprop:Generator_ColumnVarNameInTable="columnAllNetDollar" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -141,6 +141,22 @@
               <xs:element name="totalInvoices" msprop:Generator_ColumnPropNameInTable="totalInvoicesColumn" msprop:Generator_ColumnPropNameInRow="totalInvoices" msprop:Generator_UserColumnName="totalInvoices" msprop:Generator_ColumnVarNameInTable="columntotalInvoices" type="xs:long" minOccurs="0" />
               <xs:element name="fuelConsuption" msprop:Generator_ColumnPropNameInTable="fuelConsuptionColumn" msprop:Generator_ColumnPropNameInRow="fuelConsuption" msprop:Generator_UserColumnName="fuelConsuption" msprop:Generator_ColumnVarNameInTable="columnfuelConsuption" type="xs:long" minOccurs="0" />
               <xs:element name="maintainace" msprop:Generator_ColumnPropNameInTable="maintainaceColumn" msprop:Generator_ColumnPropNameInRow="maintainace" msprop:Generator_UserColumnName="maintainace" msprop:Generator_ColumnVarNameInTable="columnmaintainace" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtExpenditureDollarPos" msprop:Generator_RowEvHandlerName="dtExpenditureDollarPosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtExpenditureDollarPosRowDeleted" msprop:Generator_RowDeletingName="dtExpenditureDollarPosRowDeleting" msprop:Generator_RowEvArgName="dtExpenditureDollarPosRowChangeEvent" msprop:Generator_TablePropName="dtExpenditureDollarPos" msprop:Generator_RowChangedName="dtExpenditureDollarPosRowChanged" msprop:Generator_RowChangingName="dtExpenditureDollarPosRowChanging" msprop:Generator_TableClassName="dtExpenditureDollarPosDataTable" msprop:Generator_RowClassName="dtExpenditureDollarPosRow" msprop:Generator_TableVarName="tabledtExpenditureDollarPos" msprop:Generator_UserTableName="dtExpenditureDollarPos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnPropNameInTable="titleColumn" msprop:Generator_ColumnVarNameInTable="columntitle" msprop:Generator_UserColumnName="title" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_UserColumnName="total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtExpenditureDollarNeg" msprop:Generator_RowEvHandlerName="dtExpenditureDollarNegRowChangeEventHandler" msprop:Generator_RowDeletedName="dtExpenditureDollarNegRowDeleted" msprop:Generator_RowDeletingName="dtExpenditureDollarNegRowDeleting" msprop:Generator_RowEvArgName="dtExpenditureDollarNegRowChangeEvent" msprop:Generator_TablePropName="dtExpenditureDollarNeg" msprop:Generator_RowChangedName="dtExpenditureDollarNegRowChanged" msprop:Generator_RowChangingName="dtExpenditureDollarNegRowChanging" msprop:Generator_TableClassName="dtExpenditureDollarNegDataTable" msprop:Generator_RowClassName="dtExpenditureDollarNegRow" msprop:Generator_TableVarName="tabledtExpenditureDollarNeg" msprop:Generator_UserTableName="dtExpenditureDollarNeg">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnPropNameInTable="titleColumn" msprop:Generator_ColumnVarNameInTable="columntitle" msprop:Generator_UserColumnName="title" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_UserColumnName="total" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

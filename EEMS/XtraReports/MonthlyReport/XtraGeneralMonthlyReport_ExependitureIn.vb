@@ -1,3 +1,0 @@
-﻿Public Class XtraGeneralMonthlyReport_ExependitureIn
-
-End Class

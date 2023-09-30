@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Public Class XtraGeneralMonthlyReport_ExpenditureDollarOut
     Inherits DevExpress.XtraReports.UI.XtraReport
 
     'XtraReport overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,7 +17,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
     'NOTE: The following procedure is required by the Designer
     'It can be modified using the Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DetailArea1 = New DevExpress.XtraReports.UI.DetailBand()
         Me.title1 = New DevExpress.XtraReports.UI.XRLabel()
@@ -61,7 +61,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.title1.BorderWidth = 1.0!
         Me.title1.CanGrow = False
         Me.title1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[title]")})
-        Me.title1.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.title1.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!)
         Me.title1.ForeColor = System.Drawing.Color.Black
         Me.title1.LocationFloat = New DevExpress.Utils.PointFloat(441.0!, 3.472201!)
         Me.title1.Name = "title1"
@@ -77,14 +77,14 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.total1.BorderWidth = 1.0!
         Me.total1.CanGrow = False
         Me.total1.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[total]")})
-        Me.total1.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.total1.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.total1.ForeColor = System.Drawing.Color.Black
         Me.total1.LocationFloat = New DevExpress.Utils.PointFloat(41.66667!, 3.472201!)
         Me.total1.Name = "total1"
         Me.total1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.total1.SizeF = New System.Drawing.SizeF(376.0417!, 18.75!)
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.total1.TextFormatString = "{0:N0}"
+        Me.total1.TextFormatString = "{0:#,##0.##}"
         '
         'Line7
         '
@@ -92,7 +92,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Line7.BorderColor = System.Drawing.Color.Silver
         Me.Line7.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line7.BorderWidth = 1.0!
-        Me.Line7.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line7.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line7.ForeColor = System.Drawing.Color.Silver
         Me.Line7.LocationFloat = New DevExpress.Utils.PointFloat(0!, 25.0!)
         Me.Line7.Name = "Line7"
@@ -107,13 +107,13 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Text4.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text4.BorderWidth = 1.0!
         Me.Text4.CanGrow = False
-        Me.Text4.Font = New System.Drawing.Font("Arial", 10.0!)
+        Me.Text4.Font = New DevExpress.Drawing.DXFont("Arial", 10.0!)
         Me.Text4.ForeColor = System.Drawing.Color.Black
         Me.Text4.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 3.472222!)
         Me.Text4.Name = "Text4"
         Me.Text4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text4.SizeF = New System.Drawing.SizeF(25.0!, 18.75!)
-        Me.Text4.Text = "ل.ل"
+        Me.Text4.Text = "$"
         Me.Text4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'ReportHeaderArea1
@@ -142,13 +142,13 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
             Or DevExpress.XtraPrinting.BorderSide.Bottom), DevExpress.XtraPrinting.BorderSide)
         Me.Text3.BorderWidth = 1.0!
         Me.Text3.CanGrow = False
-        Me.Text3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Text3.Font = New DevExpress.Drawing.DXFont("Arial", 12.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text3.ForeColor = System.Drawing.Color.Black
-        Me.Text3.LocationFloat = New DevExpress.Utils.PointFloat(637.4028!, 8.333333!)
+        Me.Text3.LocationFloat = New DevExpress.Utils.PointFloat(609.2778!, 8.333333!)
         Me.Text3.Name = "Text3"
         Me.Text3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.Text3.SizeF = New System.Drawing.SizeF(131.5972!, 20.83333!)
-        Me.Text3.Text = "تفصيل الصرف"
+        Me.Text3.SizeF = New System.Drawing.SizeF(159.7222!, 20.83333!)
+        Me.Text3.Text = "تفصيل الصرف بالدولار"
         Me.Text3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'ReportHeaderSection2
@@ -167,7 +167,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Text1.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text1.BorderWidth = 1.0!
         Me.Text1.CanGrow = False
-        Me.Text1.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.Text1.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text1.ForeColor = System.Drawing.Color.Black
         Me.Text1.LocationFloat = New DevExpress.Utils.PointFloat(441.0!, 3.472265!)
         Me.Text1.Name = "Text1"
@@ -183,7 +183,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Text2.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Text2.BorderWidth = 1.0!
         Me.Text2.CanGrow = False
-        Me.Text2.Font = New System.Drawing.Font("Arial", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.Text2.Font = New DevExpress.Drawing.DXFont("Arial", 11.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text2.ForeColor = System.Drawing.Color.Black
         Me.Text2.LocationFloat = New DevExpress.Utils.PointFloat(16.66667!, 3.472217!)
         Me.Text2.Name = "Text2"
@@ -198,7 +198,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Line4.BorderColor = System.Drawing.Color.Silver
         Me.Line4.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line4.BorderWidth = 1.0!
-        Me.Line4.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line4.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line4.ForeColor = System.Drawing.Color.Silver
         Me.Line4.LocationFloat = New DevExpress.Utils.PointFloat(0!, 0!)
         Me.Line4.Name = "Line4"
@@ -212,7 +212,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Line6.BorderColor = System.Drawing.Color.Silver
         Me.Line6.Borders = DevExpress.XtraPrinting.BorderSide.None
         Me.Line6.BorderWidth = 1.0!
-        Me.Line6.Font = New System.Drawing.Font("Times New Roman", 9.75!)
+        Me.Line6.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line6.ForeColor = System.Drawing.Color.Silver
         Me.Line6.LocationFloat = New DevExpress.Utils.PointFloat(0!, 22.91667!)
         Me.Line6.Name = "Line6"
@@ -222,6 +222,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         '
         'ReportFooterArea1
         '
+        Me.ReportFooterArea1.Expanded = False
         Me.ReportFooterArea1.HeightF = 0!
         Me.ReportFooterArea1.Name = "ReportFooterArea1"
         Me.ReportFooterArea1.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
@@ -290,18 +291,18 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         '
         Me.BottomMarginBand1.Name = "BottomMarginBand1"
         '
-        'XtraGeneralMonthlyReport_ExpenditureOut
+        'XtraGeneralMonthlyReport_ExpenditureDollarOut
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.DetailArea1, Me.ReportHeaderArea1, Me.ReportFooterArea1, Me.TopMarginBand1, Me.BottomMarginBand1})
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.DataSetGeneralReport1})
         Me.CrossBandControls.AddRange(New DevExpress.XtraReports.UI.XRCrossBandControl() {Me.Line9, Me.Line11, Me.Line12})
-        Me.DataMember = "dtExpenditureNeg"
+        Me.DataMember = "dtExpenditureDollarNeg"
         Me.DataSource = Me.DataSetGeneralReport1
-        Me.Margins = New System.Drawing.Printing.Margins(0, 0, 100, 100)
+        Me.Margins = New DevExpress.Drawing.DXMargins(0!, 0!, 100.0!, 100.0!)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.Version = "21.2"
+        Me.Version = "22.2"
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 

@@ -144,11 +144,11 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.Text3.CanGrow = False
         Me.Text3.Font = New DevExpress.Drawing.DXFont("Arial", 12.0!, DevExpress.Drawing.DXFontStyle.Bold)
         Me.Text3.ForeColor = System.Drawing.Color.Black
-        Me.Text3.LocationFloat = New DevExpress.Utils.PointFloat(637.4028!, 8.333333!)
+        Me.Text3.LocationFloat = New DevExpress.Utils.PointFloat(626.9861!, 8.333333!)
         Me.Text3.Name = "Text3"
         Me.Text3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
-        Me.Text3.SizeF = New System.Drawing.SizeF(131.5972!, 20.83333!)
-        Me.Text3.Text = "تفصيل الصرف"
+        Me.Text3.SizeF = New System.Drawing.SizeF(142.0139!, 20.83333!)
+        Me.Text3.Text = "تفصيل الصرف بالليرة"
         Me.Text3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'ReportHeaderSection2
@@ -297,11 +297,11 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureOut
         Me.CrossBandControls.AddRange(New DevExpress.XtraReports.UI.XRCrossBandControl() {Me.Line9, Me.Line11, Me.Line12})
         Me.DataMember = "dtExpenditureNeg"
         Me.DataSource = Me.DataSetGeneralReport1
-        Me.Margins = New DevExpress.Drawing.DXMargins(0, 0, 100, 100)
+        Me.Margins = New DevExpress.Drawing.DXMargins(0!, 0!, 100.0!, 100.0!)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.Version = "21.2"
+        Me.Version = "22.2"
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 

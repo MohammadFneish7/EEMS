@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Public Class XtraGeneralMonthlyReport_ExpenditureDollarIn
     Inherits DevExpress.XtraReports.UI.XtraReport
 
     'XtraReport overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
@@ -17,7 +17,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
     'NOTE: The following procedure is required by the Designer
     'It can be modified using the Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.DetailArea1 = New DevExpress.XtraReports.UI.DetailBand()
         Me.title1 = New DevExpress.XtraReports.UI.XRLabel()
@@ -83,7 +83,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
         Me.total1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.total1.SizeF = New System.Drawing.SizeF(392.7083!, 18.75!)
         Me.total1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
-        Me.total1.TextFormatString = "{0:N0}"
+        Me.total1.TextFormatString = "{0:#,##0.##}"
         '
         'Text4
         '
@@ -98,7 +98,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
         Me.Text4.Name = "Text4"
         Me.Text4.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text4.SizeF = New System.Drawing.SizeF(25.0!, 18.75!)
-        Me.Text4.Text = "ل.ل"
+        Me.Text4.Text = "$"
         Me.Text4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
         '
         'Line6
@@ -109,7 +109,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
         Me.Line6.BorderWidth = 1.0!
         Me.Line6.Font = New DevExpress.Drawing.DXFont("Times New Roman", 9.75!)
         Me.Line6.ForeColor = System.Drawing.Color.Silver
-        Me.Line6.LocationFloat = New DevExpress.Utils.PointFloat(0!, 25.0!)
+        Me.Line6.LocationFloat = New DevExpress.Utils.PointFloat(0!, 25.90667!)
         Me.Line6.Name = "Line6"
         Me.Line6.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Line6.SizeF = New System.Drawing.SizeF(769.0!, 2.083334!)
@@ -147,7 +147,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
         Me.Text3.Name = "Text3"
         Me.Text3.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100.0!)
         Me.Text3.SizeF = New System.Drawing.SizeF(131.5972!, 20.83333!)
-        Me.Text3.Text = "تفصيل الدخل"
+        Me.Text3.Text = "تفصيل الدخل بالدولار"
         Me.Text3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter
         '
         'ReportHeaderSection2
@@ -289,18 +289,18 @@ Partial Public Class XtraGeneralMonthlyReport_ExependitureIn
         '
         Me.BottomMarginBand1.Name = "BottomMarginBand1"
         '
-        'XtraGeneralMonthlyReport_ExependitureIn
+        'XtraGeneralMonthlyReport_ExpenditureDollarIn
         '
         Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.DetailArea1, Me.ReportHeaderArea1, Me.ReportFooterArea1, Me.TopMarginBand1, Me.BottomMarginBand1})
         Me.ComponentStorage.AddRange(New System.ComponentModel.IComponent() {Me.DataSetGeneralReport1})
         Me.CrossBandControls.AddRange(New DevExpress.XtraReports.UI.XRCrossBandControl() {Me.Line5, Me.Line9, Me.Line10})
-        Me.DataMember = "dtExpenditurePos"
+        Me.DataMember = "dtExpenditureDollarPos"
         Me.DataSource = Me.DataSetGeneralReport1
-        Me.Margins = New DevExpress.Drawing.DXMargins(0, 0, 100, 100)
+        Me.Margins = New DevExpress.Drawing.DXMargins(0!, 0!, 100.0!, 100.0!)
         Me.PageHeight = 1169
         Me.PageWidth = 827
         Me.PaperKind = System.Drawing.Printing.PaperKind.A4
-        Me.Version = "21.2"
+        Me.Version = "22.2"
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 

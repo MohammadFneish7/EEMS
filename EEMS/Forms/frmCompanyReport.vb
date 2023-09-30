@@ -4,7 +4,9 @@ Imports EEMS.SqlDBHelper
 Public Class frmCompanyReport
 
     Dim a As New Helper
-    Dim dt, dtEngineLoad, dtEnginAmpere, dtGeneralReport, dtItems, dtFuelConsumption, dtMaintainance, dtExpenditureAll, dtExpenditureNegatives, dtExpenditurePositives, dtAmpere, dtAmperePerEngine, dtWorkingHours, dtEngineEfficiency As New DataTable
+    Dim dt, dtEngineLoad, dtEnginAmpere, dtGeneralReport, dtItems, dtFuelConsumption,
+        dtMaintainance, dtExpenditureAll, dtExpenditureNegatives, dtExpenditurePositives,
+        dtExpenditureDollarNegatives, dtExpenditureDollarPositives, dtAmpere, dtAmperePerEngine, dtWorkingHours, dtEngineEfficiency As New DataTable
 
     Dim ds As New DataSetGeneralReport
 
@@ -394,6 +396,46 @@ Public Class frmCompanyReport
         dtExpenditureNegatives.Rows.Add(dr)
     End Sub
 
+    Private Sub loadExpenditureDollarPositivesReport()
+        a.ds = New DataSet
+        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount_dollar>0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollarpos")
+        dtExpenditureDollarPositives.Clear()
+        dtExpenditureDollarPositives.Merge(a.ds.Tables("dtexpdollarpos"))
+
+        Dim sumP As Double
+        sumP = 0
+        For Each row As DataRow In dtExpenditureDollarPositives.Rows
+            sumP = sumP + row.Item(1)
+        Next
+        Dim dr As DataRow = dtExpenditureDollarPositives.NewRow
+        dr.Item(0) = "إجمالي"
+        dr.Item(1) = sumP
+        dtExpenditureDollarPositives.Rows.Add(dr)
+    End Sub
+
+    Private Sub loadExpenditureDollarNegativesReport(Optional ByVal asAbsolute As Boolean = False)
+        a.ds = New DataSet
+
+        If asAbsolute Then
+            a.GetData("select e.title as [العنوان], ABS(ISNUll(SUM(e.amount_dollar),0)) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount_dollar<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollar")
+        Else
+            a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount_dollar<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollar")
+        End If
+
+        dtExpenditureDollarNegatives.Clear()
+        dtExpenditureDollarNegatives.Merge(a.ds.Tables("dtexpdollar"))
+
+        Dim sumP As Double
+        sumP = 0
+        For Each row As DataRow In dtExpenditureDollarNegatives.Rows
+            sumP = sumP + row.Item(1)
+        Next
+        Dim dr As DataRow = dtExpenditureDollarNegatives.NewRow
+        dr.Item(0) = "إجمالي"
+        dr.Item(1) = sumP
+        dtExpenditureDollarNegatives.Rows.Add(dr)
+    End Sub
+
     Private Sub loadWorkingHoursReport()
         a.ds = New DataSet
         a.GetData("SELECT e.ename as [المولّد],IsNull(SUM(w.workinghours),0) as [ساعات التغذية] FROM Engine e,EngineWorkingHours w where w.engineid=e.ID AND cmonth=" & dtp1.Value.Month & " AND cyear=" & dtp1.Value.Year & " Group By ename", "dt15")
@@ -671,6 +713,8 @@ Public Class frmCompanyReport
     Public Sub showMonthlyReport()
         loadExpenditurePositivesReport()
         loadExpenditureNegativesReport(True)
+        loadExpenditureDollarPositivesReport()
+        loadExpenditureDollarNegativesReport(True)
         loadItemsReport()
         loadFuelConsumptionReport()
         loadMaintainanceReport()
@@ -681,6 +725,8 @@ Public Class frmCompanyReport
 
         cloneTable(ds.dtExpenditurePos, dtExpenditurePositives)
         cloneTable(ds.dtExpenditureNeg, dtExpenditureNegatives)
+        cloneTable(ds.dtExpenditureDollarPos, dtExpenditureDollarPositives)
+        cloneTable(ds.dtExpenditureDollarNeg, dtExpenditureDollarNegatives)
         cloneTable(ds.dtItems, dtItems)
         cloneTable(ds.dtFuelConsumption, dtFuelConsumption)
         cloneTable(ds.dtMaintainance, dtMaintainance)

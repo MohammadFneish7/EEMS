@@ -958,10 +958,22 @@
     <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.Designer.vb">
-      <DependentUpon>XtraGeneralMonthlyReport_ExependitureIn.vb</DependentUpon>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureDollarIn.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureDollarIn.vb</DependentUpon>
     </Compile>
-    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.vb">
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureDollarIn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureIn.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureIn.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureDollarOut.Designer.vb">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureDollarOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureDollarOut.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.Designer.vb">
@@ -1323,8 +1335,14 @@
     <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_EngineEfficiencyReport.resx">
       <DependentUpon>XtraGeneralMonthlyReport_EngineEfficiencyReport.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExependitureIn.resx">
-      <DependentUpon>XtraGeneralMonthlyReport_ExependitureIn.vb</DependentUpon>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureDollarIn.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureDollarIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureIn.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureDollarOut.resx">
+      <DependentUpon>XtraGeneralMonthlyReport_ExpenditureDollarOut.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraReports\MonthlyReport\XtraGeneralMonthlyReport_ExpenditureOut.resx">
       <DependentUpon>XtraGeneralMonthlyReport_ExpenditureOut.vb</DependentUpon>
