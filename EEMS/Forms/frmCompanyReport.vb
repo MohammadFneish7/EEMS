@@ -358,7 +358,7 @@ Public Class frmCompanyReport
 
     Private Sub loadExpenditureDollarAllReport()
         a.ds = New DataSet
-        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي ل.ل] FROM Expenditure e WHERE MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt10")
+        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي $] FROM Expenditure e WHERE MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt10")
         dtExpenditureDollarAll.Clear()
         dtExpenditureDollarAll.Merge(a.ds.Tables("dt10"))
 
