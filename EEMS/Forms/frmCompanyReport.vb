@@ -5,7 +5,7 @@ Public Class frmCompanyReport
 
     Dim a As New Helper
     Dim dt, dtEngineLoad, dtEnginAmpere, dtGeneralReport, dtItems, dtFuelConsumption,
-        dtMaintainance, dtExpenditureAll, dtExpenditureNegatives, dtExpenditurePositives,
+        dtMaintainance, dtExpenditureAll, dtExpenditureDollarAll, dtExpenditureNegatives, dtExpenditurePositives,
         dtExpenditureDollarNegatives, dtExpenditureDollarPositives, dtAmpere, dtAmperePerEngine, dtWorkingHours, dtEngineEfficiency As New DataTable
 
     Dim ds As New DataSetGeneralReport
@@ -356,6 +356,23 @@ Public Class frmCompanyReport
         dtExpenditureAll.Rows.Add(dr)
     End Sub
 
+    Private Sub loadExpenditureDollarAllReport()
+        a.ds = New DataSet
+        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي ل.ل] FROM Expenditure e WHERE MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt10")
+        dtExpenditureDollarAll.Clear()
+        dtExpenditureDollarAll.Merge(a.ds.Tables("dt10"))
+
+        Dim sumP As Double
+        sumP = 0
+        For Each row As DataRow In dtExpenditureDollarAll.Rows
+            sumP = sumP + row.Item(1)
+        Next
+        Dim dr As DataRow = dtExpenditureDollarAll.NewRow
+        dr.Item(0) = "إجمالي"
+        dr.Item(1) = sumP
+        dtExpenditureDollarAll.Rows.Add(dr)
+    End Sub
+
     Private Sub loadExpenditurePositivesReport()
         a.ds = New DataSet
         a.GetData("select e.title as [العنوان], ISNUll(SUM(Cast(e.amount AS BIGINT)),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount>0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dt12")
@@ -398,7 +415,7 @@ Public Class frmCompanyReport
 
     Private Sub loadExpenditureDollarPositivesReport()
         a.ds = New DataSet
-        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount_dollar>0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollarpos")
+        a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي $] FROM Expenditure e WHERE e.amount_dollar>0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollarpos")
         dtExpenditureDollarPositives.Clear()
         dtExpenditureDollarPositives.Merge(a.ds.Tables("dtexpdollarpos"))
 
@@ -417,9 +434,9 @@ Public Class frmCompanyReport
         a.ds = New DataSet
 
         If asAbsolute Then
-            a.GetData("select e.title as [العنوان], ABS(ISNUll(SUM(e.amount_dollar),0)) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount_dollar<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollar")
+            a.GetData("select e.title as [العنوان], ABS(ISNUll(SUM(e.amount_dollar),0)) as [اجمالي $] FROM Expenditure e WHERE e.amount_dollar<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollar")
         Else
-            a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي ل.ل] FROM Expenditure e WHERE e.amount_dollar<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollar")
+            a.GetData("select e.title as [العنوان], ISNUll(SUM(e.amount_dollar),0) as [اجمالي $] FROM Expenditure e WHERE e.amount_dollar<0 AND MONTH(e.expdate) = " & dtp1.Value.Month & " AND YEAR(e.expdate) = " & dtp1.Value.Year & " Group By e.title", "dtexpdollar")
         End If
 
         dtExpenditureDollarNegatives.Clear()
@@ -972,6 +989,48 @@ Public Class frmCompanyReport
         End Try
     End Sub
 
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        If Not currentUser.hasPermision("reportview") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Try
+            loadExpenditureDollarNegativesReport()
+            Dim frm As New frmDataViewer("كشف مصاريف بالدولار تفصيلي", dtExpenditureDollarNegatives, True)
+            frm.ShowDialog()
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        If Not currentUser.hasPermision("reportview") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Try
+            loadExpenditureDollarAllReport()
+            Dim frm As New frmDataViewer("كشف صندوق دولار تفصيلي", dtExpenditureDollarAll, True)
+            frm.ShowDialog()
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        If Not currentUser.hasPermision("reportview") Then
+            MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
+            Return
+        End If
+        Try
+            loadExpenditureDollarPositivesReport()
+            Dim frm As New frmDataViewer("كشف مداخيل بالدولار تفصيلي", dtExpenditureDollarPositives, True)
+            frm.ShowDialog()
+        Catch ex As Exception
+            ErrorDialog.showDlg(ex)
+        End Try
+    End Sub
+
     Private Sub btnMaintainanceReport_Click(sender As Object, e As EventArgs) Handles btnMaintainanceReport.Click
         If Not currentUser.hasPermision("reportview") Then
             MessageBox.Show("ليس لديك صلاحيّة للمتابعة.", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Stop)
@@ -1011,7 +1070,7 @@ Public Class frmCompanyReport
         End If
         Try
             loadExpenditureAllReport()
-            Dim frm As New frmDataViewer("كشف صندوق تفصيلي", dtExpenditureAll, True)
+            Dim frm As New frmDataViewer("كشف صندوق ليرة تفصيلي", dtExpenditureAll, True)
             frm.ShowDialog()
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
@@ -1039,7 +1098,7 @@ Public Class frmCompanyReport
         End If
         Try
             loadExpenditurePositivesReport()
-            Dim frm As New frmDataViewer("كشف مداخيل تفصيلي", dtExpenditurePositives, True)
+            Dim frm As New frmDataViewer("كشف مداخيل بالليرة تفصيلي", dtExpenditurePositives, True)
             frm.ShowDialog()
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
@@ -1053,7 +1112,7 @@ Public Class frmCompanyReport
         End If
         Try
             loadExpenditureNegativesReport()
-            Dim frm As New frmDataViewer("كشف مصاريف تفصيلي", dtExpenditureNegatives, True)
+            Dim frm As New frmDataViewer("كشف مصاريف بالليرة تفصيلي", dtExpenditureNegatives, True)
             frm.ShowDialog()
         Catch ex As Exception
             ErrorDialog.showDlg(ex)
