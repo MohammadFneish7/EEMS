@@ -301,7 +301,7 @@ Partial Public Class XtraGeneralMonthlyReport_ExpenditureDollarOut
         Me.Margins = New DevExpress.Drawing.DXMargins(0!, 0!, 100.0!, 100.0!)
         Me.PageHeight = 1169
         Me.PageWidth = 827
-        Me.PaperKind = System.Drawing.Printing.PaperKind.A4
+        Me.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4
         Me.Version = "22.2"
         CType(Me.DataSetGeneralReport1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()

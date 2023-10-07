@@ -549,7 +549,7 @@ Partial Public Class XtraClientsCreditsReport
         Me.Margins = New DevExpress.Drawing.DXMargins(0, 1, 25, 25)
         Me.PageHeight = 1169
         Me.PageWidth = 827
-        Me.PaperKind = System.Drawing.Printing.PaperKind.A4
+        Me.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4
         Me.Version = "21.2"
         CType(Me.DataSetInvoices1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
