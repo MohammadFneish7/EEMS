@@ -358,8 +358,8 @@ Public Class frmClientReport
 End Class
 
 Class RegInfo
-    Public sumcredit As Integer = 0
-    Public sumpayed As Integer = 0
-    Public remaining As Integer = 0
+    Public sumcredit As Long = 0
+    Public sumpayed As Long = 0
+    Public remaining As Long = 0
     Public remainingDollar As Double = 0
 End Class

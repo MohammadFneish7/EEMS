@@ -1665,409 +1665,409 @@
     <None Include="Resources\icon %2842%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ar\DevExpress.AspNetCore.Resources.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.AspNetCore.Resources.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Blazor.Reporting.v22.2.Viewer.resources.dll">
+    <Content Include="ar\DevExpress.Blazor.Reporting.v23.1.Viewer.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Blazor.RichEdit.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Blazor.RichEdit.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Blazor.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Blazor.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Charts.Designer.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Charts.Designer.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Dashboard.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Dashboard.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Dashboard.v22.2.Web.resources.dll">
+    <Content Include="ar\DevExpress.Dashboard.v23.1.Web.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Dashboard.v22.2.Win.resources.dll">
+    <Content Include="ar\DevExpress.Dashboard.v23.1.Win.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Data.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Data.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.DataAccess.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.DataAccess.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.DataAccess.v22.2.UI.resources.dll">
+    <Content Include="ar\DevExpress.DataAccess.v23.1.UI.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Diagram.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Diagram.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Dialogs.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Dialogs.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Drawing.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Drawing.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.EntityFrameworkCore.Security.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.EntityFrameworkCore.Security.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.AuditTrail.Xpo.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.AuditTrail.Xpo.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Blazor.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Blazor.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Chart.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Chart.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.CloneObject.Xpo.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.CloneObject.Xpo.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Dashboards.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Dashboards.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Dashboards.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Dashboards.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Dashboards.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Dashboards.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Blazor.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Blazor.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.FileAttachment.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.HtmlPropertyEditor.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Kpi.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Kpi.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Maps.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Maps.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Notifications.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Notifications.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Notifications.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Notifications.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Objects.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Objects.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Office.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Office.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Office.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Office.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.PivotChart.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.PivotChart.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.PivotChart.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.PivotChart.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.PivotChart.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.PivotChart.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.PivotGrid.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.PivotGrid.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.PivotGrid.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.PivotGrid.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Reports.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Reports.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Reports.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Reports.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Reports.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Reports.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Blazor.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Blazor.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ReportsV2.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Scheduler.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Scheduler.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Scheduler.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Scheduler.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Scheduler.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Scheduler.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ScriptRecorder.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ScriptRecorder.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ScriptRecorder.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ScriptRecorder.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Security.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Security.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Security.Xpo.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Security.Xpo.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.StateMachine.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.StateMachine.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Validation.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Validation.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Validation.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Validation.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.ViewVariantsModule.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.ViewVariantsModule.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Workflow.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Workflow.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ExpressApp.Workflow.Win.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.ExpressApp.Workflow.Win.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Map.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Map.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Mvvm.v22.2.DataModel.resources.dll">
+    <Content Include="ar\DevExpress.Mvvm.v23.1.DataModel.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Office.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Office.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Pdf.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Pdf.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Persistent.Base.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Persistent.Base.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.PivotGrid.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.PivotGrid.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Printing.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Printing.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.ReportServer.v22.2.Localization.resources.dll">
+    <Content Include="ar\DevExpress.ReportServer.v23.1.Localization.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.RichEdit.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.RichEdit.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Snap.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Snap.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Snap.v22.2.Extensions.resources.dll">
+    <Content Include="ar\DevExpress.Snap.v23.1.Extensions.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Snap.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Snap.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Sparkline.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Sparkline.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Spreadsheet.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Spreadsheet.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Utils.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Utils.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Utils.v22.2.UI.resources.dll">
+    <Content Include="ar\DevExpress.Utils.v23.1.UI.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxDiagram.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxDiagram.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxGantt.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxGantt.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxHtmlEditor.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxHtmlEditor.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxRichEdit.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxRichEdit.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxScheduler.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxScheduler.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxSpellChecker.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxSpellChecker.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxSpreadsheet.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxSpreadsheet.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.ASPxTreeList.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.ASPxTreeList.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.Resources.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.Resources.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Web.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Web.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Charts.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Charts.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.CodeView.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.CodeView.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Controls.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Controls.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Core.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Core.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Docking.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Docking.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.DocumentViewer.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.DocumentViewer.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Gantt.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Gantt.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Gauges.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Gauges.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Grid.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Grid.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.LayoutControl.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.LayoutControl.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.NavBar.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.NavBar.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.PdfViewer.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.PdfViewer.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Printing.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Printing.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.PropertyGrid.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.PropertyGrid.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.ReportDesigner.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.ReportDesigner.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Ribbon.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Ribbon.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.RichEdit.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.RichEdit.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Scheduler.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Scheduler.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Scheduling.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Scheduling.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.SpellChecker.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.SpellChecker.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpf.Spreadsheet.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpf.Spreadsheet.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.Xpo.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.Xpo.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraBars.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraBars.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraCharts.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraCharts.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraCharts.v22.2.Wizard.resources.dll">
+    <Content Include="ar\DevExpress.XtraCharts.v23.1.Wizard.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraEditors.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraEditors.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraGantt.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraGantt.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraGauges.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.XtraGauges.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraGauges.v22.2.Presets.resources.dll">
+    <Content Include="ar\DevExpress.XtraGauges.v23.1.Presets.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraGrid.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraGrid.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraLayout.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraLayout.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraNavBar.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraNavBar.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraPdfViewer.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraPdfViewer.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraPivotGrid.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraPivotGrid.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraPrinting.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraPrinting.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraReports.v22.2.Extensions.resources.dll">
+    <Content Include="ar\DevExpress.XtraReports.v23.1.Extensions.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraReports.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraReports.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraReports.v22.2.Web.resources.dll">
+    <Content Include="ar\DevExpress.XtraReports.v23.1.Web.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraRichEdit.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraRichEdit.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraScheduler.v22.2.Core.resources.dll">
+    <Content Include="ar\DevExpress.XtraScheduler.v23.1.Core.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraScheduler.v22.2.Extensions.resources.dll">
+    <Content Include="ar\DevExpress.XtraScheduler.v23.1.Extensions.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraScheduler.v22.2.Reporting.resources.dll">
+    <Content Include="ar\DevExpress.XtraScheduler.v23.1.Reporting.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraScheduler.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraScheduler.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraSpellChecker.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraSpellChecker.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraSpreadsheet.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraSpreadsheet.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraTreeList.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraTreeList.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraVerticalGrid.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraVerticalGrid.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ar\DevExpress.XtraWizard.v22.2.resources.dll">
+    <Content Include="ar\DevExpress.XtraWizard.v23.1.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Bokehlicia-Captiva-Launcher-bfb.ico" />
