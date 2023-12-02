@@ -727,6 +727,10 @@ Public Class frmMain
             lblPayment.Text = "لقد انتهى عقد الصيانة، سيتم منعك عن بعض الخدمات الى حين التجديد"
             lblPayment.Visible = True
             MsgBox("لقد انتهى عقد الصيانة، سيتم منعك عن بعض الخدمات الى حين التجديد")
+        Else
+            Dim validitydate = validityChecker.readTimeValidity()
+            lblPayment.Text = "عقد الصيانة صالح لغاية " & validitydate.ToLongDateString()
+            lblPayment.Visible = True
         End If
     End Sub
 
