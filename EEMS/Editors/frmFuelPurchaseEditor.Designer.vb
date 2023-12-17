@@ -24,11 +24,14 @@ Partial Class frmFuelPurchaseEditor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFuelPurchaseEditor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.chkmigratetodollarbox = New System.Windows.Forms.CheckBox()
         Me.txtdollarprice = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.lbldollar = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.txtpaymentdollar = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -40,7 +43,7 @@ Partial Class frmFuelPurchaseEditor
         Me.txtTankRem = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtBrand = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.lbllira = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtpricetotal = New System.Windows.Forms.TextBox()
@@ -66,7 +69,7 @@ Partial Class frmFuelPurchaseEditor
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.lblliras = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -86,6 +89,7 @@ Partial Class frmFuelPurchaseEditor
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Label23)
         Me.GroupBox1.Controls.Add(Me.Label22)
@@ -94,7 +98,7 @@ Partial Class frmFuelPurchaseEditor
         Me.GroupBox1.Controls.Add(Me.txtTankRem)
         Me.GroupBox1.Controls.Add(Me.Label19)
         Me.GroupBox1.Controls.Add(Me.txtBrand)
-        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.lbllira)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.txtpricetotal)
@@ -124,13 +128,24 @@ Partial Class frmFuelPurchaseEditor
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "شراء المحروقات"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(385, 186)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(60, 20)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "احتساب"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.LemonChiffon
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.chkmigratetodollarbox)
         Me.GroupBox2.Controls.Add(Me.txtdollarprice)
-        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.lbldollar)
         Me.GroupBox2.Controls.Add(Me.Label25)
         Me.GroupBox2.Controls.Add(Me.txtpaymentdollar)
         Me.GroupBox2.Controls.Add(Me.Label26)
@@ -140,6 +155,24 @@ Partial Class frmFuelPurchaseEditor
         Me.GroupBox2.Size = New System.Drawing.Size(338, 71)
         Me.GroupBox2.TabIndex = 43
         Me.GroupBox2.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(22, 44)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(51, 20)
+        Me.Button3.TabIndex = 46
+        Me.Button3.Text = "احتساب"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(22, 19)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(51, 20)
+        Me.Button2.TabIndex = 45
+        Me.Button2.Text = "احتساب"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label15
         '
@@ -168,23 +201,23 @@ Partial Class frmFuelPurchaseEditor
         Me.txtdollarprice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtdollarprice.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtdollarprice.Enabled = False
-        Me.txtdollarprice.Location = New System.Drawing.Point(27, 19)
+        Me.txtdollarprice.Location = New System.Drawing.Point(79, 19)
         Me.txtdollarprice.MaxLength = 50
         Me.txtdollarprice.Name = "txtdollarprice"
-        Me.txtdollarprice.Size = New System.Drawing.Size(227, 20)
+        Me.txtdollarprice.Size = New System.Drawing.Size(175, 20)
         Me.txtdollarprice.TabIndex = 32
         Me.txtdollarprice.Text = "0"
         '
-        'Label24
+        'lbldollar
         '
-        Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label24.Location = New System.Drawing.Point(32, 48)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(13, 13)
-        Me.Label24.TabIndex = 40
-        Me.Label24.Text = "$"
+        Me.lbldollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbldollar.AutoSize = True
+        Me.lbldollar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lbldollar.Location = New System.Drawing.Point(83, 48)
+        Me.lbldollar.Name = "lbldollar"
+        Me.lbldollar.Size = New System.Drawing.Size(13, 13)
+        Me.lbldollar.TabIndex = 40
+        Me.lbldollar.Text = "$"
         '
         'Label25
         '
@@ -201,10 +234,10 @@ Partial Class frmFuelPurchaseEditor
         Me.txtpaymentdollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtpaymentdollar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtpaymentdollar.Enabled = False
-        Me.txtpaymentdollar.Location = New System.Drawing.Point(27, 45)
+        Me.txtpaymentdollar.Location = New System.Drawing.Point(79, 45)
         Me.txtpaymentdollar.MaxLength = 50
         Me.txtpaymentdollar.Name = "txtpaymentdollar"
-        Me.txtpaymentdollar.Size = New System.Drawing.Size(227, 20)
+        Me.txtpaymentdollar.Size = New System.Drawing.Size(175, 20)
         Me.txtpaymentdollar.TabIndex = 35
         Me.txtpaymentdollar.Text = "0"
         '
@@ -299,15 +332,16 @@ Partial Class frmFuelPurchaseEditor
         Me.txtBrand.Size = New System.Drawing.Size(241, 20)
         Me.txtBrand.TabIndex = 2
         '
-        'Label17
+        'lbllira
         '
-        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(389, 189)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(24, 13)
-        Me.Label17.TabIndex = 29
-        Me.Label17.Text = "ل.ل"
+        Me.lbllira.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbllira.AutoSize = True
+        Me.lbllira.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lbllira.Location = New System.Drawing.Point(451, 189)
+        Me.lbllira.Name = "lbllira"
+        Me.lbllira.Size = New System.Drawing.Size(24, 13)
+        Me.lbllira.TabIndex = 29
+        Me.lbllira.Text = "ل.ل"
         '
         'Label13
         '
@@ -334,10 +368,10 @@ Partial Class frmFuelPurchaseEditor
         '
         Me.txtpricetotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtpricetotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtpricetotal.Location = New System.Drawing.Point(385, 185)
+        Me.txtpricetotal.Location = New System.Drawing.Point(448, 185)
         Me.txtpricetotal.MaxLength = 50
         Me.txtpricetotal.Name = "txtpricetotal"
-        Me.txtpricetotal.Size = New System.Drawing.Size(241, 20)
+        Me.txtpricetotal.Size = New System.Drawing.Size(178, 20)
         Me.txtpricetotal.TabIndex = 8
         '
         'Label12
@@ -488,10 +522,10 @@ Partial Class frmFuelPurchaseEditor
         '
         Me.txtQuantity.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtQuantity.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtQuantity.Location = New System.Drawing.Point(385, 159)
+        Me.txtQuantity.Location = New System.Drawing.Point(388, 159)
         Me.txtQuantity.MaxLength = 50
         Me.txtQuantity.Name = "txtQuantity"
-        Me.txtQuantity.Size = New System.Drawing.Size(241, 20)
+        Me.txtQuantity.Size = New System.Drawing.Size(238, 20)
         Me.txtQuantity.TabIndex = 7
         '
         'Label2
@@ -531,7 +565,7 @@ Partial Class frmFuelPurchaseEditor
         Me.GroupBox3.Controls.Add(Me.Panel5)
         Me.GroupBox3.Controls.Add(Me.Label18)
         Me.GroupBox3.Controls.Add(Me.Panel6)
-        Me.GroupBox3.Controls.Add(Me.Label16)
+        Me.GroupBox3.Controls.Add(Me.lblliras)
         Me.GroupBox3.Controls.Add(Me.Panel4)
         Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.Panel3)
@@ -578,17 +612,17 @@ Partial Class frmFuelPurchaseEditor
         Me.Panel6.Size = New System.Drawing.Size(23, 17)
         Me.Panel6.TabIndex = 10
         '
-        'Label16
+        'lblliras
         '
-        Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.Transparent
-        Me.Label16.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(578, 30)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(19, 13)
-        Me.Label16.TabIndex = 9
-        Me.Label16.Text = "حر"
+        Me.lblliras.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblliras.AutoSize = True
+        Me.lblliras.BackColor = System.Drawing.Color.Transparent
+        Me.lblliras.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblliras.Location = New System.Drawing.Point(578, 30)
+        Me.lblliras.Name = "lblliras"
+        Me.lblliras.Size = New System.Drawing.Size(19, 13)
+        Me.lblliras.TabIndex = 9
+        Me.lblliras.Text = "حر"
         '
         'Panel4
         '
@@ -740,7 +774,7 @@ Partial Class frmFuelPurchaseEditor
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Panel6 As System.Windows.Forms.Panel
-    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents lblliras As System.Windows.Forms.Label
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
@@ -762,7 +796,7 @@ Partial Class frmFuelPurchaseEditor
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtpricetotal As System.Windows.Forms.TextBox
-    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents lbllira As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents txtTankRem As System.Windows.Forms.TextBox
     Friend WithEvents Label19 As System.Windows.Forms.Label
@@ -774,9 +808,12 @@ Partial Class frmFuelPurchaseEditor
     Friend WithEvents Label15 As Label
     Friend WithEvents chkmigratetodollarbox As CheckBox
     Friend WithEvents txtdollarprice As TextBox
-    Friend WithEvents Label24 As Label
+    Friend WithEvents lbldollar As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents txtpaymentdollar As TextBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Label28 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

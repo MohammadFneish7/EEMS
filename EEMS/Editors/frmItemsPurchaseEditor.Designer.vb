@@ -24,7 +24,16 @@ Partial Class frmItemsPurchaseEditor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmItemsPurchaseEditor))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.chkmigratetodollarbox = New System.Windows.Forms.CheckBox()
+        Me.txtdollarprice = New System.Windows.Forms.TextBox()
+        Me.lbldollar = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtpaymentdollar = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.lbllira = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.txtlocation = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -63,27 +72,22 @@ Partial Class frmItemsPurchaseEditor
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btncancel = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.chkmigratetodollarbox = New System.Windows.Forms.CheckBox()
-        Me.txtdollarprice = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.txtpaymentdollar = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
-        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.lbllira)
         Me.GroupBox1.Controls.Add(Me.Label15)
         Me.GroupBox1.Controls.Add(Me.txtlocation)
         Me.GroupBox1.Controls.Add(Me.Label13)
@@ -116,15 +120,123 @@ Partial Class frmItemsPurchaseEditor
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "الشراء"
         '
-        'Label17
+        'GroupBox2
         '
-        Me.Label17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(389, 137)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(24, 13)
-        Me.Label17.TabIndex = 29
-        Me.Label17.Text = "ل.ل"
+        Me.GroupBox2.BackColor = System.Drawing.Color.LemonChiffon
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Label19)
+        Me.GroupBox2.Controls.Add(Me.chkmigratetodollarbox)
+        Me.GroupBox2.Controls.Add(Me.txtdollarprice)
+        Me.GroupBox2.Controls.Add(Me.lbldollar)
+        Me.GroupBox2.Controls.Add(Me.Label25)
+        Me.GroupBox2.Controls.Add(Me.txtpaymentdollar)
+        Me.GroupBox2.Controls.Add(Me.Label26)
+        Me.GroupBox2.Controls.Add(Me.Label28)
+        Me.GroupBox2.Location = New System.Drawing.Point(361, 159)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(349, 71)
+        Me.GroupBox2.TabIndex = 44
+        Me.GroupBox2.TabStop = False
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label19.AutoSize = True
+        Me.Label19.ForeColor = System.Drawing.Color.Red
+        Me.Label19.Location = New System.Drawing.Point(6, 22)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(11, 13)
+        Me.Label19.TabIndex = 34
+        Me.Label19.Text = "*"
+        '
+        'chkmigratetodollarbox
+        '
+        Me.chkmigratetodollarbox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkmigratetodollarbox.AutoSize = True
+        Me.chkmigratetodollarbox.Location = New System.Drawing.Point(218, -1)
+        Me.chkmigratetodollarbox.Name = "chkmigratetodollarbox"
+        Me.chkmigratetodollarbox.Size = New System.Drawing.Size(125, 17)
+        Me.chkmigratetodollarbox.TabIndex = 41
+        Me.chkmigratetodollarbox.Text = "دفع من صندوق الدولار"
+        Me.chkmigratetodollarbox.UseVisualStyleBackColor = True
+        '
+        'txtdollarprice
+        '
+        Me.txtdollarprice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtdollarprice.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtdollarprice.Enabled = False
+        Me.txtdollarprice.Location = New System.Drawing.Point(76, 19)
+        Me.txtdollarprice.MaxLength = 50
+        Me.txtdollarprice.Name = "txtdollarprice"
+        Me.txtdollarprice.Size = New System.Drawing.Size(189, 20)
+        Me.txtdollarprice.TabIndex = 32
+        Me.txtdollarprice.Text = "0"
+        '
+        'lbldollar
+        '
+        Me.lbldollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbldollar.AutoSize = True
+        Me.lbldollar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lbldollar.Location = New System.Drawing.Point(80, 48)
+        Me.lbldollar.Name = "lbldollar"
+        Me.lbldollar.Size = New System.Drawing.Size(13, 13)
+        Me.lbldollar.TabIndex = 40
+        Me.lbldollar.Text = "$"
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(271, 22)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(62, 13)
+        Me.Label25.TabIndex = 33
+        Me.Label25.Text = "سعر الصرف:"
+        '
+        'txtpaymentdollar
+        '
+        Me.txtpaymentdollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtpaymentdollar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.txtpaymentdollar.Enabled = False
+        Me.txtpaymentdollar.Location = New System.Drawing.Point(76, 45)
+        Me.txtpaymentdollar.MaxLength = 50
+        Me.txtpaymentdollar.Name = "txtpaymentdollar"
+        Me.txtpaymentdollar.Size = New System.Drawing.Size(189, 20)
+        Me.txtpaymentdollar.TabIndex = 35
+        Me.txtpaymentdollar.Text = "0"
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label26.AutoSize = True
+        Me.Label26.ForeColor = System.Drawing.Color.Red
+        Me.Label26.Location = New System.Drawing.Point(6, 48)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(11, 13)
+        Me.Label26.TabIndex = 37
+        Me.Label26.Text = "*"
+        '
+        'Label28
+        '
+        Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(271, 48)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(74, 13)
+        Me.Label28.TabIndex = 36
+        Me.Label28.Text = "الدفعة بالدولار:"
+        '
+        'lbllira
+        '
+        Me.lbllira.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbllira.AutoSize = True
+        Me.lbllira.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.lbllira.Location = New System.Drawing.Point(442, 136)
+        Me.lbllira.Name = "lbllira"
+        Me.lbllira.Size = New System.Drawing.Size(24, 13)
+        Me.lbllira.TabIndex = 29
+        Me.lbllira.Text = "ل.ل"
         '
         'Label15
         '
@@ -171,10 +283,10 @@ Partial Class frmItemsPurchaseEditor
         '
         Me.txtpricetotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtpricetotal.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtpricetotal.Location = New System.Drawing.Point(385, 133)
+        Me.txtpricetotal.Location = New System.Drawing.Point(437, 133)
         Me.txtpricetotal.MaxLength = 50
         Me.txtpricetotal.Name = "txtpricetotal"
-        Me.txtpricetotal.Size = New System.Drawing.Size(241, 20)
+        Me.txtpricetotal.Size = New System.Drawing.Size(189, 20)
         Me.txtpricetotal.TabIndex = 7
         '
         'txtRemUnit
@@ -545,110 +657,32 @@ Partial Class frmItemsPurchaseEditor
         Me.btncancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         Me.btncancel.UseVisualStyleBackColor = True
         '
-        'GroupBox2
+        'Button3
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.LemonChiffon
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.chkmigratetodollarbox)
-        Me.GroupBox2.Controls.Add(Me.txtdollarprice)
-        Me.GroupBox2.Controls.Add(Me.Label24)
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.txtpaymentdollar)
-        Me.GroupBox2.Controls.Add(Me.Label26)
-        Me.GroupBox2.Controls.Add(Me.Label28)
-        Me.GroupBox2.Location = New System.Drawing.Point(361, 159)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(349, 71)
-        Me.GroupBox2.TabIndex = 44
-        Me.GroupBox2.TabStop = False
+        Me.Button3.Location = New System.Drawing.Point(19, 45)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(51, 20)
+        Me.Button3.TabIndex = 45
+        Me.Button3.Text = "احتساب"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label19
+        'Button2
         '
-        Me.Label19.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(6, 22)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(11, 13)
-        Me.Label19.TabIndex = 34
-        Me.Label19.Text = "*"
+        Me.Button2.Location = New System.Drawing.Point(19, 19)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(51, 20)
+        Me.Button2.TabIndex = 46
+        Me.Button2.Text = "احتساب"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'chkmigratetodollarbox
+        'Button1
         '
-        Me.chkmigratetodollarbox.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.chkmigratetodollarbox.AutoSize = True
-        Me.chkmigratetodollarbox.Location = New System.Drawing.Point(218, -1)
-        Me.chkmigratetodollarbox.Name = "chkmigratetodollarbox"
-        Me.chkmigratetodollarbox.Size = New System.Drawing.Size(125, 17)
-        Me.chkmigratetodollarbox.TabIndex = 41
-        Me.chkmigratetodollarbox.Text = "دفع من صندوق الدولار"
-        Me.chkmigratetodollarbox.UseVisualStyleBackColor = True
-        '
-        'txtdollarprice
-        '
-        Me.txtdollarprice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtdollarprice.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtdollarprice.Enabled = False
-        Me.txtdollarprice.Location = New System.Drawing.Point(24, 19)
-        Me.txtdollarprice.MaxLength = 50
-        Me.txtdollarprice.Name = "txtdollarprice"
-        Me.txtdollarprice.Size = New System.Drawing.Size(241, 20)
-        Me.txtdollarprice.TabIndex = 32
-        Me.txtdollarprice.Text = "0"
-        '
-        'Label24
-        '
-        Me.Label24.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label24.AutoSize = True
-        Me.Label24.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label24.Location = New System.Drawing.Point(43, 48)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(13, 13)
-        Me.Label24.TabIndex = 40
-        Me.Label24.Text = "$"
-        '
-        'Label25
-        '
-        Me.Label25.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(271, 22)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(62, 13)
-        Me.Label25.TabIndex = 33
-        Me.Label25.Text = "سعر الصرف:"
-        '
-        'txtpaymentdollar
-        '
-        Me.txtpaymentdollar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtpaymentdollar.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtpaymentdollar.Enabled = False
-        Me.txtpaymentdollar.Location = New System.Drawing.Point(24, 45)
-        Me.txtpaymentdollar.MaxLength = 50
-        Me.txtpaymentdollar.Name = "txtpaymentdollar"
-        Me.txtpaymentdollar.Size = New System.Drawing.Size(241, 20)
-        Me.txtpaymentdollar.TabIndex = 35
-        Me.txtpaymentdollar.Text = "0"
-        '
-        'Label26
-        '
-        Me.Label26.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label26.AutoSize = True
-        Me.Label26.ForeColor = System.Drawing.Color.Red
-        Me.Label26.Location = New System.Drawing.Point(6, 48)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(11, 13)
-        Me.Label26.TabIndex = 37
-        Me.Label26.Text = "*"
-        '
-        'Label28
-        '
-        Me.Label28.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(271, 48)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(74, 13)
-        Me.Label28.TabIndex = 36
-        Me.Label28.Text = "الدفعة بالدولار:"
+        Me.Button1.Location = New System.Drawing.Point(380, 133)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(51, 20)
+        Me.Button1.TabIndex = 47
+        Me.Button1.Text = "احتساب"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frmItemsPurchaseEditor
         '
@@ -669,12 +703,12 @@ Partial Class frmItemsPurchaseEditor
         Me.Text = "ملف الشراء"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -717,14 +751,17 @@ Partial Class frmItemsPurchaseEditor
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtpricetotal As System.Windows.Forms.TextBox
-    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents lbllira As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label19 As Label
     Friend WithEvents chkmigratetodollarbox As CheckBox
     Friend WithEvents txtdollarprice As TextBox
-    Friend WithEvents Label24 As Label
+    Friend WithEvents lbldollar As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents txtpaymentdollar As TextBox
     Friend WithEvents Label26 As Label
     Friend WithEvents Label28 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

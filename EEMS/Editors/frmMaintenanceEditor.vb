@@ -70,9 +70,12 @@ Public Class frmMaintenanceEditor
             txtpricetotal.Text = "0"
             txtpricetotal.ReadOnly = True
             txtpricetotal.BackColor = Color.FromArgb(224, 224, 224)
+            chkmigratetodollarbox.Checked = False
+            chkmigratetodollarbox.Enabled = False
         Else
             txtpricetotal.ReadOnly = False
             txtpricetotal.BackColor = Color.FromArgb(192, 255, 192)
+            chkmigratetodollarbox.Enabled = True
         End If
     End Sub
 
@@ -115,30 +118,37 @@ Public Class frmMaintenanceEditor
             Return False
         End Try
     End Function
-
-    Private Sub txtpaymentdollar_TextChanged(sender As Object, e As EventArgs) Handles txtpaymentdollar.TextChanged, txtpricetotal.TextChanged, txtdollarprice.TextChanged
-        RemoveHandler txtpricetotal.TextChanged, AddressOf txtpaymentdollar_TextChanged
-        RemoveHandler txtdollarprice.TextChanged, AddressOf txtpaymentdollar_TextChanged
-        RemoveHandler txtpaymentdollar.TextChanged, AddressOf txtpaymentdollar_TextChanged
-
+    Private Sub calc(sender As Object)
         Try
             If sender Is txtpricetotal Then
+                txtpricetotal.Text = CType(Double.Parse(txtpaymentdollar.Text * txtdollarprice.Text).ToString(), Integer)
+            ElseIf sender Is txtdollarprice Then
+                txtdollarprice.Text = CType(Double.Parse(txtpricetotal.Text / txtpaymentdollar.Text).ToString(), Integer)
+            ElseIf sender Is txtpaymentdollar Then
                 txtpaymentdollar.Text = Double.Parse(txtpricetotal.Text / txtdollarprice.Text).ToString("0.##")
-            Else
-                If sender Is txtdollarprice Then
-                    txtpaymentdollar.Text = Double.Parse(txtpricetotal.Text / txtdollarprice.Text).ToString("0.##")
-                ElseIf sender Is txtpaymentdollar Then
-                    txtdollarprice.Text = CType(Double.Parse(txtpricetotal.Text / txtpaymentdollar.Text).ToString(), Integer)
-                End If
+            End If
+            txtpricetotal.Text = Integer.Parse(txtpricetotal.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpricetotal.Text.Trim))
+        Catch ex As Exception
+        End Try
+    End Sub
 
-                txtpricetotal.Text = Integer.Parse(txtpricetotal.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpricetotal.Text.Trim))
+    Private Sub txtpaymentdollar_TextChanged(sender As Object, e As EventArgs) Handles txtpaymentdollar.TextChanged, txtpricetotal.TextChanged, txtdollarprice.TextChanged
+        Try
+            If chkmigratetodollarbox.Checked And Not verifyPaymentEquality() Then
+                txtpaymentdollar.BackColor = Color.FromArgb(255, 192, 192)
+                lbldollar.BackColor = Color.FromArgb(255, 192, 192)
+                txtdollarprice.BackColor = Color.FromArgb(255, 192, 192)
+                txtpricetotal.BackColor = Color.FromArgb(255, 192, 192)
+                lbllira.BackColor = Color.FromArgb(255, 192, 192)
+            Else
+                txtpaymentdollar.BackColor = Color.FromArgb(192, 255, 192)
+                lbldollar.BackColor = Color.FromArgb(192, 255, 192)
+                txtdollarprice.BackColor = Color.FromArgb(192, 255, 192)
+                txtpricetotal.BackColor = Color.FromArgb(192, 255, 192)
+                lbllira.BackColor = Color.FromArgb(192, 255, 192)
             End If
         Catch ex As Exception
 
-        Finally
-            AddHandler txtpricetotal.TextChanged, AddressOf txtpaymentdollar_TextChanged
-            AddHandler txtdollarprice.TextChanged, AddressOf txtpaymentdollar_TextChanged
-            AddHandler txtpaymentdollar.TextChanged, AddressOf txtpaymentdollar_TextChanged
         End Try
     End Sub
 
@@ -150,15 +160,18 @@ Public Class frmMaintenanceEditor
             txtdollarprice.Enabled = False
             txtpaymentdollar.Enabled = False
         End If
+        txtpaymentdollar_TextChanged(sender, e)
     End Sub
 
-    Private Sub txtpayment_Leave(sender As Object, e As EventArgs) Handles txtpricetotal.Leave
-        Try
-            If chkmigratetodollarbox.Checked Then
-                txtpricetotal.Text = Integer.Parse(txtpricetotal.Text.Trim) + SharedModule.getRoundThousand(Integer.Parse(txtpricetotal.Text.Trim))
-            End If
-        Catch ex As Exception
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        calc(txtpricetotal)
+    End Sub
 
-        End Try
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        calc(txtdollarprice)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        calc(txtpaymentdollar)
     End Sub
 End Class
